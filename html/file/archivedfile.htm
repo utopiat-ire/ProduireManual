@@ -11,8 +11,7 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで圧縮ファイルを操作するための「ファイル操作」プラグインの「書庫ファイル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->書庫ファイル<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,84 +70,92 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="file">
-	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">ファイル操作</a></li>
-	    <li><a href="archivedfile.htm">書庫ファイル</a></li>
-      </ul>
+		<li><a href="../index.htm">プロデル</a></li>
+		<li><a href="index.htm">ファイル操作</a></li>
+		<li><a href="archivedfile.htm">書庫ファイル</a></li>
+	  </ul>
 	  <h1>書庫ファイル</h1>
-    </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-	  <h3>関連ページ</h3>
-      <ul><li><a href="filewatcher.htm">書庫ファイル情報</a></li>
-        <li><a href="filearchiver.htm">書庫ファイル操作</a></li>
-      </ul>
 	</div>
-		<div id="refcontent" class="col-md-8">
-		  <h2>概要</h2>
-			<p>書庫ファイルを表す種類です。書庫ファイルを作成したり展開したりするために使います。</p>
-			<p><a href="../usage.htm"><span class="label label-warning">生成可能</span></a></p>
-			<h3>利用プラグイン</h3>
-			<p><a href="index.htm">ファイル操作機能</a></p>
-			<h2 id="手順">手順</h2>
-			<div id="methodlist"><a href="#解凍する">解凍する</a>　<a href="#圧縮する">圧縮する</a>　<a href="#ファイル一覧を取得する">ファイル一覧を取得する</a>　</div>
-			<div id="methods">
-				<p>次の手順が使用できます。</p>
-				<h3>【自分】を【解凍先】へ<a name="解凍する">解凍する</a></h3>
-				<p>圧縮ファイルを解凍します<br>
-					圧縮ファイルの解凍には各種アーカイバDLLが必要です。<br>
-				対応形式はLZH, ZIP, CAB, RAR、TAR, GCA, ARJ, YZ1, 7-zip, ISOです。</p>
-				<pre class="code">「書庫.lzh」をデスクトップへ解凍する</pre>
-				<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、解凍先にシステム領域を指定できません。</p>
-				<h3>【ファイル・フォルダ】を【自分】へ〈【オプション】で〉<a name="圧縮する">圧縮する</a></h3>
-				<p>ファイルを圧縮します。<br>
-					ファイルの圧縮には各種アーカイバDLLが必要です。<br>
-				対応形式はLZH, ZIP, CAB, TAR, YZ1, 7-Zipです。</p>
-				<pre class="code">対象フォルダを「［デスクトップ］圧縮ファイル.zip」へ圧縮する</pre>
-				<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、圧縮ファイル名にシステム領域を指定できません。</p>
-				<h3>【自分】から【ワイルドカード】で<a name="ファイル一覧を取得する">ファイル一覧を取得する</a></h3>
-				<p>書庫に含まれるファイル一覧を<a href="filearchiverinfo.htm">書庫ファイル情報</a>として取得します。</p>
-				<pre class="code">ショートカットを「[デスクトップ]ショートカット.lnk」へ保存する</pre>
-			</div>
-			<h2 id="設定項目">設定項目</h2>
-			<div id="properties">
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th>設定項目</th>
-							<th>型</th>
-							<th>　</th>
-							<th>説明</th>
-						</tr>
-					</thead>
-					<tr>
-						<th><a name="書庫ファイル名">書庫ファイル名</a></th>
-						<th>文字列</th>
-						<th>◎</th>
-						<td>書庫ファイル名</td>
-					</tr>
-				</table>
-				<p class="usage"><a href="../usage.htm">記号の意味</a></p>
-			</div>
-			<h2 id="サンプルコード">サンプルコード</h2>
-			<p>デスクトップにメモ帳のショートカットを作成します。</p>
-<pre class="code">ショートカットファイル：「notepad.exe」を「メモ帳」として「notepad.exe」で「[デスクトップ]テスト.lnk」へ作成する</pre>
+	<div id="refsidebar" class="col-md-3">
+		<p><a href="../usage.htm"><span class="label label-warning">生成可能</span></a></p>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>利用プラグイン</h3>
+		<p><a href="index.htm">ファイル操作機能</a></p>
+		<h3>関連ページ</h3>
+		<ul>
+			<li><a href="filearchiverinfo.htm">書庫ファイル情報</a></li>
+			<li><a href="filearchiver.htm">書庫ファイル操作</a></li>
+			<li><a href="../lookup/filesystem_lookup.htm#archive">逆引き - ファイルを扱う</a></li>
+		</ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2 id="head">概要</h2>
+		<p>書庫ファイルを表す種類です。書庫ファイルを作成したり展開したりするために使います。</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#解凍する">解凍する</a>　<a href="#圧縮する">圧縮する</a>　<a href="#ファイル一覧を取得する">ファイル一覧を取得する</a>　</div>
+		<div id="methods">
+			<p>次の手順が使用できます。</p>
+			<h3>【自分】を【解凍先】へ<a name="解凍する">解凍する</a></h3>
+			<p>書庫ファイルを解凍します<br>
+				書庫ファイルの解凍には各種アーカイバDLLが必要です。<br>
+			対応形式はLZH, ZIP, CAB, RAR、TAR, GCA, ARJ, YZ1, 7-zip, ISOです。</p>
+			<pre class="code">「書庫.lzh」をデスクトップへ解凍する</pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、解凍先にシステム領域を指定できません。</p>
+			<h3>【ファイル・フォルダ】を【自分】へ〈【オプション】で〉<a name="圧縮する">圧縮する</a></h3>
+			<p>ファイルを圧縮します。<br>
+				ファイルの圧縮には各種アーカイバDLLが必要です。<br>
+			対応形式はLZH, ZIP, CAB, TAR, YZ1, 7-Zipです。</p>
+			<pre class="code">対象フォルダを「［デスクトップ］書庫ファイル.zip」へ圧縮する</pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、書庫ファイル名にシステム領域を指定できません。</p>
+			<h3>【自分】から【ワイルドカード】で<a name="ファイル一覧を取得する">ファイル一覧を取得する</a></h3>
+			<p>書庫に含まれるファイル一覧を<a href="filearchiverinfo.htm">書庫ファイル情報</a>として取得します。</p>
+			<pre class="code">書庫は「書庫ファイル.zip」を書庫ファイルとして開いたもの
+書庫からファイル一覧を取得したものすべてのファイル名を改行で繋げて報告する</pre>
 		</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="書庫ファイル名">書庫ファイル名</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>書庫ファイル名</td>
+				</tr>
+			</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<h3 id="sample1">書庫ファイルを作成する</h3>
+		<p>書庫ファイルを作成します。</p>
+<pre class="code">書庫は「書庫ファイル.zip」を書庫ファイルとして開いたもの
+書庫へ対象フォルダを圧縮する<br>書庫からファイル一覧を取得したものすべてのファイル名を改行で繋げて報告する</pre>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

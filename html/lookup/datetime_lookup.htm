@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="日付,時刻"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->日付や時刻を扱う<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +38,30 @@
 					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -77,78 +80,22 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 <h1>日付や時刻を扱う</h1>
-		<p>プロデルで日時を操作する方法を紹介します。</p>
-		<ul>
-			<li><a href="../primitive/datetime.htm">日時形式</a></li>
-			<li><a href="../primitive/timespan.htm">日時期間形式</a></li>
-		</ul>
-		<h3>日付や時刻を調べる</h3>
-		<p>日付や時間を調べる手順には、次のようなものがあります。<br>
-			これらの手順では、結果として日時形式型の値を表します。<br>
-			日時形式型は、さらに年月日および時分秒の情報を取得できます。</p>
-		<h4>書式</h4>
-		<table class="table table-bordered">
-			<tr>
-				<td>今</td>
-			</tr>
-			<tr>
-				<td>今日</td>
-			</tr>
-			<tr>
-				<td>明日</td>
-			</tr>
-			<tr>
-				<td>明後日</td>
-			</tr>
-			<tr>
-				<td>昨日</td>
-			</tr>
-		</table>
-		<p>例えば、現時点での日付と時刻を表示するには、次のように書きます。</p>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">例文　今日の日付と現在時刻を表します</h4>
-			</div>
-			<div class="panel-body">
-				<pre class="code">今の日付を表示する
-今の時刻を表示する</pre>
-			</div>
-		</div>
-		<h3>時間や日付を計算する</h3>
-		<p>指定した日時から指定した時間や日数を計算したり、２つの日付や時間の差を調べたりできます。</p>
-		<h4>「～後」手順、「～前」</h4>
-		<pre class="code"><span class="rem">ーー１０ヶ月後の日付を表示します</span><b>
-</b>(<strong>今日から10月後</strong>)を表示する</pre>
-		<pre class="code"><span class="rem">ーー3日前の日付を表示します</span><b>
-</b>(<strong>今日から3日前</strong>)を表示する</pre>
-		<p>「～日」や「～月」には、年・月・日・時・分・秒が指定できます。<br></p>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">例文「日付差」手順</h4>
-			</div>
-			<div class="panel-body">
-				<p>二つの日付の差を計算します。 この例の場合、15日の差があることを表しています。</p>
-				<pre class="code"><em>ーー１５を表示します</em>
-開始日は、「2010/9/10」を日時形式化したもの
-終了日は、「2011/4/15」を日時形式化したもの
-(開始日と終了日の日付差)を表示する</pre>
-			</div>
-		</div>
-		<h3>日付を日本語で表示する</h3>
-		<p> <a href="../primitive/datetime.htm#整える">「整える」手順</a>を使うと、指定した日時を好きな形式で表すことができます。</p>
-		<pre class="code">(今日を「yyyy年M月d日(dddd)　h時m分s秒」に整えたもの)を表示する</pre>
+<p><a href="../primitive/datetime.htm">日時形式</a>,<a href="../primitive/timespan.htm">日時期間形式</a>のページに移動しました。お手数おかけします。</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年2月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

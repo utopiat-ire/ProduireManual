@@ -12,8 +12,7 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="Win32API,API,DLL,構造体"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="keywords" content="Win32API,API,DLL,構造体">	<meta name="description" content="日本語プログラミング言語プロデルの「ネイティブ構造体」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->ネイティブ構造体<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +38,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="index.htm">基本機能</a></li>
-							<li><a href="global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -68,37 +71,34 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="core">
-	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">基本機能</a></li>
-	    <li>ネイティブ構造体</li>
-      </ul>
+		<li><a href="../index.htm">プロデル</a></li>
+		<li><a href="index.htm">基本機能</a></li>
+		<li>ネイティブ構造体</li>
+	  </ul>
 	  <h1>ネイティブ構造体</h1>
-    </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div id="refsidebar" class="col-md-3">
+		<p><a href="../syntax/construct.html#construct_abstract" class="label label-default">抽象種類</a></p>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
-        <ul>
-          <li><a href="nativefunc.htm">ネイティブ関数</a></li>
-          <li><a href="nativepointer.htm">ネイティブ参照</a></li>
-      </ul>
-        <p>&nbsp;</p>
+		<ul>
+		  <li><a href="nativefunc.htm">ネイティブ関数</a></li>
+		  <li><a href="nativepointer.htm">ネイティブ参照</a></li>
+		</ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
-	  <h2>概要</h2>
+	  <h2 id="head">概要</h2>
 		<p>ネイティブ関数を呼び出すときの構造体を表す種類です。<br>
 			ネイティブ構造体は、格納したい変数を順番に定義した種類から継承することで利用します。<br></p>
 		<p>
-			ネイティブ構造体を継承した種類のオブジェクトを作成すると、構造体の変数のサイズに応じたメモリ領域が確保されます。<br>
-			ネイティブ関数に構造体を渡した際に、オブジェクトの変数の値がメモリ領域に格納され、ネイティブ関数の実行後、値が変数に格納されます。</p>
+			ネイティブ構造体を継承した種類のオブジェクトを作成すると、構造体の変数のサイズに応じたメモリ領域が確保されます。ネイティブ関数に構造体を渡した際に、オブジェクトの変数の値がメモリ領域に格納され、ネイティブ関数の実行後、値が変数に格納されます。</p>
 		<p>
 			<span class="warning">注意！</span>　この機能を利用するには、C/C++言語など他のプログラミング言語の知識が必要になります。この機能を利用した外部DLLの呼び出し方法については、利用するライブラリの情報をご参照ください。</p>
-		<p><span class="label label-default">抽象種類</span></p>
 <h2 id="手順">手順</h2>
-		<div id="methodlist"><a href="#初期化する">初期化する</a>　<a href="#設定する">設定する</a>　</div>
+		<div id="methodlist"><a href="#初期化する">初期化する</a>　<a href="#設定する">設定する</a>　<a href="#バイナリ化する">バイナリ化する</a>　<a href="#構築する">構築する</a>　</div>
 		<div id="methods">
 			<h3>自分を<a name="初期化する">初期化する</a></h3>
 			<p>自分の種類から構造体のサイズを計算して構造体を確定します。<br>
@@ -109,6 +109,10 @@
 			<h3>【変数名】を【文字数】文字設定する</h3>
 			<p>この種類を継承した種類内での、指定した変数で確保する文字数を指定します。<br>
 				構造体を確定する際に、文字列変数については、ここで指定した文字数が確保されます。</p>
+			<h3>自分を<a name="バイナリ化する">バイナリ化する</a>:バイナリデータ</h3>
+			<p>この構造体を表現するバイナリデータを返します。</p>
+			<h3>自分を【バイナリデータ】から<a name="構築する">構築する</a></h3>
+			<p>バイナリデータからこの構造体に合わせて値を代入します。</p>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
@@ -118,13 +122,13 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+				</tr></thead>
 				<tr>
 					<th><a name="構造体バイト数">構造体バイト数</a></th>
 					<th>整数</th>
 					<th>□</th>
 					<td>構造体のサイズをバイト数で表します</td>
-					</tr>
+				</tr>
 				<tr>
 					<th><a name="ポインタ値">ポインタ値</a></th>
 					<th>整数</th>
@@ -140,7 +144,7 @@
 		<p>Win32APIのGetCursorPos関数を呼び出して、マウスカーソルの座標を取得します。</p>
 		<pre class="code">カーソル座標取得は、ネイティブ関数（ファイル名「user32.dll」,関数名「GetCursorPos」）を作る
 カーソル座標取得の戻り値型は、整数
-カーソル座標取得の引数型一覧は、｛POINT｝
+カーソル座標取得の引数型一覧は｛POINT｝
 
 PTというPOINTを作る
 カーソル座標取得を｛PT｝で呼び出す
@@ -155,11 +159,11 @@ POINTとは
 		自分で初期化する
 	終わり
 終わり</pre>
-		<h3 id="sample1">GetVersionEx関数を呼び出す</h3>
+		<h3 id="sample2">GetVersionEx関数を呼び出す</h3>
 		<p>GetVersionEx関数を呼び出して、Windowsのバージョン情報を取得します。</p>
-<pre class="code">OSバージョン取得は、ネイティブ関数（ファイル名「kernel32.dll」,関数名「GetVersionExA」）を作る
+<pre class="code">OSバージョン取得は、ネイティブ関数（ファイル名「kernel32.dll」,関数名「GetVersionExW」）を作る
 OSバージョン取得の戻り値型は、整数
-OSバージョン取得の引数型一覧は、｛OSVERSIONINFOEX｝
+OSバージョン取得の引数型一覧は｛OSVERSIONINFOEX｝
 
 EXというOSVERSIONINFOEXを作る
 EXのdwOSVersionInfoSizeは、EXの構造体バイト数
@@ -189,16 +193,20 @@ OSVERSIONINFOEXとは
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

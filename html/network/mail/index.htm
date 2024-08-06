@@ -5,14 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>メール機能 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<title>メール - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,9 +25,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->メール機能<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->メール<!-- InstanceEndEditable -->
 				</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
-							<li><a href="../../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../../verbs/index.html">手順一覧</a></li>
+							<li><a href="../../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -69,13 +72,13 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb" data-category="mail">
 	<li><a href="../../index.htm">プロデル</a></li>
-	<li>メール機能</li>
+	<li>メール</li>
 </ul>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-		<h1>メール機能</h1>
+		<h1>メール</h1>
 		
-		<h2>機能の概要</h2>
+		<h2>概要</h2>
 		<p>POP3/SMTPに対応したメール受信・送信機能です。</p>
 		<p>プロデルでは、POP3とSMTPを使ったメールの送受信が可能です。メーラやメールを使った自動処理プログラムの作成などの用途に利用できます。</p>
         <p>POP3, SMTP共に、認証や暗号化通信に対応しています。</p>
@@ -98,67 +101,59 @@
 		</ul>
 		<p>　</p>
 		<h2>TKMP.dllについて</h2>
-		<p>メール機能では、Toki氏のメール送受信クラスライブラリ(TKMP.dll)を利用しています。<br>このような便利なライブラリを提供していただいたことを深く感謝いたします。</p>
-		<p>最新情報は、次のアドレスをご覧ください。<br><a href="https://uwa.potetihouse.com/">https://uwa.potetihouse.com/</a></p>
-		<p>なお、プロデルのメール機能についての質問を、Toki氏へ行わないようお願いいたします。<br>プロデル掲示板にてお願いいたします。</p>
+		<p>メール機能では、Toki氏の<a href="https://uwa.potetihouse.com/">メール送受信クラスライブラリ(TKMP.dll)</a>を利用しています。TKMP.dllの著作権は、Toki氏にあります。このような便利なライブラリを提供していただいたことを深く感謝いたします。なお、プロデルのメール機能についての質問を、Toki氏へ行わないようお願いいたします。プロデル掲示板にてお願いいたします。</p>
 		<h2 id="howto">使い方</h2>
 		<div id="samples">
 <h3 id="lookup1">メールの送信</h3>
-<p>プロデルでメールを送信するには、<a href="account.htm">「アカウント」種類</a>と<a href="sendmail.htm">「送信メール」種類</a>を使います。</p>
-<p>与えられたメールアカウント情報を、「アカウント」種類に設定して、「送信メール」種類を作成し、宛先や件名、本文を設定します。<br>
-	その後、アカウントを使って送信メールを送信します。</p>
+<p>プロデルでメールを送信するには<a href="account.htm">「アカウント」種類</a>と<a href="sendmail.htm">「送信メール」種類</a>を使います。</p>
+<p>与えられたメールアカウント情報を「アカウント」種類に設定して「送信メール」種類を作成し、宛先や件名、本文を設定します。その後、アカウントを使って送信メールを送信します。</p>
 <h3 id="loopkup2">アカウントの設定</h3>
-<p>メールアカウントを設定するには、次のようなプログラムを書きます。<br>
-	マイアカウントというメールアカウントを作成して、送信サーバを設定しています。</p>
+<p>メールアカウントを設定するには、次のようなプログラムを書きます。マイアカウントというメールアカウントを作成して、送信サーバを設定しています。</p>
 <pre class="code">マイアカウントというアカウントを作る
-マイアカウントの送信サーバのサーバ名は、「abcdef.net」
+マイアカウントの送信サーバのサーバ名は「abcdef.net」
 マイアカウントの送信サーバのポート番号は、25
-マイアカウントの送信サーバの送信者名は、「xxxxx@abcdef.net」</pre>
+マイアカウントの送信サーバの送信者名は「xxxxx@abcdef.net」</pre>
 <h3 id="lookup3">認証が必要なメールサーバの場合</h3>
-<p>送信に、認証が必要なメールサーバの場合は、次のプログラムを加えてください。<br>
-	送信サーバの「認証」設定項目を○にして、ユーザ名とパスワードを書きます。</p>
+<p>送信に、認証が必要なメールサーバの場合は、次のプログラムを加えてください。送信サーバの「認証」設定項目を○にして、ユーザ名とパスワードを書きます。</p>
 <pre class="code">マイアカウントの送信サーバの認証は、○
-マイアカウントの送信サーバのユーザ名は、「xxxxx@abcdef.net」
-マイアカウントの送信サーバのパスワードは、「xxxxx」</pre>
+マイアカウントの送信サーバのユーザ名は「xxxxx@abcdef.net」
+マイアカウントの送信サーバのパスワードは「xxxxx」</pre>
 <h3 id="lookup4">送信メールの作成</h3>
 <p>メールの宛先や件名、本文を設定するには、次のようなプログラムを書きます。</p>
 <pre class="code">お知らせメールという送信メールを作る
-お知らせメールの件名は、「お知らせ」
-お知らせメールの宛先は、「yyyyy@abcdef.net」
-お知らせメールの本文は、「明日の会議は午前10時からです。」
+お知らせメールの件名は「お知らせ」
+お知らせメールの宛先は「yyyyy@abcdef.net」
+お知らせメールの本文は「明日の会議は午前10時からです。」
 お知らせメールをマイアカウントから送る</pre>
-<p>メールに設定できる内容は、「<a href="sendmail.htm">送信メール</a>」種類の説明をご覧ください。</p>
+<p>メールに設定できる内容は「<a href="sendmail.htm">送信メール</a>」種類の説明をご覧ください。</p>
 <p>　</p>
 <h3 id="lookup5">メールの受信</h3>
-<p>プロデルでメールを受信するには、「アカウント」種類と<a href="receivemail.htm">「受信メール」種類</a>を使います。</p>
-<p>与えられたメールアカウント情報を、「アカウント」種類に設定して、<a href="popserver.htm">「POP3サーバ」</a>または<a href="imap_server.htm">「IMAPサーバ」</a>を使って、サーバにあるメールの情報を取得します。</p>
+<p>プロデルでメールを受信するには「アカウント」種類と<a href="receivemail.htm">「受信メール」種類</a>を使います。</p>
+<p>与えられたメールアカウント情報を「アカウント」種類に設定して<a href="popserver.htm">「POP3サーバ」</a>または<a href="imap_server.htm">「IMAPサーバ」</a>を使って、サーバにあるメールの情報を取得します。</p>
 <p>受信メールは、明示的に削除しない限り、メールサーバに残っています。</p>
 <h4>アカウントの設定</h4>
 <pre class="code">マイアカウントというアカウントを作る
-マイアカウントの受信サーバのサーバ名は、「abcdef.net」
+マイアカウントの受信サーバのサーバ名は「abcdef.net」
 マイアカウントの受信サーバのポート番号は、110
-マイアカウントの受信サーバのユーザ名は、「xxxxx@abcdef.net」
-マイアカウントの受信サーバのパスワードは、「xxxxx」
+マイアカウントの受信サーバのユーザ名は「xxxxx@abcdef.net」
+マイアカウントの受信サーバのパスワードは「xxxxx」
 マイアカウントの受信サーバの認証方法は、なし</pre>
 <h4>認証が必要なメールサーバの場合</h4>
 <p>APOP, SSL, TLSといった受信時に認証が必要なメールサーバの場合は、次のプログラムを加えてください。</p>
-<pre class="code">マイアカウントの受信サーバの認証方法は、「APOP」</pre>
+<pre class="code">マイアカウントの受信サーバの認証方法は「APOP」</pre>
 <h3 id="lookup6">メールサーバにある受信メールの確認</h3>
 <p>メールサーバにある受信メールを確認するには、次のようなプログラムを書きます。</p>
-<p>このプログラムでは、メールサーバにある受信メールの件数を取得しています。<br>
-	「受信メール一覧」変数には、<a href="receivetray.htm">「受信トレイ」種類</a>が格納されています。この「受信トレイ」を使って、各メールの内容を取得できます。</p>
+<p>このプログラムでは、メールサーバにある受信メールの件数を取得しています。「受信メール一覧」変数には<a href="receivetray.htm">「受信トレイ」種類</a>が格納されています。この「受信トレイ」を使って、各メールの内容を取得できます。</p>
 <pre class="code">マイアカウントの受信サーバへ接続する
 受信メール一覧は、［マイアカウントから受信したもの］
 受信件数は、受信メール一覧の件数
 マイアカウントの受信サーバから切断する
  	
 「[受信件数]件、受信しました」を表示する</pre>
-<p>なお、受信メールの確認のみの場合は、「接続」手順と「切断」手順を使わずに、次のように書くこともできます。<br>
-	ただし、この場合は、受信したメールの本文などの情報を取得することはできません。</p>
+<p>なお、受信メールの確認のみの場合は「接続」手順と「切断」手順を使わずに、次のようにも書けます。ただし、この場合は、受信したメールの本文などの情報を取得できません。</p>
 <pre class="code">受信メール一覧は、マイアカウントから受信したもの</pre>
 <h3 id="lookup7">受信メールの取得</h3>
-<p>メールサーバから受信メールを受け取るには、「受信トレイ」の「～番目」手順を使います。<br>
-	なお、「～番目」手順は、受信サーバへ接続している間に実行する必要があります。</p>
+<p>メールサーバから受信メールを受け取るには「受信トレイ」の「～番目」手順を使います。なお「～番目」手順は、受信サーバへ接続している間に実行する必要があります。</p>
 <pre class="code">もし受信件数が0でなければ
  	メールは、受信メール一覧の1番目
  	
@@ -168,20 +163,24 @@
 件名:[メールの件名]
 [メールの本文]」を表示する
 もし終わり</pre>
-<p>メールで取得できる内容は、「<a href="receivemail.htm">受信メール</a>」種類の説明をご覧ください。</p>
+<p>メールで取得できる内容は「<a href="receivemail.htm">受信メール</a>」種類の説明をご覧ください。</p>
 	  </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../../js/script.js"></script>
+    <script src="../../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

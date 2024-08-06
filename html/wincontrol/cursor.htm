@@ -11,8 +11,7 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「マウスカーソル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->マウスカーソル<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,48 +70,53 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">基本機能</a></li>
 	    <li>マウスカーソル</li>
       </ul>
 	  <h1>マウスカーソル</h1>
+		<p><a href="../static.htm" class="label label-info">静的種類</a></p>
     </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	<div id="refsidebar" class="col-md-3">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
 	</div>
-		<div class="col-sm-8">
-		  <h2>概要</h2>
-			<p>マウスカーソルに対する操作や情報の取得を行います。</p>
-			<p>ウィンドウ内の各部品のマウスカーソルを変更するには、<a href="control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
-			<p><span class="label label-info">静的種類</span></p>
-			<h2 id="手順">手順</h2>
+	<div class="col-sm-8">
+	  <h2 id="head">概要</h2>
+      <p>マウスカーソルに対する操作や情報の取得を行います。</p>
+      <p>ウィンドウ内の各部品のマウスカーソルを変更するには、<a href="control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
+		<h2 id="手順">手順</h2>
 			<p>次の手順が使用できます。</p>
 			<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#クリックさせる">クリックさせる</a>　<a href="#ダブルクリックさせる">ダブルクリックさせる</a>　<a href="#右クリックさせる">右クリックさせる</a>　<a href="#ホイール回転させる">ホイール回転させる</a>　<a href="#チルトさせる">チルトさせる</a>　</div>
 			<div id="methods">
 				<h3>【自分】を【座標】へ<a name="移動する">移動する</a></h3>
 				<p>マウスカーソルを指定した座標へ移動させます。</p>
+				<h4 data-ref="移動する">擬似的にマウスカーソルを移動する</h4>
 				<pre class="code">マウスカーソルを{100,100}へ移動する</pre>
 				<h3>【自分】に〈【座標】を〉<a name="クリックさせる">クリックさせる</a></h3>
 				<p>指定した座標へ移動して、擬似的にクリック動作を行います。<br>
 					「【座標】を」は、省略できます。</p>
+				<h4 data-ref="クリックさせる">擬似的にクリックさせる</h4>
 				<pre class="code">マウスカーソルに{10,10}をクリックさせる</pre>
 				<h3>【自分】に〈【座標】を〉<a name="ダブルクリックさせる">ダブルクリックさせる</a></h3>
 				<p>指定した座標へ移動して、擬似的にダブルクリック動作を行います。<br>
 					「【座標】を」は、省略できます。</p>
+				<h4 data-ref="ダブルクリックさせる">擬似的にダブルクリックさせる</h4>
 				<pre class="code">マウスカーソルにダブルクリックさせる</pre>
 				<h3>【自分】に〈【座標】を〉<a name="右クリックさせる">右クリックさせる</a></h3>
 				<p>指定した座標へ移動して、擬似的に右クリック動作を行います。<br>
 					「【座標】を」は、省略できます。</p>
+				<h4 data-ref="右クリックさせる">擬似的に右クリックさせる</h4>
 				<pre class="code">マウスカーソルに{100,100}を右クリックさせる</pre>
 				<h3>【自分】で【移動量:整数】だけ<a name="ホイール回転させる">ホイール回転させる</a></h3>
 				<p>マウスホイールを指定した量だけ回転させます。移動量は整数で指定します。負の数を指定すると逆回転します。</p>
+				<h4 data-ref="ホイール回転させる">擬似的にマウスホイールを回転させる</h4>
 			  <pre class="code">マウスカーソルで120だけホイール回転させる</pre>
 				<h3>【自分】で【移動量:整数】だけ<a name="チルトさせる">チルトさせる</a></h3>
 				<p>マウスホイールで指定した量だけ横スクロール(チルト)させます。移動量は整数で右へスクロールする量を指定します。負の数を指定すると左へスクロールします。</p>
+				<h4 data-ref="チルトさせる">擬似的にマウスをチルトさせる</h4>
 				<pre class="code">マウスカーソルで60だけチルトさせる</pre>
 			</div>
 			<h2 id="設定項目">設定項目</h2>
@@ -138,16 +146,20 @@
 			</div>
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

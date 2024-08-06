@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content=".NETクラス"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->ドットネット型<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +38,30 @@
 					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../index.htm">基本機能</a></li>
-							<li><a href="../global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="index.htm">リフレクション</a></li>
-							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../../verbs/index.html">手順一覧</a></li>
+							<li><a href="../../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -70,16 +73,17 @@
 <!-- InstanceBeginEditable name="Content" -->
 
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="reflection">
 	    <li><a href="../../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">リフレクション</a></li>
 	    <li>ドットネット型</li>
       </ul>
 	  <h1>ドットネット型</h1>
+		<p><span class="label label-warning">生成可能</span></p>
     </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	<div id="refsidebar" class="col-md-3">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="dotnetassembly.htm">ドットネットアセンブリ</a></li>
@@ -93,31 +97,31 @@
         <p>&nbsp;</p>
 	</div>
 	<div class="col-sm-8">
-	  <h2>概要</h2>
-		<p>.NET Framework型を表す種類です。<br>
-			プロデルから.NET Framework型のインスタンスを生成したりメソッドやプロパティにアクセスしたりできます。</p>
+	  <h2 id="head">概要</h2>
+		<p>.NET Framework上のCLR型を表す型情報を持った種類です。プロデルから.NET Framework型のインスタンスを生成したりメソッドやプロパティにアクセスしたりできます。</p>
 		<p>
 			<span class="warning">注意！</span>　この機能を利用するためには、C#またはVB.NET言語など他のプログラミング言語に加えて、.NET 
 			Frameworkのクラスライブラリの知識が必要になります。この機能を利用する場合は、.NETクラスライブラリのドキュメントをご参照ください。</p>
-		<p><span class="label label-warning">生成可能</span>		</p>
 		<h2>作成する方法</h2>
-		<pre class="format">【名前】というドットネット型（【型名】）を作る</pre>
-		<p>【型名】には、名前空間を含めた完全な名前で指定します。　</p>
+		<pre class="format">【オブジェクト名】というドットネット型（【型名】）を作る</pre>
+		<p>【型名】には、名前空間を含めた完全な名前で指定します。</p>
+		<p>なお、次のように直接インスタンスを作ることもできます。</p>
+		<pre class="format">【オブジェクト名】という&quot;【型名】&quot;のネット型（〈【引数一覧】〉）を作る</pre>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#インスタンスを作る">インスタンスを作る</a>　<a href="#配列を作る">配列を作る</a>　<a href="#取得する">取得する</a>　<a href="#設定する">設定する</a>　<a href="#呼び出す">呼び出す</a>　</div>
 		<div id="methods">
-			<h3>自分から〈【引数一覧】で〉<a name="インスタンスを作る">インスタンスを作る</a>：オブジェクト</h3>
+			<h3>自分から〈【引数一覧】で〉<a name="インスタンスを作る">インスタンスを作る</a>：<a href="../../primitive/netobject.htm">ネット物</a></h3>
 			<p>ドットネット型が持つ型情報からインスタンスを生成します。</p>
-			<h3>自分から〈【引数一覧】で〉<a name="配列を作る">配列を作る</a>：オブジェクト</h3>
+			<h3>自分から〈【引数一覧】で〉<a name="配列を作る">配列を作る</a>：<a href="../../primitive/netobject.htm">ネット物</a></h3>
 			<p>ドットネット型が持つ型情報から、配列型のインスタンスを生成します。</p>
-			<h3>自分から【プロパティ名】を<a name="取得する">取得する</a>：オブジェクト</h3>
+			<h3>自分から【プロパティ名】を<a name="取得する">取得する</a>：<a href="../../primitive/baseobject.htm">基本物</a></h3>
 			<p>この型の静的プロパティから値を取得します。</p>
 			<pre class="code">DateTime型というドットネット型(「System.DateTime」）を作る
 DateTime型から「Now」を取得して表示する</pre>
 			<h3>自分で【プロパティ名】へ【値】を<a name="設定する">設定する</a></h3>
 			<p>この型の静的プロパティに対して値を設定します。</p>
-			<h3>自分から【メソッド名】を〈【引数一覧】で〉<a name="呼び出す">呼び出す</a>：オブジェクト</h3>
+			<h3>自分から【メソッド名】を〈【引数一覧】で〉<a name="呼び出す">呼び出す</a>：<a href="../../primitive/baseobject.htm">基本物</a></h3>
 			<p>この型の静的メソッドを指定した引数一覧で渡して呼び出します。</p>
 			<pre class="code">String型というドットネット型(「System.String」）を作る
 String型から「Concat」を{「A」,「B」}で呼び出す
@@ -159,6 +163,8 @@ StringBuilder型からインスタンスを作ってbuilderとする
 builder:Append（「こんにちは」）
 builder:Append（「さようなら」）
 「[builderのLength]:[builder:ToString()]」を表示する</pre>
+		<p>なお、「ドットネット型」を作らずに、「～のネット型」式を使うことで直接StringBuilderクラスのインスタンスを生成できます。</p>
+<pre class="code">builderという&quot;System.Text.StringBuilder&quot;のネット型(「あいさつ:」)を作る<br>builder:Append（「こんにちは」）<br>builder:Append（「さようなら」）<br>「[builderのLength]:[builder:ToString()]」を表示する</pre>
 <h3 id="sample2">Stopwatchクラスのインスタンスを生成する</h3>
 		<p>Stopwatchクラスのインスタンスを生成します。</p>
 <pre class="code">/* ストップウォッチ */
@@ -196,16 +202,20 @@ s = 0
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年12月9日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../../js/script.js"></script>
+    <script src="../../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

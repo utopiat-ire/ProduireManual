@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プロセス基本 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「基本機能」プラグインの「プロセス基本」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プロセス<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+	<div id="reftitle" class="col-md-12">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="../core/index.htm">基本機能</a></li>
+	    <li>プロセス基本</li></ul>
+	  <h1>プロセス基本</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3">
+		<p><a href="../global.htm" class="label label-primary">広域種類</a></p>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="process.htm">プロセス</a></li>
+      </ul>
+		<h3>利用プラグイン</h3>
+        <p>基本ライブラリ(<a href="../core/index.htm">Produire.CoreLibrary.dll</a>)</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2 id="head">概要</h2>
+	  <p>他のプログラムを起動したり、終了させたりできます。</p>
+		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
+      <h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#開く">開く</a>　<a href="#起動する">起動する</a>　<a href="#起動して待つ">起動して待つ</a>　<a href="#管理者として実行する">管理者として実行する</a>　<a href="#入力する">入力する</a>　<a href="#プロセス">プロセス</a>　<a href="#プロセス一覧">プロセス一覧</a>　<a href="#プロセスを取得する">プロセスを取得する</a>　<a href="#コマンド実行する">コマンド実行する</a>　<a href="#切り替える">切り替える</a>　<a href="#終了する">終了する</a>　</div>
+		<div id="methods">
+			<h3>【ファイル名】を〈【ウィンドウの状態】で【Verb】として〉、<a name="開く">開く</a>：<a href="process.htm">プロセス</a></h3>
+            <p>指定したファイルに関連付けられたアプリケーションを起動してファイルを開きます。<br>
+              【ウィンドウの状態】には、｛標準／裏／最小化／最大化｝が指定できます。<br>
+              【Verb】に指定できる内容は、関連付けられた拡張子やインストールされているアプリケーションによって異なります。</p>
+            <p>テキストファイルの内容を取得するには、<a href="../core/file.htm#読み込む">ファイルの「読み込む」手順</a>を使います。</p>
+            <h4 data-ref="開く">ファイルを関連付けられたアプリで開く</h4>
+            <pre class="code">「［今の位置］test.txt」を開く</pre>
+            <p class="alert alert-warning" role="alert"> 実行可能ファイル(拡張子が.exe)のファイルでパラメータを指定したい場合は「起動する」手順を使います。</p>
+          <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、ファイル名にシステム領域を指定できません。</p>
+            <h3>【ファイル名】を【引数】として｛標準／裏／最小化／最大化｝で、<a name="起動する">起動する</a></h3>
+            <p>プログラムを起動します。<br>
+              戻り値として起動したプログラムの<a href="process.htm">プロセス</a>を表します。</p>
+            <h4 data-ref="起動する">外部プログラムを起動する</h4>
+            <pre class="code">「notepad.exe」を起動する</pre>
+            <p class="alert alert-warning" role="alert"> 実行可能ファイル(拡張子が.exe)以外のファイルを開きたい場合は「開く」手順を使います。</p>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、ファイル名にシステム領域を指定できません。</p>
+            <h3>【ファイル名】を【引数】として｛標準／裏／最小化／最大化｝で、<a name="起動して待つ">起動して待つ</a></h3>
+            <p>プログラムを起動して、そのプログラムが終了するまで待機します。</p>
+            <h4 data-ref="起動して待つ">プログラムを起動して終了するまで待機する</h4>
+            <pre class="code">
+「notepad.exe」を起動して待つ
+「終了しました」を報告する</pre>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、ファイル名にシステム領域を指定できません。</p>
+            <h3>【ファイル名】を【引数】で、<a name="管理者として実行する">管理者として実行する</a></h3>
+            <p>プログラムを管理者として起動します。<br>
+              戻り値として起動したプログラムの<a href="process.htm">プロセス</a>を表します。</p>
+            <h4 data-ref="起動する">管理者として外部プログラムを起動する</h4>
+            <pre class="code">「cmd」を管理者として実行する</pre>
+            <p class="alert alert-warning" role="alert"> 実行可能ファイル(拡張子が.exe)以外のファイルを開きたい場合は「開く」手順を使います。</p>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、ファイル名にシステム領域を指定できません。</p>
+<h3>【入力する内容】を〈【プログラム名】へ〉、<a name="入力する">入力する</a></h3>
+            <p>プログラム上でキーボード入力を表現します。<br>
+              プログラム名(ウィンドウ名またはプロセス名)が指定された場合は、そのプログラムに対して入力します。<br>
+              書き方は、<a href="../etc/sendkeys.htm">こちら</a>をご覧ください。</p>
+            <p><strong>関連項目</strong>　<a href="process.htm">プロセス</a></p>
+            <h4 data-ref="入力する">他のアプリに文字列を入力する</h4>
+          <pre class="code">「こんにちは」を入力する</pre>
+            <h3>【プロセス名:文字列】の<a name="プロセス">プロセス</a>：<a href="process.htm">プロセス</a></h3>
+            <p>指定したプロセス名のプロセスを1つだけ取得します。 <span class="label label-warning">名詞型手順</span></p>
+            <p>プロセス名は、タスクマネージャや「プロセス」種類の「名前」設定項目で取得できます。</p>
+            <h4 data-ref="プロセス">指定した名前のプロセスを終了させる</h4>
+            <pre class="code">
+「notepad」のプロセスを終了する</pre>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、実行できません。</p>
+            <h3>【プロセスID:整数】のプロセス：<a href="process.htm">プロセス</a></h3>
+            <p>指定したプロセスIDのプロセスを1つだけ「<a href="process.htm">プロセス</a>」種類として取得します。 <span class="label label-warning">名詞型手順</span></p>
+            <p>プロセスIDは、タスクマネージャや「プロセス」種類の「ID」設定項目で取得できます。</p>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、取得できません。</p>
+            <h3>【プロセス名】の<a name="プロセス一覧">プロセス一覧</a>：<a href="process.htm">プロセス</a>の配列</h3>
+            <p>指定したプロセス名のプロセスをすべて取得します。 <span class="label label-warning">名詞型手順</span><br>
+              結果として「<a href="process.htm">プロセス</a>」種類の配列を表します。</p>
+            <h4 data-ref="プロセス一覧">起動しているプロセスを列挙する</h4>
+            <pre class="code">(「notepad」のプロセス一覧)すべてのIDを表示する</pre>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、取得できません。</p>
+            <h3>【ウィンドウ名】という<a name="プロセスを取得する">プロセスを取得する</a>：<a href="process.htm">プロセス</a></h3>
+            <p>指定した名前のウィンドウ名を持つプロセスを「<a href="process.htm">プロセス</a>」オブジェクトとして取得します。</p>
+            <h4 data-ref="プロセスを取得する">ウィンドウ名からアプリのプロセスIDを取得する</h4>
+            <pre class="code">「無題 - メモ帳」というプロセスを取得してそのIDを報告する</pre>
+          <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、取得できません。</p>
+            <h3>【コマンドライン】を<a name="コマンド実行する">コマンド実行する</a>：文字列</h3>
+            <p>コマンドプロンプト上で、指定したコマンドを実行します。<br>
+              結果としてコマンドの結果(標準出力)を文字列として表します。</p>
+            <h4 data-ref="コマンド実行する">コマンドプロンプトの結果を取得する</h4>
+            <pre class="code">「dir /w」をコマンド実行して報告する</pre>
+          <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、取得できません。</p>
+<h3>【ウィンドウ名】へ<a name="切り替える">切り替える</a>：<a href="process.htm">プロセス</a></h3>
+<p>指定した名前のウィンドウを持つ他のプロセスへ切り替えます。<br>
+  切り替え先のプロセスを戻り値として表されます。</p>
+<pre class="code">「メモ帳」へ切り替える</pre>
+<h3><a name="終了する">終了する</a></h3>
+            <p>実行しているプログラムを終了します。</p>
+            <h3>【終了コード：整数】で終了する</h3>
+          <p>コンソール版の場合に、指定した終了コードで実行しているプログラムを終了します。<br>
+              プログラムの実行が成功した場合は0を返します。</p>
+      </div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型　</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr>
+				  <tr>
+				    <th><a name="選択プロセス">選択プロセス</a></th>
+				    <th><a href="process.htm">プロセス</a></th>
+				    <th>□</th>
+				    <td>選択しているウィンドウの<a href="process.htm">プロセス</a></td>
+			      </tr>
+				  <tr>
+				    <th><a name="現在プロセス">現在プロセス</a></th>
+				    <th><a href="process.htm">プロセス</a></th>
+				    <th>□</th>
+				    <td>実行中のプログラムの<a href="process.htm">プロセス</a></td>
+			      </tr>
+				  <tr>
+				    <th><a name="起動中プロセス一覧">起動中プロセス一覧</a></th>
+				    <th><a href="process.htm">プロセス</a>の配列</th>
+				    <th>□</th>
+				    <td>起動中のすべてのプログラムの<a href="process.htm">プロセス</a></td>
+			      </tr>
+				</thead>
+		  </table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+	  </div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">起動したアプリを操作する</h3>
+		<p>メモ帳を起動して、そのプロセスに関する情報を報告します。</p>
+<pre class="code"><em>ーープロデルからメモ帳を起動して、2秒後に終了します</em>
+
+「notepad.exe」を起動してメモ帳とする
+2秒だけ待つ
+メモ帳のタイトルを報告する
+メモ帳のプロセスIDを報告する
+メモ帳のプロセス名を報告する
+メモ帳を終了する</pre>
+		</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年5月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

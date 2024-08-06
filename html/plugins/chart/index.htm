@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>チャートライブラリ - プロデルマニュアル</title>
+<!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<meta name="keywords" content="チャート">	<meta name="description" content="チャートライブラリでは、様々なグラフを描くための機能が含まれています。"><!-- InstanceEndEditable -->
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->チャートライブラリ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../msil/index.htm">MSIL生成</a></li>
+							<li><a href="../../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../../verbs/index.html">手順一覧</a></li>
+							<li><a href="../../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+	<div id="reftitle" class="col-md-12">
+		<ul class="breadcrumb" data-category="speech">
+			<li><a href="../../index.htm">プロデル</a></li>
+			<li><a href="../index.htm">プラグイン</a></li>
+			<li><a href="index.htm">チャートライブラリ</a></li>
+		</ul>
+		<h1>チャートライブラリ</h1>
+	</div>
+
+	<div id="refcontent" class="col-md-offset-2 col-md-8">
+	<h2>チャートライブラリ</h2>
+	<p>チャートライブラリでは、様々なグラフを描くための機能が含まれています。</p>
+	<h3>利用プラグイン</h3>
+		<p>チャート集 (チャート.rdr)</p>
+	<h2>この機能に含まれる種類</h2>
+	<ul>
+		<li><a href="chart.htm">チャート</a></li>
+		<li><a href="series.htm">シリーズ</a></li>
+		<li><a href="title.htm">タイトル</a></li>
+		<li><a href="legend.htm">チャート凡例</a></li>
+		<li><a href="datapoint.htm">データポイント</a></li>
+		<li><a href="chartarea.htm">チャートエリア</a></li>
+	  </ul>
+	<h2>サンプル</h2>
+	<ul>
+	  <li><a href="#linechart">棒グラフ</a></li>
+	  <li><a href="#pointchart">散布図</a></li>
+	  <li><a href="#piechart">円グラフ</a></li>
+	  <li><a href="#pyramid">ピラミッドグラフ</a></li>
+	  <li><a href="#funnel">じょうごグラフ</a></li>
+	  <li><a href="#bubble">バブルチャート</a></li>
+	  </ul>
+<div id="samples">
+  <h3 id="linechart">棒グラフ</h3>
+	<p><img src="linechart.png" width="601" height="439" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1に凡例を作る
+タイトル1というタイトル(「タイトル」)を作る
+シリーズ線1というシリーズを作る
+シリーズ線1のChartType=「Line」
+シリーズ線1のLegendText =「線の凡例」
+シリーズ線1の線幅=2
+シリーズ線1の印形状は「Circle」
+シリーズ線1の印サイズは、12
+シリーズ線1の凡例表示は、○
+10回数に繰り返す
+	シリーズ線1に(データポイント(数,(0～210)の乱数)を作ったもの)を加える
+繰り返し終わり
+
+シリーズ列1というシリーズを作る
+シリーズ列1のChartType=「Column」
+シリーズ列1のLegendText =「棒の凡例」
+10回数に繰り返す
+	シリーズ列1に(データポイント(数,(0～210)の乱数)を作ったもの)を加える
+繰り返し終わり
+エリア1というチャートエリアを作る
+エリア1のAxisXのTitle=「X軸」
+エリア1のAxisYのTitle=「Y軸」
+
+チャート1にタイトル1を加える
+チャート1にエリア1を加える
+チャート1にシリーズ線1を加える
+チャート1にシリーズ列1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛600,394｝に変える
+		この内容を「棒グラフテスト」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	<h3 id="pointchart">散布図</h3>
+	<p><img src="pointchart.png" width="502" height="439" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1に散布図を作ってシリーズ線1とする
+シリーズ線1の印形状は「Circle」
+シリーズ線1の印サイズは、10
+Xデータは{1.0,0.8,1.8,0.2,1.2}
+Yデータは{1.0,1.2,0.8,1.8,0.2}
+Xデータの個数回数に繰り返す
+	シリーズ線1に(データポイント(Xデータ(数),Yデータ(数))を作ったもの)を加える
+繰り返し終わり
+
+エリア1というチャートエリアを作る
+チャート1にエリア1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛428,394｝に変える
+		この内容を「散布図テスト」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	<h3 id="piechart">円グラフ</h3>
+	<p><img src="piechart.png" width="430" height="439" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1にドーナツグラフを作ってシリーズ線1とする
+//チャート1に「あ」という円グラフを作ってシリーズ線1とする
+チャート1に凡例を作る
+//シリーズ線1の凡例表示は、×
+データは{1.0,0.8,1.8,0.2,1.2}
+合計は、0
+データの個数回数に繰り返す
+	合計=合計+データ(数)
+繰り返し終わり
+データの個数回数に繰り返す
+	レートは、データ(数)/合計*100
+	シリーズ線1に(データポイント(レート,レート)を作ったもの)を加える
+繰り返し終わり
+
+エリア1というチャートエリアを作る
+//チャート1にタイトル1を加える
+チャート1にエリア1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛428,394｝に変える
+		この内容を「円グラフテスト」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	<p>&nbsp;</p>
+	<h3 id="pyramid">ピラミッドグラフ</h3>
+	<p><img src="pyramid.png" width="430" height="441" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1のパレットは「None」
+チャート1の配色一覧は{「#A3B7F0」,「#F0AFED」,「#98F0DC」,「#F0D9A1」,「#B8F09E」}
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1にピラミッドグラフを作ってシリーズ線1とする
+チャート1に凡例を作る
+データは{1.0,0.8,1.8,0.2,1.2}
+見出し一覧は{「A」,「B」,「C」,「D」,「E」}
+合計は、0
+データの個数回数に繰り返す
+	合計=合計+データ(数)
+繰り返し終わり
+データの個数回数に繰り返す
+	レートは、データ(数)/合計*100
+	点は、データポイント(レート,レート)を作ったもの
+	シリーズ線1に点を加える
+	点のLegendTextは、見出し一覧(数)
+繰り返し終わり
+
+エリア1というチャートエリアを作る
+チャート1にエリア1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛428,394｝に変える
+		この内容を「ピラミッドグラフ」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	<p>&nbsp;</p>
+	<h3 id="funnel">じょうごグラフ</h3>
+	<p><img src="funnel.png" width="430" height="439" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1のパレットは「SeaGreen」
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1にじょうごグラフを作ってシリーズ線1とする
+チャート1に凡例を作る
+データは{1.0,0.8,1.8,0.2,1.2}
+見出し一覧は{「A」,「B」,「C」,「D」,「E」}
+合計は、0
+データの個数回数に繰り返す
+	合計=合計+データ(数)
+繰り返し終わり
+データの個数回数に繰り返す
+	レートは、データ(数)/合計*100
+	点は、データポイント(レート,レート)を作ったもの
+	シリーズ線1に点を加える
+	点のLegendTextは、見出し一覧(数)
+繰り返し終わり
+
+エリア1というチャートエリアを作る
+チャート1にエリア1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛428,394｝に変える
+		この内容を「じょうごグラフ」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	<h3 id="bubble">バブルチャート</h3>
+	<p>&nbsp;</p>
+	<p><img src="bubble.png" width="501" height="439" alt="" class="img-responsive"></p>
+	<pre class="code">「チャート.rdr」を参照する
+
+チャート1というチャートを作る
+チャート1をクリアする
+チャート1のSizeは{500,500}
+チャート1のDockは「全体」
+チャート1のパレットは「SemiTransparent」
+チャート1にバブルチャートを作ってシリーズ線1とする
+シリーズ線1の印形状は「Circle」
+Xデータは{1.0,0.8,1.8,1.2,0.4}
+Yデータは{1.0,1.2,0.8,1.8,0.2}
+バブルデータは{50.0, 1.2, 80.8, 15.8, 5.2}
+Xデータの個数回数に繰り返す
+	シリーズ線1に(データポイント(Xデータ(数),{Yデータ(数),バブルデータ(数)})を作ったもの)を加える
+繰り返し終わり
+
+エリア1というチャートエリアを作る
+チャート1にエリア1を加える
+
+メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+はじめの手順
+	初期化する
+	ーー貼り付けた部品に対する操作をここに書きます
+	チャート1を貼る
+終わり
+	初期化する手順
+	ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この実質大きさを｛500,394｝に変える
+		この内容を「バブルチャート」に変える
+		初期化開始する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+終わり</pre>
+	</div>
+</div>
+</div>
+<!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+    <script src="../../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

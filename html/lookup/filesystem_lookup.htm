@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ファイル"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->ファイルを扱う<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +38,30 @@
 					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -68,33 +71,39 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="lookup">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">逆引き辞典</a></li>
-	<li>ファイルを扱う</li>
-</ul>
-
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
-<h1>ファイルを扱う</h1>
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="lookup">
+            <li><a href="../index.htm">プロデル</a></li>
+            <li><a href="index.htm">逆引き辞典</a></li>
+            <li>ファイルを扱う</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>ファイルを扱う</h4>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#lookup1">ファイルのコピー</a></li><li><a href="#lookup2">ファイルの移動</a></li><li><a href="#lookup3">ファイル名の変更</a></li><li><a href="#lookup4">ファイルの削除</a></li><li><a href="#lookup5">ワイルドカードを使う</a></li><li><a href="#lookup6">フォルダの一覧の列挙</a></li><li><a href="#lookup7">ファイルが存在するかどうかを判定する</a></li><li><a href="#lookup8">フォルダの作成</a></li><li><a href="#lookup9">フォルダの削除</a></li><li><a href="#lookup10">決められた場所のフォルダを指定する</a></li><li><a href="#lookup11">フォルダ一覧の列挙</a></li><li><a href="#lookup12">フォルダが存在するかどうかを判定する</a></li><li><a href="#lookup13">フォルダを選択する</a></li></ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
+        <h1>ファイルを扱う</h1>
 	  <p>プロデルでは、ファイルのコピーや移動、削除できます。</p>
 		<ul>
 			<li><a href="../core/file.htm">「ファイル」種類</a></li>
+			<li><a href="../core/filecontrol.htm">「ファイル操作」種類</a></li>
+			<li><a href="https://wp.utopiat.net/2021/01/11/">プロデルで始める日本語プログラミング言語入門(#13)「ファイルを操作しよう」</a></li>
 		</ul>
 		<div id="samples">
 		<h3 id="lookup1">ファイルのコピー</h3>
-		<p>指定したファイルを別のフォルダへコピーするには、「コピー」手順を使います。</p>
+		<p>指定したファイルを別のフォルダへコピーするには<a href="../core/filecontrol.htm#コピーする">「コピー」手順</a>を使います。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">《ファイル名》</span>を<span class="flag">《コピー先のフォルダ名/ファイル名》</span>へコピーする</pre>
+				<pre class="format"><span class="flag">【ファイル名】</span>を<span class="flag">【コピー先のフォルダ名/ファイル名】</span>へコピーする</pre>
 				<p>【ファイル名】<br>
 					コピー元のファイル名があるところを書きます。</p>
 				<p>【コピー先のフォルダ名/ファイル名】<br>
-					コピーしたファイルを置くフォルダを書きます。<br>
-					または、コピーしたファイルのファイル名を書きます。</p>
+					コピーしたファイルを置くフォルダを書きます。または、コピーしたファイルのファイル名を書きます。</p>
 			</div>
 		</div>
 		<h4>補足</h4>
@@ -110,16 +119,16 @@
 			</div>
 		</div>
 		<h3 id="lookup2">ファイルの移動</h3>
-		<p>指定したファイルを別のフォルダへ移動するには、「移動」手順を使います。</p>
+		<p>指定したファイルを別のフォルダへ移動するには<a href="../core/filecontrol.htm#移動する">「移動」手順</a>を使います。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">《ファイル名》</span>を、<span class="flag">《移動先のフォルダ/ファイル名》</span>へ、移動する</pre>
-				<p>《ファイル名》<br>
+				<pre class="format"><span class="flag">【ファイル名】</span>を<span class="flag">【移動先のフォルダ/ファイル名】</span>へ移動する</pre>
+				<p>【ファイル名】<br>
 					コピー元のファイル名があるところを書きます。</p>
-				<p>《コピー先のフォルダ/ファイル名》<br>
+				<p>【コピー先のフォルダ/ファイル名】<br>
 					ファイルのコピーを置くフォルダを書きます。または、コピーしたファイルのファイル名を書きます。</p>
 			</div>
 		</div>
@@ -132,10 +141,10 @@
 			</div>
 		</div>
 		<h3 id="lookup3">ファイル名の変更</h3>
-		<p>ファイルの名前を変更するには、「変更する」手順を使います。</p>
+		<p>ファイルの名前を変更するには<a href="../core/filecontrol.htm#変更する">「変更する」手順</a>を使います。</p>
 		<pre class="code">「文章.doc」を「文章バックアップ.doc」に変更する</pre>
 		<h3 id="lookup4">ファイルの削除</h3>
-		<p>指定したファイルを削除するには、「削除する」手順を使います。</p>
+		<p>指定したファイルを削除するには<a href="../core/filecontrol.htm#削除する">「削除する」手順</a>を使います。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">例文　「テスト.txt」を削除します</h4>
@@ -154,10 +163,8 @@
 				<pre class="code">「*.doc」をデスクトップへコピーする</pre>
 			</div>
 		</div>
-		<h3 id="lookup6">フォルダの一覧の列挙</h3>
-		<pre class="code">［フルパスで「［マイドキュメント］」のフォルダの一覧］を表示
-［フルパスで「［マイドキュメント］\マイ ノートブック」のフォルダの全一覧］を表示</pre>
 		<h3 id="lookup7">ファイルが存在するかどうかを判定する</h3>
+		<p><a href="../core/file.htm#存在する">「存在する」手順</a>で、指定したパスのファイルが存在するかどうかを判定できます。</p>
 		<pre class="code">もし「［デスクトップ］文章.txt」というファイルが存在するなら
 	「存在します」を情報アイコンで表示する
 そうでなければ
@@ -170,16 +177,16 @@
 			<li> <a href="../core/folder.htm"> 「フォルダ」種類</a></li>
 		</ul>
 		<h3 id="lookup8">フォルダの作成</h3>
-		<p>フォルダを作成するには、「フォルダ」種類の「作成する」手順を使います。</p>
+		<p>フォルダを作成するには<a href="../core/folder.htm">「フォルダ」種類</a>の<a href="../core/folder.htm#作成する">「作成する」手順</a>を使います。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">《フォルダ名》</span>というフォルダを<span class="flag">《作成先のフォルダ名》</span>へ作成する</pre>
-				<p>《フォルダ名》<br>
+				<pre class="format"><span class="flag">【フォルダ名】</span>というフォルダを<span class="flag">【作成先のフォルダ名】</span>へ作成する</pre>
+				<p>【フォルダ名】<br>
 					作成するフォルダの名前を書きます。</p>
-				<p>《作成先のフォルダ名》<br>
+				<p>【作成先のフォルダ名】<br>
 					作成するフォルダの位置を書きます。</p>
 			</div>
 		</div>
@@ -192,14 +199,14 @@
 			</div>
 		</div>
 		<h3 id="lookup9">フォルダの削除</h3>
-		<p>フォルダを削除するには、「フォルダ」種類の「削除する」手順を使います。</p>
+		<p>フォルダを削除するには<a href="../core/folder.htm">「フォルダ」種類</a>の<a href="../core/folder.htm#削除する">「削除する」手順</a>を使います。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">《フォルダ名》</span>というフォルダを削除する</pre>
-				<p>《フォルダ名》<br>
+				<pre class="format"><span class="flag">【フォルダ名】</span>というフォルダを削除する</pre>
+				<p>【フォルダ名】<br>
 					削除するフォルダがある場所を書きます。</p>
 			</div>
 		</div>
@@ -212,11 +219,9 @@
 			</div>
 		</div>
 		<h3 id="lookup10">決められた場所のフォルダを指定する</h3>
-		<p>Windowsでは、デスクトップやマイドキュメントなど、あらかじめ決められたフォルダが用意されています。</p>
-		<p>これらのフォルダに対してファイルやフォルダを操作する場合は、これらのフォルダの位置を調べる手順を使います。</p>
-		<p>&nbsp;</p>
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<p>デスクトップやマイドキュメントなど、Windowsであらかじめ決められたフォルダの場所は「<a href="../core/folderlist.htm">基本フォルダ</a>」で取得できます。これらのフォルダでファイル操作する場合には、次のような設定項目でフォルダを取得できます。</p>
+<div class="panel panel-default">
+        <div class="panel-heading">
 				<h4 class="panel-title"></h4>
 			</div>
 			<table class="table table-striped table-bordered">
@@ -290,10 +295,8 @@
 		</div>
 		<p>　</p>
 		<h3 id="lookup11">フォルダ一覧の列挙</h3>
-		<p>指定したパスにあるフォルダの一覧を列挙するには、「一覧」手順または「全一覧」手順を使います。<br>
-			「一覧」手順では、指定したパスの直下にあるフォルダ名を列挙します。<br>
-			「全一覧」手順では、指定したパスにある子階層まで含めたすべてのフォルダ名を列挙します。<br>
-			「フルパスで」形式補語を指定することで、フォルダの絶対パスで列挙します。</p>
+		<p>指定したパスにあるフォルダの一覧を列挙するには<a href="../core/folder.htm#一覧">「一覧」手順</a>または<a href="../core/folder.htm#全一覧">「全一覧」手順</a>を使います。</p>
+		<p>「一覧」手順では、指定したパスの直下にあるフォルダ名を列挙します。「全一覧」手順では、指定したパスにある子階層まで含めたすべてのフォルダ名を列挙します。「フルパスで」形式補語を指定することで、フォルダの絶対パスで列挙します。</p>
 		<pre class="code">フォルダ一覧は、マイドキュメントのフォルダの一覧
 フォルダ一覧のすべての要素についてそれぞれ繰り返す
 	要素を報告する
@@ -303,24 +306,24 @@
 	要素を報告する
 繰り返し終わり</pre>
 		<h3 id="lookup12">フォルダが存在するかどうかを判定する</h3>
-		<p>「存在するかどうか」手順で、指定したパスのフォルダが存在するかどうかを判定できます。</p>
+		<p><a href="../core/folder.htm#存在する">「存在する」手順</a>で、指定したパスのフォルダが存在するかどうかを判定できます。</p>
 		<pre class="code">もしパスというフォルダが存在するなら
 	子一覧は、パスのファイルの全一覧
  	子一覧を追加する
 でなければ
-	項目は、｛パスのファイル名だけ,ファイル名,（パス）のファイルのサイズ｝
+	項目は｛パスのファイル名だけ,ファイル名,（パス）のファイルのサイズ｝
 	ファイルリストに、項目を追加する
 もし終わり</pre>
 		<h3 id="lookup13">フォルダを選択する</h3>
-		<p>「フォルダ選択画面」でユーザにフォルダを選択するための画面を表示できます。</p>
+		<p><a href="../core/dialog/folderdialog.htm">「フォルダ選択画面」</a>でユーザにフォルダを選択するための画面を表示できます。</p>
 		<pre class="code">フォルダ選択画面を表示する
 フォルダ名は、フォルダ選択画面のフォルダ名
 フォルダ名を表示する</pre>
 		<hr>
-		<h2 id="archive">ファイルを圧縮、解凍する</h2>
-		<p>プロデルでは、アーカイバライブラリを使ったファイルの圧縮と解凍に対応しています。</p>
+		<h2 id="archive">統合アーカイバDLLについて</h2>
+		<p>プロデルでは、統合アーカイバプロジェクトに準拠したライブラリ(DLL)を使ったファイルの圧縮と解凍に対応しています。		</p>
 		<ul>
-			<li>関連ページ
+		        <li>関連ページ
 				<ul>
 					<li> <a href="../file/filearchiver.htm">書庫ファイル操作</a></li>
 					<li> <a href="../file/archivedfile.htm">書庫ファイル</a></li>
@@ -329,39 +332,64 @@
 				</ul>
 			</li>
 		</ul>
-		<p>プロデルでは、次の拡張子の圧縮と解凍に対応しています。</p>
+		<p>プロデルでは、次の拡張子の圧縮と解凍に対応しています。各拡張子のファイルの圧縮・解凍には、統合アーカイバライブラリに対応したDLLファイルが必要です。</p>
+		<p>なお、zip形式のみ複数のDLLに対応しています。DLLが存在しない場合は.NET標準機能で解凍・圧縮します。</p>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title"></h4>
-			</div>
-			<table class="table table-striped table-bordered">
+		  </div>
+		  <table class="table table-striped table-bordered">
 				<tr>
 					<th>拡張子</th>
 					<th>名称</th>
 					<th>圧縮</th>
 					<th>解凍</th>
-					<th>アーカイバライブラリ名</th>
+					<th>64bit</th>
+					<th>必要なアーカイバDLLファイル</th>
+				</tr>
+				<tr>
+					<td rowspan="4">zip</td>
+					<td>ZIP形式</td>
+					<td>○</td>
+					<td>○</td>
+					<td>○</td>
+					<td>DLL不要(.NET標準機能)</td>
+				</tr>
+				<tr>
+					<td>ZIP形式</td>
+					<td>○</td>
+					<td>○</td>
+					<td>○</td>
+					<td>7-zip32.dll (7-zip64.dll)</td>
+				</tr>
+				<tr>
+					<td>ZIP形式(圧縮のみ)</td>
+					<td>○</td>
+					<td>×</td>
+					<td>×</td>
+					<td>zip32j.dll</td>
+				</tr>
+				<tr>
+					<td>ZIP形式(解凍のみ)</td>
+					<td>×</td>
+					<td>○</td>
+					<td>×</td>
+					<td>UnZip32.dll</td>
 				</tr>
 				<tr>
 					<td>lzh</td>
 					<td>LHA形式</td>
 					<td>○</td>
 					<td>○</td>
+					<td>×</td>
 					<td>Unlha32.dll</td>
-				</tr>
-				<tr>
-					<td>zip</td>
-					<td>ZIP形式</td>
-					<td>○</td>
-					<td>○</td>
-					<td>7-zip32.dll (7-zip64.dll)<br>
-						またはzip32j.dll(圧縮), UnZip32.dll(解凍)</td>
 				</tr>
 				<tr>
 					<td>cab</td>
 					<td>キャビネット形式</td>
 					<td>○</td>
 					<td>○</td>
+					<td>×</td>
 					<td>cab32.dll</td>
 				</tr>
 				<tr>
@@ -369,11 +397,45 @@
 					<td>RAR形式</td>
 					<td>×</td>
 					<td>○</td>
+					<td>○</td>
 					<td>unrar32.dll (unrar64.dll)</td>
 				</tr>
 				<tr>
 					<td>tar</td>
 					<td>TAR形式</td>
+					<td>○</td>
+					<td>○</td>
+					<td>○</td>
+					<td>tar32.dll (tar64.dll)</td>
+				</tr>
+				<tr>
+					<td>gz</td>
+					<td>GZ形式</td>
+					<td>×</td>
+					<td>○</td>
+					<td>○</td>
+					<td>tar32.dll (tar64.dll)</td>
+				</tr>
+				<tr>
+					<td>z</td>
+					<td>Z形式</td>
+					<td>×</td>
+					<td>○</td>
+					<td>○</td>
+					<td>tar32.dll (tar64.dll)</td>
+				</tr>
+				<tr>
+					<td>bz2</td>
+					<td>BZ2形式</td>
+					<td>×</td>
+					<td>○</td>
+					<td>○</td>
+					<td>tar32.dll (tar64.dll)</td>
+				</tr>
+				<tr>
+					<td>lzma</td>
+					<td>LZMA形式</td>
+					<td>○</td>
 					<td>○</td>
 					<td>○</td>
 					<td>tar32.dll (tar64.dll)</td>
@@ -383,6 +445,7 @@
 					<td>GCA形式</td>
 					<td>×</td>
 					<td>○</td>
+					<td>×</td>
 					<td>UnGCA32.dll</td>
 				</tr>
 				<tr>
@@ -390,11 +453,13 @@
 					<td>ARJ形式</td>
 					<td>×</td>
 					<td>○</td>
+					<td>×</td>
 					<td>UNARJ32J.dll</td>
 				</tr>
 				<tr>
 					<td>7z</td>
 					<td>7-zip形式</td>
+					<td>○</td>
 					<td>○</td>
 					<td>○</td>
 					<td>7-zip32.dll (7-zip64.dll)</td>
@@ -404,39 +469,76 @@
 					<td>YZ1形式</td>
 					<td>○</td>
 					<td>○</td>
+					<td>×</td>
 					<td>YZ1.dll</td>
 				</tr>
 				<tr>
-					<td>iso</td>
-					<td>ISO形式</td>
+					<td rowspan="2">iso</td>
+					<td rowspan="2">ISO形式</td>
 					<td>×</td>
 					<td>○</td>
-					<td>7-zip32.dll (7-zip64.dll)<br>
-						またはUnIso32.dll</td>
+					<td>○</td>
+					<td>7-zip32.dll (7-zip64.dll)</td>
 				</tr>
+				<tr>
+					<td>×</td>
+					<td>○</td>
+					<td>×</td>
+					<td>UnIso32.dll</td>
+				</tr>
+				<tr>
+				        <td>ish</td>
+				        <td>ISH形式</td>
+				        <td>○</td>
+				        <td>○</td>
+				        <td>×</td>
+				        <td>AISH32.dll</td>
+				        </tr>
+				<tr>
+				        <td>gza</td>
+				        <td>GZA形式</td>
+				        <td>○</td>
+				        <td>○</td>
+				        <td>×</td>
+				        <td>Bga32.dll</td>
+				        </tr>
+				<tr>
+				        <td>bza</td>
+				        <td>BZA形式</td>
+				        <td>○</td>
+				        <td>○</td>
+				        <td>×</td>
+				        <td>Bga32.dll</td>
+				        </tr>
 			</table>
 		</div>
-		<p>各拡張子のファイルの圧縮・解凍には、ライブラリ名に書かれたDLLファイルが必要です。<br>
-			これらのDLLは、プロデルには含まれていませんので、<br>
-			次のサイトなどから必要なファイルをダウンロードしてください。</p>
+		<p>※( )に記載したDLLファイルは64ビットWindows上で必要です。</p>
+		<p>統合アーカイバ各DLLファイルは、プロデルには含まれていません。次のサイトなどから必要なファイルをダウンロードしてください。</p>
 		<p><b>統合アーカイバプロジェクト</b><br>
-			<a target="_top" href="http://www.csdinc.co.jp/archiver/">http://www.csdinc.co.jp/archiver/</a></p>
-		<p>プロデルは既定値で32ビットで動作します(64ビットWindowsの場合でもWOW64上で32ビットとして動作します)ので<br>
-			32ビット用のライブラリを用意して下さい。<br>
-			なお、実行可能ファイルの32ビット起動固定を解除した場合は、64ビットWindowsでは( )に記載したライブラリが必要です。( )の記載の無い形式には対応していません。</p>
-</div>
+		  <a target="_top" href="http://www.csdinc.co.jp/archiver/">http://www.csdinc.co.jp/archiver/</a></p>
+		<p>64bitが×となっている形式は64ビットWindowsでは利用できません。プロデルデザイナ(32ビット環境)で実行するか、実行可能ファイルを「32ビット起動に固定」して32ビットで動作させることで利用できます。</p>
+		<p>詳しくは、<a href="https://wp.utopiat.net/2017/10/384/">公式ブログの記事</a>をご覧ください。</p>
+      </div>
 		</div><!--/samples-->
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年2月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

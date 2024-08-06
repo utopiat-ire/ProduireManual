@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="gzip圧縮"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="keywords" content="gzip圧縮">
+    <meta name="description" content="日本語プログラミング言語プロデルで「ファイル操作」プラグインの「GZIP圧縮方式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +27,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->GZIP圧縮方式<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +39,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -68,40 +72,38 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-		<div id="reftitle" class="col-md-9">
-		  <ul class="breadcrumb" data-category="file">
-		    <li><a href="../index.htm">プロデル</a></li>
-		    <li><a href="index.htm">ファイル操作</a></li>
-		    <li>GZIP圧縮方式</li>
-	      </ul>
-		  <h1>GZIP圧縮方式</h1>
+	<div id="reftitle" class="col-md-12">
+		<ul class="breadcrumb" data-category="file">
+		<li><a href="../index.htm">プロデル</a></li>
+		<li><a href="index.htm">ファイル操作</a></li>
+		<li>GZIP圧縮方式</li>
+		</ul>
+		<h1>GZIP圧縮方式</h1>
     </div>
-		<div id="refsidebar" class="col-md-3 sidebar">
-			<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	<div id="refsidebar" class="col-md-3">
+		<p> <a href="../static.htm" class="label label-info">静的種類</a></p>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>利用プラグイン</h3>
+		<p><a href="index.htm">ファイル操作機能</a></p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2 id="head">概要</h2>
+		<p>GZIP圧縮方式でファイルを圧縮したり解凍したりする種類です。</p>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#圧縮する">圧縮する</a>　<a href="#解凍する">解凍する</a>　</div>
+		<div id="methods">
+			<h3>【自分】で【圧縮するファイル】を【作成先】へ<a name="圧縮する">圧縮する</a>：文字列</h3>
+			<p>指定したファイルをGZIP圧縮方式で圧縮します。</p>
+			<h3>【自分】で【圧縮するバイナリ列】を圧縮する：バイナリデータ</h3>
+			<p>指定したバイナリ列をGZIP圧縮方式で圧縮します。</p>
+			<h3>【自分】で【圧縮されたファイル】を【展開先】へ<a name="解凍する">解凍する</a>：文字列</h3>
+			<p>指定したGZIP圧縮されたファイルを解凍します。</p>
+			<h3>【自分】で【圧縮されたバイナリ列】を解凍する：バイナリデータ</h3>
+			<p>指定したGZIP圧縮形式で圧縮されたバイナリ列を解凍します。</p>
 		</div>
-		<div id="refcontent" class="col-md-8">
-		  <h2>概要</h2>
-			<p>GZIP圧縮方式でファイルを圧縮したり解凍したりする種類です。</p>
-			<p><a href="../usage.htm">
-			<span class="label label-info">静的種類</span></a></p>
-			<h3>利用プラグイン</h3>
-			<p><a href="index.htm">ファイル操作機能</a></p>
-			<h2 id="手順">手順</h2>
-			<p>次の手順が使用できます。</p>
-			<div id="methodlist"><a href="#圧縮する">圧縮する</a>　<a href="#解凍する">解凍する</a>　</div>
-			<div id="methods">
-				<h3>【自分】で【圧縮するファイル】を【作成先】へ<a name="圧縮する">圧縮する</a>：文字列</h3>
-				<p>指定したファイルをGZIP圧縮方式で圧縮します。</p>
-				<h3>【自分】で【圧縮するバイナリ列】を圧縮する：バイナリデータ</h3>
-				<p>指定したバイナリ列をGZIP圧縮方式で圧縮します。</p>
-				<h3>【自分】で【圧縮されたファイル】を【展開先】へ<a name="解凍する">解凍する</a>：文字列</h3>
-				<p>指定したGZIP圧縮されたファイルを解凍します。</p>
-				<h3>【自分】で【圧縮されたバイナリ列】を解凍する：バイナリデータ</h3>
-				<p>指定したGZIP圧縮形式で圧縮されたバイナリ列を解凍します。</p>
-			</div>
-			<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">GZIP形式のファイルを展開する</h3>
 	<p>GZIP圧縮方式で圧縮されたファイルを展開します。</p>
@@ -109,16 +111,20 @@
 </div><!--/samples-->
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

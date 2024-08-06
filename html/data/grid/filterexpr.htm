@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>データ表のフィルタ式  - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->行部品<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../../verbs/index.html">手順一覧</a></li>
+							<li><a href="../../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+	<div id="reftitle" class="col-md-12">
+	  <ul class="breadcrumb" data-category="data">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">データ操作</a></li>
+	    <li><a href="grid.htm">表部品</a></li>
+	    <li>データ表のフィルタ式 </li>
+      </ul>
+	  <h1>データ表のフィルタ式</h1>
+	</div>
+	<div id="refsidebar" class="col-md-3">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="datatable.htm">データ表</a></li>
+          <li><a href="grid.htm">表部品</a></li>
+      </ul>
+        <p>　</p>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+<p>データ表の「選択する」手順は、.NET FrameworkのDataTableクラスのSelect()メソッドに相当します。選択文字列として指定するフィルタ式の詳しい文法は、<a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn.expression?view=net-5.0#expression-syntax">.NET公式ドキュメントの「Expression Syntax」</a>をご参照下さい。</p>
+<h2>定数</h2>
+<p>&nbsp;</p>
+<h2>識別子</h2>
+<p>&nbsp;</p>
+<h2></h2>
+<h2>演算子</h2>
+<p>論理式には、AND,OR,NOTを使えます。</p>
+<p>(名前 = '太郎' OR 名前 = '二郎') AND 名字 = '山田'</p>
+<p>論理式を指定するときに使える演算子です。</p>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <th scope="row">演算子</th>
+      <td>意味</td>
+      <td>例文</td>
+    </tr>
+    <tr>
+      <th scope="row">&lt;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&gt;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&lt;=</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&gt;=</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&lt;&gt;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">=</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">IN</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">LIKE</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>算術演算子</p>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <th scope="row">演算子</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">+</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">-</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">*</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">/</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">%</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>ワイルドカード</h2>
+<p>ワイルドカードには、%または*が使えます。「製*品」のようにワイルドカードを単語の途中で使うことはできません。</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <th scope="row">書式</th>
+      <td>意味</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">品名 LIKE '*製品*'</th>
+      <td>品名に製品が含まれる</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">品名 LIKE '*製品'</th>
+      <td>品名が製品で終わる</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">品名 LIKE '製品*'</th>
+      <td>品名が製品で始まる</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<h2></h2>
+<h2>集計</h2>
+<p>　</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <th scope="row">関数名</th>
+      <th>&nbsp;</th>
+      <th>意味</th>
+    </tr>
+    <tr>
+      <th scope="row">Sum(値段)</th>
+      <td>&nbsp;</td>
+      <td>値段をすべて足した値</td>
+    </tr>
+    <tr>
+      <th scope="row">Avg(点数)</th>
+      <td>&nbsp;</td>
+      <td>点数の平均値</td>
+    </tr>
+    <tr>
+      <th scope="row">Min(点数)</th>
+      <td>&nbsp;</td>
+      <td>点数の最小値</td>
+    </tr>
+    <tr>
+      <th scope="row">Max(点数)</th>
+      <td>&nbsp;</td>
+      <td>点数の最大値</td>
+    </tr>
+    <tr>
+      <th scope="row">Count(ID)</th>
+      <td>&nbsp;</td>
+      <td>行数</td>
+    </tr>
+    <tr>
+      <th scope="row">StDev</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">Var</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+		<h2>関数</h2>
+		<table width="200" border="1">
+		  <tbody>
+		    <tr>
+		      <th scope="row">関数名</th>
+		      <th>書式</th>
+		      <th>説明</th>
+	        </tr>
+		    <tr>
+		      <th scope="row">CONVERT</th>
+		      <td>Convert(expression, type)</td>
+		      <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <th scope="row">LEN</th>
+		      <td>LEN(expression)</td>
+		      <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <th scope="row">ISNULL</th>
+		      <td><table>
+		        <tbody>
+		          <tr>
+		            <td>		              ISNULL(expression, replacementvalue)</td>
+	              </tr>
+	            </tbody>
+	          </table></td>
+		      <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <th scope="row">IIF</th>
+		      <td>IIF(expr, truepart, falsepart)</td>
+		      <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <th scope="row">TRIM</th>
+		      <td>TRIM(expression)</td>
+		      <td>&nbsp;</td>
+	        </tr>
+		    <tr>
+		      <th scope="row">SUBSTRING</th>
+		      <td>SUBSTRING(expression, start, length)</td>
+		      <td>&nbsp;</td>
+	        </tr>
+	      </tbody>
+	  </table>
+		<p>&nbsp;</p>
+		<!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+    <script src="../../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

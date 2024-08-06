@@ -1,11 +1,6 @@
 $(function () {
-	$('#reftitle').attr('class','col-md-9');
-	$('#refsidebar').attr('class','col-md-3 sidebar');
-	$('#refcontent').attr('class','col-md-9');
-	if($('.sidebar').size()>0) {
-		$('footer').addClass('col-md-9');
-		$('.footer').addClass('col-md-9');
-	}
+	//$('.refsidebar').addClass('col-sm-offset-1 col-sm-push-8');
+	//$('.refcontent').addClass('col-sm-pull-4');
 
 	var head1 = $('ul.breadcrumb[data-category]');
 	if (head1.length > 0) {

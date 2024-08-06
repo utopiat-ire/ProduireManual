@@ -12,8 +12,7 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="POST形式"><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="keywords" content="POST形式">	<meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「HTTP要求」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -27,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->HTTP要求<!-- InstanceEndEditable -->
 				</a>
@@ -39,26 +38,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -68,50 +71,49 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="net">
 	    <li><a href="../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">ネットワーク機能</a></li>
 	    <li>HTTP要求</li>
       </ul>
 	  <h1>HTTP要求</h1>
-    </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>関連ページ</h3>
-        <ul>
-          <li><a href="httpresponse.htm">HTTP応答</a></li>
-        </ul>
-        <p>&nbsp;</p>
-	</div>
-	<div id="refcontent" class="col-md-8">
-	  <h2>概要</h2>
-		<p>「HTTP要求」種類は、HTTPを使って要求する内容を指定するための種類です。</p>
 		<p><a href="../usage.htm">
 			<span class="label label-warning">生成可能</span></a></p>
-		<h3>必要プラグイン</h3>
-		<p><a href="index.htm">ネットワーク機能</a></p>
-<h2>作成する方法</h2>
-		<pre class="format">【名前】というHTTP要求を作る</pre>
+    </div>
+	<div id="refsidebar" class="col-md-3">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>利用プラグイン</h3>
+		<p><a href="index.htm">ネットワーク機能集</a></p>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="http.htm">「HTTP」種類</a></li>
+          <li><a href="httpresponse.htm">HTTP応答</a></li>
+        </ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2 id="head">概要</h2>
+		<p>「HTTP要求」種類は、HTTPを使って要求する内容を指定するための種類です。</p>
+		<h2>作成する方法</h2>
+		<p><a href="http.htm">「HTTP」種類</a>の「要求する」手順を使います。</p>
+		<pre class="format">HTTPで要求して【名前】とする</pre>
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#設定する">設定する</a>　<a href="#クッキーへ設定する">クッキーへ設定する</a>　<a href="#クッキーを削除する">クッキーを削除する</a>　<a href="#ヘッダへ設定する">ヘッダへ設定する</a>　<a href="#引数へ設定する">引数へ設定する</a>　</div>
 		<div id="methods">
-			<h3>《自分》として《cookie:HTTPクッキー》を<a name="設定する">設定する</a></h3>
+			<h3>【自分】として【cookie:HTTPクッキー】を<a name="設定する">設定する</a></h3>
 			<p>指定したクッキーを要求内容に設定します。</p>
-			<pre class="code">「https://www.yahoo.co.jp/」をHTTPで取得して内容とする
-内容を報告する</pre>
-			<h3>《自分》として《クッキー名》という《値》を<a name="クッキーへ設定する">クッキーへ設定する</a></h3>
+			<h3>【自分】として【クッキー名】という【値】を<a name="クッキーへ設定する">クッキーへ設定する</a></h3>
 			<p>指定した名前と値でクッキーを作り、要求内容に設定します。</p>
+			<h4 data-ref="クッキーへ設定する">HTTPリクエストにクッキー値を設定する</h4>
 			<pre class="code">HTTP要求を作って要求内容とする
 HTTP要求として「Message」という「Hellow」をクッキーへ設定する</pre>
-			<h3>《自分》として《クッキー名》という<a name="クッキーを削除する">クッキーを削除する</a></h3>
+			<h3>【自分】として【クッキー名】という<a name="クッキーを削除する">クッキーを削除する</a></h3>
 			<p>指定した名前のクッキーを要求内容から削除します。</p>
-			<h3>《ヘッダ名》という《値》を《自分》として<a name="ヘッダへ設定する">ヘッダへ設定する</a></h3>
+			<h3>【ヘッダ名】という【値】を【自分】として<a name="ヘッダへ設定する">ヘッダへ設定する</a></h3>
 			<p>
 				指定した名前と値を、ヘッダへ設定します。</p>
-			<h3>《引数名》という《値》を《自分》として<a name="引数へ設定する">引数へ設定する</a></h3>
+			<h3>【引数名】という【値】を【自分】として<a name="引数へ設定する">引数へ設定する</a></h3>
 			<p>
 				指定した引数名と値の組み合わせを引数として設定します。引数の送信方法は、HTTPメソッドによって異なります。</p>
 			</div>
@@ -131,12 +133,12 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 				<tr>
 					<th><a name="本文バイナリ">本文バイナリ</a></th>
 					<th>バイナリ</th><th>◎</th><td>
-						送信する本文をバイナリ形式で指定します。この項目が指定されている場合は、「引数」設定項目に指定した内容は送信されません。</td>
+						送信する本文をバイナリ形式で指定します。この項目が指定されている場合は「引数」設定項目に指定した内容は送信されません。</td>
 					</tr>
 				<tr>
 					<th><a name="本文">本文</a></th>
 					<th>文字列</th><th>◎</th><td>
-						送信する本文を指定します。この項目が指定されている場合は、「引数」設定項目に指定した内容は送信されません。</td>
+						送信する本文を指定します。この項目が指定されている場合は「引数」設定項目に指定した内容は送信されません。</td>
 					</tr>
 				<tr>
 					<th><a name="ContentType">ContentType</a></th>
@@ -144,7 +146,7 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 					</tr>
 				<tr>
 					<th><a name="ヘッダ日時">ヘッダ日時</a></th>
-					<th>日付時刻</th><th>◎</th><td>ヘッダの作成日時</td>
+					<th>日時形式</th><th>◎</th><td>ヘッダの作成日時</td>
 					</tr>
 				<tr>
 					<th><a name="メソッド">メソッド</a></th>
@@ -180,7 +182,7 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 					</tr>
 				<tr>
 					<th><a name="IfModifiedSince">IfModifiedSince</a></th>
-					<th>日付時刻</th><th>◎</th><td>IfModifiedSinceヘッダの値</td>
+					<th>日時形式</th><th>◎</th><td>IfModifiedSinceヘッダの値</td>
 					</tr>
 				<tr>
 					<th><a name="TransferEncoding">TransferEncoding</a></th>
@@ -202,7 +204,7 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 <h3 id="sample1">UserAgentを指定してページを要求する</h3>
 		<p>ユーザエージェントを指定してHTTPでHTMLを取得します。</p>
 <pre class="code">HTTP要求を作って要求内容とする
-要求内容のUserAgentは、「Mozilla/5.0」
+要求内容のUserAgentは「Mozilla/5.0」
 要求内容にて「https://www.yahoo.co.jp/」をHTTPで要求して応答内容とする
 応答内容のヘッダのすべての要素についてそれぞれ繰り返す
 	要素のキー&amp;「=」&amp;要素の内容を報告する
@@ -211,16 +213,20 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

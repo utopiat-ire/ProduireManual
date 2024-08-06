@@ -11,8 +11,7 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「図形描画」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->図形描画<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,24 +70,25 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="graphics">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">画像描画機能</a></li>
-	<li>図形描画</li>
-</ul>
-<h1>図形描画</h1>
-
 <div class="row">
-	<div id="refsidebar" class="col-md-3 sidebar">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	<div id="reftitle" class="col-md-12">
+		<ul class="breadcrumb" data-category="graphics">
+			<li><a href="../index.htm">プロデル</a></li>
+			<li><a href="index.htm">画像描画機能</a></li>
+			<li>図形描画</li>
+		</ul>
+		<h1>図形描画</h1>
+		<p><a href="../static.htm" class="label label-info">静的種類</a></p>
+	</div>
+	<div id="refsidebar" class="col-md-3">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>利用プラグイン</h3>
+		<p><a href="index.htm">画像描画機能</a></p>
 	</div>
 	<div id="refcontent" class="col-md-8">
-	  <h2>概要</h2>
+	  <h2 id="head">概要</h2>
 		<p>「図形描画」種類は、座標を指定して、四角形や線、円を描くための種類です。</p>
 		<p>図形描画は、<a href="../wincontrol/window.htm">ウィンドウ</a>,<a href="../wincontrol/picturebox.htm">ピクチャー</a>,<a href="canvas/canvas.htm">キャンバス</a>,<a href="canvas/subcanvas.htm">子キャンバス</a>を対象にして描画できます。</p>
-		<p><span class="label label-info">静的種類</span></p>
-		<h3>必要なプラグイン</h3>
-		<p>画像描画機能(<a href="index.htm">Produire.PGraphics.dll</a>)</p>
 		<p>　</p>
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#書く">書く</a>　<a href="#線を描く">線を描く</a>　<a href="#点を描く">点を描く</a>　<a href="#円を描く">円を描く</a>　<a href="#四角形を描く">四角形を描く</a>　<a href="#円弧を描く">円弧を描く</a>　<a href="#扇を描く">扇を描く</a>　<a href="#塗りつぶす">塗りつぶす</a>　</div>
@@ -94,7 +98,7 @@
 			<pre class="code">図形描画によって、窓をクリアする</pre>
 			<h3>【対象】へ【文字】を【フォント】で【位置】から<a name="書く">書く</a></h3>
 			<p>対象に指定した文字を書きます。</p>
-			<pre class="code">図形描画によって、窓に「こんにちは」を「ＭＳ Ｐゴシック」で{30,30}から書く</pre>
+			<pre class="code">図形描画によって、窓に「こんにちは」を「ＭＳ Ｐ明朝,15」で{30,30}から書く</pre>
 			<h3>【対象】へ【始点】から【終点】まで<a name="線を描く">線を描く</a></h3>
 			<p>始点から終点までの線を描きます。</p>
 			<pre class="code">図形描画によって、窓に{30,30}から{130,130}まで線を描く</pre>
@@ -115,7 +119,7 @@
 			<p>始点から終点で作られる四角形にを描きます。</p>
 			<h3>〈【座標】へ〉〈【色】で〉<a name="塗りつぶす">塗りつぶす</a></h3>
 			<p>対象の指定した位置から、境界までを指定した色で塗りつぶします。</p>
-			<pre class="code">図形描画によって、窓を{30,30}へ「緑」で塗りつぶす</pre>
+			<pre class="code">図形描画によって、窓を{30,30}へ緑色で塗りつぶす</pre>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
@@ -146,39 +150,45 @@
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<p>ウィンドウに様々な図形を描かせます。</p>
 <pre class="code">窓というウィンドウを作る
-	その内容を「描画のテスト」に変える
+	その内容を「図形描画のテスト」に変える
+	その実質大きさを{400,300}に変える
 
-ボタン１というボタンを窓に作る
+描画ボタンというボタンを窓に作る
 	その内容を「描画する」に変える
-	その位置と大きさを｛100,200,80,50｝に変える
-
-窓のボタン１のクリックされた時の手順は、クリック
+	その位置と大きさを｛150,200,100,50｝に変える
 
 窓を表示する
 待機する
 
-クリックの手順
+描画ボタンがクリックされた時の手順
+	図形描画の太さを2に変える
+	図形描画：線を窓に｛20,30｝から｛50,60｝まで描く
+	図形描画：四角形を窓に｛200,30｝から｛250,70｝まで緑色で描く
+	図形描画：四角形を窓に｛220,50｝から｛270,90｝まで緑色で描く
+	図形描画によって窓を{210,40}へ黄色で塗りつぶす
 	図形描画の線を点線に変える
-	図形描画：線を、窓に｛20,30｝から｛50,60｝まで、描く
-	図形描画：円を、窓に｛60,30｝から｛80,50｝まで、「赤」色で、描く
-	図形描画：四角形を、窓に｛30,30｝から｛20,20｝まで、「緑」色で、描く
-	図形描画：円弧を、窓に｛60,30｝から｛80,50｝まで、「赤」色で、描く
-	図形描画：扇を、窓に｛30,30｝から｛20,20｝まで、「緑」色で、描く
-	図形描画：「ようこそ! 日本語プログラミング言語『プロデル』へ」を窓に｛30,100｝から、書く
+	図形描画：円を窓に｛60,30｝から｛80,50｝まで赤色で描く
+	図形描画：扇を窓に｛30,100｝から｛80,50｝まで-90度から90度だけ緑色で描く
+	図形描画：円弧を窓に｛120,100｝から｛80,50｝まで-90度から90度だけ赤色で描く
+	図形描画：「ようこそ! プロデルへ」を窓に｛30,150｝から"オレンジ"色で「ＭＳ Ｐ明朝,16」で書く
 終わり</pre>
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

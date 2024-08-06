@@ -11,8 +11,8 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルの「フォルダ情報」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->フォルダ情報<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +38,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="index.htm">基本機能</a></li>
-							<li><a href="global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,9 +71,8 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
-	<div id="reftitle" class="col-md-9">
+	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="core">
 	    <li><a href="../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">基本機能</a></li>
@@ -77,21 +80,22 @@
       </ul>
 	  <h1>フォルダ情報</h1>
     </div>
-	<div id="refsidebar" class="col-md-3 sidebar">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+	<div id="refsidebar" class="col-md-3">
+		<p><a href="../usage.htm">
+			</a><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="../convertables.htm" class="label label-warning convertable">変換</a></p>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../core/folder.htm">フォルダ</a></li>
           <li><a href="fileinfo.htm">ファイル情報</a></li>
+          <li><a href="../file/driveinfo.htm">ドライブ情報</a></li>
       </ul>
         <p>&nbsp;</p>
 	</div>
 	<div id="refcontent" class="col-md-8">
-	  <h2>概要</h2>
+	  <h2 id="head">概要</h2>
 		<p>フォルダのパスなどの情報を表す種類です。</p>
-		<p><a href="../usage.htm">
-			<span class="label label-warning">生成可能</span></a><a href="../convertables.htm" class="label label-warning convertable">変換</a></p>
-<h2>作成する方法</h2>
+		<h2>作成する方法</h2>
 		<pre class="format">【名前】というフォルダ情報（【フルパス】）を作る</pre>
 		<h2 id="型変換">型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
@@ -107,51 +111,73 @@
 				</tr>
 			</table>
 		<h2 id="手順">手順</h2>
-		<div id="methodlist"><a href="#列挙する">列挙する</a>　<a href="#作成する">作成する</a>　<a href="#削除する">削除する</a>　<a href="#取得する">取得する</a>　<a href="#存在する">存在する</a>　<a href="#変更する">変更する</a>　</div>
+		<div id="methodlist"><a href="#列挙する">列挙する</a>　<a href="#作成する">作成する</a>　<a href="#フォルダを作成する">フォルダを作成する</a>　<a href="#削除する">削除する</a>　<a href="#取得する">取得する</a>　<a href="#存在する">存在する</a>　<a href="#ファイルが存在する">ファイルが存在する</a>　<a href="#フォルダが存在する">フォルダが存在する</a>　<a href="#変更する">変更する</a>　</div>
 		<div id="methods">
 			<h3>【自分】から〈【パターン】を〉<a name="列挙する">列挙する</a></h3>
-			<p>指定したフォルダの直下にあるファイルの一覧を返します。<br>
+			<p>このフォルダの直下にあるファイルの一覧を返します。<br>
 				【パターン】にはワイルドカードを使えます</p>
 			<pre class="code">フォルダ一覧は、<b>デスクトップから「*.docx」を列挙する</b>
 フォルダ一覧のすべての要素についてそれぞれ繰り返す
 	要素の名前を報告する
 繰り返し終わり</pre>
-			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
-			<h3>【自分】へ【フォルダ名】というフォルダを<a name="作成する">作成する</a>：フォルダ情報</h3>
-			<p>フォルダを作成します</p>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】を<a name="作成する">作成する</a></h3>
+          <p>このフォルダを作成します</p>
+            <pre class="code">作業用フォルダというフォルダ情報（「d:\temp\」）を作る
+<strong>作業用フォルダを作成する</strong></pre>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、作成先フォルダ名にシステム領域を指定できません。</p>
+            <h3>【自分】へ【フォルダ名】という<a name="フォルダを作成する">フォルダを作成する</a>：フォルダ情報</h3>
+			<p>このフォルダ内に新しいフォルダを作成します</p>
 			<pre class="code">デスクトップに「ABC」というフォルダを作成する</pre>
-			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、作成先フォルダ名にシステム領域を指定できません。</p>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、作成先フォルダ名にシステム領域を指定できません。</p>
 			<h3>【自分】を<a name="削除する">削除する</a></h3>
-			<p>フォルダを削除します。フォルダ内にあるファイルとフォルダも完全に削除されます。</p>
+			<p>このフォルダを削除します。フォルダ内にあるファイルとフォルダも完全に削除されます。</p>
 			<pre class="code">デスクトップから「ABC」というフォルダを取得してABCフォルダとする
-ABCフォルダを削除する</pre>
-			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+<strong>ABCフォルダを削除する</strong></pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
 			<h3>【自分】から【ファイル名/フォルダ名】を削除する</h3>
-			<p>フォルダを削除します。フォルダ内にあるファイルとフォルダも完全に削除されます。</p>
+			<p>このフォルダの指定したファイルまたはフォルダを削除します。フォルダは、そのフォルダ内にあるすべてのファイルとフォルダも完全に削除されます。</p>
 			<pre class="code">デスクトップから「ABC」を削除する</pre>
-			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
-			<h3>【自分】へ【ファイル名】というファイルを<a name="取得する">取得する</a>：<a href="fileinfo.htm">ファイル情報</a></h3>
-			<p>ファイル情報を取得します。ファイルの存在は確認しません。</p>
-			<pre class="code">デスクトップから「書類\報告書.xlsx」というファイルを取得して報告書ファイルとする</pre>
-			<h3>【自分】へ【フォルダ名】というフォルダを取得する：フォルダ情報</h3>
-			<p>フォルダ情報を取得します。フォルダの存在は確認しません。</p>
-			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする</pre>
-			<h3>【自分】へ【名前】を取得する：基本オブジェクト</h3>
-			<p>ファイル情報またはフォルダ情報を取得します</p>
-			<pre class="code">デスクトップから「書類.xlsx」を取得して書類ファイルとする</pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】から【ファイル名】というファイルを<a name="取得する">取得する</a>：<a href="fileinfo.htm">ファイル情報</a></h3>
+			<p>このフォルダにあるファイルのファイル情報を取得します。ファイルの存在は確認しません。</p>
+			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする
+<strong>書類フォルダから「報告書.xlsx」というファイルを取得して</strong>報告書ファイルとする</pre>
+			<h3>【自分】から【フォルダ名】というフォルダを取得する：フォルダ情報</h3>
+			<p>このフォルダにあるフォルダのフォルダ情報を取得します。フォルダの存在は確認しません。</p>
+			<pre class="code">//「[デスクトップ]書類」に相当するフォルダ情報を取得する<br><strong>デスクトップから「書類」というフォルダを取得して</strong>書類フォルダとする</pre>
+			<h3>【自分】へ【名前】を取得する：<a href="../primitive/baseobject.htm">基本物</a></h3>
+			<p>このフォルダにある存在するファイルのファイル情報またはフォルダのフォルダ情報を取得します。</p>
+			<pre class="code"><strong>デスクトップから「書類.xlsx」を取得して</strong>書類ファイルとする</pre>
 			<h3>【自分】が<a name="存在する">存在する</a></h3>
-			<p>指定したフォルダが存在するかどうかを判定します</p>
-			<pre class="code">書類フォルダというフォルダ情報（「[デスクトップ]書類」）を作る
-もし書類フォルダが存在するなら
+			<p>このフォルダが存在するかどうかを判定します</p>
+			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする<br>もし<strong>書類フォルダが存在する</strong>なら
 	「存在します」を情報アイコンで表示する
 でなければ
 	「存在しません」を警告アイコンで表示する
 もし終わり</pre>
-			<h3>【自分】を【変更後フォルダ名】へ<a name="変更する">変更する</a></h3>
-			<p>指定したフォルダが存在するかどうかを判定します</p>
-			<pre class="code">書類フォルダというフォルダ情報（「[デスクトップ]書類」）を作る
-書類フォルダを「作業記録」に変更する</pre>
-			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、対象フォルダにシステム領域を指定できません。</p>
+			<h3>【自分】が【ファイル名】という<a name="ファイルが存在する">ファイルが存在する</a></h3>
+			<p>このフォルダに指定した名前のファイルが存在するかどうかを判定します</p>
+		  <h3>【自分】が【フォルダ名】という<a name="フォルダが存在する">フォルダが存在する</a></h3>
+			<p>このフォルダに指定した名前のフォルダが存在するかどうかを判定します</p>
+		  <h3>【自分】に【名前】が存在する</h3>
+			<p>このフォルダが指定した名前のファイルまたはフォルダが存在するかどうかを判定します</p>
+			<h3>【自分】に【ファイル情報】が存在する</h3>
+			<p>このフォルダに、指定したファイル情報の「名前」設定項目の値と同じファイルが存在するかどうかを判定します。</p>
+		  <h3>【自分】に【フォルダ情報】が存在する</h3>
+			<p>このフォルダに、指定したフォルダ情報の「名前」設定項目の値と同じフォルダが存在するかどうかを判定します。</p>
+			<h3>【自分】を【新フォルダ名】へ<a name="変更する">変更する</a></h3>
+			<p>このフォルダの名前を変更します。</p>
+			<h4 data-ref="変更する">フォルダの名前を変更する</h4>
+			<pre class="code">デスクトップから「書類」を取得して書類フォルダとする
+<strong>書類フォルダを「作業記録」に変更する</strong></pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、対象フォルダにシステム領域を指定できません。</p>
+			<h3>【自分】を【新フォルダ名】へ<a name="変更する">移動する</a></h3>
+            <p>このフォルダを別のフォルダへ移動します。</p>
+            <pre class="code">デスクトップから「書類」を取得して書類フォルダとする
+<strong>書類フォルダをマイドキュメントへ移動する</strong></pre>
+            <p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、対象フォルダにシステム領域を指定できません。</p>
+            <p>&nbsp;</p>
 			<p class="usage"><a href="../usage.htm#手順">記号の意味</a></p>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -212,16 +238,20 @@ ABCフォルダを削除する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

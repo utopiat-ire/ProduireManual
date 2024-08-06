@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プロデルCGI - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プロデルCGI<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../../verbs/index.html">手順一覧</a></li>
+							<li><a href="../../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="web">
+            <li><a href="../../index.htm">プロデル</a></li>
+            <li><a href="index.htm">Webアプリ</a></li>
+            <li>プロデルCGI</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>Webアプリを作る</h4>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#runsample">簡易Webサーバ用のサンプルを動かすには</a></li><li><a href="#cgiconfig">拡張子(.rdr)で動作させるようにするには</a></li></ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
+        <h2 id="webserver">プロデルCGIの概要</h2>
+        <p>プロデルCGIは、プロデルで書かれたWebアプリケーションをCGI (Common Gateway Interface)を使って動作させるランタイムエンジンです。</p>
+        <p>ApacheなどのWebサーバを組み合わせて、プロデルプログラムをCGIとして実行できます。</p>
+        <p>CGI動作には、プロデルの知識に加えて、Apacheなどのサーバの知識が必要です。　</p>
+        <h3>動作環境</h3>
+        <p>プロデルCGIは、次のいずれかの動作環境が必要です。</p>
+        <ul>
+            <li>Windows×Apache×.NET Framework2.0以上</li>
+            <li>Linux×Apache×mono 1.9以上</li>
+        </ul>
+        <p>CGIが利用できるWebサーバに加えて、プロデルを動作させる環境が、別途必要です。</p>
+        <p>なお、標準的な共有サーバでCGIに対応していた場合でも<br>
+        monoが導入されていないサーバでは、動作しません。</p>
+        <p>プロデルは、Windows環境上で動作することを想定して設計されています。<br>
+        Linux上では、一部のプログラムが動作しない場合がありますので、ご了承ください。　</p>
+        <hr>
+        <h2 id="windowscgi">Apacheでプロデルを動かす</h2>
+        <p>プロデルCGIを使うことで、Apache上でプロデルのプログラムを動かせます。</p>
+        <p>プロデル簡易Webサーバで動作するプログラムをほぼ変更することなく、動かせます。</p>
+        <h2>動作環境</h2>
+        <p>Apacheでプロデルを動かすには、次の環境が必要です。</p>
+        <ul>
+            <li>Apache HTTP Server</li>
+            <li>.NET Framework 2.0以降</li>
+            <li>プロデルCGI</li>
+        </ul>
+        <p>このページでは、XAMPPに含まれるApache HTTP Serverを使って、プロデルCGIの動作環境を構築する方法を、紹介します。</p>
+        <p>&nbsp;</p>
+        <h2>環境の構築</h2>
+        <h3>XAMPPのインストール</h3>
+        <p><a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPPの公式サイト</a>からXAMPPをダウンロードして、インストールします。</p>
+        <p>&nbsp;</p>
+        <h3>プロデルCGIと関連するファイルのコピー</h3>
+        <p>１．XAMPPがインストールされているフォルダ(C:\xampp\など)に「rdr」フォルダを作成します。</p>
+        <p>２．プロデル簡易Webサーバを解凍したフォルダまたは、プロデル本体から次のファイルとフォルダを「rdr」フォルダにコピーします。</p>
+        <ul>
+            <li>rdrcgi.exe</li>
+            <li>Produire.Core.dll</li>
+            <li>utopiat.Host.dll</li>
+            <li>pluginsフォルダ</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2>動作テスト</h2>
+        <h3>プロデルCGIのテストプログラム</h3>
+        <p>次のプログラムを、test.cgi　という名前で「C:\xampp\htdocs\」へ保存します。</p>
+        <pre class="code">#!c:\xampp\rdr\rdrcgi.exe
+
+応答として「&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp; &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+現在は、［時刻］です。
+&lt;/body&gt;&lt;/html&gt;」を送る</pre>
+        <p>&nbsp;</p>
+        <h3>テストプログラムを動かす</h3>
+        <p>１．XAMPPのコントロールパネルでApacheを起動(Start)します。</p>
+        <p>２．ブラウザで「<a href="http://localhost/test.cgi">http://localhost/test.cgi</a>」を開きます。</p>
+        <p>３．現在時刻が表示されれば、成功です！！</p>
+        <p>&nbsp;</p>
+        <h3>簡易Webサーバ用のサンプルを動かすには</h3>
+        <p>プロデル簡易Webサーバ用のサンプルプログラムを、プロデルCGIで動かすには、拡張子を.cgiに変えて、ファイルの先頭に次のような内容を追加します。</p>
+        <pre class="code">#!c:\xampp\rdr\rdrcgi.exe</pre>
+        <p>この部分は、apacheがCGIを処理するプログラムを指定するもので、プロデルで書かれたプログラムの場合は、プロデルCGI (rdrcgi.exe)があるパスを指定します。</p>
+        <p>&nbsp;</p>
+        <h2>[補足] 拡張子(.rdr)で動作させるようにするには</h2>
+        <p>CGIとして実行するには、プロデルプログラムの拡張子を.cgiとする必要がありますが、Apacheの設定を変更することで、.rdrでも動作させられます。</p>
+        <p>Apacheの設定を変更するには、設定ファイル(httpd.conf)を変更します。</p>
+        <h3>httpd.confの変更</h3>
+        <p>１．「C:\xampp\apache\conf」にある「httpd.conf」をメモ帳などのテキストエディタで開きます。</p>
+        <p>２．httpd.confの中から、次の部分を、変更後の内容に変更します。</p>
+        <pre>(変更前)
+AddHandler cgi-script .cgi .pl .asp
+
+(変更後)
+AddHandler cgi-script .cgi .pl .asp .rdr</pre>
+        <h3>Apacheの再起動</h3>
+        <p>Apacheがすでに起動している場合は、設定を反映させるために、Apacheを再起動します。</p>
+        <br>
+        <hr>
+        <h2 id="linuxcgi">Linux環境のApacheでプロデルを動かす</h2>
+        <p>.NET Frameworkのオープン実装であるMonoを使うことで、Linux環境でも、Apacheを使ってプロデルのプログラムを動かせます。Mono1.9以降がインストールできる環境であれば、Linux環境でもプロデルを動かせます。</p>
+        <p>なお、共有サーバなど、インストールできるソフトウェアに制限がある環境では、LinuxであってもプロデルCGIを利用できません。</p>
+        <p>また、プロデルはWindowsでの動作を前提としているため、一部の種類や手順が正常に動作しない場合があります。</p>
+        <h2>動作環境</h2>
+        <p>Apacheでプロデルを動かすには、次の環境が必要です。</p>
+        <ul>
+            <li>Apache HTTP Server</li>
+            <li>Mono</li>
+            <li>プロデルCGI</li>
+        </ul>
+        <p>このマニュアルでは、CentOS 5.5とMono 1.9を使って、プロデルCGIを動作させる環境の構築方法を説明します。</p>
+        <p>なお、CentOS以外の環境では、Monoの導入方法が異なります。使用しているLinux環境にあわせた方法で、Monoを導入してください。</p>
+        <p>Mono1.9で、プロデルの基本的な機能は、動作しますが、不具合により十分に機能が動作しない場合があります。<br>
+        可能であれば、最新版を導入することをおすすめします。</p>
+        <p>&nbsp;</p>
+        <h2>環境の構築</h2>
+        <h3>CentOS環境の準備</h3>
+        <p>Apacheがインストールされていない場合は、Apacheをインストールして、CGIが動作するように設定を変更します。</p>
+        <h4>参考</h4>
+        <p><a href="http://centossrv.com/apache.shtml">Webサーバー構築(Apache) - CentOSで自宅サーバー構築</a></p>
+        <p>&nbsp;</p>
+        <h3>Monoのインストール</h3>
+        <p>CentOS 5.5では、yumを使ってMono 1.9をインストールできます。</p>
+        <p>Monoをインストールするには、ターミナルで次のコマンドを実行します。</p>
+        <pre>yum -y install mono-complete</pre>
+        <p>※CentOS以外の環境では、yumが使用できない場合があります</p>
+        <p>&nbsp;</p>
+        <h3>プロデルCGIと関連するファイルのコピー</h3>
+        <p>１．「/usr/local」ディレクトリに「rdr」フォルダを作成します。</p>
+        <pre>cd /usr/local
+mkdir rdr</pre>
+        <p>２．プロデル簡易Webサーバを解凍したフォルダまたは、プロデル本体から<br>
+        次のファイルとフォルダを「rdr」フォルダにコピーします。</p>
+        <ul>
+            <li>rdrcgi.exe</li>
+            <li>Produire.Core.dll</li>
+            <li>utopiat.Host.dll</li>
+            <li>pluginsフォルダ</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>動作テスト</h3>
+        <h4>プロデルCGIのテストプログラム</h4>
+        <p>次のプログラムを、rdrtest.cgi　という名前で、Apacheのドキュメントルート「/var/www/html」ディレクトリへ保存します。</p>
+        <pre class="code">#!/usr/bin/mono /usr/local/rdr/rdrcgi.exe
+ 			
+応答として「&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp; &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+現在は、［時刻］です。
+&lt;/body&gt;&lt;/html&gt;」を送る</pre>
+        <p>２．rdrtest.cgiに対して実行権限を与えます。</p>
+        <pre>chmod 755 /var/www/html/rdrtest.cgi</pre>
+        <p>&nbsp;</p>
+        <h4>テストプログラムを動かす</h4>
+        <p>１．サーバ上では、ブラウザで「<a href="http://localhost/test.cgi">http://localhost/rdrtest.cgi</a>」を開きます。<br>
+        リモートから確認する場合は「http://(サーバのIPアドレスまたはホスト)/rdrtest.cgi」へアクセスします。</p>
+        <p>２．現在時刻が表示されれば、成功です！！</p>
+        <p>&nbsp;</p>
+        <hr>
+        <h3 id="runsample">簡易Webサーバ用のサンプルを動かすには</h3>
+        <p>プロデル簡易Webサーバ用のサンプルプログラムを、プロデルCGIで動かすには、拡張子を.cgiに変えて、ファイルの先頭に次のような内容を追加します。</p>
+        <pre class="code">#!/usr/bin/mono /usr/local/rdr/rdrcgi.exe</pre>
+        <p>この部分は、apacheがCGIを処理するプログラムを指定するもので、プロデルで書かれたプログラムの場合は、Monoのプログラム本体のパスに続いて、プロデルCGI (rdrcgi.exe)があるパスを指定します。</p>
+        <p>&nbsp;</p>
+        <h3 id="cgiconfig">拡張子(.rdr)で動作させるようにするには</h3>
+        <p>CGIとして実行するには、プロデルプログラムの拡張子を.cgiとする必要がありますが、Apacheの設定を変更することで、.rdrでも動作させられます。</p>
+        <p>Apacheの設定を変更するには、設定ファイル(httpd.conf)を変更します。</p>
+        <h4>httpd.confの変更</h4>
+        <p>１．「/etc/httpd/conf/」にある「httpd.conf」をviなどのテキストエディタで開きます。</p>
+        <p>２．httpd.confの中から、次の部分を、変更後の内容に変更します。</p>
+        <pre>(変更前)
+AddHandler cgi-script .cgi .pl</pre>
+			<pre>(変更後)
+AddHandler cgi-script .cgi .pl .rdr</pre>
+			<h4>Apacheの再起動</h4>
+			<p>Apacheがすでに起動している場合は、設定を反映させるために、Apacheを再起動します。</p>
+			<pre>service httpd restart</pre>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div>  </div>
+	</div>
+<!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+    <script src="../../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

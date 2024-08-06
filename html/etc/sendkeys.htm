@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->「入力する」手順のキー表記の文法<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -75,101 +78,101 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<h1>「入力する」手順のキー表記の文法</h1>
-		<h2>入力する内容の書き方</h2>
-		<p><a href="../core/core.htm#入力する">「入力する」手順</a>または<a href="../core/process.htm#入力する">プロセスの「入力する」手順</a>は、キーボード入力を再現して指定した内容を自動的に入力します。</p>
-		<p>アルファベットや全角文字は、そのまま指定できます。<br>
-			特殊なキーとの組み合わせて入力させるには、特別な書き方があります。<br>
-			このページでは、特別な書き方について説明します。</p>
-		<h3>Ctrlキー、Altキー、Shiftキーの組み合わせ </h3>
-		<p>他のアプリケーションのメニューやボタンを操作する際のために、Ctrl,Alt,Shiftの組み合わせを表現できます。</p>
-		<pre class="code">//Ctrl+C
-「^C」を入力する</pre>
-		<pre class="code">//Alt+F
-「%F」を入力する</pre>
+<p><a href="../corelib/processstatic.htm#入力する">「入力する」手順</a>または<a href="../corelib/process.htm#入力する">プロセスの「入力する」手順</a>では、キーボード入力を再現して指定した内容を自動的に入力できます。入力させたい内容は、キー表記によって指定します。このページでは、キー表記について説明します。</p>
+		<h3>文字を入力する</h3>
+		<p>アルファベットや全角文字は、そのまま指定できます。</p>
+		<p>ただし「＋」,「^」,「％」,「~」,「(」,「)」の各文字はキー表記上の特別な意味があるため、これらの文字を入力したい時には、中かっこ ({ }) で囲んで指定してください。<br></p>
+		<h3>Ctrlキー, Altキー, Shiftキーの組み合わせ </h3>
+		<p>他のアプリケーションのメニューのショートカットキーやボタンを操作する場合など、Ctrlキー, Altキー, Shiftキーを押しながら文字を入力する表現は、次のような記号を付与します。</p>
+		<p>なお大文字を用いた場合、Shiftキーが押された状態で入力されます。</p>
+		<pre class="code">//Ctrl+Cを入力する
+「^c」を入力する</pre>
+		<pre class="code">//Alt+Fを入力する
+「%f」を入力する</pre>
 		<pre class="code">//Shift+↓
-+{DOWN}</pre>
+「+{DOWN}」を入力する</pre>
 		<h3>特殊なキー</h3>
-		<p>「＋」、「^」、「％」、「~」、「(」、「)」には特別な意味があるため、文字を中かっこ ({ }) で囲んで指定してください。</p>
-		<h4>例文</h4>
+		<p>特別なキー(エンターやバックスペースなど)を入力するは、下記の「特殊キーの一覧」の表記を指定してください。</p>
+		<p>なおClearキー, ショートカットメニューキー, 無変換, 漢字, 左右のWindowsキーは、指定できません。</p>
+		<h4>ABCおよび改行を入力する</h4>
 		<pre class="code">「ABC{Enter}」を入力する</pre>
-		<p>特別なキー（エンターやバックスペースなど）は、下記の「特殊キーの一覧」をご覧ください。<br>
-			この特殊キーは、必ず半角である必要があります。</p>
-		<p>Clear、ショートカットメニュー、無変換、漢字、左右のWindowsキーは、指定できません。</p>
+		<p>&nbsp;</p>
 		<h4><b>特殊キーの一覧</b></h4>
+		<p>この特殊キーは、必ず半角である必要があります。</p>
 		<table class="table table-bordered">
 			<tr>
 				<th width="50%">キー</th>
 				<th width="50%">書き方</th>
-				</tr>
+		  </tr>
 			<tr>
 				<td>エンター</td>
 				<td>{Enter}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>↑</td>
 				<td>{UP}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>↓ </td>
 				<td>{DOWN}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>←</td>
 				<td>{LEFT}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>→</td>
 				<td>{RIGHT}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Shift</td>
 				<td>+</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Ctrl</td>
 				<td>^</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Alt</td>
 				<td>%</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Esc</td>
 				<td>{ESC}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Tab</td>
 				<td>{TAB}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>F1</td>
 				<td>{F1}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>BackSpace</td>
 				<td>{BS}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>Delete</td>
 				<td>{DELETE}/{DEL}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>CapsLock</td>
 				<td>{CAPSLOCK}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>NumLock</td>
 				<td>{NUMLOCK}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>PageDown</td>
 				<td>{PGDN}</td>
-				</tr>
+		  </tr>
 			<tr>
 				<td>PageUp</td>
 				<td>{PGUP}</td>
-				</tr>
-			</table>
+		  </tr>
+	  </table>
 		<h3>同じ内容を繰り返し入力する</h3>
 		<p>同じキーを繰り返して入力するときは、{【キー】 【回数】}と書きます。</p>
 		<h4>例</h4>
@@ -180,16 +183,20 @@
 <pre class="code">「(AB)」を入力する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年4月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2022年5月9日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

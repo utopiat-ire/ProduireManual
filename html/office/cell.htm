@@ -11,8 +11,7 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
+<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Excel」を操作する「セル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 	<meta name="author" content="utopiat.net">
 </head>
 
@@ -26,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->セル<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +37,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,9 +70,8 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-	
 	<div class="row">
-		<div id="reftitle" class="col-md-9">
+		<div id="reftitle" class="col-md-12">
 		  <ul class="breadcrumb" data-category="office">
 		    <li><a href="../index.htm">プロデル</a></li>
 		    <li><a href="index.htm">Microsoft Office操作</a></li>
@@ -78,8 +80,8 @@
 	      </ul>
 		  <h1>セル</h1>
 	  </div>
-		<div id="refsidebar" class="col-md-3 sidebar">
-<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<div id="refsidebar" class="col-md-3">
+<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 <h3>関連ページ</h3>
 <ul>
   <li><a href="excel.htm">エクセル</a>
@@ -101,57 +103,87 @@
 <p>&nbsp;</p>
 		</div>
 		<div id="refcontent" class="col-md-8">
-		  <h2>概要</h2>
+		  <h2 id="head">概要</h2>
 			<p>Microsoft Excelで選択された範囲(Range)を表す種類です。</p>
-			<p>セルの字体や色の変更、罫線の設定などの操作ができます。		  </p>
+			<p>セルの字体や色の変更、罫線の設定などを操作できます。</p>
 		  <h2>セルを取得する方法</h2>
-			<p>セルの字体や色を変えるには、「セル」オブジェクトを取得する必要があります。</p>
+			<p>セルの字体や色を変えるには「セル」オブジェクトを取得する必要があります。</p>
 			<p>エクセル画面上で選択しているセルを取得するには、次のように書きます。</p>
 			<pre class="code">操作セルは、エクセルの選択</pre>
 			<p>A1のセルを取得するには、次のように書きます。</p>
 			<pre class="code">操作セルは、エクセルの選択シート：セル（「A1」）</pre>
 			<p>また、5行2列目のセルを取得するには、次のように書きます。</p>
-			<pre class="code">操作セルは、エクセルの選択シート：セル（｛5，2｝）</pre>
-			<p>　</p>
-			<h2 id="手順">手順</h2>
+		  <pre class="code">操作セルは、エクセルの選択シート：セル（｛5，2｝）</pre>
+		  <h2 id="手順">手順</h2>
 			<p>次の手順を使用できます。</p>
-			<div id="methodlist"><a href="#カットする">カットする</a>　<a href="#コピーする">コピーする</a>　<a href="#削除する">削除する</a>　<a href="#挿入する">挿入する</a>　<a href="#選択する">選択する</a>　<a href="#置換する">置換する</a>　<a href="#貼り付ける">貼り付ける</a>　<a href="#結合する">結合する</a>　<a href="#分割する">分割する</a>　<a href="#コメントを追加する">コメントを追加する</a>　<a href="#重複を削除する">重複を削除する</a>　</div>
+			<div id="methodlist"><a href="#カットする">カットする</a>　<a href="#コピーする">コピーする</a>　<a href="#削除する">削除する</a>　<a href="#クリアする">クリアする</a>　<a href="#値をクリアする">値をクリアする</a>　<a href="#書式をクリアする">書式をクリアする</a>　<a href="#コメントをクリアする">コメントをクリアする</a>　<a href="#挿入する">挿入する</a>　<a href="#選択する">選択する</a>　<a href="#置換する">置換する</a>　<a href="#貼り付ける">貼り付ける</a>　<a href="#結合する">結合する</a>　<a href="#分割する">分割する</a>　<a href="#並べ替える">並べ替える</a>　<a href="#検索する">検索する</a>　<a href="#次を検索する">次を検索する</a>　<a href="#前を検索する">前を検索する</a>　<a href="#オートフィルタする">オートフィルタする</a>　<a href="#コメントを追加する">コメントを追加する</a>　<a href="#重複を削除する">重複を削除する</a>　</div>
 			<div id="methods">
-				<h3>【自分】から<a name="カットする">カットする</a></h3>
+				<h3>自分から<a name="カットする">カットする</a></h3>
 				<p>セルを切り取ります</p>
-				<h3>【自分】を<a name="コピーする">コピーする</a></h3>
+				<h3>自分を<a name="コピーする">コピーする</a></h3>
 				<p>セルをコピーします</p>
-				<h3>【自分】を<a name="削除する">削除する</a></h3>
+				<h3>自分を<a name="削除する">削除する</a></h3>
 				<p>セルを削除します</p>
-				<h3>【自分】へ<a name="挿入する">挿入する</a></h3>
+				<h3>自分を<a name="クリアする">クリアする</a></h3>
+              <p>セルの値・書式・コメントをクリアします</p>
+                <h3>自分から<a name="値をクリアする">値をクリアする</a></h3>
+              <p>セルの値をクリアします</p>
+                <h3>自分から<a name="書式をクリアする">書式をクリアする</a></h3>
+              <p>セルの書式をクリアします</p>
+                <h3>自分から<a name="コメントをクリアする">コメントをクリアする</a></h3>
+                <p>セルのコメントをクリアします</p>
+                <h3>自分へ<a name="挿入する">挿入する</a></h3>
                 <p>セルへ新しいセルを挿入します</p>
-                <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は、{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50}<br>}<br>[Wの現在シート:セル(「B1:C2」)]に挿入する
+                <h4 data-ref="挿入する">セルを挿入する</h4>
+                <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50}<br>}<br>[Wの現在シート:セル(「B1:C2」)]に挿入する
 </pre>
-                <h3>【自分】を<a name="選択する">選択する</a></h3>
+                <h3>自分を<a name="選択する">選択する</a></h3>
 				<p>セルを選択状態にします</p>
+				<h4 data-ref="選択する">セルを選択する</h4>
 				<pre class="code">エクセルの現在シートの使用範囲を選択する</pre>
-				<h3>【自分】で【置換前】を【置換後】へ<a name="置換する">置換する</a></h3>
+				<h3>自分で【置換前】を【置換後】へ<a name="置換する">置換する</a></h3>
 				<p>セルに含まれる値を置き換えます</p>
-				<h3>【自分】へ<a name="貼り付ける">貼り付ける</a></h3>
+				<h3>自分へ<a name="貼り付ける">貼り付ける</a></h3>
 				<p>セルを貼り付けます</p>
-				<h3>【自分】を<a name="結合する">結合する</a></h3>
+				<h3>自分を<a name="結合する">結合する</a></h3>
 				<p>選択範囲のセルを結合(マージ)します</p>
-				<h3>【自分】を<a name="分割する">分割する</a></h3>
+				<h3>自分を<a name="分割する">分割する</a></h3>
 				<p>結合されたセルを分割します</p>
-				<h3>【自分】へ【内容】という<a name="コメントを追加する">コメントを追加する</a>：<a href="excelcomment.htm">エクセルコメント</a></h3>
+				<h3>自分を【セル】で〈【方法】に〉<a name="並べ替える">並べ替える</a></h3>
+              <p>指定したセルを基準に並べ替えます。【方法】には「昇順」「降順」/「行」「列」を文字列で指定します。</p>
+              <h4 data-ref="並べ替える">セル範囲を並べ替える</h4>
+                <pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+S=Wの現在シート
+Sの一覧は{{「A」,「B」,「C」},
+{1,100,20},{2,130,30},{3,90,50},
+{4,100,10},{5,120,30},{6,130,20}}
+Sのセル（「A1:C7」）をSのセル（「C1」）で「行降順」に並べ替える</pre>
+                <h3>自分から【キーワード】を<a name="検索する">検索する</a></h3>
+              <p>指定したセルからキーワードを検索します。</p>
+                <h3>自分で【セル】から<a name="次を検索する">次を検索する</a></h3>
+                <p>指定したセルからキーワードを検索します。</p>
+                <h3>自分で【セル】から<a name="前を検索する">前を検索する</a></h3>
+              <p>指定したセルからキーワードを検索します。</p>
+                <h3>自分の【対象列】列目を【条件値1】で〈【条件値2】と〉<a name="オートフィルタする">オートフィルタする</a></h3>
+                <p>指定したセル範囲を【対象列】が【条件値】であるセルでフィルタします。【条件値2】を指定すると、どちらかの値に合致するセルでフィルタします。</p>
+                <h4 data-ref="オートフィルタする">セル範囲にオートフィルタを設定する</h4>
+              <pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+Wの現在シートの一覧は{{「A」,「B」,「C」},<br>{1,100,20},{2,130,30},{3,90,50}
+,{4,100,10},{5,120,30},{6,130,20}}
+Wの現在シートの使用範囲の3列目を「30」でオートフィルタする
+Wの現在シートの使用範囲の3列目を「30」と「10」でオートフィルタする</pre>
+              <h3>自分へ【内容】という<a name="コメントを追加する">コメントを追加する</a>：<a href="excelcomment.htm">エクセルコメント</a></h3>
 				<p>指定したセルにコメントを追加します</p>
-				<h3>【自分】から〈【列番号】列目で〉<a name="重複を削除する">重複を削除する</a></h3>
+				<h3>自分から〈【列番号】列目で〉<a name="重複を削除する">重複を削除する</a></h3>
 				<p>指定した範囲で、指定した列の値が重複する行を削除します</p>
+				<h4 data-ref="重複を削除する">セル範囲から重複する行を削除する</h4>
 				<pre class="code">エクセルを起動する
 エクセルにブックを追加してWとする
-Wの現在シートの一覧は、{{「A」,「B」,「C」},
-	{1,100,20},
-	{2,130,30},
-	{3,90,50},
-	{4,100,10},
-	{5,120,30},
-	{6,130,20}
-}
+Wの現在シートの一覧は{{「A」,「B」,「C」},
+{1,100,20},{2,130,30},{3,90,50}
+,{4,100,10},{5,120,30},{6,130,20}}
 Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 			</div>
 			<h2 id="設定項目">設定項目</h2>
@@ -177,9 +209,21 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 						<th>文字列</th>
 						<th>◎</th>
 						<td>セルの計算式
-							<pre class="code">エクセルの現在シートの選択の計算式を「=sum(A1:A10)」に変える</pre>
 						</td>
 					</tr>
+					<tr>
+					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の計算式を「=sum(A1:A10)」に変える</pre></td>
+				  </tr>
+					<tr>
+						<th><a name="表示形式">表示形式</a></th>
+						<th>文字列</th>
+						<th>◎</th>
+						<td>セルの表示形式
+						</td>
+					</tr>
+					<tr>
+					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の表示形式を「@」に変える</pre></td>
+				  </tr>
 					<tr>
 						<th><a name="フォント名">フォント名</a></th>
 						<th>文字列</th>
@@ -298,9 +342,10 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 					</tr>
 					<tr>
 						<th><a name="罫線の形">罫線の形</a></th>
-						<th>&nbsp;</th>
+						<th>列挙</th>
 						<th>◎</th>
-						<td>選択しているセルの罫線の形</td>
+						<td>選択しているセルの罫線の形<br>
+					    ｛四角／上／下／右／左／すべて／中枠／なし｝</td>
 					</tr>
 					<tr>
 						<th><a name="罫線のスタイル">罫線のスタイル</a></th>
@@ -360,6 +405,12 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 						<th>□</th>
 						<td>セルのコメントを取得します</td>
 					</tr>
+					<tr>
+					  <th><a name="元実体">元実体</a></th>
+					  <th><a href="../primitive/netobject.htm">ネット物</a></th>
+					  <th>□</th>
+					  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
+				  </tr>
 				</table>
 			</div>
 			<h2 id="サンプルコード">サンプルコード</h2>
@@ -379,16 +430,20 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
             </div><!--/samples-->
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

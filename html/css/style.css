@@ -81,6 +81,9 @@ h1 {
 h2 {
 	text-decoration: underline;
 }
+div#methods h4 {
+	text-decoration: underline;
+}
 
 /*Dw補正*/
 .breadcrumb > li {
@@ -141,6 +144,9 @@ span.syntax {
 }
 .warning {
 	color: red;
+}
+.figure {
+	text-align: center;
 }
 
 div.iconCreatable {
@@ -221,20 +227,25 @@ div#events {
    background-color: #f5f5f5;
 }
 @media (min-width: 992px) {
-  .sidebar {
-    position: fixed;
-    top: 50px;
-    bottom: 0;
-    right: 0;
-    z-index: 1000;
-    display: block;
-    padding-top: 20px;
-    padding-left: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-left: 1px solid #eee;
-  }
+    .sidebar {
+        position: fixed;
+        top: 50px;
+        bottom: 90px;
+        right: 0;
+        display: block;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        font-size: 12pt;
+    }
+    .sidebar .nav li a {
+        padding: 5px 5px;
+    }
   .main {
     padding-right: 40px;
     padding-left: 40px;
@@ -249,7 +260,7 @@ div#events {
 #page-top {
 	z-index:10;
 	position: fixed;
-	bottom: 20px;
+	bottom: 30px;
 	right: 20px;
 	font-size: 77%;
 	opacity: 0.5;
