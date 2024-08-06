@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="TCP/IP,ソケット通信">
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「TCPIPクライアント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -120,7 +119,7 @@
 			<h3>【自分】に<a name="受信開始する">受信開始する</a></h3>
 			<p>接続先からデータの受信を開始します。この手順を実行すると「受信した」時のイベント手順が起きるようになります。</p>
 			<p>この手順は、<a href="tcpserver.htm">TCPIPサーバ</a>の「受信した」時の手順のイベント情報の「クライアント」で取得したTCPIPクライアントのみで有効で、通常は「接続する」手順が実行されると、すぐに受信が開始されます。</p>
-			</div>
+        </div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -130,6 +129,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="ポート番号">ポート番号</a></th>
 					<th><a href="../primitive/number.htm">整数</a></th>
@@ -193,14 +193,15 @@
 					<td>自分のポート番号を表します</td>
 					</tr>
 				<tr>
-					<th>接続中</th>
+					<th><a name="接続中">接続中</a></th>
 					<th>真偽値</th>
 					<th>□</th>
 					<td>クライアントが接続状態であるかどうか</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2>実行される手順</h2>
 		<table class="table table-bordered">
 			<thead><tr>
@@ -208,32 +209,34 @@
 				<th>説明</th>
 				<th>情報</th>
 				</tr></thead>
+            <tbody>
 			<tr>
 				<th><a name="受信した">受信した</a></th>
 				<td>相手側からメッセージを受け取ったときに実行されます</td>
 				<td><a href="tcpclient_event.htm">あり</a></td>
-				</tr>
-			</table>
+            </tr>
+            </tbody>
+        </table>
 		<p>　</p>
-		<h2 id="サンプルコード">サンプルコード</h2>
-		  <div id="samples">
-			  <h3 id="sample1">特定のTCPポートにメッセージを送信する</h3>
-		<p>ポート5000番で待機しているサーバへ接続して、メッセージを送ります。</p>
+        <h2 id="サンプルコード">サンプルコード</h2>
+        <div id="samples">
+            <h3 id="sample1">特定のTCPポートにメッセージを送信する</h3>
+            <p>ポート5000番で待機しているサーバへ接続して、メッセージを送ります。</p>
 <pre class="code">クライアントというTCPIPクライアントを作る
 クライアントの使用ポート番号は、5000
 クライアントを「localhost」へ接続する
 クライアントから「こんにちは［改行］さようなら」を送信する
 クライアントを切断する</pre>
-		  </div><!--/samples-->
 		<p>このサンプルは「<a href="tcpserver.htm">TCPIPサーバ</a>」種類のサンプルコードを実行したままで実行します。ここではサーバとクライアントが同じパソコンであることを前提にしています。サーバが別のパソコンのときは「接続する」手順で指定するホスト名に、そのパソコンのIPアドレスを指定するかコンピュータ名に「\\」を付けたものを指定してください。</p>
 		<p>またその際にサーバ側ファイヤウォールの設定でTCPIPポート5000番を受け取れるようにする必要があります。</p>
-	     </div>
+        </div><!--/samples-->
+    </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

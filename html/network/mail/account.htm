@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="メール機能">
     <meta name="description" content="日本語プログラミング言語プロデルで「メール機能」プラグインの「アカウント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -99,7 +98,7 @@
 			<h3>【自分】から<a name="受信する">受信する</a>：<a href="receivetray.htm">受信トレイ</a></h3>
 			<p>このアカウントからメールを受け取ります</p>
 			<h3>【自分】から【<a href="sendmail.htm">送信メール</a>】を<a name="送る">送る</a>：真偽値</h3>
-			<p>このアカウントからメールを送ります</p>
+			<p>このアカウントからメールを送ります。送信サーバでSMTPbeforePOP3が有効の場合は、受信サーバで設定したアカウントを元にSMTPサーバへ接続します。</p>
 			<p><a href="../../safelock.htm" class="label label-danger">保護あり</a></p>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -110,27 +109,29 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
-				<tr>
-					<th><a name="受信サーバ">受信サーバ</a></th>
-					<th><a href="popserver.htm">受信サーバ</a></th>
-					<th>◎</th>
-					<td>このアカウントの受信メールサーバ</td>
-					</tr>
-				<tr>
-					<th><a name="送信サーバ">送信サーバ</a></th>
-					<th><a href="smtpserver.htm">送信サーバ</a></th>
-					<th>◎</th>
-					<td>このアカウントの送信メールサーバ</td>
-					</tr>
-				<tr>
-					<th><a name="プロトコル">プロトコル</a></th>
-					<th>列挙型</th>
-					<th>◎</th>
-					<td>受信サーバで使用するプロトコル<br>
-						{POP3,IMAP}</td>
-					</tr>
-				</table>
+                </tr></thead>
+<tbody>
+    <tr>
+        <th><a name="受信サーバ">受信サーバ</a></th>
+        <th><a href="popserver.htm">受信サーバ</a></th>
+        <th>◎</th>
+        <td>このアカウントの受信メールサーバ</td>
+    </tr>
+    <tr>
+        <th><a name="送信サーバ">送信サーバ</a></th>
+        <th><a href="smtpserver.htm">送信サーバ</a></th>
+        <th>◎</th>
+        <td>このアカウントの送信メールサーバ</td>
+    </tr>
+    <tr>
+        <th><a name="プロトコル">プロトコル</a></th>
+        <th>列挙型</th>
+        <th>◎</th>
+        <td>受信サーバで使用するプロトコル<br>
+            {POP3,IMAP}</td>
+    </tr>
+</tbody>
+                </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -138,11 +139,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年5月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月12日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

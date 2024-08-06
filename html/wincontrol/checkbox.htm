@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「チェックボックス」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="部品,コントロール部品">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「チェックボックス」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -106,6 +106,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="チェックボックス位置">チェックボックス位置</a></th>
 					<th>&nbsp;</th>
@@ -131,7 +132,8 @@
 					<th>◎</th>
 					<td>文字の表示位置<br>
 						下中央・左下・右下・中央・中段左・中段右・上中央・左上・右上</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -146,11 +148,13 @@
 						<th>情報</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th>チェックされた</th>
-					<td>項目が選択された時</td>
+					<td>チェック状態が変化した時。クリック操作によるものおよび設定項目の設定によって発生します。</td>
 					<td>　</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			</div>
 <h2 id="サンプルコード">サンプルコード</h2>
@@ -165,20 +169,20 @@
 待機する
 
 表示チェック欄がチェックされた時の手順
-	もし表示チェック欄のチェックが○なら
+	表示チェック欄のチェックが○なら
 		「チェックされました」を情報アイコンで表示する
 	そうでなければ
 		「チェックが解除されました」を警告アイコンで表示する
-	もし終わり
+	そして
 終わり</pre>
 			</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

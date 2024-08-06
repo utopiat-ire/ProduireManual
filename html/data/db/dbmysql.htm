@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="MySQL,データベース">	<meta name="description" content="日本語プログラミング言語プロデルで「データベース」プラグインの「MySQLデータベース」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -130,6 +129,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="接続文字列">接続文字列</a></th>
 					<th>文字列</th>
@@ -208,6 +208,7 @@
 					<th>□</th>
 					<td>MySQLサーバのバージョン</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -217,17 +218,17 @@
 		<p>専用のコネクタを使って、MySQLデータベースへ接続します。</p>
 		<pre class="code">MySQLというMySQLデータベースを作る
 
-MySQLのサーバを「localhost」に変える
-MySQLのユーザIDを「test」に変える
-MySQLのパスワードを「pass」に変える
-MySQLのデータベースを「test」に変える
-MySQLの文字コードを「utf8」に変える
+MySQLのサーバは「localhost」
+MySQLのユーザIDは「test」
+MySQLのパスワードは「pass」
+MySQLのデータベースは「test」
+MySQLの文字コードは「utf8」
 
 <i>//※接続文字列を直接指定することも可能です
-//MySQLの接続文字列を「server=localhost;User Id=test;password=pass;Charset=utf8」に変える
+//MySQLの接続文字列は「server=localhost;User Id=test;password=pass;Charset=utf8」
 </i> 
 MySQLへ接続する
-もしMySQLの状態が「接続済み」でないなら、終了する
+MySQLの状態が「接続済み」でなければ、終了する
 
 <i>// 必要な処理をここに書きます //</i>
 MySQLから切断する</pre>
@@ -278,11 +279,11 @@ MySQLから「SELECT `曲名`,`アーティスト` FROM `楽曲`」を取得し�
 <pre class="code">MySQLで「DROP TABLE `楽曲`」を実行する</pre></div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

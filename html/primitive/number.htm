@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <meta name="keywords" content="基本型,固定小数,長整数,整数,浮動小数,倍浮動小数">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「数値」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -81,7 +80,7 @@
 	  <h1>数値</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<p><a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
+        <p><a href="../syntax/construct.html#construct_abstract" class="label label-default">抽象種類</a> <a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
 		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
@@ -92,21 +91,19 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>数値を持つ種類です。</p>
-		<p>数値の内部型には、次のデータ型があります。</p>
+		<p>数値を表現する抽象種類です。数値型には、次のデータ型があります。</p>
 		<ul>
-			<li><a href="decimal.htm">固定小数</a></li>
+		        <li><a href="decimal.htm">固定小数</a></li>
 			<li><a href="long.htm">長整数</a></li>
 			<li><a href="int.htm">整数</a></li>
 			<li><a href="short.htm">短整数</a></li>
-			<li><a href="float.htm">浮動小数</a></li>
 			<li><a href="double.htm">倍浮動小数</a></li>
+			<li><a href="float.htm">浮動小数</a></li>
 		</ul>
-		<p>内部型名を指定することで、数値の型を固定できます。<br>
-			何も指定しない場合は、プロデルが自動的に適切な数値型を選択します。</p>
+		<p>プロデルでは、型推論によって数値の定数に対して適切なデータ型が選択されます。変数の型を明示して宣言すると、そのデータ型で格納されます。</p>
 		<h2>作成する方法</h2>
 		<p>数値定数を指定すると作成できます。</p>
-		<pre class="code">値は、1128</pre>
+		<pre class="code">値は1128</pre>
 		<p>　</p>
 		<h2 id="設定項目">設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
@@ -120,7 +117,8 @@
 					<th>説明</th>
 				</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="値">値</a></th>
 					<th>数値</th>
 					<th>◎</th>
@@ -132,6 +130,7 @@
 					<th>◎</th>
 					<td>値を文字として表します</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -139,8 +138,14 @@
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#整える">整える</a>　</div>
 		<div id="methods">
-			<h3>【自分】を【書式】に、<a name="整える">整える</a>：文字列</h3>
+			<h3>【自分】を【書式:文字列】に、<a name="整える">整える</a>：文字列</h3>
 			<p>日時を指定した書式に合わせた文字列として返します。</p>
+			<p>書式は、.NET Frameworkの数値書式で指定します。</p>
+			<ul>
+			        <li><a href="https://dobon.net/vb/dotnet/string/inttostring.html">書式を指定して数値を文字列に変換する - .NET Tips (VB.NET,C#...) (dobon.net)</a></li>
+			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/standard-numeric-format-strings">標準の数値書式指定文字列 - .NET | Microsoft Learn</a></li>
+			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-numeric-format-strings">カスタム数値形式文字列 - .NET | Microsoft Learn</a></li>
+			        </ul>
 			<pre class="code">1.235を「00.00」に整えて報告する
 0.123456を「#,0」に整えて報告する
 0.123456を「0.00%」に整えて報告する</pre>
@@ -149,7 +154,7 @@
 0を「000;[000];ゼロ」に整えて報告する</pre>
 		</div>
 	  <h2 id="型変換">型変換</h2>
-		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
+		<p>この種類は、次の別のデータ型へ自動的に変換できます。変換規則は、実際の値型に依存します。</p>
 		<table class="table table-bordered">
 			<thead>
 			<tr>
@@ -158,27 +163,29 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th><a href="string.htm">文字列</a></th>
-				<th>←</th>
+				<th>へ</th>
 				<td>「内容」設定項目と同じ文字列</td>
 			</tr>
 			<tr>
 				<th>文字列</th>
-				<th>→</th>
-				<td>「内容」設定項目と同じ値で変換</td>
+				<th>から</th>
+				<td>「内容」設定項目と同じ表記の数値へ変換</td>
 			</tr>
+            </tbody>
 		</table>
 		<h2 id="サンプルコード">サンプルコード</h2>
-		<pre class="code">値は、1128
+		<pre class="code">値は1128
 値の内容を表示する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

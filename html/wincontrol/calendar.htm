@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「カレンダ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -138,6 +137,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="タイトル背景色">タイトル背景色</a></th>
 					<th><a href="../primitive/color.htm">色情報</a></th>
@@ -275,7 +275,8 @@
 					<th>&nbsp;</th>
 					<th>○</th>
 					<td>今日を表す文字の色</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -290,16 +291,18 @@
 						<th>情報</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="選択された">選択された</a></th>
 					<td>日にちが選択された時</td>
 					<td></td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="変更された">変更された</a></th>
 					<td>日にちが変更されたとき</td>
 					<td></td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			</div>
 		<p>　</p>
@@ -307,23 +310,22 @@
 		<div id="samples">
 			<h3 id="sample1">カレンダーから日付を選択する</h3>
 		<p>カレンダー部品のプログラム例です。</p>
-		<pre class="code">
-メイン画面を表示する
+		<pre class="code">メイン画面を表示する
 待機する
 
 メイン画面とは
 	ウィンドウを受け継ぐ
 
 はじめの手順
-	この内容を「カレンダ」に変える
+	この内容は「カレンダ」
 	メインカレンダというカレンダを作る
-	その位置と大きさを｛10,10,150,150｝に変える
+	その位置と大きさは｛10,10,150,150｝
 	ラベル１というラベルを作る
-	その位置と大きさを｛50,160,150,50｝に変える
+	その位置と大きさは｛50,160,150,50｝
 終わり
 
 カレンダ１が変更された時の手順
-	ラベル１の内容を、カレンダ１の日付に変える
+	ラベル１の内容は、カレンダ１の日付
 終わり
 
 終わり</pre>
@@ -331,11 +333,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

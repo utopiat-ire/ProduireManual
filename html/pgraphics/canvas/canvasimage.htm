@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="図形">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「画像図形」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -125,31 +124,33 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="画像">画像</a></th>
-					<th>画像</th>
-					<th>◎</th>
-					<td>図形として描画する画像</td>
-			  </tr>
-				<tr>
-					<th><a name="伸縮">伸縮</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>図形の大きさに合わせて画像を伸縮するかどうか</td>
-			  </tr>
-				<tr>
-					<th><a name="自動調整">自動調整</a></th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>大きさを自動調整するかどうか<br>
-						｛なし・自動調整・中央・拡大縮小・比率維持｝</td>
-			  </tr>
-				<tr>
-					<th><a name="切り取り領域">切り取り領域</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>画像の内で図形として表示する領域</td>
-			  </tr>
+<tbody>
+<tr>
+    <th><a name="画像">画像</a></th>
+    <th>画像</th>
+    <th>◎</th>
+    <td>図形として描画する画像</td>
+</tr>
+<tr>
+    <th><a name="伸縮">伸縮</a></th>
+    <th>真偽</th>
+    <th>◎</th>
+    <td>図形の大きさに合わせて画像を伸縮するかどうか</td>
+</tr>
+<tr>
+    <th><a name="自動調整">自動調整</a></th>
+    <th>列挙体</th>
+    <th>◎</th>
+    <td>大きさを自動調整するかどうか<br>
+        ｛なし・自動調整・中央・拡大縮小・比率維持｝</td>
+</tr>
+<tr>
+    <th><a name="切り取り領域">切り取り領域</a></th>
+    <th>&nbsp;</th>
+    <th>◎</th>
+    <td>画像の内で図形として表示する領域</td>
+</tr>
+</tbody>
 		  </table>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -157,26 +158,26 @@
 <h3 id="sample1">画像ファイルの画像を描く</h3>
 <p>キャンバス上に指定した画像ファイルの画像を描きます。</p>
 <pre class="code">窓というウィンドウを作る
-	そのタイトルを「画像を描く」に変える
+	そのタイトルは、「画像を描く」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ画像を描く
 	その位置と大きさは｛20,20,100,100｝
-	その自動調整を「比率維持」に変える
-	その画像を「canvas.png」に変える
+	その自動調整は「比率維持」
+	その画像は「canvas.png」
 キャンバス1を更新する
 待機する</pre>
 </div><!--/samples-->
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

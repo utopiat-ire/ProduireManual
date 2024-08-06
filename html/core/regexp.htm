@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「正規表現」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -86,27 +85,27 @@
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>正規表現による検索と置換に関する機能が利用できます。正規表現とは、対象の文字から指定した法則（パターン）と同じ文字を取り出す機能です。</p>
-	  <p>正規表現を利用してパターンを指定して大量の文章から指定した単語などを取り出せます。</p>
-		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
-		<h2 id="手順">手順</h2>
+	  <p>正規表現を利用してパターンを指定して大量の文章から指定した単語などを取り出せます。	  </p>
+	  <p>利用する際に、このオブジェクトを作る必要はありません。</p>
+	  <h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#合致する">合致する</a>　<a href="#取り出す">取り出す</a>　<a href="#区別して取り出す">区別して取り出す</a>　<a href="#子要素ごとに取り出す">子要素ごとに取り出す</a>　<a href="#区別して子要素ごとに取り出す">区別して子要素ごとに取り出す</a>　<a href="#置換する">置換する</a>　<a href="#無害化する">無害化する</a>　</div>
 		<div id="methods">
 			<h3>【文字】が【パターン】という【自分】に、<a name="合致する">合致する</a></h3>
 			<p>指定したパターンに合致するかどうか判定します</p>
 			<pre class="code">内容は「taro@abc.ne.jp」
-もし内容が「.+@.+\.」という正規表現に合致するなら
+内容が「「.+@.+\.」」という正規表現に合致すれば
 　　「メールアドレスです」を情報アイコンで表示する
 そうでなければ
  	「メールアドレスではありません」を警告アイコンで表示する
-もし終わり</pre>
+そして</pre>
 			<h3>【内容】から【パターン】という【自分】で、<a name="取り出す">取り出す</a>：配列</h3>
 			<p>指定した内容からパターンに合致する部分を取り出します</p>
 			<pre class="code">内容は「&lt;head&gt;header&lt;/head&gt;&lt;body&gt;content&lt;/body&gt;」
 
 <em>ーーHTMLからタグとその内容を取り出します</em>
-内容から「&lt;(.*)&gt;.*&lt;\/\1&gt;」という正規表現で取り出して要素にそれぞれ繰り返す
+内容から「「&lt;(.*)&gt;.*&lt;\/\1&gt;」」という正規表現で取り出して要素にそれぞれ繰り返す
 	要素を報告する
-繰り返し終わり</pre>
+そして</pre>
 			<h3>【内容】から【パターン】という【自分】で、<a name="区別して取り出す">区別して取り出す</a>：配列</h3>
 			<p>指定した内容からパターンに大文字・小文字を区別して合致する部分を取り出します</p>
 			<h3>【内容】から【パターン】という【自分】で、<a name="子要素ごとに取り出す">子要素ごとに取り出す</a>：2次配列</h3>
@@ -114,21 +113,22 @@
 			<pre class="code">内容は「&lt;head&gt;header&lt;/head&gt;&lt;body&gt;content&lt;/body&gt;」
 
 <em>ーーHTMLからタグ名だけを取り出します</em>
-内容から「&lt;(.*)&gt;.*&lt;\/\1&gt;」という正規表現で子要素ごとに取り出して要素にそれぞれ繰り返す
+内容から「「&lt;(.*)&gt;.*&lt;\/\1&gt;」」という正規表現で子要素ごとに取り出して要素にそれぞれ繰り返す
 　　要素を報告する
-繰り返し終わり</pre>
+そして</pre>
 			<h3>【内容】から【パターン】という【自分】で、<a name="区別して子要素ごとに取り出す">区別して子要素ごとに取り出す</a>：2次配列</h3>
 			<p>指定した内容からパターンに大文字・小文字を区別して合致する部分を取り出します</p>
 			<h3>【自分】で【内容】を【探すパターン】から【置換後のパターン】へ〈区別して〉、<a name="置換する">置換する</a></h3>
 			<p>指定した内容から探すパターンに合致する箇所を置換後のパターンに従って、すべて置き換えます</p>
 			<pre class="code"><em>ーー数字をすべてXに置き換えます</em>
 内容は「電話番号は、1234-567-890。郵便番号は、987-6543です。」
-正規表現で内容を「\d」から「X」へ置換して表示する</pre>
+正規表現で内容を「「\d」」から「「X」」へ置換して表示する</pre>
 			<h3>【自分】で【内容】を<a name="無害化する">無害化する</a></h3>
 			<p>指定した内容から正規表現として意味がある記号にエスケープ文字を付加します。</p>
-			<pre class="code">正規表現で「\d」を無害化して表示する</pre>
+			<pre class="code">正規表現で「「\d」」を無害化して表示する</pre>
 			</div>
 		<h2>正規表現のパターン</h2>
+		<p>指定できる正規表現のパターンは次の通りです。プロデルでは文字列定数内の[ ]が式展開を表す記号です。正規表現を指定する場合は文字列定数を「「　」」で囲ってください。 </p>
 		<h3>パターンの書式</h3>
         <table class="table table-bordered">
           <thead>
@@ -137,6 +137,7 @@
               <th class="items">意味</th>
             </tr>
           </thead>
+            <tbody>
           <tr>
             <th>ABC</th>
             <td>ABCという文字列</td>
@@ -197,6 +198,7 @@
             <th>[\b]</th>
             <td>バックスペース</td>
           </tr>
+            </tbody>
         </table>
         <p>先頭に「\」を付けると特別な意味を表します。</p>
         <table class="table table-bordered">
@@ -206,6 +208,7 @@
               <th class="items">意味</th>
             </tr>
           </thead>
+            <tbody>
           <tr>
             <th>\b</th>
             <td>スペースなどの単語の区切り</td>
@@ -280,77 +283,81 @@
             <th>\その他</th>
             <td>その他の文字自身</td>
           </tr>
+            </tbody>
         </table>
+        <hr>
+        <h4>参考文献</h4>
+        <ul>
+            <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/regular-expression-language-quick-reference">正規表現言語 - クイック リファレンス - .NET</a></li>
+            <li><a href="https://www.tohoho-web.com/ex/regexp.html">とほほの正規表現入門</a></li>
+        </ul>
         <p>　</p>
         <h2 id="サンプルコード">サンプルコード</h2>
 		<div id="samples">
         <p><a href="../core/regexp.htm#取り出す">「取り出し」手順</a>を使うことで、正規表現を使った文字列の取得ができます。</p>
         <h3 id="lookup1">HTMLからタグを取り出す</h3>
         <p>正規表現で簡易的にHTMLのタグを取り出します。</p>
-        <pre class="code">タグ一覧は、正規表現：「&lt;b&gt;abc&lt;/b&gt;&lt;i&gt;def&lt;/i&gt;」 から「&lt;(.*)&gt;(.*)&lt;\/\1&gt;」を取り出したもの
+        <pre class="code">HTMLは「&lt;b&gt;abc&lt;/b&gt;&lt;i&gt;def&lt;/i&gt;」
+正規表現によってHTMLから「「&lt;(.*)&gt;(.*)&lt;\/\1&gt;」」を取り出して、タグ一覧とする
 タグ一覧を要素にそれぞれ繰り返す
 　　要素を報告する
-繰り返し終わり</pre>
+そして</pre>
         <h3 id="lookup2">住所から郵便番号だけを取り出す</h3>
         <p>正規表現で住所から郵便番号の部分だけを取り出します。</p>
-        <pre class="code"><span class="rem">ーー郵便番号のみを取り出します</span>
+        <pre class="code"><em>ーー郵便番号のみを取り出します</em>
 内容は「〒123-4567　東○都○代田区9-99-9　山○太郎」
-正規表現によって内容から「\d{3}-\d{4}」を取り出して要素にそれぞれ繰り返す
+正規表現によって内容から「「\d{3}-\d{4}」」を取り出して要素にそれぞれ繰り返す
 　　要素を報告する
-繰り返し終わり</pre>
+そして</pre>
         <h2>サブマッチ「（　）」の使い方</h2>
         <p>サブマッチは、正規表現で取り出した文字列からより細かく文字を取り出したいときに利用します。サブマッチを利用するときは「<a href="../core/regexp.htm#子要素ごとに取り出す">子要素ごとに取り出す</a>」手順を使います。</p>
         <p>パターンを「( )」で囲うことで、その部分だけをサブマッチとして配列に格納できます。サブマッチは、パターン内で利用することもでき、例えば「\1」は、１番目の「( )」の内容と同じことを表します。</p>
         <h3 id="lookup3">サブマッチで電話番号を細かく分解する</h3>
         <p>電話番号を分解して、<font color="#FF0000">市外局番(03)</font>・<font color="#008000">市内局番(1234)</font>・<font color="#0000FF">番号(5678)</font>の順に配列に保存します。結果は「<font color="#FF0000">03</font>,<font color="#008000">1234</font>,<font color="#0000FF">5678</font>」と表されます。</p>
-        <pre class="code"><span class="rem">ーー電話番号を細かく分解する</span>
-電話番号配列は、正規表現によって「03-1234-5678」から「「<font color="#ff0000">(</font><font color="#ff0000">[</font><font color="#ff0000">0-9</font><font color="#ff0000">]</font><font color="#ff0000">*)</font>-<font color="#008000">(</font><font color="#008000">[</font><font color="#008000">0-9</font><font color="#008000">]</font><font color="#008000">*)</font>-<font color="#0000ff">(</font><font color="#0000ff">[</font><font color="#0000ff">0-9</font><font color="#0000ff">]</font><font color="#0000ff">*)</font>」」を子要素ごとに取り出したもの
+        <pre class="code"><em>ーー電話番号を細かく分解する</em>
+電話番号は「03-1234-5678」
+正規表現によって電話番号から「「<font color="#ff0000">(</font><font color="#ff0000">[</font><font color="#ff0000">0-9</font><font color="#ff0000">]</font><font color="#ff0000">*)</font>-<font color="#008000">(</font><font color="#008000">[</font><font color="#008000">0-9</font><font color="#008000">]</font><font color="#008000">*)</font>-<font color="#0000ff">(</font><font color="#0000ff">[</font><font color="#0000ff">0-9</font><font color="#0000ff">]</font><font color="#0000ff">*)</font>」」を子要素ごとに取り出して電話番号配列とする
 電話番号配列を要素にそれぞれ繰り返す
 　　要素(1)&amp;要素(2)&amp;要素(3)を報告する
-繰り返し終わり</pre>
+そして</pre>
         <h3 id="lookup4">HTMLからタグ名とその内容を取り出す</h3>
         <p>HTMLから対になるタグ(&lt;head&gt;&lt;/head&gt;や&lt;body&gt;&lt;/body&gt;)を探して、タグの名前とその内容を取り出します。</p>
         <p>対になるタグを探すために「&lt;(.*)&gt;～&lt;\/\1&gt;」というパターンを指定しています。</p>
         <pre class="code">内容は「&lt;head&gt;ヘッダです。&lt;/head&gt;&lt;body&gt;本体です。&lt;/body&gt;」
-タグ一覧は（正規表現によって内容から「&lt;(.*)&gt;(.*)&lt;\/\1&gt;」を子要素ごとに取り出したもの）
+正規表現によって内容から「「&lt;(.*)&gt;(.*)&lt;\/\1&gt;」」を子要素ごとに取り出して、タグ一覧とする
 タグ一覧を要素にそれぞれ繰り返す
 　　「[要素(1)]=&gt;[要素(2)]」を報告する
-繰り返し終わり</pre>
+そして</pre>
         <p>なお、タグの間に改行が含まれる場合は、マッチしません。次の「最短一致」の例をご覧ください。</p>
         <p><strong>関連項目</strong>　<a href="../core/regexp.htm#子要素ごとに取り出す">子要素ごとに取り出す</a></p>
         <h3 id="lookup5">最短一致で検索する</h3>
         <p>通常、正規表現では、パターンに合致する最も長い部分で取り出そうとします。最も短い部分に合致するようにするためには、数の指定または*の直後に「?」を付けます。</p>
         <p>次の例の場合「にわ」が複数含まれますが「.*」は以降の「にわ」にも合致しますので、すべて取り出され、最も長い部分が結果となります。</p>
-        <pre class="code">結果は、正規表現：「にわにはにわにわとりがいる」から「にわ.*」を取り出したもの
+        <pre class="code">正規表現によって「にわにはにわにわとりがいる」から「「にわ.*」」を取り出して、結果とする
 結果を要素にそれぞれ繰り返す
 　　要素を報告する
-繰り返し終わり</pre>
+そして</pre>
         <p>次の例の場合は、先頭の「にわ」の後にある「にわ」がパターンにある「にわ」に合致しますので、最も短い部分で取り出され、結果は3つとなります。</p>
-        <pre class="code">結果は、正規表現：「にわにはにわにわとりがいる」から「にわ.*?」を取り出したもの
+        <pre class="code">正規表現によって「にわにはにわにわとりがいる」から「「にわ.*?」」を取り出して、結果とする
 結果を要素にそれぞれ繰り返す
 　　要素を報告する
-繰り返し終わり</pre>
+そして</pre>
         <h3 id="lookup6">HTMLから&lt;body&gt;タグの内容を取り出す</h3>
         <p>&nbsp;</p>
         <pre class="code">内容は「&lt;html&gt;&lt;body&gt;こんにちは太郎です。［改行］よろしくどうぞ。&lt;/body&gt;&lt;html&gt;」
-本文内容は、内容から「「&lt;body&gt;([\s\S]*?)&lt;\/body&gt;」」という正規表現で子要素ごとに取り出したもの
+内容から「「&lt;body&gt;([\s\S]*?)&lt;\/body&gt;」」という正規表現で子要素ごとに取り出して、本文内容とする
 本文内容を要素にそれぞれ繰り返す
 　　要素(1)を報告する
-繰り返し終わり</pre>
-        <p>　</p>
+そして</pre>
 		</div><!--/samples-->
-        <hr>
-        <p><b>参考文献</b><br>
-          Microsoft <a href="https://msdn.microsoft.com/ja-jp/library/cc392020.aspx">MSDNライブラリ-「正規表現の構文」</a><br>
-          杜甫々氏　<a href="https://www.tohoho-web.com/js/index.htm">とほほのJavaScriptリファレンス</a>－<a href="https://www.tohoho-web.com/js/regexp.htm">正規表現（RegExp）</a></p>
         <p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年5月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

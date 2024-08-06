@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ダイアログ,印刷,プリンタ">	<meta name="description" content="日本語プログラミング言語プロデルで印刷する用紙を選択するための「ページ設定画面」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -111,7 +110,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="プリンタ">プリンタ</a></th>
 					<th>プリンタ</th>
@@ -153,9 +153,10 @@
 					<th>文字列</th>
 					<th>◎</th>
 					<td>色選択画面で作成した色の一覧(16色)</td>
-					</tr>
-				</table>
-			</div>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
   <h3 id="sample1">ページ設定を表示して印刷する</h3>
@@ -163,34 +164,34 @@
 <pre class="code">窓というウィンドウを作る
 	そのタイトルは「印刷ページ設定の例」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ四角形を描く
 	その位置と大きさは｛100,100,100,100｝
-	その線色を青に変える
-	その太さを3に変える
-	その背景色を黄色に変える
+	その線色は、青
+	その太さは3
+	その背景色は、黄色
 キャンバス1へ「プロデル」という文字を描く
 	その位置は｛160,50｝
-	その線色を紺に変える
-	その文字サイズを20に変える
+	その線色は、紺
+	その文字サイズは20
 キャンバス1を更新する
 
 プリンタ1というプリンタを作る
 ページ設定画面のプリンタは、プリンタ1
-ページ設定画面の印刷ボタンは、○
+ページ設定画面の印刷ボタンは○
 ページ設定画面を表示する
-もしページ設定画面のキャンセルなら終了する
+ページ設定画面のキャンセルなら終了する
 キャンバス1をプリンタ1へ確認して印刷する</pre>
 		</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="図形">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「多点図形」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -107,7 +106,9 @@
 			<p>多角形の角となる座標を加えます</p>
 			<h3>【自分】に<a name="クリアする">クリアする</a></h3>
 			<p>多角形の角となる座標を初期化します</p>
-			</div>
+			<h3>【自分】に<a name="反転する">反転する</a></h3>
+			<p>多角形の角となる座標の順番を反転させます。</p>
+		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<p><a href="canvasitembase.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -120,12 +121,14 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="点">点</a></th>
-					<th>配列</th>
-					<th>◎</th>
-					<td>多角形を構成する角の点の配列</td>
-					</tr>
+<tbody>
+    <tr>
+        <th><a name="点">点</a></th>
+        <th>配列</th>
+        <th>◎</th>
+        <td>多角形を構成する角の点の配列</td>
+    </tr>
+</tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -135,13 +138,13 @@
 <pre class="code">窓というウィンドウを作る
 	そのタイトルは「多角形を描く」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ多角形を描く
-	その線色を青に変える
-	その太さを3に変える
-	その背景色を黄色に変える
+	その線色は、青
+	その太さは3
+	その背景色は、黄色
 
 それに{50,20}を加える
 それに{80,20}を加える
@@ -152,11 +155,11 @@
 </div><!--/samples-->		
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

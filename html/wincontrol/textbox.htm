@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="テキストボックス,部品,コントロール部品">
     <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「テキスト」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -95,7 +94,7 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>一行の文字を入力できる部品です。</p>
-		<div class="figure"><img src="img/textbox.png" width="246" height="27"></div>
+		<div class="figure"><img src="img/textbox.png" width="246" height="27" alt="テキスト部品を貼り付けたウィンドウ"></div>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というテキストを作る</pre>
 		<h2 id="手順">手順</h2>
@@ -162,7 +161,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="パスワード文字">パスワード文字</a></th>
 					<th>文字列</th>
@@ -259,7 +259,8 @@
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>Enterキーを押したときにウィンドウの決定ボタンよりも改行文字を優先します</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -270,12 +271,14 @@
 				<th>イベント名</th>
 				<th>説明</th>
 				<th>情報</th>
-				</tr></thead>
+            </tr></thead>
+            <tbody>
 			<tr>
 				<th><a name="内容が変化した">内容が変化した</a></th>
 				<td>テキストの内容が変化した時</td>
 				<td>なし</td>
-				</tr>
+            </tr>
+            </tbody>
 			</table>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -285,11 +288,11 @@
 			[OK]ボタンをクリックすると、テキストボックスの内容が表示されます。</p>
 		<pre class="code">窓というウィンドウを作る
 窓へOKボタンというボタンを作る
-	その内容を「OK」に変える
-	その位置と大きさを｛93，37，75，23｝に変える
+	その内容は「OK」
+	その位置と大きさは｛93，37，75，23｝
 窓へキーワード欄というテキストを作る
-	その内容を「日本語プログラミング言語プロデル」に変える
-	その位置と大きさを｛12,12,237,19｝に変える
+	その内容は「日本語プログラミング言語プロデル」
+	その位置と大きさは｛12,12,237,19｝
 窓を表示する
 待機する
 
@@ -299,11 +302,11 @@ OKボタンがクリックされた時の手順
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

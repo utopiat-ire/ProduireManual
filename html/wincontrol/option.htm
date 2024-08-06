@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「オプション」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -95,7 +94,7 @@
 	  <h2 id="head">概要</h2>
       <p>複数の選択肢の中から一つだけを選ぶときに使う部品です。</p>
       <p>選択肢は、<a href="panel.htm">パネル</a>,<a href="picturebox.htm">ピクチャー</a>,<a href="frame.htm">フレーム</a>に入れることでグループ分けできます。</p>
-      <div class="figure"><img src="img/option.png" width="135" height="36"></div>
+      <div class="figure"><img src="img/option.png" width="135" height="36" alt="ピクチャー部品を貼り付けたウィンドウ"></div>
 	<h2>作成する方法</h2>
 		<pre class="format">【名前】というオプションを作る</pre>
 		<h2 id="手順">手順</h2>
@@ -115,6 +114,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="チェックボックス位置">チェックボックス位置</a></th>
 					<th>列挙</th>
@@ -161,6 +161,7 @@
 					<td>文字の表示位置<br>
 						｛下中央・左下・右下・中央・左・右・上中央・左上・右上｝</td>
 					</tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -189,7 +190,7 @@
 窓へはい選択肢というオプションを作る
 　　その内容は「はい」
 　　その位置と大きさは｛10,10,60,30｝
-　　その状態は、○
+　　その状態は○
 　　その選択された時の手順は、選択された
 窓へいいえ選択肢というオプションを作る
 　　その内容は「いいえ」
@@ -202,20 +203,20 @@
 待機する
 
 選択された時の手順
-	もしはい選択肢の状態が○なら
+	はい選択肢の状態が○なら
 		結果の内容は「はいが選択されました」
-	他でもしいいえ選択肢の状態が○なら
+	他でいいえ選択肢の状態が○なら
 		結果の内容は「いいえが選択されました」
-	もし終わり
+	そして
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

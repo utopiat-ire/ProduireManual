@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="Word,Office">	<meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Word」を操作する「ワード」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="Word,Office">
+    <meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Word」を操作する「ワード」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -106,47 +106,53 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>Microsoft Wordと連携して簡単な操作できます。</p>
-		<p>Word関連機能の使い方については、マニュアルの機能編やサンプルプログラム（お仕事支援→Office）をご覧ください。<br>
-			「ワード」種類は、文章やアプリケーション本体などに分類されています。</p>
+		<p>「ワード」種類は、Microsoft Wordと連携してアプリケーション本体を操作したり、ワード文章を管理したりするオブジェクトです。</p>
+		<p>Word連携機能の使い方については、<a href="../lookup/office_word_lookup.htm">Microsoft Wordを制御する</a>やサンプルプログラム(Office連係→ワード)をご参照ください。<br>
+		</p>
 		<h2>作成する方法</h2>
 		<p>この種類は、静的種類のため作成する必要はありません。</p>
 		<p>　</p>
 		<h2 id="手順">手順</h2>
-		<div id="methodlist"><a href="#マクロ実行する">マクロ実行する</a>　<a href="#リンクする">リンクする</a>　<a href="#開く">開く</a>　<a href="#起動する">起動する</a>　<a href="#起動中かどうか">起動中かどうか</a>　<a href="#強制終了する">強制終了する</a>　<a href="#終了する">終了する</a>　<a href="#新規文書を作成する">新規文書を作成する</a>　<a href="#文章を追加する">文章を追加する</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　</div>
+		<div id="methodlist"><a href="#マクロ実行する">マクロ実行する</a>　<a href="#リンクする">リンクする</a>　<a href="#開く">開く</a>　<a href="#開く">開く</a>　<a href="#起動する">起動する</a>　<a href="#起動中かどうか">起動中かどうか</a>　<a href="#強制終了する">強制終了する</a>　<a href="#終了する">終了する</a>　<a href="#新規文書を作成する">新規文書を作成する</a>　<a href="#文章を追加する">文章を追加する</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　</div>
 		<div id="methods">
-			<h3>【自分】にある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
+			<h3>ワードにある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
 			<p>文章に含まれるマクロを実行します</p>
-			<h3>自分を<a name="リンクする">リンクする</a></h3>
+			<h3>ワードを<a name="リンクする">リンクする</a></h3>
 			<p>すでに起動しているワードとリンクして、プロデルから利用できるようにします。</p>
-			<h3>自分で【ファイル名】を<a name="開く">開く</a>:<a href="document.htm">文章</a></h3>
-			<p>指定したファイルを開きます</p>
-			<h3>自分を<a name="起動する">起動する</a></h3>
-			<p>Wordを起動します</p>
-			<p class="alert alert-warning" role="alert">この手順で起動したWordはプログラムが終了すると自動的に閉じられます。Wordを起動するだけで操作しないときは『「WINWORD」を起動する』と書いてください。</p>
-			<h3>【自分】が<a name="起動中かどうか">起動中かどうか</a></h3>
+			<h3>ワードを<a name="開く">開く</a>:<a href="document.htm">文章</a></h3>
+			<p>Wordを起動して、新規文書を開きます			</p>
+			<h4 data-ref="新規文書を作成する">ワードを起動して新規作成する</h4>
+            <pre class="code">ワードを開く</pre>
+			<h3>ワードで【ファイル名】を<a name="開く">開く</a>:<a href="document.htm">文章</a></h3>
+			<p>指定したワード文書(doc,docx)を開きます</p>
+			<h4 data-ref="開く">既存のワード文書を開く</h4>
+            <pre class="code">ワードで「お知らせ.docx」を開く</pre>
+			<h3>ワードを<a name="起動する">起動する</a></h3>
+			<p>Wordを起動してアプリを操作可能な状態にします。</p>
+			<h3>ワードが<a name="起動中かどうか">起動中かどうか</a></h3>
 			<p>ワードが起動しているかどうか</p>
-			<h3>自分を<a name="強制終了する">強制終了する</a></h3>
+			<h3>ワードを<a name="強制終了する">強制終了する</a></h3>
 			<p>保存確認せずにWordを終了します</p>
-			<h3>自分を<a name="終了する">終了する</a></h3>
+			<h3>ワードを<a name="終了する">終了する</a></h3>
 			<p>Wordを終了します</p>
-			<h3>自分へ<a name="新規文書を作成する">新規文書を作成する</a>:<a href="document.htm">文章</a></h3>
+			<h3>ワードへ<a name="新規文書を作成する">新規文書を作成する</a>:<a href="document.htm">文章</a></h3>
 			<p>新しい文章を追加します</p>
+			<h4 data-ref="新規文書を作成する">ワード文書を新規作成する</h4>
 			<pre class="code">ワードへ新規文書を作成する</pre>
-			<h3>【自分】に<a name="文章を追加する">文章を追加する</a>:<a href="document.htm">文章</a></h3>
+			<h3>ワードに<a name="文章を追加する">文章を追加する</a>:<a href="document.htm">文章</a></h3>
 			<p>新しい文章を追加します</p>
-			<h3>自分を〈【ファイル名】へ〉<a name="保存する">保存する</a></h3>
+			<h3>ワードを〈【ファイル名】へ〉<a name="保存する">保存する</a></h3>
 			<p>現在操作している文章を保存します。<br>
 [ファイル名]を省略すると、上書き保存されます。</p>
-			<h3>自分を【ファイル名】へ<a name="PDFで保存する">PDFで保存する</a></h3>
+			<h3>ワードを【ファイル名】へ<a name="PDFで保存する">PDFで保存する</a></h3>
 			<p>操作している文章をPDF形式で保存します。<br>
 				この手順は、Office 2007以降で利用できます。</p>
-			<h4 data-ref="PDFで保存する">ブックをPDF形式で保存する</h4>
+			<h4 data-ref="PDFで保存する">ワード文書をPDF形式で保存する</h4>
 			<pre class="code">ワードを「計画書.pdf」へPDFで保存する</pre>
-			<h3>自分を【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
+			<h3>ワードを【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
 			<p>操作している文章をXPS形式で保存します。<br>
 				この手順は、Office 2007以降で利用できます。</p>
-			<h4 data-ref="XPSで保存する">ブックをXPS形式で保存する</h4>
+			<h4 data-ref="XPSで保存する">ワード文書をXPS形式で保存する</h4>
 			<pre class="code">ワードを「計画書.xps」にXPSで保存する</pre>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -160,6 +166,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="バージョン">バージョン</a></th>
 					<th>文字列</th>
@@ -214,6 +221,7 @@
 				  <th>□</th>
 				  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 			  </tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -221,11 +229,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

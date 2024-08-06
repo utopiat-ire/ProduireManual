@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="JSON">	<meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「JSON形式」種類を使う方法">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -108,21 +107,23 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="インデント文字列">インデント文字列</a></th>
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>インデントに用いるスペース文字列</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<div id="samples">
 <h3 id="samples1">JSON形式を文字列として生成する</h3>
 		<p>JSON形式を作って、JSON形式と辞書とを相互変換します。</p>
 <pre class="code">値は{「プロデル」,{バージョン=「1.2.500」}}
-JSON形式として値を書き出したものを報告する</pre>
+JSON形式として値を書き出して、報告する</pre>
 <h3 id="samples2">JSON形式の文字列から辞書を作る</h3>
 
 		<pre class="code">//単純
@@ -135,8 +136,7 @@ JSON形式として値を書き出したものを報告する</pre>
 」を読み取る
 値を報告する</pre>
 		<h3 id="samples3">JSON形式の文字列から配列と辞書を作る</h3>
-<pre class="code">
-//複雑
+<pre class="code">//複雑
 値は、JSON形式:「{&quot;item&quot;:[[]
 {&quot;itemCode&quot;:91,
 &quot;itemName&quot;:&quot;塩ラーメン&quot;,
@@ -156,11 +156,11 @@ JSON形式として値を書き出したものを報告する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

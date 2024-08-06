@@ -11,8 +11,8 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Excel」を操作する「セル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Excel」を操作する「セル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -135,8 +135,14 @@
                 <h3>自分へ<a name="挿入する">挿入する</a></h3>
                 <p>セルへ新しいセルを挿入します</p>
                 <h4 data-ref="挿入する">セルを挿入する</h4>
-                <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50}<br>}<br>[Wの現在シート:セル(「B1:C2」)]に挿入する
-</pre>
+                <pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+Wの現在シートの一覧は{{「A」,「B」,「C」},
+	{1,100,20},
+	{2,130,30},
+	{3,90,50}
+}
+[Wの現在シート:セル(「B1:C2」)]に挿入する</pre>
                 <h3>自分を<a name="選択する">選択する</a></h3>
 				<p>セルを選択状態にします</p>
 				<h4 data-ref="選択する">セルを選択する</h4>
@@ -198,6 +204,7 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 							<th>説明</th>
 						</tr>
 					</thead>
+                    <tbody>
 					<tr>
 						<th><a name="内容">内容</a></th>
 						<th>文字列</th>
@@ -212,7 +219,7 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 						</td>
 					</tr>
 					<tr>
-					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の計算式を「=sum(A1:A10)」に変える</pre></td>
+					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の計算式は「=sum(A1:A10)」</pre></td>
 				  </tr>
 					<tr>
 						<th><a name="表示形式">表示形式</a></th>
@@ -222,7 +229,7 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 						</td>
 					</tr>
 					<tr>
-					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の表示形式を「@」に変える</pre></td>
+					  <td colspan="4"><pre class="code">エクセルの現在シートの選択の表示形式は「@」</pre></td>
 				  </tr>
 					<tr>
 						<th><a name="フォント名">フォント名</a></th>
@@ -411,6 +418,7 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 					  <th>□</th>
 					  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 				  </tr>
+                </tbody>
 				</table>
 			</div>
 			<h2 id="サンプルコード">サンプルコード</h2>
@@ -421,20 +429,20 @@ Wの現在シートの使用範囲から2列目で重複を削除する</pre>
 
 <i>ーー指定したセルに文字を入力します</i>
 操作セルは、エクセルの選択シート：セル（｛5，2｝）
-操作セルの内容を「プロデル」に変える
+操作セルの内容は「プロデル」
 
 <i>ーーセルに罫線を設定します</i>
 操作セルは、エクセルの選択シート：セル（「B2:F8」）
-操作セルの罫線の形を「四角」に変える</pre>
+操作セルの罫線の形は「四角」</pre>
               <p>　</p>
             </div><!--/samples-->
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

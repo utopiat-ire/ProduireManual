@@ -12,8 +12,8 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="部品,コントロール部品,グリッド">	<meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「表部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="部品,コントロール部品,グリッド">
+    <meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「表部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -140,9 +140,9 @@
 			<h4 data-ref="セルを取得する">マウスカーソルの座標にあるセルを取得する</h4>
 			<pre class="code">表部品1のマウスカーソルが移動した時の手順
 	表部品1からイベントの座標にあるセルを取得して、選択セルとする
-	もし選択セルが無でないなら、
-		&quot;ラベル1&quot;の内容を「[選択セルの内容]を選択中」に変える
-	もし終わり
+	選択セルが無でなければ、
+		ラベル1の内容は「[選択セルの内容]を選択中」
+	そして
 終わり</pre>
 			<h3>【自分】の【行列:配列】セル目から、<a name="セル部品を取得する">セル部品を取得する</a>：<a href="gridcell.htm">セル部品</a></h3>
 			<p>指定した行列({行,列})セルにある行部品を取得します。</p>
@@ -166,11 +166,11 @@
 			<p>指定した列を大きい値(逆名前順)に並べ替えます。</p>
 			<h4 data-ref="降順に並べ替える">指定した列を降順に並べ替える</h4>
 			<pre class="code">表部品1の2列目を降順に並べ替える</pre>
-			<h3>【自分】の【列番号】列目を、<a name="列を調整する">列を調整する</a></h3>
+			<h3>【自分】の【列番号】<a name="列目を調整する">列目を調整する</a></h3>
 		  <p>指定した列幅を自動調整します。</p>
 			<h4 data-ref="降順に並べ替える">指定した列幅を自動調整する</h4>
 			<pre class="code">表部品1の2列目を調整する</pre>
-			<h3>【自分】の【列番号】列目を、<a name="行を調整する">行を調整する</a></h3>
+			<h3>【自分】の【行番号】<a name="行目を調整する">行目を調整する</a></h3>
 		  <p>指定した行高さを自動調整します。</p>
 			<h4 data-ref="降順に並べ替える">指定した行高さを自動調整する</h4>
 			<pre class="code">表部品1の2行目を調整する</pre>
@@ -184,7 +184,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="データ表">データ表</a></th>
 					<th>&nbsp;</th>
@@ -407,6 +408,7 @@
 				  <th>□</th>
 				  <td>表部品で作成する行のスタイルの手本を表します</td>
 			  </tr>
+                    </tbody>
 				</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
@@ -418,7 +420,8 @@
 					<th>イベント名</th>
 					<th>説明</th>
 					<th>情報</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="セルがクリックされた">セルがクリックされた</a></th>
 					<td>セルがクリックされた時</td>
@@ -494,6 +497,7 @@
 				  <td>別の行が選択された時</td>
 				  <td><a href="grid_event.htm#表部品セルイベント情報">あり</a></td>
 			  </tr>
+                    </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -516,22 +520,22 @@
 
 	はじめの手順
 		初期化する
-		表部品1のデータ表をデータに変える
+		表部品1のデータ表は、データ
 	終わり
 	初期化する手順
-		この実質大きさを｛442,258｝に変える
-		この内容を「表部品のテスト」に変える
+		この実質大きさは｛442,258｝
+		この内容は「表部品のテスト」
 		ラベル1というラベルを作る
-			その内容を「ラベル1」に変える
-			その位置と大きさを｛259,16,39,12｝に変える
+			その内容は「ラベル1」
+			その位置と大きさは｛259,16,39,12｝
 		テキスト1というテキストを作る
-			その位置と大きさを｛12,13,241,19｝に変える
+			その位置と大きさは｛12,13,241,19｝
 		表部品1という表部品を作る
 		表部品1を初期化開始する
-			その位置と大きさを｛12,38,418,208｝に変える
-			その位置固定方向を「右＋左＋下＋上」に変える
+			その位置と大きさは｛12,38,418,208｝
+			その位置固定方向は「右＋左＋下＋上」
 		表部品1を初期化終了する
-		この設計スケール比率を｛96,96｝に変える
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	表部品1のセルがクリックされた時の手順
@@ -540,19 +544,19 @@
 	終わり
 
 	テキスト1のキーが入力された時の手順
-		もしイベントのキー番号が13なら
+		イベントのキー番号が13なら
 			表部品1の選択セルの内容は、テキスト1の内容
-		もし終わり
+		そして
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

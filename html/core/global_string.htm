@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「文字列関連操作」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -95,107 +94,115 @@
 		<div id="methodlist"><a href="#アスキー番号">アスキー番号</a>　<a href="#キャラクタ">キャラクタ</a>　<a href="#文字化">文字化</a>　<a href="#スペース">スペース</a>　<a href="#パーセント形式">パーセント形式</a>　<a href="#一行だけ">一行だけ</a>　<a href="#区切る">区切る</a>　<a href="#個数">個数</a>　<a href="#行区切り">行区切り</a>　<a href="#行数">行数</a>　<a href="#整える">整える</a>　<a href="#通貨形式">通貨形式</a>　<a href="#反復文字">反復文字</a>　<a href="#文字数">文字数</a>　<a href="#数字である">数字である</a>　<a href="#文字である">文字である</a>　<a href="#ひらがなである">ひらがなである</a>　<a href="#カタカナである">カタカナである</a>　<a href="#全角である">全角である</a>　<a href="#半角である">半角である</a>　<a href="#アルファベットである">アルファベットである</a>　<a href="#記号である">記号である</a>　<a href="#空白である">空白である</a>　<a href="#大文字である">大文字である</a>　<a href="#小文字である">小文字である</a>　</div>
 		<div id="methods">
 			<h3>【文字】の<a name="アスキー番号">アスキー番号</a>：整数</h3>
-			<p>指定した文字のASCII番号を表します <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した文字のASCII番号を表します <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="アスキー番号">文字のASCII番号を取得する</h4>
 			<pre class="code">「A」のアスキー番号を表示する</pre>
 			<h3>【文字番号】の<a name="キャラクタ">キャラクタ</a>：文字列</h3>
-			<p>指定したASCII番号に当たる文字を表します <span class="label label-warning">名詞型手順</span></p>
+			<p>指定したASCII番号に当たる文字を表します <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="キャラクタ">ASCII番号の文字を取得する</h4>
 			<pre class="code">65のキャラクタを表示する</pre>
 			<h3>【文字番号】を《【文字コード】で》<a name="文字化">文字化</a>：文字列</h3>
 			<p>文字コードで指定された文字番号に当たる文字を表します。<br>
 				文字コードを省略するとUnicodeとして扱われます。</p>
-			<pre class="code">C=「山」の文字番号<br>Cを文字化して表示する</pre>
+			<pre class="code">C=「山」の文字番号
+Cを文字化して表示する</pre>
 			<h3>【文字数】文字、<a name="スペース">スペース</a>：文字列</h3>
-			<p>指定した文字数のスペースを作ります <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した文字数のスペースを作ります <span class="label label-warning">名詞手順</span></p>
 			<pre class="code">空白は、３文字のスペース
 「A［空白］B」を表示する</pre>
 			<h3>【表示桁数】桁、【数値】の<a name="パーセント形式">パーセント形式</a>：文字列</h3>
-			<p>指定した数値をパーセント形式で表示します <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した数値をパーセント形式で表示します <span class="label label-warning">名詞手順</span></p>
 			<pre class="code">０桁0.09のパーセント形式を表示する</pre>
 <h3>【内容】から【行数】行目を、<a name="一行だけ">一行だけ</a>：文字列</h3>
-			<p>内容から指定した行だけを取り出します <span class="label label-warning">名詞型手順</span></p>
+			<p>内容から指定した行だけを取り出します <span class="label label-warning">名詞手順</span></p>
 			<pre class="code">行内容は「あいう
 ABC
 123」から2行目を一行だけ
 行内容を表示する</pre>
 			<h3>【文字列】を【区切り文字】で、<a name="区切る">区切る</a>：配列</h3>
 			<p>文字列を区切り配列にします</p>
-			<pre class="code">内容は「いち・に・さん」を「・」で区切り
-内容(2)を表示する</pre>
+			<pre class="code">「いち・に・さん」を「・」で区切って、内容とする
+内容(3)を表示する</pre>
 			<h3>【文字列】を【区切り文字】文字ずつ、区切る：配列</h3>
 			<p>文字列を指定した文字数ごとに区切り配列にします</p>
 			<pre class="code">「あいうえお」を１文字ずつ区切って、結果とする
 結果を表示する</pre>
 			<h3>【文字列】から【探す文字】の<a name="個数">個数</a>：整数</h3>
-			<p>指定した文字列が何回含まれるか調べます <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した文字列が何回含まれるか調べます <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="個数">文字列の登場回数を数える</h4>
 			<pre class="code">「niwaniwaniwaniwatorigairu」から「i」の個数を表示する</pre>
 			<h3>【内容】の<a name="行区切り">行区切り</a>：配列</h3>
-			<p>内容を行ごとに区切り配列に変換します <span class="label label-warning">名詞型手順</span></p>
+			<p>内容を行ごとに区切り配列に変換します <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="行区切り">文字列を1行ごとに配列化する</h4>
-			<pre class="code">内容は「おはようございます<br>こんにちは<br>こんばんは」
+			<pre class="code">内容は「おはようございます
+こんにちは
+こんばんは」
 内容を表示する
 分割は、内容の行区切り
 分割(2)を表示する</pre>
 			<h3>【内容】の<a name="行数">行数</a>：整数</h3>
-			<p>指定した内容の行数を表します <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した内容の行数を表します <span class="label label-warning">名詞手順</span></p>
 	      <h4 data-ref="行数">文字列の行数を数える</h4>
 			<pre class="code">「おはようございます<br>こんにちは<br>こんばんは」の行数を表示する</pre>
-			<h3>【内容】を【書式】桁に<a name="整える">整える</a>：文字列</h3>
-			<p>文字や数値を指定した書式に整えます</p>
+			<h3>【値】を【書式:文字列】桁に<a name="整える">整える</a>：文字列</h3>
+			<p>文字や数値を指定した書式に整えます。書式に指定する内容は、.NET	Frameworkの<a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/formatting-types">書式指定文字列</a>に基づき、値のデータ型によって指定できる書式は異なります。</p>
+			<ul>
+			        
+			        <li><a href="https://dobon.net/vb/dotnet/string/inttostring.html">書式を指定して数値を文字列に変換する - .NET Tips (VB.NET,C#...) (dobon.net)</a></li>
+			        <li><a href="https://dobon.net/vb/dotnet/string/datetimeformat.html">日時（DateTimeオブジェクト）を文字列に変換する - .NET Tips (VB.NET,C#...) (dobon.net)</a>			</li>
+			</ul>
 			<h4 data-ref="整える">数値を指定した書式に整える</h4>
-			<pre class="code">(500を5桁に整えたもの)を表示する</pre>
+			<pre class="code">500を5桁に整えて表示する</pre>
 			<pre class="code">「|」&amp;(「ABC」を10桁に整えたもの)&amp;「|」を表示する</pre>
 			<h3>【表示桁数】桁、【数値】の<a name="通貨形式">通貨形式</a>：文字列</h3>
-			<p>指定した数値を通貨形式で表示します <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した数値を通貨形式で表示します <span class="label label-warning">名詞手順</span></p>
 			<pre class="code">2桁100の通貨形式を表示する</pre>
 			<h3>【文字】を【回数】回、<a name="反復文字">反復文字</a>：文字列</h3>
-			<p>同じ文字を指定した回数繰り返した文字を作ります <span class="label label-warning">名詞型手順</span></p>
+			<p>同じ文字を指定した回数繰り返した文字を作ります <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="反復文字">同じ文字を繰り返した文字列を返す</h4>
 			<pre class="code">内容は「ほげ」を５回反復文字
 内容を表示する</pre>
 			<h3>【文字】の<a name="文字数">文字数</a>：整数</h3>
-			<p>文字の文字数を表します <span class="label label-warning">名詞型手順</span></p>
+			<p>文字の文字数を表します <span class="label label-warning">名詞手順</span></p>
 			<pre class="code">「あいうえお」の文字数を表示する</pre>
 			<h3>【内容:文字列】が<a name="数字である">数字である</a>：真偽値</h3>
-			<p>指定した内容が、数字であるかどうかを判定します。 <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「3.14」が数字である]なら「数字です」を表示する</pre>
+			<p>指定した内容が、数字であるかどうかを判定します。 <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「3.14」が数字であるなら「数字です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="文字である">文字である</a>：真偽値</h3>
-			<p>指定した内容が、数字以外の文字であるかどうかを判定します。 <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「Abc」が文字である]なら「文字です」を表示する</pre>
+			<p>指定した内容が、数字以外の文字であるかどうかを判定します。 <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「Abc」が文字であるなら「文字です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="ひらがなである">ひらがなである</a>：真偽値</h3>
-			<p>指定した内容が、すべてひらがなであるかどうかを判定します。 <span class="label label-warning">名詞型手順</span><br>
+			<p>指定した内容が、すべてひらがなであるかどうかを判定します。 <span class="label label-warning">名詞手順</span><br>
 				なお、内容の一部に記号や空白が含まれる場合は、それらは判定から除外されます。</p>
-			<pre class="code">もし[「みなとみらい」が&quot;ひらがなである&quot;]なら「ひらがなです」を表示する</pre>
+			<pre class="code">「みなとみらい」が&quot;ひらがなである&quot;なら「ひらがなです」を表示する</pre>
 			<h3>【内容:文字列】が<a name="カタカナである">カタカナである</a>：真偽値</h3>
-			<p>指定した内容が、すべてカタカナであるかどうかを判定します。 <span class="label label-warning">名詞型手順</span><br>
+			<p>指定した内容が、すべてカタカナであるかどうかを判定します。 <span class="label label-warning">名詞手順</span><br>
 				なお、内容の一部に記号や空白が含まれる場合は、それらは判定から除外されます。</p>
-			<pre class="code">もし[「ベイブリッジ」がカタカナである]なら「カタカナです」を表示する</pre>
+			<pre class="code">「ベイブリッジ」がカタカナであるなら「カタカナです」を表示する</pre>
 			<h3>【内容:文字列】が<a name="全角である">全角である</a>：真偽値</h3>
-			<p>指定した内容が、すべて全角であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「Ｗｉｎｄｏｗｓ」が全角である]なら「全角文字です」を表示する</pre>
+			<p>指定した内容が、すべて全角であるかどうかを判定します <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「Ｗｉｎｄｏｗｓ」が全角であるなら「全角文字です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="半角である">半角である</a>：真偽値</h3>
-			<p>指定した内容が、すべて半角文字であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「Windows」が半角である]なら「半角文字です」を表示する</pre>
+			<p>指定した内容が、すべて半角文字であるかどうかを判定します <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「Windows」が半角であるなら「半角文字です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="アルファベットである">アルファベットである</a>：真偽値</h3>
 			<p>指定した内容が、すべて英字文字(アルファベット)であるかどうかを判定します。<br>
-				内容の一部に記号文字が含まれる場合は、その文字は判定に含まれません。 <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「ABC」がアルファベットである]なら「アルファベットです」を表示する</pre>
+				内容の一部に記号文字が含まれる場合は、その文字は判定に含まれません。 <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「ABC」がアルファベットであるなら「アルファベットです」を表示する</pre>
 			<h3>【内容:文字列】が<a name="記号である">記号である</a>：真偽値</h3>
-			<p>指定した内容が、すべて記号であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「+」が記号である]なら「記号です」を表示する</pre>
+			<p>指定した内容が、すべて記号であるかどうかを判定します <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「+」が記号であるなら「記号です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="空白である">空白である</a>：真偽値</h3>
-			<p>指定した内容が、すべて空白であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「 」が空白である]なら「空白です」を表示する</pre>
+			<p>指定した内容が、すべて空白であるかどうかを判定します <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「 」が空白であるなら「空白です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="大文字である">大文字である</a>：真偽値</h3>
 			<p>指定した内容が、すべて大文字であるかどうかを判定します。<br>
-				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「ABC」が大文字である]なら「大文字です」を表示する</pre>
+				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「ABC」が大文字であるなら「大文字です」を表示する</pre>
 			<h3>【内容:文字列】が<a name="小文字である">小文字である</a>：真偽値</h3>
 			<p>指定した内容が、すべて小文字であるかどうかを判定します。<br>
-				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞型手順</span></p>
-			<pre class="code">もし[「abc」が小文字である]なら「小文字です」を表示する</pre>
+				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「abc」が小文字であるなら「小文字です」を表示する</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
@@ -205,7 +212,8 @@ ABC
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="タブ">タブ</a></th>
 					<th>文字列</th>
@@ -213,21 +221,22 @@ ABC
 					<td>タブ文字を表します</td>
 					</tr>
 				<tr>
-				        <th><a name="改行">改行</a></th>
-				        <th>文字列</th>
-				        <th>□</th>
-				        <td>改行文字を表します</td>
-				        </tr>
-				</table>
+                    <th><a name="改行">改行</a></th>
+                    <th>文字列</th>
+                    <th>□</th>
+                    <td>改行文字を表します</td>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

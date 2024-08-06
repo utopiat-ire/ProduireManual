@@ -14,7 +14,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「音声処理」プラグインの「話者」種類に含まれる手順や設定項目を使う方法">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -119,11 +118,14 @@
     <h2 id="設定項目">設定項目</h2>
     <div id="properties">
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th class="column">設定項目</th>
 				<th>　</th>
 				<th class="column">説明</th>
 			</tr>
+            </thead>
+            <tbody>
 			<tr>
 				<th><a name="名前">名前</a></th><th>◎</th><td>話者の名前</td>
 			</tr>
@@ -149,6 +151,7 @@
 				<th><a name="元実体">元実体</a></th><th>□</th>
 				<td>ドットネット型のオブジェクトを返します。<br><small>System.Speech.Synthesis.VoiceInfoクラスインスタンス</small></td>
 			</tr>
+            </tbody>
 		</table>
 		<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
     </div>
@@ -156,11 +159,14 @@
     <p>次のイベント手順が使用できます。</p>
 	<div id="events">
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th>イベント名</th>
 				<th>説明</th>
 				<th>情報</th>
 			</tr>
+            </thead>
+            <tbody>
 			<tr>
 				<th><a name="話し終わった">話し終わった</a></th>
 				<td>話し終わった時</td>
@@ -176,6 +182,7 @@
 				<td>発声している時</td>
 				<td>&nbsp;</td>
 			</tr>
+            </tbody>
 		</table>
 	</div>
 	<h2 id="サンプルコード">サンプルコード</h2>
@@ -187,7 +194,7 @@
         実行するコンピュータにインストールされている話者を設定して下さい。</p>
       <pre class="code">「Produire.Speech.dll」を利用する
 サムという話者を作る
-サムの名前を「Microsoft Sam」に変える
+サムの名前は「Microsoft Sam」
 
 メッセージは「Where do you want to go today?」
 サムがメッセージをしゃべる
@@ -199,7 +206,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

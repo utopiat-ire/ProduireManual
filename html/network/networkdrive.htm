@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「ネットワークドライブ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -103,22 +102,34 @@
         <h3>【自分】から【ドライブ名】を<a name="切断する">切断する</a>：真偽値</h3>
         <p>割り当て済みのネットワークドライブを切断します。</p>
         <h4 data-ref="切断する">割り当て済みのネットワークドライブを切断する</h4>
-        <pre class="code">ネットワークドライブから「X:」を切断する<br></pre>
+        <pre class="code">ネットワークドライブから「X:」を切断する</pre>
       </div>
 	  <h2 id="サンプルコード">サンプルコード</h2>
       <div id="samples">
         <h3 id="sample1">ネットワークドライブ設定ツール</h3>
         <p>Xドライブをネットワークドライブとして設定したり解除したりする簡易ツールです。</p>
-        <pre class="code">もし「X:\」というフォルダが存在するなら<br>	もし「Xドライブを解除しますか?」と質問するなら<br>		ネットワークドライブから「X:」を切断する<br>	もし終わり<br>そうでなければ<br>	開く画面のタイトルは「ネットワーク上のファイルを一つ選択してください。」<br>	開く画面のフィルタを「すべてのファイル|*.*」に変える<br>	ファイル名は、開くファイルを選択したもの<br>	もしファイル名が無でなければ<br>		フォルダ名は、ファイル名のフォルダだけ<br>		ネットワークドライブとしてフォルダ名を「X:」へ接続する<br>		「Xドライブを設定しました。」と情報アイコンで表示する<br>	もし終わり<br>もし終わり
-</pre>
+        <pre class="code">「X:\」というフォルダが存在すれば
+	「Xドライブを解除しますか?」と質問すれば
+		ネットワークドライブから「X:」を切断する
+	そして
+そうでなければ
+	開く画面のタイトルは「ネットワーク上のファイルを一つ選択してください。」
+	開く画面のフィルタは「すべてのファイル|*.*」
+	開くファイルを選択して、ファイル名とする
+	ファイル名が無でなければ
+		フォルダ名は、ファイル名のフォルダだけ
+		ネットワークドライブとしてフォルダ名を「X:」へ接続する
+		「Xドライブを設定しました。」と情報アイコンで表示する
+	そして
+そして</pre>
       </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

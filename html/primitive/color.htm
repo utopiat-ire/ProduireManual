@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「色情報」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -106,6 +105,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="アルファ">アルファ</a></th>
 					<th>整数</th>
@@ -148,6 +148,7 @@
 					<th>□</th>
 					<td>HTML形式の色番号</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -161,6 +162,7 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th style="height: 40px"><a href="string.htm">文字列</a></th>
 				<th style="height: 40px">←→</th>
@@ -173,6 +175,7 @@
 		      {アルファ,赤,緑,青}<br>		      
 		      各値は0～255の範囲の整数で表現します<br></td>
 		  </tr>
+            </tbody>
 		</table>
 		<pre class="code">【C:色情報】は{255,100,100}
 Cを報告する</pre>
@@ -181,31 +184,31 @@ Cを報告する</pre>
 <h3 id="sample1">RGBの色番号で色を指定する</h3>
 	<p>各要素値を指定した色を使って、<a href="../pgraphics/canvas/canvas.htm">キャンバス</a>に図形を描きます。</p>
 		<pre class="code">色Aという色情報を作る
-色Aの赤は、100
-色Aの緑は、129
-色Aの青は、255
-色Aのアルファは、50
+色Aの赤は100
+色Aの緑は129
+色Aの青は255
+色Aのアルファは50
 
 色Bという色情報を作る
-色Bの赤は、255
-色Bの緑は、129
-色Bの青は、100
-色Bのアルファは、50
+色Bの赤は255
+色Bの緑は129
+色Bの青は100
+色Bのアルファは50
 
 窓というウィンドウを作る
 	そのタイトルは「色情報の例」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ四角形を描く
 	その位置と大きさは｛100,100,100,100｝
-	その線色を青に変える
-	その背景色を色Aに変える
+	その線色は、青
+	その背景色は、色A
 キャンバス1へ円を描く
 	その位置と大きさは｛20,50,150,100｝
-	その線色を赤に変える
-	その背景色を色Bに変える
+	その線色は、赤
+	その背景色は、色B
 
 キャンバス1を更新する
 待機する</pre>
@@ -214,11 +217,11 @@ Cを報告する</pre>
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

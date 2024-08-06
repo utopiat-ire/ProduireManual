@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="システム情報取得">	<meta name="description" content="日本語プログラミング言語プロデルの「システム情報取得」プラグインの「レジストリ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -87,7 +86,7 @@
 		<h3>利用プラグイン</h3>
 		<p><a href="index.htm">システム情報取得</a></p>
 	</div>
-	<div class="col-sm-8">
+	<div id="refcontent" class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>Windowsレジストリに関する操作を行います。</p>
 		<h2 id="手順">手順</h2>
@@ -117,7 +116,7 @@
 			<p>指定したキーに含まれる値名の値を削除します</p>
 			<h3>【キー名】を削除する</h3>
 			<p>指定したキーを削除します。キーに含まれる値と子のキーがすべて削除されます</p>
-			</div>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">レジストリで値を読み書きする</h3>
@@ -132,9 +131,9 @@
 （レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire\Hello」からデータ型を取得したもの）を表示する
 
 <i>ーーキー名が存在するかどうか判断します</i>
-もし[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」が存在する]なら、「存在します」を表示する
+[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」が存在する]なら「存在します」を表示する
 <i>ーー値名が存在するかどうか判断します</i>
-もし[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」に「Test」が存在する]なら、「存在します」を表示する
+[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」に「Test」が存在する]なら「存在します」を表示する
 
 <i>ーー値名の一覧を取得します</i>
 （「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」のレジストリの値一覧）を表示する
@@ -148,11 +147,11 @@
 	</div>
 </div><!--/samples-->
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

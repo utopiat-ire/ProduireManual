@@ -12,8 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -26,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->種類<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +36,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,74 +69,66 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="syntax">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">言語仕様</a></li>
-	<li>種類</li>
-</ul>
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-<h1 id="construct">種類</h1>
-			<p>「種類」とは、複数の手順や変数を機能ごとに分類して、まとめたものです。</p>
-<p>プログラムが大きくなると、手順や変数をたくさん作ることになり、整理する必要があります。種類を使うことで、手順や変数を一つの固まりにまとめることができます。</p>
-<p>また、「作る」文を使うことで、種類のインスタンスを生成できます。</p>
-<p>種類は、一般のプログラミング言語では、クラスと呼ばれるものに相当します。</p>
-<div class="panel panel-default">
-	<div class="panel-body bg-success">
-		<ul>
-			<li>種類を使う
-				<ul>
-					<li><a href="#construct_create">オブジェクトの生成</a></li>
-					<li><a href="#construct_namedparam">「作る」文の初期値の指定 (名前付き引数) </a></li>
-					<li><a href="#objectaccess">オブジェクトアクセス式</a></li>
-			  </ul>
-			</li>
-			<li>種類を定義する
-				<ul>
-					<li><a href="#construct_declear">種類宣言文の書式</a></li>
-					<li><a href="#construct_field">種類変数</a></li>
-					<li><a href="#construct_procedure">種類手順</a></li>
-					<li><a href="#construct_property">設定項目</a></li>
-					<li><a href="#construct_constructor">初期化するための特別な手順（コンストラクタ）</a></li>
-					<li><a href="#construct_destructor">解放するための特別な手順（デストラクタ）</a></li>
-					<li>イベント手順
-						<ul>
-							<li><a href="#construct_event_assign">イベント手順を利用する</a></li>
-							<li><a href="#construct_event_declear">イベント手順を定義する</a></li>
-					  </ul>
-				  </li>
-			  </ul>
-			</li>
-			<li><a href="#construct_inherit">種類の継承</a>
-				<ul>
-					<li><a href="#construct_override">手順の上書き</a></li>
-					<li><a href="#construct_overload">同じ手順名のオーバロード</a></li>
-			  </ul>
-			</li>
-			<li><a href="#construct_abstract">抽象的な種類</a>
-<ul>
-	<li>実装なしの種類 (インタフェース)</li>
-					<li>単一種類 (シングルトン)</li>
-					<li>静的変数</li>
-			</ul>
-			</li>
-			<li><a href="#construct_modifier">メンバーのアクセス範囲を限定する</a></li>
-		</ul>
-	</div>
-	</div>
-	<h2>種類を使う</h2>
+<div id="top" class="row">
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="syntax">
+            <li><a href="../index.htm">プロデル</a></li>
+            <li><a href="index.htm">言語仕様</a></li>
+            <li>種類</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#top">種類を使う</a></li>
+            <li><a href="#construct_create">オブジェクトの生成</a></li>
+            <li><a href="#construct_namedparam">「作る」文での初期値の指定</a></li>
+            <li><a href="#objectaccess">オブジェクトアクセス式</a></li>
+            <li><a href="#construct_event_assign">イベント手順の受け取り</a></li>
+        </ul>
+        <h4>種類の定義</h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#construct_declear">種類宣言文の書式</a></li>
+            <li><a href="#construct_field">種類変数</a></li>
+            <li><a href="#construct_procedure">種類手順</a></li>
+            <li><a href="#construct_property">設定項目(プロパティ)</a></li>
+            <li><a href="#construct_constructor">はじめの手順（コンストラクタ）</a></li>
+            <li><a href="#construct_destructor">終わりの手順（デストラクタ）</a></li>
+            <li><a href="#construct_event_declear">イベント手順を定義する</a></li>
+            <li><a href="#staticvar">静的変数</a></li>
+            <li><a href="#modifier">メンバーのアクセス範囲を限定する</a></li>
+        </ul>
+        <h4>種類の継承</h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#construct_inherit">種類の継承</a></li>
+            <li><a href="#construct_override">手順の上書き</a></li>
+            <li><a href="#construct_overload">同じ手順名のオーバロード</a></li>
+            <li><a href="#construct_abstract">抽象的な種類</a></li>
+            <li><a href="#construct_interface">実装なしの種類 (インタフェース)</a></li>
+            <li><a href="#construct_singleton">単一種類 (シングルトン)</a></li>
+            <li><a href="#object_compare">オブジェクトの種類を判定する</a></li>
+        </ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
+        <h1 id="construct">種類</h1>
+        <p>「種類」とは、複数の手順や変数を機能ごとに分類して、まとめたものです。</p>
+        <ul>
+          <li><a href="https://produ.irelang.jp/blog/2020/05/89/">プロデルで始める日本語プログラミング言語入門(#9) 「オブジェクト指向とは」</a></li>
+	  </ul>
+<p>プログラムが大きくなると、手順や変数をたくさん作ることになり、整理する必要があります。種類を使うことで、手順や変数を一つの固まりにまとめられます。種類は、一般のプログラミング言語では、クラスと呼ばれるものに相当します。</p>
+<hr>
+    <h2>種類を使う</h2>
+	<p>プロデルには、基本ライブラリやプラグインによって種類があらかじめ用意されています。</p>
 	<h3 id="construct_create">オブジェクト生成</h3>
-	<p>「作る」文を使うことで、同じ手順や変数を持つ種類を、インスタンスを作ることができます。</p>
+	<p><a href="create.htm">「作る」文</a>を使うと、指定した種類のオブジェクト(インスタンス)を作れます。</p>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h4 class="panel-title">書式　「作る」文 (宣言した種類の生成)</h4>
+			<h4 class="panel-title">書式　「作る」文 (オブジェクト生成)</h4>
 		</div>
 		<div class="panel-body">
-			<pre class="format"><span class="flag">《オブジェクト名》</span>という<span class="flag">《種類名》</span>を作る</pre></div></div>
-	<h3 id="construct_namedparam">「作る」文の初期値の指定 (名前付き引数)</h3>
-	<p>「作る」文で種類を生成すると同時に、生成後のオブジェクトの設定項目や種類変数の初期値を指定できます。</p>
-	<p>この文法によりプログラムの簡略表記が可能になります。<br>
-		なお、初期値が指定できるのは、すでに定義してある設定項目か種類変数のみとなります。</p>
+			<pre class="format"><strong>《オブジェクト名》</strong>という<strong>《種類名》</strong>を作る</pre></div></div>
+	<h3 id="construct_namedparam">「作る」文での初期値の指定</h3>
+	<p>「作る」文では、種類を生成すると同時に、生成後のオブジェクトの設定項目や種類変数の初期値を指定できます。</p>
+	<p>この文法によりプログラムの簡略表記が可能になります。なお、初期値が指定できるのは、すでに定義してある設定項目か種類変数のみとなります。</p>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">例文　「作る」文で種類変数の初期値を指定する</h4>
@@ -160,13 +154,13 @@
 		</div>
 	</div>
 <h3 id="objectaccess">オブジェクトアクセス式</h3>
-<p>オブジェクトアクセス式は、特定の種類のインスタンス(オブジェクト)の設定項目や種類変数にアクセスするための式です。</p>
+<p>オブジェクトアクセス式は、オブジェクトの設定項目や種類変数にアクセスするための式です。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><span class="flag">《オブジェクト名》</span>の<span class="flag">《設定項目/種類変数》</span></pre>
+		<pre class="format"><strong>《オブジェクト名》</strong>の<strong>《設定項目/種類変数》</strong></pre>
 	</div>
 </div>
 <div class="panel panel-default">
@@ -174,11 +168,26 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<pre class="code">メッセージは、「こんにちは」<b>
+<pre class="code">メッセージは「こんにちは」<b>
 メッセージのカタカナ</b>を表示する</pre>
 	</div>
 </div>
-<h2 id="construct_declear">種類を定義する</h2>
+
+        <h3 id="construct_procedurecall">手順の呼出し</h3>
+        <p>種類には、特定の動作を実行するための手順があります。手順は、<a href="procedurecall.html">手順呼出し文</a>で呼び出せます。</p>
+        <p>手順呼出し文の書き方は、手順により異なります。それぞれの種類の手順の説明や宣言内容を確認して、書いてください。        </p>
+        <h3 id="construct_event_assign">イベント手順の受け取り</h3>
+        <p>「作る」式で【変数名】を指定すると、生成されたオブジェクトのイベント手順と、同じ種類スコープにある手順が自動的に対応付けられます。</p>
+        <p>詳しくは<a href="create.htm">「作る」文の説明</a>をご覧ください。</p>
+        <h4>例文　ボタンのイベントが発生した時の手順を定義する</h4>
+<pre class="code">OKボタンというボタンを作る
+
+OKボタンがクリックされた時の手順
+&nbsp; //対応付けられます
+終わり</pre>
+
+        <hr>
+        <h2 id="construct_declear">種類を定義する</h2>
 <h3>種類の構成要素(メンバー)</h3>
 <p>種類には、次のような構成要素(メンバー)を定義できます。</p>
 <ul>
@@ -195,7 +204,7 @@
 	</div>
 	<div class="panel-body">
 
-<pre class="format"><span class="flag">《種類名》</span>とは
+<pre class="format"><strong>《種類名》</strong>とは
 　　<span class="rem">/* この中に種類の構成要素の定義を書きます */</span>
 終わり</pre>
 
@@ -203,15 +212,15 @@
 </div>
 <h3 id="construct_field">種類変数</h3>
 <p>種類の定義の上で、変数名を指定すると、その変数は種類に属する変数(フィールド)として定義されます。</p>
-<p>変数定義上の変数の宣言は、様々な表現がありますが、すべて「持つ」「持ち」のいずれかが含まれています。</p>
+<p>変数定義上の変数の宣言は、様々な表現があります。「持つ」文で宣言するには、次のように書きます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式　種類変数の宣言文(日本語表記)</h4>
 	</div>
 	<div class="panel-body">
 
-<pre class="format"><span class="flag">《変数名》</span>を持つ
-<span class="flag">《種類名》</span>である<span class="flag">《変数名》</span>を持つ</pre>
+<pre class="format"><strong>《変数名》</strong>を持つ
+<strong>《種類名》</strong>である<strong>《変数名》</strong>を持つ</pre>
 
 	</div>
 </div>
@@ -221,7 +230,7 @@
 	</div>
 	<div class="panel-body">
 <pre class="code">マイカーという車を作る
-マイカーの名前は、「カローラ」
+マイカーの名前は「カローラ」
 
 車とは
 　　<b>名前を持つ</b>
@@ -231,12 +240,12 @@
 <p>次のようにUML風に書くこともできます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h4 class="panel-title">例文　種類変数の宣言文(UML風表記)</h4>
+		<h4 class="panel-title">例文　種類変数の宣言文</h4>
 	</div>
 	<div class="panel-body">
 
-<pre class="format"><span class="flag">《修飾子》《変数名》</span>：<span class="flag">《種類名》</span>
-<span class="flag">《修飾子》《変数名》</span>：<span class="flag">《種類名》</span>=<span class="flag">《値》</span></pre>
+<pre class="format"><strong>《修飾子》《変数名》</strong>：<strong>《種類名》</strong>
+<strong>《修飾子》《変数名》</strong>：<strong>《種類名》</strong>=<strong>《値》</strong></pre>
 
 	</div>
 </div>
@@ -251,6 +260,23 @@
 　　<b>+名前：文字列＝「リーフ」</b>
 終わり</pre>
 	</div>
+</div>
+<h3 id="staticvar2">静的な種類変数</h3>
+<p>変数名に<a href="exclamated.htm">感嘆符“！”</a>を付けることで、静的な種類変数として扱われます。この変数の値は「作る」文でインスタンスを作った場合でも、プログラム全体で1つの固有の値だけを持つ変数になります。</p>
+<div class="panel panel-default">
+        <div class="panel-heading">
+                <h4 class="panel-title">例文</h4>
+        </div>
+        <div class="panel-body">
+                <pre class="code">Aというテストを作る
+Aの値は10
+Bというテストを作る
+Bの値を報告する
+
+テストとは
+	+値!
+終わり</pre>
+        </div>
 </div>
 <h3 id="construct_procedure">種類手順</h3>
 <p>種類宣言文に<a href="procedure.html#procedure_declear">手順宣言文</a>を書くことで、種類に属する手順を定義できます。</p>
@@ -271,23 +297,23 @@
 終わり</pre>
 	</div>
 </div>
-<h3 id="construct_property">設定項目</h3>
-<p>種類に、設定項目(プロパティ)を定義できます。　</p>
+<h3 id="construct_property">設定項目(プロパティ)</h3>
+<p>種類に、設定項目を定義できます。</p>
 <h4>取得する際の手順</h4>
-<p>種類の【設定項目名】に対し、設定項目が取得された際に実行する手順（ゲッター）を定義します。設定項目の結果は、「返す」文を書きます。</p>
-<pre class="format"><span class="flag">《設定項目名》</span>を取得する手順
- 　　<span class="flag">《内容》</span>を返す<span class="flag">
-</span>終わり</pre>
+<p>種類の【設定項目名】に対し、設定項目が取得された際に実行する手順（ゲッター）を定義します。設定項目の結果は「返す」文を書きます。</p>
+<pre class="format"><strong>《設定項目名》</strong>を取得する手順
+ 　　<strong>《内容》</strong>を返す
+終わり</pre>
 <h4>設定する際の手順</h4>
-<p>種類の【設定項目名】に対し、設定項目へ設定する際に実行する手順（セッター）を定義します。設定項目へ設定する値は、「設定値」変数に格納されます。</p>
-<pre class="format"><span class="flag">《設定項目名》</span>を設定する手順
+<p>種類の【設定項目名】に対し、設定項目へ設定する際に実行する手順（セッター）を定義します。設定項目へ設定する値は「設定値」変数に格納されます。</p>
+<pre class="format"><strong>《設定項目名》</strong>を設定する手順
  
 終わり</pre>
 <h3>取得と設定の手順をまとめる</h3>
 <p>設定項目を取得する手順と設定する手順を一つにまとめることもできます。</p>
-<pre class="format"><span class="flag">《設定項目名》</span>という属性
+<pre class="format"><strong>《設定項目名》</strong>という属性
  　取得する手順
- 　　<span class="flag">《内容》</span>を返す
+ 　　<strong>《内容》</strong>を返す
  　終わり
  
  　設定する手順
@@ -299,8 +325,8 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<pre class="code">利用者の年齢は、10
-利用者の年齢を表示
+<pre class="code">利用者の年齢は10
+利用者の年齢を表示する
  
 利用者とは
 　　歳を持つ
@@ -319,19 +345,27 @@
 終わり</pre>
 	</div>
 </div>
-<h3 id="construct_constructor">初期化するための特別な手順（コンストラクタ）</h3>
-<p>「作る」文によって、種類が作成される際に最初に実行される手順です。<br>
-多くの場合、変数の初期化などの処理を書きます。</p>
+<h3 id="construct_constructor">はじめの手順（コンストラクタ）</h3>
+<p>「作る」文によって、種類が作成される際に最初に実行される手順です。多くの場合、変数の初期化などの処理を書きます。</p>
 <pre class="format">はじめの手順
 
 終わり</pre>
-<p>コンストラクタにパラメータを渡す場合には、次のように（　）で囲ってカンマ区切りで指定します。</p>
-<p>コンストラクタには、実補語(助詞)を指定することはできません。</p>
+<p>「はじめの手順」で引数を渡す場合には、次のように(　)で囲って仮引数の変数名を指定します。複数指定する場合は、カンマ区切りで指定します。</p>
+<p>「はじめの手順」の引数には、変数のみ指定でき、助詞は指定できません。</p>
 <pre class="code">はじめ(名前,年齢)の手順
  
 終わり</pre>
-<p>継承した種類では、そのコンストラクタが呼び出される前に、継承元のコンストラクタが呼び出されます。</p>
-<p>継承元のコンストラクタに、パラメータがある場合は、次のように継承元のコンストラクタのパラメータを指定します。</p>
+<p>「はじめの手順」に引数を指定した場合は「作る」文で『種類名(引数)を作る』の形式で、引数に対応する値や式を指定します。</p>
+<pre class="code">たろうという利用者(「太郎」,15)を作る<br>「[たろうの名前] [たろうの年齢]」を表示する<br><br>利用者とは
+　　名前を持つ
+　　年齢を持つ<br>
+　　はじめ(名前,年齢)の手順
+　　　　自分の名前は、名前
+　　　　自分の年齢は、年齢
+　　終わり
+終わり</pre>
+<h4>継承した種類のコンストラクタ</h4>
+<p>継承した種類では、そのコンストラクタが呼び出される前に、継承元のコンストラクタが呼び出されます。継承元のコンストラクタに、パラメータがある場合は、次のように継承元のコンストラクタのパラメータを指定します。</p>
 <pre class="code">ユーザとは
 　　はじめ(名前)の手順
 
@@ -345,31 +379,18 @@
 　　終わり
 終わり</pre>
 <p>　</p>
-<h3 id="construct_destructor">解放するための特別な手順（デストラクタ）</h3>
-<p>種類が使用されず、削除される場合に実行する手順です。<br>
-種類が不要になった際に、関連する変数や機能を終了させる際に使用します。<br>
+<h3 id="construct_destructor">終わりの手順（デストラクタ）</h3>
+<p>種類が使用されず、削除される場合に実行する手順です。
+種類が不要になった際に、関連する変数や機能を終了させる際に使用します。
 プログラムの終了時や不要なメモリ領域が整理される際に自動的に実行されます。</p>
 <p>助詞は指定できません。</p>
 <pre class="format">終わりの手順
  
 終わり</pre>
-<p>　</p>
-<h2>イベント手順</h2>
-<h3 id="construct_event_assign">イベント手順を利用する</h3>
-<p>「作る」式で【変数名】を指定すると、生成されたオブジェクトのイベント手順と、同じ種類スコープにある手順が自動的に対応付けられます。<br>
-イベント手順に対応付けられる手順は、名前が次のような書式で指定された手順です。</p>
-<ul>
-	<li>《変数名》の《イベント手順名》時</li>
-	<li>《変数名》が《イベント手順名》時</li>
-</ul>
-<pre class="code">OKボタンというボタンを作る
 
-OKボタンがクリックされた時の手順
-&nbsp; //対応付けられます
-終わり</pre>
-<h3 id="construct_event_declear">イベント手順を定義する</h3>
+        <h3 id="construct_event_declear">イベント手順を定義する</h3>
 <p>種類宣言文の中で「発生する」文を使ってイベント手順を定義できます。</p>
-<p>イベント手順を定義すると、オブジェクトで発生したイベントをオブジェクト外部の手順で受け取ることができます。</p>
+<p>イベント手順を定義すると、オブジェクトで発生したイベントをオブジェクト外部の手順で受け取られます。</p>
 <pre class="code">マイカーという車を作る
 マイカーの到着した時の手順は、到着した
 マイカーが到着する
@@ -385,8 +406,8 @@ OKボタンがクリックされた時の手順
 　　【自分】が、到着する手順
 　　　　// イベント手順を発生させます
 　　　　情報という到着イベント情報を作る
-　　　　情報の緯度は、35.681382
-　　　　情報の経度は、139.766084
+　　　　情報の緯度は35.681382
+　　　　情報の経度は139.766084
 　　　　情報で到着した時を発生させる
 　　終わり
 終わり
@@ -397,32 +418,113 @@ OKボタンがクリックされた時の手順
 　　+緯度
 　　+経度
 終わり</pre>
-<br>
+
+        
+	<h3 id="staticvar">メンバーのアクセス範囲を限定する</h3>
+	<p>種類に属する変数または手順、設定項目は、他の種類からのアクセスを制限できます。</p>
+	<p>例えば、種類内部でのみの利用を想定した手順に対しては他の種類から実行できないように定義することや、種類所属する変数を他の種類からアクセスできないように定義できます。　</p>
+	<div class="panel panel-default">
+		<table class="table">
+            <thead>
+            <tr>
+				<th class="column">識別子</th>
+				<th class="column">意味</th>
+				<th class="column">説明</th>
+			</tr>
+			</thead>
+            <tbody>
+			<tr>
+				<th>+</th>
+				<th>公開</th>
+				<td>変数へ設定・取得できる範囲は制限されません。(Public)</td>
+			</tr>
+			<tr>
+				<th>-</th>
+				<th>非公開</th>
+				<td>同じ種類にある手順からのみ利用することが可能です。(Private)</td>
+			</tr>
+			<tr>
+				<th><strong>#</strong></th>
+				<th><strong>限定</strong></th>
+				<td>同じ種類にある手順や継承された種類にある手順からのみ利用することが可能です。(Protected)</td>
+			</tr>
+			<tr>
+				<th>~</th>
+				<th>内部限定</th>
+				<td>（現在は無効）同一プログラム内から利用することが可能です。(Internal)</td>
+			</tr>
+			<tr>
+				<th>(なし)</th>
+				<th>　</th>
+				<td>通常は「+」(公開)と同じ制限になります</td>
+			</tr>
+            </tbody>
+		</table>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">例文</h4>
+		</div>
+		<div class="panel-body">
+			<pre class="code">車の名前は「ベンツ」
+車の色は「黒」
+車の持ち主名は「カイル」
+車の名前を表示する
+
+車の暗証番号を表示する ーー見ることができない
+車が内部処理する ーー実行できない
+
+[車が「1212」で、持ち主]なら
+　　「この車の持ち主です」を表示する
+そうでなければ
+　　「この車の持ち主でありません」を表示する
+そして
+
+車とは
+　　+名前
+　　+色
+　　+持ち主名
+　　-暗証番号
+
+　　-自分が、内部処理する手順
+　　　　暗証番号は「1212」
+　　終わり
+
+　　自分が、［キー］で、持ち主かどうかを判定する手順
+　　　　内部処理する
+　　　　キーが、暗証番号なら
+　　　　　　○を返す
+　　　　そうでなければ
+　　　　　　×を返す
+　　　　そして
+　　終わり
+
+終わり</pre>
+	</div>
+</div>
+
+        <hr>
 <h2 id="construct_inherit">種類の継承</h2>
-<p>種類を「継承」することもできます。「継承」とは、すでに定義された種類の機能(手順や変数など)を引き継いで新しい種類を定義することです。</p>
-<p>継承を使うことで例えば、すでにある種類をそのままにした上で違う所だけ新しい種類に定義することや、定義する変数や手順が共通する部分だけをまず1つの種類にまとめて、その種類を継承して異なる部分を定義するといったことができます。</p>
+<p>種類は、他の種類から継承できます。「継承」とは、すでに定義された種類の機能(手順や変数など)を引き継いで新しい種類を定義することです。</p>
+<p>継承を使うことで例えば、すでにある種類をそのままにした上で違う所だけ新しい種類に定義することや、定義する変数や手順が共通する部分だけをまず1つの種類にまとめて、その種類を継承して異なる部分を定義することができます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><span class="flag">《もとの種類の名前》</span>を継承する
-<span class="flag">《もとの種類の名前》</span>を受け継ぐ		</pre>
+		<pre class="format"><strong>《もとの種類の名前》</strong>を継承する
+<strong>《もとの種類の名前》</strong>を受け継ぐ</pre>
 	</div>
 </div>
-<p>別の種類にある手順や変数を受け継いだ新しい種類を作ります。</p>
-<p>継承した種類に、さらに手順や変数を追加して定義できます。</p>
-<p>一つの種類で、受け継げる種類の数は、１つです。</p>
-<p>プラグインのオブジェクトから継承することもできます。<br>
-例えば、ウィンドウを引き継いて、それぞれの機能に合わせたウィンドウを種類として作ることができます。</p>
+<p>別の種類にある手順や変数を受け継いだ新しい種類を作ります。継承した種類に、さらに手順や変数を追加して定義できます。</p>
+<p>一つの種類で、受け継げる種類の数は、１つです。プラグインのオブジェクトから継承することもできます。</p>
+<p>例えば、ウィンドウを引き継いて、それぞれの機能に合わせたウィンドウを種類として作られます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<p>車を受け継いだ消防車という種類を作ります。<br>
-消防車には「サイレン」という手順だけが書かれていますが、<br>
-車を受け継いでいるため、「鳴る」という手順を呼び出すこともできます。</p>
+<p>車を受け継いだ消防車という種類を作ります。消防車には「サイレン」という手順だけが書かれていますが、車を受け継いでいるため「鳴る」という手順を呼び出すこともできます。</p>
 <pre class="code">消防車がサイレン
 消防車が鳴る
 
@@ -451,7 +553,7 @@ OKボタンがクリックされた時の手順
 　　+名前
 
 　　自分を命名する手順
-　　　　名前は、「テスト車」
+　　　　名前は「テスト車」
 　　終わり
 
 　　自分が、名前を表示する手順
@@ -465,20 +567,18 @@ OKボタンがクリックされた時の手順
 　　車を受け継ぐ
 
 　　自分を命名する手順
-　　　　名前は、「テスト車改」
+　　　　名前は「テスト車改」
 　　終わり
 終わり</pre>
 <h3 id="construct_overload">同じ手順名のオーバロード</h3>
-<p>通常は、ひとつの種類で、同じ名前の手順を定義することはできません。</p>
-<p>ただし、手順に必要な情報(引数と助詞)やその数が違えば、同じ名前の手順を複数定義できます。<br>
-  このような同じ名前の手順でも、必要な情報が違う手順を定義することを手順のオーバロードと呼びます。　</p>
+<p>通常は、ひとつの種類で、同じ名前の手順を定義できません。</p>
+<p>ただし、手順に必要な情報(引数と助詞)やその数が違えば、同じ名前の手順を複数定義できます。このような同じ名前の手順でも、必要な情報が違う手順を定義することを手順のオーバロードと呼びます。</p>
 <div class="panel panel-default">
   <div class="panel-heading">
 		<h4 class="panel-title">例文　手順のオーバロード</h4>
 	</div>
 	<div class="panel-body">
-<p>次の例では、犬種類に、引数の型が異なる「見る」手順が2つ定義されています。<br>
-この2つの手順は、「～を」で指定した対象に応じて実行する手順が変わります。</p>
+<p>次の例では、犬種類に、引数の型が異なる「見る」手順が2つ定義されています。この2つの手順は「～を」で指定した対象に応じて実行する手順が変わります。</p>
 <pre class="code">ぽちという犬を作る
 健太という家族を作る
 山田さんという知らない人を作る
@@ -486,11 +586,11 @@ OKボタンがクリックされた時の手順
 ぽちが山田さんを見る
 
 犬とは
-　　［自分］が、知らない人である［人］を、見た手順
+　　自分が、知らない人である［人］を、見る手順
 　　　　「ワン!ワン!ワン!」を表示する
 　　終わり
 
-　　［自分］が、家族である［人］を、見た手順
+　　自分が、家族である［人］を、見る手順
 　　　　「きゅうきゅん」を表示する
 　　終わり
 終わり
@@ -562,23 +662,19 @@ OKボタンがクリックされた時の手順
 	</div>
 </div>
 <h3 id="construct_abstract">抽象的な種類</h3>
-<p>抽象的な種類は、生成できない種類であることを指定します。<br>
-このキーワードが指定された種類にて定義された手順や変数は、継承した種類から利用できます。</p>
-<h3>実装なしの種類 (インタフェース)</h3>
-<p>実装なしの種類が手順宣言文の先頭のみでプログラム文本体を含まないことを指定します。<br>
-このキーワードが指定された種類は、インタフェースとして扱われ、具体的な本題がない型情報のみが宣言でます。<br>
-他の種類で実装することで使用します。</p>
+<p>抽象的な種類は、生成できない種類であることを指定します。このキーワードが指定された種類にて定義された手順や変数は、継承した種類から利用できます。</p>
+<h3 id="construct_interface">実装なしの種類 (インタフェース)</h3>
+<p>実装なしの種類が手順宣言文の先頭のみでプログラム文本体を含まないことを指定します。このキーワードが指定された種類は、インタフェースとして扱われ、具体的な本題がない型情報のみが宣言できます。他の種類で実装することで使用します。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<p>実装なし(インタフェース)の種類である「水中生物」種類と「生物」種類を定義して、<br>
-その両者を実装する「魚」種類を定義するプログラム例です。</p>
+<p>実装なし(インタフェース)の種類である「水中生物」種類と「生物」種類を定義して、その両者を実装する「魚」種類を定義するプログラム例です。</p>
 <pre class="code">【さかな:水中生物】
 さかなという魚を作る
 
-//次のように書いて、実装なし種類を生成することはできません
+//次のように書いて、実装なし種類を生成できません
 さかなという水中生物を作る 
 
 水中生物とは
@@ -609,11 +705,8 @@ OKボタンがクリックされた時の手順
 終わり</pre>
 </div>
 </div>
-<h3>単一種類 (シングルトン)</h3>
-<p>種類が単一種類(シングルトン)であることを指定します。<br>
-このキーワードが指定された種類は、プログラム中で1回だけ自動的にインスタンスが生成されます。<br>
-「作る」文によってインスタンスを作ることはできません。<br>
-オブジェクトに種類名を直接指定することでその種類の手順や変数を利用できます。</p>
+<h3 id="construct_singleton">単一種類 (シングルトン)</h3>
+<p>種類が単一種類(シングルトン)であることを指定します。このキーワードが指定された種類は、プログラム中で1回だけ自動的にインスタンスが生成されます。「作る」文によってインスタンスを作ることはできません。オブジェクトに種類名を直接指定することでその種類の手順や変数を利用できます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">例文</h4>
@@ -632,119 +725,33 @@ OKボタンがクリックされた時の手順
 	</div>
 </div>
 
-	<h3>静的変数</h3>
-<p>変数名に「！」を付けることで、静的変数として扱われます。この変数の値は、インスタンス化されず、プログラム中で固有の変数となります。</p>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">例文</h4>
-	</div>
-	<div class="panel-body">
-<pre class="code">Aというテストを作る
-Aの値は、10
-Bというテストを作る
-Bの値を報告する
+        <h3 id="object_compare">オブジェクトの種類を判定する</h3>
+    <p>条件判断文を使ってオブジェクト(インスタンス)の種類を判定するには、条件式として「である」後置子を指定します。</p>
+    <pre class="format"><strong>《式》</strong>が<strong>《種類名》</strong>である</pre>
+    <pre class="code">さかな<strong>が</strong>生物<strong>である</strong>なら「さかなは生物です」を表示する</pre>
 
-テストとは
-	+値!
-終わり</pre>
-	</div>
+        
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新        </div>
+    </div>
 </div>
-	<h3 id="construct_modifier">オブジェクトの種類を判定するには</h3>
-    <p>もし文を使ってオブジェクト(インスタンス)の種類を判定するには、条件式として「である」後置子を指定します。</p>
-    <pre class="format">《式》が《種類名》である</pre>
-    <pre class="code">もしさかな<strong>が</strong>生物<strong>である</strong>なら「さかなは生物です」を表示する</pre>
-    <p></p>
-	<h3>メンバーのアクセス範囲を限定する</h3>
-	<p>種類に属する変数または手順、設定項目は、他の種類からのアクセスを制限できます。</p>
-	<p>例えば、種類内部でのみの利用を想定した手順に対しては他の種類から実行できないように定義することや、種類所属する変数を他の種類からアクセスできないように定義できます。　</p>
-	<div class="panel panel-default">
-		<table class="table">
-			<tr>
-				<th class="column" style="white-space: nowrap">識別子</th>
-				<th class="column" style="white-space: nowrap">意味</th>
-				<th class="column">説明</th>
-			</tr>
-			<tr>
-				<th class="figure">+</th>
-				<th class="figure">公開</th>
-				<td>変数へ設定・取得できる範囲は制限されません。(Public)</td>
-			</tr>
-			<tr>
-				<th class="figure">-</th>
-				<th class="figure">非公開</th>
-				<td>同じ種類にある手順からのみ利用することが可能です。(Private)</td>
-			</tr>
-			<tr>
-				<th class="figure"><strong>#</strong></th>
-				<th class="figure"><strong>限定</strong></th>
-				<td>同じ種類にある手順や継承された種類にある手順からのみ利用することが可能です。(Protected)</td>
-			</tr>
-			<tr>
-				<th class="figure">~</th>
-				<th class="figure">内部限定</th>
-				<td>（現在は無効）同一プログラム内から利用することが可能です。(Internal)</td>
-			</tr>
-			<tr>
-				<th class="figure">(なし)</th>
-				<th class="figure">　</th>
-				<td>通常は「+」(公開)と同じ制限になります</td>
-			</tr>
-		</table>
-	</div>
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">例文</h4>
-		</div>
-		<div class="panel-body">
-			<pre class="code">車の名前は、「ベンツ」
-車の色は、「黒」
-車の持ち主名は、「カイル」
-車の名前を表示する
-
-車の暗証番号を表示する ーー見ることができない
-車が内部処理する ーー実行できない
-
-もし[車が「1212」で、持ち主]なら
-　　「この車の持ち主です」を表示する
-そうでなければ
-　　「この車の持ち主でありません」を表示する
-もし終わり
-
-車とは
-　　+名前
-　　+色
-　　+持ち主名
-　　-暗証番号
-
-　　-自分が、内部処理する手順
-　　　　暗証番号は、「1212」
-　　終わり
-
-　　自分が、［キー］で、持ち主かどうかを判定する手順
-　　　　内部処理する
-　　　　もしキーが、暗証番号なら
-　　　　　　○を返す
-　　　　でなければ
-　　　　　　×を返す
-　　　　もし終わり
-　　終わり
-
-終わり</pre>
-	</div>
-</div>
-
-	</div>
-	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="Office,PowerPoint"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -101,7 +100,8 @@
           <p>まずは、プロデルを使って簡単なWebアプリケーションを作ってみましょう。</p>
           <h3>1. Webアプリケーションの作成</h3>
           <p>「プロデルデザイナ」などで、次のようなプログラムを作成します。このプロデルファイルのファイル名を「test.rdr」とします。</p>
-          <pre class="code">応答として「&lt;!doctype html&gt;<br>&lt;html lang=&quot;ja&quot;&gt;
+          <pre class="code">応答として「&lt;!doctype html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
 &lt;head&gt;
 &nbsp;&nbsp;&nbsp; &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
 &lt;/head&gt;
@@ -135,7 +135,7 @@
           <hr>
           <h3 id="lookup1">POSTによる引数の取得</h3>
           <p>POST形式のフォームで送られたパラメータを取得する例です。</p>
-          <pre class="code">値は、［要求から「message」という引数を取得したもの］
+          <pre class="code">要求から「message」という引数を取得して、値とする
             
 応答として「&lt;!doctype html&gt;<br>&lt;html lang=&quot;ja&quot;&gt;
 &lt;head&gt;
@@ -152,16 +152,16 @@
 &lt;/html&gt;」を送る</pre>
           <h3 id="lookup2">Cookieの設定と取得</h3>
           <p>アクセスしたウェブブラウザにCookieを保存させたり、保存したCookieを取得したりする例です。</p>
-<pre class="code">カウントクッキーを、[要求から「count」というクッキーを取得したもの]とする
-もしカウントクッキーは、空なら
-	カウントは、1
+<pre class="code">要求から「count」というクッキーを取得して、カウントクッキーとする
+カウントクッキーが空なら
+	カウントは1
 	応答として「count」というクッキーへ(カウント+1)を設定する
 そうでなければ
 	カウントは、カウントクッキーの内容
-	カウントクッキーの有効期限を明日に変える
+	カウントクッキーの有効期限は、明日
 	カウントクッキーの内容は(カウント+1)
 	応答としてカウントクッキーを設定する
-もし終わり
+そして
   
 応答として「&lt;!doctype html&gt;<br>&lt;html lang=&quot;ja&quot;&gt;
 &lt;head&gt;
@@ -172,12 +172,12 @@
 &lt;/body&gt;<br>&lt;/html&gt;」を送る</pre>
           <h3 id="lookup3">セッション変数の設定と取得</h3>
           <p>セッション変数の例です。Cookieはウェブブラウザに保存されるのに対して、セッションはサーバ側に値が保存されるため、クライアントによって直接情報が変更される可能性がありません。</p>
-          <pre class="code">メッセージは、［要求から「message」という引数を取得したもの］
-もしメッセージが「」でないなら
+          <pre class="code">要求から「message」という引数を取得して、メッセージとする
+メッセージが「」でなければ
 	応答として「message」というセッション項目へメッセージを設定する
 そうでなければ
-	メッセージを、[要求から「message」というセッション項目を取得したもの]とする
-もし終わり
+	要求から「message」というセッション項目を取得して、メッセージとする
+そして
 
 応答として「&lt;!doctype html&gt;<br>&lt;html lang=&quot;ja&quot;&gt;
 &lt;head&gt;
@@ -192,14 +192,14 @@
 &lt;/body&gt;<br>&lt;/html&gt;<br>」を送る</pre>
 		</div><!--/samples-->
 		<p>&nbsp;</p>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div>
     </div>
 </div>
 <!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

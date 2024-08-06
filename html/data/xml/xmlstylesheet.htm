@@ -11,8 +11,8 @@
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「XMLスタイルシート」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「XMLスタイルシート」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -112,12 +112,12 @@
 		<div id="methods">
 			<h3>【自分】として【ファイル名】を<a name="開く">開く</a></h3>
 			<p>XMLファイルを読み込みます</p>
-			<pre class="code">データは「［プログラムの位置］くだもの.xml」をXMLとして開いたもの</pre>
+			<pre class="code">「［プログラムの位置］くだもの.xml」をXMLとして開いて、データとする</pre>
 			<p>&nbsp;</p>
 			<h3>【自分】で〈【XML】から〉<a name="作成する">作成する</a></h3>
 			<p>XML文章を作成します。<br>
 				“【XML】から”には、XML文字列を指定できます。</p>
-			<pre class="code">データは、XMLで「&lt;xml&gt;&lt;/xml&gt;」から作成したもの</pre>
+			<pre class="code">XMLで「&lt;xml&gt;&lt;/xml&gt;」から作成して、データとする</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
@@ -128,12 +128,14 @@
 					<th>　</th>
 					<th>説明</th>
 				</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="検証">検証</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>XMLに含まれるDTDまたはスキーマ定義を検証するかどうか</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -158,7 +160,7 @@ XML文章を作って、データとする
 果物へ「名前」という要素を作って名前とする
 名前の内容は「りんご」
 果物へ「値段」という要素を作って値段とする
-値段の内容は、80
+値段の内容は80
 値段へ「単位」という属性を作って単位とする
 単位の内容は「円」
 
@@ -171,17 +173,17 @@ XML文章を作って、データとする
 
 データは「［プログラムの位置］くだもの.xml」からXMLとして読み込んだもの
 
-果物一覧は、データから「果物一覧\果物」を取得したもの
+データから「果物一覧\果物」を取得して、果物一覧とする
 果物一覧を要素へそれぞれ繰り返す
 	「［要素の「名前」の内容］:［要素の「値段」の内容］［要素の「値段」の「単位」の内容］」を表示する
-繰り返し終わり</pre>
+そして</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

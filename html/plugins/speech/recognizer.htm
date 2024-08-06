@@ -14,7 +14,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「音声処理」プラグインの「音声認識」種類に含まれる手順や設定項目を使う方法">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -104,15 +103,22 @@
 	<h2 id="設定項目">設定項目</h2>
 	<div id="properties">
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th class="column">設定項目</th>
+				<th>型</th>
 				<th>　</th>
 				<th class="column">説明</th>
 			</tr>
+            </thead>
+            <tbody>
 			<tr>
-				<th><a name="元実体">元実体</a></th><th>□</th>
+				<th><a name="元実体">元実体</a></th>
+				<th>&nbsp;</th>
+				<th>□</th>
 				<td>ドットネット型のオブジェクトを返します。<br><small>System.Speech.Recognition.SpeechRecognitionEngineクラスインスタンスs</small></td>
 			</tr>
+            </tbody>
 		</table>
 		<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 	</div>
@@ -120,16 +126,20 @@
 	<p>次のイベント手順が使用できます。</p>
 	<div id="events">
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th>イベント名</th>
 				<th>説明</th>
 				<th>情報</th>
 			</tr>
+            </thead>
+            <tbody>
 			<tr>
 				<th><a name="認識した">認識した</a></th>
 				<td>認識した時</td>
-				<td></td>
+				<td>なし</td>
 			</tr>
+            </tbody>
 		</table>
 	</div>
 	<h2 id="サンプルコード">サンプルコード</h2>
@@ -152,34 +162,32 @@
 終わり
 
 初期化する手順
-    //この手順は自動生成されたものです
-    //編集しないでください
-    この内容を「メイン画面」に変える
-    このドラッグドロップを○に変える
+    この内容は「メイン画面」
+    このドラッグドロップは○
     この位置と大きさを｛15，15，300，300｝に変える
     この内部領域大きさを｛292，266｝に変える
     ボタン1というボタンを作る
-        その内容を「開始」に変える
-        その移動順を1に変える
+        その内容は「開始」
+        その移動順は1
         その位置と大きさを｛110,231,75,23｝に変える
     文章テキスト1という文章テキストを作る
-        その移動順を2に変える
+        その移動順は2
         その位置と大きさを｛12,12,268,201｝に変える
-	この設計スケール比率を｛96,96｝に変える
+	この設計スケール比率は｛96,96｝
 終わり
 
 認識した手順
-イベントの内容を文章テキスト1へ挿入する
+    イベントの内容を文章テキスト1へ挿入する
 終わり
 
 ボタン1がクリックされた時の手順
-もしボタン1の内容が「開始」なら
-Aを開始する
-ボタン1の内容は「終了」
-でなければ
-Aを終了する
-ボタン1の内容は「開始」
-もし終わり
+    ボタン1の内容が「開始」なら
+        Aを開始する
+        ボタン1の内容は「終了」
+    でなければ
+        Aを終了する
+        ボタン1の内容は「開始」
+    そして
 終わり
 
 終わり</pre>
@@ -191,7 +199,7 @@ Aを終了する
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

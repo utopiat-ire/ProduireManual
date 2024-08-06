@@ -11,8 +11,8 @@
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「子キャンバス」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「子キャンバス」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -157,85 +157,87 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="場所">場所</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメを表示する場所<br>
 						内容には、ウィンドウまたはピクチャーオブジェクトが指定できます。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="色">色</a></th>
 					<th>色</th>
 					<th>◎</th>
 					<td>カメが描く線の色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="下部色">下部色</a></th>
 					<th>色</th>
 					<th>□</th>
 					<td>カメがいる場所の直下の色を表します</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="太さ">太さ</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>カメが描く線の太さ</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="位置">位置</a></th>
-					<th>&nbsp;</th>
+					<th>座標</th>
 					<th>◎</th>
 					<td>カメがいる座標<br>
 						「場所」設定項目で指定されたオブジェクト内での座標です。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="大きさ">大きさ</a></th>
-					<th>&nbsp;</th>
+					<th>サイズ</th>
 					<th>◎</th>
 					<td>カメのアイコンの大きさ<br>
-						[幅]、[高さ]　の形式です。</td>
-					</tr>
+						[幅],[高さ]　の形式です。</td>
+                </tr>
 				<tr>
 					<th><a name="向き">向き</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメが進む方向<br>
 						画面上方向を0度として、時計回りです。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="速さ">速さ</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメが移動する速さ<br>
 						0が最速です。1、2、3になるに従って遅くなります。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="形">形</a></th>
 					<th>&nbsp;</th>
 					<th>○</th>
 					<td>カメのアイコンを指定します。<br>
 						画像オブジェクトまたはファイル名で指定します。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="背景色">背景色</a></th>
 					<th>色</th>
 					<th>◎</th>
 					<td>カメがいる場所の背景色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="模様">模様</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメが描く線の形<br>
 						標準、点線、破線、線と点、線と二点　が指定できます。</td>
-					</tr>
+                </tr>
 				<tr>
 				  <th><a name="はみ出し描画">はみ出し描画</a></th>
 				  <th>&nbsp;</th>
 				  <th>◎</th>
 				  <td>中の図形が子キャンバスの大きさをはみ出す場合にはみ出した部分を描画するかどうか</td>
 			  </tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="イベント手順">イベント手順</h2>
@@ -253,11 +255,11 @@
 	ウィンドウを継承する
 	はじめ手順
 		初期化する
-		選択図形は、無
-		処理中は、×
+		選択図形は無
+		処理中は×
 		キャンバス1に子キャンバスを作って子キャンバス1とする
 			その位置と大きさは｛10,10,100,100｝
-			その背景色を白に変える
+			その背景色は、白
 		子キャンバス1へ四角形を描く
 			その位置と大きさは｛10,10,80,50｝
 		子キャンバス1へ線を描く
@@ -266,12 +268,12 @@
 	終わり
 
 	初期化する手順
-		この内容を「子キャンバスの例」に変える
-		この位置と大きさを｛15，15，300，300｝に変える
+		この内容は「子キャンバスの例」
+		この位置と大きさは｛15，15，300，300｝
 		キャンバス1というキャンバスを作る
-			そのドッキング方向を全体に変える
-			その背景色を水色に変える
-		この設計スケール比率を｛96,96｝に変える
+			そのドッキング方向は、全体
+			その背景色は、水色
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	-移動中
@@ -281,32 +283,32 @@
 	-選択図形
 
 	キャンバス1がマウスのボタンが押された時の手順
-		選択図形は、キャンバス1から{イベントの横座標,イベントの縦座標}を選択したもの
-		もし選択図形が子キャンバス1でないなら　抜け出す
-		移動中は、○
+		キャンバス1から{イベントの横座標,イベントの縦座標}を選択して選択図形とする
+		選択図形が子キャンバス1でなければ　抜け出す
+		移動中は○
 		開始横座標は、選択図形の横-イベントの横座標
 		開始縦座標は、選択図形の縦-イベントの縦座標
 	終わり
 	キャンバス1のマウスカーソルが移動した時の手順
-		もし移動中でないなら、抜け出す
-		もし処理中なら、抜け出す
-		処理中は、○
+		移動中でなければ、抜け出す
+		処理中なら、抜け出す
+		処理中は○
 		選択図形の位置は｛イベントの横座標＋開始横座標,イベントの縦座標＋開始縦座標｝
 		キャンバス1を更新する
-		処理中は、×
+		処理中は×
 	終わり
 	キャンバス1がマウスのボタンが離された時の手順
-		移動中は、×
+		移動中は×
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

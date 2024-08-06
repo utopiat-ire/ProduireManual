@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="UDP/IP,ソケット通信">
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「UDPクライアント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -126,6 +125,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="ポート番号">ポート番号</a></th>
 					<th><a href="../primitive/number.htm">整数</a></th>
@@ -193,8 +193,9 @@
 					<th>真偽値</th>
 					<th>□</th>
 					<td>クライアントが接続状態であるかどうか</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 		<h2>実行される手順</h2>
@@ -204,12 +205,14 @@
 				<th>説明</th>
 				<th>情報</th>
 				</tr></thead>
+            <tbody>
 			<tr>
 				<th><a name="受信した">受信した</a></th>
 				<td>相手側からメッセージを受け取ったときに実行されます</td>
 				<td><a href="UDPclient_event.htm">あり</a></td>
 				</tr>
-			</table>
+            </tbody>
+        </table>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		  <div id="samples">
@@ -225,11 +228,11 @@
 		<p>またその際にサーバ側ファイヤウォールの設定でUDPIPポート5000番を受け取れるようにする必要があります。</p>
 	     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年10月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

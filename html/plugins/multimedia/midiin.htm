@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="MIDI">	<meta name="description" content="日本語プログラミング言語プロデルの「メディア再生制御」プラグインの「MIDI入力ポート」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -112,15 +111,17 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="MIDIデバイス一覧">MIDIデバイス一覧</a></th>
 					<th>文字列配列</th>
 					<th>○</th>
 					<td>コンピュータにインストールされているMIDIドライバ名の一覧を取得します</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2 id="イベント手順">イベント手順</h2>
 		<div id="events">
 			<table class="table table-bordered">
@@ -128,13 +129,15 @@
 					<th>イベント名</th>
 					<th>説明</th>
 					<th>情報</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="受け取った">受け取った</a></th>
 					<td>更新を検知した時に発生します</td>
 					<td>なし</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
@@ -152,9 +155,9 @@
 	終わり
 
 	初期化する手順
-		この実質大きさを｛284,262｝に変える
-		この内容を「メイン画面」に変える
-		この設計スケール比率を｛96,96｝に変える
+		この実質大きさは｛284,262｝
+		この内容は「メイン画面」
+		この設計スケール比率は｛96,96｝
 終わり
 
 	開いた時の手順
@@ -163,11 +166,11 @@
 		ポートを開始する
 	終わり
 	ポートが受け取った時の手順
-		もしこの時のパラメータ1が254なら、抜け出す
-		もしこの時のメッセージが0x3C3またはこの時のメッセージが0x3C4なら
+		この時のパラメータ1が254なら、抜け出す
+		この時のメッセージが0x3C3またはこの時のメッセージが0x3C4なら
 			「msg:[この時のメッセージ],param1:[この時のパラメータ1],param2:[この時のパラメータ2]」を報告する
 			「音:[0xFF00とこの時のパラメータ1の論理積を8だけ右シフト] 強さ:[0xFF0000とこの時のパラメータ1の論理積を16だけ右シフト]」を報告
-		もし終わり
+		そして
 	終わり
 
 	閉じた時の手順
@@ -179,11 +182,11 @@
 		<p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

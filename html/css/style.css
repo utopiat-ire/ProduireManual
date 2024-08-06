@@ -125,6 +125,7 @@ div#methods h4 {
 .format strong {
 	color: #8B0000;
 	font-weight: bold;
+    text-decoration: underline;
 }
 .format b {
 	color: #8B0000;
@@ -178,13 +179,13 @@ div.iconAbstract {
 	height: 22px;
 	float: left;
 }
-div#methodlist a {
+#methodlist a {
 	white-space: nowrap;
 }
-div#methods {
+#methods {
 	margin-bottom: 50px;
 }
-div#methods h3 {
+#methods h3 {
 	border-bottom: 1px solid #99CCFF;
 	padding: 4px;
 	background-color: #DFEDE3;
@@ -192,11 +193,18 @@ div#methods h3 {
 	vertical-align: top;
 	line-height: normal;
 }
-div#properties {
+#properties {
 	margin-bottom: 50px;
 }
-div#events {
+#events {
 	margin-bottom: 50px;
+}
+
+#properties th {
+	white-space: nowrap;
+}
+#events th {
+	white-space: nowrap;
 }
 
 /* アイコン */

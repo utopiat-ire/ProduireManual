@@ -11,8 +11,8 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「整数」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「整数」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -87,12 +87,12 @@
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../syntax/number.html">数値の式</a></li>
-          <li><a href="../syntax/expr.html#calc">算術式</a>	</li>
+          <li><a href="../syntax/expr.html#calc">算術式</a></li>
         </ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>整数は、-2,147,483,648～2,147,483,647の整数値を持てる32ビット長のデータ型です。</p>
+		<p>整数は、-2,147,483,648～2,147,483,647の整数値を表現できる32ビット長のデータ型です。</p>
 		<p>.NET Framework型のSystem.Int32に相当します。</p>
 		<h2>作成する方法</h2>
 		<p>整数値定数を指定すると作成できます。</p>
@@ -107,16 +107,38 @@
               <th>説明</th>
             </tr>
           </thead>
-          <tr>
-            <th><a href="string.htm">文字列</a></th>
-            <th>←</th>
-            <td>「内容」設定項目と同じ文字列</td>
-          </tr>
-          <tr>
-            <th>文字列</th>
-            <th>→</th>
-            <td>「内容」設定項目と同じ値で変換</td>
-          </tr>
+<tbody>
+<tr>
+    <th><a href="string.htm">文字列</a></th>
+    <th>へ</th>
+    <td>「内容」設定項目と同じ文字列</td>
+</tr>
+<tr>
+    <th>文字列</th>
+    <th>から</th>
+    <td>「内容」設定項目と同じ表記の値へ変換</td>
+</tr>
+<tr>
+    <th>長整数</th>
+    <th>へ</th>
+    <td>同じ数値へ変換</td>
+</tr>
+<tr>
+    <th>倍浮動小数</th>
+    <th>へ</th>
+    <td>同じ数値へ変換</td>
+</tr>
+<tr>
+    <th>固定小数</th>
+    <th>へ</th>
+    <td>同じ数値へ変換</td>
+</tr>
+<tr>
+    <th>(その他の数値)</th>
+    <th>へ</th>
+    <td>同じ数値へ変換。ただし格納できる値の範囲を超える場合はエラー</td>
+</tr>
+    </tbody>
         </table>
         <h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
@@ -131,11 +153,11 @@
         </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -11,8 +11,8 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「浮動小数」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「浮動小数」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -91,12 +91,12 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>浮動小数は、有効桁数が約7桁の32ビット長のデータ型です。</p>
+		<p>浮動小数は、有効桁数が約7桁の小数点値を表現できる32ビット長のデータ型です。</p>
 		<p>.NET Framework型のSystem.Singleに相当します。</p>
 		<h2>作成する方法</h2>
 		<p>数値定数を指定すると作成できます。</p>
 		<pre class="code">【値：浮動小数】は、11.28</pre>
-		<p>小数点を含む数字を指定すると、自動的に浮動小数として扱われます。</p>
+		<p>小数点を含む数字を指定すると、構文解析で自動的に浮動小数として扱われます。</p>
 		<h2 id="型変換">型変換</h2>
         <p>この種類は、次のデータ型へ自動的に変換できます。</p>
         <table class="table table-bordered">
@@ -107,33 +107,53 @@
               <th>説明</th>
             </tr>
           </thead>
+            <tbody>
           <tr>
             <th><a href="string.htm">文字列</a></th>
-            <th>←</th>
+            <th>へ</th>
             <td>「内容」設定項目と同じ文字列</td>
           </tr>
           <tr>
             <th>文字列</th>
-            <th>→</th>
-            <td>「内容」設定項目と同じ値で変換</td>
+            <th>から</th>
+            <td>「内容」設定項目と同じ表記の数値へ変換</td>
           </tr>
-        </table>
+          <tr>
+                  <th>倍浮動小数</th>
+                  <th>へ</th>
+                  <td>同じ数値へ変換</td>
+          </tr>
+          <tr>
+                  <th>固定小数</th>
+                  <th>へ</th>
+                  <td>同じ数値へ変換</td>
+          </tr>
+          <tr>
+                  <th>短整数</th>
+                  <th>へ</th>
+                  <td>同じ数値へ変換。ただし小数点以下は切り捨て</td>
+          </tr>
+          <tr>
+                  <th>(その他の数値)</th>
+                  <th>へ</th>
+                  <td>同じ数値へ変換。ただし格納できる数値の範囲を超える場合はエラー</td>
+          </tr>
+                </tbody>
+          </table>
         <h2 id="サンプルコード">サンプルコード</h2>
 		<p>浮動小数の四則演算の例です。</p>
-		
-		
 		<pre class="code">A=1128.1234
 (A+0.4321)を報告する
 (A-3.14)を報告する
 (A*2.5)を報告する
 (A/2.5)を報告する
-(A%500.1)を報告する</pre><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div>
+(A%500.1)を報告する</pre><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div>
 	</div>
 </div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「メニュー項目」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -103,13 +102,16 @@
 		<p>部品の<a href="control.htm">基本的な設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<tr>
+                <thead>
+                <tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr>
-				<tr>
+                </tr>
+				</thead>
+				<tbody>
+                <tr>
 					<th><a name="ショートカット">ショートカット</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
@@ -180,8 +182,9 @@
 					<th>真偽</th>
 					<th>◎</th>
 					<td>メニュー項目を有効にするかどうか</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+                </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="イベント手順">イベント手順</h2>
@@ -192,37 +195,39 @@
 					<th>説明</th>
 					<th>情報</th>
 					</tr></thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="クリックされた">クリックされた</a></th>
-					<td>クリックした時に発生します</td>
+					<td>クリックした時</td>
 					<td>なし</td>
 					</tr>
 				<tr>
 					<th><a name="チェックされた">チェックされた</a></th>
-					<td>チェックを設定または解除した時に発生します</td>
+					<td>チェック状態が変化した時。クリック操作によるものおよび設定項目の設定によって発生します。</td>
 					<td>なし</td>
 					</tr>
 				<tr>
 					<th><a name="選択された">選択された</a></th>
-					<td>項目をポイントした時に発生します</td>
+					<td>項目をポイントした時</td>
 					<td>なし</td>
 					</tr>
 				<tr>
 					<th><a name="開かれた">開かれた</a></th>
-					<td>子項目を開いた時に発生します</td>
+					<td>子項目を開いた時</td>
 					<td>なし</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+                </table>
 		</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<p><a href="menu.htm#サンプルコード">「メニュー」種類の例</a>または<a href="contextmenu.htm#サンプルコード">「コンテキストメニュー」種類の例</a>をご覧ください。</p>
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

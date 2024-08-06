@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ダイアログ">	<meta name="description" content="日本語プログラミング言語プロデルで数字や文字列を入力するための「入力画面」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -93,16 +92,19 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>ユーザに文字を入力してもらうための画面です。</p>
+		<p>ユーザに文字を入力してもらうための画面です。「聞く」手順では指定できない入力内容を設定できます。		</p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#入力する">入力する</a>　</div>
+		<div id="methodlist"><a href="#入力する">入力する</a>　<a href="#聞く">聞く</a>　</div>
 		<div id="methods">
 			<h3>【自分】で<a name="入力する">入力する</a>：文字列</h3>
 			<p>文字を入力するために入力画面を表示します。<br>
-				結果として、入力された文字の内容を表します。</p>
-			</div>
-		<p>　</p>
+				結果として、入力された文字列の内容を表します。</p>
+			<h3>【自分】で《【メッセージ】と》<a name="聞く">聞く</a>：文字列</h3>
+			<p>文字を入力するために入力画面を表示します。<br>
+結果として、入力された文字列の内容を表します。</p>
+		</div>
+　
 		<h2 id="設定項目">設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -112,7 +114,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="キャンセル">キャンセル</a></th>
 					<th>真偽</th>
@@ -147,13 +150,15 @@
 				  <th><a name="IME状態">IME状態</a></th>
 				  <th>列挙</th>
 				  <th>◎</th>
-				  <td>テキストボックスのIMEの初期状態</td>
+				  <td>テキストボックスのIMEの初期状態<br>
+				          ｛オフ，オン，カタカナ，半角カタカナ，ひらがな，半角英数字，全角英数字，なし，継承，無効｝<br>
+※Windows8以降ではOSの仕様上、反映されません。なし，継承，無効のいずれかのみ指定できます。</td>
 			  </tr>
 				<tr>
 				  <th><a name="空欄許可">空欄許可</a></th>
 				  <th>真偽</th>
 				  <th>◎</th>
-				  <td>空欄の時には、[OK]ボタンを無効とするかどうか</td>
+				  <td>空欄の時には[OK]ボタンを無効とするかどうか</td>
 			  </tr>
 				<tr>
 				  <th><a name="複数行">複数行</a></th>
@@ -161,27 +166,28 @@
 				  <th>◎</th>
 				  <td>複数行で入力できるようにするかどうか</td>
 			  </tr>
-				</table>
-			</div>
+                </tbody>
+            </table>
+        </div>
 　
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">文字を入力してもらう画面を表示する</h3>
 		<pre class="code">入力画面のタイトルは「ユーザ登録」
 入力画面で「お名前を入力してください」を入力させる
-もし入力画面のキャンセルなら
+入力画面のキャンセルなら
 	「キャンセルされました」を情報アイコンで表示する
-でなければ
+そうでなければ
 	「[入力画面の内容]さんが登録されました！」を情報アイコンで表示する
-もし終わり</pre>
+そして</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月15日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

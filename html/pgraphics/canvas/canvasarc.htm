@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="図形">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「円弧図形」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -100,16 +99,9 @@
 		<h2>作成する方法</h2>
 		<pre class="format">【キャンバス名】へ円を描く</pre>
 		<h2 id="手順">手順</h2>
-		<p><a href="canvasitembase.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<p><a href="canvasitembase.htm#手順">継承される手順</a>が使用できます。</p>
 		<div id="methodlist"></div>
-		<div id="methods">
-			<table class="table table-bordered">
-				<tr>
-					<th>手順名</th>
-					<th>助詞</th>
-			  </tr>
-		  </table>
-	  </div>
+		<div id="methods"></div>
 		<h2 id="設定項目">設定項目</h2>
 		<p><a href="canvasitembase.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -122,18 +114,20 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="開始角度">開始角度</a></th>
-					<th>浮動小数点</th>
-					<th>◎</th>
-					<td>扇の開き始めの角度</td>
-			  </tr>
-				<tr>
-					<th><a name="扇角度">扇角度</a></th>
-					<th>浮動小数点</th>
-					<th>◎</th>
-					<td>扇の角度</td>
-			  </tr>
+<tbody>
+<tr>
+    <th><a name="開始角度">開始角度</a></th>
+    <th>浮動小数点</th>
+    <th>◎</th>
+    <td>扇の開き始めの角度</td>
+</tr>
+<tr>
+    <th><a name="扇角度">扇角度</a></th>
+    <th>浮動小数点</th>
+    <th>◎</th>
+    <td>扇の角度</td>
+</tr>
+</tbody>
 		  </table>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -143,27 +137,27 @@
 <pre class="code">窓というウィンドウを作る
 	そのタイトルは「円弧を描く」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ円弧を描く
 	その位置と大きさは｛50,80,150,100｝
-	その線色をオレンジに変える
-	その開始角度を180に変える
-	その扇角度を45に変える
-	その太さを3に変える
-	その背景色を黄色に変える
+	その線色は、オレンジ
+	その開始角度は180
+	その扇角度は45
+	その太さは、
+	その背景色は、黄色
 キャンバス1を更新する
 待機する</pre>
 		</div><!--/samples-->
 		
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

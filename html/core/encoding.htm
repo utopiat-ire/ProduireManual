@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="UTF8,Unicode,Shift-JIS,エンコーディング">	<meta name="description" content="日本語プログラミング言語プロデルの「文字コード」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -82,7 +81,13 @@
     </div>
 	<div id="refsidebar" class="col-md-3">
 	<p><a href="../static.htm" class="label label-info">静的種類</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li>
+	          </ul>
+	  <h3>関連ページ</h3>
+        <ul>
+                <li><a href="textencoding.htm">文字エンコーディング</a></li>
+        </ul>
+        <p>&nbsp;</p>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
@@ -90,48 +95,48 @@
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#判別する">判別する</a>　<a href="#バイナリ配列へ変換する">バイナリ配列へ変換する</a>　<a href="#バイナリ配列から変換する">バイナリ配列から変換する</a>　</div>
 		<div id="methods">
-			<h3>【自分】を【バイナリ】から<a name="判別する">判別する</a></h3>
-			<ul>
-				<li>バイナリ：文字列</li>
-		  </ul>
+			<h3>【文字コード名:文字列】という【自分】を<a name="取得する">取得する</a>:<a href="textencoding.htm">文字エンコーディング</a></h3>
+			<p>指定したバイナリ配列から文字コードを判別します</p>
+			<pre class="code">「Shift-JIS」という文字コードを取得してシフトジスとする</pre>
+			<h3>【自分】を【バイナリ：バイナリ】から<a name="判別する">判別する</a>:<a href="textencoding.htm">文字エンコーディング</a></h3>
 			<p>指定したバイナリ配列から文字コードを判別します</p>
 			<pre class="code">バイナリは{227,129,147,227,130,147,227,129,171,227,129,161,227,129,175}
 文字コードをバイナリから判別して報告する</pre>
 			<h3>【自分】として【文字コード】で【内容】を<a name="バイナリ配列へ変換する">バイナリ配列へ変換する</a>：バイナリデータ</h3>
 			<p>文字列を指定した文字コードでエンコードしてバイナリ配列へ変換します</p>
-			<pre class="code"><span class="rem">//文字列をShift-JISでエンコードしたバイナリ配列を表します
-</span>結果バイナリは、内容を「Shift-JIS」という文字コードでバイナリ配列へ変換する
+			<pre class="code">//文字列をShift-JISでエンコードしたバイナリ配列を表します
+結果バイナリは、内容を「Shift-JIS」という文字コードでバイナリ配列へ変換する
 結果バイナリを報告する</pre>
 			<h3>【自分】として【文字コード】で【内容】を<a name="バイナリ配列から変換する">バイナリ配列から変換する</a></h3>
 			<p>バイナリ配列から指定した文字コードでデコードして文字列へ変換します</p>
-			<pre class="code"><span class="rem">//バイナリ配列をShift-JISでデコードして文字列を表します</span>
+			<pre class="code">//バイナリ配列をShift-JISでデコードして文字列を表します
 結果文字列は、結果バイナリを「Shift-JIS」という文字コードでバイナリ配列から変換する
 結果文字列を報告する</pre>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<p>文字列を指定した文字コードでエンコード/デコードします。</p>
-<pre class="code">内容は「こんにちは日本語プログラミング言語プロデルです。」
+<pre class="code">内容は「こんにちは！日本語プログラミング言語プロデルです。」
 
-<span class="rem">//文字列をShift-JISでエンコードしたバイナリ配列を表します
-</span>結果バイナリは、内容を「Shift-JIS」という文字コードでバイナリ配列へ変換する
+//文字列をShift-JISでエンコードしたバイナリ配列を表します
+結果バイナリは、内容を「Shift-JIS」という文字コードでバイナリ配列へ変換する
 結果バイナリを報告する
 
-<span class="rem">//バイナリ配列をShift-JISでデコードして文字列を表します</span>
+//バイナリ配列をShift-JISでデコードして文字列を表します
 結果文字列は、結果バイナリを「Shift-JIS」という文字コードでバイナリ配列から変換する
 結果文字列を報告する
 
-<span class="rem">//文字列をUTF-8でエンコードしたバイナリ配列を表します
-</span>結果バイナリは、内容を「UTF-8」という文字コードでバイナリ配列へ変換したもの
+//文字列をUTF-8でエンコードしたバイナリ配列を表します
+内容を「UTF-8」という文字コードでバイナリ配列へ変換して、結果バイナリとする
 
-<span class="rem">//バイナリ配列を判定します(UTF-8と判定されます)
-</span>文字コードを結果バイナリから判別して、報告する</pre>
+//バイナリ配列を判定します(UTF-8と判定されます)
+文字コードを結果バイナリから判別して、報告する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月17日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

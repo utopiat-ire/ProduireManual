@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="Access,データベース">	<meta name="description" content="日本語プログラミング言語プロデルで「データベース」プラグインの「Accessデータベース」種類に含まれる手順や設定項目を使う方法">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -126,12 +125,14 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="位置">位置</a></th>
 					<th>文字列</th>
 					<th>◎</th>
 					<td>MDBファイルがある位置(Locate)</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -141,7 +142,7 @@
 		<p>Access用のデータベース(MDB)に対して、テーブルを操作します。</p>
 		<pre class="code">AccessというAccessデータベースを作る
 
-Accessのデータソースを「database.mdb」に変える
+Accessのデータソースは「database.mdb」
 Accessへ接続する
 
 <i>// 必要な処理をここに書きます //</i>
@@ -151,31 +152,31 @@ Accessから切断する</pre>
 <pre class="code">Accessで「CREATE TABLE 楽曲 (曲名 VARCHAR(30),アーティスト VARCHAR(30), アルバムID INTEGER);」を実行する</pre>
 		<hr>
 		<p>Accessデータベースのテーブルからレコードを取得します。</p>
-<pre class="code">結果は、［Accessから「SELECT 曲名 FROM 楽曲」を取得したもの］
+<pre class="code">Accessから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>Accessデータベースのテーブルへレコードを挿入します。</p>
-<pre class="code">結果は、［「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をAccessで実行したもの］
+<pre class="code">「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をAccessで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが挿入されたことを確認します</i>
-結果は、［Accessから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得したもの］
+Accessから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得して、結果とする
 「追加後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>Accessデータベースのテーブルのレコードを更新します。</p>
-<pre class="code">結果は、［「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をAccessで実行したもの］
+<pre class="code">「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をAccessで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが更新されたことを確認します
-	</i>結果は、［Accessから「SELECT 曲名 FROM 楽曲」を取得したもの］
+	</i>Accessから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「更新後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>Accessデータベースのテーブルのレコードを<i>削除</i>します。</p>
-<pre class="code">結果は、［「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をAccessで実行したもの］
+<pre class="code">「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をAccessで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが削除されたことを確認します
-</i>結果は、［Accessから「SELECT 曲名 FROM 楽曲」を取得したもの］
+</i>Accessから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「削除後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>Accessデータベースからテーブルを削除します。</p>
@@ -183,11 +184,11 @@ Accessから切断する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

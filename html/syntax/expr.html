@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<meta charset="utf-8">
@@ -12,8 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -26,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->式<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +36,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,13 +69,19 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="syntax">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">言語仕様</a></li>
-	<li>式</li>
-</ul>
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="syntax">
+            <li><a href="../index.htm">プロデル</a></li>
+            <li><a href="index.htm">言語仕様</a></li>
+            <li>式</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>式</h4>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#const">定数</a></li><li><a href="#calc">算術式</a></li><li><a href="#round">値変換の誤差</a></li></ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
 <h1>式</h1>
 <p>プロデルの式は、次のように分類できます。</p>
 <div class="panel panel-default">
@@ -82,6 +90,8 @@
 			<li><a href="procedurecall.html#procedure_expr">手順呼出し式</a></li>
 			<li>関数式</li>
 			<li><a href="#calc">算術式</a></li>
+			<li>条件式</li>
+			<li>論理演算式</li>
 			<li><a href="variable.html">変数</a></li>
 			<li>定数</li>
 			<li><a href="block.html">ブロック式</a></li>
@@ -90,48 +100,31 @@
 	</div>
 </div>
 <hr>
-<h3>定数</h3>
+<h3 id="const">定数</h3>
 <p>定数は、次の通りです。</p>
 <ul>
 	<li><a href="number.html#number_const">数値定数</a></li>
 	<li><a href="string.html#string_const">文字列定数</a></li>
 	<li><a href="array.html#array_const">配列定数</a></li>
 	<li><a href="dictionary.html#dic_const">辞書定数</a></li>
-	<li><a href="#range">範囲定数</a></li>
+	<li><a href="../primitive/range.htm">範囲定数</a></li>
 </ul>
-<p>プロデルでは、以下のマニュアル中で《　》に指定する式として、定数や変数、計算式などがあります。</p>
-<h3 id="range">範囲定数</h3>
-<p>範囲定数は、値の範囲を表す範囲型を定義するための定数です。</p>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">書式</h4>
-	</div>
-	<div class="panel-body">
-		<pre class="format"><span class="flag">《開始値》</span>～<span class="flag">《終了値》</span></pre>
-	</div>
-</div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">例文</h4>
-	</div>
-	<div class="panel-body">
-		<pre class="code"><b>30～50</b>のすべての値についてそれぞれ繰り返す
-　　値を報告する
-繰り返し終わり</pre>
-	</div>
-</div>
+<p>プロデルでは、マニュアル中で《　》に指定する式として、定数や変数、計算式などを書けます。</p>
+<div class="panel panel-default"></div>
 <hr>
-<h2 id="calc">算術式</h2>
-<p>式には、値を取得できる手順や計算式があります。<br>
-これらは、［　］や（　）で囲むことで、明示的に式であることを表すことができます。</p>
-<h3>プロデルで計算できる演算</h3>
-<p>プロデルでは、四則演算など次の演算ができます。</p>
+<h3 id="calc">算術式</h3>
+<p>式には、値を取得できる手順や計算式があります。これらは［　］や（　）で囲むことで、明示的に式であることを表せます。</p>
+<h3>算術演算子</h3>
+<p>プロデルでは、四則演算など次の演算ができます。演算式の優先度は、<a href="priority.html">式の優先度</a>に記載しています。</p>
 <div class="panel panel-default">
-<table class="table table-striped">
+    <table class="table table-striped">
+        <thead>
 	<tr>
 		<th align="middle">記号</th>
 		<th align="middle">意味</th>
 	</tr>
+        </thead>
+        <tbody>
 	<tr>
 		<th align="middle">＋</th>
 		<td>足し算</td>
@@ -164,6 +157,7 @@
 		<td>整数の割り算の余り（剰余）<br>
 		<b>例</b>　１０％９　→　1</td>
 	</tr>
+        </tbody>
 </table>
 </div>
 <div class="panel panel-default">
@@ -175,18 +169,60 @@
 	</div>
 </div>
 
+<h3 id="round">値変換の誤差</h3>
+<p>コンピュータの性質上、計算する際にわずかな計算誤差が生まれることがあります。</p>
+<p>例えば、次のようなプログラムを実行すると、本来は0.1と表示されるべきところが0.1000061と誤った結果になります。</p>
+<pre class="code">295.5-295.4を表示する</pre>
+<p>この現象は、プロデルの不具合ではなく、小数点を含む数値をメモリ上に格納する際に起こります。このようにほとんど等しい小数点以下の計算を正確に行いたい時は、計算誤差が生じる可能性が少ない固定小数型の変数に代入してから計算すると、誤差を回避できます。</p>
+<pre class="code">【値1:固定小数】は295.5
+【値2:固定小数】は295.4
+値1-値2を表示する</pre>
+<p>なお、整数型ではこのような誤差は発生しないため、10倍した値を整数型として格納しておき、必要に応じて1/10にすると言った工夫も考えられます。</p>
+<div class="panel-heading">
+        <h3 class="panel-title">論理演算式 </h3>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th align="middle" class="items">日本語の表記</th>
+            <th align="middle" class="items">意味</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>AまたはB</td>
+            <td>Aが真またはBが真の時に真。それ以外は偽</td>
+        </tr>
+        <tr>
+            <td>AかつB</td>
+            <td>Aが真でかつBが真の時に真。それ以外は偽</td>
+        </tr>
+    </tbody>
+</table>
+<p>数式表記はありません。</p>
+<p>&nbsp;</p>
+
 		</div>
-	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年3月21日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+
+        </div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

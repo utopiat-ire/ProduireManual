@@ -12,7 +12,6 @@
 	<script src="js/html5shiv-3.7.3.min.js"></script>
 	<script src="js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -100,7 +99,7 @@
 				</tr>
 			<tr>
 				<td><span class="label label-default">抽象種類</span></td>
-				<td>手順と設定項目の定義のみ種類です。生成したり、そのまま利用できません。</td>
+				<td>生成することはできない種類です。定義されている手順と設定項目は、直接使えず、この種類を継承した種類を作ることで使えます。</td>
 				</tr>
 			<tr>
 				<td><a href="global.htm" class="label label-primary">広域種類</a></td>
@@ -124,37 +123,40 @@
 				<td><a href="convertables.htm">型変換</a>できる種類です。</td>
 			</tr>
 			<tr>
-				<td><span class="label label-warning convertable">名詞型手順</span></td>
-				<td>名前が名詞である手順(名詞型手順)です。送り仮名を付けたり活用したりできません。</td>
+				<td><span class="label label-warning convertable">名詞手順</span></td>
+				<td>名前が名詞である手順(名詞手順)です。送り仮名を付けたり活用したりできません。一般に実補語が　～の　となる手順で定義されます。</td>
 			</tr>
 			<tr>
 				<td><span class="label label-info">スミレ</span></td>
 				<td>スミレ畑で利用できる機能です。</td>
 			</tr>
 		</table>
-		<h2><a name="手順">手順の書式</a></h2>
-		<p>プロデルのプログラムに書くプログラム文の構造を表した部分は、オレンジ色の四角で囲まれます。<br>
-			書式に書かれた読点（“、”や“，”）は、省略できます。また読点をスペースに変えることもできます。</p>
+		<h2><a name="手順">プログラム文の構文や手順の書式</a></h2>
+		<p>プログラムの構文や書式は、オレンジ色の四角で囲まれたプログラムで説明しています。プログラム中に書かれた読点（“、”や“，”）は、省略できます。また読点をスペースに変えることもできます。</p>
 		<pre class="format">【メッセージ】を表示する</pre>
 		<h4>書式の意味</h4>
 		<table class="table table-bordered">
 			<tr>
 				<td>【　】</td>
-				<td>手順の実行に必要な情報(引数)を、書く部分であることを表します。<br>
+				<td>手順の実行に必要な情報(引数)を、書く箇所であることを表します。<br>
 					<br>
-					実際にプログラムに書くときには、この部分を式(文字列や数値、変数など)に置き換えて書きます。記号“【”と“】”をプログラムに書く必要は、ありません。</td>
+					プログラムとして書く際には、この箇所を式(文字列や数値、変数など)に置き換えて書きます。ここでの記号“【”と“】”は書く必要がありません。</td>
 				</tr>
 			<tr>
 				<td>【　：　】</td>
 				<td>引数が特定の種類であることを表します。</td>
 				</tr>
 			<tr>
+			        <td>→【　】</td>
+			        <td>引数が参照渡しされることを表します。指定した変数は手順を呼び出すことで値が変わることがあります。</td>
+			        </tr>
+			<tr>
 				<td>【自分】</td>
-				<td>手順を持つ種類（レシーバオブジェクト）を書く部分であることを表します。</td>
+				<td>手順を持つ種類（レシーバオブジェクト）を書く箇所であることを表します。プログラムとして書く際には、この箇所に変数名などを書きます。</td>
 				</tr>
 			<tr>
 				<td>〈　〉</td>
-				<td>省略可能である部分を表します。この記号で囲まれた部分は、プログラムへ書かなくてもエラーとなりません。必要な場合だけ書いてください。</td>
+				<td>省略可能である箇所を表します。この記号で囲まれた部分は、プログラムへ書かなくてもエラーとなりません。必要な場合にだけ書いてください。</td>
 				</tr>
 			<tr>
 				<td>｛A・B｝</td>
@@ -183,7 +185,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="js/jquery-1.12.4.min.js"></script>

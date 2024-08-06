@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ウェブブラウザ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="部品,コントロール部品">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ウェブブラウザ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -113,7 +113,7 @@
 			<p>ホームページ(ブラウザで起動時に表示されるページ)へ移動します。</p>
 			<pre class="code">メインブラウザをホームへ移動させる</pre>
 			<h3>【自分】を<a name="検索ページへ移動する">検索ページへ移動する</a></h3>
-			検索ページへ移動します。<pre class="code">メインブラウザを検索ページへ移動させる</pre>
+			<p>検索ページへ移動します。</p><pre class="code">メインブラウザを検索ページへ移動させる</pre>
 			<h3>【自分】を<a name="印刷する">印刷する</a></h3>
 			<p>表示しているページを印刷します</p>
 			<pre class="code">メインブラウザを印刷する</pre>
@@ -149,9 +149,9 @@
 			<h3>【自分】で【検索キーワード】を<a name="ヤフーする">ヤフーする</a></h3>
 			<p>Yahoo! Japanで検索を行います。</p>
 			<pre class="code">メインブラウザで「プロデル」をヤフーする</pre>
-			<h3>【自分】で【検索キーワード】を<a name="Bingる">Bingる</a></h3>
+			<h3>【自分】で【検索キーワード】を<a name="Bingする">Bingする</a></h3>
 			<p>Bing検索を行います。</p>
-			<pre class="code">メインブラウザで「プロデル」をBingる</pre>
+			<pre class="code">メインブラウザで「プロデル」をBingする</pre>
 			<h3>【自分】で【スクリプト名】を<a name="実行する">実行する</a>:値</h3>
 			<p>ページ中で指定したJavaScriptコードを実行します。</p>
 			<pre class="code">メインブラウザで「$('#target').click();」を実行する</pre>
@@ -169,6 +169,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="アドレス">アドレス</a></th>
 					<th>文字列</th>
@@ -278,7 +279,8 @@
 					<th>真偽値</th>
 					<th>□</th>
 					<td>前に表示したページがあるかどうか</td>
-					</tr>
+                </tr>
+                </tbody>    
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -291,6 +293,7 @@
 					<th>説明</th>
 					<th>情報</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="戻るボタンが変化した">戻るボタンが変化した</a></th>
 					<td>戻るボタンの状態が変化したときに実行されます</td>
@@ -345,7 +348,8 @@
 					<th><a name="別ウィンドウが表示される">別ウィンドウが表示される</a></th>
 					<td>新しいウィンドウが表示されるときに実行されます</td>
 					<td><a href="browser_event.htm#別ウィンドウが表示される">あり</a></td>
-					</tr>
+                </tr>
+                </tbody>    
 				</table>
 		</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -357,13 +361,13 @@
 	ウィンドウを継承する
 	はじめ手順
 		この内容を「ブラウザ部品のサンプル」に変える
-		このドラッグドロップを○に変える
+		このドラッグドロップは○
 		この位置と大きさを｛15,15,300,300｝に変える
 		メインブラウザというウェブブラウザを作る
 			その位置と大きさを｛0,0,292,266｝に変える
-			そのドッキング方向を「全体」に変える
+			そのドッキング方向は「全体」
 		メインブラウザを「https://www.yahoo.co.jp/」へ移動する
-		この設計スケール比率を｛96,96｝に変える
+		この設計スケール比率は｛96,96｝
 	終わり
 終わり</pre>
 		
@@ -378,8 +382,8 @@
         <h3 id="lookup2">表示されているアドレスを調べる</h3>
         <p>表示されているページのタイトルやアドレスは、ウェブブラウザの設定項目から取得できます。</p>
         <p>「アドレス」設定項目と「タイトル」設定項目で、現在表示しているページのアドレスとタイトルが取得できます。</p>
-        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のアドレス</pre>
-        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のタイトル</pre>
+        <pre class="format"><strong>《ウェブブラウザ名》</strong>のアドレス</pre>
+        <pre class="format"><strong>《ウェブブラウザ名》</strong>のタイトル</pre>
         <p>　</p>
         <h3 id="lookup3">状況を表示したい</h3>
         <p>ページを読み込み中の時などのブラウザの情報を取得することもできます。</p>
@@ -399,38 +403,38 @@
 終わり
 
 メインブラウザの表示が開始された時の手順
-	アドレス欄の内容を、情報の「アドレス」に変える
+	アドレス欄の内容は、情報の「アドレス」
 終わり
  			
 メインブラウザの戻るボタンが変化した時の手順
-	戻るボタンの有効を、メインブラウザの戻せるに変える
+	戻るボタンの有効は、メインブラウザの戻せる
 終わり
  			
 メインブラウザの進むボタンが変化した時の手順
-	進むボタンの有効を、メインブラウザの進めるに変える
+	進むボタンの有効は、メインブラウザの進める
 終わり
  			
 メインブラウザの進行状況が変化した時の手順
-	もし　情報の「取得済みバイト数」は、-1　でないなら
- 		ステータスの進捗状況の最大値を情報の「総バイト数」に変える
- 		ステータスの進捗状況の値を情報の「取得済みバイト数」に変える
- 	もし終わり
+	情報の「取得済みバイト数」が-1でなければ
+ 		ステータスの進捗状況の最大値は、情報の「総バイト数」
+ 		ステータスの進捗状況の値は、情報の「取得済みバイト数」
+ 	そして
 終わり</pre>
           </div>
         </div>
         <h3 id="lookup4">表示されているページの内容を調べる</h3>
         <p>表示されているページのHTMLソースと、文章だけの内容を取得できます。</p>
         <p>この設定項目を利用することで表示されているページの情報を保存することもできます。</p>
-        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のソース</pre>
-		<pre class="format"><span class="flag">《ウェブブラウザ名》</span>の内容</pre>
+        <pre class="format"><strong>《ウェブブラウザ名》</strong>のソース</pre>
+		<pre class="format"><strong>《ウェブブラウザ名》</strong>の内容</pre>
 	</div><!--/samples-->
     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

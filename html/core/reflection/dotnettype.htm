@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content=".NETクラス"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -91,14 +90,16 @@
             <ul>
               <li><a href="comtype.htm">COM型</a></li>
               <li>ドットネット型</li>
-            </ul>
+              </ul>
           </li>
+          <li><a href="../../syntax/import.htm">ネット型として利用する</a></li>
         </ul>
         <p>&nbsp;</p>
 	</div>
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>.NET Framework上のCLR型を表す型情報を持った種類です。プロデルから.NET Framework型のインスタンスを生成したりメソッドやプロパティにアクセスしたりできます。</p>
+		<p>引数に指定した値やオブジェクトは、<a href="../../primitive/fcltypes.htm">.NETネット型に対応する種類</a>に基づいて自動的に変換されます。</p>
 		<p>
 			<span class="warning">注意！</span>　この機能を利用するためには、C#またはVB.NET言語など他のプログラミング言語に加えて、.NET 
 			Frameworkのクラスライブラリの知識が必要になります。この機能を利用する場合は、.NETクラスライブラリのドキュメントをご参照ください。</p>
@@ -107,6 +108,7 @@
 		<p>【型名】には、名前空間を含めた完全な名前で指定します。</p>
 		<p>なお、次のように直接インスタンスを作ることもできます。</p>
 		<pre class="format">【オブジェクト名】という&quot;【型名】&quot;のネット型（〈【引数一覧】〉）を作る</pre>
+		<p>特定のアセンブリを参照する場合には<a href="../../syntax/import.htm">「ネット型として利用する」文</a>で事前にアセンブリを参照しておきます。</p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#インスタンスを作る">インスタンスを作る</a>　<a href="#配列を作る">配列を作る</a>　<a href="#取得する">取得する</a>　<a href="#設定する">設定する</a>　<a href="#呼び出す">呼び出す</a>　</div>
@@ -135,7 +137,8 @@ String型から「Concat」を{「A」,「B」}で呼び出す
 					<th>設定項目</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th>管理型</th>
 					<th>□</th>
@@ -150,8 +153,9 @@ String型から「Concat」を{「A」,「B」}で呼び出す
 					<th>名前</th>
 					<th>□</th>
 					<td>クラス名を表します</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -163,8 +167,12 @@ StringBuilder型からインスタンスを作ってbuilderとする
 builder:Append（「こんにちは」）
 builder:Append（「さようなら」）
 「[builderのLength]:[builder:ToString()]」を表示する</pre>
-		<p>なお、「ドットネット型」を作らずに、「～のネット型」式を使うことで直接StringBuilderクラスのインスタンスを生成できます。</p>
-<pre class="code">builderという&quot;System.Text.StringBuilder&quot;のネット型(「あいさつ:」)を作る<br>builder:Append（「こんにちは」）<br>builder:Append（「さようなら」）<br>「[builderのLength]:[builder:ToString()]」を表示する</pre>
+		<p>なお「ドットネット型」を作らずに「～のネット型」式を使うことで直接StringBuilderクラスのインスタンスを生成できます。</p>
+<pre class="code">builderという&quot;System.Text.StringBuilder&quot;のネット型(「あいさつ:」)を作る
+
+builder:Append（「こんにちは」）
+builder:Append（「さようなら」）
+「[builderのLength]:[builder:ToString()]」を表示する</pre>
 <h3 id="sample2">Stopwatchクラスのインスタンスを生成する</h3>
 		<p>Stopwatchクラスのインスタンスを生成します。</p>
 <pre class="code">/* ストップウォッチ */
@@ -174,7 +182,7 @@ builder:Append（「さようなら」）
 s = 0
 10000回、繰り返す
 	s = s + 1
-繰り返し終わり
+そして
 
 時計を停止する。
 (時計の時間取得する)を表示する。
@@ -202,11 +210,11 @@ s = 0
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年12月9日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

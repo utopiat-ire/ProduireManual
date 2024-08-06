@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>動詞 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->動詞<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>動詞</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1>動詞</h1>
+
+<p>プロデルの「動詞」は、プログラム文を構成する要素のひとつです。</p>
+<p>多くの場合、手順名は動詞となるか、形式補語と組み合わせて手順名となります。プロデルで定義された動詞を含む手順名の一覧は、<a href="../verbs/index.html">手順一覧</a>をご参照ください。</p>
+<p>また、動詞と<a href="particle.htm">助詞</a>は深い関係があります。すべての助詞は、同じ文の動詞に係り、対応付けられて解釈されます。</p>
+<h2>予約動詞</h2>
+<p>予約動詞とは、予約語として意味のある動詞です。「繰り返す」文や「継承する」文のような動詞は予約された動詞です。これらの動詞は構文としての意味が優先されます。そのため同じ予約動詞、助詞を持つ手順は、定義できない場合があります。</p>
+<table class="table table-bordered">
+        <tbody>
+                <tr>
+                        <td><a href="forloop.html">繰り返す</a></td>
+                        <td><a href="foreach.htm">それぞれ繰り返す</a></td>
+                        <td><a href="create.htm">作る</a></td>
+                        <td>貼る</td>
+                </tr>
+                <tr>
+                        <td> <a href="import.htm">利用</a></td>
+                        <td><a href="refer.htm">参照</a></td>
+                        <td>持つ</td>
+                        <td>追加</td>
+                </tr>
+                <tr>
+                        <td> 継承</td>
+                        <td><a href="trycatch.html">発生</a></td>
+                        <td>実装</td>
+                        <td><a href="procedure.html">返す</a></td>
+                </tr>
+                <tr>
+                        <td>抜ける</td>
+                        <td>抜け出す</td>
+                        <td><a href="forloop.html">続ける</a></td>
+                        <td>宣言する</td>
+                </tr>
+                <tr>
+                        <td><a href="switch.html">分岐</a></td>
+                        <td>変える</td>
+                        <td><a href="variable.html#assign">代入する</a></td>
+                        <td><a href="variable.html#assign">入れる</a></td>
+                </tr>
+                <tr>
+                        <td>対応する</td>
+                        <td>終わり</td>
+                        <td>繰り返し終わり</td>
+                        <td>もし終わり</td>
+                </tr>
+                <tr>
+                        <td>監視終わり</td>
+                        <td>分岐終わり</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                </tr>
+        </tbody>
+</table>
+<h2>比較動詞</h2>
+<p>比較動詞とは、数値などの比較をする役割を持つ動詞です。</p>
+<p><a href="compareverb.html">比較動詞について</a></p>
+<table class="table table-bordered">
+        <tbody>
+                <tr>
+                        <td>小さい</td>
+                        <td>大きい</td>
+                        <td>等しい</td>
+                        <td>満たす</td>
+                </tr>
+                <tr>
+                        <td>超える</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                </tr>
+        </tbody>
+</table>
+<h2>動詞の活用</h2>
+<p>手順が持つ動詞は、次の表のように活用して表記できます。表記する活用によって文法的な役割があるものがあります。</p>
+<table class="table table-bordered">
+        <tbody>
+                <tr>
+                        <th scope="col">活用形</th>
+                        <th scope="col">意味</th>
+                        <th scope="col">例</th>
+                </tr>
+                <tr>
+                        <th scope="row">終止形</th>
+                        <td>手順呼出し文で使う標準的な表記です。</td>
+                        <td>起動する<br>
+                                開く<br>
+                                        変える</td>
+                </tr>
+                <tr>
+                        <th scope="row">省略</th>
+                        <td>送り仮名を完全に省略した語尾です。プログラムとして一番短い表記です。</td>
+                        <td>起動<br>
+                                開<br>
+                                        変</td>
+                </tr>
+                <tr>
+                        <th scope="row">名詞形</th>
+                        <td>式として手順を呼び出す時に適した活用表現です。</td>
+                        <td>起動したもの<br>
+                                開いたもの</td>
+                </tr>
+                <tr>
+                        <th scope="row">否定形</th>
+                        <td>戻り値が真偽値の場合、結果が逆転します。(真が偽となり、偽が真となります)</td>
+                        <td>起動しない<br>
+                                開けない</td>
+                </tr>
+                <tr>
+                        <th scope="row">仮定形</th>
+                        <td><p><a href="if.html">条件判断文</a>の「なら」の役割を兼ねる活用表現です。</p>
+                                <p>&nbsp;</p></td>
+                        <td>起動したら<br>
+                                起動したならば</td>
+                </tr>
+                <tr>
+                        <th scope="row">否定と仮定形</th>
+                        <td>条件判断文で、否定と「なら」の役割を兼ねる活用表現です。</td>
+                        <td>起動しなければ<br>
+                                開けなければ</td>
+                </tr>
+                <tr>
+                        <th scope="row">連用形</th>
+                        <td><a href="fukubun.htm">複文</a>を表す表現になります。別のプログラム文を書き連ねられます。</td>
+                        <td>起動して<br>
+                                開いて</td>
+                </tr>
+                <tr>
+                        <th scope="row">命令形</th>
+                        <td>命令口調の語尾です。文法上の意味はありません。</td>
+                        <td>起動しろ<br>
+                                開け<br>
+                                        変えろ<br>
+                                        起動せよ</td>
+                </tr>
+                <tr>
+                        <th scope="row">使役</th>
+                        <td>指示するような口語の語尾です。文法上の意味はありません。</td>
+                        <td>起動させる<br>
+                                変えさせる</td>
+                </tr>
+        </tbody>
+</table>
+<p>&nbsp;</p>
+	</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

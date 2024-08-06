@@ -12,7 +12,6 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「MSIL生成機能」プラグインの「仮想機械プロパティ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -88,10 +87,14 @@
 		  <h2 id="head">概要</h2>
 		  <p>仮想機械クラスに属するプロパティを表現します。</p>
 			<h2 id="手順">手順</h2>
-			<div id="methodlist"></div>
-			<div id="methods">
-				
-			</div>
+            <div id="methodlist"><a href="#ゲッタを設定する">ゲッタを設定する</a>　<a href="#セッタとして設定する">セッタとして設定する</a>　</div>
+            <div id="methods">
+                <h3>【自分】へ【メソッド:<a href="vmethod.htm">仮想機械メソッド</a>】を<a name="ゲッタを設定する">ゲッタを設定する</a></h3>
+                <p>プロパティのゲッターとなるメソッドを設定します。</p>
+                <h3>【自分】へ【メソッド:<a href="vmethod.htm">仮想機械メソッド</a>】を<a name="セッタとして設定する">セッタとして設定する</a></h3>
+                <p>プロパティのセッターとなるメソッドを設定します。</p>
+            </div>
+			
 			<h2 id="設定項目">設定項目</h2>
 			<div id="properties">
 				<table class="table table-bordered">
@@ -103,12 +106,20 @@
 							<th>説明</th>
 						</tr>
 					</thead>
+                    <tbody>
 					<tr>
 						<th><a name="名前">名前</a></th>
 						<th>文字列</th>
-						<th>◎</th>
+						<th>○</th>
 						<td>プロパティ名</td>
 					</tr>
+					<tr>
+                        <th>型</th>
+                        <th><a href="../../core/reflection/dotnettype.htm">ネット型</a></th>
+                        <th>○</th>
+                        <td>プロパティのデータ型</td>
+                    </tr>
+                    </tbody>
 				</table>
 			</div>
 			
@@ -126,11 +137,11 @@
 			<p>　</p>
 		</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

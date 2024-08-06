@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="図形">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「線図形」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -117,33 +116,35 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="始点">始点</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>線の始点</td>
-			  </tr>
-				<tr>
-					<th><a name="終点">終点</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>線の終点</td>
-			  </tr>
-				<tr>
-					<th>始点形状</th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>始点の形状<br>
-						{矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
-			  </tr>
-				<tr>
-					<th>終点形状</th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>終点の形状<br>
-						{矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
-			  </tr>
-		  </table>
+<tbody>
+<tr>
+    <th><a name="始点">始点</a></th>
+    <th>&nbsp;</th>
+    <th>◎</th>
+    <td>線の始点</td>
+</tr>
+<tr>
+    <th><a name="終点">終点</a></th>
+    <th>&nbsp;</th>
+    <th>◎</th>
+    <td>線の終点</td>
+</tr>
+<tr>
+    <th>始点形状</th>
+    <th>列挙体</th>
+    <th>◎</th>
+    <td>始点の形状<br>
+        {矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
+</tr>
+<tr>
+    <th>終点形状</th>
+    <th>列挙体</th>
+    <th>◎</th>
+    <td>終点の形状<br>
+        {矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
+</tr>
+</tbody>
+          </table>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<div id="samples">
@@ -152,13 +153,13 @@
 <pre class="code">窓というウィンドウを作る
 	そのタイトルは「直線を描く」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 キャンバス1へ線を描く
 	その始点は｛20,20｝
 	その終点は｛120,120｝
-	その線色を赤に変える
-	その太さを3に変える
+	その線色は、赤
+	その太さはひ3
 キャンバス1を更新する
 待機する</pre>
 		<h3 id="sample2">マウスで直線を描く</h3>
@@ -172,43 +173,43 @@
 		初期化する
 	終わり
 	初期化する手順
-		この内容を「マウスで直線を描く」に変える
-		このドラッグドロップを○に変える
+		この内容は「マウスで直線を描く」
+		このドラッグドロップは○
 		キャンバス1というキャンバスを作る
-			その位置と大きさを｛0,0,284,261｝に変える
-			そのドッキング方向を「全体」に変える
+			その位置と大きさは｛0,0,284,261｝
+			そのドッキング方向は「全体」
 	終わり
 
 	-作業線
 	キャンバス1のマウスのボタンが押された時の手順
 		キャンバス1へ線を描いて作業線とする
 			その始点は、この時の座標
-			その線色を赤に変える
-			その太さを3に変える
+			その線色は、赤
+			その太さは3
 		キャンバス1を再描画する
 	終わり
 
 	キャンバス1のマウスカーソルが移動した時の手順
-		もし作業線が無なら抜け出す
+		作業線が無なら抜け出す
 		作業線の終点は、この時の座標
 		キャンバス1を再描画する
 	終わり
 
 	キャンバス1のマウスのボタンが離された時の手順
-		もし作業線が無なら抜け出す
+		作業線が無なら抜け出す
 		作業線の終点は、この時の座標
-		作業線は、無
+		作業線は無
 		キャンバス1を再描画する
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

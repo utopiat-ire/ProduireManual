@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「リストボックス」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -150,6 +149,7 @@
 					<th>　</th>
 					<th>説明</th>
 				</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="カスタムタブ表示">カスタムタブ表示</a></th>
 					<th>整数</th>
@@ -278,6 +278,7 @@
 					<td>枠の形<br>
 						｛なし,線｝</td>
 				</tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -292,16 +293,19 @@
 						<th>情報</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="選択された">選択された</a></th>
 					<td>リストボックスの項目が選択されたとき</td>
 					<td>なし</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
-<h3 id="sample1">リストボックスを作る</h3>		<p>リストボックスにテキストを追加したり削除したりする例です。</p>
+<h3 id="sample1">リストボックスを作る</h3>
+    <p>リストボックスにテキストを追加したり削除したりする例です。</p>
 <pre class="code">メイン画面を表示する
 待機する
 
@@ -312,17 +316,17 @@
 		内容を「リストボックスのサンプル」に変える
 		
 		リスト１としてリストボックスを作る
-			その位置と大きさを｛30,10,130,100｝に変える
+			その位置と大きさは｛30,10,130,100｝
 		
 		項目テキストとしてテキストを作る
-			その位置と大きさを｛30,120,130,30｝に変える
+			その位置と大きさは｛30,120,130,30｝
 		
 		追加ボタンというボタンを作る
-			その位置と大きさを｛10,150,80,26｝に変える
+			その位置と大きさは｛10,150,80,26｝
 			その内容を「追加」に変える
 		削除ボタンというボタンを作る
-			その位置と大きさを｛100,150,80,26｝に変える
-			その内容を「削除」に変える
+			その位置と大きさは｛100,150,80,26｝
+			その内容は「削除」
 		
 		リスト１に「Yahoo!」を加える
 		リスト１に「Google」を加える
@@ -339,19 +343,19 @@
 	終わり
 	
 	削除ボタンがクリックされた時の手順
-		もしリスト１の番号が0でないなら
+		リスト１の番号が0でなければ
 			リスト１の（リスト１の番号）番目を削除する
-		もし終わり
+		そして
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

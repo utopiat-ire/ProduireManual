@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="システム情報取得">	<meta name="description" content="日本語プログラミング言語プロデルの「システム情報取得」プラグインの「CPU」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -87,7 +86,7 @@
 		<h3>利用プラグイン</h3>
 		<p><a href="index.htm">システム情報取得</a></p>
 	</div>
-	<div class="col-sm-8">
+	<div id="refcontent" class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>プロセッサに関する情報を取得するための種類です。</p>
 		<h2 id="設定項目">設定項目</h2>
@@ -98,7 +97,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="使用率">使用率</a></th>
 					<th>数値</th>
@@ -128,10 +128,11 @@
 					<th>文字列</th>
 					<th>◎</th>
 					<td>CPUの名称を表します</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
         <div id="samples">
           <h3 id="sample1">CPUの使用率と固有情報を取得</h3>
@@ -148,7 +149,7 @@
 		この実質大きさを｛312,213｝へ変える
 		このタイトルを「CPU情報」へ変える
 		この種類を固定に変える
-		この最大化ボタンを×に変える
+		この最大化ボタンは×
 		文章テキスト１という文章テキストを作る
 			その位置と大きさを｛50,70,210,100｝へ変える
 		終了ボタンというボタンを作る
@@ -161,29 +162,29 @@
 			その文字色を「&amp;h00FF00」へ変える
 			その背景色を黒へ変える
 			その文字サイズを20.25へ変える
-		この設計スケール比率を｛96,96｝に変える
+		この設計スケール比率は｛96,96｝
 		結果内容（１）は、CPUの名前
 		結果内容（２）は、CPUの識別名
 		結果内容（３）は、CPUのクロック
 		結果内容（４）は、CPUのメーカ
-		文章テキスト１の内容は、結果内容を改行で繋げたもの
+		結果内容を改行で繋げて、文章テキスト１の内容を変える
 	終わり
 
 	［自分］を、監視開始する手順
 		繰り返す
-			ラベル１の内容を「［CPUの使用率を四捨五入したもの］%」に変える
+			ラベル１の内容は「［CPUの使用率を四捨五入したもの］%」
 			1秒待つ
-		繰り返し終わり
+		そして
 	終わり
 終わり</pre>
         </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

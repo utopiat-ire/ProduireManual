@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="メール機能">	<meta name="description" content="日本語プログラミング言語プロデルで「メール機能」プラグインの「送信サーバ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -105,12 +104,15 @@
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
+                <thead>
 				<tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr>
+                </tr>
+                </thead>
+                <tbody>
 				<tr>
 					<th><a name="サーバ名">サーバ名</a></th>
 					<th>文字列</th>
@@ -149,6 +151,12 @@
 					<td>認証が必要な送信サーバがどうか</td>
 					</tr>
 				<tr>
+				        <th><a name="PopBeforeSMTP">PopBeforeSMTP</a></th>
+				        <th>真偽値</th>
+				        <th>◎</th>
+				        <td>PopBeforeSMTPに対応したSMTPサーバで送信するかどうか。この場合<a href="account.htm">「アカウント」種類</a>の「送る」手順で送信する必要があります。</td>
+				        </tr>
+				<tr>
 					<th><a name="暗号化方式">暗号化方式</a></th>
 					<th>列挙</th>
 					<th>◎</th>
@@ -172,7 +180,8 @@
 					<th>文字列</th>
 					<th>◎</th>
 					<td>メールヘッダのX-Mailerに記載するメーラの名称</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
@@ -180,11 +189,11 @@
 		<p><a href="sendmail.htm#サンプルコード">「送信メール」種類</a>の例をご覧ください。<br></p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年5月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月12日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

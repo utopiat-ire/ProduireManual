@@ -12,9 +12,7 @@
 	<script src="js/html5shiv-3.7.3.min.js"></script>
 	<script src="js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-    <link rel="canonical" href="https://produ.irelang.jp/docs/index.htm">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -79,16 +77,18 @@
 <div class="col-md-offset-2 col-md-8">
 <h1>プロデル マニュアル目次</h1>
 <p>プロデルの公式マニュアルへようこそ！<br>
-  このマニュアルでは、プロデルの文法や、利用できる機能や部品、手順、設定項目について、たくさんのサンプルコードと一緒に詳しくご説明します。プロデルが初めての方は、まずは<a href="https://produ.irelang.jp/blog/produirefirststep/">「プロデルで始める日本語プログラミング言語入門」</a>をお読みください。</p>
-<form action="https://produ.irelang.jp/docs/search/msearch.cgi" method="GET" accept-charset="utf-8" name="msearch" target="_top">
-<div class="input-group">
-	<input type="text" size="30" name="query" value="" class="form-control" placeholder="検索キーワード" autofocus="autofocus">
-	<input type="hidden" name="index" value="doc">
-	<span class="input-group-btn">
-		<button type="submit" class="btn btn-primary">マニュアル検索</button>
-	</span>
-</div>
-</form>
+  このマニュアルでは、プロデルの文法や利用できる機能について、サンプルコードと一緒にご説明します。プロデルやプログラミングが初めての方は、まずは<a href="https://produ.irelang.jp/blog/produirefirststep/">「プロデルで始める日本語プログラミング言語入門」</a>をご覧ください。</p>
+
+    <form action="https://produ.irelang.jp/docs/search/msearch.cgi" method="GET" accept-charset="utf-8" name="msearch" target="_top">
+        <div class="input-group">
+            <input type="text" size="30" name="query" value="" class="form-control" placeholder="検索キーワード">
+            <input type="hidden" name="index" value="doc">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">マニュアル検索</button>
+            </span>
+        </div>
+    </form>
+<p class="text-muted">現在、<a href="https://produ.irelang.jp/blog/2024/03/4385/">Google検索ではプロデルに関するページが検索結果に正常に表示されません</a>。<a href="https://duckduckgo.com/?t=h_&q=%E3%83%97%E3%83%AD%E3%83%87%E3%83%AB%E3%80%80%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97&ia=web">DuckDuckGoなどの他のサーチエンジンで検索</a>してください。</p>
 	<div class="row">
 		<div class="col-md-4">
 			<h3>文法の説明</h3>
@@ -98,7 +98,7 @@
 				<li><a href="syntax/procedurecall.html">手順呼出し文</a></li>
 				<li><a href="syntax/variable.html">変数と代入文</a></li>
 				<li><a href="syntax/forloop.html">繰り返し文</a></li>
-				<li><a href="syntax/if.html">判断文(もし文)</a></li>
+				<li><a href="syntax/if.html">条件判断文(もし文)</a></li>
 				<li><a href="syntax/switch.html">分岐文</a></li>
 				<li><a href="syntax/trycatch.html">例外監視文</a></li>
 				<li><a href="keywords/index.html">キーワード</a></li>
@@ -128,6 +128,7 @@
 							<li><a href="primitive/decimal.htm">固定小数</a></li>
 							<li><a href="primitive/long.htm">長整数</a></li>
 							<li><a href="primitive/int.htm">整数</a></li>
+							<li><a href="primitive/short.htm">短整数</a></li>
 							<li><a href="primitive/float.htm">浮動小数</a></li>
 							<li><a href="primitive/double.htm">倍浮動小数</a></li>
 						</ul>
@@ -141,6 +142,7 @@
 				<ul>
 					<li><a href="primitive/array.htm">配列</a></li>
 					<li><a href="primitive/fixedarray.htm">固定長配列</a></li>
+					<li><a href="primitive/multiarray.htm">多次元固定長配列</a></li>
 					<li><a href="primitive/baseobject.htm">基本物</a></li>
 					<li><a href="primitive/netobject.htm">ネット物</a></li>
 				</ul>
@@ -184,7 +186,14 @@
 			<ul>
 				<li><a href="core/index.htm">基本機能</a></li>
 				<li><a href="wincontrol/index.htm">GUI部品</a></li>
-				<li><a href="pgraphics/index.htm">画像描画</a></li>
+				<li><a href="pgraphics/index.htm">画像描画</a>
+				        <ul>
+				                <li><a href="pgraphics/kame.htm">カメ</a></li>
+				                <li><a href="pgraphics/canvas/index.htm">キャンバス</a></li>
+				                <li><a href="pgraphics/screenshot.htm">スクリーンショット</a></li>
+				                <li><a href="pgraphics/iconimage.htm">アイコン画像</a></li>
+				                </ul>
+				        </li>
 				<li><a href="plugins/index.htm">プラグイン</a></li>
 				<ul>
 					<li><a href="network/index.htm">ネットワーク</a></li>
@@ -227,19 +236,20 @@
 	</ul>
 		</div>
 	</div>
+<div>
+</div>
 	</div>
 </div>
-
 	<!-- Tab panes -->
 	<div style="display:none;">
 		<img src="img/copy.png">
-		<a href="searchform.html"></a>
+		<a href="searchform.html">検索フォーム</a>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年12月14日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="js/jquery-1.12.4.min.js"></script>

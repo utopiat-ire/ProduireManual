@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="システム情報取得">	<meta name="description" content="日本語プログラミング言語プロデルの「システム情報取得」プラグインの「シリアル通信」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -87,7 +86,7 @@
 		<h3>利用プラグイン</h3>
 		<p><a href="index.htm">システム情報取得</a></p>
 	</div>
-	<div class="col-sm-8">
+	<div id="refcontent" class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>RS-232C等を利用してシリアル通信するための種類です。</p>
 		<h2>作成する方法</h2>
@@ -130,162 +129,164 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
-				<tr>
-					<th><a name="キャリア検出">キャリア検出</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>キャリアを検出したかどうかを表します</td>
-			  </tr>
-				<tr>
-					<th><a name="ストップビット">ストップビット</a></th>
-					<th>列挙</th>
-					<th>◎</th>
-					<td>1バイトあたりのストップビットの標準数<br>
-						{One,Two,OnePointFive}</td>
-			  </tr>
-				<tr>
-					<th><a name="データビット数">データビット数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>1バイトあたりのビット数</td>
-			  </tr>
-				<tr>
-					<th><a name="データ準備信号">データ準備信号</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>データ準備(Data Set Ready)信号を検出したかどうかを表します</td>
-			  </tr>
-				<tr>
-					<th><a name="データ末端信号">データ末端信号</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>データ末端(Data Terminal Ready)信号を検出したかどうかを表します</td>
-			  </tr>
-				<tr>
-					<th><a name="パリティチェック方式">パリティチェック方式</a></th>
-					<th>列挙</th>
-					<th>◎</th>
-					<td>パリティのチェック方法<br>
-						{Odd (奇数),Even (偶数),Mark (常に1),Space(常に0)}</td>
-			  </tr>
-				<tr>
-					<th><a name="ブレイク信号">ブレイク信号</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>ブレイク信号</td>
-			  </tr>
-				<tr>
-					<th><a name="ポート名">ポート名</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>接続先のポート名</td>
-			  </tr>
-				<tr>
-					<th><a name="ポート名一覧">ポート名一覧</a></th>
-					<th>&nbsp;</th>
-					<th>□</th>
-					<td>シリアル通信で利用できるポート名一覧を取得します</td>
-			  </tr>
-				<tr>
-					<th><a name="ボーレート">ボーレート</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>シリアルのボーレート</td>
-			  </tr>
-				<tr>
-					<th><a name="改行文字">改行文字</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>データ送信を表す文字</td>
-			  </tr>
-				<tr>
-					<th><a name="空文字無視">空文字無視</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>空文字(nullバイト)を無視するかどうか</td>
-			  </tr>
-				<tr>
-					<th><a name="受信データサイズ">受信データサイズ</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>受信バッファにあるデータのサイズ</td>
-			  </tr>
-				<tr>
-					<th><a name="受信バッファサイズ">受信バッファサイズ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>受信バッファのサイズ</td>
-			  </tr>
-				<tr>
-					<th><a name="受信準備完了">受信準備完了</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>受信準備完了(Clear To Send)信号を検出したかどうかを表します</td>
-			  </tr>
-				<tr>
-					<th><a name="受信待機時間">受信待機時間</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>受信時にタイムアウトとする時間</td>
-			  </tr>
-				<tr>
-					<th><a name="接続済み">接続済み</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>ポートが開かれているかどうか</td>
-			  </tr>
-				<tr>
-					<th><a name="送信データサイズ">送信データサイズ</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>送信バッファにあるデータのサイズ</td>
-			  </tr>
-				<tr>
-					<th><a name="送信バッファサイズ">送信バッファサイズ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>送信バッファのサイズ</td>
-			  </tr>
-				<tr>
-					<th><a name="送信待機時間">送信待機時間</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>送信時にタイムアウトとする時間</td>
-			  </tr>
-				<tr>
-					<th><a name="送信要求">送信要求</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>送信要求(Request To Send)信号を検出したかどうかを表します</td>
-			  </tr>
-				<tr>
-					<th><a name="通信確立方式">通信確立方式</a></th>
-					<th>列挙</th>
-					<th>◎</th>
-					<td>使用するハンドシェイクプロトコル<br>
-						{XOnXOff, RequestToSend, RequestToSendXOnXOff}</td>
-			  </tr>
-				<tr>
-					<th><a name="内部受信バッファサイズ">内部受信バッファサイズ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>内部入力バッファのサイズ</td>
-			  </tr>
-				<tr>
-					<th><a name="破損代替文字">破損代替文字</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>データが壊れた際に使用する文字</td>
-			  </tr>
-				<tr>
-					<th><a name="文字コード">文字コード</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>テキスト形式で送受信する時の文字コード</td>
-			  </tr>
+                </tr></thead>
+<tbody>
+<tr>
+    <th><a name="キャリア検出">キャリア検出</a></th>
+    <th>真偽</th>
+    <th>□</th>
+    <td>キャリアを検出したかどうかを表します</td>
+</tr>
+<tr>
+    <th><a name="ストップビット">ストップビット</a></th>
+    <th>列挙</th>
+    <th>◎</th>
+    <td>1バイトあたりのストップビットの標準数<br>
+        {One,Two,OnePointFive}</td>
+</tr>
+<tr>
+    <th><a name="データビット数">データビット数</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>1バイトあたりのビット数</td>
+</tr>
+<tr>
+    <th><a name="データ準備信号">データ準備信号</a></th>
+    <th>真偽</th>
+    <th>□</th>
+    <td>データ準備(Data Set Ready)信号を検出したかどうかを表します</td>
+</tr>
+<tr>
+    <th><a name="データ末端信号">データ末端信号</a></th>
+    <th>真偽</th>
+    <th>◎</th>
+    <td>データ末端(Data Terminal Ready)信号を検出したかどうかを表します</td>
+</tr>
+<tr>
+    <th><a name="パリティチェック方式">パリティチェック方式</a></th>
+    <th>列挙</th>
+    <th>◎</th>
+    <td>パリティのチェック方法<br>
+        {Odd (奇数),Even (偶数),Mark (常に1),Space(常に0)}</td>
+</tr>
+<tr>
+    <th><a name="ブレイク信号">ブレイク信号</a></th>
+    <th>&nbsp;</th>
+    <th>◎</th>
+    <td>ブレイク信号</td>
+</tr>
+<tr>
+    <th><a name="ポート名">ポート名</a></th>
+    <th>文字列</th>
+    <th>◎</th>
+    <td>接続先のポート名</td>
+</tr>
+<tr>
+    <th><a name="ポート名一覧">ポート名一覧</a></th>
+    <th>&nbsp;</th>
+    <th>□</th>
+    <td>シリアル通信で利用できるポート名一覧を取得します</td>
+</tr>
+<tr>
+    <th><a name="ボーレート">ボーレート</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>シリアルのボーレート</td>
+</tr>
+<tr>
+    <th><a name="改行文字">改行文字</a></th>
+    <th>文字列</th>
+    <th>◎</th>
+    <td>データ送信を表す文字</td>
+</tr>
+<tr>
+    <th><a name="空文字無視">空文字無視</a></th>
+    <th>真偽</th>
+    <th>◎</th>
+    <td>空文字(nullバイト)を無視するかどうか</td>
+</tr>
+<tr>
+    <th><a name="受信データサイズ">受信データサイズ</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>受信バッファにあるデータのサイズ</td>
+</tr>
+<tr>
+    <th><a name="受信バッファサイズ">受信バッファサイズ</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>受信バッファのサイズ</td>
+</tr>
+<tr>
+    <th><a name="受信準備完了">受信準備完了</a></th>
+    <th>真偽</th>
+    <th>□</th>
+    <td>受信準備完了(Clear To Send)信号を検出したかどうかを表します</td>
+</tr>
+<tr>
+    <th><a name="受信待機時間">受信待機時間</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>受信時にタイムアウトとする時間</td>
+</tr>
+<tr>
+    <th><a name="接続済み">接続済み</a></th>
+    <th>真偽</th>
+    <th>□</th>
+    <td>ポートが開かれているかどうか</td>
+</tr>
+<tr>
+    <th><a name="送信データサイズ">送信データサイズ</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>送信バッファにあるデータのサイズ</td>
+</tr>
+<tr>
+    <th><a name="送信バッファサイズ">送信バッファサイズ</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>送信バッファのサイズ</td>
+</tr>
+<tr>
+    <th><a name="送信待機時間">送信待機時間</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>送信時にタイムアウトとする時間</td>
+</tr>
+<tr>
+    <th><a name="送信要求">送信要求</a></th>
+    <th>真偽</th>
+    <th>◎</th>
+    <td>送信要求(Request To Send)信号を検出したかどうかを表します</td>
+</tr>
+<tr>
+    <th><a name="通信確立方式">通信確立方式</a></th>
+    <th>列挙</th>
+    <th>◎</th>
+    <td>使用するハンドシェイクプロトコル<br>
+        {XOnXOff, RequestToSend, RequestToSendXOnXOff}</td>
+</tr>
+<tr>
+    <th><a name="内部受信バッファサイズ">内部受信バッファサイズ</a></th>
+    <th>整数</th>
+    <th>◎</th>
+    <td>内部入力バッファのサイズ</td>
+</tr>
+<tr>
+    <th><a name="破損代替文字">破損代替文字</a></th>
+    <th>文字列</th>
+    <th>◎</th>
+    <td>データが壊れた際に使用する文字</td>
+</tr>
+<tr>
+    <th><a name="文字コード">文字コード</a></th>
+    <th>文字列</th>
+    <th>◎</th>
+    <td>テキスト形式で送受信する時の文字コード</td>
+</tr>
+</tbody>
 		  </table>
-			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+        <p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 	  </div>
 		<h2 id="イベント手順">イベント手順</h2>
 		<p>部品から<a href="../../wincontrol/control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
@@ -298,26 +299,28 @@
 						<th>情報</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="受信した">受信した</a></th>
-					<td>データを受信した時</td>
-					<td>なし</td>
-			  </tr>
-				<tr>
-					<th><a name="受信完了した">受信完了した</a></th>
-					<td>ファイルの終端(EOF)を受信した時</td>
-					<td>なし</td>
-			  </tr>
-				<tr>
-					<th><a name="エラーが発生した">エラーが発生した</a></th>
-					<td>エラーが発生した時</td>
-					<td></td>
-			  </tr>
-				<tr>
-					<th><a name="ピンが変化した">ピンが変化した</a></th>
-					<td>ピンの電圧が変化した時</td>
-					<td></td>
-			  </tr>
+<tbody>
+<tr>
+    <th><a name="受信した">受信した</a></th>
+    <td>データを受信した時</td>
+    <td>なし</td>
+</tr>
+<tr>
+    <th><a name="受信完了した">受信完了した</a></th>
+    <td>ファイルの終端(EOF)を受信した時</td>
+    <td>なし</td>
+</tr>
+<tr>
+    <th><a name="エラーが発生した">エラーが発生した</a></th>
+    <td>エラーが発生した時</td>
+    <td></td>
+</tr>
+<tr>
+    <th><a name="ピンが変化した">ピンが変化した</a></th>
+    <td>ピンの電圧が変化した時</td>
+    <td></td>
+</tr>
+</tbody>
 		  </table>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -332,8 +335,7 @@
 電話を閉じる</pre>
 <h3 id="sample2">シリアルポートからメッセージを受信する</h3>
 		<p>シリアルポートから受け取った情報を表示するプログラム例です。</p>
-<pre class="code">
-メイン画面を表示する
+<pre class="code">メイン画面を表示する
 待機する
 
 メイン画面とは
@@ -344,14 +346,14 @@
 	終わり
 
 	初期化する手順
-		この実質大きさを｛284,262｝に変える
-		この内容を「メイン画面」に変える
-		この位置固定方向を5に変える
+		この実質大きさは｛284,262｝
+		この内容は「メイン画面」
+		この位置固定方向は5
 		ボタン1というボタンを作る
-			その位置と大きさを｛25,20,75,23｝に変える
-			その内容を「ボタン1」に変える
-			その位置固定方向を5に変える
-		この設計スケール比率を｛96,96｝に変える
+			その位置と大きさは｛25,20,75,23｝
+			その内容は「ボタン1」
+			その位置固定方向は5
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	ボタン1がクリックされた時の手順
@@ -367,11 +369,11 @@
 
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

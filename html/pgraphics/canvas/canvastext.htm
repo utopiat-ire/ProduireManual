@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="図形">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「キャンバス文字」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -103,16 +102,9 @@
 		<pre class="format">キャンバス文字(【キャンバス】)を作る</pre>
 		<p>&nbsp;</p>
 		<h2 id="手順">手順</h2>
-		<p><a href="canvasitembase.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<p><a href="canvasitembase.htm#手順">継承される手順</a>が使用できます。</p>
 		<div id="methodlist"></div>
-		<div id="methods">
-			<table class="table table-bordered">
-				<tr>
-					<th>手順名</th>
-					<th>助詞</th>
-			  </tr>
-		  </table>
-	  </div>
+		<div id="methods"></div>
 		<h2 id="設定項目">設定項目</h2>
 		<p><a href="canvasitembase.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -125,54 +117,56 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
-					<th><a name="内容">内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>文字の内容</td>
-			  </tr>
-				<tr>
-					<th><a name="書体">書体</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>文字のフォント名</td>
-			  </tr>
-				<tr>
-					<th><a name="文字サイズ">文字サイズ</a></th>
-					<th>浮動小数点</th>
-					<th>◎</th>
-					<td>文字の大きさ(ポイント単位)</td>
-			  </tr>
-				<tr>
-					<th><a name="フォント">フォント</a></th>
-					<th>フォント</th>
-					<th>◎</th>
-					<td>文字のフォント</td>
-			  </tr>
-				<tr>
-					<th><a name="文字配置">文字配置</a></th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>{左,中央,右}</td>
-			  </tr>
-				<tr>
-					<th><a name="垂直文字配置">垂直文字配置</a></th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>{上,中央,下}</td>
-			  </tr>
-				<tr>
-					<th><a name="大きさ調整">大きさ調整</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>内容に合わせて大きさを自動的に調整するかどうか</td>
-			  </tr>
-				<tr>
-					<th><a name="文字色">文字色</a></th>
-					<th>色</th>
-					<th>◎</th>
-					<td>文字の色</td>
-			  </tr>
+<tbody>
+    <tr>
+        <th><a name="内容">内容</a></th>
+        <th>文字列</th>
+        <th>◎</th>
+        <td>文字の内容</td>
+    </tr>
+    <tr>
+        <th><a name="書体">書体</a></th>
+        <th>文字列</th>
+        <th>◎</th>
+        <td>文字のフォント名</td>
+    </tr>
+    <tr>
+        <th><a name="文字サイズ">文字サイズ</a></th>
+        <th>浮動小数点</th>
+        <th>◎</th>
+        <td>文字の大きさ(ポイント単位)</td>
+    </tr>
+    <tr>
+        <th><a name="フォント">フォント</a></th>
+        <th>フォント</th>
+        <th>◎</th>
+        <td>文字のフォント</td>
+    </tr>
+    <tr>
+        <th><a name="文字配置">文字配置</a></th>
+        <th>列挙体</th>
+        <th>◎</th>
+        <td>{左,中央,右}</td>
+    </tr>
+    <tr>
+        <th><a name="垂直文字配置">垂直文字配置</a></th>
+        <th>列挙体</th>
+        <th>◎</th>
+        <td>{上,中央,下}</td>
+    </tr>
+    <tr>
+        <th><a name="大きさ調整">大きさ調整</a></th>
+        <th>真偽値</th>
+        <th>◎</th>
+        <td>内容に合わせて大きさを自動的に調整するかどうか</td>
+    </tr>
+    <tr>
+        <th><a name="文字色">文字色</a></th>
+        <th>色</th>
+        <th>◎</th>
+        <td>文字の色</td>
+    </tr>
+</tbody>
 		  </table>
 	  </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -182,14 +176,14 @@
 <pre class="code">窓というウィンドウを作る
 	そのタイトルは「文字を書く」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ「プロデル」という文字を描く
 	その位置は｛50,100｝
-	そのフォントを「メイリオ」に変える
-	その文字色を緑色に変える
-	その文字サイズを20に変える
+	そのフォントは「メイリオ」
+	その文字色は、緑色
+	その文字サイズは20
 キャンバス1を更新する
 
 待機する</pre>
@@ -197,11 +191,11 @@
 		
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

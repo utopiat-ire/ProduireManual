@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>Webクライアント - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<title>ウェブクライアント - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="HTTP">
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「Webクライアント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -29,7 +28,7 @@
 				</button>
 				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->Webクライアント<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ウェブクライアント<!-- InstanceEndEditable -->
 				</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
@@ -77,32 +76,55 @@
 	  <ul class="breadcrumb" data-category="net">
 	    <li><a href="../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">ネットワーク機能</a></li>
-	    <li>Webクライアント</li>
-      </ul>
-	  <h1>Webクライアント</h1>
+	    <li>ウェブクライアント</li>
+	  </ul>
+	  <h1>ウェブクライアント</h1>
 		<p><a href="../usage.htm">
 			<span class="label label-warning">生成可能</span></a><a href="../safelock.htm" class="label label-danger">保護あり</a></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+		<h3>関連ページ</h3>
+        <ul>
+                <li><a href="httprequest.htm">HTTP要求</a></li>
+                <li><a href="httpresponse.htm">HTTP応答</a></li>
+        </ul>
+        <h3>利用プラグイン</h3>
 		<p><a href="index.htm">ネットワーク機能集</a></p>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>Webブラウザの変わりにHTTPで要求するための種類です。ヘッダの設定やクッキーなどの処理が用意されています。</p>
+		<p>Webブラウザと同じ感覚でWebサーバに要求するための種類です。この種類ではCookieが自動的に管理され、BASIC認証/Digest認証にも対応しています。またヘッダを設定してリクエストすることもできます。</p>
 		<h2>作成する方法</h2>
-		<pre class="format">【名前】というWebクライアントを作る</pre>
+		<pre class="format">【名前】というウェブクライアントを作る</pre>
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#ダウンロードする">ダウンロードする</a>　<a href="#ダウンロード開始する">ダウンロード開始する</a>　<a href="#キャンセルする">キャンセルする</a>　</div>
 		<div id="methods">
-<h3>【自分】から【送信内容：文字列】を<a name="ダウンロードする">ダウンロードする</a></h3>
-			<p>接続先へテキスト形式でデータを送信します</p>
-			<h3>【自分】に<a name="ダウンロード開始する">ダウンロード開始する</a>：<a href="../primitive/string.htm">文字列</a></h3>
-			<p>接続先からデータを受信して、テキスト形式で表します。この手順は「受信した」時のイベント手順が処理されるまでに
-				TCPIPクライアントが受信したデータを取得できます</p>
-			<h3>【自分】に<a name="キャンセルする">キャンセルする</a></h3>
-			<p>ダウンロードを中止します。</p>
+<h3>自分で【アドレス】を【送信内容：文字列】を<a name="ダウンロードする">ダウンロードする</a></h3>
+			<p>指定したアドレスにあるファイルを保存先へダウンロードします。</p>
+			<h3>自分で【アドレス】を【保存先ファイル名】へ<a name="ダウンロード開始する">ダウンロード開始する</a>：<a href="../primitive/string.htm">文字列</a></h3>
+			<p>指定したアドレスにあるファイルを保存先へダウンロードします。ダウンロードは非同期で実行されます。ダウンロードを途中でキャンセルできます。</p>
+			<h3>自分で【アドレス】へ【引数:辞書】を<a name="アップロードする">アップロードする</a>：文字列</h3>
+            <p>指定した【アドレス】へファイルや値をアップロードします。</p>
+            <p>【引数】には、アップロードするフィールド値(値やファイル)を辞書で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
+            <h4 data-ref="アップロードする">ファイルをアップロードする</h4>
+            <pre class="code">クライアントというウェブクライアントを作る
+パラメータ(「@upfile」)は「image.png」
+クライアントで「https://xxxxxx/upload.php」へパラメータをアップロードして内容とする
+内容を報告する</pre>
+            <h3>自分で【アドレス】を<a name="取得する">取得する</a>：文字列</h3>
+            <p>指定した【アドレス】の内容をGET形式でサーバへ問い合わせます。<br>
+                    なお、ログインなど認証が必要なページでは、ログインしていない状態のページが取得される場合があります。</p>
+            <h3>自分で【アドレス】へ〈【引数:辞書】を〉<a name="送信する">送信する</a>：文字列</h3>
+            <p>指定した【アドレス】に対して【引数】をフィールド値にしてPOST形式で送ります。</p>
+            <h3>自分へ【ヘッダ名】という【値】を<a name="ヘッダへ設定する">ヘッダへ設定する</a></h3>
+            <p> 指定した名前と値を、ヘッダへ設定します。</p>
+            <h3>自分へ【cookie:<a href="httpcookie.htm">HTTPクッキー</a>】を<a name="設定する">設定する</a></h3>
+            <p>指定したクッキーを登録します。アドレスとパスに合致するアドレスへリクエストした時に、そのCookieが使用されます。</p>
+            <h3>自分から【アドレス】で<a name="クッキーを取得する">クッキーを取得する</a>：<a href="httpcookie.htm">HTTPクッキー</a>の配列</h3>
+            <p>指定したアドレスに合致する登録済みのCookieの一覧を取得します。</p>
+            <h3>自分を<a name="キャンセルする">キャンセルする</a></h3>
+			<p>「ダウンロード開始する」手順で実行中のダウンロードを中止します。</p>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
@@ -112,39 +134,35 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
-				<tr>
-					<th>ステータスコード<a name="ポート番号"></a></th>
-					<th><a href="../primitive/number.htm">整数</a></th>
-					<th>◎</th>
-					<td>接続先のサーバのポート番号</td>
 					</tr>
-				<tr>
-					<th>ユーザ名<a name="文字コード"></a></th>
-					<th><a href="../primitive/string.htm">文字列</a><a href="../primitive/encoding.htm"></a></th>
-					<th>◎</th>
-					<td>テキスト形式で送受信するときに使用する文字コード</td>
-					</tr>
-				<tr>
-					<th>パスワード<a name="送信バッファサイズ"></a></th>
-					<th><a href="../primitive/string.htm">文字列</a><a href="../primitive/number.htm"></a></th>
-					<th>◎</th>
-					<td>送信に使用するバッファサイズ(既定値は8192)</td>
-					</tr>
-				<tr>
-					<th>アドレス<a name="送信タイムアウト時間"></a></th>
-					<th><a href="../primitive/string.htm">文字列</a><a href="../primitive/number.htm"></a></th>
-					<th>◎</th>
-					<td>送信に失敗したと判断するタイムアウト時間(単位:ミリ秒)<br>
-						0は無期限</td>
-					</tr>
-				<tr>
-					<th>クッキー<a name="受信バッファサイズ"></a></th>
-					<th><a href="../primitive/string.htm">文字列</a><a href="../primitive/number.htm"></a></th>
-					<th>◎</th>
-					<td>受信に使用するバッファサイズ(既定値は8192)</td>
-					</tr>
-				</table>
+				</thead>
+<tbody>
+<tr>
+    <th><a name="文字コード">文字コード</a></th>
+    <th>エンコード</th>
+    <th>◎</th>
+    <td>HTTP通信で文字列として使用する文字コード</td>
+</tr>
+<tr>
+    <th><a name="ステータスコード">ステータスコード</a></th>
+    <th><a href="../primitive/number.htm">整数</a></th>
+    <th>◎</th>
+    <td>最後に実行したリクエストのステータスコードを返します</td>
+</tr>
+<tr>
+    <th><a name="ユーザ名">ユーザ名</a></th>
+    <th><a href="../primitive/string.htm">文字列</a></th>
+    <th>◎</th>
+    <td>Basic認証/Digest認証で送信するユーザ名</td>
+</tr>
+<tr>
+    <th><a name="パスワード">パスワード</a></th>
+    <th><a href="../primitive/string.htm">文字列</a></th>
+    <th>◎</th>
+    <td>Basic認証/Digest認証で送信するパスワード</td>
+</tr>
+</tbody>
+            </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 		<h2>実行される手順</h2>
@@ -154,33 +172,44 @@
 				<th>説明</th>
 				<th>情報</th>
 				</tr></thead>
-			<tr>
-				<th><a name="ダウンロードが進捗した">ダウンロードが進捗した</a></th>
-				<td>相手側からメッセージを受け取ったときに実行されます</td>
-				<td><a href="tcpclient_event.htm">あり</a></td>
-				</tr>
-			<tr>
-			  <th><a name="ダウンロードが完了した">ダウンロードが完了した</a></th>
-			  <td>&nbsp;</td>
-			  <td>&nbsp;</td>
-		  </tr>
+<tbody>
+<tr>
+    <th><a name="ダウンロードが進捗した">ダウンロードが進捗した</a></th>
+    <td>ダウンロードが進捗した時</td>
+    <td><a href="tcpclient_event.htm">あり</a></td>
+</tr>
+<tr>
+  <th><a name="ダウンロードが完了した">ダウンロードが完了した</a></th>
+  <td>ダウンロードが完了した時</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody>
 			</table>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
-		<p>ポート5000番で待機しているサーバへ接続して、メッセージを送ります。</p>
-<pre class="code">クライアントというTCPIPクライアントを作る
-クライアントの使用ポート番号は、5000
-クライアントを「localhost」へ接続する
-クライアントから「こんにちは［改行］さようなら」を送信する
-クライアントを切断する</pre>
+<div id="samples">
+<h3 id="sample1">進捗を確認しながらファイルをダウンロードする</h3>
+		<p>Webクライアントを使ってファイルをダウンロードします。</p>
+<pre class="code">クライアントというウェブクライアントを作る
+クライアントのダウンロードが進捗した時の手順は、ダウンロード進捗
+クライアントのダウンロードが完了した時の手順は、ダウンロード完了
+クライアントで「https://produ.irelang.jp/images/produire-title.gif」を「[デスクトップ]produire-title.gif」へダウンロードする
+
+ダウンロード進捗の手順
+	「[この時の受信バイト数]/[この時の総バイト数]([この時の割合]%)」を報告する
+終わり
+ダウンロード完了の手順
+	この時のエラーメッセージが無でなければこの時のエラーメッセージを報告する
+終わり</pre>
+        </div>
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月10日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

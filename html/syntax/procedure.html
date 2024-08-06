@@ -12,8 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="description" content="プロデルマニュアル2021">
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -26,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
 					<!-- InstanceBeginEditable name="HeaderTitle" -->手順<!-- InstanceEndEditable -->
 				</a>
@@ -38,26 +36,30 @@
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
-					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
-					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
-							<li><a href="../core/global.htm">広域種類</a></li>
-							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
-							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
-							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
-							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
-							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
-							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
-							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
 							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
-							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
-							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
-							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
-							<li><a href="../tools/index.htm">Webアプリ</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,38 +69,43 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="syntax">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">言語仕様</a></li>
-	<li>手順</li>
-</ul>
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
+<div id="top" class="row">
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="syntax">
+            <li><a href="../index.htm">プロデル</a></li>
+            <li><a href="index.htm">言語仕様</a></li>
+            <li>手順</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>手順</h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#procedure_declear">手順を定義する</a></li>
+            <li><a href="#produire_args_declear">引数を持つ手順宣言文</a></li>
+            <li><a href="#procedure_nonessential">実補語の省略</a></li>
+            <li><a href="#procedure_formalcomp">形式補語</a></li>
+            <li><a href="#procedure_return">結果を返す</a></li>
+            <li><a href="#procedure_return_valuetype">戻り値の型を指定する</a></li>
+            <li><a href="#procedure_specialsyntax">名詞手順の宣言</a></li>
+            <li><a href="#procedure_localvar">局所変数を宣言する</a></li>
+            <li><a href="#procedure_refargument">参照渡し</a></li>
+        </ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
 	  	<h1>手順</h1>
-			<p>プログラムの小さな固まりに分けたものを「手順」と呼びます。</p>
-<p>他のプログラミング言語では、関数やメソッドと呼ばれるものに相当します。</p>
-<div class="panel panel-default">
-	<div class="panel-body bg-success">
-		<ul>
-			<li><a href="#procedure_declear">手順を定義する</a></li>
-			<li><a href="#produire_args_declear">引数を持つ手順宣言文</a></li>
-			<li><a href="#procedure_nonessential">実補語の省略</a></li>
-			<li><a href="#procedure_formalcomp">形式補語</a></li>
-			<li><a href="#procedure_return">結果を返す</a></li>
-			<li><a href="#procedure_return_valuetype">戻り値の型を指定する</a></li>
-			<li><a href="#procedure_return_valuetype">局所変数を宣言する</a></li>
-			<li><a href="#procedure_specialsyntax">用途に特化した手順</a></li>
-		</ul>
-	</div>
-</div>
-<h3 id="procedure_declear">手順を定義する</h3>
+			<p>プログラムの小さな固まりに分けたものを「手順」と呼びます。他のプログラミング言語では、関数やメソッドと呼ばれるものに相当します。</p>
+			<ul>
+			  <li><a href="https://produ.irelang.jp/blog/2020/03/1807/">プロデルで始める日本語プログラミング言語入門(#6) 「手順を使おう」</a></li>
+	  </ul>
+<hr>
+        <h3 id="procedure_declear">手順を定義する</h3>
 <p>手順を定義するには、次のような手順宣言文を書きます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">手順宣言文の書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><span class="flag">《手順名》</span>手順
+		<pre class="format"><strong>《手順名》</strong>手順
   <span class="rem">/* この手順が呼び出されたときに実行する文 */</span>
 終わり</pre>
 		<p>《手順名》には、手順の名前(動詞)を書きます。</p>
@@ -123,14 +130,14 @@
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format">［<span class="flag">《変数名》</span>］<span class="flag">《助詞》</span>・・・、<span class="flag">《手順名》</span>手順
+		<pre class="format">［<strong>《変数名》</strong>］<strong>《助詞》</strong>・・・、<strong>《手順名》</strong>手順
   <span class="rem">/* この手順が呼び出されたときに実行する文 */</span>
 終わり</pre>
 		<dl>
 			<dt>《変数名》</dt>
-			<dd>必要な情報を格納する変数の名前を書きます。</dd>
+			<dd>必要な情報を格納する変数の名前を書きます。一つの手順定義では同じ名前の変数を2回以上指定できません。</dd>
 			<dt>《助詞》</dt>
-			<dd>《変数名》と対応づけられる助詞を書きます。</dd>
+			<dd>《変数名》と対応づけられる助詞を書きます。一つの手順定義では同じ助詞を2回以上指定できません。</dd>
 			<dt>《手順名》</dt>
 			<dd>手順の名前を書きます。</dd>
 		</dl>
@@ -144,10 +151,10 @@
 	</div>
 	<div class="panel-body">
 <p>次の例では、人を紹介するメッセージを表示するための「紹介する」という手順を定義して呼び出しています。</p>
-<pre class="code"><font color="#0000ff">「太郎」へ「次郎」を</font>紹介する
- <font color="#0000ff">
-［相手］へ、［名前］を、</font><span class="syntax">紹介する手順</span>
-<font color="#0000ff">　　「［相手］さん、こちらは［名前］さんです。」を</font>表示する
+<pre class="code">「太郎」へ「次郎」を<strong>紹介する</strong>
+ 
+［相手］へ、［名前］を、<span class="syntax">紹介する手順</span>
+　　「［相手］さん、こちらは［名前］さんです。」を表示する
 <span class="syntax">終わり</span></pre>
 	</div>
 </div>
@@ -162,23 +169,21 @@
 「いいい」を「へ」で処理する
  
 【値】を〈【オプション】で〉<strong><span class="syntax">処理する手順</span></strong>
-　　もしオプションが無でないなら「オプション:[オプション]」を報告する
+　　オプションが無でなければ「オプション:[オプション]」を報告する
 　　値を報告する
 <strong><span class="syntax">終わり</span></strong></pre>
 	</div>
 </div>
 <h3 id="procedure_formalcomp">形式補語</h3>
 <p>手順名は、単に動詞であるほかにも、述語と動詞を含めて手順名としたい場合があります。</p>
-<p>プロデルでは、《手順名》に助詞(「を」「から」「まで」「へ」)が含まれる場合に、助詞で終わる句を形式補語として扱って、残りの句を動詞としています。<br>
-つまりプロデルの手順名は、1つの動詞と、0個以上の形式補語で構成されています。</p>
+<p>プロデルでは《手順名》に助詞(「を」「から」「まで」「へ」)が含まれる場合に、助詞で終わる句を形式補語として扱って、残りの句を動詞としています。つまりプロデルの手順名は、1つの動詞と、0個以上の形式補語で構成されています。</p>
 <p>形式補語は、手順名の一部である補語のことです。実補語は手順の引数を表す補語であるのに対して形式補語は、引数としての意味はありません。ただし、実補語と形式補語は、文法上同列に扱われるため、手順を呼び出す際に順番を入れ替えて書けます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">例文　手順名に形式補語が含まれる手順</h4>
 	</div>
 	<div class="panel-body">
-<p>次のプログラムでは、「データを抽出する」という名前の手順を宣言しています。手順名のうち「データを」という句が形式補語として定義されます。<br>
-そのため、例文のように形式補語(データを)と実補語(～を)とは、書く順番を変えられます。</p>
+<p>次のプログラムでは「データを抽出する」という名前の手順を宣言しています。手順名のうち「データを」という句が形式補語として定義されます。そのため、例文のように形式補語(データを)と実補語(～を)とは、書く順番を変えられます。</p>
 <pre class="code">「データ.csv」からデータを抽出する
 データを「データ.csv」から抽出する
  
@@ -187,11 +192,25 @@
 <span class="syntax">終わり</span></pre>
 	</div>
 </div>
-<h3 id="procedure_localvar">局所変数を宣言する</h3>
-<p>手順内で、次のように書くことで、手順内だけで有効な変数(局所変数)を宣言できます。</p>
-<p>詳しくは、<a href="scope.html">有効範囲</a>をご覧ください。</p>
-<pre class="format">【<span class="flag">《変数名》</span>：<span class="flag">《種類名》</span>】</pre>
-<h3 id="procedure_return_valuetype">戻り値の型を指定する</h3>
+
+        <h3 id="procedure_return">結果を返す</h3>
+<p>手順で行った処理の結果として、戻り値を返せます。</p>
+<p>手順の戻り値を返すには、次のように書きます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format"><strong>《戻り値》</strong>を返す</pre>
+		<pre class="format"><strong>《戻り値》</strong>で手順を抜け出す</pre>
+		<dl>
+		<dt>《戻り値》</dt>
+		<dd>手順の結果として返す戻り値を書きます。</dd>
+	</dl>
+	</div>
+</div>
+
+        <h3 id="procedure_return_valuetype">戻り値の型を指定する</h3>
 <p>指定した型の戻り値を、必ず返すことを明示する場合は、次のように書きます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
@@ -207,31 +226,16 @@
 	<dt>《戻り値の型》</dt>
 	<dd>戻り値となる種類を書きます。</dd>
 </dl>
-<p>《戻り値の型》を指定した手順では、「～を返す」文を使って、必ず戻り値を返す必要があります。</p>
+<p>《戻り値の型》を指定した手順では「～を返す」文を使って、必ず戻り値を返す必要があります。</p>
 	</div>
 </div>
-<h3 id="procedure_return">結果を返す</h3>
-<p>手順で行った処理の結果として、戻り値を返すことができます。</p>
-<p>手順の戻り値を返すには、次のように書きます。</p>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">書式</h4>
-	</div>
-	<div class="panel-body">
-		<pre class="format"><span class="flag">《戻り値》</span>を返す</pre>
-		<pre class="format"><span class="flag">《戻り値》</span>で手順を抜け出す</pre>
-		<dl>
-		<dt>《戻り値》</dt>
-		<dd>手順の結果として返す戻り値を書きます。</dd>
-	</dl>
-	</div>
-</div>
-<h3 id="procedure_specialsyntax">用途に特化した手順</h3>
-<p>計算する手順や、真偽値判定する手順など、手順の役割によっては、次のような形で書くこともできます。 なお、“：《戻り値の型》”は、書かずに省略することもできます。</p>
-<pre class="format"><span class="flag">《手順名》</span>かどうかを判定する手順：<span class="flag">《戻り値の型》</span>
+
+        <h3 id="procedure_specialsyntax">名詞手順の宣言</h3>
+<p>計算する手順や、真偽値判定する手順など、手順の役割によっては、次のような形でも書けます。なお、“：《戻り値の型》”は、書かずに省略できます。またこれらの手順は名詞手順となり、送り仮名を付けたり語尾を活用できません。</p>
+<pre class="format"><strong>《名詞手順名》</strong>かどうかを判定する手順：<strong>《戻り値の型》</strong>
 
 終わり</pre>
-<pre class="format"><span class="flag">《手順名》</span>を求める手順：<span class="flag">《戻り値の型》</span>
+<pre class="format"><strong>《名詞手順名》</strong>を求める手順：<strong>《戻り値の型》</strong>
 
 終わり</pre>
 <div class="panel panel-default">
@@ -254,31 +258,48 @@
 <span class="syntax">終わり</span></pre>
 		</div>
 	</div>
-	<h3>参照渡し</h3>
+
+        <h3 id="procedure_localvar">局所変数を宣言する</h3>
+<p>手順内で、次のように書くことで、手順内だけで有効な変数(局所変数)を宣言できます。詳しくは、<a href="scope.html">有効範囲</a>をご覧ください。</p>
+<pre class="format">【<strong>《変数名》</strong>：<strong>《種類名》</strong>】</pre>
+
+	<h3 id="procedure_refargument">参照渡し</h3>
 	<p>仮引数名の前に「→」を付けることでその仮引数が参照渡しとなります。参照渡しを設定した仮引数では、手順呼出し文で対応する引数に指定した変数をそのまま引き継ぐこととなります。つまり手順の中で変数の値を変更した場合には、呼び出し元の変数にも反映されます。</p>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<pre class="code">値は、1<br>値をアップする<br>値を報告する<br><br>→【V】を、アップする手順
+<pre class="code">値は1
+値をアップする
+値を報告する
+
+→【V】を、アップする手順
 	Vは、V+1
 終わり</pre>
-</div>
-</div>
-
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div>	</div>
+</div>
+<!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

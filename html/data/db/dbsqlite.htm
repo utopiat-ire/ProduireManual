@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="SQLite,データベース">
     <meta name="description" content="日本語プログラミング言語プロデルで「データベース」プラグインの「SQLiteデータベース」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -116,7 +115,7 @@
 			<h3>【自分】へ〈【DLLファイル名】から〉〈【エントリー名】を〉<a name="接続する">登録する</a></h3>
           <p>SQLiteの拡張機能を読み込みます。SQLiteの拡張機能で提供されている関数を利用するには、接続後に拡張機能を登録する必要があります。</p>
             <pre class="code">SQLiteというSQLiteデータベースを作る
-SQLiteのデータソースを「database.db」に変える
+SQLiteのデータソースは「database.db」
 SQLiteへ接続する
 SQLiteに「sqlite3_json_init」を登録する</pre>
 		</div>
@@ -124,12 +123,15 @@ SQLiteに「sqlite3_json_init」を登録する</pre>
 		<p><a href="dbdatabase.htm#設定項目">継承された設定項目</a>の他に次の設定項目があります。</p>
 		<div id="properties">
 			<table class="table table-bordered">
+                <thead>
 				<tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
 				</tr>
+                </thead>
+                <tbody>
 				<tr>
 					<th><a name="データソース">データソース</a></th>
 					<th>文字列</th>
@@ -160,6 +162,7 @@ SQLiteに「sqlite3_json_init」を登録する</pre>
 				  <th>○</th>
 				  <td>拡張機能を有効化するかどうかを設定します</td>
 			  </tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -169,7 +172,7 @@ SQLiteに「sqlite3_json_init」を登録する</pre>
 		<p>SQLiteデータベースへ接続します。</p>
 <pre class="code">SQLiteというSQLiteデータベースを作る
 
-SQLiteのデータソースを「database.db」に変える
+SQLiteのデータソースは「database.db」
 SQLiteへ接続する
 
 <i>// 必要な処理をここに書きます //</i>
@@ -179,31 +182,31 @@ SQLiteから切断する</pre>
 <pre class="code" id="prg7">SQLiteで「CREATE TABLE 楽曲 (曲目番号 INTEGER PRIMARY KEY AUTOINCREMENT, 曲名 TEXT, アーティスト TEXT, アルバムID INTEGER);」を実行する</pre>
 		<hr>
 		<p>SQLiteデータベースのテーブルからレコードを取得します。</p>
-<pre class="code">結果は、［SQLiteから「SELECT 曲名 FROM 楽曲」を取得したもの］
+<pre class="code">SQLiteから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>SQLiteデータベースのテーブルへレコードを挿入します。</p>
-<pre class="code">結果は、［「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をSQLiteで実行したもの］
+<pre class="code">「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をSQLiteで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが挿入されたことを確認します
-</i>結果は、［SQLiteから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得したもの］
+</i>SQLiteから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得して、結果とする
 「追加後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>SQLiteデータベースのテーブルのレコードを更新します。</p>
-<pre class="code">結果は、［「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をSQLiteで実行したもの］
+<pre class="code">「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をSQLiteで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが更新されたことを確認します</i>
-結果は、［SQLiteから「SELECT 曲名 FROM 楽曲」を取得したもの］
+SQLiteから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「更新後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>SQLiteデータベースのテーブルのレコードを<i>削除</i>します。</p>
-<pre class="code">結果は、［「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をSQLiteで実行したもの］
+<pre class="code">「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をSQLiteで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
 <i>//レコードが削除されたことを確認します</i>
-結果は、［SQLiteから「SELECT 曲名 FROM 楽曲」を取得したもの］
+SQLiteから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「削除後」として結果の内容を情報アイコンで表示する</pre>
 		<hr>
 		<p>SQLiteデータベースからテーブルを削除します。</p>
@@ -211,11 +214,11 @@ SQLiteから切断する</pre>
 	  </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

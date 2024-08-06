@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="POST形式">	<meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「HTTP要求」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="POST形式">
+    <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「HTTP要求」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -90,24 +90,25 @@
         <ul>
           <li><a href="http.htm">「HTTP」種類</a></li>
           <li><a href="httpresponse.htm">HTTP応答</a></li>
+          <li><a href="httpcookie.htm">HTTPクッキー</a></li>
+          <li><a href="webclient.htm">ウェブクライアント</a></li>
         </ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>「HTTP要求」種類は、HTTPを使って要求する内容を指定するための種類です。</p>
-		<h2>作成する方法</h2>
-		<p><a href="http.htm">「HTTP」種類</a>の「要求する」手順を使います。</p>
-		<pre class="format">HTTPで要求して【名前】とする</pre>
+		<h2>作成する方法		</h2>
+		<pre class="format">【名前】というHTTP要求を作る</pre>
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#設定する">設定する</a>　<a href="#クッキーへ設定する">クッキーへ設定する</a>　<a href="#クッキーを削除する">クッキーを削除する</a>　<a href="#ヘッダへ設定する">ヘッダへ設定する</a>　<a href="#引数へ設定する">引数へ設定する</a>　</div>
 		<div id="methods">
-			<h3>【自分】として【cookie:HTTPクッキー】を<a name="設定する">設定する</a></h3>
+			<h3>【自分】として【cookie:<a href="httpcookie.htm">HTTPクッキー</a>】を<a name="設定する">設定する</a></h3>
 			<p>指定したクッキーを要求内容に設定します。</p>
 			<h3>【自分】として【クッキー名】という【値】を<a name="クッキーへ設定する">クッキーへ設定する</a></h3>
 			<p>指定した名前と値でクッキーを作り、要求内容に設定します。</p>
 			<h4 data-ref="クッキーへ設定する">HTTPリクエストにクッキー値を設定する</h4>
-			<pre class="code">HTTP要求を作って要求内容とする
-HTTP要求として「Message」という「Hellow」をクッキーへ設定する</pre>
+			<pre class="code">HTTP要求を作ってリクエストとする
+リクエストとして「Message」という「Hellow」をクッキーへ設定する</pre>
 			<h3>【自分】として【クッキー名】という<a name="クッキーを削除する">クッキーを削除する</a></h3>
 			<p>指定した名前のクッキーを要求内容から削除します。</p>
 			<h3>【ヘッダ名】という【値】を【自分】として<a name="ヘッダへ設定する">ヘッダへ設定する</a></h3>
@@ -116,34 +117,38 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 			<h3>【引数名】という【値】を【自分】として<a name="引数へ設定する">引数へ設定する</a></h3>
 			<p>
 				指定した引数名と値の組み合わせを引数として設定します。引数の送信方法は、HTTPメソッドによって異なります。</p>
+			<pre class="code">リクエストとして「プロデル」を「search」という引数へ設定する</pre>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
+                <thead>
 				<tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr>
+                </tr>
+                </thead>
+                <tbody>
 				<tr>
 					<th><a name="文字コード">文字コード</a></th>
 					<th>エンコード</th><th>◎</th><td>HTTP通信で文字列として使用する文字コード</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="本文バイナリ">本文バイナリ</a></th>
 					<th>バイナリ</th><th>◎</th><td>
 						送信する本文をバイナリ形式で指定します。この項目が指定されている場合は「引数」設定項目に指定した内容は送信されません。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="本文">本文</a></th>
 					<th>文字列</th><th>◎</th><td>
 						送信する本文を指定します。この項目が指定されている場合は「引数」設定項目に指定した内容は送信されません。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ContentType">ContentType</a></th>
 					<th>文字列</th><th>◎</th><td>コンテントタイプ</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ヘッダ日時">ヘッダ日時</a></th>
 					<th>日時形式</th><th>◎</th><td>ヘッダの作成日時</td>
@@ -151,73 +156,82 @@ HTTP要求として「Message」という「Hellow」をクッキーへ設定す
 				<tr>
 					<th><a name="メソッド">メソッド</a></th>
 					<th>文字列</th><th>◎</th><td>HTTPメソッドを指定します</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="メディアタイプ">メディアタイプ</a></th>
 					<th>文字列</th><th>◎</th><td>メディアタイプを指定します</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="HTTPプロトコルバージョン">HTTPプロトコルバージョン</a></th>
 					<th>文字列</th><th>◎</th><td>要求に使用するHTTPプロトコルのバージョン</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="読み書きタイムアウト">読み書きタイムアウト</a></th>
 					<th>整数</th><th>◎</th><td>読み書きのタイムアウト時間</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="タイムアウト">タイムアウト</a></th>
 					<th>整数</th><th>◎</th><td>要求してから応答を受け取るまでのタイムアウト時間</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="Referer">Referer</a></th>
 					<th>文字列</th><th>◎</th><td>リファラー</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="UserAgent">UserAgent</a></th>
 					<th>文字列</th><th>◎</th><td>ユーザエージェント</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="Expect">Expect</a></th>
 					<th>文字列</th><th>◎</th><td>Expectヘッダの値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="IfModifiedSince">IfModifiedSince</a></th>
 					<th>日時形式</th><th>◎</th><td>IfModifiedSinceヘッダの値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="TransferEncoding">TransferEncoding</a></th>
 					<th>文字列</th><th>◎</th><td>TransferEncodingヘッダの値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="引数">引数</a></th>
 					<th>辞書</th><th>◎</th><td>
 						送信する引数。「本文バイナリ」または「本文」設定項目が指定されていない場合に有効です。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ヘッダ">ヘッダ</a></th>
 					<th>辞書</th><th>◎</th><td>送信するヘッダ。</td>
-					</tr>
-				</table>
-			</div>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
-<h3 id="sample1">UserAgentを指定してページを要求する</h3>
+<h3 id="sample1">POSTメソッドでページを要求する</h3>
+		<p>フォームの内容をPOSTメソッドでリクエストして、そのレスポンス本文を報告します。</p>
+<pre class="code">HTTP要求を作ってリクエストとする
+リクエストとして「プロデル」を「search」という引数へ設定する
+リクエストにて「https://produ.irelang.jp/cgi/post.php」をHTTPで要求して応答内容とする
+「---応答本文---」を報告する
+応答内容の本文を報告する
+</pre>
+<h3 id="sample2">UserAgentを指定してページを要求する</h3>
 		<p>ユーザエージェントを指定してHTTPでHTMLを取得します。</p>
 <pre class="code">HTTP要求を作って要求内容とする
 要求内容のUserAgentは「Mozilla/5.0」
 要求内容にて「https://www.yahoo.co.jp/」をHTTPで要求して応答内容とする
 応答内容のヘッダのすべての要素についてそれぞれ繰り返す
 	要素のキー&amp;「=」&amp;要素の内容を報告する
-繰り返し終わり
+そして
 応答内容の本文を報告する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月10日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

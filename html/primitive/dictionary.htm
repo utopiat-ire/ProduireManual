@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「辞書」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="基本型">
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「辞書」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -71,7 +71,6 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-
 <div class="row">
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
@@ -86,7 +85,7 @@
 		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
-          <li><a href="../syntax/dictionary.html">辞書の式</a></li>
+          <li><a href="../syntax/dictionary.html">辞書の文法</a></li>
         </ul>
         <p>&nbsp;</p>
 	</div>
@@ -96,7 +95,7 @@
 	<h2>生成する方法</h2>
 		<p>辞書定数式を指定すると、生成できます。</p>
 		<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝</pre>
-		<p>文字列から辞書を生成するには、<a href="string.htm#辞書化">「辞書化」手順</a>を使います。　</p>
+		<p>文字列から辞書を生成するには<a href="string.htm#辞書化">「辞書化」手順</a>を使います。　</p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#削除する">削除する</a>　<a href="#設定する">設定する</a>　<a href="#一括設定する">一括設定する</a>　<a href="#存在する">存在する</a>　<a href="#得る">得る</a>　</div>
@@ -121,15 +120,15 @@
             <h3>【自分】に【キー】が<a name="存在する">存在する</a>：<a href="boolean.htm">真偽値</a></h3>
 			<p>キーが存在するかどうか判定します</p>
 			<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
-もし値段表に「りんご」が存在するなら
+値段表に「りんご」が存在すれば
 	「あります」を表示する
-でなければ
+そうでなければ
 	「ありません」を表示する
-もし終わり</pre>
+そして</pre>
 			<h3>【自分】から【キー】を<a name="得る">得る</a>：<a href="baseobject.htm">基本物</a></h3>
 			<p>キーと同じ要素を取得します</p>
 			<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
-[値段表から「バナナ」を得たもの]を表示する</pre>
+値段表から「バナナ」を得て表示する</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
@@ -143,6 +142,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
@@ -166,7 +166,7 @@
 						<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
 値段表の個数を表示する</pre>
 					</td>
-				</tr>
+				</tr></tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -180,11 +180,12 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th><a href="string.htm">文字列</a></th>
 				<th>←→</th>
 				<td> 「内容」設定項目と同じ</td>
-			</tr>
+			</tr></tbody>
 		</table>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
@@ -203,11 +204,11 @@
         </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年8月7日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

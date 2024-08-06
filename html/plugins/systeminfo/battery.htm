@@ -12,8 +12,8 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="システム情報取得">	<meta name="description" content="日本語プログラミング言語プロデルの「システム情報取得」プラグインの「バッテリ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="システム情報取得">
+    <meta name="description" content="日本語プログラミング言語プロデルの「システム情報取得」プラグインの「バッテリ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -87,7 +87,7 @@
 		<h3>利用プラグイン</h3>
 		<p><a href="index.htm">システム情報取得</a></p>
 	</div>
-	<div class="col-sm-8">
+	<div id="refcontent" class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>ノートパソコンのバッテリ状態を取得するための種類です。</p>
 		<h2 id="設定項目">設定項目</h2>
@@ -98,7 +98,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="残り時間">残り時間</a></th>
 					<th>整数</th>
@@ -125,7 +126,8 @@
 					<td>電源の種類を表します<br>
 						｛バッテリ電源・AC電源・不明｝</td>
 					</tr>
-				</table>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -140,47 +142,47 @@
 	ウィンドウを受け継ぐ
 
 	はじめの手順
-		この実質大きさを｛312，213｝へ変える
-		このタイトルを「バッテリ情報」へ変える
-		この種類を固定に変える
-		この最大化ボタンを×に変える
-		この設計スケール比率を｛96,96｝に変える
+		この実質大きさは｛312，213｝
+		このタイトルは「バッテリ情報」
+		この種類は、固定
+		この最大化ボタンは×
+		この設計スケール比率は｛96,96｝
 		文章テキスト１という文章テキストを作る
-			その位置と大きさを｛50，70，210，100｝へ変える
+			その位置と大きさは｛50，70，210，100｝
 		終了ボタンというボタンを作る
-			その位置と大きさを｛130，180，65，25｝へ変える
-			その内容を「終了」へ変える
+			その位置と大きさは｛130，180，65，25｝
+			その内容は「終了」
 		残量バーというプログレスバーを作る
-			その位置と大きさを｛50，10，210，40｝へ変える
-			その値を0へ変える
-			その最大値は、100
+			その位置と大きさは｛50，10，210，40｝
+			その値は0
+			その最大値は100
 	終わり
 
 	自分を監視開始する手順
 		繰り返せ
 			残量バーの値は、バッテリの残量
-			もしバッテリの残り時間が-1なら
+			バッテリの残り時間が-1なら
 				結果（1）は「残り時間不明」
-			でなければ
-				残り時間は、（バッテリの残り時間/60/60）を切り捨てたもの
-				残り分は、（バッテリの残り時間/60-残り時間*60）を切り捨てたもの
+			そうでなければ
+				（バッテリの残り時間/60/60）を切り捨てて、残り時間とする
+				（バッテリの残り時間/60-残り時間*60）を切り捨てて、残り分とする
 				結果（1）は「［残り時間］:［残り分］」
-			もし終わり
+			そして
 			結果（2）は、バッテリの状態
 			結果（3）は、バッテリの電源
-			文章テキスト１の内容は、内容を改行で繋げたもの
+			内容を改行で繋げて、文章テキスト１の内容を変える
 			1秒待て
-		繰り返し終わり
+		そして
 	終わり
 終わり</pre>
         </div><!--/samples-->
 	</div>
 </div>
-		<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

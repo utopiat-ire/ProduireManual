@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「ネットワーク」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -97,32 +96,32 @@
 			<h3>【自分】で【IPアドレス】を<a name="解決する">解決する</a>：文字列</h3>
 			<p>指定したホスト名をIPアドレスへ変換します。<br>
 				DNSで逆引きされます。</p>
-			<pre class="code">結果は、ネットワークで「8.8.8.8」を解決したもの
+			<pre class="code">ネットワークで「8.8.8.8」を解決して、結果とする
 結果を表示する</pre>
 			<h3>【自分】で【IPアドレス】を<a name="ホスト名へ変換する">ホスト名へ変換する</a>：文字列</h3>
 			<p>指定したIPアドレスからホスト名を取得します。<br>
 				DNSで正引きされます。「解決する」手順と同じ動作をします</p>
 			<h4 data-ref="ホスト名へ変換する">IPアドレスからホスト名を正引きして調べる</h4>
-			<pre class="code">結果は、ネットワークで「66.218.71.80」をホスト名へ変換したもの
+			<pre class="code">ネットワークで「66.218.71.80」をホスト名へ変換して、結果とする
 結果を表示する</pre>
 			<h3>【自分】から【ホスト名】を<a name="IPアドレスへ変換する">IPアドレスへ変換する</a>：文字列</h3>
 			<p>指定したホスト名をIPアドレスへ変換します。<br>
 				DNSで逆引きされます。</p>
 			<h4 data-ref="IPアドレスへ変換する">ホスト名から名前で逆引きしてIPアドレスを調べる</h4>
-			<pre class="code">結果は、ネットワークで「www.yahoo.com」をIPアドレスへ変換したもの
+			<pre class="code">ネットワークで「www.yahoo.com」をIPアドレスへ変換して、結果とする
 結果を表示する</pre>
 			<h3>【自分】から【アドレス】へ<a name="PINGする">PINGする</a>：真偽値</h3>
 			<p>指定したアドレスをPINGを送信します。その結果を表します。<br>
 				なお、サーバによってはPINGが拒否される場合があります</p>
 			<p><a href="../safelock.htm" class="label label-danger">保護あり</a></p>
 			<h4 data-ref="PINGする">サーバへPINGを送信する</h4>
-			<pre class="code">結果は、ネットワークで「www.google.com」へPINGしたもの
+			<pre class="code">ネットワークで「www.google.com」へPINGして、結果とする
 結果を表示する</pre>
 			<h3>【IPアドレス】から<a name="MACアドレスを取得する">MACアドレスを取得する</a>：文字列</h3>
 			<p>指定したIPアドレスのMACアドレスを取得します。<br>
 				ただしMACアドレスは、同じ機器に直接接続されたコンピュータやネットワーク機器のみ取得できます。</p>
 			<h4 data-ref="MACアドレスを取得する">使用中のネットワークアダプタのMACアドレスを取得する</h4>
-			<pre class="code">結果は、ネットワークのIPアドレスからネットワークでMACアドレスを取得したもの
+			<pre class="code">ネットワークのIPアドレスからネットワークでMACアドレスを取得して、結果とする
 結果を表示する</pre>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -136,6 +135,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="ネットワーク利用状態">ネットワーク利用状態</a></th>
 					<th>真偽</th><th>□</th><td>
@@ -170,17 +170,18 @@
 				<tr>
 					<th><a name="MACアドレス">MACアドレス</a></th>
 					<th>文字列</th><th>□</th><td>このコンピュータのネットワークに接続しているネットワークアダプタのMACアドレスを表します</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型,バイナリ">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「バイナリデータ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -127,11 +126,13 @@
 			<p>現在位置から型に合った値を必要なバイト分だけ取得します。<br>
 			  【型】には、次のものが指定できます。<br></p>
 			<table class="table table-bordered">
-			  <tbody>
+                <thead>
 			    <tr>
 			      <th scope="row">型</th>
 			      <th>必要なバイト数</th>
 		        </tr>
+                </thead>
+			  <tbody>
 			    <tr>
 			      <th scope="row">短整数</th>
 			      <td>2</td>
@@ -206,6 +207,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
@@ -230,6 +232,7 @@
 					<th>◎</th>
 					<td>文字を読み書きする場合の文字コード</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -243,12 +246,14 @@
 				<th>説明</th>
 			</tr>
 			</thead>
-			<tr>
+            <tbody>
+            <tr>
 				<th><a href="string.htm">文字列</a></th>
 				<th>←→</th>
 				<td> 「内容」設定項目と同じ</td>
 			</tr>
-		</table>
+            </tbody>   
+        </table>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">バイナリレベルでファイルを作成する</h3>
@@ -281,27 +286,27 @@ Aから3だけ文字列として読み取る
 		<pre class="code">ファイル名は「..\image\document.ico」
 読み込みファイルというバイナリファイルを作る
 読み込みファイルへファイル名を読み取り専用で開く
-ダンプは、読み込みファイルからすべて読み取ったもの
-書込器は、文字列書込器を作ったもの
+読み込みファイルからすべて読み取って、ダンプとする
+文字列書込器を作って、書込器とする
 1からダンプの個数まで数を増やしながら繰り返す
-	（（「00」＆（ダンプ（数）の十六進数））から末尾から2文字取り出したもの）を書込器へ加える
-	もし（数を10で割った余り）が0なら
+	（「00」＆（ダンプ（数）の十六進数））から末尾から2文字取り出して、書込器へ加える
+	（数を10で割った余り）が0なら
 		改行を書込器へ加える
-	でなければ
+	そうでなければ
 		「 」を書込器へ加える
-	もし終わり 
-繰り返し終わり   
+	そして
+そして
 読み込みファイルを閉じる
 書込器の内容を報告する</pre>
 </div><!--/samples-->
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

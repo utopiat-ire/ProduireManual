@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
     <meta name="description" content="日本語プログラミング言語プロデルで圧縮されたファイルの情報を格納するための「ファイル操作」プラグインの「書庫ファイル情報」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -115,6 +114,7 @@
 						<th>　</th>
 						<th>説明</th>
 					</tr></thead>
+                    <tbody>
 					<tr>
 						<th><a name="元ファイルサイズ">元ファイルサイズ</a></th>
 						<th>整数</th><th>□</th><td>
@@ -145,6 +145,7 @@
 						<th>文字列</th><th>□</th><td>
 							ファイルの格納モード</td>
 					</tr>
+                    </tbody>
 				</table>
 			</div>
 			<h2 id="サンプルコード">サンプルコード</h2>
@@ -160,17 +161,17 @@
 		初期化する
 	終わり
 	初期化する手順
-		この実質大きさを｛443,261｝に変える
-		この内容を「書庫ファイル一覧」に変える
+		この実質大きさは｛443,261｝
+		この内容は「書庫ファイル一覧」
 		リストビュー1というリストビューを作る
 			その位置と大きさを｛0,0,443,261｝に変える
-			その表示方法を「詳細」に変える
-			その見出し一覧を｛「ファイル名」,「ファイルサイズ」,「圧縮率」,「属性」,「格納モード」｝に変える
+			その表示方法は「詳細」
+			その見出し一覧は｛「ファイル名」,「ファイルサイズ」,「圧縮率」,「属性」,「格納モード」｝
 			その見出し幅を｛91,92,99,60｝に変える
 			そのタイルサイズを｛0,0｝に変える
-			そのドラッグドロップを○に変える
-			そのドッキング方向を「全体」に変える
-		この設計スケール比率を｛96,96｝に変える
+			そのドラッグドロップは○
+			そのドッキング方向は「全体」
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	リストビュー1がドラッグドロップされた時の手順
@@ -178,18 +179,18 @@
 		一覧（1）を書庫ファイルとして開いて対象書庫とする
 		対象書庫からファイル一覧を取得したもののすべての要素についてそれぞれ繰り返す
 			要素のファイル名をリストビュー１に追加する
-				その詳細を｛要素の元ファイルサイズ,要素の圧縮率,要素の属性,要素の格納モード｝に変える
-		繰り返し終わり
+				その詳細は｛要素の元ファイルサイズ,要素の圧縮率,要素の属性,要素の格納モード｝
+		そして
 	終わり
 終わり</pre>
 </div><!--/samples-->
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

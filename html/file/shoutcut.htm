@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルでショートカットファイルを操作するための「ファイル操作」プラグインの「ショートカットファイル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -100,7 +99,7 @@
 			<pre class="code">ショートカットファイル：「notepad.exe」を「メモ帳」として「notepad.exe」で「[デスクトップ]テスト.lnk」へ作成する</pre>
 			<h3>【自分】として【ファイル名】を<a name="開く">開く</a>：ショートカットファイル</h3>
 			<p>ショートカットファイルを開きます。</p>
-			<pre class="code">ショートカットは「ショートカット.lnk」を開いたもの
+			<pre class="code">「ショートカット.lnk」を開いて、ショートカットとする
 ショートカットのリンク先を表示する</pre>
 			<h3>【自分】を【ファイル名】へ<a name="保存する">保存する</a></h3>
 			<p>ショートカットファイルを保存します。</p>
@@ -109,12 +108,15 @@
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
+                <thead>
 				<tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
 				</tr>
+                </thead>
+                <tbody>
 				<tr>
 					<th><a name="リンク先">リンク先</a></th>
 					<th>文字列</th>
@@ -158,6 +160,7 @@
 					<td>プログラムのウィンドウの初期状態<br>
 					｛標準,最大化,最小化｝</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -185,37 +188,37 @@
 		ボタン表示する
 	終わり
 	初期化する手順
-		この内容を「スタートップ登録ツール」に変える
+		この内容は「スタートップ登録ツール」
 		切り替えボタンというボタンを作る
-			その位置と大きさを｛63,26,140,55｝に変える
-			その内容を「ボタン」に変える
-			そのドラッグドロップを×に変える
+			その位置と大きさは｛63,26,140,55｝
+			その内容は「ボタン」
+			そのドラッグドロップは×
 	終わり
 	ボタン表示する手順
-		もしショートカット場所というファイルが存在するなら
-			切り替えボタンの内容を「解除する」に変える
+		ショートカット場所というファイルが存在すれば
+			切り替えボタンの内容は「解除する」
 		そうでなければ
-			切り替えボタンの内容を「登録する」に変える
-		もし終わり
+			切り替えボタンの内容は「登録する」
+		そして
 	終わり
 
 	切り替えボタンがクリックされた時の手順
-		もしショートカット場所というファイルが存在するなら
+		ショートカット場所というファイルが存在すれば
 			ショートカット場所を削除する
 		そうでなければ
 			ショートカットファイル：アプリ場所をアプリ名としてアプリ場所でショートカット場所へ作成する
-		もし終わり
+		そして
 		ボタン表示する
 	終わり
 終わり</pre>
             </div><!--/samples-->
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

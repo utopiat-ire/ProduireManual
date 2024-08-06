@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="FTP">	<meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「簡易FTPクライアント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -128,7 +127,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="サーバ名">サーバ名</a></th>
 					<th>文字列</th>
@@ -170,31 +170,34 @@
 					<th>真偽</th>
 					<th>◎</th>
 					<td>SSL通信を有効にするかどうか</td>
-					</tr>
-				</table>
-			</div>
-		<h2>実行される手順</h2>
-		<table class="table table-bordered">
-			<tr>
-				<th>手順名</th>
-				<th>説明</th>
-				<th>情報</th>
-				</tr>
-			</table>
+                </tr>
+				<tr>
+				        <th><a name="バイナリモード">バイナリモード</a></th>
+				        <th>真偽値</th>
+				        <th>◎</th>
+				        <td>バイナリモードで転送するかどうか(偽の場合ASCIIモードで転送されます)</td>
+				        </tr>
+				<tr>
+				        <th><a name="パッシブモード">パッシブモード</a></th>
+				        <th>真偽値</th>
+				        <th>◎</th>
+				        <td>パッシブモードで接続するかどうか</td>
+				        </tr>
+                </tbody>
+            </table>
+		</div>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
         <div id="samples">
           <h3 id="sample1">FTPでファイルをアップロード・ダウンロードする</h3>
           <p>FTPサーバへ接続して、ファイルをアップロード・ダウンロードします。</p>
-          
-          
           <pre class="code">FTPという簡易FTPクライアントを作る
 FTPのサーバ名は「ftpserver.com」
 FTPのユーザ名は「username」
 FTPのパスワードは「password」
 
 FTPを接続させる
-一覧は、FTPで「/public_html/」からファイル詳細一覧を取得したもの
+FTPで「/public_html/」からファイル詳細一覧を取得して、一覧とする
 一覧を報告する
 FTPで「picture.png」を「/public_html/picture.png」へアップロードする
 FTPで「/public_html/picture.png」を「[プログラムのフォルダ]download.png」へダウンロードする
@@ -204,11 +207,11 @@ FTPを切断させる</pre>
           <p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

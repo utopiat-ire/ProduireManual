@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="刷毛,ブラシ">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「グラデーションブラシ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -111,25 +110,26 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="開始色">開始色</a></th>
 					<th>色情報</th>
 					<th>◎</th>
 					<td>2色グラデーションの場合、はじまりの色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="終了色">終了色</a></th>
 					<th>色情報</th>
 					<th>◎</th>
 					<td>2色グラデーションの場合、終わりの色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="色一覧">色一覧</a></th>
 					<th>色の配列</th>
 					<th>◎</th>
 					<td>多色グラデーションの場合、構成する色の一覧<br>
 						要素数は、2つ以上で、位置一覧の要素数と揃える必要があります。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="位置一覧">位置一覧</a></th>
 					<th>数値の配列</th>
@@ -137,19 +137,20 @@
 					<td>多色グラデーションの場合、構成する色が中心となる位置を割合で指定した一覧<br>
 						0から1までの範囲で指定します。<br>
 						要素数は、2つ以上で、色一覧の要素数と揃える必要があります。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ガンマ補正">ガンマ補正</a></th>
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>グラデーションを作成するときにガンマ補正するかどうか</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="角度">角度</a></th>
 					<th>数値</th>
 					<th>◎</th>
 					<td>グラデーションを変化させる方向</td>
-					</tr>
+                </tr>
+				</tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -160,17 +161,17 @@
 刷毛Bというグラデーションブラシを作る
 刷毛Bの色一覧は{赤,オレンジ,黄色,緑,水色,青,紫}
 刷毛Bの位置一覧は{0,0.14,0.28,0.42,0.56,0.7,1}
-刷毛Bのガンマ補正は、○
+刷毛Bのガンマ補正は○
 刷毛Cというグラデーションブラシを作る
 刷毛Cの色一覧は{オレンジ,黄色}
 刷毛Cの位置一覧は{0,1}
-刷毛Cの角度は、-90
+刷毛Cの角度は-90
 
 窓というウィンドウを作る
 	そのタイトルは「グラデーションブラシ」
 	その大きさは｛500,500｝
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ四角形を描く
@@ -182,18 +183,18 @@
 キャンバス1へ「プロデル」という文字を描く
 	その位置は｛160,50｝
 	その文字刷毛は、刷毛C
-	その文字サイズを20に変える
+	その文字サイズは20
 
 キャンバス1を更新する
 待機する</pre>
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

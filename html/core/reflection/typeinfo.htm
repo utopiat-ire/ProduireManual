@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="リフレクション"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -145,23 +144,24 @@
 					<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="名前">名前</a></th>
 					<th>文字列</th>
 					<th>◎</th>
 					<td>種類名</td>
-					</tr>
-				
-				</table>
-			</div>
+                </tr>
+				</tbody>
+            </table>
+        </div>
 		
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 		<h3 id="sample1">変数の取得と設定</h3>
 		<p>「型情報を取得する」手順を使って、インスタンスから型情報を取得できます。このプログラムでは「車」種類のインスタンスで「名前」変数へ「くるま」と代入して、その後、内容を取得します。</p>
 <pre class="code">くるまという車を作る
-タイプは、くるまから型情報を取得したもの
-F=タイプから「名前」という変数情報を取得したもの
+くるまから型情報を取得して、タイプとする
+タイプから「名前」という変数情報を取得して、Fとする
 くるまでFへ「くるま」を設定する
 くるまからFを取得して報告する
 
@@ -180,10 +180,10 @@ F=タイプから「名前」という変数情報を取得したもの
 くるまの名前は「はなこ」
 くるまのナンバーは「す1231」
 くるまの色は「白」
-車タイプは、くるまから型情報を取得したもの
+くるまから型情報を取得して、車タイプとする
 車タイプから変数一覧を取得したもののすべての【変数要素】についてそれぞれ繰り返す
 	「　[変数要素の名前]:[くるまから変数要素を取得したもの]」を報告する
-繰り返し終わり
+そして
 
 車とは
 	+名前
@@ -197,11 +197,11 @@ F=タイプから「名前」という変数情報を取得したもの
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

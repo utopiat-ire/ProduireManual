@@ -12,7 +12,6 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「XML」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -111,9 +110,9 @@
 			<h3>【自分】として【ファイル名】を<a name="開く">開く</a>：XML文章</h3>
 			<p>XMLファイルを読み込みます。<br>
 				ファイル名には、インターネットアドレス(URL)を指定することもできます。</p>
-			<pre class="code">データは「［プログラムの位置］くだもの.xml」をXMLとして開いたもの
+			<pre class="code">「［プログラムの位置］くだもの.xml」をXMLとして開いて、データとする
 データのルート要素名を表示する</pre>
-			<pre class="code">データは「https://rdr.utopiat.net/update.xml」をXMLとして開いたもの
+			<pre class="code">「https://produ.irelang.jp/update.xml」をXMLとして開いて、データとする
 データのルート要素名を表示する</pre>
 			<p>&nbsp;</p>
 			<h3>【自分】として【ファイル名】から<a name="読み込む">読み込む</a>：XML文章</h3>
@@ -123,7 +122,7 @@
 			<h3>【自分】で〈【XML】から〉<a name="作成する">作成する</a>：XML文章</h3>
 			<p>XML文章を作成します。<br>
 				“【XML】から”には、XML文字列を指定できます。</p>
-			<pre class="code">データは、XMLで「&lt;xml&gt;&lt;/xml&gt;」から作成したもの
+			<pre class="code">XMLで「&lt;xml&gt;&lt;/xml&gt;」から作成して、データとする
 データのルート要素名を表示する</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -135,12 +134,14 @@
 					<th>　</th>
 					<th>説明</th>
 				</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="検証">検証</a></th>
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>XMLに含まれるDTDまたはスキーマ定義を検証するかどうか</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -166,7 +167,7 @@ XML文章を作って、データとする
 果物へ「名前」という要素を作って名前とする
 名前の内容は「りんご」
 果物へ「値段」という要素を作って値段とする
-値段の内容は、80
+値段の内容は80
 値段へ「単位」という属性を作って単位とする
 単位の内容は「円」
 
@@ -175,13 +176,13 @@ XML文章を作って、データとする
 		<h3 id="sample2">XMLから同じ名前の要素をすべて取り出す</h3>
 		<pre class="code">データは「［プログラムの位置］くだもの.xml」からXMLとして読み込んだもの
 
-果物一覧は、データから「果物一覧\果物」を取得したもの
+データから「果物一覧\果物」を取得して、果物一覧とする
 果物一覧を要素へそれぞれ繰り返す
 	「［要素の「名前」の内容］:［要素の「値段」の内容］［要素の「値段」の「単位」の内容］」を表示する
-繰り返し終わり</pre>
+そして</pre>
         <h3 id="createxml">XML文章を作る</h3>
         <p>XMLファイルを作成するには「XML文章」種類を使います。XML種類を作るには、次のように書きます。</p>
-        <pre class="code">XMLデータは、XML文章を作ったもの</pre>
+        <pre class="code">XML文章を作って、XMLデータとする</pre>
         <h3 id="addelement">要素を加える</h3>
         <p>XML文章には、XML要素を入れられます。XML文章に、XML要素を加えるには「XML文章」種類の「作る」手順を使います。</p>
         <div class="panel panel-default">
@@ -189,9 +190,9 @@ XML文章を作って、データとする
             <h4 class="panel-title">書式</h4>
           </div>
           <div class="panel-body">
-            <pre class="format"><span class="flag">【加える先のXML文章】</span>へ<span class="flag">【要素名】</span>という要素を作る</pre>
-            <p>【XML文章】には、要素を加えるXML文章を書きます。<br>
-              【要素名】には、XML文章に加える要素の名前を書きます。<br>
+            <pre class="format"><strong>《加える先のXML文章》</strong>へ<strong>《要素名》</strong>という要素を作る</pre>
+            <p>《XML文章》　要素を加えるXML文章を書きます。<br>
+              《要素名》　XML文章に加える要素の名前を書きます。<br>
               「作る」手順は、実行結果として、新しく作ったXML要素を表します。</p>
           </div>
         </div>
@@ -201,7 +202,7 @@ XML文章を作って、データとする
           </div>
           <div class="panel-body">
             <p>例えば、XML文章に、&lt;果物一覧&gt;　という要素を加えるには、次のように書きます。</p>
-            <pre class="code">果物一覧は、データへ「果物一覧」という要素を作ったもの</pre>
+            <pre class="code">データへ「果物一覧」という要素を作って、果物一覧とする</pre>
           </div>
         </div>
         <h3 id="childelement">要素の中に要素を加える</h3>
@@ -211,7 +212,7 @@ XML文章を作って、データとする
             <h4 class="panel-title">書式</h4>
           </div>
           <div class="panel-body">
-            <pre class="format"><span class="flag">【加える先のXML要素】</span>へ<span class="flag">【要素名】</span>という要素を作る</pre>
+            <pre class="format"><strong>《加える先のXML要素》</strong>へ<strong>《要素名》</strong>という要素を作る</pre>
             <p>【加える先のXML要素】には、要素を加えるXML要素を書きます。<br>
               【要素名】には、XML要素に加える要素の名前を書きます。<br>
               「作る」手順は、実行結果として、新しく作ったXML要素を表します。</p>
@@ -223,7 +224,7 @@ XML文章を作って、データとする
           </div>
           <div class="panel-body">
             <p>例えば、XML要素に、&lt;果物&gt;　という要素を加えるには、次のように書きます。</p>
-            <pre class="code">果物は「果物」という要素を果物一覧へ作ったもの</pre>
+            <pre class="code">「果物」という要素を果物一覧へ作って、果物とする</pre>
           </div>
         </div>
         <h3>要素の中に属性を設定する</h3>
@@ -233,9 +234,9 @@ XML文章を作って、データとする
             <h4 class="panel-title">書式</h4>
           </div>
           <div class="panel-body">
-            <pre class="format"><span class="flag">【XML要素】</span>へ<span class="flag">【属性名】</span>という属性を作る</pre>
-            <p>【XML要素】には、属性を設定するXML要素を書きます。<br>
-              【属性名】には、XML要素に加える要素の名前を書きます。<br>
+            <pre class="format"><strong>《XML要素》</strong>へ<strong>《属性名》</strong>という属性を作る</pre>
+            <p>《XML要素》　属性を設定するXML要素を書きます。<br>
+              《属性名》　XML要素に加える要素の名前を書きます。<br>
               「作る」手順は、実行結果として新しく作ったXML要素を表します。</p>
           </div>
         </div>
@@ -245,7 +246,7 @@ XML文章を作って、データとする
           </div>
           <div class="panel-body">
             <p>例えば、値段というXML要素に「単位」という属性を作り、その属性の内容を「円」とするには、次のように書きます。</p>
-            <pre class="code">単位は、値段へ「単位」という属性を作ったもの
+            <pre class="code">値段へ「単位」という属性を作って、単位とする
 単位の内容は「円」</pre>
           </div>
         </div>
@@ -256,8 +257,8 @@ XML文章を作って、データとする
             <h4 class="panel-title">書式</h4>
           </div>
           <div class="panel-body">
-            <pre class="format"><span class="flag">【保存先のXMLファイル名】</span>に<span class="flag">【XML文章】</span>を保存する</pre>
-            <p>【保存先のXMLファイル名】には、XMLファイルの保存先のフォルダとファイル名を書きます。<br>
+            <pre class="format"><strong>《保存先のXMLファイル名》</strong>に<strong>《XML文章》</strong>を保存する</pre>
+            <p>《保存先のXMLファイル名》　XMLファイルの保存先のフォルダとファイル名を書きます。<br>
               【XML文章】には、XMLファイルとして保存するXML文章を書きます。</p>
           </div>
         </div>
@@ -267,24 +268,24 @@ XML文章を作って、データとする
           </div>
           <div class="panel-body">
             <pre class="code">ーーXMLを初期化
-データは、XML文章を作ったもの
+XML文章を作って、データとする
 
 ーー&lt;果物一覧&gt;タグを挿入する
-果物一覧は、データへ「果物一覧」という要素を作ったもの
-果物は「果物」という要素を果物一覧へ作ったもの
-名前は、果物へ「名前」という要素を作ったもの
+データへ「果物一覧」という要素を作って、果物一覧とする
+「果物」という要素を果物一覧へ作って、果物とする
+果物へ「名前」という要素を作って、名前とする
 名前の内容は「みかん」
-値段は、果物へ「値段」という要素を作ったもの
+果物へ「値段」という要素を作って、値段とする
 値段の内容は、50
-単位は、値段へ「単位」という属性を作ったもの
+値段へ「単位」という属性を作って、単位とする
 単位の内容は「円」
 
-果物は「果物」という要素を果物一覧へ作ったもの
-名前は、果物へ「名前」という要素を作ったもの
+「果物」という要素を果物一覧へ作って、果物とする
+果物へ「名前」という要素を作って、名前とする
 名前の内容は「りんご」
-値段は、果物へ「値段」という要素を作ったもの
-値段の内容は、80
-単位は、値段へ「単位」という属性を作ったもの
+果物へ「値段」という要素を作って、値段とする
+値段の内容は80
+値段へ「単位」という属性を作って、単位とする
 単位の内容は「円」
 
 ーーXMLに書き出す
@@ -299,8 +300,8 @@ XML文章を作って、データとする
             <h4 class="panel-title">書式</h4>
           </div>
           <div class="panel-body">
-            <pre class="format"><span class="flag">【XMLファイル名】</span>からXMLとして読み込む</pre>
-            <p>【XMLファイル名】には、読み込むXMLファイルがあるフォルダとファイル名を書きます。</p>
+            <pre class="format"><strong>《XMLファイル名》</strong>からXMLとして読み込む</pre>
+            <p>《XMLファイル名》には、読み込むXMLファイルがあるフォルダとファイル名を書きます。</p>
           </div>
         </div>
         <p>例えば「くだもの.xml」を読み込んで、その内容を「データ」変数に格納するには、次のように書きます。</p>
@@ -310,23 +311,23 @@ XML文章を作って、データとする
             <h4 class="panel-title">例文　XMLから同じ名前の要素をすべて取り出す</h4>
           </div>
           <div class="panel-body">
-            <pre class="code">データは「［プログラムの位置］くだもの.xml」からXMLとして読み込んだもの
+            <pre class="code">「［プログラムの位置］くだもの.xml」からXMLとして読み込んで、データとする
 
-果物一覧は、データから「果物一覧\果物」を取得したもの
+データから「果物一覧\果物」を取得して、果物一覧とする
 果物一覧を要素へそれぞれ繰り返す
 	「［要素の「名前」］:［要素の「値段」］［要素の「値段」の「単位」］」を表示する
-繰り返し終わり</pre>
+そして</pre>
           </div>
         </div>
         <p>&nbsp;</p>
 		</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

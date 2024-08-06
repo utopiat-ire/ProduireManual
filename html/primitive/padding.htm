@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「内余白」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -99,6 +98,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="余白">余白</a></th>
 					<th>整数の配列</th>
@@ -151,8 +151,9 @@
 				  <th><a name="内容">内容</a></th>
 				  <th>文字列</th>
 				  <th>◎</th>
-				  <td><span style="height: 40px">{左,上,右,下}</span>の文字列表記</td>
+				  <td>{左,上,右,下}の文字列表記</td>
 			  </tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -166,6 +167,7 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th style="height: 40px"><a href="string.htm">文字列</a></th>
 				<th style="height: 40px">←</th>
@@ -176,19 +178,41 @@
 				<th>←→</th>
 				<td> {左,上,右,下}</td>
 			</tr>
+            </tbody>
 		</table>
 		<h2 id="サンプルコード">サンプルコード</h2>
-		<p>&nbsp;</p>
-		
-		
-		<pre class="code" id="prg">&nbsp;</pre>
-	</div>
+<div id="samples">
+<h3 id="sample1">部品に余白を指定する</h3>
+		<pre class="code" id="prg">メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーー貼り付けた部品に対する操作をここに書きます
+	終わり
+	初期化する手順
+		ーー自動生成された手順です。ここに書き加えたプログラムは消える可能性があります
+		初期化開始する
+		この実質大きさは｛428,394｝
+		この内容は「メイン画面」
+		この文字色は「標準の文字」
+		オプション1というオプションを作る
+			その位置と大きさは｛116,132,208,81｝
+			その内容は「オプション1」
+			その余白は｛30｝
+		初期化終了する
+		この設計スケール比率は｛144,144｝
+	終わり
+終わり</pre>
+        </div>
+        </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

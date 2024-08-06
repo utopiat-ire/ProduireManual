@@ -12,7 +12,6 @@
 	<script src="../../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -105,33 +104,22 @@
 	<h2>作成する方法</h2>
 		<pre class="format">【名前】というボタン列部品を作る</pre>
 		<h2 id="手順">手順</h2>
-		<p>部品から<a href="../gridcolumn.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<p>部品から<a href="../gridcolumn.htm#手順">継承される手順</a>が使用できます。</p>
 		<div id="methodlist"></div>
 		<div id="methods"> </div>
 		<h2 id="設定項目">設定項目</h2>
-		<p><a href="../gridcolumn.htm#設定項目">継承された設定項目</a>のほか、次の設定項目があります。</p>
+		<p><a href="../gridcolumn.htm#設定項目">継承された設定項目</a>があります。</p>
 		<div id="properties">
-			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>　</th>
-					<th>説明</th>
-					</tr></thead>
-				<tr>
-					<th>&nbsp;</th><th>&nbsp;</th><td>&nbsp;</td>
-					</tr>
-				</table>
-			<p class="usage"><a href="../../../usage.htm">記号の意味</a></p>
+		        <p class="usage"><a href="../../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">表部品にボタンのセルを作る</h3>
 		<p>表部品にボタンのセルを表示します。</p>
-<pre class="code">
-データというデータ表を作る
+<pre class="code">データというデータ表を作る
 データに{「サイト名」,「アドレス」}という列を加える
-データへ｛「サイト名」=「プロデル」,「アドレス」=「https://rdr.utopiat.net/」｝を加える
-データへ｛「サイト名」=「スミレ」,「アドレス」=「https://sumire.utopiat.net/play/」｝を加える
+データへ｛「サイト名」=「プロデル」,「アドレス」=「https://produ.irelang.jp/」｝を加える
+データへ｛「サイト名」=「スミレ」,「アドレス」=「https://sum.irelang.jp/play/」｝を加える
 
 メイン画面を表示する
 待機する
@@ -143,32 +131,32 @@
 		初期化する
 		サイト名列というテキストボックス列部品を作る
 		サイト名列のデータ列名は「サイト名」
-		サイト名列の幅は、250
+		サイト名列の幅は250
 		表部品1にサイト名列を加える
 		アドレス列というボタン列部品を作る
 		アドレス列のボタン名は「移動」
 		アドレス列の見出しは「アドレス」
 		アドレス列のデータ列名は「アドレス」
-		アドレス列の見出し統一は、○
+		アドレス列の見出し統一は○
 		表部品1にアドレス列を加える
-		表部品1のデータ表をデータに変える
+		表部品1のデータ表は、データ
 	終わり
 	初期化する手順
-		この実質大きさを｛442,296｝に変える
-		この内容を「画像列部品のサンプル」に変える
+		この実質大きさは｛442,296｝
+		この内容は「画像列部品のサンプル」
 		初期化開始する
 		確認ボタンというボタンを作る
-			その位置と大きさを｛27,259,130,29｝に変える
-			その内容を「確認」に変える
-			その移動順を1に変える
+			その位置と大きさは｛27,259,130,29｝
+			その内容は「確認」
+			その移動順は1
 		表部品1という表部品を作る
 		表部品1を初期化開始する
-			その位置と大きさを｛12,18,418,222｝に変える
-			その移動順を3に変える
-			その位置固定方向を「上+下+左+右」に変える
+			その位置と大きさは｛12,18,418,222｝
+			その移動順は3
+			その位置固定方向は「上+下+左+右」
 		表部品1を初期化終了する
 		初期化終了する
-		この設計スケール比率を｛144,144｝に変える
+		この設計スケール比率は｛144,144｝
 終わり
 
 	確認ボタンがクリックされた時の手順
@@ -177,19 +165,19 @@
 	終わり
 	表部品1のセル部品がクリックされた時の手順
 		対象セルは、この時のセル
-		もし対象セルが無なら返す
-		対象行=データの(対象セルの行番号)行目を取得したもの
-		対象行の(対象セルの列番号)列目を取得したものを開く
+		対象セルが無なら返す
+		データの(対象セルの行番号)行目を取得して、対象行とする
+		対象行の(対象セルの列番号)列目を取得して開く
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../../js/jquery-1.12.4.min.js"></script>

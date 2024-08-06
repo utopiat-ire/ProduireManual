@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="文法,プロデルの文法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -176,6 +175,7 @@
 <li><a href="..\core\math.htm#四捨五入">小数点4桁目で四捨五入する</a></li>
 <li><a href="..\core\math.htm#切り捨てる">値を切り捨てる</a></li>
 <li><a href="..\core\math.htm#切り上げる">小数部を切り上げる</a></li>
+<li><a href="..\core\math.htm#切り上げる">小数部を丸める</a></li>
 <li><a href="..\core\math.htm#絶対値">絶対値を求める</a></li>
 <li><a href="..\core\math.htm#対数">対数を求める</a></li>
 <li><a href="..\core\math.htm#平方根">平方根を求める</a></li>
@@ -270,7 +270,7 @@
 <li><a href="..\core\reflection\defdverb.htm#sample1">手順定義を取得する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>変数定義</h3><ul>
-<li><a href="..\core\reflection\defvar.htm#sample1"></a></li>
+<li><a href="..\core\reflection\defvar.htm#sample1">種類に含まれる変数を列挙する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>ドットネットアセンブリ</h3><ul>
 <li><a href="..\core\reflection\dotnetassembly.htm#sample1">.NET向けライブラリのクラスを利用する</a></li>
@@ -298,7 +298,7 @@
 <li><a href="..\corelib\process.htm#起動して待つ">プログラムを起動して終了するまで待機する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>プロセス基本</h3><ul>
-<li><a href="..\corelib\processstatic.htm#sample1">起動したアプリを操作する</a></li>
+<li><a href="..\corelib\processstatic.htm#sample1">起動したアプリの特定の画面で自動入力させる</a></li>
 <li><a href="..\corelib\processstatic.htm#開く">ファイルを関連付けられたアプリで開く</a></li>
 <li><a href="..\corelib\processstatic.htm#起動する">外部プログラムを起動する</a></li>
 <li><a href="..\corelib\processstatic.htm#起動して待つ">プログラムを起動して終了するまで待機する</a></li>
@@ -594,6 +594,10 @@
 <li><a href="..\office\cell.htm#重複を削除する">セル範囲から重複する行を削除する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>エクセル</h3><ul>
+<li><a href="..\office\excel.htm#プレビューする">ブックを印刷プレビューする</a></li>
+<li><a href="..\office\excel.htm#印刷する">ブックを印刷する</a></li>
+<li><a href="..\office\excel.htm#新規文書を作成する">エクセルを起動して新規作成する</a></li>
+<li><a href="..\office\excel.htm#開く">既存のブックを開く</a></li>
 <li><a href="..\office\excel.htm#ブックを追加する">ブックを作成する</a></li>
 <li><a href="..\office\excel.htm#PDFで保存する">ブックをPDF形式で保存する</a></li>
 <li><a href="..\office\excel.htm#XPSで保存する">ブックをXPS形式で保存する</a></li>
@@ -607,8 +611,10 @@
 <div class="col-md-6"><h3>パワーポイント</h3><ul>
 <li><a href="..\office\powerpoint.htm#sample1">PowerPointを起動してスライドを開く</a></li>
 <li><a href="..\office\powerpoint.htm#sample2">自動的にスライドを切り替える</a></li>
-<li><a href="..\office\powerpoint.htm#PDFで保存する">ブックをPDF形式で保存する</a></li>
-<li><a href="..\office\powerpoint.htm#XPSで保存する">ブックをXPS形式で保存する</a></li>
+<li><a href="..\office\powerpoint.htm#新規文書を作成する">パワーポイントを起動して新規作成する</a></li>
+<li><a href="..\office\powerpoint.htm#開く">既存の発表資料を開く</a></li>
+<li><a href="..\office\powerpoint.htm#PDFで保存する">発表資料をPDF形式で保存する</a></li>
+<li><a href="..\office\powerpoint.htm#XPSで保存する">発表資料をXPS形式で保存する</a></li>
 <li><a href="..\office\powerpoint.htm#エクスポートする">スライドを画像ファイルで保存する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>パワーポイント図形</h3><ul>
@@ -618,8 +624,11 @@
 <li><a href="..\office\slide.htm#sample1">新しいスライドを追加する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>ワード</h3><ul>
-<li><a href="..\office\word.htm#PDFで保存する">ブックをPDF形式で保存する</a></li>
-<li><a href="..\office\word.htm#XPSで保存する">ブックをXPS形式で保存する</a></li>
+<li><a href="..\office\word.htm#新規文書を作成する">ワードを起動して新規作成する</a></li>
+<li><a href="..\office\word.htm#開く">既存のワード文書を開く</a></li>
+<li><a href="..\office\word.htm#新規文書を作成する">ワード文書を新規作成する</a></li>
+<li><a href="..\office\word.htm#PDFで保存する">ワード文書をPDF形式で保存する</a></li>
+<li><a href="..\office\word.htm#XPSで保存する">ワード文書をXPS形式で保存する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>ワード選択範囲</h3><ul>
 <li><a href="..\office\wordselection.htm#sample1">カーソル位置に指定した書式で文字を追加する</a></li>
@@ -635,6 +644,7 @@
 <li><a href="..\office\workbook.htm#XPSで保存する">ブックをXPS形式で保存する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>シート</h3><ul>
+<li><a href="..\office\worksheet.htm#sample1">選択したワークシートの内容を出力するには</a></li>
 <li><a href="..\office\worksheet.htm#コピーする">シートをコピーする</a></li>
 <li><a href="..\office\worksheet.htm#後へ移動する">シートの順番を移動する</a></li>
 <li><a href="..\office\worksheet.htm#PDFで保存する">シートをPDFで保存する</a></li>
@@ -688,7 +698,7 @@
 <div class="col-md-6"><h3>連続線図形</h3><ul>
 <li><a href="..\pgraphics\canvas\canvaslines.htm#sample1">連続線を描く</a></li>
 </ul></div>
-<div class="col-md-6"><h3>扇図形</h3><ul>
+<div class="col-md-6"><h3>扇形図形</h3><ul>
 <li><a href="..\pgraphics\canvas\canvaspie.htm#sample1">扇を描く</a></li>
 </ul></div>
 <div class="col-md-6"><h3>多点図形</h3><ul>
@@ -722,7 +732,7 @@
 <li><a href="..\pgraphics\effect\hlsfilter.htm#sample1">画像の色相・彩度・輝度を調整する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>画像フィルタ</h3><ul>
-<li><a href="..\pgraphics\effect\imagefilter.htm#sample1"></a></li>
+<li><a href="..\pgraphics\effect\imagefilter.htm#sample1">基本フィルタを使って画像の明るさを調整する</a></li>
 </ul></div>
 <div class="col-md-6"><h3>モザイクフィルタ</h3><ul>
 <li><a href="..\pgraphics\effect\mosaicfilter.htm#sample1">画像をモザイク化する</a></li>
@@ -981,6 +991,8 @@
 <li><a href="..\wincontrol\cursor.htm#クリックさせる">擬似的にクリックさせる</a></li>
 <li><a href="..\wincontrol\cursor.htm#ダブルクリックさせる">擬似的にダブルクリックさせる</a></li>
 <li><a href="..\wincontrol\cursor.htm#右クリックさせる">擬似的に右クリックさせる</a></li>
+<li><a href="..\wincontrol\cursor.htm#クリックさせる">擬似的にマウスボタンを押したままにさせる</a></li>
+<li><a href="..\wincontrol\cursor.htm#クリックさせる">擬似的にドラッグさせる</a></li>
 <li><a href="..\wincontrol\cursor.htm#ホイール回転させる">擬似的にマウスホイールを回転させる</a></li>
 <li><a href="..\wincontrol\cursor.htm#チルトさせる">擬似的にマウスをチルトさせる</a></li>
 </ul></div>
@@ -1124,7 +1136,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

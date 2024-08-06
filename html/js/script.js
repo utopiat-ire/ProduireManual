@@ -1,7 +1,4 @@
 $(function () {
-	//$('.refsidebar').addClass('col-sm-offset-1 col-sm-push-8');
-	//$('.refcontent').addClass('col-sm-pull-4');
-
 	var head1 = $('ul.breadcrumb[data-category]');
 	if (head1.length > 0) {
 		var target = $('#cat_' + head1.data('category'));

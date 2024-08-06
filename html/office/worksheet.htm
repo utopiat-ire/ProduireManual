@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Excel」を操作する「シート」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -111,7 +110,7 @@
 			通常は、ウィンドウの下のタブで切り替えられます。</p>
 <h2>シートの切り替え</h2>
 		<p>シートは、シートの名前か番号で指定できます。</p>
-		<pre class="format">エクセルのワークシートを<span class="flag">【ワークシート名または番号】</span>に変える</pre>
+		<pre class="format">エクセルのワークシートは、<strong>【ワークシート名または番号】</strong></pre>
 		<p>番号で指定する場合は、一番左のシートを1とします。シート名で指定する場合は「ブック」種類の「ワークシート一覧」設定項目の一覧にあるものを指定します。</p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順を利用できます。</p>
@@ -120,7 +119,10 @@
 			<h3>自分を〈【コピー先】へ〉<a name="コピーする">コピーする</a></h3>
 			<p>シートを【コピー先】のシートの後ろへコピーします。コピー先を省略すると、このシートの後にコピーされます。</p>
 			<h4 data-ref="コピーする">シートをコピーする</h4>
-			<pre class="code">エクセルの選択シートをコピーする<br>その名前を「Sheet2」に変える<br>エクセルの選択シートを「Sheet2」へコピーする<br>その名前を「Sheet3」に変える<br></pre>
+			<pre class="code">エクセルの選択シートをコピーする
+    その名前は「Sheet2」
+エクセルの選択シートを「Sheet2」へコピーする
+    その名前は「Sheet3」</pre>
 			<h3>自分を<a name="すべて選択する">すべて選択する</a></h3>
 			<p>セルをすべて選択します</p>
 			<h3>｛【横】,【縦】｝の<a name="セル">セル</a>:<a href="cell.htm">セル</a></h3>
@@ -177,11 +179,30 @@ Pの位置は(Wの現在シート:セル({「B2」}))の座標</pre>
 		  <h3>自分で【行番号】を<a name="行選択する">行選択する</a>:<a href="cell.htm">セル</a></h3>
           <p>指定した番号の行全体を選択します</p>
           <h4 data-ref="行選択する">シートの行を全体を選択する</h4>
-          <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50},<br>	{4,100,10},<br>	{5,120,30},<br>	{6,130,20}<br>}<br>Wの現在シートで「3」を行選択する<br>それを削除する</pre>
+          <pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+Wの現在シートの一覧は{{「A」,「B」,「C」},
+	{1,100,20},
+	{2,130,30},
+	{3,90,50},
+	{4,100,10},
+	{5,120,30},
+	{6,130,20}
+}
+Wの現在シートで「3」を行選択する
+それを削除する</pre>
           <h3>自分で【列番号/列名】を<a name="列選択する">列選択する</a>:<a href="cell.htm">セル</a></h3>
           <p>指定した列の全体を選択します。</p>
           <h4 data-ref="列選択する">シートの列を全体を選択する</h4>
-          <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50}<br>}<br>Wの現在シートで「B」を列選択する<br>それを削除する</pre>
+          <pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+Wの現在シートの一覧は{{「A」,「B」,「C」},
+	{1,100,20},
+	{2,130,30},
+	{3,90,50}
+}
+Wの現在シートで「B」を列選択する
+それを削除する</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>次の設定項目を利用できます。</p>
@@ -195,6 +216,7 @@ Pの位置は(Wの現在シート:セル({「B2」}))の座標</pre>
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="オートフィルタ">オートフィルタ</a></th>
 					<th>真偽</th>
@@ -267,27 +289,29 @@ Pの位置は(Wの現在シート:セル({「B2」}))の座標</pre>
 				  <th>□</th>
 				  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 			  </tr>
+                </tbody>
 				</table>
 			</div>
 		<p>選択範囲は、１つのセルまたは連続する複数のセルを指定できます。</p>
-		<p><b>例</b><br>
-			(単一セル)　A1　B5<br>
-			(連続する複数のセル)　A1:C5　(セルA1からC5まで)</p>
+		<h4><b>例</b></h4>
+		<p>(単一セル)　A1　B5<br>
+		        (連続する複数のセル)　A1:C5　(セルA1からC5まで)</p>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
-		<p>Excelを起動後、選択したワークシートの内容を出力します。</p>
-		
-		
-		<pre class="code">エクセルをリンクする
+		<div id="samples">
+<h3 id="sample1">選択したワークシートの内容を出力するには</h3>
+        <p>Excelを起動後、選択したワークシートの内容を出力します。</p>
+<pre class="code">エクセルをリンクする
 一覧は、エクセルの現在シートの値一覧
 一覧を報告する</pre>
+</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="フィルタ">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「HLSフィルタ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -112,27 +111,29 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="色相">色相</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>加減する色相の度合い<br>
 						-360～360</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="彩度">彩度</a></th>
 					<th>小数</th>
 					<th>◎</th>
 					<td>加減する彩度の度合い<br>
 						-1～1</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="輝度">輝度</a></th>
 					<th>小数</th>
 					<th>◎</th>
 					<td>加減する輝度の度合い<br>
 						-1～1</td>
-					</tr>
+                </tr>
+				</tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -149,11 +150,11 @@
 		初期化する
 		キャンバス1へ画像を描いて写真とする
 			その位置と大きさは｛20,20,200,300｝
-			その伸縮を○に変える
+			その伸縮は○
 		<strong>HLSフィルタ</strong>を作ってFとする
-			その色相を20に変える
-			その彩度を0.2に変える
-			その輝度を0.2に変える
+			その色相は20
+			その彩度は0.2
+			その輝度は0.2
 		写真にFを追加する
 	終わり
 
@@ -162,15 +163,15 @@
 		この内容を「HLSフィルタ」に変える
 		キャンバス1というキャンバスを作る
 			その位置と大きさを｛0,0,300,300｝に変える
-			そのドラッグドロップを○に変える
-			そのドッキング方向を「全体」に変える
-		この設計スケール比率を｛96,96｝に変える
+			そのドラッグドロップは○
+			そのドッキング方向は「全体」
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	キャンバス1がドラッグドロップされた時の手順
 		イベントのファイル一覧をファイル名にそれぞれ繰り返す
-			写真の画像をファイル名に変える
-		繰り返し終わり
+			写真の画像は、ファイル名
+		そして
 		キャンバス1を更新する
 	終わり
 終わり</pre>
@@ -178,11 +179,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="MIDI">	<meta name="description" content="日本語プログラミング言語プロデルの「メディア再生制御」プラグインの「メロディ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -121,6 +120,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="テンポ">テンポ</a></th>
 					<th>整数</th>
@@ -147,10 +147,11 @@
 					<th>文字列配列</th>
 					<th>○</th>
 					<td>コンピュータにインストールされているMIDIドライバの一覧を取得します</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<div id="samples">
 		  <h3 id="sample1">MIDIを使ってドレミで演奏する</h3>
@@ -171,21 +172,21 @@
 	終わり
 
 	初期化する手順
-		この実質大きさを｛284,262｝に変える
-		この内容を「メイン画面」に変える
+		この実質大きさは｛284,262｝
+		この内容は「メイン画面」
 		ボタン1というボタンを作る
-			その位置と大きさを｛98,60,75,23｝に変える
-			その内容を「ボタン1」に変える
-			その移動順を1に変える
+			その位置と大きさは｛98,60,75,23｝
+			その内容は「ボタン1」
+			その移動順は1
 		選択リスト1という選択リストを作る
-			その位置と大きさを｛35,34,200,20｝に変える
-			その選択窓幅を200に変える
-			その項目高さを12に変える
-		この設計スケール比率を｛96,96｝に変える
+			その位置と大きさは｛35,34,200,20｝
+			その選択窓幅は200
+			その項目高さは12
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	ボタン1がクリックされた時の手順
-		もし選択リスト1の選択番号が-1なら抜け出す
+		選択リスト1の選択番号が-1なら抜け出す
 		（選択リスト1の選択番号-1）でMIDIを初期化する
 		「ど16れみ4れ16どん8ど16れみれどれ4」を演奏する
 	終わり
@@ -195,11 +196,11 @@
 	  </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「マウスカーソル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -74,7 +73,7 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">基本機能</a></li>
+	    <li><a href="index.htm">GUI部品</a></li>
 	    <li>マウスカーソル</li>
       </ul>
 	  <h1>マウスカーソル</h1>
@@ -86,30 +85,41 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
       <p>マウスカーソルに対する操作や情報の取得を行います。</p>
-      <p>ウィンドウ内の各部品のマウスカーソルを変更するには、<a href="control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
+      <p>ウィンドウ内の各部品のマウスカーソルを変更するには<a href="control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
 		<h2 id="手順">手順</h2>
 			<p>次の手順が使用できます。</p>
-			<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#クリックさせる">クリックさせる</a>　<a href="#ダブルクリックさせる">ダブルクリックさせる</a>　<a href="#右クリックさせる">右クリックさせる</a>　<a href="#ホイール回転させる">ホイール回転させる</a>　<a href="#チルトさせる">チルトさせる</a>　</div>
+			<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#クリックさせる">クリックさせる</a>　<a href="#ダブルクリックさせる">ダブルクリックさせる</a>　<a href="#右クリックさせる">右クリックさせる</a>　<a href="#押させる">押させる</a>　<a href="#離れさせる">離れさせる</a>　<a href="#ホイール回転させる">ホイール回転させる</a>　<a href="#チルトさせる">チルトさせる</a>　</div>
 			<div id="methods">
 				<h3>【自分】を【座標】へ<a name="移動する">移動する</a></h3>
 				<p>マウスカーソルを指定した座標へ移動させます。</p>
 				<h4 data-ref="移動する">擬似的にマウスカーソルを移動する</h4>
 				<pre class="code">マウスカーソルを{100,100}へ移動する</pre>
 				<h3>【自分】に〈【座標】を〉<a name="クリックさせる">クリックさせる</a></h3>
-				<p>指定した座標へ移動して、擬似的にクリック動作を行います。<br>
-					「【座標】を」は、省略できます。</p>
+				<p>指定した座標へ移動して、擬似的にクリック動作を行います。</p>
 				<h4 data-ref="クリックさせる">擬似的にクリックさせる</h4>
 				<pre class="code">マウスカーソルに{10,10}をクリックさせる</pre>
 				<h3>【自分】に〈【座標】を〉<a name="ダブルクリックさせる">ダブルクリックさせる</a></h3>
-				<p>指定した座標へ移動して、擬似的にダブルクリック動作を行います。<br>
-					「【座標】を」は、省略できます。</p>
+				<p>指定した座標へ移動して、擬似的にダブルクリック動作を行います。</p>
 				<h4 data-ref="ダブルクリックさせる">擬似的にダブルクリックさせる</h4>
 				<pre class="code">マウスカーソルにダブルクリックさせる</pre>
 				<h3>【自分】に〈【座標】を〉<a name="右クリックさせる">右クリックさせる</a></h3>
-				<p>指定した座標へ移動して、擬似的に右クリック動作を行います。<br>
-					「【座標】を」は、省略できます。</p>
+				<p>指定した座標へ移動して、擬似的に右クリック動作を行います。</p>
 				<h4 data-ref="右クリックさせる">擬似的に右クリックさせる</h4>
 				<pre class="code">マウスカーソルに{100,100}を右クリックさせる</pre>
+				<h3>【自分】に〈｛左ボタン,右ボタン,中央ボタン｝で〉〈【座標】を〉<a name="押させる">押させる</a></h3>
+				<p>指定した座標へ移動して、擬似的にマウスボタンを押下する動作を行います。<br>
+				</p>
+				<h4 data-ref="クリックさせる">擬似的にマウスボタンを押したままにさせる</h4>
+				<pre class="code">マウスカーソルに左ボタンで{100,10}を押させる</pre>
+				<h3>【自分】に〈｛左ボタン,右ボタン,中央ボタン｝で〉〈【座標】から〉<a name="離れさせる">離れさせる</a></h3>
+				<p>指定した座標へ移動して、擬似的にマウスボタンを引き上げる動作を行います。<br>
+				</p>
+				<h4 data-ref="クリックさせる">擬似的にドラッグさせる</h4>
+				<pre class="code">マウスカーソルに左ボタンで{100,10}を押させる
+1秒待つ
+マウスカーソルを{100,200}へ移動する
+1秒待つ
+マウスカーソルに左ボタンで{100,200}から離れさせる</pre>
 				<h3>【自分】で【移動量:整数】だけ<a name="ホイール回転させる">ホイール回転させる</a></h3>
 				<p>マウスホイールを指定した量だけ回転させます。移動量は整数で指定します。負の数を指定すると逆回転します。</p>
 				<h4 data-ref="ホイール回転させる">擬似的にマウスホイールを回転させる</h4>
@@ -129,6 +139,7 @@
 						<th>　</th>
 						<th>説明</th>
 					</tr></thead>
+                    <tbody>
 					<tr>
 						<th><a name="位置">位置</a></th>
 						<th>整数配列</th>
@@ -141,16 +152,17 @@
 						<th>□</th>
 						<td>マウスカーソルの形状</td>
 					</tr>
+                    </tbody>
 				</table>
 				<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

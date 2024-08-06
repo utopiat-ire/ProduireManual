@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「シンプルツールバー」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -102,7 +101,7 @@
 		<h2 id="head">概要</h2>
 		<p>画面の四隅に配置する複数のボタンを集めた部品です。</p>
 		<p>なお、より多くの種類の部品を貼り付けられる<a href="toolbar.htm">ツールバー</a>が用意されています。</p>
-		<div class="figure"><img src="img/simpletoolbar.png" width="180" height="52"></div>
+		<div class="figure"><img src="img/simpletoolbar.png" width="180" height="52" alt="ツールバーを貼り付けたウィンドウ"></div>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というシンプルツールバーを作る</pre>
 		<h2 id="手順">手順</h2>
@@ -129,7 +128,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="ボタンの大きさ">ボタンの大きさ</a></th>
 					<th>&nbsp;</th>
@@ -178,7 +178,8 @@
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>項目の高さ</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -193,6 +194,7 @@
 						<th>情報</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="ボタンがクリックされた">ボタンがクリックされた</a></th>
 					<td>ボタンがクリックされた</td>
@@ -202,7 +204,8 @@
 					<th><a name="メニューがクリックされた">メニューがクリックされた</a></th>
 					<td>メニューがクリックされた時</td>
 					<td></td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -217,9 +220,9 @@
 	ウィンドウを受け継ぐ
 
 	はじめの手順
-		内容を「シンプルツールバーの例」に変える
+		内容は「シンプルツールバーの例」
 		シンプルツールバー1というシンプルツールバーを作る
- 			その透明色を「Magenta」に変える
+ 			その透明色は「Magenta」
 		シンプルツールバー1に「新規」を（素材リストから「new.bmp」を画像として取得したもの）で加える
 		シンプルツールバー1に「開く」を（素材リストから「open.bmp」を画像として取得したもの）で追加する
 		シンプルツールバー1に「保存」を（素材リストから「save.bmp」を画像として取得したもの）で追加する
@@ -229,13 +232,14 @@
 		選択項目は、この時の選択ボタン
 		「［選択項目の内容］をクリックしました」を表示する
 	終わり
-終わり</pre><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div>
+終わり</pre>
+        <div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div>
 	</div>
 	</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

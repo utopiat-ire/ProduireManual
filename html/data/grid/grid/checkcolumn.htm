@@ -12,7 +12,6 @@
 	<script src="../../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -123,25 +122,27 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="中間状態">中間状態</a></th>
 					<th>真偽値</th><th>◎</th><td>
 						チェックボックスを3つの状態(チェックなし・チェック・中間)で切り替えられるようにするかどうか</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="チェック状態内容">チェック状態内容</a></th>
 					<th>&nbsp;</th><th>◎</th><td>チェックされた時に「内容」設定項目に表す値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="非チェック状態内容">非チェック状態内容</a></th>
 					<th>&nbsp;</th><th>◎</th><td>チェックされていない時に「内容」設定項目に表す値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="中間状態内容">中間状態内容</a></th>
 					<th>&nbsp;</th><th>◎</th><td>中間状態で「内容」設定項目に表す値</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -163,9 +164,9 @@
 		初期化する
 		チェック列というチェックボックス列部品を作る
 		チェック列のデータ列名は「チェック」
-		チェック列の幅は、25
+		チェック列の幅は25
 		表部品1にチェック列を加える
-		表部品1のデータ表をデータに変える
+		表部品1のデータ表は、データ
 	終わり
 	初期化する手順
 		この実質大きさを｛442,296｝に変える
@@ -173,16 +174,16 @@
 		確認ボタンというボタンを作る
 			その位置と大きさを｛27,259,130,29｝に変える
 			その内容を「確認」に変える
-			その移動順を1に変える
-			そのドラッグドロップを×に変える
+			その移動順は1
+			そのドラッグドロップは×
 		表部品1という表部品を作る
 		表部品1を初期化開始する
 			その位置と大きさを｛12,18,418,222｝に変える
-			その移動順を3に変える
-			そのドラッグドロップを×に変える
-			その位置固定方向を「右＋左＋下＋上」に変える
+			その移動順は3
+			そのドラッグドロップは×
+			その位置固定方向は「右＋左＋下＋上」
 		表部品1を初期化終了する
-		この設計スケール比率を｛96,96｝に変える
+		この設計スケール比率は｛96,96｝
 	終わり
 
 	確認ボタンがクリックされた時の手順
@@ -193,11 +194,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../../js/jquery-1.12.4.min.js"></script>

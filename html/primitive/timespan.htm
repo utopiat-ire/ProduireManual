@@ -12,8 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「日時期間形式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="基本型,TimeSpan">
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「日時期間形式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -88,7 +88,6 @@
           <li><a href="datetime.htm">「日時形式」種類</a></li>
           <li><a href="../core/global_datetime.htm">「日付時刻関連操作」種類</a></li>
           <li><a href="../core/core.htm#今日">「今日」手順</a></li>
-          <li><a href="../lookup/datetime_lookup.htm">逆引き辞典「日付や時刻を扱う」</a></li>
         </ul>
         <p>&nbsp;</p>
 	</div>
@@ -114,7 +113,7 @@
             <p>指定した値だけ経過した時間を返します。</p>
           <h4 data-ref="後">3時間後の経過時間を求める</h4>
             <pre class="code">経過時間という日時期間形式を作る
-経過時間へ3時間足したものを表示する
+経過時間へ3時間足して表示する
 経過時間を表示する	//経過時間が変わらない</pre>
 <h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="後">後</a>：日時期間形式</h3>
 			<p>指定した値だけ経過した時間を返します。</p>
@@ -131,24 +130,29 @@
             <p>指定した値だけ戻した時間を返します。「前」名詞手順と同じです。</p>
             <h4 data-ref="前">15分前の経過時間を求める</h4>
           <pre class="code">経過時間という日時期間形式(「1:30:20」)を作る
-経過時間から15分引いたものを表示する
+経過時間から15分引いて、表示する
 経過時間を表示する	//経過時間は変わらない</pre>
             <h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="前">前</a>：日時期間形式</h3>
-			<p>指定した値だけ戻した時間を返します。<span class="label label-warning">名詞型手順</span></p>
+			<p>指定した値だけ戻した時間を返します。<span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="前">15分前の経過時間を求める</h4>
 			<pre class="code">値という日時期間形式(「1:30:20」)を作る
 値から15分前を表示する</pre>
 			<h3>【自分】と【日付】の<a name="時間差">時間差</a>：日時期間形式</h3>
-			<p>指定した日時形式との差を計算します。<span class="label label-warning">名詞型手順</span></p>
+			<p>指定した日時形式との差を計算します。<span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="時間差">2つの経過時間の差を求める</h4>
 			<pre class="code">値1という日時期間形式(「5:23:32」)を作る
 値2という日時期間形式(「4:52:02」)を作る
 値1と値2の時間差を表示する</pre>
-			<h3>【自分】を【書式】に、<a name="整える">整える</a>：文字列</h3>
+			<h3>【自分】を【書式:文字列】に、<a name="整える">整える</a>：文字列</h3>
 			<p>日時を指定した書式に合わせた文字列として返します。</p>
+			<p>書式は、.NET Frameworkの数値書式で指定します。</p>
+            <ul>
+                    <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/standard-timespan-format-strings">標準 TimeSpan 書式指定文字列 - .NET | Microsoft Learn</a></li>
+                    <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-timespan-format-strings">カスタム TimeSpan 書式指定文字列 - .NET | Microsoft Learn</a></li>
+            </ul>
 			<h4 data-ref="整える">経過時間を決まった書式に整える</h4>
 			<pre class="code">値という日時期間形式(「12:23:45」)を作る
-(値を「hh時間mm分ss秒」に整えたもの)を表示する</pre>
+値を「hh時間mm分ss秒」に整えて、表示する</pre>
 		</div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
@@ -161,7 +165,8 @@
 					<th>説明</th>
 				</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="内容">内容</a></th>
 					<th>◎</th>
 					<td>内容を文字で表します</td>
@@ -222,7 +227,8 @@
 					<th>□</th>
 					<td>期間をミリ秒単位で表します</td>
 				</tr>
-			</table>
+			    </tbody>
+            </table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
 		<h2 id="型変換">型変換</h2>
@@ -235,12 +241,14 @@
 				<th>説明</th>
 			</tr>
 			</thead>
-			<tr>
+            <tbody>
+            <tr>
 				<th><a href="string.htm">文字列</a></th>
 				<th>←→</th>
 				<td>「内容」設定項目と同じ</td>
 			</tr>
-		</table>
+		    </tbody>
+        </table>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <h3 id="sample1">今日から一日後の日付を求める</h3>
 		<p>今日から一日後の日付を表示します。</p>
@@ -249,11 +257,11 @@
 値の日付を表示する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年10月24日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

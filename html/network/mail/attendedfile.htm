@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="メール機能">
     <meta name="description" content="日本語プログラミング言語プロデルで「メール機能」プラグインの「添付ファイル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -100,13 +99,16 @@
 		<h2 id="設定項目">設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
-				<tr>
+                <thead>
+                <tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr>
-				<tr>
+                </tr>
+				</thead>
+				<tbody>
+                <tr>
 					<th><a name="ファイルサイズ">ファイルサイズ</a></th>
 					<th>整数</th>
 					<th>◎</th>
@@ -117,8 +119,9 @@
 					<th>文字列</th>
 					<th>◎</th>
 					<td>ファイル名を表します</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -128,16 +131,16 @@
 <pre class="code">メール管理で「mail.eml」から読み込んでメールデータとする
 メールデータの添付ファイル一覧のすべての添付ファイルについてそれぞれ繰り返す
 	添付ファイルをデスクトップへ保存する
-繰り返し終わり
+そして
 メールデータから「Message-Id」というヘッダ情報を取得して報告する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

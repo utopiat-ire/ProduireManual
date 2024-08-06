@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <meta name="keywords" content="メロディ,演奏,MIDI"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -80,7 +79,9 @@
 <h1>メロディの書き方</h1>
 <p>「演奏する」手順で演奏するメロディは、音符を順番に書きます。プロデルのメロディ表記は、MMLの標準的な表記を日本語化した文法です。</p>
 <h3>音符の書き方</h3>
-	<p>音符は、【音名】【長さ】と順に書いて表現します。例えば、4分音符のドを鳴らすには「ド４」と書きます。</p>
+	<p>音符は、次のように書式で表現します。連続して記述できます。</p>
+    <pre class="format"><strong>《音名》</strong><strong>《長さ》</strong></pre>
+    <p>例えば、4分音符のドを鳴らすには「ド４」と書きます。</p>
 	<pre class="code">「ド４」を演奏する</pre>
 	<p>メロディは、全角と半角を区別しません。(ただしカタカナのみは全角で書く必要があります)</p>
 	<p>また、スペースや改行記号、タブ文字、コメント(//, /* */)は、演奏では無視されます。</p>
@@ -90,7 +91,8 @@
     <h3>音名</h3>
 	<p>【音名】には、<b>ドレミファソラシ</b>のいずれかを書きます。ひらがなやMML表記でも書けます。<br>
 		音名には、臨時記号（<b>＃</b>(シャープ)、<b>♭</b>・<b>ｂ</b>(フラット)、<b>Ｎ</b>(ナチュラル)）を付けられます。</p>
-	<table style="width: 100%" class="doctable">
+	<table style="width: 100%" class="table table-bordered">
+        <tbody>
 		<tr>
 			<th>&nbsp;</th>
 			<th>ド</th>
@@ -151,6 +153,7 @@
 			<td>A#/Bb</td>
 			<td>B</td>
 		</tr>
+        </tbody>
 	</table>
 	<pre class="code">「ド４ド＃４レ４ミ♭４ミ４」を演奏する
 「ど４ど＃４れ４み♭４み４」を演奏する
@@ -159,12 +162,15 @@
 	<p>【長さ】には、音符の長さを書きます。例えば4なら、4分音符。8なら、8分音符となります。音符の長さは、<b>1</b>,<b>2</b>,<b>4</b>,<b>8</b>,<b>16</b>,<b>32</b>のいずれかを書けます。</p>
 	<p> 数字の後に「<b>．</b>」を付けると付点となります。例えば、付点4分音符は「４．」と書きます。</p>
 	<table class="table table-bordered">
+        <thead>
 		<tr>
 			<th>&nbsp;</th>
 			<th>長さ</th>
 			<th>&nbsp;</th>
 			<th>長さ</th>
 		</tr>
+        </thead>
+        <tbody>
 		<tr>
 			<th>全音(休)符</th>
 			<td>1</td>
@@ -207,6 +213,7 @@
 			<th>付点64分音(休)符</th>
 			<td>６４．</td>
 		</tr>
+        </tbody>
 	</table>
 	<p>※プロデルのメロディには、小節という概念がありません。そのため全音符は、4分音符×4個分と同じ長さです。</p>
 	<pre class="code">「ド4ミ8ソ8」を演奏する</pre>
@@ -216,13 +223,22 @@
 「ド4ミソ　ド8ミソ　ドミソ」を演奏する</pre>
 	<p>長さの代わりに「ー」を書くと、直前に指定した長さに、さらに同じ長さを足した長さになります。「ー」で直前の長さの2倍。「ーー」で直前の長さの3倍になります。</p>
 	<pre class="code">「ド8ミソ　ドミソ　ドーミーソー」を演奏する</pre>
-	<p>省略したときの長さを指定する場合は「L【値】」「長【値】」「長さ【値】」のいずれかの形式で指定します。値は、0～127の範囲で指定します。初期値は、4です。</p>
+	<p>省略したときの長さを指定する場合は次のように指定します。</p>
+    <pre class="format">L<strong>《値》</strong>
+長<strong>《値》</strong>
+長さ<strong>《値》</strong></pre>
+    <p>《値》は、0～127の範囲で指定します。初期値は、4です。</p>
     <pre class="code">「L8　ドミソド」を演奏する</pre>
     <h3>音の高さ(オクターブ)</h3>
 	<p>音の高さを、１オクターブ上げる時は「<b>＞</b>」または「上」と書きます。１オクターブ下げる時は「<b>＜</b>」または「下」と書きます。</p>
 	<p>※音の高さは、同一のパート・連符・和音内で有効です</p>
 	<pre class="code">「ド&gt;ド&gt;ド」を演奏する</pre>
-	<p>オクターブを絶対値で指定する場合は「O【値】」「オ【値】」「オクターブ【値】」のいずれかの形式で指定します。値は、0～10の範囲で指定します。中央は5です。</p>
+	<p>オクターブを絶対値で指定する場合は次のように指定します。</p>
+	<pre class="format">O<strong>《値》</strong>
+オ<strong>《値》</strong>
+オクターブ<strong>《値》</strong></pre>
+	<p>《値》は、0～10の範囲で指定します。中央は5です。</p>
+	<p>例</p>
 	<pre class="code">「O3 ドミソド」を演奏する</pre>
 	<h3>休符</h3>
 	<p>休符は「休み」「休」「ン」のあとに、休符の長さを書きます。</p>
@@ -231,55 +247,59 @@
 	<h2>その他のメロディ表現</h2>
 	<h3>タイ</h3>
 	<p>タイを表現するには、音符の長さを「＾」で繋ぎます。タイを続けて、複数書くこともできます。</p>
-	<pre class="format">【音名】【長さ】＾【長さ】</pre>
+	<pre class="format"><strong>《音名》《長さ》</strong>＾<strong>《長さ》</strong></pre>
 	<p><b>例文</b>　四分音符のラに、八分音符を付けて、伸ばします</p>
 	<pre class="code">「　ラ４＾８　」を演奏する</pre>
 	<p>　</p>
 	<h3>連符</h3>
 	<p>連音符を表現するには、音符を｛　｝で囲みます。<br>
 		【長さ】は、省略できます。</p>
-	<pre class="format">｛【音名】｝【長さ】</pre>
+	<pre class="format">｛<strong>《音名》</strong>｝<strong>《長さ》</strong></pre>
 	<p><b>例文</b>　3連符を表現します</p>
 	<pre class="code">「　｛ソファミ｝４　」を演奏する</pre>
 	<p>&nbsp;</p>
 	<h3>和音</h3>
 	<p>一つのパートで和音を表現したい場合は、音符を（　）で囲みます。<br>
-		【長さ】は、省略できます。</p>
-	<pre class="format">（【音名】）【長さ】</pre>
+		《長さ》は、省略できます。</p>
+	<pre class="format">（<strong>《音名》</strong>）<strong>《長さ》</strong></pre>
 	<p><b>例文</b>　Ｃの和音(ドミソ)を表現します</p>
 	<pre class="code">「　（ドミソ）２　」を演奏する</pre>
 	<p>　</p>
 	<h3>調を指定する</h3>
 	<p>調は「メロディ」の<a href="melody.htm#調">「調」設定項目</a>で変更できます。</p>
 	<p><b>例文</b>　調を「嬰ヘ長調」に設定します</p>
-	<pre class="code">メロディの調を「嬰ヘ長調」に変える
+	<pre class="code">メロディの調は「嬰ヘ長調」
 「レ16ド16&lt;ファ8&gt;(ファ&lt;ラ)8　(ファ&lt;ラ)8 ン4」を演奏する</pre>
 	<p>　</p>
 	<h2>音色やMIDIチャンネルの設定</h2>
 	<h3>音色</h3>
 	<p>音色を変えるには「＃」を使います。音色は、MIDIの音色番号と同じです。音色番号に対応する音色は、<a href="melodycolor.htm#通常パート">通常パートの音色表</a>をご覧ください。</p>
-	<pre class="format">＃<b><span class="flag">【音色番号】</span></b></pre>
+	<pre class="format">＃<strong>《音色番号》</strong></pre>
 	<p>　</p>
 	<h3>MIDIチャンネル</h3>
 	<p>特定のパートの演奏に使用するMIDIチャンネルを変えるには「＠」を使います。MIDIチャンネルは、1～16まで指定できます。</p>
 	<p>なお、MIDIチャンネルの10は、ドラムパートに固定されています。</p>
-	<pre class="format">＠<b><span class="flag">【チャンネル番号】</span></b></pre>
+	<pre class="format">＠<strong>《チャンネル番号》</strong></pre>
 	<h3>MIDIチャンネルメッセージの送信</h3>
   <p>チャンネルに対してメッセージを送信するには「!」を使います。</p>
   <p>メッセージ番号は、16進数(8～E)で指定します。<br></p>
-    <pre class="format"><b><span class="flag"></span></b>!<strong>[メッセージ番号]</strong>,<strong>[1データ目]</strong>,<strong>[2データ目]</strong></pre>
+    <pre class="format">!<strong>《メッセージ番号》</strong>,<strong>《1データ目》</strong>,<strong>《2データ目》</strong></pre>
     <p><b>例文</b>　チャンネルのパンを変更します。</p>
-    <pre class="code">{「!B,10,0」,「!B,10,127」}を演奏する<br>{「&lt;&lt;ド1」,「&gt;&gt;ド1」}を演奏する<br></pre>
-    <h3></h3>
+    <pre class="code">{「!B,10,0」,「!B,10,127」}を演奏する
+{「&lt;&lt;ド1」,「&gt;&gt;ド1」}を演奏する<br></pre>
     <h3>音量を変える</h3>
     <p>音色や音量を変えるには、次のように書きます。</p>
-    <pre class="format">メロディの音量は、【音量0～127】</pre>
-	<p>パート別に音量を指定する場合は「V【値】」「音量【値】」「量【値】」のいずれかの形式で指定します。値は、0～127の範囲で指定します。初期値は「音量」設定項目の指定した値です。</p>
+    <pre class="format">メロディの音量は、<strong>《音量0～127》</strong></pre>
+	<p>パート別に音量を指定する場合は次のように指定します。</p>
+    <pre class="format">V<strong>《値》</strong>
+音量<strong>《値》</strong>
+量<strong>《値》</strong></pre>
+    <p>《値》は、0～127の範囲で指定します。初期値は「音量」設定項目の指定した値です。</p>
     <pre class="code">{「V127　ド1」,「V40 &lt;ド8ミソド」}を演奏する</pre>
     <h3>テンポを変えたい</h3>
 	<p>テンポは「メロディ」の<a href="melody.htm#設定項目">「テンポ」設定項目</a>で変更できます。</p>
 	<p><b>例文</b>　メロディのテンポを「四分音符＝60」(一分間に四分音符60個分)くらい演奏するテンポにします</p>
-	<pre class="code">メロディのテンポは、60
+	<pre class="code">メロディのテンポは60
 「ドレミ」を演奏する</pre>
 	<p>&nbsp;</p>
 	<h2>ドラム(パーカッション)パートを演奏する</h2>
@@ -296,12 +316,12 @@
 	<pre id="prg" class="code">「(ドミ)４　(ミソ)４　(ソシ)４　(ミソ)８」を非同期で演奏する
 「演奏中です」を表示する</pre>
 	<h2>注意</h2>
-    <p>プロデルでは、俗に言われるストトン表記との互換性はありません。</p>
-  <div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+    <p>「演奏する」手順は、俗に言われるストトン表記との互換性はありません。</p>
+  <div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

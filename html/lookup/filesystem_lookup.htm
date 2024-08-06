@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ファイル"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -81,7 +80,7 @@
     </div>
     <div id="refsidebar" class="col-md-3 sidebar">
         <h4>ファイルを扱う</h4>
-        <ul class="topics nav nav-pills nav-stacked"><li><a href="#lookup1">ファイルのコピー</a></li><li><a href="#lookup2">ファイルの移動</a></li><li><a href="#lookup3">ファイル名の変更</a></li><li><a href="#lookup4">ファイルの削除</a></li><li><a href="#lookup5">ワイルドカードを使う</a></li><li><a href="#lookup6">フォルダの一覧の列挙</a></li><li><a href="#lookup7">ファイルが存在するかどうかを判定する</a></li><li><a href="#lookup8">フォルダの作成</a></li><li><a href="#lookup9">フォルダの削除</a></li><li><a href="#lookup10">決められた場所のフォルダを指定する</a></li><li><a href="#lookup11">フォルダ一覧の列挙</a></li><li><a href="#lookup12">フォルダが存在するかどうかを判定する</a></li><li><a href="#lookup13">フォルダを選択する</a></li></ul>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#lookup1">ファイルのコピー</a></li><li><a href="#lookup2">ファイルの移動</a></li><li><a href="#lookup3">ファイル名の変更</a></li><li><a href="#lookup4">ファイルの削除</a></li><li><a href="#lookup5">ワイルドカードを使う</a></li><li><a href="#lookup7">ファイルが存在するかどうかを判定する</a></li><li><a href="#lookup8">フォルダの作成</a></li><li><a href="#lookup9">フォルダの削除</a></li><li><a href="#lookup10">決められた場所のフォルダを指定する</a></li><li><a href="#lookup11">フォルダ一覧の列挙</a></li><li><a href="#lookup12">フォルダが存在するかどうかを判定する</a></li><li><a href="#lookup13">フォルダを選択する</a></li></ul>
     </div>
     <div id="refcontent" class="col-md-8 col-md-offset-1">
         <h1>ファイルを扱う</h1>
@@ -89,7 +88,7 @@
 		<ul>
 			<li><a href="../core/file.htm">「ファイル」種類</a></li>
 			<li><a href="../core/filecontrol.htm">「ファイル操作」種類</a></li>
-			<li><a href="https://wp.utopiat.net/2021/01/11/">プロデルで始める日本語プログラミング言語入門(#13)「ファイルを操作しよう」</a></li>
+			<li><a href="https://produ.irelang.jp/blog/2021/01/11/">プロデルで始める日本語プログラミング言語入門(#13)「ファイルを操作しよう」</a></li>
 		</ul>
 		<div id="samples">
 		<h3 id="lookup1">ファイルのコピー</h3>
@@ -99,7 +98,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">【ファイル名】</span>を<span class="flag">【コピー先のフォルダ名/ファイル名】</span>へコピーする</pre>
+				<pre class="format"><strong>【ファイル名】</strong>を<strong>【コピー先のフォルダ名/ファイル名】</strong>へコピーする</pre>
 				<p>【ファイル名】<br>
 					コピー元のファイル名があるところを書きます。</p>
 				<p>【コピー先のフォルダ名/ファイル名】<br>
@@ -125,7 +124,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">【ファイル名】</span>を<span class="flag">【移動先のフォルダ/ファイル名】</span>へ移動する</pre>
+				<pre class="format"><strong>【ファイル名】</strong>を<strong>【移動先のフォルダ/ファイル名】</strong>へ移動する</pre>
 				<p>【ファイル名】<br>
 					コピー元のファイル名があるところを書きます。</p>
 				<p>【コピー先のフォルダ/ファイル名】<br>
@@ -165,11 +164,11 @@
 		</div>
 		<h3 id="lookup7">ファイルが存在するかどうかを判定する</h3>
 		<p><a href="../core/file.htm#存在する">「存在する」手順</a>で、指定したパスのファイルが存在するかどうかを判定できます。</p>
-		<pre class="code">もし「［デスクトップ］文章.txt」というファイルが存在するなら
+		<pre class="code">「［デスクトップ］文章.txt」というファイルが存在すれば
 	「存在します」を情報アイコンで表示する
 そうでなければ
 	「存在しません」を警告アイコンで表示する
-もし終わり</pre>
+そして</pre>
 		<hr>
 		<h2 id="folder">フォルダ</h2>
 		<p>プロデルでは、フォルダの作成や移動、削除ができます。</p>
@@ -183,7 +182,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">【フォルダ名】</span>というフォルダを<span class="flag">【作成先のフォルダ名】</span>へ作成する</pre>
+				<pre class="format"><strong>【フォルダ名】</strong>というフォルダを<strong>【作成先のフォルダ名】</strong>へ作成する</pre>
 				<p>【フォルダ名】<br>
 					作成するフォルダの名前を書きます。</p>
 				<p>【作成先のフォルダ名】<br>
@@ -205,7 +204,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format"><span class="flag">【フォルダ名】</span>というフォルダを削除する</pre>
+				<pre class="format"><strong>【フォルダ名】</strong>というフォルダを削除する</pre>
 				<p>【フォルダ名】<br>
 					削除するフォルダがある場所を書きます。</p>
 			</div>
@@ -231,6 +230,7 @@
 						<th>意味</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th>ウィンドウズフォルダ</th>
 					<td>ウィンドウズのフォルダを表します</td>
@@ -291,6 +291,7 @@
 					<th>送るフォルダ</th>
 					<td>送るフォルダがあるフォルダを表します</td>
 				</tr>
+                </tbody>
 			</table>
 		</div>
 		<p>　</p>
@@ -300,20 +301,20 @@
 		<pre class="code">フォルダ一覧は、マイドキュメントのフォルダの一覧
 フォルダ一覧のすべての要素についてそれぞれ繰り返す
 	要素を報告する
-繰り返し終わり</pre>
+そして</pre>
 		<pre class="code">フォルダ一覧は、フルパスでマイピクチャーのフォルダの全一覧
 フォルダ一覧のすべての要素についてそれぞれ繰り返す
 	要素を報告する
-繰り返し終わり</pre>
+そして</pre>
 		<h3 id="lookup12">フォルダが存在するかどうかを判定する</h3>
 		<p><a href="../core/folder.htm#存在する">「存在する」手順</a>で、指定したパスのフォルダが存在するかどうかを判定できます。</p>
-		<pre class="code">もしパスというフォルダが存在するなら
+		<pre class="code">パスというフォルダが存在すれば
 	子一覧は、パスのファイルの全一覧
  	子一覧を追加する
 でなければ
 	項目は｛パスのファイル名だけ,ファイル名,（パス）のファイルのサイズ｝
 	ファイルリストに、項目を追加する
-もし終わり</pre>
+そして</pre>
 		<h3 id="lookup13">フォルダを選択する</h3>
 		<p><a href="../core/dialog/folderdialog.htm">「フォルダ選択画面」</a>でユーザにフォルダを選択するための画面を表示できます。</p>
 		<pre class="code">フォルダ選択画面を表示する
@@ -321,7 +322,7 @@
 フォルダ名を表示する</pre>
 		<hr>
 		<h2 id="archive">統合アーカイバDLLについて</h2>
-		<p>プロデルでは、統合アーカイバプロジェクトに準拠したライブラリ(DLL)を使ったファイルの圧縮と解凍に対応しています。		</p>
+		<p>プロデルでは、統合アーカイバプロジェクトに準拠したライブラリ(DLL)を使ったファイルの圧縮と解凍に対応しています。</p>
 		<ul>
 		        <li>関連ページ
 				<ul>
@@ -339,6 +340,7 @@
 				<h4 class="panel-title"></h4>
 		  </div>
 		  <table class="table table-striped table-bordered">
+              <thead>
 				<tr>
 					<th>拡張子</th>
 					<th>名称</th>
@@ -347,6 +349,8 @@
 					<th>64bit</th>
 					<th>必要なアーカイバDLLファイル</th>
 				</tr>
+              </thead>
+              <tbody>
 				<tr>
 					<td rowspan="4">zip</td>
 					<td>ZIP形式</td>
@@ -487,29 +491,30 @@
 					<td>UnIso32.dll</td>
 				</tr>
 				<tr>
-				        <td>ish</td>
-				        <td>ISH形式</td>
-				        <td>○</td>
-				        <td>○</td>
-				        <td>×</td>
-				        <td>AISH32.dll</td>
-				        </tr>
+                    <td>ish</td>
+                    <td>ISH形式</td>
+                    <td>○</td>
+                    <td>○</td>
+                    <td>×</td>
+                    <td>AISH32.dll</td>
+                </tr>
 				<tr>
-				        <td>gza</td>
-				        <td>GZA形式</td>
-				        <td>○</td>
-				        <td>○</td>
-				        <td>×</td>
-				        <td>Bga32.dll</td>
-				        </tr>
+                    <td>gza</td>
+                    <td>GZA形式</td>
+                    <td>○</td>
+                    <td>○</td>
+                    <td>×</td>
+                    <td>Bga32.dll</td>
+                </tr>
 				<tr>
-				        <td>bza</td>
-				        <td>BZA形式</td>
-				        <td>○</td>
-				        <td>○</td>
-				        <td>×</td>
-				        <td>Bga32.dll</td>
-				        </tr>
+                    <td>bza</td>
+                    <td>BZA形式</td>
+                    <td>○</td>
+                    <td>○</td>
+                    <td>×</td>
+                    <td>Bga32.dll</td>
+                </tr>
+              </tbody>
 			</table>
 		</div>
 		<p>※( )に記載したDLLファイルは64ビットWindows上で必要です。</p>
@@ -517,15 +522,15 @@
 		<p><b>統合アーカイバプロジェクト</b><br>
 		  <a target="_top" href="http://www.csdinc.co.jp/archiver/">http://www.csdinc.co.jp/archiver/</a></p>
 		<p>64bitが×となっている形式は64ビットWindowsでは利用できません。プロデルデザイナ(32ビット環境)で実行するか、実行可能ファイルを「32ビット起動に固定」して32ビットで動作させることで利用できます。</p>
-		<p>詳しくは、<a href="https://wp.utopiat.net/2017/10/384/">公式ブログの記事</a>をご覧ください。</p>
+		<p>詳しくは、<a href="https://produ.irelang.jp/blog/2017/10/384/">公式ブログの記事</a>をご覧ください。</p>
       </div>
 		</div><!--/samples-->
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年2月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月15日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="イベント情報"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -91,6 +90,7 @@
             <th>説明</th>
             </tr>
           </thead>
+          <tbody>
         <tr>
           <th><a name="座標">座標</a></th>
           <th>□</th>
@@ -111,12 +111,13 @@
           <th>□</th>
           <td>マウスボタンが押された離された回数を表します</td>
           </tr>
+          </tbody>
         </table>
       </div>
     <div id="samples">
       <h3>マウスでの操作を受け取る</h3>
       <pre class="code">メイン画面を表示する
-色番号は、0
+色番号は0
 待機する
 
 メイン画面とは
@@ -124,7 +125,7 @@
 	ウィンドウを継承する
 	はじめ手順
 		この内容を「マウスイベント手順」に変える
-		このドラッグドロップを○に変える
+		このドラッグドロップは○
 		この位置と大きさを｛15,15,300,300｝に変える
 		ピクチャー1というピクチャーを作る
 			その位置と大きさを｛123,88,39,37｝に変える
@@ -138,27 +139,27 @@
 	終わり
 	マウスのホイールが移動した時の手順
 		明るさにこの時のホイール移動量÷6を足す
-		もし明るさが255以上なら、明るさは、255
-		もし明るさが0以下なら、明るさは、0
-		ピクチャー1の背景色をRGB（｛255,明るさ,明るさ｝）に変える
+		明るさが255以上なら、明るさは255
+		明るさが0以下なら、明るさは0
+		ピクチャー1の背景色は、RGB（｛255,明るさ,明るさ｝）
 	終わり
 	ピクチャー1がマウスのボタンが押された時の手順
-		もしこの時のボタンが「左ボタン」なら
-			ピクチャー1の背景色を「青」に変える
-		他でもしこの時のボタンが「右ボタン」なら
-			ピクチャー1の背景色を「緑」に変える
-		もし終わり
+		この時のボタンが「左ボタン」なら
+			ピクチャー1の背景色は「青」
+		他でこの時のボタンが「右ボタン」なら
+			ピクチャー1の背景色は「緑」
+		そして
 	終わり
 
 終わり</pre>
     </div>
   </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「図形描画」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -132,41 +131,43 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="線">線</a></th>
 					<th>列挙</th>
 					<th>◎</th>
 					<td>「描く」手順で描く図形の線の形状<br>
 						｛標準,点線,破線,線と点,線と二点｝</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="太さ">太さ</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>「描く」手順で描く図形の線の太さ</td>
-					</tr>
+                </tr>
+				</tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<p>ウィンドウに様々な図形を描かせます。</p>
 <pre class="code">窓というウィンドウを作る
-	その内容を「図形描画のテスト」に変える
-	その実質大きさを{400,300}に変える
+	その内容は「図形描画のテスト」
+	その実質大きさは{400,300}
 
 描画ボタンというボタンを窓に作る
-	その内容を「描画する」に変える
-	その位置と大きさを｛150,200,100,50｝に変える
+	その内容は「描画する」
+	その位置と大きさは｛150,200,100,50｝
 
 窓を表示する
 待機する
 
 描画ボタンがクリックされた時の手順
-	図形描画の太さを2に変える
+	図形描画の太さは2
 	図形描画：線を窓に｛20,30｝から｛50,60｝まで描く
 	図形描画：四角形を窓に｛200,30｝から｛250,70｝まで緑色で描く
 	図形描画：四角形を窓に｛220,50｝から｛270,90｝まで緑色で描く
 	図形描画によって窓を{210,40}へ黄色で塗りつぶす
-	図形描画の線を点線に変える
+	図形描画の線は、点線
 	図形描画：円を窓に｛60,30｝から｛80,50｝まで赤色で描く
 	図形描画：扇を窓に｛30,100｝から｛80,50｝まで-90度から90度だけ緑色で描く
 	図形描画：円弧を窓に｛120,100｝から｛80,50｝まで-90度から90度だけ赤色で描く
@@ -175,11 +176,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

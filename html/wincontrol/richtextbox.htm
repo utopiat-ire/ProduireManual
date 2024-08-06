@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="RTF,リッチテキスト形式,拡張テキスト,リッチテキストボックス">
     <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「書式付きテキスト」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -97,7 +96,7 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>字体や文字色などの書式が指定できる文章を入力できる部品です。</p>
-		<div class="figure"><img src="img/richtextbox.png" width="292" height="71"></div>
+		<div class="figure"><img src="img/richtextbox.png" width="292" height="71" alt="書式付きテキストを貼り付けたウィンドウ"></div>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】という書式付きテキストを作る</pre>
 		<h2 id="手順">手順</h2>
@@ -122,41 +121,42 @@
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead><tr>
-					<th nowrap>設定項目</th>
-					<th nowrap>型</th>
+					<th>設定項目</th>
+					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
-				<tr>
+                </tr></thead>
+                <tbody>
+                <tr>
 					<th><a name="折り返し">折り返し</a></th>
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>テキストが幅を超える場合にテキストを折り返すかどうか</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="最大文字数">最大文字数</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>テキストに入力できる最大文字数</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="選択開始位置">選択開始位置</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>選択範囲の開始文字数</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="RTF">RTF</a></th>
 					<th>文字列</th>
 					<th>◎</th>
 					<td>すべてのリッチテキスト形式コードを含む、書式付きテキストのテキスト</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="URL認識">URL認識</a></th>
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>書式付きテキストに URLが入力される場合に、その URL の書式を自動的に設定するかどうかを示す値</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="インデント幅">インデント幅</a></th>
 					<th>整数</th>
@@ -372,7 +372,8 @@
 					<th>真偽値</th>
 					<th>◎</th>
 					<td>Tabキーを押した時にタブ文字として受け付けます。○にするとフォーカスが別の部品へ移動しません。</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -389,43 +390,43 @@
 	ウィンドウを継承する
 	
 	はじめ手順
-		この内容を「メイン画面」に変える
-		このドラッグドロップを○に変える
-		この位置と大きさを｛15，15，300，300｝に変える
+		この内容は「メイン画面」
+		このドラッグドロップは○
+		この位置と大きさは｛15，15，300，300｝
 		書式付きテキスト1という書式付きテキストを作る
-			その位置と大きさを｛0，0，292，266｝に変える
-			そのドッキング方向を「全体」に変える
+			その位置と大きさは｛0，0，292，266｝
+			そのドッキング方向は「全体」
 		
 		<em>ーー緑色で文字を挿入する</em>
-		書式付きテキスト1の選択文字色を緑に変える
+		書式付きテキスト1の選択文字色は、緑
 		書式付きテキスト1に「日本語プログラミング言語［改行］」を挿入する
 		
 		<em>ーープロデルを挿入する</em>
-		書式付きテキスト1の選択文字色を青に変える
-		書式付きテキスト1の選択文字太字を○に変える
-		書式付きテキスト1の選択左余白を20に変える
-		書式付きテキスト1の選択文字サイズを14に変える
+		書式付きテキスト1の選択文字色は、青
+		書式付きテキスト1の選択文字太字は○
+		書式付きテキスト1の選択左余白は20
+		書式付きテキスト1の選択文字サイズは14
 		書式付きテキスト1に「プロデル」を挿入する
 		
 		<em>ーー色を変える</em>
-		書式付きテキスト1の選択文字色を赤に変える
-		書式付きテキスト1の選択文字斜体を○に変える
-		書式付きテキスト1に「version 2009［改行］」を挿入する
+		書式付きテキスト1の選択文字色は、赤
+		書式付きテキスト1の選択文字斜体は○
+		書式付きテキスト1に「Version 2009［改行］」を挿入する
 		
 		<em>ーー日付を中央に挿入する</em>
-		書式付きテキスト1の選択文字サイズを9に変える
-		書式付きテキスト1の選択文字配置を「中央」に変える
+		書式付きテキスト1の選択文字サイズは9
+		書式付きテキスト1の選択文字配置は「中央」
 		書式付きテキスト1に、日付を挿入する
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

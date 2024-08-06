@@ -12,7 +12,6 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -88,193 +87,198 @@
           <li><a href="grid.htm">表部品</a></li>
       </ul>
         <p>　</p>
-        <p>&nbsp;</p>
 	</div>
 	<div id="refcontent" class="col-md-8">
 <p>データ表の「選択する」手順は、.NET FrameworkのDataTableクラスのSelect()メソッドに相当します。選択文字列として指定するフィルタ式の詳しい文法は、<a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn.expression?view=net-5.0#expression-syntax">.NET公式ドキュメントの「Expression Syntax」</a>をご参照下さい。</p>
-<h2>定数</h2>
-<p>&nbsp;</p>
-<h2>識別子</h2>
-<p>&nbsp;</p>
+<h2>定数と識別子</h2>
+<p>フィルタ式には、次のような値や式を条件式として指定します。</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="row">演算子</th>
+            <th>説明</th>
+            <th>例文</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">数値</td>
+            <td>整数もしくは小数</td>
+            <td>20　3.14</td>
+        </tr>
+        <tr>
+            <td scope="row">文字列</td>
+            <td>文字列</td>
+            <td>'こんにちは' ''</td>
+        </tr>
+        <tr>
+            <td scope="row">項目名</td>
+            <td>データ表に含まれる項目</td>
+            <td>ID　名前</td>
+        </tr>
+    </tbody>
+</table>
 <h2></h2>
 <h2>演算子</h2>
 <p>論理式には、AND,OR,NOTを使えます。</p>
 <p>(名前 = '太郎' OR 名前 = '二郎') AND 名字 = '山田'</p>
-<p>論理式を指定するときに使える演算子です。</p>
-<table width="200" border="1">
-  <tbody>
+<p>論理式を指定するときに使う演算子です。</p>
+<table class="table table-bordered">
+<thead>
     <tr>
       <th scope="row">演算子</th>
-      <td>意味</td>
-      <td>例文</td>
+      <th>意味</th>
+      <th>例文</th>
+    </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td scope="row">&lt;</td>
+      <td>より小さい</td>
+      <td>年齢&lt;20</td>
     </tr>
     <tr>
-      <th scope="row">&lt;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">&gt;</td>
+      <td>より大きい</td>
+      <td>温度&gt;40</td>
     </tr>
     <tr>
-      <th scope="row">&gt;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">&lt;=</td>
+      <td>以下</td>
+      <td>価格&lt;=1000</td>
     </tr>
     <tr>
-      <th scope="row">&lt;=</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">&gt;=</td>
+      <td>以上</td>
+      <td>年齢&gt;=20</td>
     </tr>
     <tr>
-      <th scope="row">&gt;=</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">&lt;&gt;</td>
+      <td>不等号</td>
+      <td>都道府県&lt;&gt;'東京都'</td>
     </tr>
     <tr>
-      <th scope="row">&lt;&gt;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">=</td>
+      <td>等号</td>
+      <td>都道府県='神奈川県'</td>
     </tr>
     <tr>
-      <th scope="row">=</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">IN</td>
+      <td>いずれかを含む</td>
+      <td>都道府県 IN ('大阪', '奈良')</td>
     </tr>
     <tr>
-      <th scope="row">IN</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">LIKE</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">&nbsp;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td scope="row">LIKE</td>
+      <td>文字列を含む</td>
+      <td>都道府県 LIKE '%県'</td>
     </tr>
   </tbody>
 </table>
 <p>&nbsp;</p>
-<p>算術演算子</p>
-<table width="200" border="1">
-  <tbody>
+<h3>算術演算子</h3>
+<table class="table table-bordered">
+    <thead>
     <tr>
       <th scope="row">演算子</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <th>意味</th>
+      <th>例</th>
     </tr>
+    </thead>
+  <tbody>
     <tr>
       <th scope="row">+</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>足し算</td>
+      <td>スコア+10</td>
     </tr>
     <tr>
       <th scope="row">-</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>引き算</td>
+      <td>スコア-10</td>
     </tr>
     <tr>
       <th scope="row">*</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>掛け算</td>
+      <td>小計*消費税率</td>
     </tr>
     <tr>
       <th scope="row">/</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>割り算</td>
+      <td>合計/人数</td>
     </tr>
     <tr>
       <th scope="row">%</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>あまり</td>
+      <td>人数%2</td>
     </tr>
   </tbody>
 </table>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <h2>ワイルドカード</h2>
 <p>ワイルドカードには、%または*が使えます。「製*品」のようにワイルドカードを単語の途中で使うことはできません。</p>
-<table border="1">
-  <tbody>
+<table class="table table-bordered">
+    <thead>
     <tr>
-      <th scope="row">書式</th>
-      <td>意味</td>
-      <td>&nbsp;</td>
+        <th scope="row">書式</th>
+        <th>意味</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">品名 LIKE '*製品*'</th>
+        <td>品名に製品が含まれる</td>
     </tr>
     <tr>
-      <th scope="row">品名 LIKE '*製品*'</th>
-      <td>品名に製品が含まれる</td>
-      <td>&nbsp;</td>
+        <th scope="row">品名 LIKE '*製品'</th>
+        <td>品名が製品で終わる</td>
     </tr>
     <tr>
-      <th scope="row">品名 LIKE '*製品'</th>
-      <td>品名が製品で終わる</td>
-      <td>&nbsp;</td>
+        <th scope="row">品名 LIKE '製品*'</th>
+        <td>品名が製品で始まる</td>
     </tr>
-    <tr>
-      <th scope="row">品名 LIKE '製品*'</th>
-      <td>品名が製品で始まる</td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
+    </tbody>
 </table>
 <p>&nbsp;</p>
 <h2></h2>
 <h2>集計</h2>
 <p>　</p>
-<table border="1">
-  <tbody>
+<table class="table table-bordered">
+    <thead>
     <tr>
       <th scope="row">関数名</th>
-      <th>&nbsp;</th>
+      <th>意味</th>
       <th>意味</th>
     </tr>
+    </thead>
+  <tbody>
     <tr>
-      <th scope="row">Sum(値段)</th>
-      <td>&nbsp;</td>
+      <th scope="row">SUM(値段)</th>
+      <td>合計値</td>
       <td>値段をすべて足した値</td>
     </tr>
     <tr>
-      <th scope="row">Avg(点数)</th>
-      <td>&nbsp;</td>
+      <th scope="row">AVG(点数)</th>
+      <td>平均</td>
       <td>点数の平均値</td>
     </tr>
     <tr>
-      <th scope="row">Min(点数)</th>
-      <td>&nbsp;</td>
+      <th scope="row">MIN(点数)</th>
+      <td>最小値</td>
       <td>点数の最小値</td>
     </tr>
     <tr>
-      <th scope="row">Max(点数)</th>
-      <td>&nbsp;</td>
+      <th scope="row">MAX(点数)</th>
+      <td>最大値</td>
       <td>点数の最大値</td>
     </tr>
     <tr>
-      <th scope="row">Count(ID)</th>
-      <td>&nbsp;</td>
+      <th scope="row">COUNT(ID)</th>
+      <td>個数</td>
       <td>行数</td>
-    </tr>
-    <tr>
-      <th scope="row">StDev</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">Var</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">&nbsp;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
     </tr>
   </tbody>
 </table>
 		<h2>関数</h2>
-		<table width="200" border="1">
+		<table class="table table-bordered">
 		  <tbody>
 		    <tr>
 		      <th scope="row">関数名</th>
@@ -282,40 +286,35 @@
 		      <th>説明</th>
 	        </tr>
 		    <tr>
-		      <th scope="row">CONVERT</th>
-		      <td>Convert(expression, type)</td>
-		      <td>&nbsp;</td>
-	        </tr>
-		    <tr>
-		      <th scope="row">LEN</th>
-		      <td>LEN(expression)</td>
-		      <td>&nbsp;</td>
-	        </tr>
+		            <th scope="row">LEN</th>
+		            <td>LEN(式)</td>
+		            <td>値の文字数</td>
+		            </tr>
 		    <tr>
 		      <th scope="row">ISNULL</th>
 		      <td><table>
 		        <tbody>
 		          <tr>
-		            <td>		              ISNULL(expression, replacementvalue)</td>
+		            <td>		              ISNULL(式, 代替値)</td>
 	              </tr>
 	            </tbody>
 	          </table></td>
-		      <td>&nbsp;</td>
+		      <td>無(NULL値)の時に代わりに表す値</td>
 	        </tr>
 		    <tr>
 		      <th scope="row">IIF</th>
-		      <td>IIF(expr, truepart, falsepart)</td>
-		      <td>&nbsp;</td>
+		      <td>IIF(条件式, 真の時, 偽の時)</td>
+		      <td>条件式の条件に応じて変わる値</td>
 	        </tr>
 		    <tr>
 		      <th scope="row">TRIM</th>
-		      <td>TRIM(expression)</td>
-		      <td>&nbsp;</td>
+		      <td>TRIM(式)</td>
+		      <td>式の前後のスペースを消した文字列</td>
 	        </tr>
 		    <tr>
 		      <th scope="row">SUBSTRING</th>
-		      <td>SUBSTRING(expression, start, length)</td>
-		      <td>&nbsp;</td>
+		      <td>SUBSTRING(式, 開始位置, 文字数)</td>
+		      <td>式の文字列のうち開始位置から文字数だけを切り取った文字列</td>
 	        </tr>
 	      </tbody>
 	  </table>
@@ -323,11 +322,11 @@
 		<!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

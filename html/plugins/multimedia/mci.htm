@@ -12,8 +12,8 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="MCI">	<meta name="description" content="日本語プログラミング言語プロデルの「メディア再生制御」プラグインの「メディア制御」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
+	<meta name="keywords" content="MCI">
+    <meta name="description" content="日本語プログラミング言語プロデルの「メディア再生制御」プラグインの「メディア制御」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -112,17 +112,17 @@
             <pre class="code">ファイル名は「tada.wav」
 エイリアス名は「wave1」
 
-<strong><span style="color: #008000">//デバイスを開き、演奏を始める</span></strong>
+<em>//デバイスを開き、演奏を始める</em>
 メディア制御へ「open &quot;［ウィンドウズフォルダ］media\［ファイル名］&quot; alias ［エイリアス名］」を命令する
 メディア制御へ「play ［エイリアス名］」を命令する
  			
-<strong><span style="color: #008000">//演奏が終わるまで待機する</span></strong>
+<em>//演奏が終わるまで待機する</em>
 繰り返す
- もし［メディア制御から「status ［エイリアス名］ mode」を取得したもの］が「playing」でないなら、繰り返しから抜け出す
+ ［メディア制御から「status ［エイリアス名］ mode」を取得したもの］が「playing」でなければ、繰り返しから抜け出す
 　0.1秒、待つ
-繰り返し終わり
+そして
 
-<strong><span style="color: #008000">//演奏を止めて、デバイスを閉じる</span></strong>
+<em>//演奏を止めて、デバイスを閉じる</em>
 メディア制御へ「stop ［エイリアス名］」を命令する
 メディア制御へ「close ［エイリアス名］」を命令する</pre>
 
@@ -133,8 +133,7 @@
 </span>「open new type waveaudio alias WAVE」をメディア制御へ命令する
 <span class="rem">ーー録音開始
 </span>「record WAVE」をメディア制御へ命令する
-<font color="#008000">
-</font><span class="rem">ーー停止
+<span class="rem">ーー停止
 </span>「stop WAVE」をメディア制御へ命令する
 <span class="rem">ーー保存する
 </span>「save WAVE &quot;C:\Test.wav&quot;」をメディア制御へ命令する
@@ -151,10 +150,13 @@
 			openコマンドを利用したときに、指定できます。</p>
 		<p>再生するファイルや周辺機器によっては、サポートされていないものもあります。</p>
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th>MCIコマンド</th>
 				<th>説明</th>
-				</tr>
+            </tr>
+            </thead>
+            <tbody>
 			<tr>
 				<td>open [ファイル名] alias [エイリアス]</td>
 				<td>指定したデバイスでファイルを開く</td>
@@ -212,15 +214,16 @@
 			<tr>
 				<td>set [エイリアス] audio right [off/on]</td>
 				<td>右の音をミュートするかどうか</td>
-				</tr>
-			</table>
+            </tr>
+            </tbody>
+        </table>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年5月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

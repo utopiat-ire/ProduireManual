@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「アップダウンダイアル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -124,6 +123,7 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="キー操作">キー操作</a></th>
 					<th>真偽</th>
@@ -215,7 +215,8 @@
 					<th>◎</th>
 					<td>枠の形<br>
 						｛なし、線｝</td>
-					</tr>
+                </tr>
+                </tbody>    
 				</table>
 			</div>
 		<h2 id="イベント手順">イベント手順</h2>
@@ -227,11 +228,13 @@
 					<th>説明</th>
 					<th>情報</th>
 					</tr></thead>
-				<tr>
+				<tbody>
+                <tr>
 					<th>変更された</th>
 					<td>項目が変わった時</td>
 					<td></td>
 					</tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -243,7 +246,7 @@
 	その内容は「発注量」
 窓へ行き先というアップダウンダイアルを作る
 	その位置と大きさは｛60,20,50,3｝
-	その値を10に変える
+	その値は10
 窓を表示する
 
 待機する</pre>
@@ -253,7 +256,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

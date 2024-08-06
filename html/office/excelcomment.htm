@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
     <meta name="description" content="日本語プログラミング言語プロデルで「Microsoft Excel」を操作する「エクセルコメント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -122,79 +121,81 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="作成者">作成者</a></th>
 					<th>文字列</th>
 					<th>◎</th>
 					<td>コメントの作成者</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="生成アプリ">生成アプリ</a></th>
 					<th>整数</th>
 					<th>◎</th>
 					<td>コメントを作成したExcelバージョン</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="前">前</a></th>
 					<th>エクセルコメント</th>
 					<th>◎</th>
 					<td>ひとつ前のコメント</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="次">次</a></th>
 					<th>エクセルコメント</th>
 					<th>◎</th>
 					<td>ひとつ次のコメント</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="親">親</a></th>
 					<th>エクセルコメント</th>
 					<th>◎</th>
 					<td>親のセル</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="図形">図形</a></th>
 					<th><a href="excelshape.htm">エクセル図形</a></th>
 					<th>◎</th>
 					<td>コメントの図形</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="表示">表示</a></th>
 					<th>真偽</th>
 					<th>◎</th>
 					<td>コメントを表示するかどうか</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
 					<th>◎</th>
 					<td>コメントの内容前</td>
-					</tr>
+                </tr>
 				<tr>
 				  <th><a name="元実体">元実体</a></th>
 				  <th><a href="../primitive/netobject.htm">ネット物</a></th>
 				  <th>□</th>
 				  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 			  </tr>
+                </tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">セルにコメントを追加します。</h3>
 	<p>特定のセルのコメントを追加します。</p>
-<pre class="code"><font COLOR="#0000cd">エクセル</font><font COLOR="#708090">を</font><font COLOR="#8b0000">起動する
-</font><font COLOR="#0000cd">エクセル</font><font COLOR="#708090">へ</font><font COLOR="#8b0000">ワークブックを追加する</font>
-操作シート<font COLOR="#d2691e">は、</font><font COLOR="#0000cd">エクセル</font><font COLOR="#708090">の</font>現在シート
-操作セル<font COLOR="#d2691e">は、（</font><font>操作シート</font><font COLOR="#d2691e">:</font><font COLOR="#8b0000">セル</font><font COLOR="#d2691e">（「</font><font COLOR="#9400d3">D2</font><font COLOR="#d2691e">」））
-</font>操作セル<font COLOR="#708090">に</font><font COLOR="#d2691e">「</font><font COLOR="#9400d3">要検討!</font><font COLOR="#d2691e">」</font><font COLOR="#708090">という</font><font COLOR="#8b0000">コメントを追加する</font></pre>
+<pre class="code">エクセルを起動する
+エクセルへワークブックを追加する
+操作シートは、エクセルの現在シート
+操作セルは、（操作シート:セル（「D2」））
+操作セルに「要検討!」というコメントを追加する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

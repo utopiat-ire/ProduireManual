@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="POST形式">	<meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「HTTP」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -84,8 +83,11 @@
 		<p> <a href="../static.htm" class="label label-info">静的種類</a></p>
 		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
-        <ul><li><a href="webclient.htm">Webクライアント</a></li>
-      </ul>
+        <ul>
+            <li><a href="httprequest.htm">HTTP要求</a></li>
+            <li><a href="httpresponse.htm">HTTP応答</a></li>
+            <li><a href="webclient.htm">ウェブクライアント</a></li>
+        </ul>
 		<h3>利用プラグイン</h3>
 		<p><a href="index.htm">ネットワーク機能集</a></p>
 	</div>
@@ -103,67 +105,63 @@
 			<h4 data-ref="取得する">GET形式でHTMLを取得する</h4>
 			<pre class="code">「https://www.yahoo.co.jp/」をHTTPで取得して内容とする
 内容を報告する</pre>
-			<h3>HTTPで【アドレス】へ【パラメータ:辞書】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="送信する">送信する</a>：文字列</h3>
-			<p>指定した【アドレス】に対して【パラメータ】を引数にしてPOST形式で送ります。<br>
+			<h3>HTTPで【アドレス】へ【引数:辞書】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="送信する">送信する</a>：文字列</h3>
+			<p>指定した【アドレス】に対して【引数】をフィールド値にしてPOST形式で送ります。<br>
 				【文字コード】には、送受信に使用する文字コードを指定します。<br>
 				省略すると、文字コードを自動判別します。</p>
-			<h4 data-ref="送信する">POST形式で送信する</h4>
+			<h4 data-ref="送信する">フォーム値をPOST形式で送信する</h4>
 			<pre class="code">パラメータ（「search」）は「プロデル」
-「https://rdr.utopiat.net/cgi/post.php」へパラメータをHTTPで送信して内容とする
+「https://produ.irelang.jp/cgi/post.php」へパラメータをHTTPで送信して内容とする
 内容を報告する</pre>
 			<p>サーバへの要求にヘッダ情報を指定する場合は、【ヘッダ】を指定します。</p>
 			<h4 data-ref="送信する">ヘッダ情報を指定して送信する</h4>
 			<pre class="code">ヘッダ(「User-Agent」)は「Produire/1.0」
-内容は「https://rdr.utopiat.net/cgi/getheader.php?key=User-Agent」へパラメータをHTTPでヘッダにて送信する
+「https://produ.irelang.jp/cgi/getheader.php?key=User-Agent」へパラメータをHTTPでヘッダにて送信して内容とする
 内容を報告する</pre>
 			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、この手順が実行できません</p>
 			<h3>HTTPで【アドレス】へ【データ:<a href="../primitive/bytes.htm">バイナリデータ</a>】を〈【ヘッダ:辞書】にて〉送信する：バイナリデータ</h3>
 			<p>指定した【アドレス】に対してデータをPOST形式で送ります。<br>
 				【ヘッダ】には、追加で指定するヘッダ情報を指定します。</p>
-			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、この手順が実行できません</p>
-			<h4>フォーム値を	POST形式で要求する</h4>
-			<pre class="code">パラメータは、辞書を作ったもの
-パラメータ(「name」)は「太郎」
-内容は「https://rdr.utopiat.net/cgi/getheader.php?key=User-Agent」へパラメータをHTTPで送信する
-内容を報告する</pre>
+			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、この手順が実行できません			</p>
 			<h3>HTTPで【アドレス】を【ファイル名】へ〈【ヘッダ:辞書】にて〉〈【進捗対象:プログレスバー】しながら〉<a name="ダウンロードする">ダウンロードする</a></h3>
 			<p>指定した【アドレス】からファイルをダウンロードして、【ファイル名】に保存します。<br>
 				【ヘッダ】には、追加で指定するヘッダ情報を指定します。<br>
 				【進捗対象】には、ダウンロード状態を表示するプログレスバーを指定します。</p>
 			<p>なお、ログインなど認証が必要なページでは、アドレスを指定しただけでは、適切にダウンロードできない場合があります。</p>
 			<h4 data-ref="ダウンロードする">ファイルをダウンロードする</h4>
-			<pre class="code">「https://rdr.utopiat.net/img/produire-title.gif」を「[デスクトップ]produire-title.gif」へHTTPでダウンロードする
-「ダウンロードしました」を情報アイコンで表示する</pre>
-			<h3>HTTPで【アドレス】へ【パラメータ】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="アップロードする">アップロードする</a>：文字列</h3>
+			<pre class="code">「https://produ.irelang.jp/images/produire-title.gif」を「[デスクトップ]produire-title.gif」へHTTPでダウンロードする
+</pre>
+			<h3>HTTPで【アドレス】へ【引数:辞書】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="アップロードする">アップロードする</a>：文字列</h3>
 			<p>指定した【アドレス】へファイルや値をアップロードします。</p>
-			<p>【パラメータ】には、アップロードするファイルや値を指定します。<br>
-				パラメータは、辞書形式で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
+			<p>【引数】には、アップロードするフィールド値(ファイルや値)を辞書で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
 			<h4 data-ref="アップロードする">ファイルをアップロードする</h4>
 			<pre class="code">パラメータ(「@upfile」)は「image.png」
-内容は「https://xxxxxx/upload.php」へパラメータをHTTPでアップロードする
+「https://xxxxxx/upload.php」へパラメータをHTTPでアップロードして内容とする
 内容を報告する</pre>
-			<h3>HTTPで【アドレス】へ【パラメータ】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="要求する">要求する</a>：<a href="httpresponse.htm">HTTP応答</a></h3>
-			<p>指定した【アドレス】へファイルや値をアップロードします。</p>
-			<p>【パラメータ】には、アップロードするファイルや値を指定します。<br>
-				パラメータは、辞書形式で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
+			<h3>HTTPで【アドレス】を【要求内容:<a href="httprequest.htm">HTTP要求</a>】にて<a name="要求する">要求する</a>：<a href="httpresponse.htm">HTTP応答</a></h3>
+			<p>指定した【アドレス】へ【要求内容】に基づいてリクエストを送信します。</p>
+			<p>【要求内容】には、リクエストヘッダーや文字コードなどを含む<a href="httprequest.htm">HTTP要求</a>のオブジェクトを指定します。</p>
 			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、この手順が実行できません</p>
 			<h4 data-ref="要求する">HTTP要求でHTMLを取得する</h4>
-		  <pre class="code">HTTPで要求を作って要求内容とする
-要求内容のUserAgentは「Mozilla/5.0」
-要求内容にて「https://www.yahoo.co.jp/」をHTTPで要求して応答内容とする
-応答内容のヘッダのすべての要素についてそれぞれ繰り返す
+		  <pre class="code">HTTPで要求を作ってリクエストとする
+リクエストのUserAgentは「Mozilla/5.0」
+リクエストにて「https://www.yahoo.co.jp/」をHTTPで要求してレスポンスとする
+レスポンスのヘッダのすべての要素についてそれぞれ繰り返す
 	要素のキー&amp;「=」&amp;要素の内容を報告する
-繰り返し終わり
-応答内容の本文を報告する</pre>
+そして
+レスポンスの本文を報告する</pre>
 			<h2 id="設定項目">設定項目</h2>
 			<div id="properties">
 				<table class="table table-bordered">
+                    <thead>
 					<tr>
 						<th>設定項目</th>
 						<th>型</th>
 						<th>　</th>
 						<th>説明</th>
-						</tr>
+                    </tr>
+                    </thead>
+                    <tbody>
 					<tr>
 						<th><a name="文字コード">文字コード</a></th>
 						<th>エンコード</th><th>◎</th><td>HTTP通信で文字列として使用する文字コード</td>
@@ -179,7 +177,8 @@
 					<tr>
 						<th><a name="パスワード">パスワード</a></th>
 						<th>文字列</th><th>◎</th><td>BASIC/Digest認証を要求された時に使用するパスワード</td>
-						</tr>
+                    </tr>
+                    </tbody>
 					</table>
 				</div>
 			</div>
@@ -192,7 +191,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format">HTTPで<span class="flag">《アドレス》</span>を取得する</pre>
+				<pre class="format">HTTPで<strong>《アドレス》</strong>を取得する</pre>
 				<p>《アドレス》には、内容を取得するアドレスを書きます。<br>
 					実行結果として、アドレスから取得された内容がテキスト形式で表されます。</p>
 			</div>
@@ -202,7 +201,7 @@
 				<h4 class="panel-title">例文　指定したアドレスからHTMLを取得する</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="code">内容は、HTTPで「https://www.yahoo.co.jp/」を取得したもの
+				<pre class="code">HTTPで「https://www.yahoo.co.jp/」を取得して、内容とする
 内容を表示する</pre>
 			</div>
 		</div>
@@ -213,7 +212,7 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format">HTTPで<span class="flag">《アドレス》</span>を<span class="flag">《保存先のファイル名》</span>へダウンロードする</pre>
+				<pre class="format">HTTPで<strong>《アドレス》</strong>を<strong>《保存先のファイル名》</strong>へダウンロードする</pre>
 				<p>《アドレス》には、取得するファイルがあるアドレスを書きます。<br>
 					《保存先のファイル名》には、ダウンロードしたファイルを保存するフォルダとファイル名を書きます。</p>
 			</div>
@@ -223,18 +222,17 @@
 				<h4 class="panel-title">例文　指定したアドレスからファイルをダウンロードする</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="code">HTTPで「https://rdr.utopiat.net/img/produire-title.gif」を「[デスクトップ]produire-title.gif」へダウンロードする
-「ダウンロードしました」を情報で表示する</pre>
+				<pre class="code">HTTPで「https://produ.irelang.jp/images/produire-title.gif」を「[デスクトップ]produire-title.gif」へダウンロードする</pre>
 			</div>
 		</div>
 	</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月10日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月10日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

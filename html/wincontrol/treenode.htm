@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ツリー項目」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -97,7 +96,7 @@
 	</div>
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
-      <p>エクスプローラのフォルダ一覧のような木構造の一覧表を作るための部品です。</p>
+      <p>エクスプローラのフォルダ一覧のような木構造の一覧表のうちでそれぞれの枝と葉を表すノードを表現する部品です。</p>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というツリー項目を作る</pre>
 		<h2 id="手順">手順</h2>
@@ -138,7 +137,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="チェック">チェック</a></th>
 					<th>真偽</th>
@@ -211,6 +211,7 @@
 				  <th>◎</th>
 				  <td>ツリー項目のアイコン</td>
 			  </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 	  </div>
@@ -222,58 +223,59 @@
 					<th>イベント名</th>
 					<th>説明</th>
 					<th>情報</th>
-					</tr></thead>
-				<tr>
+                </tr></thead>
+				<tbody>
+                <tr>
 					<th><a name="チェックされた">チェックされた</a></th>
-					<td>チェックされた時</td>
+					<td>ノードのチェック状態が変化した時。クリック操作および設定項目の設定によって発生します。</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="ドラッグされた">ドラッグされた</a></th>
-					<td>ドラッグされた時</td>
+					<td>ノードがドラッグされた時</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="折りたたみ後">折りたたみ後</a></th>
-					<td>項目を折りたたんだ後</td>
+					<td>ノードを折りたたんだ後</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="選択された">選択された</a></th>
-					<td>項目が選択された時</td>
+					<td>ノードが選択された時</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="展開後">展開後</a></th>
-					<td>項目を展開後</td>
+					<td>ノードを展開後</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="編集後">編集後</a></th>
-					<td>項目の見出しを編集後</td>
+					<td>ノードの見出しを編集後</td>
 					<td></td>
 					</tr>
 				<tr>
 					<th><a name="編集前">編集前</a></th>
-					<td>項目の見出しを編集前</td>
+					<td>ノードの見出しを編集前</td>
 					<td></td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 		</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
-<pre class="code">
-メイン画面を表示する
+<pre class="code">メイン画面を表示する
 待機する
 
 メイン画面とは
 	ウィンドウを受け継ぐ
 
 	はじめの手順
-		この内容を「ツリービューのサンプル」に変える
+		この内容は「ツリービューのサンプル」
 
 		ツリー１というツリーを作る
-		ツリー１の透明色を紫色に変える
-		    その大きさを｛200,200｝に変える
+		ツリー１の透明色は、紫色
+		    その大きさは｛200,200｝
 		ツリー１に「あ」を「［プログラムのフォルダ］../image/copy.bmp」で、追加する
 		ツリー１に「あ」を追加する
 		ツリー１に「あ」を追加する
@@ -284,11 +286,11 @@
 終わり</pre>
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

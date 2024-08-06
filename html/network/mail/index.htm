@@ -12,7 +12,6 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -115,7 +114,7 @@
 マイアカウントの送信サーバの送信者名は「xxxxx@abcdef.net」</pre>
 <h3 id="lookup3">認証が必要なメールサーバの場合</h3>
 <p>送信に、認証が必要なメールサーバの場合は、次のプログラムを加えてください。送信サーバの「認証」設定項目を○にして、ユーザ名とパスワードを書きます。</p>
-<pre class="code">マイアカウントの送信サーバの認証は、○
+<pre class="code">マイアカウントの送信サーバの認証は○
 マイアカウントの送信サーバのユーザ名は「xxxxx@abcdef.net」
 マイアカウントの送信サーバのパスワードは「xxxxx」</pre>
 <h3 id="lookup4">送信メールの作成</h3>
@@ -134,7 +133,7 @@
 <h4>アカウントの設定</h4>
 <pre class="code">マイアカウントというアカウントを作る
 マイアカウントの受信サーバのサーバ名は「abcdef.net」
-マイアカウントの受信サーバのポート番号は、110
+マイアカウントの受信サーバのポート番号は110
 マイアカウントの受信サーバのユーザ名は「xxxxx@abcdef.net」
 マイアカウントの受信サーバのパスワードは「xxxxx」
 マイアカウントの受信サーバの認証方法は、なし</pre>
@@ -145,16 +144,16 @@
 <p>メールサーバにある受信メールを確認するには、次のようなプログラムを書きます。</p>
 <p>このプログラムでは、メールサーバにある受信メールの件数を取得しています。「受信メール一覧」変数には<a href="receivetray.htm">「受信トレイ」種類</a>が格納されています。この「受信トレイ」を使って、各メールの内容を取得できます。</p>
 <pre class="code">マイアカウントの受信サーバへ接続する
-受信メール一覧は、［マイアカウントから受信したもの］
+マイアカウントから受信して、受信メール一覧とする
 受信件数は、受信メール一覧の件数
 マイアカウントの受信サーバから切断する
  	
 「[受信件数]件、受信しました」を表示する</pre>
 <p>なお、受信メールの確認のみの場合は「接続」手順と「切断」手順を使わずに、次のようにも書けます。ただし、この場合は、受信したメールの本文などの情報を取得できません。</p>
-<pre class="code">受信メール一覧は、マイアカウントから受信したもの</pre>
+<pre class="code">マイアカウントから受信して、受信メール一覧とする</pre>
 <h3 id="lookup7">受信メールの取得</h3>
 <p>メールサーバから受信メールを受け取るには「受信トレイ」の「～番目」手順を使います。なお「～番目」手順は、受信サーバへ接続している間に実行する必要があります。</p>
-<pre class="code">もし受信件数が0でなければ
+<pre class="code">受信件数が0でなければ
  	メールは、受信メール一覧の1番目
  	
  	「次のメールを受信しました。
@@ -162,16 +161,16 @@
 差出人:[メールの差出人]
 件名:[メールの件名]
 [メールの本文]」を表示する
-もし終わり</pre>
+そして</pre>
 <p>メールで取得できる内容は「<a href="receivemail.htm">受信メール</a>」種類の説明をご覧ください。</p>
 	  </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

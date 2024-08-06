@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="TCP/IP,ソケット通信">
     <meta name="description" content="日本語プログラミング言語プロデルで「ネットワーク機能」プラグインの「TCPIPサーバ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -88,7 +87,7 @@
 		<p><a href="index.htm">ネットワーク機能集</a></p>
 	  <h3>関連ページ</h3>
       <ul>
-		<li><a href="tcpclient.htm">TCPIPクライアント</a><a href="../lookup/network_lookup.htm"></a></li>
+		<li><a href="tcpclient.htm">TCPIPクライアント</a></li>
       </ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
@@ -115,34 +114,40 @@
 					<th>　</th>
 					<th>説明</th>
 					</tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="ポート番号">ポート番号</a></th>
 					<th><a href="../primitive/number.htm">整数</a></th>
 					<th>◎</th>
 					<td>接続を受け付けるポート番号</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="待機中">待機中</a></th>
 					<th><a href="../primitive/boolean.htm">真偽値</a></th>
 					<th>□</th>
 					<td>サーバが起動中かどうか</td>
-					</tr>
+                </tr>
+                </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
 		<h2>実行される手順</h2>
+		<div id="events">
 		<table class="table table-bordered">
 			<thead><tr>
 				<th>手順名</th>
 				<th>説明</th>
 				<th>情報</th>
 				</tr></thead>
+            <tbody>
 			<tr>
 				<th><a name="受信した">受信した</a></th>
 				<td>クライアントから接続要求を受けた時</td>
 				<td><a href="tcpserver_event.htm#受信した">あり</a></td>
-				</tr>
+            </tr>
+            </tbody>
 			</table>
+		</div>
 		<p>　</p>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
@@ -168,11 +173,11 @@
 
 画面表示する手順
  	窓というウィンドウを作る
- 	そのタイトルを「TCP/IP通信サーバ」に変える
+ 	    そのタイトルは「TCP/IP通信サーバ」
  	出力欄という文章テキストを窓に作る
- 	そのドッキング方向を全体に変える
- 	そのフォント名を「ＭＳ ゴシック」に変える
- 	その文字サイズを14に変える
+ 	    そのドッキング方向は、全体
+ 	    そのフォント名は「ＭＳ ゴシック」
+ 	    その文字サイズは14
  	窓の閉じた時の手順は、閉じたとき
  	窓を表示する
 終わり
@@ -187,11 +192,11 @@
         <p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

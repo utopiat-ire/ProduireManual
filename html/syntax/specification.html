@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>文法仕様 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->配列の文法<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div id="top" class="row">
+    <div class="col-md-9">
+        <ul class="breadcrumb" data-category="syntax">
+            <li><a href="../index.htm">プロデル</a></li>
+            <li><a href="index.htm">言語仕様</a></li>
+            <li>文法仕様</li>
+        </ul>
+    </div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>文法仕様</h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#array_assign">配列要素への代入</a></li>
+            <li><a href="#array_const">一度に配列へ値を格納する (配列定数)</a></li>
+            <li><a href="#array_declear">配列の宣言</a></li>
+            <li><a href="#array_fixed">固定長配列</a></li>
+            <li><a href="#subete_suffix">「すべて」後置子</a></li>
+        </ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
+<h1 id="array">プロデル文法仕様 Ver.2.0.1231</h1>
+<h3 id="array_assign">A群</h3>
+<ul>
+        <li> [B]は、[B]</li>
+        <li> [B]を [B]とする</li>
+        <li>もし [B]なら</li>
+        <li> [B]なら</li>
+        <li> [B]の間</li>
+        <li> [B]限り</li>
+        <li>～手順</li>
+        <li>～という属性</li>
+        <li>～とは</li>
+        <li>～とは{}</li>
+</ul>
+<h3>B群 </h3>
+<p> </p>
+<ul>
+        <li>[C]:{[C]を}動詞</li>
+        <li>{[C]を}動詞 </li>
+</ul>
+<h3 id="array_assign2">C群</h3>
+<ol>
+        <li>        [D]または[D]</li>
+        <li>[D]かつ[D]</li>
+</ol>
+<h3 id="array_assign3">D群(<a href="compareverb.html">比較式</a>)</h3>
+<p></p>
+<ul>
+        <li>        [E]が[E]</li>
+        <li>[E]は[E]</li>
+        <li>[E]が[E]以上</li>
+        <li>[E]が[E]以下</li>
+        <li>[E]が[E]未満</li>
+        <li>[E]が[E]より大きい</li>
+        <li>[E]が[E]より小さい</li>
+        <li>[E]=[E]</li>
+        <li>[E]&lt;&gt;[E]</li>
+        <li>[E]&gt;[E]</li>
+        <li>[E]&lt;[E]</li>
+</ul>
+<h3>E群</h3>
+<ol>
+        <li>[F]+[F]<br>
+                [F]-[F]</li>
+        <li>[F]/[F]<br>
+                [F]*[F]<br>
+                [F]\[F]<br>
+                [F]^[F]</li>
+</ol>
+<h3>F群</h3>
+<ul>
+        <li>G～G</li>
+        <li>{}</li>
+        <li>自分～のG番目以降</li>
+        <li> (B)[B]</li>
+</ul>
+<h3>G群</h3>
+<ul>
+        <li>数字</li>
+        <li>「　」</li>
+        <li>(B)</li>
+        <li>[B]</li>
+</ul>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月15日 <!-- #EndDate -->更新</div>
+    </div>
+</div>
+<!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

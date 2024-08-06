@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="逆引き"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -91,7 +90,7 @@
 		  <li><a href="../syntax/string.html">文字列の文法</a></li>
 			<li><a href="../primitive/string.htm">「文字列」種類</a></li>
 			<li><a href="../core/global_string.htm">「文字列関連操作」種類</a></li>
-			<li><a href="https://wp.utopiat.net/2020/08/2175/">プロデルで始める日本語プログラミング言語入門(#10) 「文字列あれこれ」</a></li>
+			<li><a href="https://produ.irelang.jp/blog/2020/08/2175/">プロデルで始める日本語プログラミング言語入門(#10) 「文字列あれこれ」</a></li>
 		</ul>
         <div id="samples">
 		<h3 id="string1">文字列の指定した部分の文字列を取り出す</h3>
@@ -101,9 +100,9 @@
 				<h4 class="panel-title">書式</h4>
 			</div>
 			<div class="panel-body">
-				<pre class="format">【文字列】から先頭から【文字数】文字、取り出す</pre>
+				<pre class="format">【文字列】の先頭から【文字数】文字、取り出す</pre>
 				<pre class="format">【文字列】の【開始位置】文字目から【文字数】文字、取り出す</pre>
-				<pre class="format">【文字列】から末尾から【文字数】文字、取り出す</pre>
+				<pre class="format">【文字列】の末尾から【文字数】文字、取り出す</pre>
 				<p>【文字列】は、取り出すもととなる文字列を書きます。<br>
 					【文字数】は、取り出す文字数を書きます。<br>
 					【開始位置】は、指定した取り出す最初の文字の位置を書きます。</p>
@@ -117,7 +116,7 @@
 				<pre class="code">文章は「いぬとねこは、なかよし」
 
 <em>ーーいぬを取り出す</em>
-<strong>文章から先頭から2文字取り出</strong>して内容とする
+<strong>文章の先頭から2文字取り出</strong>して内容とする
 内容を表示する
 
 <em>ーーねこを取り出す</em>
@@ -125,7 +124,7 @@
 内容を表示する
 
 <em>ーーなかよしを取り出す</em>
-<strong>文章から末尾から4文字取り出</strong>して内容とする
+<strong>文章の末尾から4文字取り出</strong>して内容とする
 内容を表示する</pre>
 			</div>
 		</div>
@@ -284,8 +283,8 @@
     </div>
   <div class="panel-body">
     <pre class="code">文章は「おいしいりんごはいかがでしょうか？」
-<b>文章から「りんご」を探して</b>文字位置とする
-結果は「［<b>文章の先頭から（文字位置－１）文字取り出したもの</b>］リンゴ［<b>文章の（文字位置＋３）文字目以降</b>］」
+文章から「りんご」を探して、文字位置とする
+結果は「［文章の先頭から（文字位置－１）文字取り出したもの］リンゴ［文章の（文字位置＋３）文字目以降］」
 結果を表示する</pre>
     </div>
 </div>
@@ -306,7 +305,7 @@
     </div>
   <div class="panel-body">
     <pre class="code">内容は「にほんごぷろぐらみんぐげんご ぷろでる」
-文字位置は、内容の11文字目から「ん」を前方向へ探したもの
+内容の11文字目から「ん」を前方向へ探して、文字位置とする
 「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
     </div>
 </div>
@@ -349,7 +348,7 @@
     </div>
   <div class="panel-body">
     <pre class="code"><em>ーー３を表します</em>
-内容は　「こんにちは
+内容は「こんにちは
 今日はいい天気です。
 今日もがんばりましょう！」
 <strong>行数（内容）</strong>を表示する</pre>
@@ -362,7 +361,7 @@
     <h4 class="panel-title">書式</h4>
     </div>
   <div class="panel-body">
-    <pre class="code">《回数》回、【文字】を、繰り返す</pre>
+    <pre class="format">《回数》回、【文字】を、繰り返す</pre>
     <p>《回数》には、繰り返す回数を書きます。<br>
       【文字】には、繰り返し文字を書きます。</p>
     </div>
@@ -372,7 +371,7 @@
     <h4 class="panel-title">例文</h4>
     </div>
   <div class="panel-body">
-    <pre class="code">内容は、<strong>10回「★」を繰り返したもの</strong>
+    <pre class="code">10回「★」を繰り返して、内容とする
 内容を表示する</pre>
     </div>
 </div>
@@ -397,11 +396,11 @@
         </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

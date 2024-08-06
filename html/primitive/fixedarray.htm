@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「固定長配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -92,13 +91,13 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>1番から順番に内容を持っている配列を持つ種類です。固定長配列では、要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
+		<p>1番から順番に内容を持っている配列を表す種類です。固定長配列では、要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
 	<h2>生成する方法</h2>
 		<p>固定長配列を作ることで生成できます。この際に、配列の要素数を指定しておきます。</p>
-		<pre class="code">【一覧】は、固定長配列(10)を作ったもの
+		<pre class="code">【一覧:固定長配列】は、固定長配列(10)を作ったもの
 数を1から10まで増やしながら繰り返す	//11以上はエラーとなる
     一覧(数)は、数*数
-繰り返し終わり
+そして
 一覧(5)を表示する</pre>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
@@ -109,7 +108,7 @@
 			行の並べ替えは、配列が2次配列の場合のみ指定できます。</p>
 			<pre class="code">一覧は｛「東京」,「名古屋」,「大阪」｝
 一覧を表示する
-結果は、<b>一覧から１番目と３番目を交換したもの</b>
+一覧から１番目と３番目を交換して、結果とする
 結果を表示する</pre>
 			<h3>【自分】から【キーワード】を<a name="探す">探す</a>：数値</h3>
 			<p>配列からキーワードが含まれる要素を探して、その番号を配列で表します</p>
@@ -147,7 +146,7 @@
 			<p>配列の要素を文字列化して、順番に一つの文字列として繋げます。<br>
 				〈文字〉を指定すると、要素の間に区切り文字を入られます</p>
 			<pre class="code">一覧は｛「アイス」,「スイカ」,「かき氷」｝
-結果は、<b>一覧を「＆」で繋げたもの</b>
+一覧を「＆」で繋げて、結果とする
 結果を表示する</pre>
 			<h3>【自分】の<a name="最大値">最大値</a>：数値</h3>
 			<p>配列の数値でもっとも大きい値を求めます</p>
@@ -225,13 +224,13 @@
 			<pre class="code">一覧は{12,3,5,6}
 一覧を『
 	それを{左,右}とみなす
-	もし左&gt;右なら
+	左&gt;右なら
 		-1を返す。
-	他でもし左&lt;右なら
+	他で左&lt;右なら
 		1を返す。
 	そうでなければ
 		0を返す
-	もし終わり
+	そして
 』で並べ替える
 一覧を表示する</pre>
 			<p class="usage"><a href="../usage.htm#手順">記号の意味</a></p>
@@ -248,6 +247,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
@@ -266,6 +266,7 @@
 					<th>□</th>
 					<td>要素の内容が同じ、別の配列を表します</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm#設定項目">記号の意味</a></p>
 			<h2 id="型変換">型変換</h2>
@@ -278,20 +279,22 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a href="string.htm">文字列</a></th>
 					<th>←→</th>
 					<td> 「内容」設定項目と同じ</td>
 				</tr>
+                </tbody>
 			</table>
 		</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年8月8日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

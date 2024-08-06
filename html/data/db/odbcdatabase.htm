@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ODBC,データベース">	<meta name="description" content="日本語プログラミング言語プロデルで「データベース」プラグインの「データベース」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -122,6 +121,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="データソース">データソース</a></th>
 					<th>文字列</th>
@@ -158,7 +158,7 @@
 					<th>文字列</th>
 					<th>◎</th>
 					<td>ODBCコネクタのドライバ名<br>
-						スペースが含まれる場合は、{ }で囲む必要があります。</td>
+						スペースが含まれる場合は{ }で囲む必要があります。</td>
 				</tr>
 				<tr>
 					<th><a name="ユーザ名">ユーザ名</a></th>
@@ -178,6 +178,7 @@
 					<th>◎</th>
 					<td>操作する既定のデータベース</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 		</div>
@@ -188,7 +189,7 @@
 		
 		<pre class="code">MySQLというODBCデータベースを作る
 
-<i>//MySQLのデータソースファイルを「[プログラムの位置]mysql.dsn」に変える
+<i>//MySQLのデータソースファイルは「[プログラムの位置]mysql.dsn」
 </i>MySQLのドライバは「{MySQL ODBC 5.1 Driver}」
 MySQLのユーザ名は「root」
 MySQLのパスワードは「」
@@ -199,28 +200,28 @@ MySQLへ接続する
 MySQLで「CREATE TABLE 楽曲 (曲名 VARCHAR(30),アーティスト VARCHAR(30), アルバムID INTEGER);」を実行する
 
 <i>ーーデータの取得</i>
-結果は、［MySQLから「SELECT 曲名 FROM 楽曲」を取得したもの］
+MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 結果の内容を情報アイコンで表示する
 
 <i>ーーデータの追加</i>
-結果は、［「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をMySQLで実行したもの］
+「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をMySQLで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-結果は、［MySQLから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得したもの］
+MySQLから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得して、結果とする
 「追加後」として結果の内容を情報アイコンで表示する
 
 <i>ーーデータの更新</i>
-結果は、［「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行したもの］
+「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-結果は、［MySQLから「SELECT 曲名 FROM 楽曲」を取得したもの］
+MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「更新後」として結果の内容を情報アイコンで表示する
 
 <i>ーーデータの削除</i>
-結果は、［「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行したもの］
+「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-結果は、［MySQLから「SELECT 曲名 FROM 楽曲」を取得したもの］
+MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
 「削除後」として結果の内容を情報アイコンで表示する
 
 <i>ーーテーブルの削除</i>
@@ -229,11 +230,11 @@ MySQLで「DROP TABLE 楽曲」を実行する
 MySQLから切断する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

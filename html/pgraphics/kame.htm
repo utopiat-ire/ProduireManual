@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="Logo,タートルグラフィックス,ロゴ,亀">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「カメ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -106,7 +105,7 @@
 			<pre class="code">かめが｛2,2｝でスタンプする</pre>
 			<h3>【自分】を【座標】へ<a name="移動する">移動する</a></h3>
 			<p>カメを指定した座標へ移動します。<br>
-				【座標】は、[横],[縦]の形式か「中央」が指定できます。</p>
+				【座標】は[横],[縦]の形式か「中央」が指定できます。</p>
 			<pre class="code">かめを｛100,100｝へ移動させる</pre>
 			<h3>【自分】を<a name="隠す">隠す</a></h3>
 			<p>カメを隠します</p>
@@ -148,79 +147,81 @@
 						<th>説明</th>
 					</tr>
 				</thead>
-				<tr>
+                <tbody>
+                <tr>
 					<th><a name="場所">場所</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメを表示する場所<br>
 						場所には、<a href="../wincontrol/window.htm">ウィンドウ</a>,<a href="../wincontrol/picturebox.htm">ピクチャー</a>,<a href="canvas/canvas.htm">キャンバス</a>,<a href="canvas/subcanvas.htm">子キャンバス</a>が指定できます。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="色">色</a></th>
-					<th>&nbsp;</th>
+					<th>色</th>
 					<th>◎</th>
 					<td>カメが描く線の色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="下部色">下部色</a></th>
-					<th>&nbsp;</th>
+					<th>色</th>
 					<th>□</th>
 					<td>カメがいる場所の直下の色を表します</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="太さ">太さ</a></th>
-					<th>&nbsp;</th>
+					<th>整数</th>
 					<th>◎</th>
 					<td>カメが描く線の太さ</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="位置">位置</a></th>
-					<th>&nbsp;</th>
+					<th>座標</th>
 					<th>◎</th>
 					<td>カメがいる座標<br>
 						「場所」設定項目で指定されたオブジェクト内での座標です。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="大きさ">大きさ</a></th>
-					<th>&nbsp;</th>
+					<th>サイズ</th>
 					<th>◎</th>
 					<td>カメのアイコンの大きさ<br>
-						[幅]、[高さ]　の形式です。</td>
-					</tr>
+						[幅],[高さ]　の形式です。</td>
+                </tr>
 				<tr>
 					<th><a name="向き">向き</a></th>
-					<th>&nbsp;</th>
+					<th>整数</th>
 					<th>◎</th>
 					<td>カメが進む方向<br>
 						画面上方向を0度として、時計回りです。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="速さ">速さ</a></th>
-					<th>&nbsp;</th>
+					<th>整数</th>
 					<th>◎</th>
 					<td>カメが移動する速さ<br>
-						0が最速です。1、2、3になるに従って遅くなります。</td>
-					</tr>
+						0が最速です。1,2,3になるに従って遅くなります。</td>
+                </tr>
 				<tr>
 					<th><a name="形">形</a></th>
 					<th>&nbsp;</th>
 					<th>○</th>
 					<td>カメのアイコンを指定します。<br>
 						画像オブジェクトまたはファイル名で指定します。</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="背景色">背景色</a></th>
-					<th>&nbsp;</th>
+					<th>色</th>
 					<th>◎</th>
 					<td>カメがいる場所の背景色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="模様">模様</a></th>
 					<th>&nbsp;</th>
 					<th>◎</th>
 					<td>カメが描く線の形<br>
 						標準、点線、破線、線と点、線と二点　が指定できます。</td>
-					</tr>
+                </tr>
+				</tbody>
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -228,28 +229,28 @@
 <h3 id="sample1">カメで円を描く</h3>
 <p>カメに円を描かせます。</p>
 <pre class="code">窓としてウィンドウを作る
-窓の内容を「かめ」に変える
+窓の内容は「かめ」
 窓を表示する
 
 かめさんというカメを作る
-かめさんの場所を窓に変える
-かめさんの位置を｛100,100｝に変える
+かめさんの場所は窓
+かめさんの位置は｛100,100｝
 かめさんを表示する
 
 ３６０回、繰り返す
 	かめさんを１だけ右へ回転させる
 	かめさんを１だけ前へ進める
-繰り返し終わり
+そして
 
 待機する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

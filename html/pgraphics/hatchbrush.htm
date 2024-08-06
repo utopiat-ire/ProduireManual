@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="刷毛">	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「パターンブラシ」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -111,80 +110,84 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="色">色</a></th>
 					<th>色情報</th>
 					<th>◎</th>
 					<td>パターンの線の色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="背景色">背景色</a></th>
 					<th>色情報</th>
 					<th>◎</th>
 					<td>パターンの背景色</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="パターン">パターン</a></th>
 					<th>列挙体</th>
 					<th>◎</th>
 					<td>塗りつぶしのパターン</td>
-					</tr>
-				</table>
+                </tr>
+				</tbody>
+                </table>
 			</div>
-		<p>パターンは、次の通りです。</p>
-		<p>水平線<br>
-			垂直線<br>
-			左上右下対角線<br>
-			右上左下対角線<br>
-			水平垂直交差<br>
-			十字模様の対角線のパターン<br>
-			比率5ハッチ<br>
-			比率10ハッチ<br>
-			比率20ハッチ<br>
-			比率25ハッチ<br>
-			比率30ハッチ<br>
-			比率40ハッチ<br>
-			比率50ハッチ<br>
-			比率60ハッチ<br>
-			比率70ハッチ<br>
-			比率75ハッチ<br>
-			比率80ハッチ<br>
-			比率90ハッチ<br>
-			右傾斜対角線<br>
-			左傾斜対角線<br>
-			濃い右傾斜対角線<br>
-			濃い左傾斜対角線<br>
-			広い幅右傾斜<br>
-			広い幅左傾斜<br>
-			薄い垂直線<br>
-			薄い水平線<br>
-			狭い幅垂直線<br>
-			狭い水平線<br>
-			濃い垂直線<br>
-			濃い水平線<br>
-			右傾斜破線<br>
-			左傾斜破線<br>
-			破線水平線<br>
-			破線垂直線<br>
-			紙吹雪<br>
-			大紙吹雪<br>
-			ジグザグ水平線<br>
-			波水平線<br>
-			左傾斜レンガ<br>
-			レンガ<br>
-			織物<br>
-			格子柄<br>
-			芝生<br>
-			点線格子 <br>
-			点線菱形<br>
-			板屋根 <br>
-			四目格子 <br>
-			球体 <br>
-			細格子 <br>
-			小チェック <br>
-			大チェック<br>
-			菱形<br>
-			斜めチェック</p>
+		<p>パターンに指定できる列挙値は、次の通りです。</p>
+		<ul>
+		        <li>水平線</li>
+		        <li>垂直線</li>
+		        <li>左上右下対角線</li>
+		        <li>右上左下対角線</li>
+		        <li>水平垂直交差</li>
+		        <li>十字模様の対角線のパターン</li>
+		        <li>比率5ハッチ</li>
+		        <li>比率10ハッチ</li>
+		        <li>比率20ハッチ</li>
+		        <li>比率25ハッチ</li>
+		        <li>比率30ハッチ</li>
+		        <li>比率40ハッチ</li>
+		        <li>比率50ハッチ</li>
+		        <li>比率60ハッチ</li>
+		        <li>比率70ハッチ</li>
+		        <li>比率75ハッチ</li>
+		        <li>比率80ハッチ</li>
+		        <li>比率90ハッチ</li>
+		        <li>右傾斜対角線</li>
+		        <li>左傾斜対角線</li>
+		        <li>濃い右傾斜対角線</li>
+		        <li>濃い左傾斜対角線</li>
+		        <li>広い幅右傾斜</li>
+		        <li>広い幅左傾斜</li>
+		        <li>薄い垂直線</li>
+		        <li>薄い水平線</li>
+		        <li>狭い幅垂直線</li>
+		        <li>狭い水平線</li>
+		        <li>濃い垂直線</li>
+		        <li>濃い水平線</li>
+		        <li>右傾斜破線</li>
+		        <li>左傾斜破線</li>
+		        <li>破線水平線</li>
+		        <li>破線垂直線</li>
+		        <li>紙吹雪</li>
+		        <li>大紙吹雪</li>
+		        <li>ジグザグ水平線</li>
+		        <li>波水平線</li>
+		        <li>左傾斜レンガ</li>
+		        <li>レンガ</li>
+		        <li>織物</li>
+		        <li>格子柄</li>
+		        <li>芝生</li>
+		        <li>点線格子</li>
+		        <li>点線菱形</li>
+		        <li>板屋根 </li>
+		        <li>四目格子 </li>
+		        <li>球体 </li>
+		        <li>細格子</li>
+		        <li>小チェック</li>
+		        <li>大チェック</li>
+		        <li>菱形</li>
+		        <li>斜めチェック</li>
+		        </ul>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">パターンハッチで塗りつぶす</h3>
@@ -196,14 +199,14 @@
 窓というウィンドウを作る
 	そのタイトルは「パターンブラシで塗りつぶす」
 窓へキャンバス1というキャンバスを作る
-	そのドッキング方向を全体に変える
+	そのドッキング方向は、全体
 窓を表示する
 
 キャンバス1へ円を描く
 	その位置と大きさは｛0,0,150,100｝
-	その線色を赤に変える
-	その太さを3に変える
-	その背景色を水色に変える
+	その線色は、赤
+	その太さは3
+	その背景色は、水色
 	その刷毛は、刷毛A
 キャンバス1を更新する
 待機する</pre>
@@ -211,11 +214,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

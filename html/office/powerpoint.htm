@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="PowerPoint,Office">
     <meta name="description" content="日本語プログラミング言語プロデルで「Microsoft PowerPoint」を操作する「パワーポイント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -109,64 +108,72 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>Microsoft PowerPointを操作するためのオブジェクトです。</p>
-		<p>プレゼンテーションの制御が可能です。</p>
+		<p>「パワーポイント」種類は、Microsoft PowerPointと連携してアプリケーション本体を操作したり、発表資料を管理したりするオブジェクトです。</p>
+		<p>PowerPoint連携機能を通じて、プレゼンテーションの制御が可能ですPowerPoint連携機能の使い方については、サンプルプログラム(Office連係→パワーポイント)をご参照ください。</p>
 		<h2 id="手順">手順</h2>
-		<div id="methodlist"><a href="#マクロ実行する">マクロ実行する</a>　<a href="#リンクする">リンクする</a>　<a href="#印刷する">印刷する</a>　<a href="#開く">開く</a>　<a href="#開始する">開始する</a>　<a href="#起動する">起動する</a>　<a href="#起動中かどうか">起動中かどうか</a>　<a href="#強制終了する">強制終了する</a>　<a href="#終了する">終了する</a>　<a href="#新規発表資料">新規発表資料</a>　<a href="#進める">進める</a>　<a href="#スライドを追加する">スライドを追加する</a>　<a href="#発表資料を追加する">発表資料を追加する</a>　<a href="#プレゼンテーションを追加する">プレゼンテーションを追加する</a>　<a href="#非表示する">非表示する</a>　<a href="#表示する">表示する</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　<a href="#エクスポートする">エクスポートする</a>　<a href="#戻す">戻す</a>　</div>
+		<div id="methodlist"><a href="#マクロ実行する">マクロ実行する</a>　<a href="#リンクする">リンクする</a>　<a href="#印刷する">印刷する</a>　<a href="#開く">開く</a>　<a href="#開く">開く</a>　<a href="#開始する">開始する</a>　<a href="#起動する">起動する</a>　<a href="#起動中かどうか">起動中かどうか</a>　<a href="#強制終了する">強制終了する</a>　<a href="#終了する">終了する</a>　<a href="#新規発表資料">新規発表資料</a>　<a href="#進める">進める</a>　<a href="#スライドを追加する">スライドを追加する</a>　<a href="#発表資料を追加する">発表資料を追加する</a>　<a href="#プレゼンテーションを追加する">プレゼンテーションを追加する</a>　<a href="#非表示する">非表示する</a>　<a href="#表示する">表示する</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　<a href="#エクスポートする">エクスポートする</a>　<a href="#戻す">戻す</a>　</div>
 		<div id="methods">
-			<h3>【自分】にある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
+			<h3>パワーポイントにある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
 			<p>発表資料に含まれるマクロを実行します</p>
-			<h3>自分を<a name="リンクする">リンクする</a></h3>
+			<h3>パワーポイントを<a name="リンクする">リンクする</a></h3>
 			<p>すでに起動しているパワーポイントとリンクして、プロデルから利用できるようにします。</p>
-			<h3>自分を<a name="印刷する">印刷する</a></h3>
+			<h3>パワーポイントを<a name="印刷する">印刷する</a></h3>
 			<p>発表資料を印刷します</p>
-			<h3>自分で【ファイル名】を<a name="開く">開く</a>:<a href="presentation.htm">発表資料</a></h3>
-			<p>発表資料(プレゼンテーション)を開きます</p>
-			<h3>自分を<a name="開始する">開始する</a></h3>
+			<h3>パワーポイントを<a name="開く">開く</a>:<a href="presentation.htm">発表資料</a></h3>
+			<p>PowerPointを起動して、新しいプレゼンテーションを開きます</p>
+            <h4 data-ref="新規文書を作成する">パワーポイントを起動して新規作成する</h4>
+            <pre class="code">パワーポイントを開く</pre>
+			<h3>パワーポイントで【ファイル名】を<a name="開く">開く</a>:<a href="presentation.htm">発表資料</a></h3>
+			<p>指定した発表資料(プレゼンテーション)を開きます</p>
+            <h4 data-ref="開く">既存の発表資料を開く</h4>
+            <pre class="code">パワーポイントで「定例発表.pptx」を開く</pre>
+			<h3>パワーポイントを<a name="開始する">開始する</a></h3>
 			<p>スライドショーを開始します</p>
-			<h3>自分を<a name="起動する">起動する</a></h3>
-			<p>PowerPointを起動します</p>
-			<p class="alert alert-warning" role="alert">この手順で起動したPowerPointはプログラムが終了すると自動的に閉じられます。PowerPointを起動するだけで操作しないときは『「POWERPNT」を起動する』と書いてください。</p>
-<h3>【自分】が<a name="起動中かどうか">起動中かどうか</a></h3>
+			<h3>パワーポイントを<a name="起動する">起動する</a></h3>
+			<p>PowerPointを起動してアプリを操作可能な状態にします。</p>
+			<h3>パワーポイントが<a name="起動中かどうか">起動中かどうか</a></h3>
 			<p>パワーポイントが現在起動しているかどうかを表します</p>
-			<h3>自分を<a name="強制終了する">強制終了する</a></h3>
+			<h3>パワーポイントを<a name="強制終了する">強制終了する</a></h3>
 			<p>保存確認せずにPowerPointを終了します</p>
-			<h3>自分を<a name="終了する">終了する</a></h3>
+			<h3>パワーポイントを<a name="終了する">終了する</a></h3>
 			<p>PowerPointを終了します</p>
-			<h3>自分へ<a name="新規発表資料">新規発表資料</a>:<a href="presentation.htm">発表資料</a></h3>
+			<h3>パワーポイントへ<a name="新規発表資料">新規発表資料</a>:<a href="presentation.htm">発表資料</a></h3>
 			<p>新しい発表資料を作成します</p>
-			<h3>自分を<a name="進める">進める</a></h3>
+			<h3>パワーポイントを<a name="進める">進める</a></h3>
 			<p>次のスライドを進めます</p>
-			<h3>自分へ<a name="スライドを追加する">スライドを追加する</a>:<a href="slide.htm">スライド</a></h3>
+			<h3>パワーポイントへ<a name="スライドを追加する">スライドを追加する</a>:<a href="slide.htm">スライド</a></h3>
             <p>現在選択している発表資料のスライドを追加します</p>
-<h3>自分へ<a name="発表資料を追加する">発表資料を追加する</a>:<a href="presentation.htm">発表資料</a></h3>
+<h3>パワーポイントへ<a name="発表資料を追加する">発表資料を追加する</a>:<a href="presentation.htm">発表資料</a></h3>
 			<p>発表資料を追加します</p>
-			<h3>自分へ<a name="プレゼンテーションを追加する">プレゼンテーションを追加する</a>:<a href="presentation.htm">発表資料</a></h3>
+			<h3>パワーポイントへ<a name="プレゼンテーションを追加する">プレゼンテーションを追加する</a>:<a href="presentation.htm">発表資料</a></h3>
             <p>発表資料を追加します</p>
             <pre class="code">パワーポイントを起動する
 パワーポイントへプレゼンテーションを追加してPとする</pre>
-            <h3>自分を<a name="非表示する">非表示する</a></h3>
+            <h3>パワーポイントを<a name="非表示する">非表示する</a></h3>
 			<p>パワーポイントを非表示にします</p>
-			<h3>自分を<a name="表示する">表示する</a></h3>
+			<h3>パワーポイントを<a name="表示する">表示する</a></h3>
 			<p>パワーポイントを表示します。</p>
-			<h3>自分を〈【ファイル名】へ〉<a name="保存する">保存する</a></h3>
+			<h3>パワーポイントを〈【ファイル名】へ〉<a name="保存する">保存する</a></h3>
 			<p>現在の発表資料を保存します。<br>
 [ファイル名]を省略すると、上書き保存されます。</p>
-			<h3>自分を【ファイル名】へ<a name="PDFで保存する">PDFで保存する</a></h3>
+			<h3>パワーポイントを【ファイル名】へ<a name="PDFで保存する">PDFで保存する</a></h3>
 			<p>現在の発表資料をPDF形式で保存します。<br>
 				この手順は、Office 2007以降で利用できます。</p>
-			<h4 data-ref="PDFで保存する">ブックをPDF形式で保存する</h4>
+			<h4 data-ref="PDFで保存する">発表資料をPDF形式で保存する</h4>
 			<pre class="code">パワーポイントを「提案書.pdf」へPDFで保存する			</pre>
-			<h3>自分を【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
+			<h3>パワーポイントを【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
 			<p>現在の発表資料をXPS形式で保存します。<br>
 				この手順は、Office 2007以降で利用できます。</p>
-			<h4 data-ref="XPSで保存する">ブックをXPS形式で保存する</h4>
+			<h4 data-ref="XPSで保存する">発表資料をXPS形式で保存する</h4>
 		  <pre class="code">パワーポイントを「提案書.xps」にXPSで保存する</pre>
-			<h3>自分を【出力先】へ【形式】として〈【大きさ:サイズ】として〉<a name="エクスポートする">エクスポートする</a></h3>
+			<h3>パワーポイントを【出力先】へ【形式】として〈【大きさ:サイズ】として〉<a name="エクスポートする">エクスポートする</a></h3>
           <p>現在の発表資料を指定したフォルダへすべて画像ファイルとしてエクスポートします。【大きさ】は、省略できます。縦または横を0とすると自動調整されます。<br>
           この手順は、Office 2007以降で利用できます。</p>
           <h4 data-ref="エクスポートする">スライドを画像ファイルで保存する</h4>
-          <pre class="code">パワーポイントを起動する<br>パワーポイントで「提案書.pptx」を開く<br>パワーポイントを「jpg」としてデスクトップへエクスポートする<br>パワーポイントを終了する<br></pre>
+          <pre class="code">パワーポイントを起動する
+パワーポイントで「提案書.pptx」を開く
+パワーポイントを「jpg」としてデスクトップへエクスポートする
+パワーポイントを終了する</pre>
             <h3>自分を<a name="戻す">戻す</a></h3>
 			<p>前のスライドへ戻ります</p>
 	  </div>
@@ -181,6 +188,7 @@
 						<th>説明</th>
 					</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="スライド">スライド</a></th>
 					<th>&nbsp;</th>
@@ -253,6 +261,7 @@
 				  <th>□</th>
 				  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 			  </tr>
+                </tbody>
 			</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -281,11 +290,11 @@
         <p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

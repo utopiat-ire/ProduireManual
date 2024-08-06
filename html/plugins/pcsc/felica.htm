@@ -12,9 +12,9 @@
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルの「PC/SCプラグイン」プラグインの「FeliCaスマートカード」種類に含まれる手順や設定項目を使う方法">
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="description" content="日本語プログラミング言語プロデルの「PC/SCプラグイン」プラグインの「FeliCaスマートカード」種類に含まれる手順や設定項目を使う方法">
 <!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -115,23 +115,27 @@
 	<p><a href="smartcard.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 	<div id="properties">
 		<table class="table table-bordered">
+            <thead>
 			<tr>
 				<th class="column">設定項目</th>
 				<th>　</th>
 				<th class="column">説明</th>
 			</tr>
+            </thead>
+            <tbody>
 			<tr>
 			  <th><a name="話者一覧">サービスコード</a></th>
 			  <th>□</th>
 			  <td>サービスコード</td>
 		  </tr>
+            </tbody>
 		</table>
 		<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 	</div>
 	<h2 id="サンプルコード">サンプルコード</h2>
     <div id="samples">
       <h3 id="sample1">FeliCa Lite-Sへ読み書きする</h3>
-      <p>FeliCa Lite-Sへ読み書きします。      </p>
+      <p>FeliCa Lite-Sへ読み書きします。</p>
       <pre class="code" id="prg">// FeliCa Lite-Sへの読み書き
 「Produire.PCSC.dll」を利用する
 NFCポートで受け付けて白カードとする
@@ -140,11 +144,11 @@ NFCポートで受け付けて白カードとする
 0から13までブロックを増やしながら繰り返す
 	//16文字に埋める必要がある
 	白カードでブロックに「[今を「yy/MM/ddHH:mm:ss」に整えたもの]」を書き込む
-繰り返し終わり
+そして
 0から13までブロックを増やしながら繰り返す
 	白カードからブロックをテキストで取得して結果とする
 	結果を報告する
-繰り返し終わり</pre>
+そして</pre>
     </div>
 	<p>　</p>
 </div>
@@ -153,7 +157,7 @@ NFCポートで受け付けて白カードとする
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

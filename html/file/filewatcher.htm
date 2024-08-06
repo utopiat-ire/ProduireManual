@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルでファイル操作やフォルダ操作を監視するための「ファイル操作」プラグインの「ファイル監視器」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -113,6 +112,7 @@
 						<th>説明</th>
 					</tr>
 					</thead>
+                    <tbody>
 					<tr>
 						<th><a name="監視中">監視中</a></th>
 						<th>真偽値</th>
@@ -151,6 +151,7 @@
 						<th>◎</th>
 						<td>監視対象のパス。対象ファイルと対象フォルダを一度に指定します。</td>
 					</tr>
+                    </tbody>
 				</table>
 				<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
@@ -162,6 +163,7 @@
 						<th>説明</th>
 						<th>情報</th>
 					</tr></thead>
+                    <tbody>
 					<tr>
 						<th><a name="更新を検知した">更新を検知した</a></th>
 						<td>更新を検知した時に発生します</td>
@@ -182,24 +184,29 @@
 						<td>名前変更を検知した時に発生します</td>
 						<td>なし</td>
 					</tr>
+                    </tbody>
 				</table>
 			</div>
 			<h2>関連する定数値</h2>
 			<h3>検知種別</h3>
-			<p>更新<br>
-				新規<br>
-				削除<br>
-				名前変更<br>
-			すべて</p>
+			<ul>
+			        <li>更新</li>
+			        <li>新規</li>
+			        <li>削除</li>
+			        <li>名前変更</li>
+			        <li>すべて</li>
+			        </ul>
 			<h3>監視種別</h3>
-			<p>属性変更<br>
-				セキュリティ設定変更<br>
-				作成時刻変更<br>
-				フォルダ名変更<br>
-				ファイル名変更<br>
-				サイズ変更<br>
-				最終アクセス時刻変更<br>
-			最終更新時刻変更</p>
+			<ul>
+			        <li>属性変更</li>
+			        <li>セキュリティ設定変更</li>
+			        <li>作成時刻変更</li>
+			        <li>フォルダ名変更</li>
+			        <li>ファイル名変更</li>
+			        <li>サイズ変更</li>
+			        <li>最終アクセス時刻変更</li>
+			        <li>最終更新時刻変更</li>
+			        </ul>
 			<h2 id="サンプルコード">サンプルコード</h2>
 			<div id="samples">
 			<h3 id="sample1">特定のフォルダにあるファイルの操作を監視する</h3>
@@ -207,7 +214,7 @@
 <pre class="code">監視器というファイル監視器を作る
 監視器の対象フォルダは、デスクトップ
 監視器の対象ファイルは「*.*」
-監視器の監視中は、○
+監視器の監視中は○
 待機する
 
 監視器が作成を検知した時の手順
@@ -230,7 +237,7 @@
 <pre class="code">監視器というファイル監視器を作る
 監視器の対象フォルダは、マイドキュメント
 監視器の対象ファイルは「memo.txt」
-監視器の監視中は、○
+監視器の監視中は○
 待機する
 
 監視器が更新を検知した時の手順
@@ -238,11 +245,11 @@
 終わり</pre>
 		</div><!--/samples--></div>
 	</div>
-	<p>&nbsp;</p><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+	<p>&nbsp;</p><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

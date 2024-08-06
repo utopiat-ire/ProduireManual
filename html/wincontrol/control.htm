@@ -12,7 +12,6 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ウィンドウ部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -126,12 +125,14 @@
 						<th>　</th>
 						<th>説明</th>
 					</tr></thead>
+                    <tbody>
 					<tr>
 						<th><a name="IME状態">IME状態</a></th>
 						<th>列挙</th>
 						<th>◎</th>
 						<td>IMEの入力モード<br>
-						｛オフ，オン，カタカナ，半角カタカナ，ひらがな，半角英数字，全角英数字，なし，継承，無効｝</td>
+						        ｛オフ，オン，カタカナ，半角カタカナ，ひらがな，半角英数字，全角英数字，なし，継承，無効｝<br>
+						        ※Windows8以降ではOSの仕様上、反映されません。なし，継承，無効のいずれかのみ指定できます。</td>
 					</tr>
 					<tr>
 						<th><a name="ドッキング方向">ドッキング方向</a></th>
@@ -311,8 +312,9 @@
 					  <th><a name="元実体">元実体</a></th>
 					  <th><a href="../primitive/netobject.htm">ネット物</a></th>
 					  <th>□</th>
-					  <td>ドットネット型のオブジェクトを返します。<br><small>System.Windows.Forms.Controlクラスインスタンス</small></td>
+					  <td>ドットネット型のオブジェクトを返します。なお部品種類や内部仕様の変更によって結果が変わることがあります。<br><small>System.Windows.Forms.Controlクラスインスタンス</small></td>
 				  </tr>
+                    </tbody>
 				</table>
 				<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		  </div>
@@ -324,6 +326,7 @@
 						<th>説明</th>
 						<th>情報</th>
 					</tr></thead>
+                    <tbody>
 					<tr>
 						<th><a name="キーが押された">キーが押された</a></th>
 						<td>キーが押した時</td>
@@ -438,6 +441,7 @@
 						<td>入力された内容が確定した時に発生ます</td>
 						<td>&nbsp;</td>
 					</tr>
+                    </tbody>
 				</table>
 			</div>
 				<h2 id="サンプルコード">サンプルコード</h2>
@@ -452,24 +456,24 @@
 	初期化する
 終わり
 	初期化する手順
-			この実質大きさを｛428,394｝に変える
-			この内容を「メイン画面」に変える
+			この実質大きさは｛428,394｝
+			この内容は「メイン画面」
 			初期化開始する
 			テキスト領域1というテキスト領域を作る
-				その位置と大きさを｛22,27,380,343｝に変える
-				その位置固定方向を「上+下+左+右」に変える
+				その位置と大きさは｛22,27,380,343｝
+				その位置固定方向は「上+下+左+右」
 			初期化終了する
-			この設計スケール比率を｛144,144｝に変える
+			この設計スケール比率は｛144,144｝
 	終わり
 終わり</pre>
 </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

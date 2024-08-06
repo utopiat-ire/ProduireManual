@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「フォント」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -99,6 +98,7 @@
 					<th>説明</th>
 				</tr>
 				</thead>
+                <tbody>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
@@ -124,6 +124,7 @@
 					<td>フォントに対する装飾<br>
 						｛標準、太字、斜体、下線、取消線｝</td>
 				</tr>
+                </tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -137,18 +138,18 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th><a href="string.htm">文字列</a></th>
 				<th>←→</th>
-				<td> 「内容」設定項目と同じ</td>
+				<td>「内容」設定項目と同じ</td>
 			</tr>
+            </tbody>
 		</table>
 		<h2 id="サンプルコード">サンプルコード</h2>
         <div id="samples">
           <h3 id="sample1">GUI部品のフォントを設定する</h3>
           <p><a href="../wincontrol/label.htm">ラベル</a>に対してフォントの名前や装飾、サイズを設定します。</p>
-          
-          
           <pre class="code">メイン画面を表示する
 待機する
 
@@ -159,18 +160,18 @@
 		初期化する
 		フォントは、ラベル1のフォント
 		フォントの名前は「MS UI Gothic」
-		フォントの装飾を「太字＋斜体＋下線＋取消線」に変える
-		フォントのサイズは、24
+		フォントの装飾は「太字＋斜体＋下線＋取消線」
+		フォントのサイズは24
 		ラベル1のフォントは、フォント
 	終わり
 
 	初期化する手順
-		この実質大きさを｛284,262｝に変える
-		この内容を「メイン画面」に変える
+		この実質大きさは｛284,262｝
+		この内容は「メイン画面」
 		ラベル1というラベルを作る
-			その内容を「プロデル」に変える
-			その位置と大きさを｛44,55,43,12｝に変える
-		この設計スケール比率を｛96,96｝に変える
+			その内容は「プロデル」
+			その位置と大きさは｛44,55,43,12｝
+		この設計スケール比率は｛96,96｝
 	終わり
 終わり</pre>
           <h3 id="sample2">フォントをキャンバスにすべて列挙する</h3>
@@ -181,31 +182,31 @@
 	ウィンドウを継承する
 	はじめの手順
 		初期化する
-		縦は、0
+		縦は0
 		フォント一覧のすべてのフォント名についてそれぞれ繰り返す
 			キャンバス1へフォント名という文字を描く
 				その位置は｛0,縦｝
-				そのフォントをフォント名に変える
-				その文字サイズを20に変える
+				そのフォントは、フォント名
+				その文字サイズは20
 			縦=縦+その高さ
-		繰り返し終わり
-		キャンバス1の内部大きさを{キャンバス1の幅,縦}に変える
+		そして
+		キャンバス1の内部大きさは{キャンバス1の幅,縦}
 	終わり
 	初期化する手順
-		この内部領域大きさを｛500,300｝に変える
-		この内容を「フォント見本」に変える
-		この設計スケール比率を｛96,96｝に変える
+		この内部領域大きさは｛500,300｝
+		この内容は「フォント見本」
+		この設計スケール比率は｛96,96｝
 		キャンバス1というキャンバスを作る
-			そのドッキング方向を「全体」に変える
+			そのドッキング方向は「全体」
 	終わり
 終わり</pre>
         </div><!--/samples-->
 	</div>
-</div><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+</div><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

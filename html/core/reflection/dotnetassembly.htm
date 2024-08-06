@@ -13,7 +13,6 @@
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content=".NET"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -98,7 +97,7 @@
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】とドットネットアセンブリ（【ファイルパス/完全修飾名】）を作る</pre>
 		<p>【ファイルパス/完全修飾名】には、読み込むアセンブリ(.dllまたは.exe)のパスを指定します。<br>
-			または、GACのアセンブリの完全修飾名を指定します。</p>
+			または、GACのアセンブリの完全修飾名を指定します。読み込まれていない特定のアセンブリを参照する場合には<a href="../../syntax/import.htm">「ネット型として利用する」文</a>で事前にアセンブリを参照しておきます。</p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#取得する">取得する</a>　<a href="#インスタンスとして作る">インスタンスとして作る</a>　</div>
@@ -116,18 +115,20 @@
 					<th>設定項目</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th>名前</th>
 					<th>□</th>
 					<td>アセンブリの表示名</td>
-					</tr>
+                </tr>
 				<tr>
 					<th>場所</th>
 					<th>□</th>
 					<td>アセンブリを格納しているパス</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
@@ -148,11 +149,11 @@ outputDevice:Stop()</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年2月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

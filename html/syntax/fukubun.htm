@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>複文 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->複文<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>複文</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1>「複文」文</h1>
+
+<h3><span id="i-5">文を書き連ねる複文</span></h3>
+<p>複文とは、文の始まりから「。」までの間に、複数の手順を呼び出して書き連ねた文です。手順呼出し文の動詞部分を連用形で書くと、続けて手順呼出し文を複数書けるという文法です。</p>
+<p>次のプログラムは「一覧」配列から「カゲ」という文字列がある要素だけを取り出して「☆」で一つに繋げて表示するプログラムです。3行目は複文を使って書かれています。</p>
+<pre class="code">//複文を使ったプログラム例
+一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
+一覧から「カゲ」を取り出して「☆」で繋げて表示する</pre>
+<p>複文を使うことで、手順呼出し式を重ねて書いたり、変数を用意したりせずに、プログラムを短く書けます。</p>
+<h4>複文の仕組み</h4>
+<p>上記と同じように動作するプログラムを手順呼出し式で書くと次のようになります。</p>
+<pre class="code">一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
+一覧から「カゲ」を取り出したものを「☆」で繋げたものを表示する</pre>
+<p>このようにいくつかの手順呼出し式を重ねたプログラム文は「～たもの」が頻出して冗長になりがちです。</p>
+<p>一方で、上記のプログラムを「それ」変数を使って書くと次のようになります。このプログラムでは「それ」変数を使って「取り出す」手順の結果を「繋げる」手順で受け取り、その結果をさらに「表示する」手順に渡しています。</p>
+<pre class="code">//複文を使ったプログラム例
+一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
+一覧から「カゲ」を取り出す。それを「☆」で繋げる。それを表示する</pre>
+<p>このようなプログラムは、複文を使って短く書けます。</p>
+<p>ます、動詞を連用形にすることで、続けて別の手順を呼び出せます。連用形で書いた動詞の手順呼出し文の返り値は、返り値は「それ」特殊変数に代入されます。</p>
+<p>次に、連用形に続く次の呼出し文で実補語を1つだけ省略できます。実補語を省略すると、省略された実補語の助詞と<a href="http://rdr.utopiat.net/docs/reference/keywords/it.htm">「それ」特殊変数</a>に格納された値を使って、省略された実補語を補って呼び出します。</p>
+<p>このように連用形で複数の手順呼出し文を1文に書き連ねた文を「複文」で短くできます。</p>
+<p>&nbsp;</p>
+<h4>連用形動詞の例、複文の注意点</h4>
+<h5>1. 動詞の連用形</h5>
+<p>動詞の連用形は、手順定義の動詞名をプロデルで自動的に活用したものが書けます。動詞や手順名がカタカナ語・英数字名の場合は、語尾を「して」「って」に活用したものが書けます。例えば、動詞の連用形は、次のような表記です。</p>
+<ul>
+  <li>取得して</li>
+  <li>繋げて</li>
+  <li>区切って</li>
+  <li>読み込んで</li>
+  <li>開いて</li>
+</ul>
+<h5>2. 書き繋げられる手順は返り値がある手順のみ</h5>
+<p>連用形で書き繋げられる手順は、返り値がある手順のみです。返り値がない手順を呼び出した後に、呼出し文を書き連ねることはできません。</p>
+<p>例えば「報告する」手順には、戻り値が無いため、次のように書き続けることができず、構文エラーになります。</p>
+<pre class="code">// 次の複文はエラーとなります
+日付を報告して日付を表示する</pre>
+<h5>3. 補語は連用形動詞までにすべて使われること</h5>
+<p>連用形動詞によって、手順呼出し文を書き続ける場合、連用形動詞句より前に書いた補語をその動詞がすべて受ける必要があります。</p>
+<p>この点については、補語のスタックが関係します。補語のスタックについては「<a href="stmt.html">文</a>」のページをご参照ください。</p>
+<pre class="code">// 次の複文はエラーとなります
+「-」で、配列から「カゲ」を取り出して、繋げて報告する
+
+// 補語は連用動詞を跨がないように書いてください
+配列から「カゲ」を取り出して「-」で繋げて報告する</pre>
+<h3 id="i-6">複文による代入</h3>
+<p>複文には「～とする」代入文も使えます。手順呼出し文の動詞部分を連用形にして「～とする」と書くと、～に指定した変数に手順の戻り値を代入できます。</p>
+<pre class="code">「メモ.txt」から読み込んで内容とする
+それを報告する</pre>
+<p>なお「～とする」代入文の後は、さらに書き連ねられません。</p>
+<p>このように「それ」特殊変数や複文を使った方法や、実補語を省略する方法を覚えると、プロデルのプログラムを、簡潔でスマートに、日本語として読めるプログラムとして書けます。</p>
+<p>&nbsp;</p></div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

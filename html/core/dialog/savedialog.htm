@@ -14,7 +14,6 @@
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="ダイアログ">
     <meta name="description" content="日本語プログラミング言語プロデルで保存先のファイルを選択するための「保存画面」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -113,7 +112,8 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="キャンセル">キャンセル</a></th>
 					<th>真偽値</th><th>□</th><td>キャンセルボタンが押されたかどうかを表します</td>
@@ -176,27 +176,28 @@
 				<tr>
 					<th><a name="既定拡張子">既定拡張子</a></th>
 					<th>文字列</th><th>◎</th><td>既定の拡張子</td>
-					</tr>
-				</table>
+                </tr>
+                </tbody>
+            </table>
 			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
-			</div>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<div id="samples">
 <h3 id="sample1">ファイルの保存先を選択する</h3>
 		<p>ファイルの保存先の選択画面を表示するプログラム例です。</p>
-		<pre class="code">保存画面のフィルタを「テキストファイル|*.txt;*.rdr|すべてのファイル|*.*」に変える
-ファイル名は、保存するファイルを選択したもの
-もしファイル名が無でなければ
+		<pre class="code">保存画面のフィルタは「テキストファイル|*.txt;*.rdr|すべてのファイル|*.*」
+保存するファイルを選択して、ファイル名とする
+ファイル名が無でなければ
 	ファイル名を報告する
-もし終わり</pre>
+そして</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月6日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

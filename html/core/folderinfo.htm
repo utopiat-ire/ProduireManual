@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
     <meta name="description" content="日本語プログラミング言語プロデルの「フォルダ情報」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -104,12 +103,14 @@
 				<th>型</th>
 				<th>方向</th>
 				<th>説明</th>
-				</tr></thead>
+            </tr></thead>
+            <tbody>
 			<tr>
 				<th><a href="../primitive/string.htm">文字列</a></th><th>←</th><td>
 					「絶対パス」設定項目と同じ文字列</td>
-				</tr>
-			</table>
+            </tr>
+            </tbody>
+        </table>
 		<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#列挙する">列挙する</a>　<a href="#作成する">作成する</a>　<a href="#フォルダを作成する">フォルダを作成する</a>　<a href="#削除する">削除する</a>　<a href="#取得する">取得する</a>　<a href="#存在する">存在する</a>　<a href="#ファイルが存在する">ファイルが存在する</a>　<a href="#フォルダが存在する">フォルダが存在する</a>　<a href="#変更する">変更する</a>　</div>
 		<div id="methods">
@@ -119,7 +120,7 @@
 			<pre class="code">フォルダ一覧は、<b>デスクトップから「*.docx」を列挙する</b>
 フォルダ一覧のすべての要素についてそれぞれ繰り返す
 	要素の名前を報告する
-繰り返し終わり</pre>
+そして</pre>
 			<p><a href="../safelock.htm" class="label label-danger">保護あり</a>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
 			<h3>【自分】を<a name="作成する">作成する</a></h3>
           <p>このフォルダを作成します</p>
@@ -145,17 +146,19 @@
 <strong>書類フォルダから「報告書.xlsx」というファイルを取得して</strong>報告書ファイルとする</pre>
 			<h3>【自分】から【フォルダ名】というフォルダを取得する：フォルダ情報</h3>
 			<p>このフォルダにあるフォルダのフォルダ情報を取得します。フォルダの存在は確認しません。</p>
-			<pre class="code">//「[デスクトップ]書類」に相当するフォルダ情報を取得する<br><strong>デスクトップから「書類」というフォルダを取得して</strong>書類フォルダとする</pre>
+			<pre class="code"><em>//「[デスクトップ]書類」に相当するフォルダ情報を取得する</em>
+<strong>デスクトップから「書類」というフォルダを取得して</strong>書類フォルダとする</pre>
 			<h3>【自分】へ【名前】を取得する：<a href="../primitive/baseobject.htm">基本物</a></h3>
 			<p>このフォルダにある存在するファイルのファイル情報またはフォルダのフォルダ情報を取得します。</p>
 			<pre class="code"><strong>デスクトップから「書類.xlsx」を取得して</strong>書類ファイルとする</pre>
 			<h3>【自分】が<a name="存在する">存在する</a></h3>
 			<p>このフォルダが存在するかどうかを判定します</p>
-			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする<br>もし<strong>書類フォルダが存在する</strong>なら
+			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする
+<strong>書類フォルダが存在すれば</strong>
 	「存在します」を情報アイコンで表示する
-でなければ
+そうでなければ
 	「存在しません」を警告アイコンで表示する
-もし終わり</pre>
+そして</pre>
 			<h3>【自分】が【ファイル名】という<a name="ファイルが存在する">ファイルが存在する</a></h3>
 			<p>このフォルダに指定した名前のファイルが存在するかどうかを判定します</p>
 		  <h3>【自分】が【フォルダ名】という<a name="フォルダが存在する">フォルダが存在する</a></h3>
@@ -189,44 +192,46 @@
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
-					</tr></thead>
+                </tr></thead>
+                <tbody>
 				<tr>
 					<th><a name="名前">名前</a></th>
 					<th>文字列</th><th>□</th><td>
 						フォルダの名前</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="絶対パス">絶対パス</a></th>
 					<th>文字列</th><th>□</th><td>
 						フォルダの絶対パス</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="親">親</a></th>
 					<th>フォルダ情報</th><th>□</th><td>
 						このフォルダの親フォルダのフォルダ情報</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ルート">ルート</a></th>
 					<th>フォルダ情報</th><th>□</th><td>
 						このフォルダのルートフォルダのフォルダ情報</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="ファイル一覧">ファイル一覧</a></th>
 					<th>ファイル情報の配列</th><th>□</th><td>
 						このフォルダの直下にあるファイル一覧</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="全ファイル一覧">全ファイル一覧</a></th>
 					<th>ファイル情報の配列</th><th>□</th><td>
 						このフォルダ以下すべてのフォルダに保存されているファイル一覧</td>
-					</tr>
+                </tr>
 				<tr>
 					<th><a name="フォルダ一覧">フォルダ一覧</a></th>
 					<th>フォルダ情報の配列</th><th>□</th><td>
 						このフォルダの直下にあるフォルダ一覧</td>
-					</tr>
-				</table>
-			</div>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">フォルダを作成してファイルをコピーする</h3>
@@ -238,11 +243,11 @@ ABCフォルダを削除する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

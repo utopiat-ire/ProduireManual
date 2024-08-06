@@ -13,7 +13,6 @@
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「日時形式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
-	<meta name="author" content="utopiat.net">
 </head>
 
 <body>
@@ -88,7 +87,6 @@
           <li><a href="timespan.htm">「日時期間形式」種類</a></li>
           <li><a href="../core/global_datetime.htm">「日付時刻関連操作」種類</a></li>
           <li><a href="../core/core.htm#今日">「今日」手順</a></li>
-          <li><a href="../lookup/datetime_lookup.htm">逆引き辞典「日付や時刻を扱う」</a></li>
         </ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
@@ -117,17 +115,16 @@
             <p>指定した値だけ経過した日時を返します。「後」名詞手順と同じです。</p>
           <h4 data-rel="前">2日後の日付を求める</h4>
             <pre class="code">作業日は、今日
-作業日へ2日足したものを表示する
+作業日へ2日足して表示する
 作業日を表示する	//作業日は変わらない</pre>
             <h3>【自分】から〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="後">後</a>：日時形式</h3>
-			<p>指定した値だけ経過した日時を返します。 <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した値だけ経過した日時を返します。 <span class="label label-warning">名詞手順</span></p>
 			<h4 data-ref="後">2日後の日付を求める</h4>
 		  <pre class="code">(今日から2日後)を表示する</pre>
 			<h4 data-ref="後">１０ヶ月後の日付を求める</h4>
 		  <pre class="code">(今日から10月後)を表示する</pre>
           <h4 data-rel="後">UNIX時間から日時を計算する</h4>
-          <pre class="code">
-投稿日は「1970/1/1」を日時形式化
+          <pre class="code">投稿日は「1970/1/1」を日時形式化
 投稿日から1550023515秒後を報告する</pre>
 			<h3>【自分】から〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="引く">引く</a></h3>
 			<p>指定した値だけ戻した日時を設定します。自分の値が変わります。</p>
@@ -139,33 +136,39 @@
           <p>指定した値だけ戻した日時を返します。「前」名詞手順と同じです。</p>
           <h4 data-rel="前">2日前の日付を求める</h4>
           <pre class="code">作業日は、今日
-作業日から2日引いたものを表示する
+作業日から2日引いて表示する
 作業日を表示する	//作業日は変わらない</pre>
           <h3>【自分】から〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="前">前</a>：日時形式</h3>
-			<p>指定した値だけ戻した日時を返します。 <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した値だけ戻した日時を返します。 <span class="label label-warning">名詞手順</span></p>
 			<h4 data-rel="前">3日前の日付を求める</h4>
 			<pre class="code">(今日から3日前)を表示する</pre>
 			<h3>【自分】と【日付】の<a name="日付差">日付差</a>：<a href="timespan.htm">日時期間形式</a></h3>
-			<p>指定した日時形式との差を計算します。 <span class="label label-warning">名詞型手順</span></p>
+			<p>指定した日時形式との差を計算します。 <span class="label label-warning">名詞手順</span></p>
 			<h4 data-rel="日付差">2つの日時の差を計算する</h4>
                 <p>二つの日付の差を計算します。 この例の場合、15日の差があることを表しています。</p>
 				<pre class="code"><em>ーー１５を表示します</em>
-開始日は「2020/9/10」を日時形式化したもの
-終了日は「2021/4/15」を日時形式化したもの
+「2020/9/10」を日時形式化して、開始日とする
+「2021/4/15」を日時形式化して、終了日とする
 (開始日と終了日の日付差)を表示する</pre>
 
-            <h3>【自分】を【書式】に<a name="整える">整える</a></h3>
+            <h3>【自分】を【書式:文字列】に<a name="整える">整える</a></h3>
 			<p>日時を指定した書式にあせて表示します。</p>
+			<p>書式は、.NET Frameworkの日時書式で指定します。</p>
+			<ul>
+			        <li><a href="https://dobon.net/vb/dotnet/string/datetimeformat.html">日時（DateTimeオブジェクト）を文字列に変換する - .NET Tips (VB.NET,C#...) (dobon.net)</a></li>
+			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/standard-date-and-time-format-strings">標準の日時書式指定文字列 - .NET | Microsoft Learn</a></li>
+			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-date-and-time-format-strings">カスタム日時形式文字列 - .NET | Microsoft Learn</a></li>
+			        </ul>
 			<h4 data-ref="整える">日時を書式に整える</h4>
-			<pre class="code">日付は「2019/01/02 12:23:45」を日時形式化
-日付を「yyyy/MM/dd HH:mm:ss」に整えて報告する
-日付を「yy-MM-dd」に整えて報告する
-日付を「HH.mm.ss」に整えて報告する
-日付を「R」に整えて報告する</pre>
+			<pre class="code">対象日時は「2019/01/02 12:23:45」を日時形式化
+対象日時を「yyyy/MM/dd HH:mm:ss」に整えて報告する
+対象日時を「yy-MM-dd」に整えて報告する
+対象日時を「HH.mm.ss」に整えて報告する
+対象日時を「R」に整えて報告する</pre>
 
 			<h4 data-ref="整える">日付を日本語で表示する</h4>
             <p> <a href="../primitive/datetime.htm#整える">「整える」手順</a>を使うと、指定した日時を好きな形式で表せます。</p>
-            <pre class="code">(今日を「yyyy年M月d日(dddd)　h時m分s秒」に整えたもの)を表示する</pre>
+            <pre class="code">今日を「yyyy年M月d日(dddd)　h時m分s秒」に整えて、表示する</pre>
 
         </div>
 		<h2 id="設定項目">設定項目</h2>
@@ -173,143 +176,145 @@
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
-				</thead>
 				<tr>
 					<th>設定項目</th>
 					<th>型</th>
 					<th>　</th>
 					<th>説明</th>
 				</tr>
-				<tr>
-					<th><a name="内容">内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>内容を文字で表します</td>
-				</tr>
-				<tr>
-					<th><a name="日付">日付</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>日付の部分を文字列で表します</td>
-				</tr>
-				<tr>
-					<th><a name="時刻">時刻</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>時刻の部分を文字列で表します</td>
-				</tr>
-				<tr>
-					<th><a name="年">年</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>年を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="月">月</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>月を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="日">日</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>日を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="時">時</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>時を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="分">分</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>分を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="秒0">秒</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>秒を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="ミリ秒">ミリ秒</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>ミリ秒を数値で表します</td>
-				</tr>
-				<tr>
-					<th><a name="整数値">整数値</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>日時時刻を整数値で表します<br>
-						この値は、1年1月1日0:0:00からの経過時間を<br>
-						100ナノ秒単位で表したものです。 </td>
-				</tr>
-				<tr>
-					<th><a name="曜日">曜日</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>曜日を文字列で表します</td>
-				</tr>
-				<tr>
-				  <th><a name="曜日番号">曜日番号</a></th>
-				  <th>整数</th>
-				  <th>&nbsp;</th>
-				  <td>日曜を0とした曜日番号を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="週番号">週番号</a></th>
-				  <th>整数</th>
-				  <th>&nbsp;</th>
-				  <td>1/1を第一週とした時の週番号を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="翌月">翌月</a></th>
-				  <th>日時形式</th>
-				  <th>&nbsp;</th>
-				  <td>翌月の同じ日,同じ時刻を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="前月">前月</a></th>
-				  <th>日時形式</th>
-				  <th>&nbsp;</th>
-				  <td>前月の同じ日,同じ時刻を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="月初">月初</a></th>
-				  <th>日時形式</th>
-				  <th>&nbsp;</th>
-				  <td>月の1日の同じ時刻を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="月末">月末</a></th>
-				  <th>日時形式</th>
-				  <th>&nbsp;</th>
-				  <td>月末の同じ時刻を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="六曜">六曜</a></th>
-				  <th>文字列</th>
-				  <th>&nbsp;</th>
-				  <td>六曜を返します</td>
-			  </tr>
-				<tr>
-				  <th><a name="旧暦">旧暦</a></th>
-				  <th>日時形式</th>
-				  <th>&nbsp;</th>
-				  <td>旧暦を返します</td>
-			  </tr>
-				<tr>
-					<th><a name="UNIX時間">UNIX時間</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>UNIX時間で表します<br>
-						<pre class="code">今のUNIX時間を表示する</pre>
-					</td>
-				</tr>
+				</thead>
+<tbody>
+<tr>
+    <th><a name="内容">内容</a></th>
+    <th>文字列</th>
+    <th>◎</th>
+    <td>内容を文字で表します</td>
+</tr>
+<tr>
+    <th><a name="日付">日付</a></th>
+    <th>文字列</th>
+    <th>□</th>
+    <td>日付の部分を文字列で表します</td>
+</tr>
+<tr>
+    <th><a name="時刻">時刻</a></th>
+    <th>文字列</th>
+    <th>□</th>
+    <td>時刻の部分を文字列で表します</td>
+</tr>
+<tr>
+    <th><a name="年">年</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>年を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="月">月</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>月を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="日">日</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>日を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="時">時</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>時を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="分">分</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>分を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="秒0">秒</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>秒を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="ミリ秒">ミリ秒</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>ミリ秒を数値で表します</td>
+</tr>
+<tr>
+    <th><a name="整数値">整数値</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>日時時刻を整数値で表します<br>
+        この値は、1年1月1日0:0:00からの経過時間を<br>
+        100ナノ秒単位で表したものです。 </td>
+</tr>
+<tr>
+    <th><a name="曜日">曜日</a></th>
+    <th>文字列</th>
+    <th>□</th>
+    <td>曜日を文字列で表します</td>
+</tr>
+<tr>
+  <th><a name="曜日番号">曜日番号</a></th>
+  <th>整数</th>
+  <th>&nbsp;</th>
+  <td>日曜を0とした曜日番号を返します</td>
+</tr>
+<tr>
+  <th><a name="週番号">週番号</a></th>
+  <th>整数</th>
+  <th>&nbsp;</th>
+  <td>1/1を第一週とした時の週番号を返します</td>
+</tr>
+<tr>
+  <th><a name="翌月">翌月</a></th>
+  <th>日時形式</th>
+  <th>&nbsp;</th>
+  <td>翌月の同じ日,同じ時刻を返します</td>
+</tr>
+<tr>
+  <th><a name="前月">前月</a></th>
+  <th>日時形式</th>
+  <th>&nbsp;</th>
+  <td>前月の同じ日,同じ時刻を返します</td>
+</tr>
+<tr>
+  <th><a name="月初">月初</a></th>
+  <th>日時形式</th>
+  <th>&nbsp;</th>
+  <td>月の1日の同じ時刻を返します</td>
+</tr>
+<tr>
+  <th><a name="月末">月末</a></th>
+  <th>日時形式</th>
+  <th>&nbsp;</th>
+  <td>月末の同じ時刻を返します</td>
+</tr>
+<tr>
+  <th><a name="六曜">六曜</a></th>
+  <th>文字列</th>
+  <th>&nbsp;</th>
+  <td>六曜を返します</td>
+</tr>
+<tr>
+  <th><a name="旧暦">旧暦</a></th>
+  <th>日時形式</th>
+  <th>&nbsp;</th>
+  <td>旧暦を返します</td>
+</tr>
+<tr>
+    <th><a name="UNIX時間">UNIX時間</a></th>
+    <th>整数</th>
+    <th>□</th>
+    <td>UNIX時間で表します<br>
+        <pre class="code">今のUNIX時間を表示する</pre>
+    </td>
+</tr>
+</tbody>
 			</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 		</div>
@@ -323,11 +328,12 @@
 				<th>説明</th>
 			</tr>
 			</thead>
+            <tbody>
 			<tr>
 				<th><a href="string.htm">文字列</a></th>
 				<th>←→</th>
 				<td> 「内容」設定項目と同じ</td>
-			</tr>
+			</tr></tbody>
 		</table>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
@@ -345,11 +351,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">プロデル</a> Ver.1.9 &copy; 2007-2023 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
