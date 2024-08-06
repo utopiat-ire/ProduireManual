@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>リストビュー - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->リストビュー<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="gui">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">GUI部品</a></li>
+	    <li>リストビュー</li>
+      </ul>
+	  <h1>リストビュー</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
+	  <h2>関連ページ</h2>
+      <ul>
+        <li><b><a href="listview.htm">リストビュー</a></b>
+          <ul>
+            <li><a href="listviewitem.htm">リストビュー項目</a></li>
+          </ul>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+	</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>エクスプローラのファイル一覧のような一覧表を作るための部品です。</p>
+		<p>リストビューには、アイコン付きの項目を表示することが可能で、詳細表示では見出し（カラム）を表示することもできます。</p>
+		<p><span class="label label-warning">生成可能</span><span class="label label-success">ウィンドウ部品</span></p>
+		<div class="figure">
+			<img src="img/listview1.png"></div>
+		<div class="figure">
+			<img src="img/listview2.png"></div>
+		<h3>継承する種類</h3>
+		<p><a href="control.htm">ウィンドウ部品</a></p>
+		<h3>必要プラグイン</h3>
+		<p>ウィンドウ部品集(<a href="index.htm">Produire.WinControl.dll</a>)		</p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というリストビューを作る</pre>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#すべて消す">すべて消す</a>　<a href="#加える">加える</a>　<a href="#一括追加する">一括追加する</a>　<a href="#挟む">挟む</a>　<a href="#消す">消す</a>　<a href="#番目を消す">番目を消す</a>　<a href="#探す">探す</a>　<a href="#編集する">編集する</a>　<a href="#更新開始する">更新開始する</a>　<a href="#更新終了する">更新終了する</a>　<a href="#昇順に並び替える">昇順に並び替える</a>　<a href="#降順に並び替える">降順に並び替える</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
+			<p>項目をすべて削除します</p>
+			<h3>【自分】を<a name="すべて消す">すべて消す</a></h3>
+			<p>項目をすべて削除します</p>
+			<h3>【自分】へ〈【名前】という〉〈【内容】を〉〈【アイコン/画像】で〉<a name="加える">加える</a>：<a href="listviewitem.htm">リストビュー項目</a></h3>
+			<p>リストビューへ項目を追加します</p>
+			<h3>【自分】へ【項目：リストビュー項目】を加える</h3>
+			<p>リストビューへ項目を追加します</p>
+			<h3>【自分】へ【項目一覧:配列】を〈【アイコン/画像】で〉<a name="一括追加する">一括追加する</a></h3>
+			<p>リストビューへ項目を一括で追加します</p>
+			<h3>【自分】の【挿入位置】へ〈【名前】という〉〈【内容】を〉〈【アイコン/画像】で〉<a name="挟む">挟む</a>：<a href="listviewitem.htm">リストビュー項目</a></h3>
+			<p>指定した位置やリストビューの項目を挿入します</p>
+			<h3>【自分】の【挿入位置】へ【項目：リストビュー項目】を挟む</h3>
+			<p>指定した位置やリストビューの項目を挿入します</p>
+			<h3>【自分】から【名前】を<a name="消す">消す</a></h3>
+			<p>指定した名前を持つ項目を消します</p>
+			<h3>【自分】の【番号】<a name="番目を消す">番目を消す</a></h3>
+			<p>指定した番号の項目を消します</p>
+			<h3>【項目：<a href="listviewitem.htm">リストビュー項目</a>】を消す</h3>
+			<p>指定した項目を消します</p>
+			<h3>【自分】から【内容】を<a name="探す">探す</a></h3>
+			<p>項目から指定した見出しを探します</p>
+			<h3>【自分】を<a name="編集する">編集する</a></h3>
+			<p>項目の見出しを編集します</p>
+			<h3>【自分】を<a name="更新開始する">更新開始する</a></h3>
+			<p>項目を操作するために一時的に描画を抑制します</p>
+			<h3>【自分】を<a name="更新終了する">更新終了する</a></h3>
+			<p>「変更開始」手順で一時的に停止した描画の抑制を解除します</p>
+			<h3>【自分】の【番号】番目を、<a name="昇順に並び替える">昇順に並び替える</a></h3>
+			<p>項目を昇順に並び替えます</p>
+			<h3>【自分】の【番号】番目を、<a name="降順に並び替える">降順に並び替える</a></h3>
+			<p>項目を降順に並び替えます</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="表示方法">表示方法</a></th>
+					<th>列挙体</th>
+					<th>◎</th>
+					<td>リストビューの表示方法<br>
+						小さいアイコン・大きいアイコン・一覧・詳細・縮小版(WindowsXPのみ)</td>
+					</tr>
+				<tr>
+					<th><a name="チェックボックス">チェックボックス</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>チェックボックスを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="チェック項目一覧">チェック項目一覧</a></th>
+					<th>リストビュー項目の配列</th>
+					<th>◎</th>
+					<td>チェックボックスが表示されている場合、チェックしている項目の一覧(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="チェック番号一覧">チェック番号一覧</a></th>
+					<th>整数の配列</th>
+					<th>◎</th>
+					<td>チェックボックスが表示されている場合、チェックしている項目の番号一覧(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="個数">個数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>項目の個数を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択項目">選択項目</a></th>
+					<th>リストビュー項目</th>
+					<th>◎</th>
+					<td>選択している項目</td>
+					</tr>
+				<tr>
+					<th><a name="選択内容">選択内容</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>選択している項目の内容</td>
+					</tr>
+				<tr>
+					<th><a name="選択番号">選択番号</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>選択している項目の整理番号</td>
+					</tr>
+				<tr>
+					<th><a name="選択項目一覧">選択項目一覧</a></th>
+					<th>リストビュー項目の配列</th>
+					<th>◎</th>
+					<td>複数選択している場合、選択している項目の一覧(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="選択番号一覧">選択番号一覧</a></th>
+					<th>整数の配列</th>
+					<th>◎</th>
+					<td>複数選択している場合、選択している項目の番号一覧(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="選択数">選択数</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>複数選択している場合、選択している項目の個数</td>
+					</tr>
+				<tr>
+					<th><a name="文字色">文字色</a></th>
+					<th>色情報</th>
+					<th>◎</th>
+					<td>文字の色</td>
+					</tr>
+				<tr>
+					<th><a name="背景色">背景色</a></th>
+					<th>色情報</th>
+					<th>◎</th>
+					<td>背景の色</td>
+					</tr>
+				<tr>
+					<th><a name="全列選択">全列選択</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>詳細表示の場合に、項目を選択した際にすべての列を選択状態にするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="罫線">罫線</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>仕切り線を表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="選択表示">選択表示</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>別のオブジェクトにカーソルが移動した際にも選択状態を表示しつづけるかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="自動選択">自動選択</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>マウスカーソルを置くだけで、自動的に項目が選択できるようにするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="ラベル編集">ラベル編集</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>項目の名称を編集できるようにするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="ラベル折り返し">ラベル折り返し</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>アイコン表示の場合、項目名が収まりきらない場合に折り返すかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="複数選択">複数選択</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>項目を複数選択できるようにするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="項目一覧">項目一覧</a></th>
+					<th>リストビュー項目の配列</th>
+					<th>◎</th>
+					<td>表示する項目(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="一覧">一覧</a></th>
+					<th>文字列の配列</th>
+					<th>◎</th>
+					<td>表示する項目(配列形式)</td>
+					</tr>
+				<tr>
+					<th><a name="見出し一覧">見出し一覧</a></th>
+					<th>文字列の配列</th>
+					<th>◎</th>
+					<td>詳細表示の場合に、上部に表示する見出し（カラム）の一覧（配列形式）</td>
+					</tr>
+				<tr>
+					<th><a name="詳細一覧">詳細一覧</a></th>
+					<th>文字列の配列の配列</th>
+					<th>◎</th>
+					<td>詳細表示の場合に、表示される詳細情報を含む、項目のすべての内容（２次配列）</td>
+					</tr>
+				<tr>
+					<th><a name="透明色">透明色</a></th>
+					<th>色情報</th>
+					<th>◎</th>
+					<td>アイコンを指定した際に、透明扱いとする色</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>イベント名</th>
+						<th>説明</th>
+						<th>イベント情報</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="ドラッグされた">ドラッグされた</a></th>
+					<td>項目をドラッグされた時</td>
+					<td><a href="../events/itemdrag.htm">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="仮想検索が開始された">仮想検索が開始された</a></th>
+					<td>仮想検索が開始された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="仮想項目が必要になった">仮想項目が必要になった</a></th>
+					<td>仮想項目が必要になった時</td>
+					<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="仮想項目の状態が変化した">仮想項目の状態が変化した</a></th>
+					<td>仮想項目の状態が変化した時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="仮想表示領域が変化した">仮想表示領域が変化した</a></th>
+					<td>仮想表示領域が変化した時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="見出しがクリックされた">見出しがクリックされた</a></th>
+					<td>見出しがクリックされた時</td>
+					<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="見出しの順序が変更された">見出しの順序が変更された</a></th>
+					<td>見出しの順序が変更された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="見出しの幅が変更された">見出しの幅が変更された</a></th>
+					<td>見出しの幅が変更された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="見出しの幅が変更される">見出しの幅が変更される</a></th>
+					<td>見出しの幅が変更される直前</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="項目をチェックする">項目をチェックする</a></th>
+					<td>項目がチェックする直前</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="項目がチェックされた">項目がチェックされた</a></th>
+					<td>項目がチェックされた直後</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="項目がポイントされた">項目がポイントされた</a></th>
+					<td>項目にマウスカーソルがポイントされた</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="項目が選択された">項目が選択された</a></th>
+					<td>項目が選択された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="選択された">選択された</a></th>
+					<td>選択された時<br>
+						(選択時と選択解除時それぞれで実行されます)</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="選択項目が変更された">選択項目が変更された</a></th>
+					<td>項目が選択された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="ラベルが変更された">ラベルが変更された</a></th>
+					<td>項目の見出しを編集された直後</td>
+					<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="ラベルが変更される">ラベルが変更される</a></th>
+					<td>項目の見出しを編集する直前</td>
+					<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
+					</tr>
+				</table>
+			</div>
+		<p>　</p>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<p>リストビューに項目を追加する例です。</p>
+		
+		
+		<pre class="code">ファイルアイコンは、「shell32.dll」の1番目からアイコン画像を抽出したもの
+メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーー貼り付けた部品に対する操作をここに書きます
+		リストビュー１に「お知らせ.txt」をファイルアイコンで追加する
+			その詳細を｛「9月10日」,「テキストファイル」｝に変える
+		リストビュー１に「計画.ppt」をファイルアイコンで追加する
+			その詳細を｛「9月1日」,「PowerPointスライド」｝に変える
+		リストビュー１に「レポート.doc」をファイルアイコンで追加する
+			その詳細を｛「9月15日」,「Wordドキュメント」｝に変える
+
+		選択リスト1の番号を0に変える
+	終わり
+	初期化する手順
+		ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この設計スケール比率を｛144,144｝に変える
+		この実質大きさを｛400,300｝に変える
+		この内容を「リストビューのサンプル」に変える
+		選択リスト1という選択リストを作る
+			その位置と大きさを｛12,12,150,26｝に変える
+			その入力可能を×に変える
+			その選択窓幅を150に変える
+			その項目高さを18に変える
+			その一覧を｛「大きいアイコン」,「小さいアイコン」,「一覧」,「詳細」,「縮小版」｝に変える
+		リストビュー１というリストビューを作る
+			その位置と大きさを｛12,50,376,238｝に変える
+			その見出し一覧を｛「ファイル名」,「更新日」,「種類」｝に変える
+			その見出し幅を｛100,80,100｝に変える
+			そのタイルサイズを｛200,45｝に変える
+			その移動順を1に変える
+		この設計スケール比率を｛96,96｝に変える
+	終わり
+	リストビュー１がダブルクリックされた時の手順
+		リストビュー１の選択内容を表示する
+	終わり
+	選択リスト1が選択された時の手順
+		リストビュー１の表示方法を選択リスト1の内容に変える
+	終わり
+終わり</pre>
+      <div class="panel panel-default">
+	      <div class="panel-heading">
+	        <h4 class="panel-title">例文</h4>
+        </div>
+	      <div class="panel-body">
+	        <pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		<span class="rem">ーーデータをリストビューへ追加する</span>
+		データ（１）は、｛「山田次郎」,「4/25」,「男」｝
+		データ（２）は、｛「田中花子」,「7/31」,「女」｝
+		データ（３）は、｛「相原貴之」,「9/12」,「男」｝
+		データ（４）は、｛「高橋祐子」,「11/27」,「女」｝
+		データ（５）は、｛「鈴木次郎」,「10/20」,「男」｝
+		リストビュー１の詳細一覧をデータに変える
+	終わり
+	初期化する手順
+		この内容を「メイン画面」に変える
+		このドラッグドロップを○に変える
+		リストビュー1というリストビューを作る
+			その位置と大きさを｛0,0,284,261｝に変える
+			その表示方法を「詳細」に変える
+			その見出し一覧を｛「名前」,「誕生日」,「性別」｝に変える
+			その見出し幅を｛111,80,60｝に変える
+			そのドッキング方向を「全体」に変える
+	終わり
+
+	リストビュー1の項目が選択された時の手順
+		自分の内容を「［リストビュー１の選択項目の内容］を選択中」に変える
+	終わり
+終わり</pre>
+        </div>
+      </div>
+        <p>　</p>
+	  <h2 id="howto">使い方</h2>
+		<div id="samples">
+	  <h3 id="lookup1">項目を追加する</h3>
+		<p>リストビューに項目を加えるには、「追加する」手順を使います。「追加する」手順で<a href="../wincontrol/listviewitem.htm">「リストビュー項目」</a>のオブジェクトが生成されます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format"><span class="flag">《リストビュー名》</span>に<span class="flag">《名前》</span>を<span class="flag">《アイコン》</span>で追加する</pre>
+				<p>《リストビュー名》は、項目を追加するリストビューを指定します。<br>
+					《名前》は、リストビューの名称を指定します。追加する項目がどこの項目に属すかを指定します。<br>
+				《アイコン》は、項目に使用するアイコンを指定します。「プロデルアイコン」種類または.icoファイルのパスを指定します。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">ファイルアイコンは、「shell32.dll」の1番目からアイコン画像を抽出したもの
+リストビュー１に「お知らせ.txt」をファイルアイコンで追加する
+	その詳細を｛「9月10日」,「テキストファイル」｝に変える</pre>
+				<p>また、「詳細一覧」設定項目によって一度に項目を追加することもできます。</p>
+				<pre class="code">データ（１）は、｛「山田次郎」,「4/25」,「男」｝
+データ（２）は、｛「田中花子」,「7/31」,「女」｝
+データ（３）は、｛「相原貴之」,「9/12」,「男」｝
+データ（４）は、｛「高橋祐子」,「11/27」,「女」｝
+データ（５）は、｛「鈴木次郎」,「10/20」,「男」｝
+
+ーーデータをリストビューへ追加
+リストビュー１の詳細一覧をデータに変える</pre>
+			</div>
+		</div>
+		<h3 id="lookup2">項目をクリック・ダブルクリックしたときの手順を作る</h3>
+		<p>ツリーの項目をクリックした時は、次のような手順が実行されます。</p>
+		<pre class="format"><span class="flag">《リストビュー名》</span>がクリックされた時の手順
+
+終わり</pre>
+		<pre class="format"><span class="flag">《リストビュー名》</span>がダブルクリックされた時の手順
+
+終わり</pre>
+		<p>どの項目を選択したか調べるには、次のように書きます。</p>
+		<pre class="format"><span class="flag">《リストビュー名》</span>の内容</pre>
+		<pre class="code">リストビュー１がダブルクリックされた時の手順
+	リストビュー１の選択項目の内容を表示する
+終わり</pre>
+		<h3 id="lookup3">見出し(カラムヘッダ)の追加と変更</h3>
+		<p>「見た目」設定項目を「詳細」に設定した場合、見出しに表示される項目をカラム（カラムヘッダ）と言います。</p>
+		<h4>見出しを追加する</h4>
+		<pre class="format"><span class="flag">《リストビュー名》</span>に<span class="flag">《項目名》</span>という見出しを追加する</pre>
+		<pre class="code">メイン画面を表示する
+	待機する
+
+	メイン画面とは
+		ウィンドウを継承する
+		はじめの手順
+		初期化する
+		リストビュー1に「ファイル名」という見出しを追加する
+		その幅を150に変える
+	終わり
+	初期化する手順
+		この内容を「メイン画面」に変える
+		リストビュー1というリストビューを作る
+		その位置と大きさを｛12,64,260,140｝に変える
+		その表示方法を「詳細」に変える
+	終わり
+終わり</pre>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">見出しの設定項目</h4>
+			</div>
+			<table class="table">
+				<tr>
+					<th>設定項目</th>
+					<th>説明</th>
+				</tr>
+				<tr>
+					<th>表示順</th>
+					<td>見出しの表示順（１からカラムの項目数まで）</td>
+				</tr>
+				<tr>
+					<th>内容</th>
+					<td>見出しの内容</td>
+				</tr>
+				<tr>
+					<th>幅</th>
+					<td>見出しのカラムの項目の幅</td>
+				</tr>
+				<tr>
+					<th>文字配置</th>
+					<td>カラムの項目の見出しの位置<br>
+						左／右／中央で指定</td>
+				</tr>
+			</table>
+		</div>
+		<h3 id="lookup4">リストビュー項目の名称を編集できるようにする</h3>
+		<p>ユーザがリストビューの項目名を変更できるように設定できます。<br>
+			項目名（ラベル）を変更する直前に「リストビュー１のラベルが変更する」イベント手順が発生して、直後に「リストビュー１のラベルが変更された」イベント手順が実行されます。</p>
+		<p>このイベント手順を使って正しい内容が指定されているかを確定する前に判断できます。</p>
+		<p>イベント手順が発生した時の変更後の項目名は、「この時の編集後」で取得できます。もし内容が正しくない場合は、「この時のキャンセル」をオンとするとラベルの変更内容が反映されずに元に戻ります。</p>
+		<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ファイルアイコンは、「shell32.dll」の1番目からアイコン画像を抽出したもの
+		リストビュー１に「お知らせ.txt」をファイルアイコンで追加する
+			その詳細を｛「9月10日」,「テキストファイル」｝に変える
+	終わり
+	初期化する手順
+		この内容を「メイン画面」に変える
+		リストビュー1というリストビューを作る
+			その位置と大きさを｛12,12,260,237｝に変える
+			そのラベル編集を○に変える
+	終わり
+
+	リストビュー1のラベルが変更された時の手順
+		もしこの時の編集後が「」なら
+			「名前を入力してください。」を警告アイコンで表示する
+			この時のキャンセルは、○
+		もし終わり
+	終わり
+終わり</pre>
+		<p>　</p>
+		<h3 id="lookup5">チェックボックスを付けて項目にチェックが入れられるようする</h3>
+		<p>リストビューの各項目にチェックボックスを付けられます。</p>
+		<p>チェックボックスでチェックされたリストビュー項目を調べるには、「チェック項目一覧」設定項目や「チェック番号一覧」設定項目を使います。</p>
+		<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーーリストビューのデータを加えます
+		データ（１）は、｛「山田次郎」,「4/25」,「男」｝
+		データ（２）は、｛「田中花子」,「7/31」,「女」｝
+		データ（３）は、｛「相原貴之」,「9/12」,「男」｝
+		データ（４）は、｛「高橋祐子」,「11/27」,「女」｝
+		データ（５）は、｛「鈴木次郎」,「10/20」,「男」｝
+		リストビュー１の詳細一覧をデータに変える
+	終わり
+	初期化する手順
+		この内容を「リストビューのチェックボックス」に変える
+		リストビュー1というリストビューを作る
+			その位置と大きさを｛0,31,284,230｝に変える
+			その表示方法を「詳細」に変える
+			そのチェックボックスを○に変える
+			その見出し一覧を｛「名前」,「誕生日」,「性別」｝に変える
+			その見出し幅を｛120,80,60｝に変える
+			そのドッキング方向を「全体」に変える
+		自動配置パネル1という自動配置パネルを作る
+			その位置と大きさを｛0,0,284,31｝に変える
+			その移動順を2に変える
+			そのドラッグドロップを○に変える
+			そのドッキング方向を「上」に変える
+		決定ボタンというボタンを自動配置パネル1へ作る
+			その位置と大きさを｛3,3,75,23｝に変える
+			その内容を「決定」に変える
+			その移動順を1に変える
+	終わり
+
+	決定ボタンがクリックされた時の手順
+		結果は、「」
+		リストビュー1のチェック項目一覧のすべての要素についてそれぞれ繰り返す
+			結果は、「[結果][要素の内容][改行]」
+		繰り返し終わり
+		結果を情報アイコンで表示する
+	終わり
+終わり</pre>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　特定の項目をチェックする</h4>
+			</div>
+			<div class="panel-body">
+				<p>指定したリストビュー項目にチェックを入れることもできます。<br>
+					例えば2番目のリストビュー項目にチェックを入れるには、次のように書きます。</p>
+				<pre class="code">リストビュー1の項目一覧(2)のチェックをオンに変える</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　特定の項目がチェックされているかどうか調べる</h4>
+			</div>
+			<div class="panel-body">
+				<p>同じように指定したリストビュー項目がチェックされているかどうかを調べることもできます。</p>
+				<pre class="code">もしリストビュー1の項目一覧(3)のチェックなら
+	「3番目はチェックされています」を情報アイコンで表示する
+そうでなければ
+	「3番目はチェックされていません」を情報アイコンで表示する
+もし終わり</pre>
+			</div>
+		</div>
+		<h3 id="lookup6">文字の色などを変更する</h3>
+		<p>指定した部分の項目名の色や背景を変更できます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">【リストビュー】の【<span class="flag">番号</span>】<span class="flag">番目</span>の背景色を【色】に変える</pre>
+				<pre class="format">【リストビュー】の【<span class="flag">番号</span>】<span class="flag">番目</span>の太字をオンに変える</pre>
+				<pre class="format">【リストビュー】の【<span class="flag">番号</span>】<span class="flag">番目</span>の文字色を【色】に変える</pre>
+			</div>
+		</div>
+		<p>項目名を「選択」とすると現在選択している項目に対して設定します。</p>
+		<pre class="code">窓としてウィンドウを作る
+
+窓にリストビュー１というリストビューを作る
+	そのドッキング方向を全体に変える
+	その見出し一覧を｛「名前」，「誕生日」，「性別」｝に変える
+	その表示方法を詳細に変える
+
+データ（１）は、｛「山田次郎」,「4/25」,「男」｝
+データ（２）は、｛「田中花子」,「7/31」,「女」｝
+データ（３）は、｛「相原貴之」,「9/12」,「男」｝
+データ（４）は、｛「高橋祐子」,「11/27」,「女」｝
+データ（５）は、｛「鈴木次郎」,「10/20」,「男」｝
+リストビュー１の詳細一覧をデータに変える
+
+リストビュー１の2番目の文字色を緑色に変える
+リストビュー１の2番目の背景色を黄色に変える
+
+窓を表示する
+待機する</pre>
+		<h3 id="lookup7">リストビューの仮想項目</h3>
+		<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+　　ウィンドウを継承する
+　　-一覧
+　　はじめの手順
+　　　　初期化する
+　　　　一覧は、ウィンドウズフォルダのファイル一覧
+　　　　リストビュー1の仮想要素数は、一覧の個数
+　　終わり
+　　初期化する手順
+　　この設計スケール比率を｛144,144｝に変える
+　　この内部領域大きさを｛534,411｝に変える
+　　この内容を「メイン画面」に変える
+　　リストビュー1というリストビューを作る
+　　　　その位置と大きさを｛12,12,510,369｝に変える
+　　　　その仮想モードを○に変える
+終わり
+
+　　リストビュー1の仮想項目が必要になった時の手順
+　　　　もしこの時の項目が無なら
+　　　　　　この時の項目は、リストビュー項目を作る
+　　　　もし終わり
+　　　　この時の項目の内容は、一覧(この時の項目番号)の名前
+　　終わり
+終わり</pre>
+		<p>&nbsp;</p>
+		</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

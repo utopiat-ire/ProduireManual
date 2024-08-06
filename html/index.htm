@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="js/html5shiv-3.7.3.min.js"></script>
+	<script src="js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.htm"><img src="img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プロデル マニュアル<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="core/index.htm">基本機能</a></li>
+							<li><a href="core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="top" style="display: none;">
+	<li>プロデル</li>
+</ul>
+<div class="row">
+<div class="col-md-offset-2 col-md-8">
+<h1>プロデル マニュアル目次</h1>
+<p>プロデルの公式マニュアルへようこそ。<br>
+  このマニュアルでは、プロデルの文法や、利用できる機能や部品、手順、設定項目について、たくさんのサンプルコードと一緒に詳しくご説明します。</p>
+<form action="https://docs.utopiat.net/search/msearch.cgi" method="GET" accept-charset="utf-8" name="msearch" target="_top">
+<div class="input-group">
+	<input type="text" size="30" name="query" value="" class="form-control" placeholder="検索キーワード">
+	<input type="hidden" name="index" value="doc">
+	<span class="input-group-btn">
+		<button type="submit" class="btn btn-primary">マニュアル検索</button>
+	</span>
+</div>
+</form>
+	<div class="row">
+		<div class="col-md-4">
+	<h3>文法の説明</h3>
+	<ul>
+		<li><a href="syntax/stmt.html">文</a></li>
+		<li><a href="syntax/expr.html">式</a></li>
+		<li><a href="syntax/procedurecall.html">手順呼出し文</a></li>
+		<li><a href="syntax/variable.html">変数と代入文</a></li>
+		<li><a href="syntax/forloop.html">繰り返し文</a></li>
+		<li><a href="syntax/if.html">判断文</a></li>
+		<li><a href="syntax/switch.html">分岐文</a></li>
+		<li><a href="syntax/trycatch.html">例外監視文</a></li>
+		<li><a href="keywords/index.html">キーワード</a></li>
+	</ul>
+		</div>
+		<div class="col-md-4">
+	<h3>データ型</h3>
+	<ul>
+		<li><a href="syntax/datatype.html">データ型</a></li>
+		<li><a href="syntax/number.html">数値</a></li>
+		<li><a href="syntax/string.html">文字列</a></li>
+		<li><a href="syntax/array.html">配列</a></li>
+		<li><a href="syntax/dictionary.html">辞書</a></li>
+	</ul>
+		</div>
+		<div class="col-md-4">
+	<h3>定義と構造</h3>
+	<ul>
+		<li><a href="syntax/procedure.html">手順</a></li>
+		<li><a href="syntax/construct.html">種類</a></li>
+		<li><a href="syntax/scope.html">有効範囲</a></li>
+	</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+	<h3>逆引き辞典</h3>
+	<ul>
+		<li><a href="lookup/index.htm">逆引き辞典</a></li>
+		<li><a href="lookup/string_lookup.htm">文字列を扱う</a></li>
+		<li><a href="lookup/datetime_lookup.htm">日付や時刻を扱う</a></li>
+		<li><a href="lookup/array_lookup.htm">配列を扱う</a></li>
+		<li><a href="lookup/filesystem_lookup.htm">ファイルを扱う</a></li>
+		<li><a href="lookup/office_excel_lookup.htm">Microsoft Excelを制御する</a></li>
+		<li><a href="lookup/office_word_lookup.htm">Microsoft Wordを制御する</a></li>
+        <li><a href="lookup/kame_lookup.htm">カメで図形を描く</a></li>
+		<li><a href="lookup/media_lookup.htm">メディアを扱う</a></li>
+	</ul>
+		</div>
+		<div class="col-md-4">
+	<h3>機能リファレンス</h3>
+	<ul>
+		<li><a href="core/index.htm">基本機能</a></li>
+		<li><a href="core/global.htm">広域種類</a></li>
+		<li><a href="core/reflection/index.htm">リフレクション</a></li>
+		<li><a href="wincontrol/index.htm">GUI部品</a></li>
+		<li><a href="pgraphics/index.htm">画像描画機能</a></li>
+		<li><a href="office/index.htm">Microsoft Office操作</a></li>
+		<li><a href="data/index.htm">データ操作</a></li>
+		<li><a href="plugins/multimedia/index.htm">メディア再生制御</a></li>
+		<li><a href="network/index.htm">ネットワーク機能</a></li>
+		<li><a href="network/mail/index.htm">メール機能</a></li>
+		<li><a href="plugins/systeminfo/index.htm">システム情報取得</a></li>
+		<li><a href="file/index.htm">ファイル操作機能</a></li>
+		<li><a href="plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+		<li><a href="plugins/msil/index.htm">MSIL生成機能</a></li>
+		<li><a href="tools/index.htm">Webアプリ</a></li>
+	</ul>
+		</div>
+		<div class="col-md-4">
+	<h3>仕様書</h3>
+	<ul>
+		<li><a href="verbs/index.html">プロデルの動詞</a></li>
+		<li><a href="etc/color.htm">色の作り方と定数表</a></li>
+		<li><a href="etc/mouse.htm">マウスカーソルの定数表</a></li>
+		<li><a href="etc/sendkeys.htm">「入力する」手順のキー表記の文法</a></li>
+		<li><a href="error/index.htm">エラーメッセージ一覧</a></li>
+		<li><a href="convertables.htm">型変換</a></li>
+		<li><a href="plugin.htm">プラグインについて</a></li>
+		<li><a href="howtodebug.htm">困ったときは</a></li>
+	</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+	<h3>このマニュアルについて</h3>
+	<ul>
+		<li><a href="thanks.htm">謝辞・著作権について</a></li>
+		<li><a href="usage.htm">マニュアルの表記について</a></li>
+	</ul>
+		</div>
+	</div>
+	</div>
+</div>
+
+	<!-- Tab panes -->
+	<div style="display:none;">
+		<img src="img/copy.png">
+		<a href="searchform.html"></a>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

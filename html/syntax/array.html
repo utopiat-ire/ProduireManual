@@ -1,0 +1,226 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>配列の式 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->配列の式<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>配列の式</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1 id="array">配列の式</h1>
+<ul>
+	<li><a href="../primitive/array.htm">「配列」種類</a></li>
+	<li><a href="../lookup/array_lookup.htm">逆引き「配列を扱う」</a></li>
+</ul>
+	  	<div class="panel panel-default">
+	  		<div class="panel-body bg-success">
+		<ul>
+			<li><a href="#array_assign">配列要素への代入</a></li>
+			<li><a href="#array_const">一度に配列へ値を格納する (配列定数)</a></li>
+			<li><a href="#array_declear">配列の宣言</a></li>
+			<li><a href="#subete_suffix">「すべて」後置子</a></li>
+			<li><a href="#array_fixed">固定長配列</a></li>
+		</ul>
+	</div>
+</div>
+<h3 id="array_assign">配列要素への代入</h3>
+<p>配列要素は、変数名に続けて要素番号(添字)を（　）で囲んで書きます。<br>
+要素番号は、１から始まります。</p>
+<p>プロデルの配列は、特に宣言しない限り、可変長配列として扱われ、事前に配列の個数や型を宣言する必要はありません。</p>
+<p>添字に要素数よりも大きい値を指定して値を代入すると、その添字までの要素が自動的に確保されます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format"><span class="rem">ーー文字や数値を格納する</span>
+<span class="flag">《変数名》</span>（<span class="flag">《番号》</span>）は、<span class="flag">《式》</span></pre>
+		<pre class="format"><span class="rem">ーー値を取得する</span>
+<span class="flag">《変数名》</span>（<span class="flag">《番号》</span>）を表示する</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文　配列の操作</h4>
+	</div>
+	<div class="panel-body">
+<p>「果物」配列の１番目から３番目までに文字を格納して、順に表示しています。</p>
+<pre class="code">果物（１）は、「りんご」
+果物（２）は、「バナナ」
+果物（３）は、「ぶどう」
+果物（４）は、「なし」
+
+果物（１）を表示する
+果物（２）を表示する
+果物（３）を表示する
+果物（４）を表示する</pre>
+	</div>
+</div>
+<h3 id="array_const">一度に配列へ値を格納する (配列定数)</h3>
+<p>上記の例では、変数の１番目から３番目までに順番に文字を格納していますが、<br>
+｛　｝を使うことで、配列へ一度に値を格納できます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format"><span class="rem">ーー配列へ一度に格納する</span>
+<span class="flag">《変数名》</span>は、{<span class="flag">《1番目の値》</span>,<span class="flag">《2番目の値》</span>,<span class="flag">《3番目の値》</span>,・・・}</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文　配列へ一度に格納する</h4>
+	</div>
+	<div class="panel-body">
+<pre class="code">果物は、{「りんご」,「バナナ」,「ぶどう」,「なし」}
+ 果物(2)を表示する　　<span class="rem">ーー「バナナ」と表示されます</span></pre>
+	</div>
+</div>
+<h3 id="array_declear">明示的な配列の宣言</h3>
+<p>変数宣言式を使って明示的に変数を配列として宣言できます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format">【《変数名》：《型》の配列】</pre>
+	</div>
+</div>
+<h3 id="array_fixed">固定長配列</h3>
+<p>固定長配列は、要素数が予め定められた配列型です。</p>
+<p>変数宣言式を使って配列の型と要素数を宣言できます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format">【《変数名》：《型》の配列(《要素数》)】</pre>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+		<p>固定長配列の型の名前は、「《型名》の配列」という形式で指定します。例えば整数型の固定長配列を作るには、「整数の固定配列」と指定します。この名前で「作る」文を使ってインスタンスを作ることができます。「作る」文では、配列の要素数を( )で囲って指定しておきます。</p>
+		<pre class="code">【一覧:整数の固定配列(10)】は、整数の固定配列(10)を作ったもの
+一覧(1)は、10
+一覧(11)は、110 //エラーとなります
+一覧(1)をコンソールへ表示する</pre>
+	</div>
+</div>
+<h3 id="subete_suffix">「すべて」後置子</h3>
+<p>「すべて」後置子によって、配列のすべての要素に対して式が評価され(展開し)た結果を、それぞれ配列に格納できます。「すべて」後置子を指定すると、「すべて」に掛かる式を含んでいる式や文が、「すべて」に掛かる配列の要素それぞれだけ、評価されて、配列として表されます。</p>
+<pre class="code">{120,160,220}すべてに1.08を掛けたものを出力する</pre>
+<p>この場合は、次の文と同じ意味となります。</p>
+<pre class="code"><span class="rem">ーーすべて後置子を使わない例</span>
+ {120に1.08を掛けたもの,160に1.08を掛けたもの,220に1.08を掛けたもの}を出力する</pre>
+<p>「すべて」後置子は、計算演算子、設定項目、実補語に指定できます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文　すべて後置子で配列各要素のオブジェクトの設定項目を取得する</h4>
+	</div>
+	<div class="panel-body">
+
+<p>次の例文では、「リスト」にあるすべて「注文明細」要素の「価格」のみが展開された後に、その結果を要素である配列がさらに展開されます。</p>
+<pre class="code">Aという注文明細を作る
+Bという注文明細を作る
+Cという注文明細を作る
+リストは、{A,B,C}
+リストすべての価格すべてを報告する
+
+注文明細とは
+　　+価格=10の乱数*10
+終わり</pre>
+	</div>
+</div>
+
+<p>戻り値の無い手順の実補語が「すべて」を含む場合は、手順が「すべて」に掛かる配列の要素の数だけ実行されます。</p>
+<p>上記の「リストすべての価格すべてを報告する」の部分は、「リストすべての価格」の配列の要素をそれぞれ展開して手順を実行しますので、次のプログラムと内容は同じです。</p>
+<pre class="code"><span class="rem">ーーすべて後置子を使わない例</span>
+Aの価格を報告する
+Bの価格を報告する
+Cの価格を報告する</pre>
+		</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年8月15日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>バイナリデータ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="基本型,バイナリ"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->バイナリデータ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="datatype">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">データ型</a></li>
+	    <li>バイナリデータ</li>
+      </ul>
+	  <h1>バイナリデータ</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<h3>関連ページ</h3>
+        <p><a href="../file/binaryfile.htm">バイナリファイル</a></p>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>文字列ではないデータ(バイナリデータ)を持つ種類です。</p>
+		<p><span class="label label-warning">生成可能</span></p>
+<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#書き込む">書き込む</a>　<a href="#一括で書き込む">一括で書き込む</a>　<a href="#文字列として書き込む">文字列として書き込む</a>　<a href="#バイトとして書き込む">バイトとして書き込む</a>　<a href="#短整数として書き込む">短整数として書き込む</a>　<a href="#整数として書き込む">整数として書き込む</a>　<a href="#長整数として書き込む">長整数として書き込む</a>　<a href="#符号なし短整数として書き込む">符号なし短整数として書き込む</a>　<a href="#符号なし整数として書き込む">符号なし整数として書き込む</a>　<a href="#符号なし長整数として書き込む">符号なし長整数として書き込む</a>　<a href="#真偽値として書き込む">真偽値として書き込む</a>　<a href="#文字として書き込む">文字として書き込む</a>　<a href="#単精度浮動小数点数として書き込む">単精度浮動小数点数として書き込む</a>　<a href="#倍精度浮動小数点数として書き込む">倍精度浮動小数点数として書き込む</a>　<a href="#読み取る">読み取る</a>　<a href="#文字として読み取る">文字として読み取る</a>　<a href="#一括で読み取る">一括で読み取る</a>　<a href="#すべて読み取る">すべて読み取る</a>　<a href="#開く">開く</a>　<a href="#保存する">保存する</a>　<a href="#移動する">移動する</a>　<a href="#進める">進める</a>　<a href="#閉じる">閉じる</a>　</div>
+		<div id="methods">
+			<h3>【自分】へ【バイト】を、<a name="書き込む">書き込む</a></h3>
+			<p>現在位置に指定したバイト(符号無し8ビット)を書き込みます</p>
+			<h3>【自分】へ【バイナリ】を、<a name="一括で書き込む">一括で書き込む</a></h3>
+			<p>現在位置に指定したバイナリ配列を書き込みます</p>
+			<h3>【自分】へ【内容】を、<a name="文字列として書き込む">文字列として書き込む</a></h3>
+			<p>現在位置に内容を書き込みます。<br>
+				書き込む際の文字コードは、「エンコード」設定項目で指定します。</p>
+			<h3>【自分】へ【値】を、<a name="バイトとして書き込む">バイトとして書き込む</a></h3>
+			<p>現在位置にバイト(符号無し8ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="短整数として書き込む">短整数として書き込む</a></h3>
+			<p>現在位置に短整数(符号あり16ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="整数として書き込む">整数として書き込む</a></h3>
+			<p>現在位置に整数(符号あり32ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="長整数として書き込む">長整数として書き込む</a></h3>
+			<p>現在位置に長整数(符号あり64ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="符号なし短整数として書き込む">符号なし短整数として書き込む</a></h3>
+			<p>現在位置に符号なし短整数(16ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="符号なし整数として書き込む">符号なし整数として書き込む</a></h3>
+			<p>現在位置に符号なし整数(32ビット)を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="符号なし長整数として書き込む">符号なし長整数として書き込む</a></h3>
+			<p>現在位置に符号なし長整数(64ビット)を書き込みます。</p>
+			<h3>【自分】へ【内容】を、<a name="真偽値として書き込む">真偽値として書き込む</a></h3>
+			<p>現在位置に真偽値を書き込みます。</p>
+			<h3>【自分】へ【内容】を、<a name="文字として書き込む">文字として書き込む</a></h3>
+			<p>現在位置に文字を書き込みます。<br>
+				書き込む際の文字コードは、「エンコード」設定項目で指定します。</p>
+			<h3>【自分】へ【値】を、<a name="単精度浮動小数点数として書き込む">単精度浮動小数点数として書き込む</a></h3>
+			<p>現在位置に単精度浮動小数点数を書き込みます。</p>
+			<h3>【自分】へ【値】を、<a name="倍精度浮動小数点数として書き込む">倍精度浮動小数点数として書き込む</a></h3>
+			<p>現在位置に倍精度浮動小数点数を書き込みます。</p>
+			<h3>【自分】から、<a name="読み取る">読み取る</a>:整数</h3>
+			<p>現在位置から1バイト分読み込みます</p>
+			<h3>【自分】から【型】として、読み取る:値</h3>
+			<p>【型】には、次のものが指定できます。<br>
+				短整数,整数,長整数,単精度浮動小数点数,倍精度浮動小数点数,文字,真偽値,符号なし短整数,符号なし整数,符号なし長整数</p>
+			<h3>【自分】から、<a name="文字として読み取る">文字として読み取る</a>:文字</h3>
+			<p>現在位置から指定した1文字を取得します。<br>
+				読み取る際の文字コードは、「エンコード」設定項目で指定します。</p>
+			<h3>【自分】から【文字数】だけ、文字列として読み取る:文字列</h3>
+			<p>現在位置から指定した文字数だけ文字を取得します。<br>
+				読み取る際の文字コードは、「エンコード」設定項目で指定します。</p>
+			<h3>【自分】から【バイト数】だけ、<a name="一括で読み取る">一括で読み取る</a>:バイナリ</h3>
+			<p>現在位置から指定したバイト数のバイナリ配列を読み取ります</p>
+			<h3>【自分】から、<a name="すべて読み取る">すべて読み取る</a>:整数の配列</h3>
+			<p>バイナリデータに含まれる内容を整数のバイナリで表します</p>
+			<h3>【自分】に【ファイル名】を、<a name="開く">開く</a></h3>
+			<p>バイナリデータからファイルを読み込みます</p>
+			<h3>【自分】を【ファイル名】へ、<a name="保存する">保存する</a></h3>
+			<p>バイナリデータをファイルへ保存します</p>
+			<h3>【自分】を【位置】へ、<a name="移動する">移動する</a></h3>
+			<p>現在位置を指定した位置(バイト単位)へ移動します</p>
+			<h3>【自分】を【バイト数】だけ、<a name="進める">進める</a></h3>
+			<p>現在位置から指定したバイト数だけ移動します</p>
+			<h3>【自分】を、<a name="閉じる">閉じる</a></h3>
+			<p>バイナリデータを閉じて編集を終了します</p>
+		</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+				</tr>
+				</thead>
+				<tr>
+					<th><a name="内容">内容</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>データの内容を文字列として表したもの</td>
+				</tr>
+				<tr>
+					<th><a name="現在位置">現在位置</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>現在の読み取り位置</td>
+				</tr>
+				<tr>
+					<th><a name="長さ">長さ</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>データサイズを表します</td>
+				</tr>
+				<tr>
+					<th><a name="エンコード">エンコード</a></th>
+					<th>エンコード</th>
+					<th>◎</th>
+					<td>文字を読み書きする場合の文字コード</td>
+				</tr>
+			</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		</div>
+		<h2 id="型変換">型変換</h2>
+		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
+		<table class="table table-bordered">
+			<thead>
+			<tr>
+				<th>型</th>
+				<th>方向</th>
+				<th>説明</th>
+			</tr>
+			</thead>
+			<tr>
+				<th><a href="string.htm">文字列</a></th>
+				<th>←→</th>
+				<td> 「内容」設定項目と同じ</td>
+			</tr>
+		</table>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">バイナリレベルでファイルを作成する</h3>
+		<p>バイナリレベルでファイルを作成します。</p>
+		<pre class="code">Aというバイナリデータを作る
+
+<em>//書き込みます</em>
+Aに100を整数として書き込む
+Aに3.141592を倍精度浮動小数点数として書き込む
+Aに{65,65,66,67}を一括で書き込む
+
+<em>//内容を取得します</em>
+Aからすべて読み取る
+それを報告する
+
+<em>//読み取ります</em>
+Aを0へ移動する
+Aから整数として読み取る
+それを報告する
+
+Aから倍精度浮動小数点数として読み取る
+それを報告する
+
+Aから文字として読み取る
+それを報告する
+
+Aから3だけ文字列として読み取る
+それを報告する</pre>
+		<h3 id="samples2">バイナリの内容をダンプする</h3>
+		<pre class="code">ファイル名は、「..\image\document.ico」
+読み込みファイルというバイナリファイルを作る
+読み込みファイルへファイル名を読み取り専用で開く
+ダンプは、読み込みファイルからすべて読み取ったもの
+書込器は、文字列書込器を作ったもの
+1からダンプの個数まで数を増やしながら繰り返す
+	（（「00」＆（ダンプ（数）の十六進数））から末尾から2文字取り出したもの）を書込器へ加える
+	もし（数を10で割った余り）が0なら
+		改行を書込器へ加える
+	でなければ
+		「 」を書込器へ加える
+	もし終わり 
+繰り返し終わり   
+読み込みファイルを閉じる
+書込器の内容を報告する</pre>
+</div><!--/samples-->
+		<p>　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

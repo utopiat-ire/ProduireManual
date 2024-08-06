@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>XML要素 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="XML"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->XML要素<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="data">
+	<li><a href="../../index.htm">プロデル</a></li>
+	<li><a href="../index.htm">データ操作</a></li>
+	<li><a href="xml.htm">XML</a></li>
+	<li>XML要素</li>
+</ul>
+<h1>XML要素</h1>
+
+<div class="row">
+	<div class="col-sm-3">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+    </div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>「XML要素」は、XMLの要素を操作するための部品です。</p>
+		<p><span class="label label-warning">生成可能</span></p>
+		<h3>必要プラグイン</h3>
+		<p>データベース機能(<a href="../index.htm">Produire.Data.dll</a>)</p>
+		<h2>関連ページ</h2>
+		<ul>
+			<li><a href="xml.htm">XML</a></li>
+			<li><a href="xmldocument.htm">XML文章</a>
+				<ul>
+					<li><strong>XML要素</strong><br>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>　</p>
+		<h2>作成する方法</h2>
+		<p>この種類は、作成する必要はありません。</p>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#要素を作る">要素を作る</a>　<a href="#属性を作る">属性を作る</a>　<a href="#取得する">取得する</a>　<a href="#設定する">設定する</a>　<a href="#プロセッサ処理を加える">プロセッサ処理を加える</a>　<a href="#コメントを加える">コメントを加える</a>　<a href="#データセクションを加える">データセクションを加える</a>　<a href="#空白を加える">空白を加える</a>　<a href="#テキストを加える">テキストを加える</a>　</div>
+		<div id="methods">
+			<h3>【自分】へ〈【値】で〉【名前】という、<a name="要素を作る">要素を作る</a>：<a href="xmlelement.htm">XML要素</a></h3>
+			<p>要素を作って加えます。</p>
+			<h3>【自分】へ〈【値】で〉【名前】という、<a name="属性を作る">属性を作る</a>：<a href="xmlattribute.htm">XML属性</a></h3>
+			<p>属性を作って加えます。</p>
+			<h3>【自分】から【名前】という【種別】を、<a name="取得する">取得する</a></h3>
+			<p>要素から【名前】と一致する属性または要素を取得します<br>
+				【種別】には、属性または要素が指定できます</p>
+			<pre class="code">要素から「名前」という要素を取得する</pre>
+			<h3>【名前】という【値】を【種別】へ、<a name="設定する">設定する</a></h3>
+			<p>要素から【名前】と一致する属性または要素を取得します<br>
+				【種別】には、属性または要素が指定できます</p>
+			<h3>【自分】へ【名前】という【内容】で、<a name="プロセッサ処理を加える">プロセッサ処理を加える</a>：<a href="xmlprocinstru.htm">XMLプロセッサ処理</a></h3>
+			<p>プロセッサ処理を作成して、XML文章に加える。</p>
+			<h3>【自分】へ【内容】で、<a name="コメントを加える">コメントを加える</a>：<a href="xmlcomment.htm">XMLコメント要素</a></h3>
+			<p>コメントを作成して、XML文章に加える。</p>
+			<h3>【自分】へ【内容】で、<a name="データセクションを加える">データセクションを加える</a>：<a href="xmlcdata.htm">XMLデータセクション要素</a></h3>
+			<p>データセクションを作成して、XML文章に加える。</p>
+			<h3>【自分】へ【内容】で、<a name="空白を加える">空白を加える</a>：<a href="xmlwhitespace.htm">XML空白要素</a></h3>
+			<p>空白要素を作成して、XML文章に加える。</p>
+			<h3>【自分】へ【内容】で、<a name="テキストを加える">テキストを加える</a>：<a href="xmltext.htm">XMLテキスト</a></h3>
+			<p>テキスト要素を作成して、XML文章に加える。</p>
+		</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th class="column">設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+				</tr>
+				</thead>
+				<tr>
+					<th><a name="内容">内容</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>要素に含まれる内容</td>
+				</tr>
+				<tr>
+					<th><a name="名前">名前</a></th>
+					<th>文字列</th>
+					<th>○</th>
+					<td>要素の名前</td>
+				</tr>
+				<tr>
+					<th><a name="XML">XML</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>要素の内容をXMLで表現したもの</td>
+				</tr>
+				<tr>
+					<th><a name="一覧">一覧</a></th>
+					<th>配列</th>
+					<th>□</th>
+					<td>XML要素の直下に含まれるすべてXMLノードを配列で表します</td>
+				</tr>
+				<tr>
+					<th><a name="要素一覧">要素一覧</a></th>
+					<th>配列</th>
+					<th>□</th>
+					<td>XML要素の直下に含まれるXML要素のみを配列で表します</td>
+				</tr>
+				<tr>
+					<th><a name="属性一覧">属性一覧</a></th>
+					<th>配列</th>
+					<th>□</th>
+					<td>XML要素の直下に含まれるXML属性のみを配列で表します</td>
+				</tr>
+				<tr>
+					<th><a name="名前空間">名前空間</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>XML文章の名前空間を表します</td>
+				</tr>
+				<tr>
+					<th><a name="接頭辞">接頭辞</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>XML文章の接頭辞(プリフィックス)を表します</td>
+				</tr>
+			</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+		</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<p><a href="xml.htm#サンプルコード">XML種類のサンプルコード</a>をご覧ください。　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月21日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

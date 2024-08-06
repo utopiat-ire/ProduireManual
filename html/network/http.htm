@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>HTTP - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="POST形式"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->HTTP<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div id="reftitle" class="col-md-9">
+  <div id="reftitle" class="col-md-9">
+    <ul class="breadcrumb" data-category="net">
+      <li><a href="../index.htm">プロデル</a></li>
+      <li><a href="index.htm">ネットワーク機能</a></li>
+      <li>HTTP</li>
+    </ul>
+    <h1>HTTP</h1>
+  </div>
+</div>
+
+<div class="row">
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul><li><a href="webclient.htm">Webクライアント</a></li>
+      </ul>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>「HTTP」種類は、HTTPを使って、ウェブサイトからページやファイルをダウンロードできます。</p>
+		<p><a href="../usage.htm">
+			<span class="label label-info">静的種類</span></a></p>
+		<h3>必要プラグイン</h3>
+		<p><a href="index.htm">ネットワーク機能</a></p>
+<h2>作成する方法</h2>
+		<p>静的種類であるため、オブジェクトを作ることはできません。</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#取得する">取得する</a>　<a href="#送信する">送信する</a>　<a href="#ダウンロードする">ダウンロードする</a>　<a href="#アップロードする">アップロードする</a>　<a href="#要求する">要求する</a>　<a href="#文字コード">文字コード</a>　<a href="#ステータスコード">ステータスコード</a>　<a href="#ユーザ名">ユーザ名</a>　<a href="#パスワード">パスワード</a>　</div>
+		<div id="methods">
+			<h3>【自分】で【アドレス】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="取得する">取得する</a>：文字列</h3>
+			<p>指定した【アドレス】の内容をGET形式でサーバへ問い合わせます。<br>
+				【文字コード】には、取得する内容の文字コードを指定します。<br>
+				省略すると、文字コードを自動判別します。</p>
+			<p>なお、ログインなど認証が必要なページでは、ログインしていない状態のページが取得される場合があります。</p>
+			<h4 data-ref="取得する">GET形式でHTMLを取得する</h4>
+			<pre class="code">「https://www.yahoo.co.jp/」をHTTPで取得して内容とする
+内容を報告する</pre>
+			<h3>【自分】で【アドレス】へ【パラメータ:辞書】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="送信する">送信する</a>：文字列</h3>
+			<p>指定した【アドレス】に対して【パラメータ】を引数にしてPOST形式で送ります。<br>
+				【文字コード】には、送受信に使用する文字コードを指定します。<br>
+				省略すると、文字コードを自動判別します。</p>
+			<h4 data-ref="送信する">POST形式で送信する</h4>
+			<pre class="code">パラメータ（「search」）は、「プロデル」
+「https://rdr.utopiat.net/cgi/post.php」へパラメータをHTTPで送信して内容とする
+内容を報告する</pre>
+			<p>サーバへの要求にヘッダ情報を指定する場合は、【ヘッダ】を指定します。</p>
+			<h4 data-ref="送信する">ヘッダ情報を指定して送信する</h4>
+			<pre class="code">パラメータは、辞書を作ったもの
+ヘッダ(「User-Agent」)は、「Produire Ver.1.0」
+内容は、「https://rdr.utopiat.net/cgi/getheader.php?key=User-Agent」へパラメータをHTTPでヘッダにて送信する
+内容を報告する</pre>
+			<p><a href="../usage.htm"><span class="label label-danger">保護あり</span></a>保護機能の有効時は、この手順が実行できません</p>
+			<h3>【自分】で【アドレス】へ【データ:<a href="../primitive/bytes.htm">バイナリデータ</a>】を〈【ヘッダ:辞書】にて〉送信する：バイナリデータ</h3>
+			<p>指定した【アドレス】に対してデータをPOST形式で送ります。<br>
+				【ヘッダ】には、追加で指定するヘッダ情報を指定します。</p>
+			<h4>フォーム値を	POST形式で要求する</h4>
+			<pre class="code">パラメータは、辞書を作ったもの
+パラメータ(「name」)は、「太郎」
+内容は、「https://rdr.utopiat.net/cgi/getheader.php?key=User-Agent」へパラメータをHTTPで送信する
+内容を報告する</pre>
+			<h3>【自分】で【アドレス】を【ファイル名】へ〈【ヘッダ:辞書】にて〉〈【進捗対象:プログレスバー】しながら〉<a name="ダウンロードする">ダウンロードする</a></h3>
+			<p>指定した【アドレス】からファイルをダウンロードして、【ファイル名】に保存します。<br>
+				【ヘッダ】には、追加で指定するヘッダ情報を指定します。<br>
+				【進捗対象】には、ダウンロード状態を表示するプログレスバーを指定します。</p>
+			<p>なお、ログインなど認証が必要なページでは、アドレスを指定しただけでは、適切にダウンロードできない場合があります。</p>
+			<h4 data-ref="ダウンロードする">ファイルをダウンロードする			</h4>
+			<pre class="code">「https://rdr.utopiat.net/img/produire-title.gif」を「[デスクトップ]produire-title.gif」へHTTPでダウンロードする
+「ダウンロードしました」を情報アイコンで表示する</pre>
+			<h3>【自分】で【アドレス】へ【パラメータ】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="アップロードする">アップロードする</a>：文字列</h3>
+			<p>指定した【アドレス】へファイルや値をアップロードします。</p>
+			<p>【パラメータ】には、アップロードするファイルや値を指定します。<br>
+				パラメータは、辞書形式で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
+			<h4 data-ref="アップロードする">ファイルをアップロードする</h4>
+			<pre class="code">パラメータ(「@upfile」)は、「image.png」
+内容は、「https://xxxxxx/upload.php」へパラメータをHTTPでアップロードする
+内容を報告する</pre>
+			<h3>【自分】で【アドレス】へ【パラメータ】を〈【ヘッダ:辞書】にて〉〈【文字コード】として〉<a name="要求する">要求する</a>：<a href="httpresponse.htm">HTTP応答</a></h3>
+			<p>指定した【アドレス】へファイルや値をアップロードします。</p>
+			<p>【パラメータ】には、アップロードするファイルや値を指定します。<br>
+				パラメータは、辞書形式で指定します。辞書の見出しの先頭に@を付けると、その値に指定された場所にあるファイルをアップロードします。</p>
+			<h4 data-ref="要求する">HTTP要求でHTMLを取得する</h4>
+		  <pre class="code">HTTP要求を作って要求内容とする
+要求内容のUserAgentは、「Mozilla/5.0」
+要求内容にて「https://www.yahoo.co.jp/」をHTTPで要求して応答内容とする
+応答内容のヘッダのすべての要素についてそれぞれ繰り返す
+	要素のキー&amp;「=」&amp;要素の内容を報告する
+繰り返し終わり
+応答内容の本文を報告する</pre>
+			<h2 id="設定項目">設定項目</h2>
+			<div id="properties">
+				<table class="table table-bordered">
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+						</tr>
+					<tr>
+						<th><a name="文字コード">文字コード</a></th>
+						<th>エンコード</th><th>◎</th><td>HTTP通信で文字列として使用する文字コード</td>
+						</tr>
+					<tr>
+						<th><a name="ステータスコード">ステータスコード</a></th>
+						<th>整数</th><th>□</th><td>直前に実行した手順のHTTPステータスコードを取得します</td>
+						</tr>
+					<tr>
+						<th><a name="ユーザ名">ユーザ名</a></th>
+						<th>文字列</th><th>◎</th><td>BASIC/Digest認証を要求された時に使用するユーザ名</td>
+						</tr>
+					<tr>
+						<th><a name="パスワード">パスワード</a></th>
+						<th>文字列</th><th>◎</th><td>BASIC/Digest認証を要求された時に使用するパスワード</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+		<h3 id="lookup1">ウェブサイトからページの内容を取得する</h3>
+		<p>指定したインターネットアドレスからHTMLを取得するには、<a href="../network/http.htm#取得する">「取得する」手順</a>を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">HTTPで<span class="flag">《アドレス》</span>を取得する</pre>
+				<p>《アドレス》には、内容を取得するアドレスを書きます。<br>
+					実行結果として、アドレスから取得された内容がテキスト形式で表されます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　指定したアドレスからHTMLを取得する</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">内容は、HTTPで「https://www.yahoo.co.jp/」を取得したもの
+内容を表示する</pre>
+			</div>
+		</div>
+		<h3 id="lookup2">ウェブサイトからファイルをダウンロードする</h3>
+		<p>指定したインターネットアドレスからファイルをダウンロードするには、<a href="../network/http.htm#ダウンロードする">「ダウンロード」手順</a>を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">HTTPで<span class="flag">《アドレス》</span>を<span class="flag">《保存先のファイル名》</span>へダウンロードする</pre>
+				<p>《アドレス》には、取得するファイルがあるアドレスを書きます。<br>
+					《保存先のファイル名》には、ダウンロードしたファイルを保存するフォルダとファイル名を書きます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　指定したアドレスからファイルをダウンロードする</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">HTTPで「https://rdr.utopiat.net/img/produire-title.gif」を「[デスクトップ]produire-title.gif」へダウンロードする
+「ダウンロードしました」を情報で表示する</pre>
+			</div>
+		</div>
+	</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

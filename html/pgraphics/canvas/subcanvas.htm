@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>子キャンバス - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->子キャンバス<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="graphics">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">画像描画機能</a></li>
+	    <li><a href="index.htm">キャンバス描画</a></li>
+	    <li>子キャンバス</li>
+      </ul>
+	  <h1>子キャンバス</h1>
+	  <h2>概要</h2>
+      <p>キャンバス上の図形まとめて描画するための用紙となる部品です。</p>
+      <h3>継承する種類</h3>
+      <p><a href="canvasitembase.htm">キャンバス図形</a></p>
+      <h3>必要なプラグイン</h3>
+      <p>画像描画機能(<a href="../index.htm">Produire.PGraphics.dll</a>)</p>
+    </div>
+    </div>
+<div class="row">
+	<div id="sidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+	  <ul>
+		  <li><a href="canvas.htm">キャンバス</a></li>
+			<li><a href="canvascircle.htm">円図形</a></li>
+			<li><a href="canvasline.htm">線図形</a></li>
+			<li><a href="canvascurve.htm">曲線図形</a></li>
+			<li><a href="canvaslines.htm">連続線図形</a></li>
+			<li><a href="canvasrectangle.htm">四角形図形</a></li>
+			<li><a href="canvasrounded.htm">角丸矩形</a></li>
+			<li><a href="canvaspolygon.htm">多角形図形</a></li>
+			<li><a href="canvasimage.htm">画像図形</a></li>
+			<li><a href="canvastext.htm">キャンバス文字</a></li>
+	  </ul>
+	</div>
+	<div id="refcontent" class="col-md-9">
+	  <h2>作成する方法</h2>
+		<pre class="format">【キャンバス名】へ子キャンバスを作る</pre>
+		<p>&nbsp;</p>
+		<h2 id="手順">手順</h2>
+		<p><a href="canvasitembase.htm">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#円を描く">円を描く</a>　<a href="#更新する">更新する</a>　<a href="#作る">作る</a>　<a href="#四角形を描く">四角形を描く</a>　<a href="#角丸矩形を描く">角丸矩形を描く</a>　<a href="#子キャンバスを作る">子キャンバスを作る</a>　<a href="#消す">消す</a>　<a href="#線を描く">線を描く</a>　<a href="#曲線を描く">曲線を描く</a>　<a href="#連続線を描く">連続線を描く</a>　<a href="#文字を書く">文字を書く</a>　<a href="#画像を描く">画像を描く</a>　<a href="#多角形を描く">多角形を描く</a>　<a href="#印刷する">印刷する</a>　<a href="#確認して印刷する">確認して印刷する</a>　<a href="#保存する">保存する</a>　</div>
+		<div id="methods">
+			<h3>【自分】に<a name="円を描く">円を描く</a></h3>
+			<p><a href="canvascircle.htm">円図形オブジェクト</a>を生成して、円を描きます</p>
+			<h3>【自分】を<a name="更新する">更新する</a></h3>
+			<p>キャンバスを再描画して、キャンバスに描いた図形に対する変更を反映します</p>
+			<h3>【名前】という【部品名】を<a name="作る">作る</a></h3>
+			<p>部品を作成して、パネル上に表示します</p>
+			<h3>【自分】に<a name="四角形を描く">四角形を描く</a>：<a href="canvasrectangle.htm">四角形図形</a></h3>
+			<p>四角形を描きます</p>
+			<h3>【自分】に<a name="角丸矩形を描く">角丸矩形を描く</a>：<a href="canvasrounded.htm">角丸矩形</a></h3>
+			<p>丸みのある矩形を描きます</p>
+			<h3>【自分】に<a name="子キャンバスを作る">子キャンバスを作る</a></h3>
+			<p>指定したキャンバスの中に子のキャンバスを作ります</p>
+			<h3>【名前】を<a name="消す">消す</a></h3>
+			<p>パネル上から指定した部品を消します</p>
+			<h3>【自分】に<a name="線を描く">線を描く</a>：<a href="canvasline.htm">線図形</a></h3>
+			<p>線を描きます</p>
+			<h3>【自分】に<a name="曲線を描く">曲線を描く</a>：<a href="canvascurve.htm">曲線図形</a></h3>
+			<p>曲線を描きます</p>
+			<h3>【自分】に<a name="連続線を描く">連続線を描く</a>：<a href="canvaslines.htm">連続線図形</a></h3>
+			<p>連続した複数の線を描きます</p>
+			<h3>【自分】に<a name="文字を書く">文字を書く</a>：<a href="canvastext.htm">キャンバス文字</a></h3>
+			<p>文字を書きます</p>
+			<h3>【自分】に<a name="画像を描く">画像を描く</a>：<a href="canvasimage.htm">画像図形</a></h3>
+			<p>画像ファイルの画像を描きます</p>
+			<h3>【自分】に<a name="多角形を描く">多角形を描く</a>：<a href="canvaspolygon.htm">多角形図形</a></h3>
+			<p>多角形を描きます</p>
+			<h3>【自分】を〈【<a href="../../core/printer.htm">プリンタ</a>】へ〉<a name="印刷する">印刷する</a></h3>
+			<p>テキストの内容をプリンタへ印刷します</p>
+			<h3>【自分】を〈【<a href="../../core/printer.htm">プリンタ</a>】へ〉<a name="確認して印刷する">確認して印刷する</a></h3>
+			<p>プリンタと印刷設定を確認して、テキストの内容をプリンタへ印刷します</p>
+			<h3>【自分】を【ファイル名】へ<a name="保存する">保存する</a></h3>
+			<p>キャンバスに描かれた画像を画像ファイルとして保存します。</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p><a href="canvasitembase.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="場所">場所</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメを表示する場所<br>
+						内容には、ウィンドウまたはピクチャーオブジェクトが指定できます。</td>
+					</tr>
+				<tr>
+					<th><a name="色">色</a></th>
+					<th>色</th>
+					<th>◎</th>
+					<td>カメが描く線の色</td>
+					</tr>
+				<tr>
+					<th><a name="下部色">下部色</a></th>
+					<th>色</th>
+					<th>□</th>
+					<td>カメがいる場所の直下の色を表します</td>
+					</tr>
+				<tr>
+					<th><a name="太さ">太さ</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>カメが描く線の太さ</td>
+					</tr>
+				<tr>
+					<th><a name="位置">位置</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメがいる座標<br>
+						「場所」設定項目で指定されたオブジェクト内での座標です。</td>
+					</tr>
+				<tr>
+					<th><a name="大きさ">大きさ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメのアイコンの大きさ<br>
+						[幅]、[高さ]　の形式です。</td>
+					</tr>
+				<tr>
+					<th><a name="向き">向き</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが進む方向<br>
+						画面上方向を0度として、時計回りです。</td>
+					</tr>
+				<tr>
+					<th><a name="速さ">速さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが移動する速さ<br>
+						0が最速です。1、2、3になるに従って遅くなります。</td>
+					</tr>
+				<tr>
+					<th><a name="形">形</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>カメのアイコンを指定します。<br>
+						画像オブジェクトまたはファイル名で指定します。</td>
+					</tr>
+				<tr>
+					<th><a name="背景色">背景色</a></th>
+					<th>色</th>
+					<th>◎</th>
+					<td>カメがいる場所の背景色</td>
+					</tr>
+				<tr>
+					<th><a name="模様">模様</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが描く線の形<br>
+						標準、点線、破線、線と点、線と二点　が指定できます。</td>
+					</tr>
+				</table>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="canvasitembase.htm">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">ドラッグできる図形を描く</h3>
+<p>子キャンバスの中に図形を作成します。<br>
+			子キャンバスをドラッグすることで、子キャンバスの中の図形も同時に移動させることができます。</p>
+<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめ手順
+		初期化する
+		選択図形は、無
+		処理中は、×
+		キャンバス1に子キャンバスを作って子キャンバス1とする
+			その位置と大きさは、｛10,10,100,100｝
+			その背景色を白に変える
+		子キャンバス1へ四角形を描く
+			その位置と大きさは、｛10,10,80,50｝
+		子キャンバス1へ線を描く
+			その位置と大きさは、｛10,70,80,30｝
+		キャンバス1を更新する
+	終わり
+
+	初期化する手順
+		この内容を「子キャンバスの例」に変える
+		この位置と大きさを｛15，15，300，300｝に変える
+		キャンバス1というキャンバスを作る
+			そのドッキング方向を全体に変える
+			その背景色を水色に変える
+	終わり
+
+	-移動中
+	-開始横座標
+	-開始縦座標
+	-処理中
+	-選択図形
+
+	キャンバス1がマウスのボタンが押された時の手順
+		選択図形は、キャンバス1から{イベントの横座標,イベントの縦座標}を選択したもの
+		もし選択図形が子キャンバス1でないなら　抜け出す
+		移動中は、○
+		開始横座標は、選択図形の横-イベントの横座標
+		開始縦座標は、選択図形の縦-イベントの縦座標
+	終わり
+	キャンバス1のマウスカーソルが移動した時の手順
+		もし移動中でないなら、抜け出す
+		もし処理中なら、抜け出す
+		処理中は、○
+		選択図形の位置は、｛イベントの横座標＋開始横座標,イベントの縦座標＋開始縦座標｝
+		キャンバス1を更新する
+		処理中は、×
+	終わり
+	キャンバス1がマウスのボタンが離された時の手順
+		移動中は、×
+	終わり
+終わり</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

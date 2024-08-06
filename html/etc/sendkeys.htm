@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>「入力する」手順のキー表記の文法 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->「入力する」手順のキー表記の文法<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb">
+		<li><a href="../index.htm">プロデル</a></li>
+		<li><a href="index.htm">その他</a></li>
+		<li>「入力する」手順のキー表記の文法</li>
+	</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>「入力する」手順のキー表記の文法</h1>
+		<h2>入力する内容の書き方</h2>
+		<p><a href="../core/core.htm#入力する">「入力する」手順</a>または<a href="../core/process.htm#入力する">プロセスの「入力する」手順</a>は、キーボード入力を再現して指定した内容を自動的に入力します。</p>
+		<p>アルファベットや全角文字は、そのまま指定できます。<br>
+			特殊なキーとの組み合わせて入力させるには、特別な書き方があります。<br>
+			このページでは、特別な書き方について説明します。</p>
+		<h3>Ctrlキー、Altキー、Shiftキーの組み合わせ </h3>
+		<p>他のアプリケーションのメニューやボタンを操作する際のために、Ctrl,Alt,Shiftの組み合わせを表現できます。</p>
+		<pre class="code">//Ctrl+C
+「^C」を入力する</pre>
+		<pre class="code">//Alt+F
+「%F」を入力する</pre>
+		<pre class="code">//Shift+↓
++{DOWN}</pre>
+		<h3>特殊なキー</h3>
+		<p>「＋」、「^」、「％」、「~」、「(」、「)」には特別な意味があるため、文字を中かっこ ({ }) で囲んで指定してください。</p>
+		<h4>例文</h4>
+		<pre class="code">「ABC{Enter}」を入力する</pre>
+		<p>特別なキー（エンターやバックスペースなど）は、下記の「特殊キーの一覧」をご覧ください。<br>
+			この特殊キーは、必ず半角である必要があります。</p>
+		<p>Clear、ショートカットメニュー、無変換、漢字、左右のWindowsキーは、指定できません。</p>
+		<h4><b>特殊キーの一覧</b></h4>
+		<table class="table table-bordered">
+			<tr>
+				<th width="50%">キー</th>
+				<th width="50%">書き方</th>
+				</tr>
+			<tr>
+				<td>エンター</td>
+				<td>{Enter}</td>
+				</tr>
+			<tr>
+				<td>↑</td>
+				<td>{UP}</td>
+				</tr>
+			<tr>
+				<td>↓ </td>
+				<td>{DOWN}</td>
+				</tr>
+			<tr>
+				<td>←</td>
+				<td>{LEFT}</td>
+				</tr>
+			<tr>
+				<td>→</td>
+				<td>{RIGHT}</td>
+				</tr>
+			<tr>
+				<td>Shift</td>
+				<td>+</td>
+				</tr>
+			<tr>
+				<td>Ctrl</td>
+				<td>^</td>
+				</tr>
+			<tr>
+				<td>Alt</td>
+				<td>%</td>
+				</tr>
+			<tr>
+				<td>Esc</td>
+				<td>{ESC}</td>
+				</tr>
+			<tr>
+				<td>Tab</td>
+				<td>{TAB}</td>
+				</tr>
+			<tr>
+				<td>F1</td>
+				<td>{F1}</td>
+				</tr>
+			<tr>
+				<td>BackSpace</td>
+				<td>{BS}</td>
+				</tr>
+			<tr>
+				<td>Delete</td>
+				<td>{DELETE}/{DEL}</td>
+				</tr>
+			<tr>
+				<td>CapsLock</td>
+				<td>{CAPSLOCK}</td>
+				</tr>
+			<tr>
+				<td>NumLock</td>
+				<td>{NUMLOCK}</td>
+				</tr>
+			<tr>
+				<td>PageDown</td>
+				<td>{PGDN}</td>
+				</tr>
+			<tr>
+				<td>PageUp</td>
+				<td>{PGUP}</td>
+				</tr>
+			</table>
+		<h3>同じ内容を繰り返し入力する</h3>
+		<p>同じキーを繰り返して入力するときは、{【キー】 【回数】}と書きます。</p>
+		<h4>例</h4>
+<pre class="code">「{あ 10}」を入力する</pre>
+		<h4>同時入力</h4>
+		<p>同時に複数のキーを入力するには、キーを( )で囲みます。</p>
+		<p><b>例</b></p>
+<pre class="code">「(AB)」を入力する</pre>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年4月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

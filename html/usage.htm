@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>表記の意味 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="js/html5shiv-3.7.3.min.js"></script>
+	<script src="js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.htm"><img src="img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->表記の意味<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="core/index.htm">基本機能</a></li>
+							<li><a href="core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb">
+	<li><a href="index.htm">プロデル</a></li>
+	<li>表記の意味</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>表記の意味</h1>
+		<p>マニュアルでは、プログラムの説明のために色や記号を使っています。<br>
+			それそれの意味は、次のようになります。</p>
+		<h3>例文のプログラム</h3>
+		<p>プロデルのプログラムは、青い四角で囲まれます。</p>
+		<pre class="code">例文のプログラム
+ 	
+<i>ーーこの部分は、プログラムの説明です。プログラムの動きには関係ありません。
+</i><b>説明の関係のあるプログラムはこのように強調されます</b></pre>
+		<h2>種類の説明にあるアイコンの意味</h2>
+		<table class="table table-bordered">
+			<tr>
+				<td><span class="label label-warning instance">生成可能</span></td>
+				<td><a href="syntax/create.htm">「作る」文</a>を使って、生成することで利用できる種類です。</td>
+				</tr>
+			<tr>
+				<td><span class="label label-success">ウィンドウ部品</span></td>
+				<td>ウィンドウ上に貼り付けられる部品を表す種類です。</td>
+				</tr>
+			<tr>
+				<td><span class="label label-info">静的種類</span></td>
+				<td><a href="syntax/create.htm">「作る」文</a>で生成する必要なく、そのまま使える種類です。</td>
+				</tr>
+			<tr>
+				<td><span class="label label-default">抽象種類</span></td>
+				<td>手順と設定項目の定義のみ種類です。生成したり、そのまま利用することはできません。</td>
+				</tr>
+			<tr>
+				<td><span class="label label-primary">広域種類</span></td>
+				<td>種類名を指定することなく利用できる種類です。</td>
+				</tr>
+			<tr>
+				<td><span class="label label-danger">保護あり</span></td>
+				<td>保護機能が有効な種類または手順です。<br>
+					実行可能ファイルでは、実行が制限されます。</td>
+				</tr>
+			<tr>
+				<td>
+					<p><span class="label label-success valuetype">値型</span></p>
+					</td>
+				<td>値型の種類です。</td>
+				</tr>
+			<tr>
+				<td>
+					<p><span class="label label-warning convertable">型変換</span></p>
+					</td>
+				<td><a href="convertables.htm">型変換</a>できる種類です。</td>
+				</tr>
+		</table>
+		<h2><a name="手順">手順の書式</a></h2>
+		<p>プロデルのプログラムに書くプログラム文の構造を表した部分は、オレンジ色の四角で囲まれます。<br>
+			書式に書かれた読点（“、”や“，”）は、省略できます。また読点をスペースに変えることもできます。</p>
+		<pre class="format">【メッセージ】を表示する</pre>
+		<h4>書式の意味</h4>
+		<table class="table table-bordered">
+			<tr>
+				<td>【　】</td>
+				<td>手順の実行に必要な情報(引数)を、書く部分であることを表します。<br>
+					<br>
+					実際にプログラムに書くときには、この部分を式(文字列や数値、変数など)に置き換えて書きます。<br>
+					記号“【”と“】”をプログラムに書く必要は、ありません。</td>
+				</tr>
+			<tr>
+				<td>【　：　】</td>
+				<td>引数が特定の種類であることを表します。</td>
+				</tr>
+			<tr>
+				<td>【自分】</td>
+				<td>手順を持つ種類（レシーバオブジェクト）を書く部分であることを表します。</td>
+				</tr>
+			<tr>
+				<td>〈　〉</td>
+				<td>省略可能である部分を表します。<br>
+					この記号で囲まれた部分は、プログラムへ書かなくてもエラーとなりません。<br>
+					必要な場合だけ書いてください。</td>
+				</tr>
+			<tr>
+				<td>｛A・B｝</td>
+				<td>A・Bのいずれかから選択して書く部分であることを表します。</td>
+				</tr>
+		</table>
+		<h2><a name="設定項目">設定項目</a>の記号の意味</h2>
+		<p>設定項目の一覧で使用する記号は、次のような意味を表します。</p>
+		<table class="table table-bordered">
+			<tr>
+				<td>◎</td>
+				<td>設定項目の値を取得したり設定したりできます。</td>
+				</tr>
+			<tr>
+				<td>○</td>
+				<td>設定項目へ値を設定することだけができます。</td>
+				</tr>
+			<tr>
+				<td>□</td>
+				<td>設定項目の値を取得することだけができます。</td>
+				</tr>
+		</table>
+	</div>
+</div>
+<p></p><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

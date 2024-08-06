@@ -1,0 +1,233 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>数値 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->数値<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>数値の式</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1>数値の式</h1>
+	  	<p>数値には、次のデータ型があります。</p>
+<ul>
+	<li><a href="../primitive/decimal.htm">固定小数</a></li>
+	<li><a href="../primitive/long.htm">長整数</a></li>
+	<li><a href="../primitive/int.htm">整数</a></li>
+	<li><a href="../primitive/float.htm">浮動小数</a></li>
+	<li><a href="../primitive/double.htm">倍浮動小数</a></li>
+</ul>
+<p>数値は、すべて値型として扱われます。これらの数値型は、格納できる値の範囲や使用するメモリ容量が異なります。</p>
+<div class="panel panel-default">
+<table class="table table-striped">
+	<tr>
+		<th>値型名</th>
+		<th>格納できる値の範囲</th>
+		<th>ビット数</th>
+	</tr>
+	<tr>
+		<td>整数</td>
+		<td>-2,147,483,648～2,147,483,647</td>
+		<td>32</td>
+	</tr>
+	<tr>
+		<td>長整数</td>
+		<td>-9,223,372,036,854,775,808～9,223,372,036,854,775,807</td>
+		<td>64</td>
+	</tr>
+	<tr>
+		<td>浮動小数</td>
+		<td>約7桁</td>
+		<td>32</td>
+	</tr>
+	<tr>
+		<td>倍浮動小数</td>
+		<td>約15～16桁</td>
+		<td>64</td>
+	</tr>
+	<tr>
+		<td>固定小数</td>
+		<td>約28～29桁</td>
+		<td>128</td>
+	</tr>
+</table>
+</div>
+<p>なお、これらの型をまとめて数値型と呼ぶことがあります。</p>
+<h3 id="number_const">数値定数</h3>
+<p>プログラムで具体的な数字(リテラル)を指定すると、プロデルが解析時にその数値を格納できる型に調整します。</p>
+<p>数値は、全角、半角を問いません。負の数や小数点も表すこともできます。<br>
+なお、数値を文字列として扱いたい場合は、文字列として「　」で囲みます。</p>
+<pre class="code">１２３を表示する</pre>
+<h3>16進数定数表記</h3>
+<p>数値を16進数表記で指定するには、先頭に「0x」を付けて書きます。</p>
+<pre class="code"><b>0xFF</b>を表示する</pre>
+<p>&nbsp;</p>
+<h3>数値の変換</h3>
+<p>数値型の場合で、型が異なる変数に代入しようとすると、自動的に(暗黙的に)値の変換が行われます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>次のプログラムでは、1.5が代入されている浮動小数である【値1】を、整数である【値2】へ代入しています。</p>
+<pre class="code">【値1:浮動小数】は、1.5
+【値2:整数】は、値1
+値2を表示する</pre>
+<p>値1と値2は型が異なるため、値1を値2へ代入するときに、値変換が行われます。<br>
+具体的には、小数部分が切り捨てられて、1.5から1へ値変換されます。小数は四捨五入されません。</p>
+	</div>
+</div>
+<p>プロデルでは、変換前後の型に関係なく、すべて自動的に変換されます。<br>
+値変換の時に、変換前の値が、変換後の範囲に収まらない場合は、切り捨てられるか正しく変換されないことがあります。</p>
+<p>変換後に切り捨される型は次の通りです。</p>
+<div class="panel panel-default">
+<table class="table table-striped">
+	<tr>
+		<th>&nbsp;</th>
+		<th>整数へ</th>
+		<th>長整数へ</th>
+		<th>浮動小数へ</th>
+		<th>倍浮動小数へ</th>
+		<th>固定小数へ</th>
+	</tr>
+	<tr>
+		<th>整数から</th>
+		<td>-</td>
+		<td>○</td>
+		<td>○</td>
+		<td>○</td>
+		<td>○</td>
+	</tr>
+	<tr>
+		<th>長整数から</th>
+		<td>△</td>
+		<td>-</td>
+		<td>△</td>
+		<td>○</td>
+		<td>○</td>
+	</tr>
+	<tr>
+		<th>浮動小数から</th>
+		<td>切り捨て</td>
+		<td>切り捨て</td>
+		<td>-</td>
+		<td>△</td>
+		<td>○</td>
+	</tr>
+	<tr>
+		<th>倍浮動小数から</th>
+		<td>切り捨て</td>
+		<td>切り捨て</td>
+		<td>△</td>
+		<td>-</td>
+		<td>○</td>
+	</tr>
+	<tr>
+		<th>固定小数から</th>
+		<td>切り捨て</td>
+		<td>切り捨て</td>
+		<td>△</td>
+		<td>△</td>
+		<td>-</td>
+	</tr>
+</table>
+</div>
+<p>○＝正しく変換されます　△＝変換後の範囲に収まる場合は正しく変換されます<br>
+切り捨て＝小数が切り捨てられます<br></p>
+<h3>文字列との変換</h3>
+<p>数値型の値を文字列型の変数へ代入する時には、数値型が数字に変換されて文字列となります。</p>
+<p>文字列型の値を数値型の変数へ代入する時には、文字列である数字が数値に変換されて数値型の値となります。</p>
+<h3>値変換の誤差</h3>
+<p>コンピュータの性質上、計算する際にわずかな計算誤差が生まれることがあります。</p>
+<p>例えば、次のようなプログラムを実行すると、<br>
+本来は0.1と表示されるべきところが0.1000061と誤った結果になります。</p>
+<pre class="code">295.5-295.4を表示する</pre>
+<p>この現象は、プロデルの不具合ではなく、小数点を含む数値をメモリ上に格納する際に起こります。<br>
+このようにほとんど等しい小数点以下の計算を正確に行いたい時は、計算誤差が生じる可能性が少ない、<br>
+固定小数型の変数に代入してから計算すると、誤差を回避できます。</p>
+<pre class="code">【値1:固定小数】は、295.5
+【値2:固定小数】は、295.4
+値1-値2を表示する</pre>
+<p>なお、整数型ではこのような誤差は発生しないため、10倍した値を整数型として格納しておき、必要に応じて1/10にすると言った工夫も考えられます。</p>
+
+		</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

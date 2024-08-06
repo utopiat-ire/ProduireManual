@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>メディアを扱う - プロデル逆引き辞典</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="逆引き"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->メディアを扱う<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="lookup">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">逆引き辞典</a></li>
+	<li>メディアを扱う</li>
+</ul>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>メディアを扱う</h1>
+		<h2>Windowsで設定されている効果音を鳴らしたい</h2>
+		<p>コントロールパネルの「サウンド」プロパティで設定されている効果音を鳴らすこともできます。</p>
+		<pre class="code">問い合わせ音を鳴らす</pre>
+		<pre class="code">エラー音を鳴らす</pre>
+		<p>&nbsp;</p>
+		<h2>WAVEファイルの再生</h2>
+		<p>効果音としてWAVEファイルを再生する場合には、<a href="../core/wave.htm">「効果音」種類</a>を使います。</p>
+		<pre class="code">効果音ファイルは、「［ウィンドウズフォルダ］media\tada.wav」
+効果音ファイルを繰り返して再生する
+6秒待つ
+効果音を停止する</pre>
+		<p>&nbsp;</p>
+		<h2>MCIとは</h2>
+		<p>MCI(Media Control Interface)とは、Windowsでメディアファイル(WAVEやMP3、CD、MIDIなど)を再生するための機能を提供します。</p>
+		<p>プロデルでは、MCIを利用するための<a href="../plugins/multimedia/mci.htm">「メディア制御」種類</a>があります。</p>
+		<p>　</p>
+		<h3>MCIコマンド文字列</h3>
+		<p>MCIコマンド文字列は、対象となるファイルやデバイスによって、いろいろなものが用意されています。</p>
+		<p>[エイリアス]とは、対象となるファイル・デバイスを表す仮の名前です。<br>
+			openコマンドを利用したときに、指定できます。</p>
+		<p>再生するファイルや周辺機器によっては、サポートされていないものもあります。</p>
+		<p>　</p>
+		<h3>MCIコマンド文字列の利用例</h3>
+		<h4>「再生」手順を使わずにWAVEファイルを再生する</h4>
+		<p>MCIコマンドを利用して、WAVEファイルを再生する例です。</p>
+		<pre class="code"><span class="rem">ーーWAVEファイルを開く</span>
+「open ［ウィンドウズフォルダ］media\chord.wav alias WAVE」をメディア制御へ命令する
+
+<span class="rem">ーー再生する</span>
+「play WAVE」をメディア制御へ命令する
+
+1秒待つ
+
+<span class="rem">ーー停止する</span>
+「stop WAVE」をメディア制御へ命令する
+
+<span class="rem">ーー閉じる</span>
+「close WAVE」をメディア制御へ命令する</pre>
+		<p>　</p>
+		<h4>WAVEファイルへ録音する</h4>
+		<p>MCIコマンドを利用して、WAVEファイルに録音する例です。</p>
+		<p>※Windows Media Playerで開くことができない場合は、サウンドレコーダで試してみてください。</p>
+		<pre class="code"><span class="rem">ーーWAVE録音の準備
+</span>「open new type waveaudio alias WAVE」をメディア制御へ命令する
+<span class="rem">ーー録音開始
+</span>「record WAVE」をメディア制御へ命令する
+<font color="#008000">
+</font><span class="rem">ーー停止
+</span>「stop WAVE」をメディア制御へ命令する
+<span class="rem">ーー保存する
+</span>「save WAVE &quot;C:\Test.wav&quot;」をメディア制御へ命令する
+<span class="rem">ーーファイルを閉じる
+</span>「close WAVE」をメディア制御へ命令する</pre>
+		<p>　</p>
+		<h4>CDドライブを開く</h4>
+		<pre class="code">「set cdaudio door open」をメディア制御へ命令する</pre>
+<h2>音楽を奏でよう</h2>
+		<p>プロデルでは、<a href="../plugins/multimedia/melody.htm">「メロディ」種類</a>を通じて、MIDI音源を利用してドレミで音楽を演奏できます。</p>
+		<p>まずは、実際に音楽を鳴らしてみましょう。</p>
+		<pre class="code">「ド４レ４ミ４ファ４ソ４ラ８シ８&gt;ド２」を演奏する</pre>
+		<p>メロディの書き方については、<a href="../plugins/multimedia/melody.htm">「メロディ」種類</a>で説明しています。</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月21日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

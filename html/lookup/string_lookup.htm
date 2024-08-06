@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>文字列を操作する - プロデル逆引き辞典</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="逆引き"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->文字列 - 逆引き辞典<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="lookup">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">逆引き辞典</a></li>
+	<li>文字列を扱う</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>文字列を扱う</h1>
+		<p>このページでは、文字列を操作する方法を紹介します。</p>
+		<p>文字列とは、文章やテキストなどの1文字以上の文字の集まりを表します。</p>
+		<ul>			
+		  <li><a href="../syntax/string.html">文字列の式</a></li>
+			<li><a href="../primitive/string.htm">「文字列」種類</a></li>
+		</ul>
+        <div id="samples">
+		<h3 id="string1">文字列の指定した部分の文字列を取り出す</h3>
+		<p>文字列から指定した位置の文字を取り出す<a href="../primitive/string.htm#取り出す">「取り出す」手順</a>です。<br>
+			これらの手順を使うと文字列から特定の文字を取り出せます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《文字列》から先頭から《文字数》文字取り出す</pre>
+				<pre class="format">《文字列》の《開始位置》文字目から《文字数》文字取り出す</pre>
+				<pre class="format">《文字列》から末尾から《文字数》文字取り出す</pre>
+				<p>《文字列》は、取り出すもととなる文字列を書きます。<br>
+					《文字数》は、取り出す文字数を書きます。<br>
+					《開始位置》は、指定した取り出す最初の文字の位置を書きます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「いぬとねこは、なかよし」
+
+<em>ーーいぬを取り出す</em>
+<strong>文章から先頭から2文字取り出</strong>して内容とする
+内容を表示する
+
+<em>ーーねこを取り出す</em>
+<strong>文章の4文字目から2文字取り出</strong>して内容とする
+内容を表示する
+
+<em>ーーなかよしを取り出す</em>
+<strong>文章から末尾から4文字取り出</strong>して内容とする
+内容を表示する</pre>
+			</div>
+		</div>
+		<h3 id="string2">指定した位置以降の文字を取り出す</h3>
+		<p>指定した文字位置以降のすべての文字を取り出すには、<a href="../primitive/string.htm#文字目以降">「以降」手順</a>を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《文字列》の《文字数》文字目以降</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「いぬとねこは、なかよし」
+
+<em>ーーなかよしを取り出す</em>
+内容は、<strong>文章の8文字目以降</strong>
+内容を表示する</pre>
+			</div>
+		</div>
+		<h3 id="string3">文字を消す</h3>
+		<p>文字例から指定した文字数分だけ切り取るには、<a href="../primitive/string.htm#先頭から消す">「消す」手順</a>を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《文字列》の先頭から《文字数》文字、消す</pre>
+				<pre class="format">《文字列》の《開始位置》文字目から、《文字数》文字、消す</pre>
+				<pre class="format">《文字列》の末尾から《文字数》文字、消す</pre>
+				<p>《文字列》は、消す元となる文字列を書きます。<br>
+					《開始位置》は、消す部分の最初の文字の位置を書きます。<br>
+					《文字数》は、消す文字数を書きます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「いぬとねこは、なかよし」
+ 					
+<span class="rem">ーー「いぬと」の部分を消す</span>
+<strong>文章の先頭から3文字消</strong>して内容とする
+内容を表示する<span class="rem">
+
+ーー「ねこ」の部分を消す</span>
+<strong>文章の4文字目から2文字消</strong>して内容とする
+内容を表示する
+
+<span class="rem">ーー「は、なかよし」の部分を消す</span>
+<strong>文章の末尾から6文字消</strong>して内容とする
+内容を表示する</pre>
+			</div>
+		</div>
+		<h3 id="string4">スペースを消す</h3>
+		<p>文字列の前後にあるスペースを消すには、<a href="../primitive/string.htm#スペースを消す">「スペースを消す」手順</a>を使います。<br>
+			また、先頭のスペースだけを消すには、「左スペースを消す」手順を使い、<br>
+			末尾にあるスペースだけを消すには、「右スペースを消す」手順を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《文字列》から、スペースを、消す</pre>
+				<pre class="format">《文字列》から、左スペースを、消す</pre>
+				<pre class="format">《文字列》から、右スペースを、消す</pre>
+				<p>《文字列》は、スペースを消す文字列を書きます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　文章中の前後のスペースを消します。</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「　　　　　ようこそ　プロデルへ　　　　」
+「|［文章からスペースを消したもの］|」を表示する
+「|［文章から左スペースを消したもの］|」を表示する
+「|［文章から右スペースを消したもの］|」を表示する</pre>
+			</div>
+		</div>
+		<h3 id="string5">特定の文字を別の文字に置き換える</h3>
+		<p>指定した文字をすべて別の文字に置き換えるには、<a href="../primitive/string.htm#置換する">「置き換える」手順</a>を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《内容》から《変更前の文字》を《変更後の文字》へ置き換える</pre>
+				<pre class="format">《内容》から《変更前の文字》を《変更後の文字》へ置換する</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　スペースを★に書き換える</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「こんにちは　今日は　いい天気ですね　」
+文章から「　」を「★」へ置換して結果とする
+結果を表示する</pre>
+				<p>指定した文字をすべて消したい時も、「置き換え」手順を使えます。</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　「★」を削除する</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">文章は、「こんにちは★今日は★いい天気ですね★」
+文章から「★」を「」へ置換して、結果とする
+結果を表示する</pre>
+			</div>
+		</div>
+		<h3 id="string6">文字の位置を調べる</h3>
+		<p>文字列の中から、指定した文字列を検索してその位置を表すには、<a href="../primitive/string.htm#探す">「探す」手順</a>を使います。</p>
+		<p>「取り出す」手順を組み合わせれば、文字が決まっていない場合に特定の文字列を取り出せます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">書式</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="format">《文字列》から《キーワード》を、探す</pre>
+				<pre class="format">《文字列》の《開始位置》文字目から《キーワード》を、探す</pre>
+				<p>《文字列》には、探す対象の文字列を書きます。<br>
+					《キーワード》には、探す文字列を書きます。<br>
+					《開始位置》には、探し始めの文字位置を書きます。</p>
+			</div>
+		</div>
+　
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文　「りんご」が4文字目にあることを返します</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">文章は、「さあ、りんごはどこにいるでしょう？」
+<strong>文章から「りんご」を探して</strong>文字位置とする
+文字位置を表示する</pre>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文　「もも」が4文字目にあることを返します</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">文章は、「にほんご　ぷろぐらみんぐげんご　ぷろでる」
+<strong>文章の5文字目から「ん」を探して</strong>文字位置とする
+文字位置を表示する</pre>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文　「りんご」を「リンゴ」に置き換える</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">文章は、「おいしいりんごはいかがでしょうか？」
+<b>文章から「りんご」を探して</b>文字位置とする
+結果は、「［<b>文章の先頭から（文字位置－１）文字取り出したもの</b>］リンゴ［<b>文章の（文字位置＋３）文字目以降</b>］」
+結果を表示する</pre>
+    </div>
+</div>
+<h3 id="string6">後ろから前方向へ探す</h3>
+<p>文字列を末尾から先頭方向へ探すには、<a href="../primitive/string.htm#前方向へ探す">「前方向から探す」手順</a>を使います。</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">書式</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="format">《文字列》から《キーワード》を前方向へ探す</pre>
+    <pre class="format">《文字列》の《開始位置》から《キーワード》を前方向へ探す</pre>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">内容は、「にほんごぷろぐらみんぐげんご ぷろでる」
+文字位置は、内容の11文字目から「ん」を前方向へ探したもの
+「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
+    </div>
+</div>
+<h3 id="string7">文字列中に含まれる文字がいくつあるかを調べる</h3>
+<p>文字例の中に指定した文字が、いくつあるかを調べるには、<a href="../primitive/string.htm#数える">「個数」手順</a>を使います。</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">書式</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="format">《内容》から《探す文字》の個数</pre>
+    <p>《内容》　対象の文字列<br>
+      《探す文字》　数える文字列</p>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code"><em>ーー６を表します</em>
+文章は、「りんごりんごりんごりりんごんごりんりんごりんごご」<b>
+文章から「りんご」の個数</b>を表示する</pre>
+    </div>
+</div>
+<p>&nbsp;</p>
+<h3 id="string8">何行あるか調べる</h3>
+<p>指定した文字列が何行あるかを調べるには、「行数」手順を使います。</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">書式</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="format">《内容》の行数</pre>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code"><em>ーー３を表します</em>
+内容は　「こんにちは
+今日はいい天気です。
+今日もがんばりましょう！」
+<strong>行数（内容）</strong>を表示する</pre>
+    </div>
+</div>
+<h3 id="string9">同じ文字を繰り返す</h3>
+<p>文字やスペースを指定した回数だけ繰り返して表す手順がそれぞれ用意されています。</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">書式</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">《回数》回、【文字】を、繰り返す</pre>
+    <p>《回数》には、繰り返す回数を書きます。<br>
+      【文字】には、繰り返し文字を書きます。</p>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">内容は、<strong>10回「★」を繰り返したもの</strong>
+内容を表示する</pre>
+    </div>
+</div>
+<h3 id="string10">スペースを入れる</h3>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">書式</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="format">【数字】文字のスペース</pre>
+    <p>【数字】には、繰り返す回数を書きます。</p>
+    </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">例文</h4>
+    </div>
+  <div class="panel-body">
+    <pre class="code">「★［<strong>10文字のスペース</strong>］★」を表示する</pre>
+    </div>
+</div>
+        </div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

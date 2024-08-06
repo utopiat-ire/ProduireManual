@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プログラム - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プログラム<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div id="reftitle" class="col-md-9">
+  <ul class="breadcrumb" data-category="core">
+    <li><a href="../index.htm">プロデル</a></li>
+    <li><a href="index.htm">基本機能</a></li>
+    <li>プログラム</li>
+  </ul>
+  <h1>プログラム</h1>
+</div>
+
+<div class="row">
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>現在実行中のプログラムに関する情報を取得できます。</p>
+		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
+		<p><span class="label label-info">静的種類</span></p>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#起動中">起動中</a>　<a href="#一時停止する">一時停止する</a>　<a href="#再起動する">再起動する</a>　<a href="#管理者として再起動する">管理者として再起動する</a>　</div>
+		<div id="methods">
+			<h3>【自分】が<a name="起動中">起動中</a>：真偽値</h3>
+			<p>同じプログラムがすでに起動しているかどうかを判定します。実行可能ファイル上で実行した時に有効です。</p>
+			<h3>【自分】を<a name="一時停止する">一時停止する</a></h3>
+			<p>プログラムを一時停止します。プロデルデザイナ上で実行した時に有効です。</p>
+			<h3>【自分】を<a name="再起動する">再起動する</a></h3>
+			<p>プログラムを再起動します。プロデルデザイナ上で実行した場合は、無効です。</p>
+			<h3>【自分】を<a name="管理者として再起動する">管理者として再起動する</a></h3>
+			<p>プログラムを管理者権限で再起動します。<br>
+				ログインユーザによっては、管理者権限への認証を求められる場合があります。<br>
+				プロデルデザイナ上で実行した場合は、無効です。</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型　</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="タイトル">タイトル</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>プログラムのタイトル</td>
+					</tr>
+				<tr>
+					<th><a name="ファイル名">ファイル名</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>実行しているプログラムのファイル名</td>
+					</tr>
+				<tr>
+					<th><a name="フォルダ">フォルダ</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>実行しているプログラムがあるフォルダ</td>
+					</tr>
+				<tr>
+					<th><a name="起動時設定">起動時設定</a></th>
+					<th>文字列配列</th>
+					<th>□</th>
+					<td>
+						<p>起動時に渡された情報（パラメータ）</p>
+				      <h4 data-ref="起動時設定">起動時パラメータを取得する</h4>
+						<pre class="code">もしプログラムの起動時設定が無なら
+	「ファイルが指定されていません」を表示する
+そうでなければ
+	プログラムの起動時設定を表示する
+もし終わり</pre></td>
+					</tr>
+				<tr>
+					<th><a name="作業フォルダ">作業フォルダ</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>
+						<p>プログラムの現在作業中のフォルダ(カレントディレクトリ)</p>
+						<h4 data-ref="作業フォルダ">作業フォルダを設定・取得する</h4>
+						<pre class="code">プログラムの作業フォルダを表示する
+プログラムの作業フォルダは、「C:\」
+プログラムの作業フォルダを表示する</pre></td>
+					</tr>
+				<tr>
+					<th><a name="実行フォルダ">実行フォルダ</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>プロデルデザイナまたはプロデルランタイムがあるフォルダ</td>
+					</tr>
+				<tr>
+					<th><a name="状況通知">状況通知</a></th>
+					<th>オブジェクト</th>
+					<th>◎</th>
+					<td>処理時間の掛かる命令の処理状況を通知する部品</td>
+					</tr>
+				<tr>
+					<th><a name="プロセス">プロセス</a></th>
+					<th><a href="process.htm">プロセス</a></th>
+					<th>□</th>
+					<td>実行しているプログラムのプロセスを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="管理者権限">管理者権限</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>管理者権限で起動しているかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="アクセス制御有効">アクセス制御有効</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>ユーザアクセス制御(UAC)が有効な状態かどうか</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>カメ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Logo,タートルグラフィックス,ロゴ,亀"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->カメ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="graphics">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">画像描画機能</a></li>
+	<li>カメ</li>
+</ul>
+<h1>カメ</h1>
+
+<div class="row">
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>「カメ」は、ウィンドウ上にカメを置いて、線の長さや方向を指定して図形を描画する種類です。<br>
+			この種類でタートルグラフィックスを描画できます。</p>
+		<p><span class="label label-warning">生成可能</span></p>
+		<h3>必要なプラグイン</h3>
+		<p>画像描画機能(<a href="index.htm">Produire.PGraphics.dll</a>)</p>
+		<h2>関連ページ</h2>
+		<ul>
+		  <li><a href="../lookup/kame_lookup.htm">カメで図形を描く</a></li>
+	  </ul>
+		<h2>作成する方法</h2>
+		<pre class="format">【オブジェクト名】というカメを作る</pre>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#スタンプする">スタンプする</a>　<a href="#移動する">移動する</a>　<a href="#隠す">隠す</a>　<a href="#下げる">下げる</a>　<a href="#回転する">回転する</a>　<a href="#枝">枝</a>　<a href="#書く">書く</a>　<a href="#上げる">上げる</a>　<a href="#進める">進める</a>　<a href="#塗りつぶす">塗りつぶす</a>　<a href="#表示する">表示する</a>　<a href="#戻す">戻す</a>　</div>
+		<div id="methods">
+			<h3>【自分】が〈【倍率】で〉<a name="スタンプする">スタンプする</a></h3>
+			<p>カメの絵を描きます。<br>
+				【倍率】は、｛【幅】,【高さ】｝の形式で指定します。</p>
+			<pre class="code">かめが｛2,2｝でスタンプする</pre>
+			<h3>【自分】を【座標】へ<a name="移動する">移動する</a></h3>
+			<p>カメを指定した座標へ移動します。<br>
+				【座標】は、[横],[縦]の形式か、「中央」が指定できます。</p>
+			<pre class="code">かめを｛100,100｝へ移動させる</pre>
+			<h3>【自分】を<a name="隠す">隠す</a></h3>
+			<p>カメを隠します</p>
+			<h3>【自分】を<a name="下げる">下げる</a></h3>
+			<p>カメが持つペンを下げます。<br>
+				カメが移動するとその軌道が、線として描かれます。</p>
+			<h3>【自分】を〈【方向】へ〉〈【角度】だけ〉/〈【角度】度〉<a name="回転する">回転する</a></h3>
+			<p>左または右へ指定した角度だけ回転します。<br>
+				〈角度〉を省略すると、その場で360度回ります</p>
+			<pre class="code">かめを90度回転させる</pre>
+			<h3>【自分】が〈【長さ】だけ〉【回数】回【角度】度、<a name="枝">枝</a></h3>
+			<p>カメがいる位置に、木の枝のような模様を描きます。</p>
+			<pre class="code">かめが100だけ5回45度、枝</pre>
+			<h3>【自分】が【文字】を【フォント】で<a name="書く">書く</a></h3>
+			<p>カメがいる位置に、文字を書きます。</p>
+			<pre class="code">かめが「こんにちは」を「ＭＳ Ｐゴシック」で書く</pre>
+			<h3>【自分】を<a name="上げる">上げる</a></h3>
+			<p>カメが持つペンを上げます。<br>
+				かめが移動した際しても、線は描かれません。</p>
+			<h3>【自分】を〈【方向】へ〉〈【長さ】だけ〉<a name="進める">進める</a></h3>
+			<p>カメを指定した長さだけ進めます。</p>
+			<pre class="code">かめを前へ10だけ進める</pre>
+			<h3>【自分】へ〈【座標】を〉〈【色】で〉<a name="塗りつぶす">塗りつぶす</a></h3>
+			<p>カメがいる位置から、境界まで指定した色で塗りつぶします。<br>
+				〈座標〉または〈色〉を省略すると、かめの位置または色で塗られます。</p>
+			<h3>【自分】を〈【場所】へ〉<a name="表示する">表示する</a></h3>
+			<p>カメをウィンドウ上に表示します。<br>
+				カメを表示するウィンドウは、〈場所〉または「場所」設定項目で指定する必要があります。</p>
+			<h3>【自分】を〈【長さ】だけ〉<a name="戻す">戻す</a></h3>
+			<p>カメを後ろへ後進させます</p>
+			<pre class="code">カメを10だけ戻す</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="場所">場所</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメを表示する場所<br>
+						場所には、<a href="../wincontrol/window.htm">ウィンドウ</a>,<a href="../wincontrol/picturebox.htm">ピクチャー</a>,<a href="canvas/canvas.htm">キャンバス</a>,<a href="canvas/subcanvas.htm">子キャンバス</a>が指定できます。</td>
+					</tr>
+				<tr>
+					<th><a name="色">色</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが描く線の色</td>
+					</tr>
+				<tr>
+					<th><a name="下部色">下部色</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>カメがいる場所の直下の色を表します</td>
+					</tr>
+				<tr>
+					<th><a name="太さ">太さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが描く線の太さ</td>
+					</tr>
+				<tr>
+					<th><a name="位置">位置</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメがいる座標<br>
+						「場所」設定項目で指定されたオブジェクト内での座標です。</td>
+					</tr>
+				<tr>
+					<th><a name="大きさ">大きさ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメのアイコンの大きさ<br>
+						[幅]、[高さ]　の形式です。</td>
+					</tr>
+				<tr>
+					<th><a name="向き">向き</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが進む方向<br>
+						画面上方向を0度として、時計回りです。</td>
+					</tr>
+				<tr>
+					<th><a name="速さ">速さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが移動する速さ<br>
+						0が最速です。1、2、3になるに従って遅くなります。</td>
+					</tr>
+				<tr>
+					<th><a name="形">形</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>カメのアイコンを指定します。<br>
+						画像オブジェクトまたはファイル名で指定します。</td>
+					</tr>
+				<tr>
+					<th><a name="背景色">背景色</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメがいる場所の背景色</td>
+					</tr>
+				<tr>
+					<th><a name="模様">模様</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>カメが描く線の形<br>
+						標準、点線、破線、線と点、線と二点　が指定できます。</td>
+					</tr>
+				</table>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">カメで円を描く</h3>
+<p>カメに円を描かせます。</p>
+<pre class="code">窓としてウィンドウを作る
+窓の内容を「かめ」に変える
+窓を表示する
+
+かめさんというカメを作る
+かめさんの場所を窓に変える
+かめさんの位置を｛100,100｝に変える
+かめさんを表示する
+
+３６０回、繰り返す
+	かめさんを１だけ右へ回転させる
+	かめさんを１だけ前へ進める
+繰り返し終わり
+
+待機する</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

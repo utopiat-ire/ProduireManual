@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>メディア制御 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="MCI"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->メディア制御<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="media">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">メディア再生制御</a></li>
+	    <li>メディア制御</li>
+      </ul>
+	  <h1>メディア制御</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>「メディア制御」では、MCI(Media Control Interface)に対して命令を送ることができる機能が用意されています。</p>
+		<p><span class="label label-info">静的種類</span></p>
+		<h3>必要プラグイン</h3>
+		<p>メディア再生制御 (<a href="index.htm">Produire.Multimedia.dll</a>)</p>
+		<h2>関連ページ</h2>
+        <ul>
+          <li><a href="../../lookup/media_lookup.htm">逆引き辞典「メディアを扱う」</a></li>
+        </ul>
+        <h2>作成する方法</h2>
+		<p>この種類は、静的種類のため作成する必要はありません。</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#取得する">取得する</a>　<a href="#命令する">命令する</a>　</div>
+		<div id="methods">
+			<h3>【自分】から【MCIコマンド】を<a name="取得する">取得する</a></h3>
+			<p>MCIでMCIコマンドを実行して、その結果を取得します</p>
+			<h3>【自分】へ【MCIコマンド】を<a name="命令する">命令する</a></h3>
+			<p>MCIでMCIコマンドを実行します</p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<p>MCIを利用してWAVE形式の音声データを再生します。</p>
+		
+		
+		<pre class="code">ファイル名は、「tada.wav」
+エイリアス名は、「wave1」
+
+<strong><span style="color: #008000">//デバイスを開き、演奏を始める</span></strong>
+メディア制御へ「open &quot;［ウィンドウズフォルダ］media\［ファイル名］&quot; alias ［エイリアス名］」を命令する
+メディア制御へ「play ［エイリアス名］」を命令する
+ 			
+<strong><span style="color: #008000">//演奏が終わるまで待機する</span></strong>
+繰り返す
+ もし［メディア制御から「status ［エイリアス名］ mode」を取得したもの］が「playing」でないなら、繰り返しから抜け出す
+　0.1秒、待つ
+繰り返し終わり
+
+<strong><span style="color: #008000">//演奏を止めて、デバイスを閉じる</span></strong>
+メディア制御へ「stop ［エイリアス名］」を命令する
+メディア制御へ「close ［エイリアス名］」を命令する</pre>
+		<p>&nbsp;</p>
+		<h2>MCIコマンドの例</h2>
+		<table class="table table-bordered">
+			<tr>
+				<th>MCIコマンド</th>
+				<th>説明</th>
+				</tr>
+			<tr>
+				<td>open [ファイル名] alias [エイリアス]</td>
+				<td>指定したデバイスでファイルを開く</td>
+				</tr>
+			<tr>
+				<td>close [エイリアス]</td>
+				<td>閉じる</td>
+				</tr>
+			<tr>
+				<td>play [エイリアス]</td>
+				<td>再生する</td>
+				</tr>
+			<tr>
+				<td>record [エイリアス]</td>
+				<td>録音する(WAVEのみ)</td>
+				</tr>
+			<tr>
+				<td>stop [エイリアス]</td>
+				<td>停止する</td>
+				</tr>
+			<tr>
+				<td>pause [エイリアス]</td>
+				<td>一時停止する</td>
+				</tr>
+			<tr>
+				<td>resume [エイリアス]</td>
+				<td>再開する</td>
+				</tr>
+			<tr>
+				<td>seek [エイリアス] to start</td>
+				<td>演奏位置を変更する<br>
+					「to start」で先頭<br>
+					「to end」で最後</td>
+				</tr>
+			<tr>
+				<td>set cdaudio door open</td>
+				<td>CDドライブを開ける</td>
+				</tr>
+			<tr>
+				<td>set cdaudio door closed</td>
+				<td>CDドライブを閉める</td>
+				</tr>
+			<tr>
+				<td>set [エイリアス] tempo [テンポ]</td>
+				<td>MIDIのテンポを変える</td>
+				</tr>
+			<tr>
+				<td>set [エイリアス] audio all [off/on]</td>
+				<td>ミュートするかどうか</td>
+				</tr>
+			<tr>
+				<td>set [エイリアス] audio left [off/on]</td>
+				<td>左の音をミュートするかどうか</td>
+				</tr>
+			<tr>
+				<td>set [エイリアス] audio right [off/on]</td>
+				<td>右の音をミュートするかどうか</td>
+				</tr>
+			</table>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

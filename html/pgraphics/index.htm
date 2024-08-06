@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>画像描画機能 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Produire.PGraphics.dll"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->画像描画機能<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="graphics">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li>画像描画機能</li>
+</ul>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+<h1>画像描画機能</h1>
+<h2>機能の概要</h2>
+	<p>画像や描画に関する機能が利用できます。</p>
+	<h3>必要なプラグイン</h3>
+	<p>この項目で説明する種類を使うには、次のプラグインが必要です。</p>
+	<p>Produire.PGraphics.dll</p>
+	<p><a href="../plugin.htm">プラグインについて</a></p>
+	<p>　</p>
+	<h2>このプラグインに含まれる種類</h2>
+	<dl>
+		<dt><a href="canvas/index.htm">キャンバス</a></dt>
+		<dd>
+		キャンバスを使って図形を描画するウィンドウ部品です。</dd>
+		<dt>
+		<a href="pen.htm">筆</a></dt>
+		<dd>
+		図形描画で使用する線のタイプを表す種類です。</dd>
+		<dt>
+		<a href="brush.htm">刷毛</a></dt>
+		<dd>
+		図形の塗りつぶし方法を表す種類です。</dd>
+		<dt>
+		<a href="effect/imagefilter.htm">画像フィルタ</a>　</dt>
+		<dd>
+		画像に対して調整やエフェクトなどを適用するための種類です。</dd>
+		<dt><a href="graphics.htm">図形描画</a></dt>
+		<dd>
+		座標を指定して、四角形や線、円を描くための種類です。</dd>
+		<dt><a href="imageeffect.htm">画像効果</a></dt>
+		<dd>
+		画像に対して画質調整や効果を加えるための種類です。</dd>
+		<dt><a href="screenshot.htm">スクリーンショット</a></dt>
+		<dd>
+		画面の画像を取り込んでスクリーンショットを作成するための種類です。</dd>
+		<dt>
+		<a href="iconimage.htm">アイコン画像</a></dt>
+		<dd>
+		EXEファイルやDLLファイルに含まれるアイコンを取り込むための種類です。</dd>
+		<dt><a href="kame.htm">カメ</a></dt>
+		<dd>
+		カメを動かして図形を描画するLOGO描画機能が利用できます。</dd>
+	</dl>
+	<p><a href="iconimage.htm">アイコン画像</a></p>
+	<p>&nbsp;</p>
+		<p>　</p></div></div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>レジストリ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="システム情報取得"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->レジストリ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="system">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">システム情報取得</a></li>
+	    <li>レジストリ</li>
+      </ul>
+	  <h1>レジストリ</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>Windowsレジストリに関する操作を行います。</p>
+		<p><span class="label label-info">静的種類</span><span class="label label-danger">保護あり</span></p>
+		<h3>必要プラグイン</h3>
+		<p><a href="index.htm">システム情報取得</a></p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#取得する">取得する</a>　<a href="#設定する">設定する</a>　<a href="#データ型を取得する">データ型を取得する</a>　<a href="#キー一覧">キー一覧</a>　<a href="#値一覧">値一覧</a>　<a href="#存在する">存在する</a>　<a href="#削除する">削除する</a>　</div>
+		<div id="methods">
+			<h3>【キー】を〈【既定値】で〉<a name="取得する">取得する</a></h3>
+			<p>レジストリから指定したキーの値を表します。<br>
+				結果として、取得した値を表します</p>
+			<h3>【値】を【キー】へ｛文字列・バイナリ・数値・長数値・複数行文字列・展開可能な文字列｝として<a name="設定する">設定する</a></h3>
+			<p>レジストリの指定したキーへ値を書き込みます</p>
+			<h3>【キー】から<a name="データ型を取得する">データ型を取得する</a></h3>
+			<p>レジストリから指定したキーの値のデータ型を表します。<br>
+				結果として、値のデータ型を表します</p>
+			<h3>【キー】の<a name="キー一覧">キー一覧</a></h3>
+			<p>指定したキーに含まれる子のキーの一覧を表します。<br>
+				結果として、キー名の配列を表します</p>
+			<h3>【キー】の<a name="値一覧">値一覧</a></h3>
+			<p>指定したキーに含まれる値名の一覧を表します。<br>
+				結果として、値名の配列を表します</p>
+			<h3>【キー名】に【値名】が<a name="存在する">存在する</a></h3>
+			<p>指定したキーに含まれる値名が存在するかどうか判断します。<br>
+				結果として、真偽値を表します</p>
+			<h3>【キー名】が存在する</h3>
+			<p>指定したキーが存在するかどうか判断します。<br>
+				結果として、真偽値を表します</p>
+			<h3>【キー名】から【値名】を<a name="削除する">削除する</a></h3>
+			<p>指定したキーに含まれる値名の値を削除します</p>
+			<h3>【キー名】を削除する</h3>
+			<p>指定したキーを削除します。キーに含まれる値と子のキーがすべて削除されます</p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">レジストリで値を読み書きする</h3>
+	<pre class="code"><i>ーー値を設定します</i>
+レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire\Hello」へ「こんにちは」を設定する
+レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire\Test」へ「テスト」を設定する
+
+<i>ーー指定した値名の値を取得します</i>
+レジストリから「HKEY_LOCAL_MACHINE\SOFTWARE\Produire\Hello」を取得して表示する
+<i>ーー指定した値名のデータ型を取得します</i>
+（レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire\Hello」からデータ型を取得したもの）を表示する
+
+<i>ーーキー名が存在するかどうか判断します</i>
+もし[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」が存在する]なら、「存在します」を表示する
+<i>ーー値名が存在するかどうか判断します</i>
+もし[レジストリ:「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」に「Test」が存在する]なら、「存在します」を表示する
+
+<i>ーー値名の一覧を取得します</i>
+（「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」のレジストリの値一覧）を表示する
+<i>ーー子キーの一覧を取得します
+</i>（「HKEY_LOCAL_MACHINE\HARDWARE」のレジストリのキー一覧）を表示する
+
+<i>ーー値名を削除します</i>
+レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」から「Test」を削除する
+<i>ーーキー名を削除します</i>
+レジストリ：「HKEY_LOCAL_MACHINE\SOFTWARE\Produire」を削除する</pre>
+	</div>
+</div><!--/samples-->
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

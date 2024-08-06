@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>行部品 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->行部品<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="data">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">データ操作</a></li>
+	    <li><a href="grid.htm">表部品</a></li>
+	    <li>行部品</li>
+      </ul>
+	  <h1>行部品</h1>
+	  <h2>概要</h2>
+      <p>表部品の行を表す種類です。</p>
+      <p align="center"><img alt="" src="gridrow.png" width="402" height="236"></p>
+      <p><span class="label label-warning">生成可能</span></p>
+      <h3>必要プラグイン</h3>
+      <p>データベース表部品(<a href="index.htm">Produire.Data.Grid.dll</a>) </p>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="datatable.htm">データ表</a></li>
+          <li><a href="grid.htm">表部品</a>
+            <ul>
+              <li><a href="gridcell.htm">セル部品</a></li>
+              <li><a href="gridcellstyle.htm">セル部品装飾</a></li>
+              <li><strong>行部品</strong></li>
+              <li><a href="gridcolumn.htm">列部品</a></li>
+            </ul>
+          </li>
+      </ul>
+        <p>　</p>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+<h2>作成する方法</h2>
+		<pre class="format">【名前】という行部品を作る</pre>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#選択する">選択する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="選択する">選択する</a></h3>
+			<p>このセルを選択します。</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="エラーメッセージ">エラーメッセージ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>誤りがあるときのエラーメッセージ文字列</td>
+					</tr>
+				<tr>
+					<th><a name="タグ">タグ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>補助として保存する付加情報</td>
+					</tr>
+				<tr>
+					<th><a name="区分線太さ">区分線太さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>区切り線の太さ</td>
+					</tr>
+				<tr>
+					<th><a name="固定">固定</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>表をスクロールしても行を固定するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="高さ">高さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>行の高さ</td>
+					</tr>
+				<tr>
+					<th><a name="最小高さ">最小高さ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>最小の行の高さ</td>
+					</tr>
+				<tr>
+					<th><a name="新しい">新しい</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>新しい生成された列かどうかを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="親表部品">親表部品</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>列が属する親の<a href="../../primitive/dictionary.htm">表部品</a></td>
+					</tr>
+				<tr>
+					<th><a name="選択中">選択中</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>行が選択中かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="読み取り専用">読み取り専用</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>列のセルが読み取り専用かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="内容一覧0">内容一覧</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>行の内容一覧</td>
+					</tr>
+				<tr>
+					<th><a name="セル一覧">セル一覧</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>行のセル一覧</td>
+					</tr>
+				<tr>
+					<th><a name="番号">番号</a></th>
+					<th>&nbsp;</th><th>□</th><td>行の理論上の順序</td>
+					</tr>
+				<tr>
+					<th><a name="見出し">見出し</a></th>
+					<th>&nbsp;</th><th>◎</th><td>行の見出し</td>
+					</tr>
+				<tr>
+					<th><a name="見出しセル">見出しセル</a></th>
+					<th>&nbsp;</th><th>◎</th><td>行の見出しセルを表すセル</td>
+					</tr>
+				<tr>
+					<th><a name="表示">表示</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>行を表示するかどうか</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">各列部品に行番号を設定する</h3>
+		<p>データ表を作成して、各列部品に行番号を設定します。</p>
+<pre class="code">データというデータ表を作る
+データに{「名前」,「メール」,「誕生日」}という列を加える
+データへ｛名前=「秋山」,メール=「akiyama@yahou.co.jp」,誕生日=「1988/03/25」｝を加える
+データへ｛名前=「石川」,メール=「ishi@gmall.com」,誕生日=「1984/08/15」｝を加える
+データへ｛名前=「原口」,メール=「haragushi@potmail.co.jp」,誕生日=「1985/12/06」｝を加える
+データへ｛名前=「松下」,メール=「matsu@gmall.com」,誕生日=「1984/04/16」｝を加える
+データへ｛名前=「山中」,メール=「ymnk@potmail.co.jp」,誕生日=「1985/07/10」｝を加える
+
+メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+
+	はじめの手順
+		初期化する
+		表部品1のデータ表をデータに変える
+	終わり
+	初期化する手順
+		この実質大きさを｛442,258｝に変える
+		この内容を「表部品のテスト」に変える
+		このドラッグドロップを○に変える
+		初期化開始する
+		表部品1という表部品を作る
+		表部品1を初期化開始する
+			その位置と大きさを｛12,12,418,234｝に変える
+			その移動順を2に変える
+			その位置固定方向を「右＋左＋下＋上」に変える
+		表部品1を初期化終了する
+		初期化終了する
+		この設計スケール比率を｛144,144｝に変える
+終わり
+
+	開いた時の手順
+		行一覧は、表部品1の行一覧
+		番号を1から表部品1の行数まで増やしながら繰り返す
+			もし行一覧（番号）の新しいなら、繰り返しを続ける
+			行一覧（番号）の見出しは、番号
+		繰り返し終わり
+	終わり
+終わり</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>困ったときは - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="js/html5shiv-3.7.3.min.js"></script>
+	<script src="js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.htm"><img src="img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->困ったときは<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="core/index.htm">基本機能</a></li>
+							<li><a href="core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb">
+	<li><a href="index.htm">プロデル</a></li>
+	<li>困ったときは</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1 id="debug">困ったときは</h1>
+		<h3>ミスを捜すデバッグ</h3>
+		<p>ソフトを作りはじめると、ミスがたくさん見つかります。<br>
+			少しのプログラムであれば、命令を一行一行、確認すれば良いのですが、<br>
+			プログラムが大きくなると何千行にもなり、一つ一つ確認するわけには行きません。</p>
+		<p>また、プログラムが複雑になるとエラーメッセージが表示される部分に<br>
+			問題があるとは限らず、他の部分が原因でうまく動かなくこともあります。<br>
+			そもそもエラーが起こらない場合もあります。<br>
+	<br>
+			ここでは、「ミスを見つけて、修正する」＝『デバッグ』という作業について説明します。</p>
+		<p>　</p>
+		<h3>「表示する」手順を使う</h3>
+		<p>ミスを確認する方法として、一番簡単なのが、<br>
+			「表示する」「報告する」手順を使う方法です。</p>
+		<p>例えば、次のようなプログラムがうまく動かず、困っているとします。</p>
+		<pre class="code">もし今日が、「2010年1月1日」なら
+	「明けましておめでとう」を表示する
+もし終わり</pre>
+		<p>一見すると、正しいプログラムのように見えますが、<br>
+			今日の日付が2010年1月1日にもかかわらず、思った通りに正しく実行されません。</p>
+		<p>そこで、２行目に次のプログラムを書き足します。</p>
+		<pre class="code">今日を表示する</pre>
+		<p>実行すると、「2010/01/01 0:00:00」と表示されます。</p>
+		<p>つまり、「もし」で判断するときに、「2010年1月1日」ではなく<br>
+			「2010/01/01 0:00:00」などとしないと正しく動作しないことが分かります。</p>
+		<p>このように、表示命令を使って内容を確認することで、<br>
+			上手く動かない原因を調べることができます。</p>
+		<p>　</p>
+		<h2>調査ウィンドウを使う</h2>
+		<p>「調査ウィンドウ」では、変数の現在の状態や手順の実行状況などを見ることができます。</p>
+		<h3>変数の内容を確認する</h3>
+		<p>調査ウィンドウを使えば、「表示する」手順を使わずに、変数の内容を調べることができます。</p>
+		<p>例えば、次のようなプログラムを実行してみてください。</p>
+		<pre class="code">数値は、10
+メッセージは、「これが調査ウィンドウです。」
+「[メッセージ]［改行］“変数”タブをクリックしてね」を報告する</pre>
+		<p>実行すると、調査ウィンドウに、メッセージが表示されます。</p>
+		<p>上の「変数」ボタンで切り替えると、変数の一覧とその中身を確認できます。</p>
+		<p>　</p>
+		<h3>停止行を設定する</h3>
+		<p>最後に、プログラム実行中に、好きな場所で一時停止する機能を紹介します。</p>
+		<p>問題のあるプログラムの一時停止したい行にカーソルを置いて、F9を押すと、その行の色が変わります。再びF9を押すと解除されます。</p>
+		<p>停止行が設定された部分は、赤く強調されます。</p>
+		<p>この状態でプログラム実行すると、この行に到達したときにプログラムを一時停止します。</p>
+		<p>止まった次のプログラムを実行するには、F5を押します。</p>
+		<p>「調査ウィンドウ」と組み合わせれば、その時点での変数の内容を確認できるので、ミスを見つけるために必要な情報を得ることができます。</p></div>
+</div>
+<p></p><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

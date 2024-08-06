@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>有効範囲 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->有効範囲<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>有効範囲</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	  	<h1>有効範囲</h1>
+	  	<p>有効範囲(スコープ)とは、代入したり宣言したりした変数または、宣言した手順が使える範囲を表します。</p>
+	  	<p>変数は、有効範囲の中で使うことができ、有効範囲を超えると変数の内容を取得できなくなります。手順は、有効範囲の中で呼び出すことができ、有効範囲を超えた場所からは呼び出せません。</p>
+<p>プロデルでは、有効範囲の単位として次のような範囲があります。</p>
+<ul>
+	<li>プログラム全体　(変数・手順)</li>
+	<li>種類宣言文内部　(変数・手順)</li>
+	<li>手順宣言文内部　(変数)</li>
+	<li>制御文(もし文・繰り返し文)内部　(変数)</li>
+	<li>ブロック式内部　(変数)</li>
+</ul>
+<h3>変数の暗黙宣言と明示的宣言</h3>
+<p>プロデルの変数は、便宜上、明示的に宣言することなく、使えます。<br>
+変数に対して値を代入した時点で、暗黙的に変数が宣言されたものとして扱われ、変数を使えるようになります。</p>
+<p>暗黙的に変数を宣言した場合、変数の有効範囲は、その変数が代入された手順が属する種類内部となります。手順が種類に属していない場合は、プログラム全体となります。</p>
+<p>一方、変数を特定の有効範囲内でのみ使いたい場合(ローカル変数として使いたい場合)は、【　】を使って変数を明示的に宣言する必要があります。明示的に変数を宣言した場合、変数の有効範囲は、その変数が宣言された場所と同じ有効範囲となります。</p>
+<p>例えば、手順宣言文内部で変数を定義した場合は、有効範囲が手順宣言文の内部に限られます。</p>
+<h3>プログラム全体</h3>
+<p>プログラム全体は、プロデルプログラムに含まれるすべての種類・手順を対象とします。プロジェクトモードの場合は、プロジェクトに含まれるすべてのプロデルプログラムのすべての種類・手順を対象とします。</p>
+<p>
+<img width="276" height="374" alt="有効範囲の対象" src="images/global-scope.png" class="img-responsive"></p>
+<h4>宣言・代入場所</h4>
+<p>プログラム冒頭で、宣言または初めて代入した変数は、プログラム全体が有効範囲になります。プログラム冒頭とは、プロデルデザイナでの「(全体)の(はじめ)」にあたる部分を指します。</p>
+<h4>有効範囲</h4>
+<p>有効範囲がプログラム全体である変数・手順は、プロデルプログラム内のすべての種類・手順から使えます。</p>
+<h3>種類宣言文内部</h3>
+<p>種類宣言文内部は、一つの<a href="construct.html">種類</a>に含まれるすべての手順を対象とします。</p>
+<h4>宣言・代入場所</h4>
+<p>種類の「はじめ」の手順または種類の宣言領域で、宣言または初めて代入した変数は、種類内部が有効範囲になります。種類の宣言領域とは、種類内部のうち、手順内部ではない部分を指します。</p>
+<p>例えば、種類内部が有効範囲の変数を明示的に宣言するには、次のように書きます。</p>
+<pre class="code">車とは
+ 　　+名前
+ 終わり</pre>
+<p>また、次のように「はじめ」の手順で「名前」変数に値を代入した時も、「名前」変数の有効範囲は、種類内部になります。</p>
+<pre class="code">車とは
+　　はじめの手順
+　　　　名前は、「太郎の車」
+　　終わり
+終わり</pre>
+<h4>有効範囲</h4>
+<p>有効範囲が種類全体である変数・手順は、その種類内のすべての手順から使えます。なお、種類内の変数や手順が公開状態場合(+記号で宣言した場合)は、<br>
+種類名を指定すれば、その種類以外の有効範囲から使えます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のようなプログラムでは、「車」種類にある「名前」変数は、同じ種類内にある手順では「名前」と書けば使えます。<br>
+それ以外の種類の手順からは、「車の名前」と書ければ使えます。</p>
+<pre class="code">名前を表示する　　//名前という変数はありません
+車の名前を表示する
+
+車とは
+　　+名前
+
+　　はじめの手順
+　　　　名前は、「太郎の車」
+　　終わり
+
+　　走る手順
+　　　　名前を表示する
+　　終わり
+
+終わり</pre>
+	</div>
+</div>
+<h3>手順宣言文内部</h3>
+<p>手順宣言文内部は、一つの<a href="procedure.html">手順宣言文</a>の中にある文を対象とします。</p>
+<h4>明示的に変数を宣言した場合</h4>
+<p>手順で変数を宣言すると、変数の有効範囲は手順宣言文の中に限られます。
+また、手順の仮引数の有効範囲も、手順宣言文内部に限られます。</p>
+<p>有効範囲が手順宣言文内部である変数は、その手順宣言文の中でのみ使えます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のプログラムにある「走る」手順では、「名前」変数を宣言していますので、変数の有効範囲は、その手順宣言文内部となります。
+そのため、それ以外の手順からは、「名前」変数を使えません。</p>
+<pre class="code">車とは
+ 
+ 　　走る手順
+ 　　　　【名前】
+ 　　　　名前は、「太郎の車」
+ 　　終わり
+ 
+ 　　止まる手順
+ 　　　　名前を表示する　　//「名前」という変数はありません。
+ 　　終わり
+ 
+ 終わり</pre>
+	</div>
+</div>
+<h4>この有効範囲で代入した場合</h4>
+<p>宣言せずにはじめて代入した変数は、種類宣言文の中が有効範囲になります。種類に属さない手順の場合は、プログラム全体になります。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のプログラムにある「走る」手順では、「名前」変数へ値を代入しているだけなので、変数の有効範囲は、種類宣言文の中に限られます。そのため同じ種類のそれ以外の手順からも、「名前」変数を使えます。</p>
+<p>ただし、手順が属する種類の以外からは、使えません。</p>
+<pre class="code">車とは
+
+　　走る手順
+　　　　名前は、「太郎の車」
+　　終わり
+
+　　止まる手順
+　　　　名前を表示する
+　　終わり
+
+終わり
+
+掃除する手順
+　　名前を表示する　　//「名前」という変数はありません。
+終わり</pre>
+	</div>
+</div>
+<h3>制御文内部</h3>
+<p>制御文内部とは、一つの制御文の中にある文を対象にします。有効範囲が個別に決められている制御文は、「もし」文と「繰り返す」文だけです。それ以外の制御文は、手順宣言文の中の有効範囲のままとなります。</p>
+<p>
+<img width="267" height="144" alt="制御文の有効範囲" src="images/control-scope.png" class="img-responsive"></p>
+<h4>明示的に変数を宣言した場合</h4>
+<p>もし文・繰り返す文で変数を宣言すると、変数の有効範囲は、制御文内部になります。</p>
+<p>有効範囲が制御文内部である変数は、その制御文内でのみ使えます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のプログラムのもし文の内部では、「A」変数を宣言していますので、変数の有効範囲が制御文内部となります。そのため、もし文が終わると、「A」変数は使えなくなります。</p>
+<pre class="code">もし値が1なら
+　　【A】=10
+そうでなければ
+　　【A】=20
+もし終わり
+Aを報告する　　//Aという変数はありません</pre>
+	</div>
+</div>
+<h4>この有効範囲で代入した場合</h4>
+<p>宣言せずにはじめて代入した変数は、種類内部が有効範囲になります。<br>
+種類に属さない手順の場合は、プログラム全体になります。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のプログラムにあるもし文の内部では、「A」変数に値を代入しているだけなので、変数の有効範囲は、種類内部になります。</p>
+<p>種類に属さない手順の場合、変数の有効範囲はプログラム全体になります。もし文が終わっても、「A」変数を使えます。</p>
+<pre class="code">もし1=1なら
+　　Aは、10
+そうでなければ
+　　Aは、20
+もし終わり
+Aを報告する</pre>
+	</div>
+</div>
+<h3>ブロック式内部</h3>
+<p>ブロック式内部とは、一つのブロック式の中にある文を対象にします。</p>
+<p>
+<img width="270" height="145" alt="ブロック式内部の有効範囲" src="images/block-scope.png" class="img-responsive"></p>
+<h4>明示的に宣言した場合</h4>
+<p><a href="block.html">ブロック式</a>の中で変数を宣言すると、変数の有効範囲は、そのブロック式内部になります。有効範囲がブロック式内部である変数は、そのブロック式内でのみ使えます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<p>例えば、次のようにブロック式内部で宣言した「A」変数は、変数の有効範囲がブロック式内部となります。そのため、ブロック式が終わると「A」変数は使えません。</p>
+<pre class="code">『【A】=1。A=A+1』を実行する
+Aを報告する　　//Aという変数はありません</pre>
+	</div>
+</div>
+<h4>この有効範囲で代入した場合</h4>
+<p>宣言せずにはじめて代入した変数の有効範囲は、ブロック式を書いた手順が属する種類内部になります。種類に属さない手順の場合、プログラム全体になります。</p>
+
+		</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

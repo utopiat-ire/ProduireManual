@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>数学関数 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->数学関数<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="global.htm">広域種類</a></li>
+	    <li>数学関数</li>
+      </ul>
+	  <h1>数学関数</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>数値計算に関する手順を集めた種類です。</p>
+		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
+		<p><a href="../usage.htm">
+			<span class="label label-info">静的種類</span><span class="label label-primary">広域種類</span></a></p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#コサイン">コサイン</a>　<a href="#サイン">サイン</a>　<a href="#タンジェント">タンジェント</a>　<a href="#ラジアン">ラジアン</a>　<a href="#逆ラジアン">逆ラジアン</a>　<a href="#cos">cos</a>　<a href="#ラジアンコサイン">ラジアンコサイン</a>　<a href="#sin">sin</a>　<a href="#ラジアンサイン">ラジアンサイン</a>　<a href="#tan">tan</a>　<a href="#ラジアンタンジェント">ラジアンタンジェント</a>　<a href="#acos">acos</a>　<a href="#アークコサイン">アークコサイン</a>　<a href="#逆コサイン">逆コサイン</a>　<a href="#asin">asin</a>　<a href="#アークサイン">アークサイン</a>　<a href="#逆サイン">逆サイン</a>　<a href="#atan">atan</a>　<a href="#アークタンジェント">アークタンジェント</a>　<a href="#逆タンジェント">逆タンジェント</a>　<a href="#引く">引く</a>　<a href="#掛る">掛る</a>　<a href="#割った">割った</a>　<a href="#割った剰り">割った剰り</a>　<a href="#差">差</a>　<a href="#四捨五入">四捨五入</a>　<a href="#自然対数乗">自然対数乗</a>　<a href="#十進数">十進数</a>　<a href="#十六進数">十六進数</a>　<a href="#商">商</a>　<a href="#剰余演算">剰余演算</a>　<a href="#整数">整数</a>　<a href="#和">和</a>　<a href="#積">積</a>　<a href="#切り捨てる">切り捨てる</a>　<a href="#切り上げる">切り上げる</a>　<a href="#絶対値">絶対値</a>　<a href="#足す">足す</a>　<a href="#対数">対数</a>　<a href="#二進数">二進数</a>　<a href="#平方根">平方根</a>　<a href="#乱数">乱数</a>　<a href="#左シフト">左シフト</a>　<a href="#右シフト">右シフト</a>　<a href="#論理積">論理積</a>　<a href="#論理和">論理和</a>　<a href="#排他的論理和">排他的論理和</a>　<a href="#増やす">増やす</a>　<a href="#減らす">減らす</a>　</div>
+		<div id="methods">
+			<h3>【角度】度の<a name="コサイン">コサイン</a><br>
+				【ラジアン値】のコサイン</h3>
+			<p>cos計算します。数助詞「度」を付けると角度で計算します。省略するとラジアン値で計算します。</p>
+			<pre class="code">86度のコサインを報告する
+1.5009のコサインを報告する</pre>
+			<h3>【角度】度の<a name="サイン">サイン</a><br>
+				【ラジアン値】のサイン</h3>
+			<p>sin計算します。数助詞「度」を付けると角度で計算します。省略するとラジアン値で計算します。</p>
+			<pre class="code">86度のサインを報告する
+1.5009のサインを報告する</pre>
+			<h3>【角度】度の<a name="タンジェント">タンジェント</a><br>
+				【ラジアン値】のタンジェント</h3>
+			<p>tan計算します。数助詞「度」を付けると角度で計算します。省略するとラジアン値で計算します。</p>
+			<pre class="code">30度のタンジェントを報告する
+0.524のタンジェントを報告する</pre>
+			<h3>【角度】の<a name="ラジアン">ラジアン</a></h3>
+			<p>角度からラジアン値を計算します</p>
+			<pre class="code">90のラジアンを表示する</pre>
+			<h3>【角度】の<a name="逆ラジアン">逆ラジアン</a></h3>
+			<p>ラジアン値から角度を計算します</p>
+			<pre class="code">90のラジアンを表示する</pre>
+			<h3><a name="cos">cos</a>(【ラジアン値】)<br>
+				【ラジアン値】の<a name="ラジアンコサイン">ラジアンコサイン</a></h3>
+			<p>ラジアン値でcos計算します</p>
+			<pre class="code">cos(0.785398163397448)を報告する</pre>
+			<h3><a name="sin">sin</a>(【ラジアン値】)<br>
+				【ラジアン値】の<a name="ラジアンサイン">ラジアンサイン</a></h3>
+			<p>ラジアン値でsin計算します</p>
+			<pre class="code">sin(0.785398163397448)を報告する</pre>
+			<h3><a name="tan">tan</a>(【ラジアン値】)<br>
+				【ラジアン値】の<a name="ラジアンタンジェント">ラジアンタンジェント</a></h3>
+			<p>ラジアン値でtan計算します</p>
+			<pre class="code">tan(0.785398163397448)を報告する</pre>
+
+			<h3><a name="acos">acos</a>(【コサイン値】)</h3>
+			<p>コサインの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">acos(-0.42261826174069933)を報告する</pre>
+			<h3>【コサイン値】の<a name="アークコサイン">アークコサイン</a></h3>
+			<p>コサインの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">-0.42261826174069933のアークコサインを報告する</pre>
+			<h3>【コサイン値】の<a name="逆コサイン">逆コサイン</a></h3>
+			<p>コサインの逆関数で、角度を返します。</p>
+			<pre class="code">-0.42261826174069933の逆コサインを報告する</pre>
+			
+			<h3><a name="asin">asin</a>(【サイン値】)</h3>
+			<p>サインの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">asin(0.501)を報告する</pre>
+			<h3>【サイン値】の<a name="アークサイン">アークサイン</a></h3>
+			<p>サインの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">0.501のアークサインを報告する</pre>
+			<h3>【サイン値】の<a name="逆サイン">逆サイン</a></h3>
+			<p>サインの逆関数で、角度を返します。</p>
+			<pre class="code">0.501の逆サインを報告する</pre>
+			
+			<h3><a name="atan">atan</a>(【タンジェント値】)</h3>
+			<p>タンジェントの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">atan(0.578)を報告する</pre>
+			<h3>【タンジェント値】の<a name="アークタンジェント">アークタンジェント</a></h3>
+			<p>タンジェントの逆関数で、ラジアン値を返します。</p>
+			<pre class="code">0.578のアークタンジェントを報告する</pre>
+			<h3>【タンジェント値】の<a name="逆タンジェント">逆タンジェント</a></h3>
+			<p>タンジェントの逆関数で、角度を返します。</p>
+			<pre class="code">0.57967972453794425の逆タンジェントを報告する</pre>
+
+			<h3>【値】から【値】を、<a name="引く">引く</a></h3>
+			<p>引き算します</p>
+			<pre class="code">値は、5
+値は、値から3を引いたもの
+値を表示する</pre>
+			<h3>【値】と【値】を、<a name="掛る">掛る</a></h3>
+			<p>かけ算します</p>
+			<pre class="code">値は、5
+値は、値と3を掛けたもの
+値を表示する</pre>
+			<h3>【値】を【値】で、<a name="割った">割った</a></h3>
+			<p>割り算します</p>
+			<pre class="code">値は、5
+値は、値を3で割ったもの
+値を表示する</pre>
+			<h3>【値】を【値】で、<a name="割った剰り">割った剰り</a></h3>
+			<p>割り算のあまりを計算します</p>
+			<pre class="code">値は、13
+値は、値を4で割った剰り
+値を表示する</pre>
+			<h3>【値】と【値】の、<a name="差">差</a></h3>
+			<p>差を計算します。結果は常に0または正数になります</p>
+			<pre class="code">3と5の差を表示する</pre>
+			<h3>【値】を【桁】で、<a name="四捨五入">四捨五入</a></h3>
+			<p>指定した桁で四捨五入します。<br>
+				整数の桁を四捨五入する場合は、【桁】を正数で、<br>
+				小数の桁の場合は、【桁】を負数で指定します。</p>
+			<h4 data-ref="四捨五入">整数3桁目で四捨五入する </h4>
+		  <pre class="code">12345を3で四捨五入して表示する</pre>
+			<h4 data-ref="四捨五入">小数点4桁目で四捨五入する </h4>
+			<pre class="code">3.14159を-4で四捨五入して表示する</pre>
+			<h3>【値】の<a name="自然対数乗">自然対数乗</a></h3>
+			<p>自然対数(e)の累乗計算をします</p>
+			<pre class="code">値は、1の自然対数乗
+値を表示する</pre>
+			<h3>【値】の<a name="十進数">十進数</a></h3>
+			<p>16進数表記から10進数を求めます</p>
+			<pre class="code">「FF00EF」の十進数を表示する</pre>
+			<h3>【値】の<a name="十六進数">十六進数</a></h3>
+			<p>10進数から16進数表記を求めます</p>
+			<pre class="code">254の十六進数を表示する</pre>
+			<h3>【値】と【値】の、<a name="商">商</a></h3>
+			<p>商を計算します</p>
+			<pre class="code">13と3の商を表示する</pre>
+			<h3>【値】を【値】で、<a name="剰余演算">剰余演算</a></h3>
+			<p>IEEE754に準拠した剰余演算を行います</p>
+			<pre class="code">値は、13を3で剰余演算
+値を表示する</pre>
+			<h3>【値】の<a name="整数">整数</a></h3>
+			<p>整数を求めます。<br>
+				値は、偶数になるように丸められます。</p>
+			<pre class="code">3.5の整数を表示する　　<i>// 4が表示される</i>
+「-3.5」の整数を表示する　　<i>// -4が表示される</i>
+「-3.2」の整数を表示する　　<i>// -3が表示される</i></pre>
+			<h3>【値】と【値】の<a name="和">和</a></h3>
+			<p>和を計算します</p>
+			<pre class="code">1と10の和を表示する</pre>
+			<h3>【値】と【値】の、<a name="積">積</a></h3>
+			<p>積を計算します</p>
+			<pre class="code">3と5の積を表示する</pre>
+			<h3>【値】を〈【桁数】桁〉<a name="切り捨てる">切り捨てる</a></h3>
+			<p>小数点以下を切り捨てます。<br>
+				【桁数】を指定した場合は、小数点以下指定した桁数で切り捨てます。<br>
+				桁数は負の値にすると整数の桁で切り捨てます。</p>
+			<h4 data-ref="切り捨てる">値を切り捨てる</h4>
+			<pre class="code">値は、3.14を切り捨てたもの
+値を表示する
+値は、1桁3.14を切り捨てたもの
+値を表示する</pre>
+			<h3>【値】を<a name="切り上げる">切り上げる</a></h3>
+			<p>小数部を切り上げます</p>
+			<h4 data-ref="切り上げる">小数部を切り上げる</h4>
+			<pre class="code">(10.5を切り上げたもの)を表示する　ーー 11が表示される</pre>
+			<h3>【値】の<a name="絶対値">絶対値</a></h3>
+			<p>絶対値を求めます</p>
+			<h4 data-ref="絶対値">絶対値を求める</h4>
+			<pre class="code">-3.14の絶対値を表示する</pre>
+			<h3>【値】と【値】を<a name="足す">足す</a></h3>
+			<p>足し算します</p>
+			<pre class="code">値は、5
+値を値へ足す
+値を表示する</pre>
+			<h3>【値】を【変数名】へ<a name="足す0">足す</a></h3>
+			<p>足し算します</p>
+			<h3>【底】で【値】の<a name="対数">対数</a></h3>
+			<p>対数(log)計算します</p>
+			<h4 data-ref="対数">対数を求める</h4>
+			<pre class="code">値は、2で3の対数
+値を表示する
+ 
+値２は、3で2の対数
+値*値２を表示する</pre>
+			<h3>【値】の<a name="二進数">二進数</a></h3>
+			<p>10進数から2進数を求めます</p>
+			<pre class="code">1023の二進数を表示する</pre>
+			<h3>【値】の<a name="平方根">平方根</a></h3>
+			<p>平方根を計算します</p>
+			<h4 data-ref="平方根">平方根を求める</h4>
+			<pre class="code">2の平方根を表示する
+9の平方根を表示する</pre>
+			<h3>【値】の<a name="乱数">乱数</a></h3>
+			<p>指定した範囲または0から【値】までの乱数を求めます</p>
+			<h4 data-ref="乱数">乱数を求める</h4>
+			<pre class="code">100の乱数を表示する</pre>
+			<h3>【開始値】から【終了値】までの乱数</h3>
+			<p>指定した範囲または0から【値】までの乱数を求めます</p>
+			<pre class="code">５から１０までの乱数を表示する</pre>
+			<h3>【値】を【桁】だけ<a name="左シフト">左シフト</a></h3>
+			<p>値を桁ビット分だけ、左シフトを計算します</p>
+			<pre class="code">5を1だけ左シフトして表示する</pre>
+			<h3>【値】を【桁】だけ<a name="右シフト">右シフト</a></h3>
+			<p>値を桁ビット分だけ、右シフトを計算します</p>
+			<pre class="code">10を1だけ右シフトして表示する</pre>
+			<h3>【値】と【値】の<a name="論理積">論理積</a></h3>
+			<p>論理積(AND)を計算します</p>
+			<h4 data-ref="論理積">論理積(AND)を求める</h4>
+			<pre class="code">ーービット演算で８を表します
+１０と８の論理積を表示する</pre>
+			<h3>【値】と【値】の<a name="論理和">論理和</a></h3>
+			<p>論理和(OR)を計算します</p>
+			<h4 data-ref="論理和">論理和(OR)を求める</h4>
+			<pre class="code">ーービット演算で１０を表します
+２と８の論理和を表示する</pre>
+			<h3>【値】と【値】の<a name="排他的論理和">排他的論理和</a></h3>
+			<p>排他的論理和(XOR)を計算します</p>
+			<h4 data-ref="排他的論理和">排他的論理和(XOR)を求める</h4>
+			<pre class="code">ーービット演算で２を表します
+１０と８の排他的論理和を表示する</pre>
+			<h3>【変数名】を《【値】だけ》<a name="増やす">増やす</a></h3>
+			<p>値を指定した数だけ増やします。【値】を省略すると1となります。</p>
+			<pre class="code">値を1だけ増やす</pre>
+			<h3>【変数名】へ《【値】を》<a name="減らす">減らす</a></h3>
+			<p>値を指定した数だけ減らします。【値】を省略すると1となります。</p>
+			<pre class="code">値を2だけ減らす</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="円周率">円周率</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>
+						<p>円周率を表します</p>
+						<h4 data-ref="円周率">円周率を求める</h4>
+						<pre class="code">円周率を表示する
+180のラジアンを表示する</pre>
+						</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月8日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>スレッド - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->スレッド<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">基本機能</a></li>
+	    <li>スレッド</li>
+      </ul>
+	  <h1>スレッド</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>同時並行で処理するときに処理一単位を表すオブジェクトです。<br>
+			マルチスレッドに対応したパソコンでは、スレッドを使うことで、複数の処理を同時並行で実行させることができます。</p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というスレッドを作る</pre>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#実行する">実行する</a>　<a href="#停止する">停止する</a>　<a href="#待機する">待機する</a>　</div>
+		<div id="methods">
+			<h3>【自分】で【プログラム】を<a name="実行する">実行する</a></h3>
+			<p>指定したプログラムをこのスレッドで実行します。</p>
+			<p>プログラム：スレッドで実行するプログラムを<a href="delegate.htm">匿名手順</a>で指定します</p>
+			<h3>【自分】を<a name="停止する">停止する</a></h3>
+			<p>スレッドを強制終了します。</p>
+			<h3>【自分】を<a name="待機する">待機する</a></h3>
+			<p>スレッドの処理が終了するまで、待機します。</p>
+			<h3>【自分】を【ミリ秒】だけ待機する</h3>
+			<p>指定した時間だけスレッドの処理を一時停止します。</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="実行中">実行中</a></th>
+					<th>真偽</th>
+					<th>□</th>
+					<td>スレッドでプログラムが実行中であるかどうかを表します</td>
+					</tr>
+				<tr>
+					<th><a name="ID">ID</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>スレッド固有のIDを表します</td>
+					</tr>
+				<tr>
+					<th><a name="名前">名前</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>スレッドの名前</td>
+					</tr>
+				<tr>
+					<th><a name="優先度">優先度</a></th>
+					<th>列挙</th>
+					<th>◎</th>
+					<td>スレッドの優先度<br>
+						｛高，通常以上，通常，通常以下，低｝</td>
+					</tr>
+				<tr>
+					<th><a name="バックグラウンド">バックグラウンド</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>裏で実行するスレッドであるかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="状態">状態</a></th>
+					<th>列挙</th>
+					<th>□</th>
+					<td>スレッドの状態を表します<br>
+						｛中断，中止要求中，バックグラウンド，実行中，停止，停止要求中，中断，中断要求中，未実行，待機｝</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<div id="events">
+			<p>イベントはありません。</p>
+			<p>　</p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">2つの処理を並列処理する</h3>
+		<p>値を5から0まで減らしながら表示するスレッドA,Bを2つ作り、平行して実行します。<br>
+			2CPUのパソコンでは、AとBのカウントダウンが同時に実行され、<br>
+			1CPUのパソコンでは、Aのカウントダウンが行われた後にBのカウントダウンが実行されます。</p>
+<pre class="code">ーーコンソールで実行してください
+※コンソール
+
+スレッドAというスレッドを作る
+スレッドBというスレッドを作る
+
+スレッドAで『
+	5から0まで【値】を減らしながら繰り返す
+		「A:[値]」をコンソールへ表示して改行する
+繰り返し終わり
+』を実行する
+
+スレッドBで『
+	5から0まで【値】を減らしながら繰り返す
+		「B:[値]」をコンソールへ表示して改行する
+	繰り返し終わり
+』を実行する
+
+ーー2つのスレッドが共に終わるまで待機する
+スレッドAを待機する
+スレッドBを待機する
+
+コンソールから受け取る</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

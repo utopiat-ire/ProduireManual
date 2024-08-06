@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>フォルダ情報 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->フォルダ情報<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">基本機能</a></li>
+	    <li>フォルダ情報</li>
+      </ul>
+	  <h1>フォルダ情報</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="../core/folder.htm">フォルダ</a></li>
+          <li><a href="fileinfo.htm">ファイル情報</a></li>
+      </ul>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>フォルダのパスなどの情報を表す種類です。</p>
+		<p><a href="../usage.htm">
+			<span class="label label-warning">生成可能</span></a><a href="../convertables.htm" class="label label-warning convertable">変換</a></p>
+<h2>作成する方法</h2>
+		<pre class="format">【名前】というフォルダ情報（【フルパス】）を作る</pre>
+		<h2 id="型変換">型変換</h2>
+		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
+		<table class="table table-bordered">
+			<thead><tr>
+				<th>型</th>
+				<th>方向</th>
+				<th>説明</th>
+				</tr></thead>
+			<tr>
+				<th><a href="../primitive/string.htm">文字列</a></th><th>←</th><td>
+					「絶対パス」設定項目と同じ文字列</td>
+				</tr>
+			</table>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#列挙する">列挙する</a>　<a href="#作成する">作成する</a>　<a href="#削除する">削除する</a>　<a href="#取得する">取得する</a>　<a href="#存在する">存在する</a>　<a href="#変更する">変更する</a>　</div>
+		<div id="methods">
+			<h3>【自分】から〈【パターン】を〉<a name="列挙する">列挙する</a></h3>
+			<p>指定したフォルダの直下にあるファイルの一覧を返します。<br>
+				【パターン】にはワイルドカードを使えます</p>
+			<pre class="code">フォルダ一覧は、<b>デスクトップから「*.docx」を列挙する</b>
+フォルダ一覧のすべての要素についてそれぞれ繰り返す
+	要素の名前を報告する
+繰り返し終わり</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】へ【フォルダ名】というフォルダを<a name="作成する">作成する</a>：フォルダ情報</h3>
+			<p>フォルダを作成します</p>
+			<pre class="code">デスクトップに「ABC」というフォルダを作成する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、作成先フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】を<a name="削除する">削除する</a></h3>
+			<p>フォルダを削除します。フォルダ内にあるファイルとフォルダも完全に削除されます。</p>
+			<pre class="code">デスクトップから「ABC」というフォルダを取得してABCフォルダとする
+ABCフォルダを削除する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】から【ファイル名/フォルダ名】を削除する</h3>
+			<p>フォルダを削除します。フォルダ内にあるファイルとフォルダも完全に削除されます。</p>
+			<pre class="code">デスクトップから「ABC」を削除する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、フォルダ名にシステム領域を指定できません。</p>
+			<h3>【自分】へ【ファイル名】というファイルを<a name="取得する">取得する</a>：<a href="fileinfo.htm">ファイル情報</a></h3>
+			<p>ファイル情報を取得します。ファイルの存在は確認しません。</p>
+			<pre class="code">デスクトップから「書類\報告書.xlsx」というファイルを取得して報告書ファイルとする</pre>
+			<h3>【自分】へ【フォルダ名】というフォルダを取得する：フォルダ情報</h3>
+			<p>フォルダ情報を取得します。フォルダの存在は確認しません。</p>
+			<pre class="code">デスクトップから「書類」というフォルダを取得して書類フォルダとする</pre>
+			<h3>【自分】へ【名前】を取得する：基本オブジェクト</h3>
+			<p>ファイル情報またはフォルダ情報を取得します</p>
+			<pre class="code">デスクトップから「書類.xlsx」を取得して書類ファイルとする</pre>
+			<h3>【自分】が<a name="存在する">存在する</a></h3>
+			<p>指定したフォルダが存在するかどうかを判定します</p>
+			<pre class="code">書類フォルダというフォルダ情報（「[デスクトップ]書類」）を作る
+もし書類フォルダが存在するなら
+	「存在します」を情報アイコンで表示する
+でなければ
+	「存在しません」を警告アイコンで表示する
+もし終わり</pre>
+			<h3>【自分】を【変更後フォルダ名】へ<a name="変更する">変更する</a></h3>
+			<p>指定したフォルダが存在するかどうかを判定します</p>
+			<pre class="code">書類フォルダというフォルダ情報（「[デスクトップ]書類」）を作る
+書類フォルダを「作業記録」に変更する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、対象フォルダにシステム領域を指定できません。</p>
+			<p class="usage"><a href="../usage.htm#手順">記号の意味</a></p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="名前">名前</a></th>
+					<th>文字列</th><th>□</th><td>
+						フォルダの名前</td>
+					</tr>
+				<tr>
+					<th><a name="絶対パス">絶対パス</a></th>
+					<th>文字列</th><th>□</th><td>
+						フォルダの絶対パス</td>
+					</tr>
+				<tr>
+					<th><a name="親">親</a></th>
+					<th>フォルダ情報</th><th>□</th><td>
+						このフォルダの親フォルダのフォルダ情報</td>
+					</tr>
+				<tr>
+					<th><a name="ルート">ルート</a></th>
+					<th>フォルダ情報</th><th>□</th><td>
+						このフォルダのルートフォルダのフォルダ情報</td>
+					</tr>
+				<tr>
+					<th><a name="ファイル一覧">ファイル一覧</a></th>
+					<th>ファイル情報の配列</th><th>□</th><td>
+						このフォルダの直下にあるファイル一覧</td>
+					</tr>
+				<tr>
+					<th><a name="全ファイル一覧">全ファイル一覧</a></th>
+					<th>ファイル情報の配列</th><th>□</th><td>
+						このフォルダ以下すべてのフォルダに保存されているファイル一覧</td>
+					</tr>
+				<tr>
+					<th><a name="フォルダ一覧">フォルダ一覧</a></th>
+					<th>フォルダ情報の配列</th><th>□</th><td>
+						このフォルダの直下にあるフォルダ一覧</td>
+					</tr>
+				</table>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">フォルダを作成してファイルをコピーする</h3>
+		<p>フォルダを作成した上で、フォルダ情報を取得してファイルを操作します。</p>
+<pre class="code">デスクトップに「ABC」というフォルダを作成してABCフォルダとする
+デスクトップから「報告書.xlsx」というファイルを取得して報告書ファイルとする
+報告書ファイルをABCフォルダへコピーする
+ABCフォルダを削除する</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

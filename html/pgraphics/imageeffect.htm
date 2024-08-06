@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>画像効果 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->画像効果<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="graphics">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">画像描画機能</a></li>
+	<li>画像効果</li>
+</ul>
+<h1>画像効果</h1>
+
+<div class="row">
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="../primitive/image.htm">画像</a></li>
+          <li> <a href="effect/imagefilter.htm">画像フィルタ</a></li>
+      </ul>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>「画像効果」種類は、画像の調整やエフェクト加工を適用する種類です。</p>
+		<p><span class="label label-info">静的種類</span></p>
+		<h3>必要なプラグイン</h3>
+		<p>画像描画機能(<a href="index.htm">Produire.PGraphics.dll</a>)</p>
+<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#明るく">明るく</a>　<a href="#コントラスト調整">コントラスト調整</a>　<a href="#ガンマ補正">ガンマ補正</a>　<a href="#エンボス加工">エンボス加工</a>　<a href="#グレイスケール化">グレイスケール化</a>　<a href="#ネガポジ反転">ネガポジ反転</a>　<a href="#鮮明化">鮮明化</a>　<a href="#ソラリゼーション">ソラリゼーション</a>　<a href="#セピア化">セピア化</a>　<a href="#モザイクをかける">モザイクをかける</a>　<a href="#ぼかす">ぼかす</a>　<a href="#合成する">合成する</a>　</div>
+		<div id="methods">
+			<h3>【自分】として【入力：画像】を【値:整数】だけ<a name="明るく">明るく</a>：画像</h3>
+			<p>指定した画像の明るさを調整します。<br>
+				【値】には、-125～125が指定できます。0が中央値。</p>
+			<pre class="code">画像効果として、入力画像を10だけ明るくして、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を【値:整数】だけ<a name="コントラスト調整">コントラスト調整</a>：画像</h3>
+			<p>指定した画像のコントラストを調整します。<br>
+				【値】には、-45～45が指定できます。0が中央値。</p>
+			<pre class="code">画像効果として、入力画像を10だけコントラスト調整して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を【値:浮動小数】だけ<a name="ガンマ補正">ガンマ補正</a>：画像</h3>
+			<p>指定した画像のコントラストを調整します。<br>
+				【値】には、0以上の値が指定できます。1が中央値。</p>
+			<pre class="code">画像効果として、入力画像を1.5だけガンマ補正して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を<a name="エンボス加工">エンボス加工</a>：画像</h3>
+			<p>指定した画像をエンボス加工します。</p>
+			<pre class="code">画像効果として、入力画像をエンボス加工して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を<a name="グレイスケール化">グレイスケール化</a>：画像</h3>
+			<p>指定した画像をグレイスケール化します。</p>
+			<pre class="code">画像効果として、入力画像をグレイスケール化して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を<a name="ネガポジ反転">ネガポジ反転</a>：画像</h3>
+			<p>指定した画像をネガポジ反転します。</p>
+			<pre class="code">画像効果として、入力画像をネガポジ反転して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を<a name="鮮明化">鮮明化</a>：画像</h3>
+			<p>指定した画像を鮮明化します。</p>
+			<pre class="code">画像効果として、入力画像を鮮明化して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を〈【しきい値:整数】で〉<a name="ソラリゼーション">ソラリゼーション</a>：画像</h3>
+			<p>指定した画像をソラリゼーションします。<br>
+				【しきい値】は、0～255までの間で指定できます。省略すると128になります。</p>
+			<pre class="code">画像効果として、入力画像をソラリゼーションして、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を<a name="セピア化">セピア化</a>：画像</h3>
+			<p>指定した画像をセピア化します。</p>
+			<pre class="code">画像効果として、入力画像をセピア化して、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を【強さ】だけ<a name="モザイクをかける">モザイクをかける</a>：画像</h3>
+			<p>指定した画像に、モザイクをかけます。<br>
+				【強さ】でモザイクの荒さ(ブロックの大きさ)を指定できます。</p>
+			<pre class="code">画像効果として、入力画像を10だけモザイクをかけて、結果画像とする</pre>
+			<h3>【自分】として【入力：画像】を〈【強さ:整数】だけ〉<a name="ぼかす">ぼかす</a>：画像</h3>
+			<p>指定した画像をぼかします。<br>
+				強さを指定すると、ぼかす度合い(1～)を指定できます。省略すると1になります。</p>
+			<pre class="code">画像効果として、入力画像を2だけぼかして、結果画像とする</pre>
+			<h3>【自分】として【入力1：画像】と【入力2：画像】を〈【割合】で〉<a name="合成する">合成する</a>：画像</h3>
+			<p>対象の指定した2つの画像を指定した割合で合成します。<br>
+				【割合】は、画像1の割合(0から100)で指定します。割合を省略すると、50になります。</p>
+			<pre class="code">Xという画像(「a.bmp」)を作る
+Yという画像(「b.bmp」)を作る
+画像効果としてXとYを60で合成して、Zとする</pre>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">画像の明るさを調整する</h3>
+		<p>画像の明るさを調整します。</p>
+<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+
+	はじめの手順
+		初期化する
+		Xという画像(「写真.jpg」)を作る
+		キャンバス1へ画像を描くして、画像図形1とする
+			その位置と大きさは、｛0,0,100,100｝
+			その画像をXに変える
+	終わり
+
+	初期化する手順
+		この実質大きさを｛363,312｝に変える
+		この内容を「メイン画面」に変える
+		ボタン1というボタンを作る
+			その内容を「更新」に変える
+			その移動順を3に変える
+			その位置と大きさを｛265,13,69,32｝に変える
+		キャンバス1というキャンバスを作る
+			その移動順を1に変える
+			その位置と大きさを｛13,70,338,230｝に変える
+			その位置固定方向を「右＋左＋下＋上」に変える
+		スライダ1というスライダを作る
+		スライダ1を初期化開始する
+			その目盛り間隔を10に変える
+			その最大値を128に変える
+			その最小値を-128に変える
+			その大移動幅を10に変える
+			その移動順を2に変える
+			その位置と大きさを｛45,13,189,45｝に変える
+		スライダ1を初期化終了する
+		この設計スケール比率を｛96,96｝に変える
+	終わり
+
+	スライダ1が変化した時の手順
+	終わり
+
+	ボタン1がクリックされた時の手順
+		画像効果としてXをスライダ1の値だけ明るくして、Yとする
+		画像図形1の画像は、Y
+		キャンバス1を更新する
+	終わり
+終わり</pre>
+</div><!--/samples-->
+		<p>　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

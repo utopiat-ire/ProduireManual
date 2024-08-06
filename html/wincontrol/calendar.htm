@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>カレンダ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->カレンダ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+  <div id="reftitle" class="col-md-9">
+  <ul class="breadcrumb" data-category="gui">
+    <li><a href="../index.htm">プロデル</a></li>
+    <li><a href="index.htm">ウィンドウ部品</a></li>
+    <li>カレンダ</li>
+  </ul>
+  <h1>カレンダ</h1>
+</div>
+<div id="refsidebar" class="col-md-3 sidebar">
+	<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	<h3>関連ページ</h3>
+    <ul><li><a href="datepicker.htm">日時選択欄</a></li>
+      <li><a href="../primitive/datetime.htm">日時形式</a></li>
+    </ul>
+    <p>&nbsp;</p>
+</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>一ヶ月の日付と曜日が書かれた部品です。</p>
+		<p>カレンダから特定の日付を選択できます。</p>
+		<p><span class="label label-warning">生成可能</span><span class="label label-success">ウィンドウ部品</span></p>
+		<p align="center"><img src="img/calendar.png"></p>
+		<h3>継承する種類</h3>
+		<p><a href="control.htm">ウィンドウ部品</a></p>
+		<h3>必要プラグイン</h3>
+		<p>ウィンドウ部品集(<a href="index.htm">Produire.WinControl.dll</a>)</p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というカレンダを作る</pre>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#年間予定をクリアする">年間予定をクリアする</a>　<a href="#予定をクリアする">予定をクリアする</a>　<a href="#月間予定をクリアする">月間予定をクリアする</a>　<a href="#更新する">更新する</a>　<a href="#年間予定から削除する">年間予定から削除する</a>　<a href="#予定から削除する">予定から削除する</a>　<a href="#月間予定から削除する">月間予定から削除する</a>　<a href="#選択する">選択する</a>　<a href="#年間予定として追加する">年間予定として追加する</a>　<a href="#予定として追加する">予定として追加する</a>　<a href="#月間予定として追加">月間予定として追加</a>　</div>
+		<div id="methods">
+			<h3>【自分】から<a name="年間予定をクリアする">年間予定をクリアする</a></h3>
+			<p>カレンダに登録された予定をすべて削除します</p>
+			<h3>【自分】から<a name="予定をクリアする">予定をクリアする</a></h3>
+			<p>カレンダに登録された予定をすべて削除します</p>
+			<h3>【自分】から<a name="月間予定をクリアする">月間予定をクリアする</a></h3>
+			<p>カレンダに登録された予定をすべて削除します</p>
+			<h3>【自分】を<a name="更新する">更新する</a></h3>
+			<p>カレンダの予定を反映します</p>
+			<h3>【日付】を【自分】の<a name="年間予定から削除する">年間予定から削除する</a></h3>
+			<p>特定の予定を削除します</p>
+			<h3>【日付】を【自分】の<a name="予定から削除する">予定から削除する</a></h3>
+			<p>特定の予定を削除します</p>
+			<h3>【日付】を【自分】の<a name="月間予定から削除する">月間予定から削除する</a></h3>
+			<p>特定の予定を削除します</p>
+			<h3>【自分】で【開始日】から【終了日】まで<a name="選択する">選択する</a></h3>
+			<p>指定した曜日を選択します</p>
+			<h3>【自分】で【開始日】を選択する</h3>
+			<p>指定した曜日を選択します</p>
+			<h3>【自分】へ【日付】を<a name="年間予定として追加する">年間予定として追加する</a></h3>
+			<p>予定を追加します</p>
+			<h3>【自分】へ【日付】を<a name="予定として追加する">予定として追加する</a></h3>
+			<p>予定を追加します</p>
+			<h3>【自分】へ【日付】を<a name="月間予定として追加">月間予定として追加</a></h3>
+			<p>予定を追加します</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="タイトル背景色">タイトル背景色</a></th>
+					<th><a href="../primitive/color.htm">色情報</a></th>
+					<th>○</th>
+					<td>タイトルの背景色</td>
+					</tr>
+				<tr>
+					<th><a name="タイトル文字色">タイトル文字色</a></th>
+					<th>色情報</th>
+					<th>○</th>
+					<td>タイトルを表す文字の色</td>
+					</tr>
+				<tr>
+					<th><a name="開始日">開始日</a></th>
+					<th><a href="../primitive/datetime.htm">日時形式</a></th>
+					<th>○</th>
+					<td>選択の開始日</td>
+					</tr>
+				<tr>
+					<th><a name="月間行事">月間行事</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>月間行事の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="月表示サイズ">月表示サイズ</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>一ヶ月分を表示するカレンダの大きさを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="行事">行事</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>行事の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="行列数">行列数</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>一度に表示するカレンダの列と行数</td>
+					</tr>
+				<tr>
+					<th><a name="今日">今日</a></th>
+					<th><a href="../primitive/datetime.htm">日時形式</a></th>
+					<th>○</th>
+					<td>カレンダ上で今日となる日</td>
+					</tr>
+				<tr>
+					<th><a name="今日強制設定">今日強制設定</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>実際の今日とカレンダ上の今日が異なるかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="最小値">最小値</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>許容される日付の最小値</td>
+					</tr>
+				<tr>
+					<th><a name="最大選択日数">最大選択日数</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>選択できる最大の日数</td>
+					</tr>
+				<tr>
+					<th><a name="最大値">最大値</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>許容される日付の最大値</td>
+					</tr>
+				<tr>
+					<th><a name="終了日">終了日</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>選択の終了日</td>
+					</tr>
+				<tr>
+					<th><a name="週番号表示">週番号表示</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>月間予定表示で週番号を表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="先頭曜日">先頭曜日</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>カレンダの列の始めの曜日</td>
+					</tr>
+				<tr>
+					<th><a name="前後月色">前後月色</a></th>
+					<th>色情報</th>
+					<th>○</th>
+					<td>表示付きではない日を表す文字の色</td>
+					</tr>
+				<tr>
+					<th><a name="日付">日付</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>選択している曜日</td>
+					</tr>
+				<tr>
+					<th><a name="年間行事">年間行事</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>年間行事の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="背景画像">背景画像</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>背景画像</td>
+					</tr>
+				<tr>
+					<th><a name="背景色">背景色</a></th>
+					<th>色情報</th>
+					<th>○</th>
+					<td>カレンダの背景色</td>
+					</tr>
+				<tr>
+					<th><a name="文字色">文字色</a></th>
+					<th>色情報</th>
+					<th>○</th>
+					<td>カレンダの日を表す文字の色</td>
+					</tr>
+				<tr>
+					<th><a name="本日強調">本日強調</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>今日を○で強調するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="本日表示">本日表示</a></th>
+					<th>&nbsp;</th>
+					<th>○</th>
+					<td>今日を表す文字の色</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>イベント名</th>
+						<th>説明</th>
+						<th>情報</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="選択された">選択された</a></th>
+					<td>日にちが選択された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="変更された">変更された</a></th>
+					<td>日にちが変更されたとき</td>
+					<td></td>
+					</tr>
+				</table>
+			</div>
+		<p>　</p>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+			<h3 id="sample1">カレンダーから日付を選択する</h3>
+		<p>カレンダー部品のプログラム例です。</p>
+		<pre class="code">
+メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを受け継ぐ
+
+はじめの手順
+	この内容を「カレンダ」に変える
+	メインカレンダというカレンダを作る
+	その位置と大きさを、｛10,10,150,150｝に変える
+	ラベル１というラベルを作る
+	その位置と大きさを、｛50,160,150,50｝に変える
+終わり
+
+カレンダ１が変更された時の手順
+	ラベル１の内容を、カレンダ１の日付に変える
+終わり
+
+終わり</pre>
+			</div><!--/samples-->
+		<p>　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,310 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>判断文(もし文) - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->判断文<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="syntax">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">言語仕様</a></li>
+	<li>判断文</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1>判断文(もし文)</h1>
+	  	<p>指定した判断式に応じて、処理を分岐するには、「もし」文を使います。</p>
+<h3>判断文の書き方</h3>
+<p>判断文は、次のような書式で書きます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+<pre class="format">もし<span class="flag">《条件》</span>なら　<span class="rem">/*　正しい時の文  */</span>　でなければ　<span class="rem">/*　違う時の文 */</span></pre>
+<pre class="format">もし<span class="flag">《条件》</span>なら
+　　<span class="rem">/*　条件が正しいときに実行する文 */</span>
+もし終わり</pre>
+<h5><span class="flag">《条件》</span></h5>
+<p>判断する条件式を書きます。<br>
+または、真偽値を書くこともできます。</p>
+	</div>
+    <pre class="code">得点は、70
+合格点は、60
+もし得点が合格点以上なら
+  　　「合格」を表示
+もし終わり</pre>
+</div>
+<h4>条件が正しくない場合</h4>
+<p>条件式が正しくないときに、実行するプログラムを指定できます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式　条件が正しくない</h4>
+	</div>
+	<div class="panel-body">
+<pre class="format">もし<span class="flag">《条件》</span>なら
+ 　　<span class="rem">/*　条件が正しいときに実行する文 */</span>
+そうでなければ
+ 　　<span class="rem">/*　条件が違うときに実行する文 */</span>
+もし終わり</pre>
+	</div>
+</div>
+<p>条件が違った時に、次の条件について判断させることもできます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式　複数条件分岐</h4>
+	</div>
+	<div class="panel-body">
+<pre class="format">もし<span class="flag">《条件》</span>なら
+　　<span class="rem">/*　条件が正しいときに実行する文 */</span>
+他でもし<span class="flag">《条件》</span>なら
+　　<span class="rem">/*　最初の条件が違い、次の条件が正しいときに実行する文 */</span>
+そうでなければ
+　　<span class="rem">/*　すべての条件が違うときに実行する文 */</span>
+もし終わり</pre>
+<p>※「そうでなければ」のほか、「でないなら」、「他なら」と書くこともできます</p>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文　文字列の判断</h4>
+	</div>
+	<div class="panel-body">
+<pre class="code">メッセージは、「こんにちは」
+ 
+もしメッセージが「こんにちは」なら
+　　「正しい」を表示する
+そうでなければ
+　　「違います」を表示する
+もし終わり</pre>
+	</div>
+</div>
+<h3><b>条件式によって処理を分岐する</b></h3>
+<p>“<b>他でもし</b>”を使うことで、条件に合致しない場合にさらに特定の条件で、実行するプログラムを指定できます。</p>
+<pre class="code">数字は、１
+<span class="pink">もし</span>数字が１<span class="pink">なら</span>
+　　<span class="rem">ーー１の時</span>
+　　処理１
+<span class="pink">他でもし</span>数字が２<span class="pink">なら</span>
+　　<span class="rem">ーー２の時</span>
+　　処理２
+<span class="pink">でないなら</span>
+　　<span class="rem">ーーそれ以外の時</span>
+　　処理３
+<span class="pink">もし終わり</span></pre>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文　数値の比較</h4>
+	</div>
+	<div class="panel-body">
+<pre class="code">正解は、１２３
+数字は、入力画面で「数値を入力してください」を入力したもの
+<span class="pink">
+もし数字</span>が正解<span class="pink">なら
+</span>&nbsp; 「正しい」を表示する
+他で<span class="pink">もし</span>数字が正解<span class="pink">より大きいなら
+</span>　　「［数字］より小さい」を表示する
+他で<span class="pink">もし</span>数字が正解<span class="pink">より小さいなら
+</span>　　「［数字］より大きい」を表示する
+もし終わり</pre>
+	</div>
+</div>
+<p>条件式を数学表記で書くこともできます。</p>
+<pre class="code">正解は、１２３
+数字は、入力画面で「数値を入力してください」を入力したもの
+ <span class="pink">
+もし数字</span>＝正解<span class="pink">なら
+</span>&nbsp; 「正しい」を表示する
+他で<span class="pink">もし</span>数字≧正解<span class="pink">なら
+</span>　　「［数字］より小さい」を表示する
+他で<span class="pink">もし</span>数字≦正解<span class="pink">なら
+</span>　　「［数字］より大きい」を表示する
+もし終わり</pre>
+<h3 id="条件式の書き方">条件の書き方</h3>
+<p>条件式の書き方は、次のようになります。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">条件式</h4>
+	</div>
+<table class="table table-striped">
+	<tr>
+		<th align="middle" class="items">優先度</th>
+		<th align="middle" class="items">条件式の表記</th>
+		<th align="middle" class="items">意味</th>
+	</tr>
+	<tr>
+		<td>
+		<p align="center">高</p>
+		</td>
+		<td>□＝◇</td>
+		<td>□と◇が等しい</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□≠◇</td>
+		<td>□と◇が等しくない</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□＞◇</td>
+		<td>□が◇より大きい</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□＜◇</td>
+		<td>□が◇より小さい</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□≧◇</td>
+		<td>□が◇以上</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□≦◇</td>
+		<td>□が◇以下</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>【条件式】でない</td>
+		<td>【条件式】が正しくない</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□が◇</td>
+		<td>□と◇が等しい</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□が◇より大きい</td>
+		<td>□が◇より大きい　（□＞◇と同じ）</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□が◇より小さい<br>
+		□が◇未満<br>
+		□が◇より下</td>
+		<td>□が◇より小さい　（□＜◇と同じ）</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□が◇以上</td>
+		<td>□が◇以上　（□≧◇と同じ）</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>□が◇以下</td>
+		<td>□が◇以下　（□≦◇と同じ）</td>
+	</tr>
+	<tr>
+		<td>　</td>
+		<td>《条件式1》または《条件式2》<br>
+		《条件式1》あるいは《条件式2》</td>
+		<td>《条件1》か《条件2》のどちらかが正しい</td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center">低</p>
+		</td>
+		<td>《条件式1》かつ《条件式2》</td>
+		<td>《条件1》と《条件2》のどちらも正しい</td>
+	</tr>
+</table>
+</div>
+<p align="left">※“□<b>が</b>◇”の代わりに“□<b>が、</b>◇”、“□<b>は、</b>◇”と書くこともできます。</p>
+<h3>２つ以上の条件を同時に判断する</h3>
+<p>「かつ」と「または」を使って複数の条件を指定できます。<br>
+（　）で囲うこともできます。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+<pre class="code">数字１は　１
+数字２は　２
+
+<span class="rem">ーーすべての式が正しい時(And)</span>
+もし数字１が１<span class="pink">かつ</span>数字２が１なら、「どっちも正しい」を表示する
+
+<span class="rem">ーーどれかの式が正しい時(Or)</span>
+もし（数字１が１）または（数字２が３）なら、「どっちか正しい」を表示する</pre>
+	</div>
+</div>
+
+		</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

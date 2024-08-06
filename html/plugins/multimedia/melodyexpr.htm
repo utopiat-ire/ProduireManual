@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>メロディの書き方 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<meta name="keywords" content="メロディ,演奏,MIDI"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->メロディの書き方<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+	<ul class="breadcrumb" data-category="media">
+		<li><a href="../../index.htm">プロデル</a></li>
+		<li><a href="index.htm">マルチメディア機能</a></li>
+		<li><a href="melody.htm">メロディ</a></li>
+		<li>メロディの表現 </li>
+	</ul>
+<h1>メロディの書き方</h1>
+<p>「演奏する」手順で演奏するメロディは、音符を順番に書きます。</p>
+	<h3>音符の書き方</h3>
+	<p>音符は、【音名】【長さ】と順に書いて表現します。<br>
+		例えば、4分音符のドを鳴らすには、「ド４」と書きます。</p>
+	<pre class="code">「ド４」を演奏する</pre>
+	<p>メロディは、全角と半角を区別しません。(ただしカタカナのみは全角で書く必要があります)<br>
+		また、スペースや改行記号、タブ文字は、無視されますので、演奏には影響がありません。</p>
+	<h3>音名</h3>
+	<p>【音名】には、<b>ドレミファソラシ</b>のいずれかを書きます。ひらがなやMML表記で書くこともできます。<br>
+		音名には、臨時記号（<b>＃</b>(シャープ)、<b>♭</b>・<b>ｂ</b>(フラット)、<b>Ｎ</b>(ナチュラル)）を付けることができます。</p>
+	<table style="width: 100%" class="doctable">
+		<tr>
+			<th>&nbsp;</th>
+			<th>ド</th>
+			<th>ド＃</th>
+			<th>レ</th>
+			<th>レ＃</th>
+			<th>ミ</th>
+			<th>ファ</th>
+			<th>ファ＃</th>
+			<th>ソ</th>
+			<th>ソ＃</th>
+			<th>ラ</th>
+			<th>ラ＃</th>
+			<th>シ</th>
+		</tr>
+		<tr>
+			<th>カタカナ</th>
+			<td>ド</td>
+			<td>ド＃/レ♭</td>
+			<td>レ</td>
+			<td>レ＃/ミ♭</td>
+			<td>ミ</td>
+			<td>ファ</td>
+			<td>ファ＃/ソ♭</td>
+			<td>ソ</td>
+			<td>ソ＃/ラ♭</td>
+			<td>ラ</td>
+			<td>ラ＃/シ♭</td>
+			<td>シ</td>
+		</tr>
+		<tr>
+			<th>ひらがな</th>
+			<td>ど</td>
+			<td>ど＃/れ♭</td>
+			<td>れ</td>
+			<td>れ＃/み♭</td>
+			<td>み</td>
+			<td>ふぁ</td>
+			<td>ふぁ＃/そ♭</td>
+			<td>そ</td>
+			<td>そ＃/ら♭</td>
+			<td>ら</td>
+			<td>ら＃/し♭</td>
+			<td>し</td>
+		</tr>
+		<tr>
+			<th>MML表記</th>
+			<td>C</td>
+			<td>C#/Db</td>
+			<td>D</td>
+			<td>D#/Eb</td>
+			<td>E</td>
+			<td>F</td>
+			<td>F#/Gb</td>
+			<td>G</td>
+			<td>G#/Ab</td>
+			<td>A</td>
+			<td>A#/Bb</td>
+			<td>B</td>
+		</tr>
+	</table>
+	<pre class="code">「ド４ド＃４レ４ミ♭４ミ４」を演奏する
+「ど４ど＃４れ４み♭４み４」を演奏する
+「C4C#４D４Eb4E4」を演奏する</pre>
+	<h3>音の長さ</h3>
+	<p>【長さ】には、音符の長さを書きます。例えば4なら、4分音符。8なら、8分音符となります。<br>
+		音符の長さは、<b>1</b>,<b>2</b>,<b>4</b>,<b>8</b>,<b>16</b>,<b>32</b>のいずれかを書くことができます。 <br>
+		数字の後に「<b>．</b>」を付けると付点となります。例えば、付点4分音符は、「４．」と書きます。</p>
+	<table class="table table-bordered">
+		<tr>
+			<th>&nbsp;</th>
+			<th>長さ</th>
+			<th>&nbsp;</th>
+			<th>長さ</th>
+		</tr>
+		<tr>
+			<th>全音(休)符</th>
+			<td>1</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>2分音(休)符</th>
+			<td>2</td>
+			<th>付点2分音(休)符</th>
+			<td>２．</td>
+		</tr>
+		<tr>
+			<th>4分音(休)符</th>
+			<td>4</td>
+			<th>付点4分音(休)符</th>
+			<td>４．</td>
+		</tr>
+		<tr>
+			<th>8分音(休)符</th>
+			<td>8</td>
+			<th>付点8分音(休)符</th>
+			<td>８．</td>
+		</tr>
+		<tr>
+			<th>16分音(休)符</th>
+			<td>16</td>
+			<th>付点16分音(休)符</th>
+			<td>１６．</td>
+		</tr>
+		<tr>
+			<th>32分音(休)符</th>
+			<td>32</td>
+			<th>付点32分音(休)符</th>
+			<td>３２．</td>
+		</tr>
+		<tr>
+			<th>64分音(休)符</th>
+			<td>64</td>
+			<th>付点64分音(休)符</th>
+			<td>６４．</td>
+		</tr>
+	</table>
+	<p>※プロデルのメロディには、小節という概念がありません。そのため全音符は、4分音符×4個分と同じ長さです。</p>
+	<pre class="code">「ド4ミ8ソ8」を演奏する</pre>
+	<h3>長さの省略</h3>
+	<p>長さを省略すると、直前に指定した長さと同じになります。<br>
+		一度も長さが指定されていない場合は、４と同じになります。</p>
+	<pre class="code"><span class="rem">ーー「ド4ミ4ソ4　ド8ミ8ソ8　ド8ミ8ソ8」と書いたことと同じになります</span>
+ 	「ド4ミソ　ド8ミソ　ドミソ」を演奏する</pre>
+	<p>長さの代わりに「ー」を書くと、直前に指定した長さに、さらに同じ長さを足した長さになります。<br>
+		「ー」で直前の長さの2倍。「ーー」で直前の長さの3倍になります。</p>
+	<pre class="code">「ド8ミソ　ドミソ　ドーミーソー」を演奏する</pre>
+	<h3>音の高さ</h3>
+	<p>音の高さを、１オクターブ上げる時は、「<b>＞</b>」または「上」と書きます。<br>
+		１オクターブ下げる時は、「<b>＜</b>」または「下」と書きます。</p>
+	<p>※音の高さは、同一のパート・連符・和音内で有効です</p>
+	<pre class="code">「ド&gt;ド&gt;ド」を演奏する</pre>
+	<h3>休符</h3>
+	<p>休符は、「休み」「休」「ン」のあとに、休符の長さを書きます。</p>
+	<pre class="code">「ソ４休み２ド４」を演奏する</pre>
+	<p>&nbsp;</p>
+	<h2>その他のメロディ表現</h2>
+	<h3>タイ</h3>
+	<pre>タイを表現するには、音符の長さを「＾」で繋ぎます。
+タイを続けて、複数書くこともできます。</pre>
+	<pre class="format">【音名】【長さ】＾【長さ】</pre>
+	<p><b>例文</b>　四分音符のラに、八分音符を付けて、伸ばします</p>
+	<pre class="code">「　ラ４＾８　」を演奏する</pre>
+	<p>　</p>
+	<h3>連符</h3>
+	<p>連音符を表現するには、音符を｛　｝で囲みます。<br>
+		【長さ】は、省略できます。</p>
+	<pre class="format">｛【音名】｝【長さ】</pre>
+	<p><b>例文</b>　3連符を表現します</p>
+	<pre class="code">「　｛ソファミ｝４　」を演奏する</pre>
+	<p>&nbsp;</p>
+	<h3>和音</h3>
+	<p>一つのパートで和音を表現したい場合は、音符を（　）で囲みます。<br>
+		【長さ】は、省略できます。</p>
+	<pre class="format">（【音名】）【長さ】</pre>
+	<p><b>例文</b>　Ｃの和音(ドミソ)を表現します</p>
+	<pre class="code">「　（ドミソ）２　」を演奏する</pre>
+	<p>　</p>
+	<h3>調を指定する</h3>
+	<p>調は、「メロディ」の<a href="melody.htm#調">「調」設定項目</a>で変更できます。</p>
+	<p><b>例文</b>　調を「嬰ヘ長調」に設定します</p>
+	<pre class="code">メロディの調を「嬰ヘ長調」に変える
+「レ16ド16&lt;ファ8&gt;(ファ&lt;ラ)8　(ファ&lt;ラ)8 ン4」を演奏する</pre>
+	<p>　</p>
+	<h2>音色やMIDIチャンネルの設定</h2>
+	<h3>音色</h3>
+	<p>音色を変えるには、「＃」を使います。音色は、MIDIの音色番号と同じです。<br>
+		音色番号に対応する音色は、<a href="melodycolor.htm#通常パート">通常パートの音色表</a>をご覧ください。</p>
+	<pre class="format">＃<b><span class="flag">【音色番号】</span></b></pre>
+	<p>　</p>
+	<h3>MIDIチャンネル</h3>
+	<p>メロディを演奏するMIDIチャンネルを変えるには、「＠」を使います。<br>
+		MIDIチャンネルは、1～16まで指定できます。</p>
+	<p>なお、MIDIチャンネルの10は、ドラムパートに固定されています。</p>
+	<pre class="format">＠<b><span class="flag">【チャンネル番号】</span></b></pre>
+	<h3>音量を変える</h3>
+    <p>音色や音量を変えるには、次のように書きます。</p>
+    <pre class="format">メロディの音量は、【音量0～127】</pre>
+	<h3>テンポを変えたい</h3>
+	<p>テンポは、「メロディ」の<a href="melody.htm#設定項目">「テンポ」設定項目</a>で変更できます。</p>
+	<p><b>例文</b>　メロディのテンポを「四分音符＝60」(一分間に四分音符60個分)くらい演奏するテンポにします</p>
+	<pre class="code">メロディのテンポは、60
+「ドレミ」を演奏する</pre>
+	<p>&nbsp;</p>
+	<h2>同時に複数のパートを演奏する</h2>
+	<p>複数のパートに分けて、複数の音を同時に演奏したい場合は、「演奏する」手順に配列を指定して、複数のパートを作ってください。<br>
+		最高16パートを同時に演奏できます。</p>
+	<pre class="code">｛「ド4ドソソララソン」、「ド8ソミソ ドソミソ ドラファラ ドソミソ」｝を演奏する</pre>
+	<p>&nbsp;</p>
+	<h2>ドラム(パーカッション)パートを演奏する</h2>
+	<p>ドラムパートとして演奏したい場合は、「＠」でMIDIチャンネルを10に設定してください。</p>
+	<p>各楽器には、ドレミの音名が割り当てられています。<br>
+		楽器と音名の割り当ては、<a href="melodycolor.htm#ドラム(パーカッション)パート">ドラムパートの音色表</a>をご覧ください。</p>
+	<p><a href="https://upload.wikimedia.org/wikipedia/commons/8/85/GMStandardDrumMap.gif">ドラムパートマップ(wikipadiaより)</a>も参考になりますので、ご覧ください。<br>
+		なお、ドラムパートに変更すると、音の高さが一番低いドに設定されます。</p>
+	<pre class="code">「@10&gt;&gt;(みら＃れ＃)4ん8(みら＃れ＃)4(みら＃れ＃)8ん4&lt;&lt;」を演奏する
+「@10&gt;&gt;し8し&gt;みー&lt;しし&gt;みー&lt;しし&gt;みー&lt;しし&gt;みー&lt;&lt;」を演奏する</pre>
+	<p>&nbsp;</p>
+	<h2>非同期で演奏する</h2>
+	<p>メロディをプログラムのBGMとして使いたい場合など、「演奏する」手順の終了を待たずに次のプログラムを実行させるには、<br>
+		「非同期で演奏する」手順を使います。</p>
+	<p><b>例<br>
+		</b>メロディを演奏します。<br>
+		この例では、２つのパートに分けて演奏しています。</p>
+	<pre id="prg" class="code">「(ドミ)４　(ミソ)４　(ソシ)４　(ミソ)８」を非同期で演奏する
+「(ドミ)８　(ミソ)２　(レファ)２　(ドミ)２」を演奏する</pre><div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

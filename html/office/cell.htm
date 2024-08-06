@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>セル - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->セル<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+	
+	<div class="row">
+		<div id="reftitle" class="col-md-9">
+		  <ul class="breadcrumb" data-category="office">
+		    <li><a href="../index.htm">プロデル</a></li>
+		    <li><a href="index.htm">Microsoft Office操作</a></li>
+		    <li><a href="excel.htm">エクセル</a></li>
+		    <li>セル</li>
+	      </ul>
+		  <h1>セル</h1>
+	  </div>
+		<div id="refsidebar" class="col-md-3 sidebar">
+<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+<h3>関連ページ</h3>
+<ul>
+  <li><a href="excel.htm">エクセル</a>
+    <ul>
+      <li><a href="workbook.htm">ブック</a>
+        <ul>
+          <li><a href="worksheet.htm">シート</a>
+            <ul>
+              <li><a href="cell.htm"><strong>セル</strong></a></li>
+              <li><a href="excelshape.htm">エクセル図形</a></li>
+              <li><a href="excelcomment.htm">エクセルコメント</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+		</div>
+		<div id="refcontent" class="col-md-8">
+		  <h2>概要</h2>
+			<p>Microsoft Excelで選択された範囲(Range)を表す種類です。</p>
+			<p>セルの字体や色の変更、罫線の設定などの操作ができます。		  </p>
+		  <h2>セルを取得する方法</h2>
+			<p>セルの字体や色を変えるには、「セル」オブジェクトを取得する必要があります。</p>
+			<p>エクセル画面上で選択しているセルを取得するには、次のように書きます。</p>
+			<pre class="code">操作セルは、エクセルの選択</pre>
+			<p>A1のセルを取得するには、次のように書きます。</p>
+			<pre class="code">操作セルは、エクセルの選択シート：セル（「A1」）</pre>
+			<p>また、5行2列目のセルを取得するには、次のように書きます。</p>
+			<pre class="code">操作セルは、エクセルの選択シート：セル（｛5，2｝）</pre>
+			<p>　</p>
+			<h2 id="手順">手順</h2>
+			<p>次の手順を使用できます。</p>
+			<div id="methodlist"><a href="#カットする">カットする</a>　<a href="#コピーする">コピーする</a>　<a href="#削除する">削除する</a>　<a href="#挿入する">挿入する</a>　<a href="#選択する">選択する</a>　<a href="#置換する">置換する</a>　<a href="#貼り付ける">貼り付ける</a>　<a href="#結合する">結合する</a>　<a href="#分割する">分割する</a>　<a href="#コメントを追加する">コメントを追加する</a>　<a href="#重複を削除する">重複を削除する</a>　</div>
+			<div id="methods">
+				<h3>【自分】から<a name="カットする">カットする</a></h3>
+				<p>セルを切り取ります</p>
+				<h3>【自分】を<a name="コピーする">コピーする</a></h3>
+				<p>セルをコピーします</p>
+				<h3>【自分】を<a name="削除する">削除する</a></h3>
+				<p>セルを削除します</p>
+				<h3>【自分】へ<a name="挿入する">挿入する</a></h3>
+                <p>セルへ新しいセルを挿入します</p>
+                <pre class="code">エクセルを起動する<br>エクセルにブックを追加してWとする<br>Wの現在シートの一覧は、{{「A」,「B」,「C」},<br>	{1,100,20},<br>	{2,130,30},<br>	{3,90,50}<br>}<br>[Wの現在シート:セル(「B1:C2」)]に挿入する
+</pre>
+                <h3>【自分】を<a name="選択する">選択する</a></h3>
+				<p>セルを選択状態にします</p>
+				<pre class="code">エクセルの現在シートの使用範囲を選択する</pre>
+				<h3>【自分】で【置換前】を【置換後】へ<a name="置換する">置換する</a></h3>
+				<p>セルに含まれる値を置き換えます</p>
+				<h3>【自分】へ<a name="貼り付ける">貼り付ける</a></h3>
+				<p>セルを貼り付けます</p>
+				<h3>【自分】を<a name="結合する">結合する</a></h3>
+				<p>選択範囲のセルを結合(マージ)します</p>
+				<h3>【自分】を<a name="分割する">分割する</a></h3>
+				<p>結合されたセルを分割します</p>
+				<h3>【自分】へ【内容】という<a name="コメントを追加する">コメントを追加する</a>：<a href="excelcomment.htm">エクセルコメント</a></h3>
+				<p>指定したセルにコメントを追加します</p>
+				<h3>【自分】から〈【列番号】列目で〉<a name="重複を削除する">重複を削除する</a></h3>
+				<p>指定した範囲で、指定した列の値が重複する行を削除します</p>
+				<pre class="code">エクセルを起動する
+エクセルにブックを追加してWとする
+Wの現在シートの一覧は、{{「A」,「B」,「C」},
+	{1,100,20},
+	{2,130,30},
+	{3,90,50},
+	{4,100,10},
+	{5,120,30},
+	{6,130,20}
+}
+Wの現在シートの使用範囲から2列目で重複を削除する</pre>
+			</div>
+			<h2 id="設定項目">設定項目</h2>
+			<p>次の設定項目を指定できます。</p>
+			<div id="properties">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tr>
+						<th><a name="内容">内容</a></th>
+						<th>文字列</th>
+						<th>◎</th>
+						<td>セルの値</td>
+					</tr>
+					<tr>
+						<th><a name="計算式">計算式</a></th>
+						<th>文字列</th>
+						<th>◎</th>
+						<td>セルの計算式
+							<pre class="code">エクセルの現在シートの選択の計算式を「=sum(A1:A10)」に変える</pre>
+						</td>
+					</tr>
+					<tr>
+						<th><a name="フォント名">フォント名</a></th>
+						<th>文字列</th>
+						<th>◎</th>
+						<td>セルのフォント名</td>
+					</tr>
+					<tr>
+						<th><a name="文字サイズ">文字サイズ</a></th>
+						<th>整数</th>
+						<th>◎</th>
+						<td>セルの文字の大きさ</td>
+					</tr>
+					<tr>
+						<th><a name="背景色">背景色</a></th>
+						<th>色</th>
+						<th>◎</th>
+						<td>セルの背景色</td>
+					</tr>
+					<tr>
+						<th><a name="文字色">文字色</a></th>
+						<th>色</th>
+						<th>◎</th>
+						<td>セルの文字色</td>
+					</tr>
+					<tr>
+						<th><a name="太字">太字</a></th>
+						<th>真偽</th>
+						<th>◎</th>
+						<td>セルの文字を太字にするかどうか</td>
+					</tr>
+					<tr>
+						<th><a name="斜体">斜体</a></th>
+						<th>真偽</th>
+						<th>◎</th>
+						<td>セルの文字を斜体にするかどうか</td>
+					</tr>
+					<tr>
+						<th><a name="下線">下線</a></th>
+						<th>真偽</th>
+						<th>◎</th>
+						<td>セルの文字に下線を付けるかどうかどうか。線の種類を指定します</td>
+					</tr>
+					<tr>
+						<th><a name="取り消し線">取り消し線</a></th>
+						<th>真偽</th>
+						<th>◎</th>
+						<td>セルの文字に取り消し線を付けるかどうか</td>
+					</tr>
+					<tr>
+						<th><a name="影">影</a></th>
+						<th>真偽</th>
+						<th>◎</th>
+						<td>セルの文字に影を付けるかどうか</td>
+					</tr>
+					<tr>
+					  <th><a name="大きさ">大きさ</a></th>
+					  <th>大きさ</th>
+					  <th>□</th>
+					  <td>セルの大きさ</td>
+				  </tr>
+					<tr>
+						<th><a name="幅">幅</a></th>
+						<th>整数</th>
+						<th>◎</th>
+						<td>セルの幅</td>
+					</tr>
+					<tr>
+						<th><a name="高さ">高さ</a></th>
+						<th>整数</th>
+						<th>◎</th>
+						<td>セルの高さ</td>
+					</tr>
+					<tr>
+					  <th><a name="座標">座標</a></th>
+					  <th>座標</th>
+					  <th>□</th>
+					  <td>セルの座標</td>
+				  </tr>
+					<tr>
+						<th><a name="横">横</a></th>
+						<th>整数</th>
+						<th>□</th>
+						<td>セルの横</td>
+					</tr>
+					<tr>
+						<th><a name="縦">縦</a></th>
+						<th>整数</th>
+						<th>□</th>
+						<td>セルの縦</td>
+					</tr>
+					<tr>
+						<th><a name="一覧">一覧</a></th>
+						<th>文字列の配列</th>
+						<th>◎</th>
+						<td>選択しているセルの内容</td>
+					</tr>
+					<tr>
+						<th><a name="行数">行数</a></th>
+						<th>整数</th>
+						<th>□</th>
+						<td>選択しているセルの行数</td>
+					</tr>
+					<tr>
+						<th><a name="列数">列数</a></th>
+						<th>整数</th>
+						<th>□</th>
+						<td>選択しているセルの列数</td>
+					</tr>
+					<tr>
+						<th><a name="文字配置">文字配置</a></th>
+						<th>列挙</th>
+						<th>◎</th>
+						<td>セルの表示配置<br>
+							｛左上／左中央／左下／中央上／中央／中央下／右上／右中央／右下／標準｝<br>
+							が指定できます。</td>
+					</tr>
+					<tr>
+						<th><a name="罫線の形">罫線の形</a></th>
+						<th>&nbsp;</th>
+						<th>◎</th>
+						<td>選択しているセルの罫線の形</td>
+					</tr>
+					<tr>
+						<th><a name="罫線のスタイル">罫線のスタイル</a></th>
+						<th>列挙</th>
+						<th>◎</th>
+						<td>選択しているセルの罫線の種類<br>
+							｛なし／実線／破線／一点鎖線／二点鎖線／点線／二重線／斜線｝</td>
+					</tr>
+					<tr>
+						<th><a name="罫線の太さ">罫線の太さ</a></th>
+						<th>列挙</th>
+						<th>◎</th>
+						<td>選択しているセルの罫線の太さ<br>
+							｛極細／細い／中／太い｝</td>
+					</tr>
+					<tr>
+						<th><a name="罫線の色">罫線の色</a></th>
+						<th>色</th>
+						<th>◎</th>
+						<td>選択しているセルの罫線の色</td>
+					</tr>
+					<tr>
+						<th><a name="枠">枠</a></th>
+						<th>&nbsp;</th>
+						<th>◎</th>
+						<td>セルの四方を指定した太さの罫線を引きます<br>
+							｛なし／実線／破線／一点鎖線／二点鎖線／点線／二重線／斜線｝</td>
+					</tr>
+					<tr>
+						<th><a name="セルの罫線">セルの罫線</a></th>
+						<th>&nbsp;</th>
+						<th>◎</th>
+						<td>セルの四方を指定した太さの罫線を引きます<br>
+							｛なし／実線／破線／一点鎖線／二点鎖線／点線／二重線／斜線｝</td>
+					</tr>
+					<tr>
+						<th><a name="結合セル">結合セル</a></th>
+						<th>真偽値</th>
+						<th>◎</th>
+						<td>セルが結合状態かどうか　</td>
+					</tr>
+					<tr>
+						<th><a name="折り返し全体表示">折り返し全体表示</a></th>
+						<th>真偽値</th>
+						<th>◎</th>
+						<td>セルに内容が収まらない場合に幅をそのままに折り返して全体を表示するかどうか</td>
+					</tr>
+					<tr>
+						<th><a name="縮小全体表示">縮小全体表示</a></th>
+						<th>真偽値</th>
+						<th>◎</th>
+						<td>セルに内容が収まらない場合に大きさをそのままに内容を縮小して表示するかどうか</td>
+					</tr>
+					<tr>
+						<th><a name="コメント">コメント</a></th>
+						<th><a href="excelcomment.htm">エクセルコメント</a></th>
+						<th>□</th>
+						<td>セルのコメントを取得します</td>
+					</tr>
+				</table>
+			</div>
+			<h2 id="サンプルコード">サンプルコード</h2>
+            <div id="samples">
+  <h3 id="sample1">セルの内容と罫線を変更する</h3>
+  <pre class="code">エクセルを起動する
+エクセルへブックを追加する
+
+<i>ーー指定したセルに文字を入力します</i>
+操作セルは、エクセルの選択シート：セル（｛5，2｝）
+操作セルの内容を「プロデル」に変える
+
+<i>ーーセルに罫線を設定します</i>
+操作セルは、エクセルの選択シート：セル（「B2:F8」）
+操作セルの罫線の形を「四角」に変える</pre>
+              <p>　</p>
+            </div><!--/samples-->
+		</div>
+	</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

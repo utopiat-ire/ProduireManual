@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プロデル逆引き辞典 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="文法,プロデルの文法"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プロデル逆引き辞典<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="lookup">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li>逆引き辞典</li>
+</ul>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+<h1>プロデル逆引き辞典</h1>
+<p>このページには、プロデルで実際にプログラムを作るときに必要なプログラムを目的別にまとめています。</p>
+	<h2>目次</h2>
+	<ul>
+		<li><a href="string_lookup.htm">文字列を扱う</a></li>
+		<li><a href="datetime_lookup.htm">日付や時刻を扱う</a></li>
+		<li><a href="array_lookup.htm">配列を扱う</a></li>
+		<li><a href="filesystem_lookup.htm">ファイルを扱う</a></li>
+		<li><a href="kame_lookup.htm">カメで図形を描く</a></li>
+		<li><a href="media_lookup.htm">メディアを扱う</a></li>
+	</ul>
+	<div id="list"><div class="col-md-6"><h3>ビープ音</h3><ul>
+<li><a href="..\core\beep.htm#sample1">ビープ音を鳴らす</a></li>
+</ul></div>
+<div class="col-md-6"><h3>クリップボード</h3><ul>
+<li><a href="..\core\clipboard.htm#sample1">クリップボードへ文字列を格納する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>コンソール</h3><ul>
+<li><a href="..\core\console.htm#sample1">コンソールで文字を受け付けて表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>コンテキストメニュー</h3><ul>
+<li><a href="..\core\contextmenu.htm#sample1">コンテキストメニューを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>基本</h3><ul>
+<li><a href="..\core\core.htm#アスキー番号">文字のASCII番号を取得する			</a></li>
+<li><a href="..\core\core.htm#キャラクタ">ASCII番号の文字を取得する</a></li>
+<li><a href="..\core\core.htm#開く">ファイルを関連付けられたアプリで開く</a></li>
+<li><a href="..\core\core.htm#起動する">外部プログラムを起動する</a></li>
+<li><a href="..\core\core.htm#起動して待つ">プログラムを起動して終了するまで待機する</a></li>
+<li><a href="..\core\core.htm#入力する">他のアプリに文字列を入力する</a></li>
+<li><a href="..\core\core.htm#個数">文字列の登場回数を数える</a></li>
+<li><a href="..\core\core.htm#行区切り">文字列を1行ごとに配列化する</a></li>
+<li><a href="..\core\core.htm#行数">文字列の行数を数える</a></li>
+<li><a href="..\core\core.htm#時間形式">文字列を時間形式に変換する</a></li>
+<li><a href="..\core\core.htm#質問する">はいといいえで尋ねる</a></li>
+<li><a href="..\core\core.htm#整える">数値を指定した書式に整える</a></li>
+<li><a href="..\core\core.htm#日時形式化">文字列を日時形式型へ変換する</a></li>
+<li><a href="..\core\core.htm#反復文字">同じ文字を繰り返した文字列を返す</a></li>
+<li><a href="..\core\core.htm#プロセス">指定した名前のプロセスを終了させる</a></li>
+<li><a href="..\core\core.htm#プロセス一覧">起動しているプロセスを列挙する</a></li>
+<li><a href="..\core\core.htm#プロセスを取得する">ウィンドウ名からアプリのプロセスIDを取得する</a></li>
+<li><a href="..\core\core.htm#コマンド実行する">コマンドプロンプトの結果を取得する</a></li>
+<li><a href="..\core\core.htm#GUID値を生成する">GUID値を生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>匿名手順</h3><ul>
+<li><a href="..\core\delegate.htm#sample1">匿名手順を生成して呼び出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>エラー情報</h3><ul>
+<li><a href="..\core\errorinfo.htm#sample1">エラーが発生した時に理由を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>エクスプローラファイル</h3><ul>
+<li><a href="..\core\explorerfile.htm#ごみ箱へ移動する">ごみ箱へ移動する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル</h3><ul>
+<li><a href="..\core\file.htm#アクセス日">ファイルのアクセス日時を調べる</a></li>
+<li><a href="..\core\file.htm#アクセス日を変更する">ファイルのアクセス日時を修正する</a></li>
+<li><a href="..\core\file.htm#サイズ">ファイルサイズを求める</a></li>
+<li><a href="..\core\file.htm#更新日">ファイルの更新日時を調べる</a></li>
+<li><a href="..\core\file.htm#更新日を変更する">ファイルの更新日時を修正する</a></li>
+<li><a href="..\core\file.htm#作成日">ファイルの作成日時を調べる</a></li>
+<li><a href="..\core\file.htm#作成日を変更する">ファイルの作成日時を修正する</a></li>
+<li><a href="..\core\file.htm#存在する">ファイルが存在するかどうか調べる</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル操作</h3><ul>
+<li><a href="..\core\filecontrol.htm#コピーする">ファイルをコピーする</a></li>
+<li><a href="..\core\filecontrol.htm#サイズ形式">ファイルサイズの単位付きで求める</a></li>
+<li><a href="..\core\filecontrol.htm#移動する">ファイルを移動する</a></li>
+<li><a href="..\core\filecontrol.htm#読み込む">テキストファイルの内容を取得する</a></li>
+<li><a href="..\core\filecontrol.htm#削除する">ファイルを削除する</a></li>
+<li><a href="..\core\filecontrol.htm#ファイル名だけ">パスからファイル名だけを取り出す</a></li>
+<li><a href="..\core\filecontrol.htm#フォルダだけ">パスからフォルダ名だけを取り出す</a></li>
+<li><a href="..\core\filecontrol.htm#名前だけ">パスから拡張子を除くファイル名だけを取り出す</a></li>
+<li><a href="..\core\filecontrol.htm#拡張子だけ">パスから拡張子だけを取り出す</a></li>
+<li><a href="..\core\filecontrol.htm#相対パス">特定のフォルダを基準とする相対パスを求める</a></li>
+<li><a href="..\core\filecontrol.htm#拡張子を置き換える">パスから拡張子だけを取り出す</a></li>
+<li><a href="..\core\filecontrol.htm#追加する">テキストファイルへ追記する</a></li>
+<li><a href="..\core\filecontrol.htm#変更する">ファイル名を変更する</a></li>
+<li><a href="..\core\filecontrol.htm#保存する">テキストファイルを保存する</a></li>
+<li><a href="..\core\filecontrol.htm#ファイル属性を取得する">ファイル属性を調べる			</a></li>
+<li><a href="..\core\filecontrol.htm#ファイル属性を設定する">ファイル属性を修正する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル情報</h3><ul>
+<li><a href="..\core\fileinfo.htm#sample1">ファイルサイズなどを調べる</a></li>
+<li><a href="..\core\fileinfo.htm#sample2">フォルダの合計サイズを計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル読取器</h3><ul>
+<li><a href="..\core\filereader.htm#sample1">ファイルから1行ずつ読み取る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル書込器</h3><ul>
+<li><a href="..\core\filewriter.htm#sample1">ファイルへ一行ずつ書き出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フォルダ</h3><ul>
+<li><a href="..\core\folder.htm#作成する">フォルダを作成する</a></li>
+<li><a href="..\core\folder.htm#削除する">フォルダを削除する</a></li>
+<li><a href="..\core\folder.htm#存在する">フォルダが存在するか調べる</a></li>
+<li><a href="..\core\folder.htm#変更する">フォルダ名を修正する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フォルダ情報</h3><ul>
+<li><a href="..\core\folderinfo.htm#sample1">フォルダを作成してファイルをコピーする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>数学関数</h3><ul>
+<li><a href="..\core\math.htm#四捨五入">整数3桁目で四捨五入する </a></li>
+<li><a href="..\core\math.htm#四捨五入">小数点4桁目で四捨五入する </a></li>
+<li><a href="..\core\math.htm#切り捨てる">値を切り捨てる</a></li>
+<li><a href="..\core\math.htm#切り上げる">小数部を切り上げる</a></li>
+<li><a href="..\core\math.htm#絶対値">絶対値を求める</a></li>
+<li><a href="..\core\math.htm#対数">対数を求める</a></li>
+<li><a href="..\core\math.htm#平方根">平方根を求める</a></li>
+<li><a href="..\core\math.htm#乱数">乱数を求める</a></li>
+<li><a href="..\core\math.htm#論理積">論理積(AND)を求める</a></li>
+<li><a href="..\core\math.htm#論理和">論理和(OR)を求める</a></li>
+<li><a href="..\core\math.htm#排他的論理和">排他的論理和(XOR)を求める</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ネイティブ関数</h3><ul>
+<li><a href="..\core\nativefunc.htm#sample1">MessageBox関数を呼び出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ネイティブ参照</h3><ul>
+<li><a href="..\core\nativepointer.htm#sample1">GetUserName関数を呼び出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ネイティブ構造体</h3><ul>
+<li><a href="..\core\nativestruct.htm#sample1">GetCursorPos関数を呼び出す</a></li>
+<li><a href="..\core\nativestruct.htm#sample1">GetVersionEx関数を呼び出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プリンタ</h3><ul>
+<li><a href="..\core\printer.htm#sample1">指定した用紙サイズで印刷する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プロセス</h3><ul>
+<li><a href="..\core\process.htm#sample1">起動したアプリを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プロデル</h3><ul>
+<li><a href="..\core\produire.htm#sample1">プロデルのバージョン情報を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>キュー</h3><ul>
+<li><a href="..\core\queue.htm#sample1">キューで値を出し入れする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>正規表現</h3><ul>
+<li><a href="..\core\regexp.htm#lookup1">HTMLからタグを取り出す</a></li>
+<li><a href="..\core\regexp.htm#lookup2">住所から郵便番号だけを取り出す</a></li>
+<li><a href="..\core\regexp.htm#lookup3">サブマッチで電話番号を細かく分解する</a></li>
+<li><a href="..\core\regexp.htm#lookup4">HTMLからタグ名とその内容を取り出す</a></li>
+<li><a href="..\core\regexp.htm#lookup5">最短一致で検索する</a></li>
+<li><a href="..\core\regexp.htm#lookup6">HTMLから&lt;body&gt;タグの内容を取り出す</a></li>
+</ul></div>
+<div class="col-md-6"><h3>素材リスト</h3><ul>
+<li><a href="..\core\resource.htm#sample1">実行可能ファイルにファイルを埋め込む</a></li>
+<li><a href="..\core\resource.htm#sample2">実行可能ファイルに画像を埋め込む</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スタック</h3><ul>
+<li><a href="..\core\stack.htm#sample1">値をスタックに積む</a></li>
+</ul></div>
+<div class="col-md-6"><h3>文字列読込器</h3><ul>
+<li><a href="..\core\stringreader.htm#sample1">文字列を一文字ずつ読み取る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>文字列書込器</h3><ul>
+<li><a href="..\core\stringwriter.htm#sample1">長い文字列を繋ぎ合わせる</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スレッド</h3><ul>
+<li><a href="..\core\thread.htm#sample1">2つの処理を並列処理する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>タイマー</h3><ul>
+<li><a href="..\core\timer.htm#sample1">デジタル時計を作る</a></li>
+<li><a href="..\core\timer.htm#sample2">ストップウォッチを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>効果音</h3><ul>
+<li><a href="..\core\wave.htm#sample1">効果音を繰り返して再生する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>効果音ファイル</h3><ul>
+<li><a href="..\core\wavefile.htm#sample1">効果音を繰り返し再生する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>色選択画面</h3><ul>
+<li><a href="..\core\dialog\colordialog.htm#sample1">色を選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フォルダ選択画面</h3><ul>
+<li><a href="..\core\dialog\folderdialog.htm#sample1">フォルダを選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フォント選択画面</h3><ul>
+<li><a href="..\core\dialog\fontdialog.htm#sample1">フォントを選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>入力画面</h3><ul>
+<li><a href="..\core\dialog\inputdialog.htm#sample1">文字を入力してもらう画面を表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>開く画面</h3><ul>
+<li><a href="..\core\dialog\opendialog.htm#sample1">開くファイルを選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ページ設定画面</h3><ul>
+<li><a href="..\core\dialog\pagedialog.htm#sample1">ページ設定を表示して印刷する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>保存画面</h3><ul>
+<li><a href="..\core\dialog\savedialog.htm#sample1">ファイルの保存先を選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>COM型</h3><ul>
+<li><a href="..\core\reflection\comtype.htm#sample1">COMインタフェースでPDFファイルを開く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>種類定義</h3><ul>
+<li><a href="..\core\reflection\defconstruct.htm#sample1">手順の定義</a></li>
+<li><a href="..\core\reflection\defconstruct.htm#sample2">種類変数の定義</a></li>
+</ul></div>
+<div class="col-md-6"><h3>動詞定義</h3><ul>
+<li><a href="..\core\reflection\defdverb.htm#sample1">手順定義を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>変数定義</h3><ul>
+<li><a href="..\core\reflection\defvar.htm#sample1"></a></li>
+</ul></div>
+<div class="col-md-6"><h3>ドットネットアセンブリ</h3><ul>
+<li><a href="..\core\reflection\dotnetassembly.htm#sample1">.NET向けライブラリのクラスを利用する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ドットネット型</h3><ul>
+<li><a href="..\core\reflection\dotnettype.htm#sample1">StringBuilderクラスのインスタンスを生成する</a></li>
+<li><a href="..\core\reflection\dotnettype.htm#sample2">Stopwatchクラスのインスタンスを生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プロデルファイル</h3><ul>
+<li><a href="..\core\reflection\produirefile.htm#sample1">定義内容を調べる</a></li>
+<li><a href="..\core\reflection\produirefile.htm#sample2">種類定義と手順定義を追加する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>型情報</h3><ul>
+<li><a href="..\core\reflection\typeinfo.htm#sample1">変数の取得と設定</a></li>
+<li><a href="..\core\reflection\typeinfo.htm#sample2">変数一覧の値の取得</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ユーザ手順定義</h3><ul>
+<li><a href="..\core\reflection\userprocedure.htm#sample1">手順を生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>JSON形式</h3><ul>
+<li><a href="..\data\json.htm#samples">JSON形式を文字列として生成する</a></li>
+<li><a href="..\data\json.htm#samples">JSON形式の文字列から辞書を作る</a></li>
+<li><a href="..\data\json.htm#samples">JSON形式の文字列から配列と辞書を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>Accessデータベース</h3><ul>
+<li><a href="..\data\db\dbaccess.htm#sample1">Access用のデータベース(MDB)を操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>MySQLデータベース</h3><ul>
+<li><a href="..\data\db\dbmysql.htm#sample1">MySQLのデータベースを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>オラクルデータベース</h3><ul>
+<li><a href="..\data\db\dboracle.htm#sample1">Oracleデータベースを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>PostgreSQLデータベース</h3><ul>
+<li><a href="..\data\db\dbpostgresql.htm#sample1">PostgreSQLデータベースを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SQLiteデータベース</h3><ul>
+<li><a href="..\data\db\dbsqlite.htm#sample1">SQLiteのデータベースを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SQLServerデータベース</h3><ul>
+<li><a href="..\data\db\dbsqlserver.htm#sample1">SQLServerデータベースを操作する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>データ列</h3><ul>
+<li><a href="..\data\grid\datacolumn.htm#sample1">データ表に列を定義する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>データ行</h3><ul>
+<li><a href="..\data\grid\datarow.htm#sample1">データ表を編集できる表部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>データ表</h3><ul>
+<li><a href="..\data\grid\datatable.htm#sample1">データ表に行を追加・削除する</a></li>
+<li><a href="..\data\grid\datatable.htm#sample2">データ表のセルの値を設定・取得する</a></li>
+<li><a href="..\data\grid\datatable.htm#createcsv">CSVファイルを作成する</a></li>
+<li><a href="..\data\grid\datatable.htm#loadcsv">CSVファイルを読み込む</a></li>
+<li><a href="..\data\grid\datatable.htm#usearray">CSVファイルのデータを処理する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>表部品</h3><ul>
+<li><a href="..\data\grid\grid.htm#sample1">データ表から表部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>セル部品</h3><ul>
+<li><a href="..\data\grid\gridcell.htm#sample1">表部品で選択したセルの内容を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>セル部品装飾</h3><ul>
+<li><a href="..\data\grid\gridcellstyle.htm#sample1">奇数行と偶数行が色分けされた表を表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>列部品</h3><ul>
+<li><a href="..\data\grid\gridcolumn.htm#sample1">表部品の列の見出しや幅を変更する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>行部品</h3><ul>
+<li><a href="..\data\grid\gridrow.htm#sample1">各列部品に行番号を設定する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ボタン列部品</h3><ul>
+<li><a href="..\data\grid\grid\buttoncolumn.htm#sample1">表部品にボタンのセルを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>チェックボックス列部品</h3><ul>
+<li><a href="..\data\grid\grid\checkcolumn.htm#sample1">表部品にチェックボックス欄を追加する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>選択リスト列部品</h3><ul>
+<li><a href="..\data\grid\grid\comboboxcolumn.htm#sample1">表部品でプルダウン項目を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>XML</h3><ul>
+<li><a href="..\data\xml\xml.htm#sample1">XMLへ書き込む</a></li>
+<li><a href="..\data\xml\xml.htm#sample2">XMLから同じ名前の要素をすべて取り出す</a></li>
+<li><a href="..\data\xml\xml.htm#createxml">XML文章を作る</a></li>
+<li><a href="..\data\xml\xml.htm#addelement">要素を加える</a></li>
+<li><a href="..\data\xml\xml.htm#childelement">要素の中に要素を加える</a></li>
+<li><a href="..\data\xml\xml.htm#savexml">XMLファイルとして保存する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>XMLデータセクション要素</h3><ul>
+<li><a href="..\data\xml\xmlcdata.htm#sample1">CDATAセクションを含むXMLを生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>XMLコメント要素</h3><ul>
+<li><a href="..\data\xml\xmlcomment.htm#sample1">コメントを含むXMLを生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>XMLプロセッサ処理</h3><ul>
+<li><a href="..\data\xml\xmlprocinstru.htm#sample1">XMLスタイルシートを適用するXMLを生成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ドラッグドロップされた時の情報</h3><ul>
+<li><a href="..\events\dragdrop.htm#sample1">ドラッグ＆ドロップされたファイルをリストボックスへ追加する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>キーが押された時のイベント情報</h3><ul>
+<li><a href="..\events\keydown.htm#sample1">押されたキーによって動作を変化させるには</a></li>
+<li><a href="..\events\keydown.htm#sample2">カーソルキーで図形を移動する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>バイナリファイル</h3><ul>
+<li><a href="..\file\binaryfile.htm#sample1">バイナリ操作でファイルを作成する</a></li>
+<li><a href="..\file\binaryfile.htm#sample2">バイナリ操作でファイルを読み込む</a></li>
+</ul></div>
+<div class="col-md-6"><h3>デフレート圧縮方式</h3><ul>
+<li><a href="..\file\deflate.htm#sample1">deflate形式のファイルを展開する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ドライブ</h3><ul>
+<li><a href="..\file\drive.htm#sample1">選択リストにドライブ一覧を列挙する</a></li>
+<li><a href="..\file\drive.htm#sample2">リストビューにドライブ一覧を列挙する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>書庫ファイル操作</h3><ul>
+<li><a href="..\file\filearchiver.htm#lookup14">zipファイルなどを解凍する</a></li>
+<li><a href="..\file\filearchiver.htm#lookup15">zipファイルを作成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>書庫ファイル情報</h3><ul>
+<li><a href="..\file\filearchiverinfo.htm#sample1">書庫ファイルの情報を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル監視器</h3><ul>
+<li><a href="..\file\filewatcher.htm#sample1">特定のフォルダにあるファイルの操作を監視する</a></li>
+<li><a href="..\file\filewatcher.htm#sample2">特定のファイルを監視する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>GZIP圧縮方式</h3><ul>
+<li><a href="..\file\gzip.htm#sample1">GZIP形式のファイルを展開する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ショートカットファイル</h3><ul>
+<li><a href="..\file\shoutcut.htm#lookup1">ショートカットファイルを作成する</a></li>
+<li><a href="..\file\shoutcut.htm#lookup2">スタートアップにショートカットを登録する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>配列を扱う</h3><ul>
+<li><a href="..\lookup\array_lookup.htm#append">配列の追加と挿入</a></li>
+<li><a href="..\lookup\array_lookup.htm#strcreate">文字列から配列を作る</a></li>
+<li><a href="..\lookup\array_lookup.htm#savearray">配列をファイルへ格納する</a></li>
+<li><a href="..\lookup\array_lookup.htm#loadarray">配列をファイルから読み込む</a></li>
+<li><a href="..\lookup\array_lookup.htm#clone">配列の内容をコピーする</a></li>
+<li><a href="..\lookup\array_lookup.htm#arrayfunction">配列を操作する手順</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイルを扱う</h3><ul>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup1">ファイルのコピー</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup2">ファイルの移動</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup3">ファイル名の変更</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup4">ファイルの削除</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup5">ワイルドカードを使う</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup6">フォルダの一覧の列挙</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup7">ファイルが存在するかどうかを判定する</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup8">フォルダの作成</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup9">フォルダの削除</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup10">決められた場所のフォルダを指定する</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup11">フォルダ一覧の列挙</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup12">フォルダが存在するかどうかを判定する</a></li>
+<li><a href="..\lookup\filesystem_lookup.htm#lookup13">フォルダを選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>カメで図形を描く</h3><ul>
+<li><a href="..\lookup\kame_lookup.htm#lookup2">「円」を描く</a></li>
+<li><a href="..\lookup\kame_lookup.htm#lookup3">枝を描く</a></li>
+<li><a href="..\lookup\kame_lookup.htm#lookup4">色を変える</a></li>
+<li><a href="..\lookup\kame_lookup.htm#lookup5">「枝」手順を組み合わせて模様を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>Microsoft Excelを制御する</h3><ul>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup1">Excelを起動する</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup2">既存のxlsファイルを開く</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup3">セルに文字列を入力する</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup4">セルを選択する</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup5">見た目を変える</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup6">エクセルの保存と終了</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup7">シートへ自動入力する例</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup8">マクロを実行する</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup9">ブックやシートの切り替え</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup10">エクセルで開いているファイルの一覧を取得する</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup11">シートの追加</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup12">シートの削除</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup15">シートのコピー</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup13">シートの並び順の変更</a></li>
+<li><a href="..\lookup\office_excel_lookup.htm#lookup14">エクセル連係の拡張</a></li>
+</ul></div>
+<div class="col-md-6"><h3>Microsoft Wordを制御する</h3><ul>
+<li><a href="..\lookup\office_word_lookup.htm#lookup1">Wordを起動する</a></li>
+<li><a href="..\lookup\office_word_lookup.htm#lookup2">テキストの入力</a></li>
+<li><a href="..\lookup\office_word_lookup.htm#lookup3">貼り付け・コピー・切り取り</a></li>
+<li><a href="..\lookup\office_word_lookup.htm#lookup4">ブックマークの登録と移動</a></li>
+<li><a href="..\lookup\office_word_lookup.htm#lookup5">ワード文章の保存</a></li>
+<li><a href="..\lookup\office_word_lookup.htm#lookup6">名前や日時が違う文章を自動的に作成する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>文字列を扱う</h3><ul>
+<li><a href="..\lookup\string_lookup.htm#string1">文字列の指定した部分の文字列を取り出す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string2">指定した位置以降の文字を取り出す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string3">文字を消す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string4">スペースを消す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string5">特定の文字を別の文字に置き換える</a></li>
+<li><a href="..\lookup\string_lookup.htm#string6">文字の位置を調べる</a></li>
+<li><a href="..\lookup\string_lookup.htm#string6">後ろから前方向へ探す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string7">文字列中に含まれる文字がいくつあるかを調べる</a></li>
+<li><a href="..\lookup\string_lookup.htm#string8">何行あるか調べる</a></li>
+<li><a href="..\lookup\string_lookup.htm#string9">同じ文字を繰り返す</a></li>
+<li><a href="..\lookup\string_lookup.htm#string10">スペースを入れる</a></li>
+</ul></div>
+<div class="col-md-6"><h3>Webアプリを作る</h3><ul>
+<li><a href="..\lookup\webapp.htm#lookup1">POSTによる引数の取得</a></li>
+<li><a href="..\lookup\webapp.htm#lookup2">Cookieの設定と取得</a></li>
+<li><a href="..\lookup\webapp.htm#lookup3">セッション変数の設定と取得</a></li>
+</ul></div>
+<div class="col-md-6"><h3>FTPクライアント</h3><ul>
+<li><a href="..\network\ftpclient.htm#sample1">FTPでファイルをアップロード・ダウンロードする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>簡易FTPクライアント</h3><ul>
+<li><a href="..\network\ftpsimpleclient.htm#sample1">FTPでファイルをアップロード・ダウンロードする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HTTP</h3><ul>
+<li><a href="..\network\http.htm#lookup1">ウェブサイトからページの内容を取得する</a></li>
+<li><a href="..\network\http.htm#lookup2">ウェブサイトからファイルをダウンロードする</a></li>
+<li><a href="..\network\http.htm#取得する">GET形式でHTMLを取得する</a></li>
+<li><a href="..\network\http.htm#送信する">POST形式で送信する</a></li>
+<li><a href="..\network\http.htm#送信する">ヘッダ情報を指定して送信する</a></li>
+<li><a href="..\network\http.htm#ダウンロードする">ファイルをダウンロードする			</a></li>
+<li><a href="..\network\http.htm#アップロードする">ファイルをアップロードする</a></li>
+<li><a href="..\network\http.htm#要求する">HTTP要求でHTMLを取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HTTP要求</h3><ul>
+<li><a href="..\network\httprequest.htm#sample1">UserAgentを指定してページを要求する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>TCPIPクライアント</h3><ul>
+<li><a href="..\network\tcpclient.htm#sample1">特定のTCPポートにメッセージを送信する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>TCPIPサーバ</h3><ul>
+<li><a href="..\network\tcpserver.htm#sample1">特定のTCPポートでメッセージを受信する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>添付ファイル</h3><ul>
+<li><a href="..\network\mail\attendedfile.htm#sample1">メール中の添付ファイルを保存する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メール機能</h3><ul>
+<li><a href="..\network\mail\index.htm#lookup1">メールの送信</a></li>
+<li><a href="..\network\mail\index.htm#loopkup2">アカウントの設定</a></li>
+<li><a href="..\network\mail\index.htm#lookup3">認証が必要なメールサーバの場合</a></li>
+<li><a href="..\network\mail\index.htm#lookup4">送信メールの作成</a></li>
+<li><a href="..\network\mail\index.htm#lookup5">メールの受信</a></li>
+<li><a href="..\network\mail\index.htm#lookup6">メールサーバにある受信メールの確認</a></li>
+<li><a href="..\network\mail\index.htm#lookup7">受信メールの取得</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メール管理</h3><ul>
+<li><a href="..\network\mail\mailmanager.htm#sample1">.emlファイルから件名と本文を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>受信メール</h3><ul>
+<li><a href="..\network\mail\receivemail.htm#sample1">メールを受信する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>送信メール</h3><ul>
+<li><a href="..\network\mail\sendmail.htm#sample1">メールを送信する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>セル</h3><ul>
+<li><a href="..\office\cell.htm#sample1">セルの内容と罫線を変更する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>エクセルコメント</h3><ul>
+<li><a href="..\office\excelcomment.htm#sample1">セルにコメントを追加します。</a></li>
+</ul></div>
+<div class="col-md-6"><h3>エクセル図形</h3><ul>
+<li><a href="..\office\excelshape.htm#sample1">Excelシートに図形を貼り付ける</a></li>
+</ul></div>
+<div class="col-md-6"><h3>パワーポイント</h3><ul>
+<li><a href="..\office\powerpoint.htm#sample1">PowerPointを起動してスライドを開く</a></li>
+<li><a href="..\office\powerpoint.htm#sample2">自動的にスライドを切り替える</a></li>
+</ul></div>
+<div class="col-md-6"><h3>パワーポイント図形</h3><ul>
+<li><a href="..\office\powershape.htm#sample1">スライドに画像を貼り付ける</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スライド</h3><ul>
+<li><a href="..\office\slide.htm#sample1">新しいスライドを追加する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ワード選択範囲</h3><ul>
+<li><a href="..\office\wordselection.htm#sample1">カーソル位置に指定した書式で文字を追加する</a></li>
+<li><a href="..\office\wordselection.htm#sample2">範囲を指定してコピーし貼り付ける</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ワード図形</h3><ul>
+<li><a href="..\office\wordshape.htm#sample1">文章に画像を貼り付ける</a></li>
+</ul></div>
+<div class="col-md-6"><h3>パターンブラシ</h3><ul>
+<li><a href="..\pgraphics\hatchbrush.htm#sample1">パターンハッチで塗りつぶす</a></li>
+</ul></div>
+<div class="col-md-6"><h3>アイコン画像</h3><ul>
+<li><a href="..\pgraphics\iconimage.htm#sample1">リソースからアイコンを抽出する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>画像効果</h3><ul>
+<li><a href="..\pgraphics\imageeffect.htm#sample1">画像の明るさを調整する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>カメ</h3><ul>
+<li><a href="..\pgraphics\kame.htm#sample1">カメで円を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>筆</h3><ul>
+<li><a href="..\pgraphics\pen.htm#sample1">破線を描く</a></li>
+<li><a href="..\pgraphics\pen.htm#sample1">グラデーションの直線を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スクリーンショット</h3><ul>
+<li><a href="..\pgraphics\screenshot.htm#sample1">画面のスクリーンショットを撮る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>塗りつぶしブラシ</h3><ul>
+<li><a href="..\pgraphics\solidbrush.htm#sample1">塗りつぶしした円を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>キャンバス</h3><ul>
+<li><a href="..\pgraphics\canvas\canvas.htm#sample1">図形や文字を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>円弧図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvasarc.htm#sample1">円弧を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>円図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvascircle.htm#sample1">円を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>曲線図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvascurve.htm#sample1">曲線を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>画像図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvasimage.htm#sample1">画像ファイルの画像を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>線図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvasline.htm#sample1">直線を描く</a></li>
+<li><a href="..\pgraphics\canvas\canvasline.htm#sample2">マウスで直線を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>連続線図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvaslines.htm#sample1">連続線を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>扇図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvaspie.htm#sample1">扇を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>多点図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvaspoints.htm#sample1">多角形を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>多角形図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvaspolygon.htm#sample1">多角形を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>四角形図形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvasrectangle.htm#sample1">四角形を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>角丸矩形</h3><ul>
+<li><a href="..\pgraphics\canvas\canvasrounded.htm#sample1">角丸矩形を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>キャンバス文字</h3><ul>
+<li><a href="..\pgraphics\canvas\canvastext.htm#sample1">文字を書く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>子キャンバス</h3><ul>
+<li><a href="..\pgraphics\canvas\subcanvas.htm#sample1">ドラッグできる図形を描く</a></li>
+</ul></div>
+<div class="col-md-6"><h3>基本フィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\basicfilter.htm#sample1">画像の明るさ・コントラスト・ガンマ値を調整する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>エンボスフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\embossfilter.htm#sample1">画像にエンボスフィルタを適用する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>グレイスケールフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\grayscalefilter.htm#sample1">画像にグレイスケール化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HLSフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\hlsfilter.htm#sample1">画像の色相・彩度・輝度を調整する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>画像フィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\imagefilter.htm#sample1"></a></li>
+</ul></div>
+<div class="col-md-6"><h3>モザイクフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\mosaicfilter.htm#sample1">画像をモザイク化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ネガポジフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\negaposifilter.htm#sample1">画像をネガポジ化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>RGBフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\rgbfilter.htm#sample1">画像の色味を調整する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>セピアフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\sepiafilter.htm#sample1">画像をセピア調にする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ぼかしフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\shadingfilter.htm#sample1">画像をぼかす</a></li>
+</ul></div>
+<div class="col-md-6"><h3>鮮明化フィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\sharpnessfilter.htm#sample1">画像を鮮明化する(シャープネス)</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ソラリゼーションフィルタ</h3><ul>
+<li><a href="..\pgraphics\effect\solarizationfilter.htm#sample1">画像にソラリゼーション効果を適用する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>AES暗号</h3><ul>
+<li><a href="..\plugins\crypto\aescrypto.htm#sample1">AES暗号で暗号化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>DES暗号</h3><ul>
+<li><a href="..\plugins\crypto\descrypto.htm#sample1">DES暗号で暗号化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>CRC32ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_crc32.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_crc32.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_crc32.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_crc32.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACSHA1ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmacsha1.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmacsha1.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmacsha1.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmacsha1.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACMD5ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_md5.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_md5.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_md5.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_md5.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACRIPEMD160ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_ripemd160.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_ripemd160.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_ripemd160.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_ripemd160.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACSHA1ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_sha1.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha1.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha1.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha1.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACSHA256ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_sha256.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha256.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha256.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha256.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACSHA384ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_sha384.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha384.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha384.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha384.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>HMACSHA512ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_hmac_sha512.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha512.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha512.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_hmac_sha512.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>MD5ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_md5.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_md5.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_md5.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_md5.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>RIPEMD160ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_ripemd160.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_ripemd160.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_ripemd160.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_ripemd160.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SHA1ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_sha1.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha1.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha1.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha1.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SHA256ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_sha256.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha256.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha256.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha256.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SHA384ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_sha384.htm#sample1">Shift-JISでハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha384.htm#sample2">UTF-8でハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha384.htm#sample3">バイナリ配列からハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha384.htm#sample4">ファイルのハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>SHA512ハッシュ値</h3><ul>
+<li><a href="..\plugins\crypto\hash_sha512.htm#sample1">Shift-JISでSHA512ハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha512.htm#sample2">UTF-8でSHA512ハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha512.htm#sample3">バイナリ配列からSHA512ハッシュ値を計算する</a></li>
+<li><a href="..\plugins\crypto\hash_sha512.htm#sample4">ファイルからSHA512ハッシュ値を計算する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>RC2暗号</h3><ul>
+<li><a href="..\plugins\crypto\rc2crypto.htm#sample1">RC2暗号で暗号化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>トリプルDES</h3><ul>
+<li><a href="..\plugins\crypto\triplecrypto.htm#sample1">トリプルDESで暗号化する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ゲームパッド</h3><ul>
+<li><a href="..\plugins\multimedia\gamepad.htm#sample1">ゲームパッドからボタンを受け取る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メロディ</h3><ul>
+<li><a href="..\plugins\multimedia\melody.htm#sample1">MIDIを使ってドレミで演奏する</a></li>
+<li><a href="..\plugins\multimedia\melody.htm#sample2">MIDIデバイスを選択して演奏する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>MIDI入力ポート</h3><ul>
+<li><a href="..\plugins\multimedia\midiin.htm#sample1">MIDIデバイスから送られたメッセージを受け取る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>バッテリ</h3><ul>
+<li><a href="..\plugins\systeminfo\battery.htm#sample1">バッテリの残量と接続状態を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>シリアル通信</h3><ul>
+<li><a href="..\plugins\systeminfo\comm.htm#sample1">シリアルポートへメッセージを送信する</a></li>
+<li><a href="..\plugins\systeminfo\comm.htm#sample2">シリアルポートからメッセージを受信する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>CPU</h3><ul>
+<li><a href="..\plugins\systeminfo\cpu.htm#sample1">CPUの使用率と固有情報を取得</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ファイル関連付け</h3><ul>
+<li><a href="..\plugins\systeminfo\fileassociation.htm#sample1">ファイルを関連付ける</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メモリ</h3><ul>
+<li><a href="..\plugins\systeminfo\memory.htm#sample1">メモリの状態を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>レジストリ</h3><ul>
+<li><a href="..\plugins\systeminfo\registry.htm#sample1">レジストリで値を読み書きする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>WMI</h3><ul>
+<li><a href="..\plugins\systeminfo\wmi.htm#sample1">WMIの情報を列挙する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>WMIオブジェクト</h3><ul>
+<li><a href="..\plugins\systeminfo\wmiobject.htm#sample1">WMIでCPUのクロック周波数を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>配列</h3><ul>
+<li><a href="..\primitive\array.htm#繋げる">配列の要素を一つの文字列に繋ぎ合わせる</a></li>
+<li><a href="..\primitive\array.htm#最大値">配列から最大値を調べる</a></li>
+<li><a href="..\primitive\array.htm#最小値">配列から最小値を調べる</a></li>
+<li><a href="..\primitive\array.htm#合計">合計を求める</a></li>
+<li><a href="..\primitive\array.htm#平均">平均を求める</a></li>
+<li><a href="..\primitive\array.htm#偏差値">偏差値を求める</a></li>
+<li><a href="..\primitive\array.htm#並び替える">配列を並び替える</a></li>
+</ul></div>
+<div class="col-md-6"><h3>バイナリデータ</h3><ul>
+<li><a href="..\primitive\bytes.htm#sample1">バイナリレベルでファイルを作成する</a></li>
+<li><a href="..\primitive\bytes.htm#samples2">バイナリの内容をダンプする</a></li>
+</ul></div>
+<div class="col-md-6"><h3>色情報</h3><ul>
+<li><a href="..\primitive\color.htm#sample1">RGBの色番号で色を指定する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>日時形式</h3><ul>
+<li><a href="..\primitive\datetime.htm#sample1">一日後の日付を求める</a></li>
+<li><a href="..\primitive\datetime.htm#後">2日後の日付を求める</a></li>
+<li><a href="..\primitive\datetime.htm#整える">日時を書式に整える</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フォント</h3><ul>
+<li><a href="..\primitive\font.htm#sample1">GUI部品のフォントを設定する</a></li>
+<li><a href="..\primitive\font.htm#sample2">フォントをキャンバスにすべて列挙する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プロデルアイコン</h3><ul>
+<li><a href="..\primitive\icon.htm#sample1">アイコンファイルのイメージサイズを取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>画像</h3><ul>
+<li><a href="..\primitive\image.htm#sample1">画像ファイルのイメージサイズを取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>座標</h3><ul>
+<li><a href="..\primitive\point.htm#sample1">座標を指定する</a></li>
+<li><a href="..\primitive\point.htm#sample2">座標が矩形の範囲にあるかどうか判定する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>矩形</h3><ul>
+<li><a href="..\primitive\rectangle.htm#sample1">矩形を指定する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>サイズ</h3><ul>
+<li><a href="..\primitive\size.htm#sample1">部品の幅と高さを取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>日時期間形式</h3><ul>
+<li><a href="..\primitive\timespan.htm#後">3時間後の経過時間を求める</a></li>
+<li><a href="..\primitive\timespan.htm#前">15分前の経過時間を求める</a></li>
+<li><a href="..\primitive\timespan.htm#時間差">2つの経過時間の差を求める</a></li>
+<li><a href="..\primitive\timespan.htm#整える">経過時間を決まった書式に整える</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ウェブブラウザ</h3><ul>
+<li><a href="..\wincontrol\browser.htm#lookup1">ウェブブラウザを操作する</a></li>
+<li><a href="..\wincontrol\browser.htm#lookup2">表示されているアドレスを調べる</a></li>
+<li><a href="..\wincontrol\browser.htm#lookup3">状況を表示したい</a></li>
+<li><a href="..\wincontrol\browser.htm#lookup4">表示されているページの内容を調べる</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ウェブブラウザページ</h3><ul>
+<li><a href="..\wincontrol\browser_page.htm#sample1">Yahoo!の検索窓から検索する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>テキスト領域</h3><ul>
+<li><a href="..\wincontrol\btextbox.htm#sample1">複数行のテキストボックスを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ボタン</h3><ul>
+<li><a href="..\wincontrol\button.htm#sample1">ボタンを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>カレンダ</h3><ul>
+<li><a href="..\wincontrol\calendar.htm#sample1">カレンダーから日付を選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>チェックボックス</h3><ul>
+<li><a href="..\wincontrol\checkbox.htm#sample1">チェックボックスを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>選択リスト</h3><ul>
+<li><a href="..\wincontrol\combobox.htm#sample1">プルダウンリストから選択するには</a></li>
+</ul></div>
+<div class="col-md-6"><h3>コンテキストメニュー</h3><ul>
+<li><a href="..\wincontrol\contextmenu.htm#sample1">コンテキストメニューを表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>日時選択欄</h3><ul>
+<li><a href="..\wincontrol\datepicker.htm#sample1">日時をプルダウンで選択する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>自動配置パネル</h3><ul>
+<li><a href="..\wincontrol\flowlayoutpanel.htm#sample1">フロートレイアウトで部品を配置する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>フレーム</h3><ul>
+<li><a href="..\wincontrol\frame.htm#sample1">部品のグループを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ラベル</h3><ul>
+<li><a href="..\wincontrol\label.htm#sample1">ラベルを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>リンクラベル</h3><ul>
+<li><a href="..\wincontrol\linkedlabel.htm#sample1">リンク付きのラベルを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>リストボックス</h3><ul>
+<li><a href="..\wincontrol\listbox.htm#sample1">リストボックスを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>リストビュー</h3><ul>
+<li><a href="..\wincontrol\listview.htm#lookup1">項目を追加する</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup2">項目をクリック・ダブルクリックしたときの手順を作る</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup3">見出し(カラムヘッダ)の追加と変更</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup4">リストビュー項目の名称を編集できるようにする</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup5">チェックボックスを付けて項目にチェックが入れられるようする</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup6">文字の色などを変更する</a></li>
+<li><a href="..\wincontrol\listview.htm#lookup7">リストビューの仮想項目</a></li>
+</ul></div>
+<div class="col-md-6"><h3>マスクテキスト</h3><ul>
+<li><a href="..\wincontrol\maskedtextbox.htm#sample1">自動整形されるテキストボックスを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メニュー</h3><ul>
+<li><a href="..\wincontrol\menu.htm#sample1">ウィンドウにメニューを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>オプション</h3><ul>
+<li><a href="..\wincontrol\option.htm#sample1">ラジオボタンを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>パネル</h3><ul>
+<li><a href="..\wincontrol\panel.htm#sample1">部品をまとめるパネルを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ピクチャー</h3><ul>
+<li><a href="..\wincontrol\picturebox.htm#sample1">画像を表示する部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プログレスバー</h3><ul>
+<li><a href="..\wincontrol\progressbar.htm#sample1">プログレスバーを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>書式付きテキスト</h3><ul>
+<li><a href="..\wincontrol\richtextbox.htm#sample1">リッチテキストを編集できる部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>画面領域</h3><ul>
+<li><a href="..\wincontrol\screenarea.htm#sample1">2番目のディスプレイの情報を取得する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スクロールバーベース</h3><ul>
+<li><a href="..\wincontrol\scrollbar.htm#sample1">スクロールバーを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>スライダ</h3><ul>
+<li><a href="..\wincontrol\slider.htm#sample1">スライダを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>分割パネル</h3><ul>
+<li><a href="..\wincontrol\splitter.htm#sample1">スプリッタ(分割線)を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ステータスバー</h3><ul>
+<li><a href="..\wincontrol\statusbar.htm#sample1">ステータスバーを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>タブフレーム</h3><ul>
+<li><a href="..\wincontrol\tabframe.htm#sample1">タブページを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>テキスト</h3><ul>
+<li><a href="..\wincontrol\textbox.htm#sample1">テキストボックスを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ツールバー</h3><ul>
+<li><a href="..\wincontrol\toolbar.htm#sample1">ツールバーを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ツリー</h3><ul>
+<li><a href="..\wincontrol\treeview.htm#lookup1">項目を追加する</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup2">ツリー項目の名称を編集できるようにする</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup3">チェックが入れられるようする</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup4">ツリー項目の文字の色などを変更する</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup5">ツリー項目をチェック可能にする</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup6">ツリー項目についてパスなどを調べる</a></li>
+<li><a href="..\wincontrol\treeview.htm#lookup7">エクスプローラ風フォルダーツリーを作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ツリーのイベント情報</h3><ul>
+<li><a href="..\wincontrol\treeview_event.htm#sample1">ツリーの名前を編集後に内容を更新する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>アップダウンリスト</h3><ul>
+<li><a href="..\wincontrol\updownlist.htm#sample1">項目を切り替えて選択する部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>アップダウンダイアル</h3><ul>
+<li><a href="..\wincontrol\updownnum.htm#sample1">数値を指定する部品を作る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ウィンドウ</h3><ul>
+<li><a href="..\wincontrol\window.htm#sample1">ウィンドウを表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ホットキー</h3><ul>
+<li><a href="..\wincontrol\mics\hotkey.htm#sample1">ホットキーを登録する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>通知アイコン</h3><ul>
+<li><a href="..\wincontrol\mics\notifyicon.htm#sample1">タスクバーの通知トレイにアイコンを表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ツールチップ</h3><ul>
+<li><a href="..\wincontrol\mics\tooltip.htm#sample1">チップテキストやバルーンで説明を表示する</a></li>
+</ul></div>
+<div class="col-md-6"><h3>状況ラベル部品</h3><ul>
+<li><a href="..\wincontrol\strip\statuslabel.htm#sample1">ステータスバーにメッセージを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>選択リスト部品</h3><ul>
+<li><a href="..\wincontrol\strip\stripcombo.htm#sample1">ツールバーとステータスバーにプルダウンを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ラベル部品</h3><ul>
+<li><a href="..\wincontrol\strip\striplabel.htm#sample1">ツールバーにラベルを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>プログレスバー部品</h3><ul>
+<li><a href="..\wincontrol\strip\stripprogress.htm#sample1">ステータスバーにプログレスバーを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>テキスト部品</h3><ul>
+<li><a href="..\wincontrol\strip\striptext.htm#sample1">ツールバーにテキストボックスを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>ボタン部品</h3><ul>
+<li><a href="..\wincontrol\strip\toolbutton.htm#sample1">ツールバーにボタンを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メニュー付きボタン部品</h3><ul>
+<li><a href="..\wincontrol\strip\toolbuttonandmenu.htm#sample1">ツールバーやステータスバーにメニュー付きボタンを貼る</a></li>
+</ul></div>
+<div class="col-md-6"><h3>メニューボタン部品</h3><ul>
+<li><a href="..\wincontrol\strip\toolmenubutton.htm#sample1">ツールバーやステータスバーにメニューボタンを貼る</a></li>
+</ul></div></div><!--/list-->
+	</div>
+		</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

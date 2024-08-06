@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>メモリ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="システム情報取得"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->メモリ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="system">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">システム情報取得</a></li>
+	    <li>メモリ</li>
+      </ul>
+	  <h1>メモリ</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>メモリの状況を取得するための種類です。</p>
+		<p><span class="label label-info">静的種類</span></p>
+		<h3>必要プラグイン</h3>
+		<p><a href="index.htm">システム情報取得</a></p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#更新する">更新する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="更新する">更新する</a></h3>
+			<p>メモリの状態を取得します</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="総領域">総領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>物理メモリと仮想メモリを合わせた容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="空き領域">空き領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>物理メモリと仮想メモリを合わせた空いている容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="使用率">使用率</a></th>
+					<th>数値</th>
+					<th>□</th>
+					<td>物理メモリと仮想メモリを合わせた使用率を表します</td>
+					</tr>
+				<tr>
+					<th><a name="総物理領域">総物理領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>物理上のメモリの総容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="空き物理領域">空き物理領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>物理上空いている容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="物理使用率">物理使用率</a></th>
+					<th>数値</th>
+					<th>□</th>
+					<td>物理上の使用されている割合を表します</td>
+					</tr>
+				<tr>
+					<th><a name="総ページ領域">総ページ領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>保持している仮想メモリ(ページングファイル)の容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="空きページ領域">空きページ領域</a></th>
+					<th>長整数</th>
+					<th>□</th>
+					<td>空いている仮想メモリの容量を表します</td>
+					</tr>
+				<tr>
+					<th><a name="ページ領域使用率">ページ領域使用率</a></th>
+					<th>数値</th>
+					<th>□</th>
+					<td>仮想メモリの使用されている割合を表します</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+		<h3 id="sample1">メモリの状態を取得する</h3>
+		<p>メモリの状態を表示します。</p>
+<pre class="code">メモリを更新する
+結果={「総領域」＝メモリの総領域のサイズ形式,
+「空き領域」＝（メモリの空き領域）のサイズ形式,
+「使用率」＝「［メモリの使用率］%」,
+「総物理領域」＝（メモリの総物理領域）のサイズ形式,
+「空き物理領域」＝（メモリの空き物理領域）のサイズ形式,
+「物理使用率」＝「［メモリの物理使用率］%」,
+「総ページ領域」＝（メモリの総ページ領域）のサイズ形式,
+「空きページ領域」＝（メモリの空きページ領域）のサイズ形式,
+「ページ領域使用率」＝「［メモリのページ領域使用率］%」}
+結果を情報アイコンで表示する</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

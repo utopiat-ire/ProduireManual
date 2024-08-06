@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>表部品 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品,グリッド"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->表部品<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="data">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">データ操作</a></li>
+	    <li>表部品</li>
+      </ul>
+	  <h1>表部品</h1>
+	  <h2>概要</h2>
+      <p>表計算ソフトのような編集可能な表が表示され値を編集できる部品です。</p>
+      <p align="center"><img alt="" src="grid.png" width="406" height="265"></p>
+      <p><span class="label label-warning">生成可能</span><span class="label label-success">ウィンドウ部品</span></p>
+      <h3>継承する種類</h3>
+      <p><a href="../../wincontrol/control.htm">ウィンドウ部品</a></p>
+      <h3>必要プラグイン</h3>
+      <p>データベース表部品(<a href="index.htm">Produire.Data.Grid.dll</a>) </p>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="datatable.htm">データ表</a></li>
+          <li>表部品
+            <ul>
+              <li><a href="gridcell.htm">セル部品</a></li>
+              <li><a href="gridrow.htm">行部品</a></li>
+              <li><a href="gridcolumn.htm">列部品</a></li>
+            </ul>
+          </li>
+      </ul>
+        <p>　</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+<h2>作成する方法</h2>
+		<pre class="format">【名前】という表部品を作る</pre>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="../../wincontrol/control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#加える">加える</a>　<a href="#消す">消す</a>　<a href="#すべて選択する">すべて選択する</a>　<a href="#選択解除する">選択解除する</a>　<a href="#編集する">編集する</a>　<a href="#キャンセルする">キャンセルする</a>　<a href="#確定する">確定する</a>　<a href="#セルを取得する">セルを取得する</a>　<a href="#セル部品を取得する">セル部品を取得する</a>　<a href="#行部品を取得する">行部品を取得する</a>　<a href="#列部品を取得する">列部品を取得する</a>　<a href="#昇順に並び替える">昇順に並び替える</a>　<a href="#降順に並び替える">降順に並び替える</a>　</div>
+		<div id="methods">
+			<h3>【自分】へ【列：<a href="gridcolumn.htm">列部品</a>】を、<a name="加える">加える</a></h3>
+			<p>指定した列を加えます。</p>
+			<h3>【自分】へ【行：<a href="gridrow.htm">行部品</a>】を、加える</h3>
+			<p>指定した行を加えます。</p>
+			<h3>【自分】から【列：<a href="gridcolumn.htm">列部品</a>】を、<a name="消す">消す</a></h3>
+			<p>指定した列を消します。</p>
+			<h3>【自分】から【列名：文字列】を、消す</h3>
+			<p>指定した名前の列を消します。</p>
+			<h3>【自分】から【行：<a href="gridrow.htm">行部品</a>】を、消す</h3>
+			<p>指定した行を消します。</p>
+			<h3>【自分】から【番号：整数】行目を、消す</h3>
+			<p>指定した行番号の行を消します。</p>
+			<h3>【自分】を、<a name="すべて選択する">すべて選択する</a></h3>
+			<p>セル全体を選択します。</p>
+			<h3>【自分】を、<a name="選択解除する">選択解除する</a></h3>
+			<p>セルの選択状態をすべて解除します。</p>
+			<h3>【自分】を、<a name="編集する">編集する</a></h3>
+			<p>選択しているセルを編集状態にします。</p>
+			<h3>【自分】を、<a name="キャンセルする">キャンセルする</a></h3>
+			<p>編集状態をキャンセルします。</p>
+			<h3>【自分】を、<a name="確定する">確定する</a></h3>
+			<p>編集状態を確定します。</p>
+			<h3>【自分】から【座標】にある、<a name="セルを取得する">セルを取得する</a>：<a href="gridcell.htm">セル</a></h3>
+			<p>表部品左上を基準に指定した座標位置(単位はピクセル)にあるセルを取得します。</p>
+			<pre class="code">表部品1のマウスカーソルが移動した時の手順
+	表部品1からイベントの座標にあるセルを取得して、選択セルとする
+	もし選択セルが無でないなら、
+		&quot;ラベル1&quot;の内容を「[選択セルの内容]を選択中」に変える
+	もし終わり
+終わり</pre>
+			<h3>【自分】から【行列】にある、<a name="セル部品を取得する">セル部品を取得する</a>：<a href="gridcell.htm">セル部品</a></h3>
+			<p>指定したセルにある行部品を取得します。</p>
+			<pre class="code">表部品1の{1,2}セル目からセル部品を取得する</pre>
+			<h3>【自分】の【行番号】行目から、<a name="行部品を取得する">行部品を取得する</a>：<a href="gridrow.htm">行部品</a></h3>
+			<p>指定した列にある行部品を取得します。</p>
+			<pre class="code">表部品1の1行目から行部品を取得する</pre>
+			<h3>【自分】の【列番号】列目から、<a name="列部品を取得する">列部品を取得する</a>：<a href="gridcolumn.htm">列部品</a></h3>
+			<p>指定した列にある列部品を取得します。</p>
+			<pre class="code">表部品1の2列目から列部品を取得する</pre>
+			<h3>【自分】の【列番号】列目を、<a name="昇順に並び替える">昇順に並び替える</a></h3>
+			<p>指定した列を並び替えます。</p>
+			<pre class="code">表部品1の2列目を昇順に並び替える</pre>
+			<h3>【自分】の【列番号】列目を、<a name="降順に並び替える">降順に並び替える</a></h3>
+			<p>指定した列を並び替えます。</p>
+			<pre class="code">表部品1の2列目を降順に並び替える</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>部品の<a href="../../wincontrol/control.htm">基本的な設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="データ表">データ表</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>使用する<a href="datatable.htm">データ表</a></td>
+					</tr>
+				<tr>
+					<th><a name="選択行一覧">選択行一覧</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>選択している<a href="gridrow.htm">行</a>の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="読み取り専用">読み取り専用</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>表を読み取り専用とするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="行追加可能">行追加可能</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>ユーザによる<a href="gridrow.htm">行</a>の追加が可能かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="行削除可能">行削除可能</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>ユーザによる<a href="gridrow.htm">行</a>の削除が可能かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="列移動可能">列移動可能</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>ユーザによる<a href="gridcolumn.htm">列</a>の移動が可能かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="列幅変更可能">列幅変更可能</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>ユーザによる<a href="gridcolumn.htm">列</a>の幅の変更が可能かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="行高さ変更可能">行高さ変更可能</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>ユーザによる<a href="gridrow.htm">行</a>の高さの変更が可能かどうか</td>
+					</tr>
+				<tr>
+					<th><a name="セルエラー表示">セルエラー表示</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td><a href="gridcell.htm">セル</a>にエラーメッセージが設定されたときに表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="セル説明表示">セル説明表示</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td><a href="gridcell.htm">セル</a>のツールチップとして説明を表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="編集箇所表示">編集箇所表示</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>編集箇所を表すアイコンを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="行エラー表示">行エラー表示</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td><a href="gridrow.htm">行</a>にエラーメッセージが設定されたときに表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="列一覧">列一覧</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>表にある<a href="gridcolumn.htm">列</a>の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="行一覧">行一覧</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>表にある<a href="gridrow.htm">行</a>の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="標準行装飾">標準行装飾</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>表の既定の<a href="gridcellstyle.htm">装飾</a></td>
+					</tr>
+				<tr>
+					<th><a name="奇数行装飾">奇数行装飾</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>奇数行の既定の<a href="gridcellstyle.htm">装飾</a></td>
+					</tr>
+				<tr>
+					<th><a name="列見出し表示">列見出し表示</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>列の見出しを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="列見出し高さ">列見出し高さ</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>列の見出しの高さ</td>
+					</tr>
+				<tr>
+					<th><a name="列見出し幅">列見出し幅</a></th>
+					<th>整数</th>
+					<th>○</th>
+					<td>すべての列見出しの共通の幅を設定します</td>
+					</tr>
+				<tr>
+					<th><a name="行見出し表示">行見出し表示</a></th>
+					<th>真偽</th>
+					<th>◎</th>
+					<td>行の見出しを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="行見出し高さ">行見出し高さ</a></th>
+					<th>整数</th>
+					<th>○</th>
+					<td>すべての列見出しの共通の高さを設定します</td>
+					</tr>
+				<tr>
+					<th><a name="行見出し幅">行見出し幅</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>行の見出しの幅</td>
+					</tr>
+				<tr>
+					<th><a name="列数">列数</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>表の列数</td>
+					</tr>
+				<tr>
+					<th><a name="行数">行数</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>表の行数</td>
+					</tr>
+				<tr>
+					<th><a name="新しい行番号">新しい行番号</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>新しい行の番号を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択セル">選択セル</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>選択している<a href="gridcell.htm">セル</a>を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択列">選択列</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>選択している<a href="gridcolumn.htm">列</a>を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択列">選択列番号</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>選択している列番号</td>
+					</tr>
+				<tr>
+					<th><a name="選択行">選択行</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>選択している<a href="gridrow.htm">行</a>を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択行">選択行番号</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>選択している行番号</td>
+					</tr>
+				<tr>
+					<th><a name="セル位置">セル位置</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>選択しているセルの位置</td>
+					</tr>
+				<tr>
+					<th><a name="セル一覧">セル一覧</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>表部品内のセルの全一覧を表します</td>
+					</tr>
+				<tr>
+					<th><a name="左上ヘッダ">左上ヘッダ</a></th>
+					<th>&nbsp;</th>
+					<th>◎</th>
+					<td>表部品内の左上にあるヘッダセル</td>
+					</tr>
+				<tr>
+					<th><a name="画面表示セル数">画面表示セル数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>表部品で画面に表示されているセルの数を表します</td>
+					</tr>
+				<tr>
+					<th><a name="表示セル数">表示セル数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>表部品で表示されているセルの数を表します</td>
+					</tr>
+				<tr>
+					<th><a name="選択セル数">選択セル数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>表部品で選択されているセルの数を表します</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="../../wincontrol/control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>イベント名</th>
+					<th>説明</th>
+					<th>情報</th>
+					</tr></thead>
+				<tr>
+					<th><a name="セルがクリックされた">セルがクリックされた</a></th>
+					<td>セルがクリックされた時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="ドラッグされた">セルがダブルクリックされた</a></th>
+					<td>セルがダブルクリックされた時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="セルの編集が開始された">セルの編集が開始された</a></th>
+					<td>セルの編集が開始された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="セルの編集が終了された">セルの編集が終了された</a></th>
+					<td>セルの編集が終了された時</td>
+					<td></td>
+					</tr>
+				<tr>
+					<th><a name="セルが検証する">セルが検証する</a></th>
+					<td>セルの内容が検証される時</td>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+					<th><a name="セルが検証された">セルが検証された</a></th>
+					<td>セルの内容が検証された時</td>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+					<th>セルが選択された</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+					<th>セルから離れた</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+					<th>セルの値が変更された</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+				  <th>セル部品がクリックされた</th>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+			  </tr>
+				<tr>
+				  <th>セル部品がダブルクリックされた</th>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+			  </tr>
+				</table>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">データ表から表部品を作る</h3>
+		<p>データ表を作成して、表部品に表示します。</p>
+<pre class="code">データというデータ表を作る
+データに{「名前」,「メール」,「誕生日」}という列を加える
+データへ｛名前=「秋山」,メール=「akiyama@yahou.co.jp」,誕生日=「1988/03/25」｝を加える
+データへ｛名前=「石川」,メール=「ishi@gmall.com」,誕生日=「1984/08/15」｝を加える
+データへ｛名前=「原口」,メール=「haragushi@potmail.co.jp」,誕生日=「1985/12/06」｝を加える
+データへ｛名前=「松下」,メール=「matsu@gmall.com」,誕生日=「1984/04/16」｝を加える
+データへ｛名前=「山中」,メール=「ymnk@potmail.co.jp」,誕生日=「1985/07/10」｝を加える
+
+メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+
+	はじめの手順
+		初期化する
+		表部品1のデータ表をデータに変える
+	終わり
+	初期化する手順
+		この実質大きさを｛442,258｝に変える
+		この内容を「表部品のテスト」に変える
+		ラベル1というラベルを作る
+			その内容を「ラベル1」に変える
+			その位置と大きさを｛259,16,39,12｝に変える
+		テキスト1というテキストを作る
+			その位置と大きさを｛12,13,241,19｝に変える
+		表部品1という表部品を作る
+		表部品1を初期化開始する
+			その位置と大きさを｛12,38,418,208｝に変える
+			その位置固定方向を「右＋左＋下＋上」に変える
+		表部品1を初期化終了する
+		この設計スケール比率を｛96,96｝に変える
+	終わり
+
+	表部品1のセルがクリックされた時の手順
+		ラベル1の内容は、「[イベントの行],[イベントの列]を選択中」
+		テキスト1の内容は、表部品1の選択セルの内容
+	終わり
+
+	テキスト1のキーが入力された時の手順
+		もしイベントのキー番号が13なら
+			表部品1の選択セルの内容は、テキスト1の内容
+		もし終わり
+	終わり
+終わり</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

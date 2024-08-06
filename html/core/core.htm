@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>基本 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->基本<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="global.htm">広域種類</a></li>
+	    <li>基本</li>
+      </ul>
+	  <h1>基本</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>「基本」種類では、プロデルの基本機能が利用できます。</p>
+		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
+		<p><a href="../usage.htm">
+			<span class="label label-info">静的種類</span><span class="label label-primary">広域種類</span></a></p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#アスキー番号">アスキー番号</a>　<a href="#キャラクタ">キャラクタ</a>　<a href="#文字化">文字化</a>　<a href="#終了する">終了する</a>　<a href="#種類名">種類名</a>　<a href="#実行する">実行する</a>　<a href="#スペース">スペース</a>　<a href="#パーセント形式">パーセント形式</a>　<a href="#一行だけ">一行だけ</a>　<a href="#開く">開く</a>　<a href="#環境変数">環境変数</a>　<a href="#起動する">起動する</a>　<a href="#起動して待つ">起動して待つ</a>　<a href="#入力する">入力する</a>　<a href="#起動時間">起動時間</a>　<a href="#区切る">区切る</a>　<a href="#個数">個数</a>　<a href="#交換する">交換する</a>　<a href="#行区切り">行区切り</a>　<a href="#行数">行数</a>　<a href="#使う">使う</a>　<a href="#時間形式">時間形式</a>　<a href="#質問する">質問する</a>　<a href="#整える">整える</a>　<a href="#開くファイルを選択する">開くファイルを選択する</a>　<a href="#保存するファイルを選択する">保存するファイルを選択する</a>　<a href="#フォルダを選択する">フォルダを選択する</a>　<a href="#色を選択する">色を選択する</a>　<a href="#フォントを選択する">フォントを選択する</a>　<a href="#待機する">待機する</a>　<a href="#休憩する">休憩する</a>　<a href="#代入する">代入する</a>　<a href="#通貨形式">通貨形式</a>　<a href="#日付形式">日付形式</a>　<a href="#日時形式化">日時形式化</a>　<a href="#入れる">入れる</a>　<a href="#反復文字">反復文字</a>　<a href="#表示する">表示する</a>　<a href="#待つ">待つ</a>　<a href="#文字数">文字数</a>　<a href="#変える">変える</a>　<a href="#報告する">報告する</a>　<a href="#出力する">出力する</a>　<a href="#プロセス">プロセス</a>　<a href="#プロセス一覧">プロセス一覧</a>　<a href="#プロセスを取得する">プロセスを取得する</a>　<a href="#プロデる">プロデる</a>　<a href="#命令する">命令する</a>　<a href="#プロデルへ命令する">プロデルへ命令する</a>　<a href="#コマンド実行する">コマンド実行する</a>　<a href="#数字である">数字である</a>　<a href="#文字である">文字である</a>　<a href="#ひらがなである">ひらがなである</a>　<a href="#カタカナである">カタカナである</a>　<a href="#全角である">全角である</a>　<a href="#半角である">半角である</a>　<a href="#アルファベットである">アルファベットである</a>　<a href="#記号である">記号である</a>　<a href="#空白である">空白である</a>　<a href="#大文字である">大文字である</a>　<a href="#小文字である">小文字である</a>　<a href="#正である">正である</a>　<a href="#負である">負である</a>　<a href="#若い">若い</a>　<a href="#若くない">若くない</a>　<a href="#ググる">ググる</a>　<a href="#ヤフーする">ヤフーする</a>　<a href="#Bingする">Bingする</a>　<a href="#切り替える">切り替える</a>　<a href="#解放する">解放する</a>　<a href="#GUID値を生成する">GUID値を生成する</a>　</div>
+		<div id="methods">
+			<h3>【文字】の<a name="アスキー番号">アスキー番号</a>：整数</h3>
+			<p>指定した文字のASCII番号を表します <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="アスキー番号">文字のASCII番号を取得する			</h4>
+			<pre class="code">「A」のアスキー番号を表示する</pre>
+			<h3>【文字】の<a name="キャラクタ">キャラクタ</a>：文字列</h3>
+			<p>指定したASCII番号に当たる文字を表します <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="キャラクタ">ASCII番号の文字を取得する</h4>
+			<pre class="code">65のキャラクタを表示する</pre>
+			<h3>【文字番号】を《【文字コード】で》<a name="文字化">文字化</a>：文字列</h3>
+			<p>文字コードで指定された文字番号に当たる文字を表します。<br>
+				文字コードを省略するとUnicodeとして扱われます。</p>
+			<pre class="code">「山」の文字番号を文字化して表示する</pre>
+			<h3><a name="終了する">終了する</a></h3>
+			<p>実行しているプログラムを終了します。</p>
+			<h3>【終了コード：整数】で終了する</h3>
+			<p>コンソール版の場合に、指定した終了コードで実行しているプログラムを終了します。<br>
+				プログラムの実行が成功した場合は0を返します。</p>
+			<h3>【オブジェクト】の<a name="種類名">種類名</a>：文字列</h3>
+			<p>指定したオブジェクトの種類名を表します。 <span class="label label-warning">名詞型手順</span></p>
+			<h3>【プロデルプログラムファイル】を、<a name="実行する">実行する</a></h3>
+			<p>指定したプロデルファイルにあるプログラムを実行します。</p>
+			<h3>【文字数】文字、<a name="スペース">スペース</a>：文字列</h3>
+			<p>指定した文字数のスペースを作ります <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">空白は、３文字のスペース
+「A［空白］B」を表示する</pre>
+			<h3>【表示桁数】桁、【数値】の<a name="パーセント形式">パーセント形式</a>：文字列</h3>
+			<p>指定した数値をパーセント形式で表示します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">０桁0.09のパーセント形式を表示する</pre>
+<h3>【内容】から【行数】行目を、<a name="一行だけ">一行だけ</a>：文字列</h3>
+			<p>内容から指定した行だけを取り出します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">行内容は、「あいう
+ABC
+123」から2行目を一行だけ
+行内容を表示する</pre>
+			<h3>【ファイル名】を〈【ウィンドウの状態】で【Verb】として〉、<a name="開く">開く</a>：<a href="process.htm">プロセス</a></h3>
+			<p>指定したファイルに関連付けられたアプリケーションを起動してファイルを開きます。<br>
+				【ウィンドウの状態】には、｛標準／裏／最小化／最大化｝が指定できます。<br>
+				【Verb】に指定できる内容は、関連付けられた拡張子やインストールされているアプリケーションによって異なります。</p>
+			<p>テキストファイルの内容を取得するには、<a href="file.htm#読み込む">ファイルの「読み込む」手順</a>を使います。</p>
+			<h4 data-ref="開く">ファイルを関連付けられたアプリで開く</h4>
+			<pre class="code">「［今の位置］test.txt」を開く</pre>
+			<p class="alert alert-warning" role="alert"> 実行可能ファイル(拡張子が.exe)のファイルでパラメータを指定したい場合は、「起動する」手順を使います。 </p>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、ファイル名にシステム領域を指定できません。</p>
+<h3>【変数名】の<a name="環境変数">環境変数</a>：文字列</h3>
+			<p>環境変数を取得します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">「PATH」の環境変数を表示する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、取得できません。</p>
+			<h3>【ファイル名】を【引数】として｛標準／裏／最小化／最大化｝で、<a name="起動する">起動する</a></h3>
+			<p>プログラムを起動します。<br>
+				戻り値として起動したプログラムの<a href="process.htm">プロセス</a>を表します。</p>
+<h4 data-ref="起動する">外部プログラムを起動する</h4>
+		  
+			<pre class="code">「notepad.exe」を起動する</pre>
+			<p class="alert alert-warning" role="alert"> 実行可能ファイル(拡張子が.exe)以外のファイルを開きたい場合は、「開く」手順を使います。</p>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、ファイル名にシステム領域を指定できません。			</p>
+			<h3>【ファイル名】を【引数】として｛標準／裏／最小化／最大化｝で、<a name="起動して待つ">起動して待つ</a></h3>
+			<p>プログラムを起動して、そのプログラムが終了するまで待機します。</p>
+		  <h4 data-ref="起動して待つ">プログラムを起動して終了するまで待機する</h4>
+			<pre class="code">
+「notepad.exe」を起動して待つ</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、ファイル名にシステム領域を指定できません。			</p>
+			<h3>【入力する内容】を〈【プログラム名】へ〉、<a name="入力する">入力する</a></h3>
+			<p>プログラム上でキーボード入力を表現します。<br>
+				プログラム名(ウィンドウ名またはプロセス名)が指定された場合は、そのプログラムに対して入力します。<br>
+				書き方は、<a href="../etc/sendkeys.htm">こちら</a>をご覧ください。</p>
+			<p><strong>関連項目</strong>　<a href="process.htm">プロセス</a></p>
+			<h4 data-ref="入力する">他のアプリに文字列を入力する</h4>
+			<pre class="code">「こんにちは」を入力する</pre>
+			<h3><a name="起動時間">起動時間</a>：整数</h3>
+			<p>パソコンを起動してからの時間をミリ秒で表します</p>
+			<pre class="code">起動時間を表示する
+じは、（起動時間/60/60/1000）の切り捨てたもの
+ふんは、（起動時間/60/1000-じ*60）の切り捨てたもの
+びょうは、（起動時間/1000-じ*60*60-ふん*60）の切り捨てたもの
+「［じ］:［ふん］:［びょう］」を表示する</pre>
+			<h3>【文字列】を【区切り文字】で、<a name="区切る">区切る</a>：配列</h3>
+			<p>文字列を区切り配列にします</p>
+			<pre class="code">内容は、「いち・に・さん」を「・」で区切り
+内容(2)を表示する</pre>
+			<h3>【文字列】を【区切り文字】文字ずつ、区切る：配列</h3>
+			<p>文字列を指定した文字数ごとに区切り配列にします</p>
+			<pre class="code">「あいうえお」を１文字ずつ区切って、結果とする
+結果を表示する</pre>
+			<h3>【文字列】から【探す文字】の<a name="個数">個数</a>：整数</h3>
+			<p>指定した文字列が何回含まれるか調べます <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="個数">文字列の登場回数を数える</h4>
+			<pre class="code">「niwaniwaniwaniwatorigairu」から「i」の個数を表示する</pre>
+			<h3>【変数1】と【変数2】を<a name="交換する">交換する</a></h3>
+			<p>2つの変数の内容を入れ替えます</p>
+			<pre class="code">あは、「あああ」
+いは、「いいい」
+あといを交換する
+いを表示する</pre>
+			<h3>【内容】の<a name="行区切り">行区切り</a>：配列</h3>
+			<p>内容を行ごとに区切り配列に変換します <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="行区切り">文字列を1行ごとに配列化する</h4>
+			<pre class="code">内容は、「おはようございます<br>こんにちは<br>こんばんは」
+内容を表示する
+分割は、内容の行区切り
+分割(2)を表示する</pre>
+			<h3>【内容】の<a name="行数">行数</a>：整数</h3>
+			<p>指定した内容の行数を表します <span class="label label-warning">名詞型手順</span></p>
+	      <h4 data-ref="行数">文字列の行数を数える</h4>
+			<pre class="code">「おはようございます<br>こんにちは<br>こんばんは」の行数を表示する</pre>
+			<h3>【名前】という【種類名】を<a name="使う">使う</a></h3>
+			<p>部品をメモリ上に作成して利用できる状態にします</p>
+			<h3>【文字】の<a name="時間形式">時間形式</a></h3>
+			<p>指定した文字を時間形式で表します <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="時間形式">文字列を時間形式に変換する</h4>
+			<pre class="code">「10:23」の時間形式を表示する</pre>
+			<h3>【メッセージ】を〈【アイコン】にして〉〈【選択肢】で〉〈【見出し】として〉<a name="質問する">質問する</a></h3>
+			<p>質問メッセージを表示します。</p>
+			<p>【アイコン】には、｛情報アイコン／警告アイコン／中止アイコン／質問アイコン｝が指定できます。<br>
+				【選択肢】には、｛はいといいえ／はいといいえとキャンセル ／OKとキャンセル／中止と再試行と無視／再試行とキャンセル｝が指定できます。</p>
+		  <h4 data-ref="質問する">はいといいえで尋ねる</h4>
+			<pre class="code">結果は、「よろしいですか？」をはいといいえで質問アイコンにして質問したもの
+結果を表示する</pre>
+			<h3>【メッセージ】を【選択肢】から〈【既定ボタン】にして〉〈【アイコン】で〉〈【見出し】として〉質問する</h3>
+			<p>質問メッセージを表示します。</p>
+			<p>【選択肢】には、｛はいといいえ／はいといいえとキャンセル ／OKとキャンセル／中止と再試行と無視／再試行とキャンセル｝が指定できます。<br>
+				【アイコン】には、｛情報アイコン／警告アイコン／中止アイコン／質問アイコン｝が指定できます。<br>
+				【既定ボタン】には、｛第1ボタン／第2ボタン／第3ボタン｝が指定できます。</p>
+			<pre class="code">結果は、「よろしいですか？」をはいといいえから第2ボタンにして質問アイコンで質問したもの
+結果を表示する</pre>
+			<h3>【内容】を【書式】桁に<a name="整える">整える</a>：文字列</h3>
+			<p>文字や数値を指定した書式に整えます</p>
+			<h4 data-ref="整える">数値を指定した書式に整える</h4>
+			<pre class="code">(500を5桁に整えたもの)を表示する</pre>
+			<pre class="code">「|」&amp;(「ABC」を10桁に整えたもの)&amp;「|」を表示する</pre>
+			<h3><a name="開くファイルを選択する">開くファイルを選択する</a></h3>
+			<p>ファイルを選択する画面を表示します。<br>
+				<a href="dialog/opendialog.htm">「開く画面」種類</a>の「表示する」手順と同じ操作です。</p>
+			<h3><a name="保存するファイルを選択する">保存するファイルを選択する</a></h3>
+			<p>保存するファイルの名前とフォルダを選択する画面を表示します。<br>
+				<a href="dialog/savedialog.htm">「保存画面」種類</a>の「表示する」手順と同じ操作です。</p>
+			<h3><a name="フォルダを選択する">フォルダを選択する</a></h3>
+			<p>フォルダを選択する画面を表示します。<br>
+				<a href="dialog/folderdialog.htm">「フォルダ選択画面」種類</a>の「表示する」手順と同じ操作です。</p>
+			<h3><a name="色を選択する">色を選択する</a></h3>
+			<p>色を選択する画面を表示します。<br>
+				<a href="dialog/colordialog.htm">「色選択画面」種類</a>の「表示する」手順と同じ操作です。</p>
+			<h3><a name="フォントを選択する">フォントを選択する</a></h3>
+			<p>フォントを選択する画面を表示します。<br>
+				<a href="dialog/fontdialog.htm">「フォント選択画面」種類</a>の「表示する」手順と同じ操作です。</p>
+			<h3><a name="待機する">待機する</a></h3>
+			<p>プログラムが終了するまでメッセージループを回り続けます。<br>
+				「終了する」手順が実行されるか、プロデル上で表示されたすべてのウィンドウが閉じられるまで、メッセージループを回り続けます。</p>
+			<p>この手順は、ウィンドウを使うプログラムで、イベントが発生するまで待機する場合に使います。</p>
+			<h3><a name="休憩する">休憩する</a></h3>
+			<p>GUI描画などの溜まっているWindowsメッセージをすべて処理します。</p>
+			<h3>【値】を【変数名】へ<a name="代入する">代入する</a></h3>
+			<p>値を代入します</p>
+			<pre class="code">メッセージに「こんにちは」を代入する
+メッセージを表示する</pre>
+			<h3>【表示桁数】桁、【数値】の<a name="通貨形式">通貨形式</a>：文字列</h3>
+			<p>指定した数値を通貨形式で表示します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">2桁100の通貨形式を表示する</pre>
+			<h3>【文字】の<a name="日付形式">日付形式</a></h3>
+			<p>指定した文字を日付形式で表します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">「09/01/02」の日付形式を表示する</pre>
+			<h3>【文字】の<a name="時間形式化">時間形式</a>：<a href="../primitive/datetime.htm">日時形式</a></h3>
+			<p>指定した文字を日付形式で表します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">「12:23:45」の時間形式化を表示する</pre>
+			<h3>【文字】の<a name="日時形式化">日時形式化</a>：<a href="../primitive/datetime.htm">日時形式</a></h3>
+			<p>指定した文字を日付形式で表します <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="日時形式化">文字列を日時形式型へ変換する</h4>
+			<pre class="code">日付は、「09/01/02 12:23:45」を日時形式化
+日付の年を報告する
+日付の分を報告する</pre>
+			<h3>【値】を【変数名】へ<a name="入れる">入れる</a></h3>
+			<p>値を代入します</p>
+			<pre class="code">メッセージに「こんにちは」を入れる
+メッセージを表示する</pre>
+			<h3>【文字】を【回数】回、<a name="反復文字">反復文字</a>：文字列</h3>
+			<p>同じ文字を指定した回数繰り返した文字を作ります <span class="label label-warning">名詞型手順</span></p>
+			<h4 data-ref="反復文字">同じ文字を繰り返した文字列を返す</h4>
+			<pre class="code">内容は、「ほげ」を５回反復文字
+内容を表示する</pre>
+			<h3>【メッセージ】を〈【アイコン】で〉〈【見出し】として〉<a name="表示する">表示する</a></h3>
+			<p>メッセージボックスを表示します。<br>
+				オブジェクトを指定した場合、その種類によって動作が異なります。</p>
+			<p>【アイコン】には、｛情報アイコン／警告アイコン／中止アイコン／質問アイコン｝が指定できます。<br>
+				【見出し】には、メッセージボックスのタイトル部分を指定できます。</p>
+			<pre class="code">「ファイルが見つかりません」を「エラー」として警告アイコンで表示する</pre>
+			<h3>【秒数：倍浮動小数】秒、<a name="待つ">待つ</a></h3>
+			<p>指定した秒数だけ、プログラムの実行を一時停止します。</p>
+			<pre class="code">10秒待つ</pre>
+			<h3>【文字】の<a name="文字数">文字数</a>：整数</h3>
+			<p>文字の文字数を表します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">「あいうえお」の文字数を表示する</pre>
+			<h3>【オブジェクト】の【設定項目】を【内容】へ<a name="変える">変える</a></h3>
+			<p>オブジェクトの設定項目の値を変えます</p>
+			<h3>【内容】を〈改行せず〉<a name="報告する">報告する</a></h3>
+			<p>プロデルデザイナの調査ウィンドウに内容を表示します</p>
+			<pre class="code">「報告」を報告する
+「連絡」を改行せず報告する
+「相談」を報告する</pre>
+			<h3>【内容】を<a name="出力する">出力する</a></h3>
+			<p>出力先に文字列を出力します。<br>
+				プロデルデザイン上では、調査ウィンドウに出力されます。<br>
+				コンソール版の場合、コンソールに出力されます。</p>
+			<pre class="code">「こんにちは」を出力する</pre>
+<h3>【プロセス名:文字列】の<a name="プロセス">プロセス</a>：<a href="process.htm">プロセス</a></h3>
+			<p>指定したプロセス名のプロセスを1つだけ取得します。 <span class="label label-warning">名詞型手順</span></p>
+			<p>プロセス名は、タスクマネージャや「プロセス」種類の「名前」設定項目で取得できます。</p>
+			<h4 data-ref="プロセス">指定した名前のプロセスを終了させる</h4>
+			<pre class="code">
+「notepad」のプロセスを終了する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、実行できません。</p>
+			<h3>【プロセスID:整数】のプロセス：<a href="process.htm">プロセス</a></h3>
+			<p>指定したプロセスIDのプロセスを1つだけ「<a href="process.htm">プロセス</a>」種類として取得します。 
+				<span class="label label-warning">名詞型手順</span></p>
+			<p>プロセスIDは、タスクマネージャや「プロセス」種類の「ID」設定項目で取得できます。</p>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、取得できません。</p>
+			<h3>【プロセス名】の<a name="プロセス一覧">プロセス一覧</a>：<a href="process.htm">プロセス</a>の配列</h3>
+			<p>指定したプロセス名のプロセスをすべて取得します。 <span class="label label-warning">名詞型手順</span><br>
+				結果として「<a href="process.htm">プロセス</a>」種類の配列を表します。</p>
+			<h4 data-ref="プロセス一覧">起動しているプロセスを列挙する</h4>
+			<pre class="code">(「notepad」のプロセス一覧)すべてのIDを表示する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、取得できません。</p>
+			<h3>【ウィンドウ名】という<a name="プロセスを取得する">プロセスを取得する</a>：<a href="process.htm">プロセス</a></h3>
+			<p>指定した名前のウィンドウ名を持つプロセスを「<a href="process.htm">プロセス</a>」オブジェクトとして取得します。</p>
+			<h4 data-ref="プロセスを取得する">ウィンドウ名からアプリのプロセスIDを取得する</h4>
+			<pre class="code">「無題 - メモ帳」というプロセスを取得してそのIDを報告する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、取得できません。</p>
+			<h3>【プログラム】を<a name="プロデる">プロデる</a>：オブジェクト</h3>
+			<p>プログラムをプロデルのプログラムとして実行します。</p>
+			<pre class="code">「「「こんにちは」を表示する」」をプロデる</pre>
+			<h3>【プログラム】を<a name="命令する">命令する</a></h3>
+			<p>「プロデる」手順と同じです。</p>
+			<h3>【プロデルプログラムファイル】を<a name="プロデルへ命令する">プロデルへ命令する</a></h3>
+			<p>「プロデる」手順と同じです。</p>
+			<h3>【コマンドライン】を<a name="コマンド実行する">コマンド実行する</a>：文字列</h3>
+			<p>コマンドプロンプト上で、指定したコマンドを実行します。<br>
+				結果としてコマンドの結果(標準出力)を文字列として表します。</p>
+			<h4 data-ref="コマンド実行する">コマンドプロンプトの結果を取得する</h4>
+			<pre class="code">「dir /w」をコマンド実行して報告する</pre>
+			<p><span class="label label-danger">保護あり</span>　保護機能の有効時は、取得できません。</p>
+			<h3>【内容:文字列】が<a name="数字である">数字である</a>：真偽値</h3>
+			<p>指定した内容が、数字であるかどうかを判定します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「3.14」が数字である]なら、「数字です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="文字である">文字である</a>：真偽値</h3>
+			<p>指定した内容が、数字以外の文字であるかどうかを判定します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「Abc」が文字である]なら、「文字です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="ひらがなである">ひらがなである</a>：真偽値</h3>
+			<p>指定した内容が、すべてひらがなであるかどうかを判定します。 <span class="label label-warning">名詞型手順</span><br>
+				なお、内容の一部に記号や空白が含まれる場合は、それらは判定から除外されます。</p>
+			<pre class="code">もし[「みなとみらい」が&quot;ひらがなである&quot;]なら、「ひらがなです」を表示する</pre>
+			<h3>【内容:文字列】が<a name="カタカナである">カタカナである</a>：真偽値</h3>
+			<p>指定した内容が、すべてカタカナであるかどうかを判定します。 <span class="label label-warning">名詞型手順</span><br>
+				なお、内容の一部に記号や空白が含まれる場合は、それらは判定から除外されます。</p>
+			<pre class="code">もし[「ベイブリッジ」がカタカナである]なら、「カタカナです」を表示する</pre>
+			<h3>【内容:文字列】が<a name="全角である">全角である</a>：真偽値</h3>
+			<p>指定した内容が、すべて全角であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「Ｗｉｎｄｏｗｓ」が全角である]なら、「全角文字です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="半角である">半角である</a>：真偽値</h3>
+			<p>指定した内容が、すべて半角文字であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「Windows」が半角である]なら、「半角文字です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="アルファベットである">アルファベットである</a>：真偽値</h3>
+			<p>指定した内容が、すべて英字文字(アルファベット)であるかどうかを判定します。<br>
+				内容の一部に記号文字が含まれる場合は、その文字は判定に含まれません。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「ABC」がアルファベットである]なら、「アルファベットです」を表示する</pre>
+			<h3>【内容:文字列】が<a name="記号である">記号である</a>：真偽値</h3>
+			<p>指定した内容が、すべて記号であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「+」が記号である]なら、「記号です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="空白である">空白である</a>：真偽値</h3>
+			<p>指定した内容が、すべて空白であるかどうかを判定します <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「 」が空白である]なら、「空白です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="大文字である">大文字である</a>：真偽値</h3>
+			<p>指定した内容が、すべて大文字であるかどうかを判定します。<br>
+				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「ABC」が大文字である]なら、「大文字です」を表示する</pre>
+			<h3>【内容:文字列】が<a name="小文字である">小文字である</a>：真偽値</h3>
+			<p>指定した内容が、すべて小文字であるかどうかを判定します。<br>
+				なお、空白と記号は、判定から除外されます。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[「abc」が小文字である]なら、「小文字です」を表示する</pre>
+			<h3>【値:数値】が<a name="正である">正である</a>：真偽値</h3>
+			<p>指定した数値が、正数であるかどうかを判定します。<br>
+				0より大きければ○を表します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[10が正である]なら、「正です」を表示する</pre>
+			<h3>【値:数値】が<a name="負である">負である</a>：真偽値</h3>
+			<p>指定した数値が、負数であるかどうかを判定します。<br>
+				0より小さければ○を表します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[-10が負である]なら、「負です」を表示する</pre>
+			<h3>【内容1:文字列】が【内容2:文字列】より<a name="若い">若い</a>：真偽値</h3>
+			<p>内容1が内容2より、文字列として辞書順で若いかどうかを判定します。<br>
+				内容1が、文字番号が小さい、文字数が少ない時に○を表します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[10が正である]なら、「正です」を表示する</pre>
+			<h3>【内容1:文字列】が【内容2:文字列】より<a name="若くない">若くない</a>：真偽値</h3>
+			<p>内容1が内容2より、文字列として辞書順で若くない(大きい)かどうかを判定します。<br>
+				内容1が、文字番号が大きさ、文字数が多い時に○を表します。 <span class="label label-warning">名詞型手順</span></p>
+			<pre class="code">もし[-10が負である]なら、「負です」を表示する</pre>
+			<h3>【検索キーワード】を<a name="ググる">ググる</a></h3>
+			<p>既定のブラウザを起動して、Google検索を行います。</p>
+			<pre class="code">「プロデル」をググる</pre>
+			<h3>【検索キーワード】を<a name="ヤフーする">ヤフーする</a></h3>
+			<p>既定のブラウザを起動して、Yahoo! Japanで検索を行います。</p>
+			<pre class="code">「プロデル」をヤフーする</pre>
+			<h3>【検索キーワード】を<a name="Bingする">Bingする</a></h3>
+			<p>既定のブラウザを起動して、Bing検索を行います。</p>
+			<pre class="code">「プロデル」をBingする</pre>
+			<h3>【ウィンドウ名】へ<a name="切り替える">切り替える</a>：<a href="process.htm">プロセス</a></h3>
+			<p>指定した名前のウィンドウを持つ他のプロセスへ切り替えます。<br>
+				切り替え先のプロセスを戻り値として表されます。</p>
+			<pre class="code">「メモ帳」へ切り替える</pre>
+			<h3>【オブジェクト】を<a name="解放する">解放する</a>：<a href="process.htm">プロセス</a></h3>
+			<ul>
+				<li>オブジェクト：基本オブジェクト</li>
+				</ul>
+			<p>指定したオブジェクトをメモリ上から解放します。<br>
+				解放できるオブジェクトは、メモリを多く消費したり、別のリソースを利用する種類に限られています。</p>
+			<pre class="code">OKボタンというボタンを作る
+OKボタンを解放する</pre>
+			<h3><a name="GUID値を生成する">GUID値を生成する</a>：文字列</h3>
+			<p>重複しない値であるGUID値を生成します。</p>
+			<h4 data-ref="GUID値を生成する">GUID値を生成する</h4>
+			<pre class="code">GUID値を生成して報告する</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="選択プロセス">選択プロセス</a></th>
+					<th><a href="process.htm">プロセス</a></th>
+					<th>□</th>
+					<td>選択しているウィンドウの<a href="process.htm">プロセス</a></td>
+					</tr>
+				<tr>
+					<th><a name="現在プロセス">現在プロセス</a></th>
+					<th><a href="process.htm">プロセス</a></th>
+					<th>□</th>
+					<td>実行中のプログラムの<a href="process.htm">プロセス</a></td>
+					</tr>
+				<tr>
+					<th><a name="起動中プロセス一覧">起動中プロセス一覧</a></th>
+					<th><a href="process.htm">プロセス</a>の配列</th>
+					<th>□</th>
+					<td>起動中のすべてのプログラムの<a href="process.htm">プロセス</a></td>
+					</tr>
+				<tr>
+					<th><a name="タブ">タブ</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>タブ文字を表します</td>
+					</tr>
+				<tr>
+					<th><a name="フォント一覧">フォント一覧</a></th>
+					<th>文字列配列</th>
+					<th>□</th>
+					<td>インストールされているフォントの名称一覧を表します</td>
+					</tr>
+				<tr>
+					<th><a name="プリンタ一覧">プリンタ一覧</a></th>
+					<th>文字列配列</th>
+					<th>□</th>
+					<td>インストールされているプリンタの名称一覧を表します</td>
+					</tr>
+				<tr>
+					<th><a name="改行">改行</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>改行文字を表します</td>
+					</tr>
+				<tr>
+					<th><a name="去年">去年</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>去年の年数を表します</td>
+					</tr>
+				<tr>
+					<th><a name="今月">今月</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>今月を表します</td>
+					</tr>
+				<tr>
+					<th><a name="今日">今日</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>今の日付と時刻を表します</td>
+					</tr>
+				<tr>
+					<th><a name="今年">今年</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>今年の年数を表します</td>
+					</tr>
+				<tr>
+					<th><a name="昨日">昨日</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>昨日の日付と時刻を表します</td>
+					</tr>
+				<tr>
+					<th><a name="時刻">時刻</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>今日の時刻を表します</td>
+					</tr>
+				<tr>
+					<th><a name="先月">先月</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>先月を表します</td>
+					</tr>
+				<tr>
+					<th><a name="日付">日付</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>今日の日付を表します</td>
+					</tr>
+				<tr>
+					<th><a name="明日">明日</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>明日の日付と時刻を表します</td>
+					</tr>
+				<tr>
+					<th><a name="来月">来月</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>来月を表します</td>
+					</tr>
+				<tr>
+					<th><a name="来年">来年</a></th>
+					<th>日時形式</th>
+					<th>□</th>
+					<td>来年の年数を表します</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月31日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

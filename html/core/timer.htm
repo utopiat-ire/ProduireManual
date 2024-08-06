@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>タイマー - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->タイマー<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="index.htm">基本機能</a></li>
+							<li><a href="global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">基本機能</a></li>
+	    <li>タイマー</li>
+      </ul>
+	  <h1>タイマー</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>一定間隔置きに手順を実行させられる種類です。</p>
+		<p><span class="label label-warning">生成可能</span></p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というタイマーを作る</pre>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#開始する">開始する</a>　<a href="#停止する">停止する</a>　<a href="#動作中">動作中</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="開始する">開始する</a></h3>
+			<p>タイマーを開始します</p>
+			<h3>【自分】を<a name="停止する">停止する</a></h3>
+			<p>タイマーを停止します</p>
+			<h3>【自分】が<a name="動作中">動作中</a>：真偽値</h3>
+			<p>タイマーが動作中かどうか</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="間隔">間隔</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>タイマーの間隔</td>
+					</tr>
+				</table>
+			</div>
+		<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		<h2 id="イベント手順">イベント手順</h2>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>イベント名</th>
+						<th>説明</th>
+						<th>情報</th>
+					</tr>
+				</thead>
+				<tr>
+					<th style="height: 21px"><a name="時間になった">時間になった</a></th>
+					<td style="height: 21px">タイマーが一定時間になった時</td>
+					<td style="height: 21px"></td>
+					</tr>
+				</table>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+        <div id="samples">
+          <h3 id="sample1">デジタル時計を作る</h3>
+          <p>1秒おきに現在時刻を表示します。</p>
+  <pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを受け継ぐ
+	
+	はじめの手順
+		この内容を「タイマー」に変える
+		この種類を「固定」に変える
+		この実質大きさを｛100,80｝に変える
+		この最大化ボタンを×に変える
+		
+		時刻表示板というラベルを作る
+			その位置と大きさを、｛10,10,100,30｝に変える
+			その内容を時刻に変える
+			その文字サイズを18に変える
+			その背景色を黄緑に変える
+		この設計スケール比率を｛96,96｝に変える
+		タイマー1というタイマーを作る
+		タイマー1の時間になった時の手順は、時間になった
+		タイマー1の間隔を1000に変える
+		タイマー1を開始する
+	終わり
+	
+	時間になった手順
+		時刻表示板の内容を時刻に変える
+	終わり
+終わり</pre>
+  <h3 id="sample2">ストップウォッチを作る</h3>
+  <pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+　　ウィンドウを継承する
+　　はじめの手順
+　　　　初期化する
+　　　　タイマー１というタイマーを作る
+　　　　タイマー１の間隔を1に変える
+　　　　カウンタは、0
+　　終わり
+　　初期化する手順
+　　　　この実質大きさを｛296,232｝に変える
+　　　　この内容を「カウントタイマー」に変える
+　　　　この間隔を｛4｝に変える
+　　　　初期化開始する
+　　　　ラベル1というラベルを作る
+　　　　　　その位置と大きさを｛62,102,176,60｝に変える
+　　　　　　その内容を「0」に変える
+　　　　　　そのフォントを「MS UI Gothic,18」に変える
+　　　　　　その文字配置を「中央」に変える
+　　　　　　その移動順を3に変える
+　　　　　　その間隔を｛4,0,4,0｝に変える
+　　　　ボタン1というボタンを作る
+　　　　　　その位置と大きさを｛62,36,176,34｝に変える
+　　　　　　その内容を「開始/停止ボタン」に変える
+　　　　　　その移動順を2に変える
+　　　　　　その間隔を｛4｝に変える
+　　　　初期化終了する
+　　　　この設計スケール比率を｛144,144｝に変える
+終わり
+
+　　ボタン1がクリックされた時の手順
+　　　　もしタイマー1が動作中なら
+　　　　　　タイマー1を停止する
+　　　　そうでなければ
+　　　　　　タイマー1を開始する
+　　　　もし終わり
+　　終わり
+　　タイマー１が時間になった時の手順
+　　　　カウンタを増やす
+　　　　ラベル1の内容は、カウンタ
+　　終わり
+終わり</pre>
+        </div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

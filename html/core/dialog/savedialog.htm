@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>保存画面 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="ダイアログ"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->保存画面<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../index.htm">基本機能</a></li>
+							<li><a href="../global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="core">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">基本機能</a></li>
+	    <li>保存画面</li>
+      </ul>
+	  <h1>保存画面</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="opendialog.htm">開く画面</a></li>
+          <li><a href="folderdialog.htm">フォルダ選択画面</a></li>
+          <li><a href="colordialog.htm">色選択画面</a></li>
+          <li><a href="fontdialog.htm">フォント選択画面</a></li>
+          <li><a href="inputdialog.htm">入力画面</a></li>
+      </ul>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>保存するファイルを選択する画面です。</p>
+		<p><span class="label label-info">静的種類</span></p>
+<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#表示する">表示する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="表示する">表示する</a></h3>
+			<p>保存する画面を表示します。<br>ファイルが指定された場合は○、キャンセルされた場合は×が返されます</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="キャンセル">キャンセル</a></th>
+					<th>真偽値</th><th>□</th><td>キャンセルボタンが押されたかどうかを表します</td>
+					</tr>
+				<tr>
+					<th><a name="タイトル">タイトル</a></th>
+					<th>文字列</th><th>◎</th><td>画面のタイトル</td>
+					</tr>
+				<tr>
+					<th><a name="ファイル名">ファイル名</a></th>
+					<th>文字列</th><th>◎</th><td>指定されたファイル名</td>
+					</tr>
+				<tr>
+					<th><a name="フォルダ名">フォルダ名</a></th>
+					<th>文字列</th><th>◎</th><td>最初に表示されるフォルダ</td>
+					</tr>
+				<tr>
+					<th><a name="種類">種類</a></th>
+					<th>文字列</th><th>◎</th><td>選択できるファイルの種類<br>
+						「|(説明)|*.(拡張子)・・・」の形式で指定します</td>
+					</tr>
+				<tr>
+					<th><a name="作成確認">作成確認</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>存在しないファイルの場合に作成することを確認するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="存在確認">存在確認</a></th>
+					<th>真偽値</th><th>◎</th><td>ファイルが存在するかどうか確認します</td>
+					</tr>
+				<tr>
+					<th><a name="拡張子付加">拡張子付加</a></th>
+					<th>真偽値</th><th>◎</th><td>拡張子が省略された場合に付加するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="パス存在確認">パス存在確認</a></th>
+					<th>真偽値</th><th>◎</th><td>存在しないパスが指定された際に警告を表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="ショートカット有効">ショートカット有効</a></th>
+					<th>真偽値</th><th>◎</th><td>ショートカット有効の参照先を選択するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="選択種類番号">選択種類番号</a></th>
+					<th>整数</th><th>◎</th><td>選択された種類の番号</td>
+					</tr>
+				<tr>
+					<th><a name="初期フォルダ復元">初期フォルダ復元</a></th>
+					<th>真偽値</th><th>◎</th><td>初期フォルダ復元</td>
+					</tr>
+				<tr>
+					<th><a name="複数拡張子">複数拡張子</a></th>
+					<th>真偽値</th><th>◎</th><td>複数拡張子</td>
+					</tr>
+				<tr>
+					<th><a name="有効ファイル名確認">有効ファイル名確認</a></th>
+					<th>真偽値</th><th>◎</th><td>有効なファイル名かどうか確認するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="既定拡張子">既定拡張子</a></th>
+					<th>文字列</th><th>◎</th><td>既定の拡張子</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">ファイルの保存先を選択する</h3>
+		<p>ファイルの保存先の選択画面を表示するプログラム例です。</p>
+		<pre class="code">保存画面のフィルタを「テキストファイル|*.txt;*.rdr|すべてのファイル|*.*」に変える
+ファイル名は、保存するファイルを選択したもの
+もしファイル名が無でなければ
+	ファイル名を報告する
+もし終わり</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2021年1月8日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

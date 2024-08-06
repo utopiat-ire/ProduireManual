@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>ブック - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ブック<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="office">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">Microsoft Office操作</a></li>
+	    <li><a href="excel.htm">エクセル</a></li>
+	    <li>ブック</li>
+      </ul>
+	  <h1>ブック</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="excel.htm">エクセル</a>
+            <ul>
+              <li><b><a href="workbook.htm">ブック</a></b>
+                <ul>
+                  <li><a href="worksheet.htm">シート</a>
+                    <ul>
+                      <li><a href="cell.htm">セル</a></li>
+                      <li><a href="excelshape.htm">エクセル図形</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+      </ul>
+        <p>　</p>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>Microsoft Excelのブックを操作するための種類です。<br>
+			シートの追加・削除や、ブック単位での印刷やマクロ実行などが可能です。</p>
+		<p>ブックとは、Excelのファイル一つ一つのことを表しています。<br>
+			つまり、Excelのファイルを開くと１つのブックが表示されます。<br>
+			ブックには、複数のシートが含まれています。		</p>
+		<h2>ブックの切り替え</h2>
+		<p>ブックは、ファイルの名前か開いた順番の番号で指定できます。</p>
+		<pre class="format">エクセルのワークブックを<span class="flag">【ブック名または番号】</span>に変える</pre>
+		<p>番号で指定する場合は、はじめに開いたブックを１とします。<br>
+			「エクセル」の「ワークブック一覧」設定項目の一覧と対応しています。</p>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<p>次の手順を利用できます。</p>
+		<div id="methodlist"><a href="#プレビューする">プレビューする</a>　<a href="#マクロ実行する">マクロ実行する</a>　<a href="#印刷する">印刷する</a>　<a href="#選択する">選択する</a>　<a href="#シートを追加する">シートを追加する</a>　<a href="#閉じる">閉じる</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="プレビューする">プレビューする</a></h3>
+			<p>ブックのプレビューを表示します</p>
+			<h3>【自分】にある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
+			<p>ブックに含まれるマクロを実行します<br>
+		  他のブックのマクロを実行する場合、下記参照</p>
+			<h3>【自分】を<a name="印刷する">印刷する</a></h3>
+			<p>ブックを印刷します</p>
+			<h3>【シート名】を<a name="選択する">選択する</a></h3>
+			<p>ワークシートを選択します</p>
+			<h3>【自分】に<a name="シートを追加する">シートを追加する</a>:シート</h3>
+			<p>現在のブックにシートを追加します</p>
+			<h3>【自分】を<a name="閉じる">閉じる</a></h3>
+			<p>ブックを閉じます</p>
+			<h3>【自分】を〈【ファイル名】へ〉<a name="保存する">保存する</a></h3>
+			<p>ブックを指定したファイル名で保存します。<br>
+[ファイル名]を省略すると、上書き保存されます。</p>
+			<pre class="code"><span class="rem"><font color="#008000">ーーブックの保存する</font></span>
+エクセルの現在ブックを「計画表.xls」に保存する</pre>
+			<h3>【自分】を【ファイル名】へ<a name="PDFで保存する">PDFで保存する</a></h3>
+			<p>文章をPDF形式で保存します。<br>
+				この手順は、Office 2007以降で利用できます。</p>
+			<pre class="code">エクセルの現在ブックを「計画表.pdf」へPDFで保存する</pre>
+			<p>&nbsp;</p>
+			<h3>【自分】を【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
+			<p>文章をXPS形式で保存します。<br>
+				この手順は、Office 2007以降で利用できます。</p>
+			<pre class="code">エクセルの現在ブックを「計画表.xps」にXPSで保存する</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<h4>書式</h4>
+		<pre class="format">【自分】の【設定項目】を【内容】に変える</pre>
+		<p>次の設定項目を利用できます。</p>
+		<div id="properties">
+		  <table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="ファイル名">ファイル名</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>ブックのファイル名</td>
+					</tr>
+				<tr>
+					<th><a name="ワークシート一覧">ワークシート一覧</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>ブックに含まれているシートの一覧</td>
+				</tr>
+				<tr>
+					<th><a name="ワークシート数">ワークシート数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>ブックに含まれているシートの数</td>
+				</tr>
+				<tr>
+					<th><a name="先頭シート">先頭シート</a></th>
+					<th>シート</th>
+					<th>□</th>
+					<td>ブックの先頭にあるシート</td>
+				</tr>
+				<tr>
+					<th><a name="末尾シート">末尾シート</a></th>
+					<th>シート</th>
+					<th>□</th>
+					<td>ブックの末尾にあるシート</td>
+				</tr>
+				</table>
+	  </div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<h3>マクロの実行</h3>
+		<p>「マクロ実行」手順で、プロデルからExcel上で作成したマクロ(VBA)を呼び出すことができます。<br>
+		</p>
+		<pre class="code">エクセルの現在ブックにある「TestMacro」をマクロ実行する</pre>
+		<h3>引数を持つ関数の実行</h3>
+		<p>次のような定義のマクロを実行します。<br>
+			Sub TestMacro2(Value As String, Title As String)</p>
+		<p>「マクロ実行」手順の【引数】には、配列形式で書きます。</p>
+<pre class="code">エクセルにある 「TestMacro2」を｛「Hello」,「Message」｝でマクロ実行する</pre>
+		<h3>別シートに定義したマクロの実行</h3>
+	  <p>Sheet1に定義したTestMacroというマクロを実行します。</p>
+<pre class="code">エクセルの現在ブックにある「Sheet1.TestMacro」をマクロ実行する</pre>
+		<h3>他のブックのマクロの実行</h3>
+		<p>計画表.xlsmというブックのTestMacroというマクロを実行します。<br>
+      </p>
+<pre class="code">エクセルで「計画表.xlsm」を開く
+エクセルにある「計画表.xlsm!TestMacro」をマクロ実行する</pre>
+		<p>　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

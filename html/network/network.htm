@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>ネットワーク - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ネットワーク<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="net">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">ネットワーク機能</a></li>
+	    <li>ネットワーク</li>
+      </ul>
+	  <h1>ネットワーク</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>TCP/IPネットワークに関連する情報を取得する機能が利用できます。</p>
+		<p><span class="label label-info">静的種類</span></p>
+		<h3>必要プラグイン</h3>
+		<p><a href="index.htm">ネットワーク機能</a></p>
+		<h2>作成する方法</h2>
+		<p>作成する必要は、ありません。</p>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#解決する">解決する</a>　<a href="#ホスト名へ変換する">ホスト名へ変換する</a>　<a href="#IPアドレスへ変換する">IPアドレスへ変換する</a>　<a href="#PINGする">PINGする</a>　<a href="#MACアドレスを取得する">MACアドレスを取得する</a>　</div>
+		<div id="methods">
+			<h3>【自分】で【IPアドレス】を<a name="解決する">解決する</a>：文字列</h3>
+			<p>指定したホスト名をIPアドレスへ変換します。<br>
+				DNSで逆引きされます。</p>
+			<pre class="code">結果は、ネットワークで「8.8.8.8」を解決したもの
+結果を表示する</pre>
+			<h3>【自分】で【IPアドレス】を<a name="ホスト名へ変換する">ホスト名へ変換する</a>：文字列</h3>
+			<p>指定したIPアドレスからホスト名を取得します。<br>
+				DNSで正引きされます。「解決する」手順と同じ動作をします</p>
+			<pre class="code">結果は、ネットワークで「66.218.71.80」をホスト名へ変換したもの
+結果を表示する</pre>
+			<h3>【自分】から【ホスト名】を<a name="IPアドレスへ変換する">IPアドレスへ変換する</a>：文字列</h3>
+			<p>指定したホスト名をIPアドレスへ変換します。<br>
+				DNSで逆引きされます。</p>
+			<pre class="code">結果は、ネットワークで「www.yahoo.com」をIPアドレスへ変換したもの
+結果を表示する</pre>
+			<h3>【自分】から【アドレス】へ<a name="PINGする">PINGする</a>：真偽値</h3>
+			<p>指定したアドレスをPINGを送信します。その結果を表します。<br>
+				なお、サーバによってはPINGが拒否される場合があります</p>
+			<pre class="code">結果は、ネットワークで「www.google.com」へPINGしたもの
+結果を表示する</pre>
+			<h3>【IPアドレス】から<a name="MACアドレスを取得する">MACアドレスを取得する</a>：文字列</h3>
+			<p>指定したIPアドレスのMACアドレスを取得します。<br>
+				ただしMACアドレスは、同じ機器に直接接続されたコンピュータやネットワーク機器のみ取得できます。</p>
+			<pre class="code">結果は、ネットワークのIPアドレスからネットワークでMACアドレスを取得したもの
+結果を表示する</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>設定項目</th>
+						<th>型</th>
+						<th>　</th>
+						<th>説明</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="ネットワーク利用状態">ネットワーク利用状態</a></th>
+					<th>真偽</th><th>□</th><td>
+						ネットワークが利用できるかどうかを真偽値で表します<pre class="code">ネットワークのネットワーク利用状態を表示する</pre>
+					</td>
+					</tr>
+				<tr>
+					<th><a name="同時接続数">同時接続数</a></th>
+					<th>整数</th><th>□</th><td>
+						ネットワークの同時接続数</td>
+					</tr>
+				<tr>
+					<th><a name="IPアドレス">IPアドレス</a></th>
+					<th>文字列</th><th>□</th><td>
+						このコンピュータに割り当てられたIPアドレスを表します</td>
+					</tr>
+				<tr>
+					<th><a name="IPアドレス一覧">IPアドレス一覧</a></th>
+					<th>文字列配列</th><th>□</th><td>
+						このコンピュータのホスト名に対応するすべてのIPアドレスを表します</td>
+					</tr>
+				<tr>
+					<th><a name="ホスト名">ホスト名</a></th>
+					<th>文字列</th><th>□</th><td>このコンピュータのホスト名を表します</td>
+					</tr>
+				<tr>
+					<th><a name="MACアドレス">MACアドレス</a></th>
+					<th>文字列</th><th>□</th><td>このコンピュータのネットワークに接続しているネットワークアダプタのMACアドレスを表します</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

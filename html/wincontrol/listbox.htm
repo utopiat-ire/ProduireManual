@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>リストボックス - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->リストボックス<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="gui">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">GUI部品</a></li>
+	    <li>リストボックス</li>
+      </ul>
+	  <h1>リストボックス</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <h3>関連ページ</h3>
+      <ul>
+        <li><a href="combobox.htm">選択リスト</a></li>
+      </ul>
+	</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>一覧から一つまたは複数の項目を選択できる部品です。</p>
+		<p><span class="label label-warning">生成可能</span><span class="label label-success">ウィンドウ部品</span></p>
+		<p align="center"><img src="img/list.png" width="144" height="110"></p>
+		<h3>継承する種類</h3>
+		<p><a href="control.htm">ウィンドウ部品</a></p>
+		<h3>必要プラグイン</h3>
+		<p>ウィンドウ部品集(<a href="index.htm">Produire.WinControl.dll</a>)</p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というリストを作る</pre>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#ポイント項目番号">ポイント項目番号</a>　<a href="#解除する">解除する</a>　<a href="#検索する">検索する</a>　<a href="#項目の高さ">項目の高さ</a>　<a href="#項目の大きさ">項目の大きさ</a>　<a href="#削除する">削除する</a>　<a href="#選択する">選択する</a>　<a href="#選択されているかどうか">選択されているかどうか</a>　<a href="#選択設定する">選択設定する</a>　<a href="#選択全解除する">選択全解除する</a>　<a href="#挿入する">挿入する</a>　<a href="#探す">探す</a>　<a href="#追加する">追加する</a>　<a href="#一括追加する">一括追加する</a>　<a href="#変更開始する">変更開始する</a>　<a href="#変更終了する">変更終了する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
+			<p>リストからすべての項目を削除します</p>
+			<h3><a name="ポイント項目番号">ポイント項目番号</a></h3>
+			<p>指定した座標にある項目の番号を表します</p>
+			<h3>【自分】から【番号】を<a name="解除する">解除する</a></h3>
+			<p>指定した項目の選択を解除します</p>
+			<h3>【自分】から【内容】を<a name="検索する">検索する</a></h3>
+			<p>指定した内容と一致する項目を選択します</p>
+			<h3><a name="項目の高さ">項目の高さ</a></h3>
+			<p>指定した項目の高さをピクセル単位で表します</p>
+			<h3><a name="項目の大きさ">項目の大きさ</a></h3>
+			<p>指定した項目の大きさを表します</p>
+			<h3>【自分】から【内容/番号】を<a name="削除する">削除する</a></h3>
+			<p>リストから指定した内容を削除します</p>
+			<h3>【自分】から【番号】を<a name="選択する">選択する</a></h3>
+			<p>指定した項目を選択します</p>
+			<h3>【自分】が【番号】を<a name="選択されているかどうか">選択されているかどうか</a></h3>
+			<p>指定した番号が選択されているかどうかを表します</p>
+			<h3>【自分】を<a name="選択設定する">選択設定する</a></h3>
+			<p>指定した項目の選択状態を設定します</p>
+			<h3>【自分】を<a name="選択全解除する">選択全解除する</a></h3>
+			<p>項目の選択をすべて解除します</p>
+			<h3>【内容】を【番号】へ<a name="挿入する">挿入する</a></h3>
+			<p>内容を指定した位置へ挿入します</p>
+			<h3>【自分】から<a name="探す">探す</a></h3>
+			<p>指定した内容と一致する項目の番号を番号で表します</p>
+			<h3>【自分】へ【内容】を<a name="追加する">追加する</a></h3>
+			<p>内容を一番最後へ追加します</p>
+			<h3>【自分】へ【配列】を<a name="一括追加する">一括追加する</a></h3>
+			<p>配列の各要素を一番最後へ一括で追加します</p>
+			<pre class="code">一覧は、｛1,2,3,4,5｝
+リストボックス1へ一覧を一括追加する</pre>
+			<h3>【自分】を<a name="変更開始する">変更開始する</a></h3>
+			<p>リストボックスを操作するために一時的に描画を停止します</p>
+			<h3>【自分】を<a name="変更終了する">変更終了する</a></h3>
+			<p>「変更開始」手順で一時的に停止した描画を再開します</p>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="カスタムタブ表示">カスタムタブ表示</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>「タブ幅」設定項目で指定した幅で文字を調整するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="タブ幅">タブ幅</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>タブで調整する列幅をそれぞれ指定します</td>
+					</tr>
+				<tr>
+					<th><a name="タブ文字表示">タブ文字表示</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>タブ文字を認識して位置を調整するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="一覧">一覧</a></th>
+					<th>配列</th>
+					<th>◎</th>
+					<td>一覧に表示されている項目</td>
+					</tr>
+				<tr>
+					<th><a name="横スクロールバー">横スクロールバー</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>横スクロールバーを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="横スクロール幅">横スクロール幅</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>横にスクロールできる幅</td>
+					</tr>
+				<tr>
+					<th><a name="個数">個数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>一覧に表示されている項目の個数</td>
+					</tr>
+				<tr>
+					<th><a name="項目高さ">項目高さ</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>項目の高さ</td>
+					</tr>
+				<tr>
+					<th><a name="高さ総数">高さ総数</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>リストの項目をすべて合わせたときの高さ</td>
+					</tr>
+				<tr>
+					<th><a name="自動調整">自動調整</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>項目が欠けて表示されないようにリストの大きさを自動調整するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="縦スクロールバー">縦スクロールバー</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>縦スクロールバーを常に表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="選択一覧">選択一覧</a></th>
+					<th>配列</th>
+					<th>□</th>
+					<td>選択されている項目の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="選択番号一覧">選択番号一覧</a></th>
+					<th>配列</th>
+					<th>□</th>
+					<td>選択されている項目の番号の一覧</td>
+					</tr>
+				<tr>
+					<th><a name="選択方法">選択方法</a></th>
+					<th>列挙</th>
+					<th>◎</th>
+					<td>一覧の選択方法<br>
+						なし・単一・複数・連続</td>
+					</tr>
+				<tr>
+					<th><a name="背景色">背景色</a></th>
+					<th>色情報</th>
+					<th>◎</th>
+					<td>背景色</td>
+					</tr>
+				<tr>
+					<th><a name="番号">番号</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>選択している項目の番号</td>
+					</tr>
+				<tr>
+					<th><a name="複数列">複数列</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>複数列で表示できるかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="文字色">文字色</a></th>
+					<th>色情報</th>
+					<th>◎</th>
+					<td>文字の色</td>
+					</tr>
+				<tr>
+					<th><a name="並び替え">並び替え</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>自動的に並び替えするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="列幅">列幅</a></th>
+					<th>整数</th>
+					<th>◎</th>
+					<td>列幅</td>
+					</tr>
+				<tr>
+					<th><a name="枠">枠</a></th>
+					<th>列挙</th>
+					<th>◎</th>
+					<td>枠の形<br>
+						｛なし,線｝</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>イベント名</th>
+						<th>説明</th>
+						<th>情報</th>
+					</tr>
+				</thead>
+				<tr>
+					<th><a name="選択された">選択された</a></th>
+					<td>リストボックスの項目が選択されたとき</td>
+					<td>なし</td>
+					</tr>
+				</table>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">リストボックスを作る</h3>		<p>リストボックスにテキストを追加したり削除したりする例です。</p>
+<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを受け継ぐ
+	
+	はじめの手順
+		内容を、「リストボックスのサンプル」に変える
+		
+		リスト１としてリストボックスを作る
+			その位置と大きさを｛30,10,130,100｝に変える
+		
+		項目テキストとしてテキストを作る
+			その位置と大きさを｛30,120,130,30｝に変える
+		
+		追加ボタンというボタンを作る
+			その位置と大きさを｛10,150,80,26｝に変える
+			その内容を「追加」に変える
+		削除ボタンというボタンを作る
+			その位置と大きさを｛100,150,80,26｝に変える
+			その内容を「削除」に変える
+		
+		リスト１に「Yahoo!」を加える
+		リスト１に「Google」を加える
+		リスト１に「Bing」を加える
+	終わり
+	
+	リスト１がダブルクリックされた手順
+		リスト１の内容を表示する
+	終わり
+	
+	追加ボタンがクリックされた時の手順
+		リスト１へ項目テキストの内容を追加する
+		項目テキストをクリアする
+	終わり
+	
+	削除ボタンがクリックされた時の手順
+		もしリスト１の番号が0でないなら
+			リスト１の（リスト１の番号）番目を削除する
+		もし終わり
+	終わり
+終わり</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Microsoft Wordを制御する - プロデル逆引き辞典</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Office,Word"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->Microsoft Wordを制御する<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="lookup">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">逆引き辞典</a></li>
+	<li>Microsoft Wordを制御する</li>
+</ul>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>Microsoft Wordを制御する</h1>
+		<p>このページでは、Microsoft Wordの操作をする方法について紹介します。<br>
+			Wordならではの機能をプロデルから利用できます。</p>
+		<p>プロデルからWordの文書の好きな位置に文字を入力できるので、例えば、前もって作っておいた文章に、ファイルや日付などの情報を加えて、自動的に保存・印刷する、といった使い方ができます。</p>
+		<p>一度文章を作っておいて、名前や日付だけを書き換えたものを作る　っということがプロデルで自動化できます。</p>
+		<p>ワード連係機能では、Wordとプロデルを組み合わせてデータを加工するための簡単な機能が用意されています。</p>
+      <h3>関連ページ</h3>
+        <ul>
+          <li><a href="../office/word.htm">ワード</a></li>
+          <li><a href="../office/document.htm">文章</a></li>
+          <li><a href="../office/wordselection.htm">ワード選択範囲</a></li>
+      </ul>
+		<div id="samples">
+		<h3 id="lookup1">Wordを起動する</h3>
+		<p>まず、Wordを起動します。</p>
+		<pre class="code"><span class="rem">ーーワードの起動</span>
+ワードを起動する
+
+<span class="rem">ーー新規文章を作成する
+</span>ワードへドキュメントを追加する</pre>
+		<p>次に、新規ドキュメントを追加します。これで、文章を作成できます。</p>
+		<h3 id="lookup2">テキストの入力</h3>
+		<p>文字の入力や色の設定は、文章テキストや書式付きテキストの方法と同様の方法で指定します。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　内容の入力</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">ワードの選択のフォント名を「ＭＳ Ｐ明朝」に変える
+ワードの選択の文字サイズを１８に変える
+ワードの選択の色を赤に変える
+ワードの選択の太字をオンに変える
+ワードの選択の内容を「こんにちは」に変える</pre>
+			</div>
+		</div>
+		<p>　</p>
+		<h3 id="lookup3">貼り付け・コピー・切り取り</h3>
+		<p>クリップボードに文字をコピーしたり貼り付けたりもできます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　コピーと貼り付け</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">ワードの選択の内容を「プロデル」に変える
+ワードの選択のスタートを０に変える
+ワードの選択の長さを５に変える
+ワードの選択をコピーする
+ワードの選択を貼り付ける</pre>
+			</div>
+		</div>
+		<p>　</p>
+		<h3 id="lookup4">ブックマークの登録と移動</h3>
+		<p>文章にブックマークを登録して移動することもできます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　ブックマークの登録と移動</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">ワードの現在文章へ「しるし１」というブックマークを登録する
+ワードの現在文章で「しるし１」というブックマークへ移動する</pre>
+			</div>
+		</div>
+		<h3 id="lookup5">ワード文章の保存</h3>
+		<p>文章の保存は、次のように書きます。</p>
+		<pre class="code"><span class="rem">ーープレビューの表示と解除</span>
+ワードの現在文章をプレビューする
+２秒、待つ
+ワードの現在文章をプレビューする
+ワードの現在文章を印刷する
+
+<span class="rem">ーー保存</span>
+ワードの現在文章を「［デスクトップフォルダ］文書.doc」に保存する
+
+<span class="rem">ーー終了</span>
+ワードを終了する</pre>
+		<p>　</p>
+		<h3 id="lookup6">名前や日時が違う文章を自動的に作成する</h3>
+		<p>プロデルに配列に入っている名簿を見て、Wordでそれぞれの人の面接のお知らせを作るプログラムを作ってみましょう。		</p>
+		<h4>元となる文章の作成</h4>
+		<p>まずは、Wordで、ひな形となる文章を作成します。</p>
+		<p>任意の位置に文字が自動的に入力されるように、挿入する位置にブックマークを設定します。<br>
+			ブックマークで指定した名前を、プロデルで指定してカーソルを移動させることができます。</p>
+		<p class="steps">Microsoft Word
+			「挿入」メニュー－「ブックマーク」 <br>
+			※バージョンによって名称や位置が異なります</p>
+		<p>今回は、ひな形の文章を「面接.doc」というファイル名で保存したものとして説明します。</p>
+		<h4>プログラムの作成</h4>
+		<p>複数の情報を自動で入力させたい場合は、挿入するデータを２次配列にするのがよいでしょう。<br>
+			データの変わりに、CSVファイルなども利用できます。<br>
+			CSV形式を扱う方法については、<a href="#csv">CSV形式を操作</a>をご覧ください。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code"><span class="rem">ーーデータの定義
+ーー配列の内容は、「面接者、面接日、面接時間」の順に指定</span>
+データ（１）は、｛「山田太郎」,「６月１０日」,「１５：００から」｝
+データ（２）は、｛「鈴木花子」,「６月１１日」,「１３：００から」｝
+
+<span class="rem">ーーワードの起動</span>
+ワードを起動する
+
+<span class="rem">ーー登録したブックマークへの移動と文字の挿入</span>
+（データの個数）回、１から数にカウントして、繰り返す
+ワードで「［プログラムのフォルダ］ワード（実用例）.doc」を開く
+
+ワードの現在文章で「名前」というブックマークへ移動する
+ワードの選択の内容を、データ（数，１）に変える
+ワードの現在文章で「日付」というブックマークへ移動する
+ワードの選択の内容を、データ（数，２）に変える
+ワードの現在文章で「時間」というブックマークへ移動する
+ワードの選択の内容を、データ（数，３）に変える
+
+<span class="rem">ーーデータの保存</span>
+ワードの現在文章を「［プログラムのフォルダ］面接-［データ（数，１）］.doc」に保存する
+	ワードの現在文章を閉じる
+繰り返し終わり
+
+<span class="rem">ーー終了</span>
+ワードを終了する</pre>
+			</div>
+		</div>
+	  </div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

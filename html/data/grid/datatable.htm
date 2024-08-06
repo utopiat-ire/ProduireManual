@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>データ表 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="CSVファイル"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->データ表<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
+							<li><a href="../../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="data">
+	    <li><a href="../../index.htm">プロデル</a></li>
+	    <li><a href="../index.htm">データ操作</a></li>
+	    <li>データ表</li>
+      </ul>
+	  <h1>データ表</h1>
+	  <h2>概要</h2>
+      <p>表形式(テーブル)のデータを表す種類です。<br>
+        この種類は、表部品に表示されているデータやデータベースエンジンから<br>
+        取得したデータを取得したり加工したりするためのものです。</p>
+      <p>CSVファイルへの読み書きもできます。</p>
+      <h3>必要プラグイン</h3>
+      <p>データ基本機能 (<a href="index.htm">Produire.Data.Base.dll</a>) </p>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <h3>関連ページ</h3>
+      <ul>
+        <li><a href="dataset.htm">データセット</a>
+          <ul>
+            <li>データ表
+              <ul>
+                <li><a href="datarow.htm">データ行</a></li>
+                <li><a href="datacolumn.htm">データ列</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="grid.htm">表部品</a></li>
+      </ul>
+      <p></p>
+      <p>&nbsp;</p>
+    </div>
+	<div id="refcontent" class="col-md-8">
+<h2>作成する方法</h2>
+		<pre class="format">【名前】というデータ表を作る</pre>
+		<h2 id="手順">手順</h2>
+		<div id="methodlist"><a href="#すべて消す">すべて消す</a>　<a href="#内容をすべて消す">内容をすべて消す</a>　<a href="#列を加える">列を加える</a>　<a href="#行を加える">行を加える</a>　<a href="#加える">加える</a>　<a href="#消す">消す</a>　<a href="#取得">取得</a>　<a href="#保存する">保存する</a>　<a href="#読み込む">読み込む</a>　<a href="#一覧で取得する">一覧で取得する</a>　<a href="#一覧で設定する">一覧で設定する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="すべて消す">すべて消す</a></h3>
+			<p>データ表にある列とデータをすべて消します</p>
+			<h3>【自分】から<a name="内容をすべて消す">内容をすべて消す</a></h3>
+			<p>データ表にあるすべての行を消します</p>
+			<h3>【自分】へ【列名】という<a name="列を加える">列を加える</a></h3>
+			<p>データ表に列を加えます</p>
+			<h3>【自分】へ<a name="行を加える">行を加える</a></h3>
+			<p>データ表の末尾に空白の行を加えます</p>
+			<h3>【自分】へ【データ：<a href="../../primitive/dictionary.htm">辞書</a>】を<a name="加える">加える</a></h3>
+			<p>データ表の末尾へ新しい行を作り、指定した辞書の見出しと対応してデータを設定します。</p>
+			<pre class="code">データ表を作ってデータとする
+データに{「日付」,「内容」,「値段」}という列を加える
+データに｛日付=今,内容=「食費」,値段=「1500」｝を追加する</pre>
+			<h3>【自分】へ【データ：<a href="../../primitive/array.htm">配列</a>】を加える</h3>
+			<p>データ表の末尾へ新しい行を作り、指定した配列の順にデータを設定します。</p>
+			<pre class="code">データに｛「1月15日」,「食費」,「1500」｝を追加する</pre>
+			<h3>【自分】から【行番号】行目を<a name="消す">消す</a></h3>
+			<p>データ表の指定した行のデータを消します。</p>
+			<h3>【自分】から【列番号】列目を<a name="取得">取得</a></h3>
+			<p>データ表の指定した列のデータを取得します。</p>
+			<h3>【自分】から【行番号】行目を取得</h3>
+			<p>データ表の指定した行のデータを取得します。</p>
+			<h3>【自分】を【ファイル名】へ〈【文字コード】で〉<a name="保存する">保存する</a></h3>
+			<p>ファイルからデータ表へ読み込みます。<br>
+				ファイル名には、CSV形式(*.csv)またはXML形式が指定できます。</p>
+			<pre class="code">データを「data.csv」へ保存する</pre>
+			<h3>【自分】へ【ファイル名】から〈【文字コード】で〉<a name="読み込む">読み込む</a></h3>
+			<p>ファイルからデータ表へ読み込みます。<br>
+				ファイル名には、CSV形式(*.csv)またはXML形式が指定できます。</p>
+			<pre class="code">データ表を作ってデータとする
+データへ「data.csv」から読み込む</pre>
+			<h3>【自分】の【列番号】列目を<a name="一覧で取得する">一覧で取得する</a>：配列</h3>
+			<p>データ表の指定した列にある値をすべて取り出して配列で表します。</p>
+			<pre class="code">データの2列目を一覧で取得したものを表示する</pre>
+			<h3>【自分】の【列番号】列目へ【一覧：配列】を<a name="一覧で設定する">一覧で設定する</a></h3>
+			<p>データ表の指定した列へ【一覧】にある値を順番に各行へ設定します。<br>
+				【一覧】の個数がデータ表よりも行数よりも大きい場合は、データ表にある行数まで設定されます。</p>
+			<pre class="code">データの3列目へ{「できる」,「よくできる」}を一覧で設定する</pre>
+		</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="名前">名前</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>表の名前</td>
+					</tr>
+				<tr>
+					<th><a name="一覧">一覧</a></th>
+					<th>配列の配列</th>
+					<th>◎</th>
+					<td>2次元配列で表した表に含まれるすべてのデータ</td>
+					</tr>
+				<tr>
+					<th><a name="列一覧">列一覧</a></th>
+					<th><a href="datacolumn.htm">データ列</a>の配列</th>
+					<th>◎</th>
+					<td>&nbsp;</td>
+					</tr>
+				<tr>
+					<th><a name="行一覧">行一覧</a></th>
+					<th><a href="datarow.htm">データ行</a>の配列</th>
+					<th>◎</th>
+					<td>&nbsp;</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">データ表に行を追加・削除する</h3>
+	<p>データ表に行を加えたり消したりします。</p>
+<pre class="code">データというデータ表を作る
+データに{「名前」,「メール」,「誕生日」}という列を加える
+データへ｛名前=「秋山」,メール=「akiyama@yahou.co.jp」,誕生日=「1988/03/25」｝を加える
+データへ｛名前=「石川」,メール=「ishi@gmall.com」,誕生日=「1984/08/15」｝を加える
+データへ｛名前=「原口」,メール=「haragushi@potmail.co.jp」,誕生日=「1985/12/06」｝を加える
+データへ｛名前=「松下」,メール=「matsu@gmall.com」,誕生日=「1984/04/16」｝を加える
+データへ｛名前=「山中」,メール=「ymnk@potmail.co.jp」,誕生日=「1985/07/10」｝を加える
+データから3行目を消す</pre>
+
+<h3 id="sample2">データ表のセルの値を設定・取得する</h3>
+	<p>データ表の特定の列について値を取得したり設定したりします。</p>
+<pre class="code">データというデータ表を作る
+データに{「名前」,「点数」,「成績」}という列を加える
+データへ｛名前=「国語」,点数=60｝を加える
+データへ｛名前=「算数」,点数=85｝を加える
+データへ｛名前=「社会」,点数=75｝を加える
+データへ｛名前=「理科」,点数=90｝を加える
+データへ｛名前=「音楽」,点数=80｝を加える
+データの2列目を一覧で取得する
+その合計を「合計点」として表示する
+
+データの一覧を「変更前」として表示する
+成績一覧は、{「できる」,「よくできる」,「できる」,「よくできる」,「よくできる」}
+データの3列目へ成績一覧を一覧で設定する
+データの一覧を「変更後」として表示する</pre>
+<h3 id="createcsv">CSVファイルを作成する</h3>
+<p>CSV形式とは、ファイル形式の１つで、表などのデータをカンマ（,）で区切ったテキストファイルのことです。Excelで開らけるほかに、メモ帳などで編集もできる形式のため、データベースからデータを取り出したり、Excelへデータを取り込む時などに便利なファイル形式です。 </p>
+<p>出力する内容をデータ表へ登録すると、CSV形式で保存できます。</p>
+<pre class="code">データ表を作ってデータとする
+データに｛「たろう」、「abc@xxx.com」、「http://www.xxx.com/」｝を加える
+データに｛「はなこ」、「def@xxx.com」、「http://www.xxx.com/」｝を加える
+データを「data.csv」へ保存する</pre>
+<p>上のプログラムを実行すると下のような内容の「データ.csv」が作成されます。</p>
+<pre>たろう,abc@xxx.com,http://www.xxx.com/
+はなこ,def@xxx.com,http://www.xxx.com/</pre>
+<h3 id="loadcsv">CSVファイルを読み込む</h3>
+<p>CSVファイルをデータ表に読み込むことですでに保存されているデータを取得できます。</p>
+<pre class="code">データ表を作ってデータとする
+データへ「data.csv」から読み込む
+ 	
+データの一覧のすべての【行要素】についてそれぞれ繰り返す
+	行要素(1)を報告する
+繰り返し終わり</pre>
+<p>　</p>
+<h3 id="usearray">CSVファイルのデータを処理する</h3>
+<p>では、実際にCSVファイルを読み書きするプログラムを作ってみましょう。 <br>
+  例えば、下の表（成績表.CSV）をエクセルなどで作成します。</p>
+<table border="1">
+  <tr>
+    <th>名前</th>
+    <th>点数</th>
+  </tr>
+  <tr>
+    <td>山田次郎</td>
+    <td>56</td>
+  </tr>
+  <tr>
+    <td>河野雄太</td>
+    <td>82</td>
+  </tr>
+  <tr>
+    <td>高橋裕香</td>
+    <td>52</td>
+  </tr>
+  <tr>
+    <td>佐藤美里</td>
+    <td>90</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>なお、同じ内容のCSVファイルを次のプログラムで作ることが出来ます。</p>
+<pre class="code">データ表を作ってデータとする
+データに｛「山田次郎」,「56」｝を加える
+データに｛「河野雄太」,「82」｝を加える
+データに｛「高橋裕香」,「52」｝を加える
+データに｛「佐藤美里」,「90」｝を加える
+データを「成績表.CSV」へ保存する</pre>
+<p>このデータの平均点を計算するプログラムを作って見ましょう。平均値や偏差値といった計算の処理は、「繰り返す」文を使わずに専用の手順で計算できます。</p>
+<p>CSVファイルの特定の列について集計したい場合は、「一覧で取得する」手順を使います。</p>
+<pre class="code">データへ「成績表.CSV」から読み込む
+データの2列目を一覧で取得したものの平均を「平均点」として表示する</pre>
+<p>&nbsp;</p>
+</div><!--/samples-->
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

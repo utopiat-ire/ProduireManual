@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>文字列 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="基本型"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->文字列<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ul class="breadcrumb" data-category="datatype">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">データ型</a></li>
+	    <li>文字列</li>
+      </ul>
+	  <h1>文字列</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>関連ページ</h3>
+        <ul>
+          <li><a href="../syntax/string.html">文字列の式</a></li>
+          <li><a href="../lookup/string_lookup.htm">逆引き辞典「文字列を扱う」</a></li>
+        </ul>
+        <p>&nbsp;</p>
+	</div>
+	<div id="refcontent" class="col-md-8">
+	  <h2>概要</h2>
+		<p>文字列を持つ種類です。</p>
+		<p><span class="label label-success valuetype">値型</span></p>
+<h2>作成する方法</h2>
+		<p>文字列定数を指定すると、作成できます。</p>
+		<pre class="code">内容は、「こんにちは」</pre>
+		<h2 id="手順">手順</h2>
+		<p>次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#数える">数える</a>　<a href="#スペースを消す">スペースを消す</a>　<a href="#左スペースを消す">左スペースを消す</a>　<a href="#右スペースを消す">右スペースを消す</a>　<a href="#先頭から消す">先頭から消す</a>　<a href="#末尾から消す">末尾から消す</a>　<a href="#探す">探す</a>　<a href="#前方向へ探す">前方向へ探す</a>　<a href="#置換する">置換する</a>　<a href="#置換する">置換する</a>　<a href="#文字目">文字目</a>　<a href="#文字目以降">文字目以降</a>　<a href="#抽出する">抽出する</a>　<a href="#取り出す">取り出す</a>　<a href="#先頭から取り出す">先頭から取り出す</a>　<a href="#末尾から取り出す">末尾から取り出す</a>　<a href="#取り替える">取り替える</a>　<a href="#加えたもの">加えたもの</a>　<a href="#先頭に加えたもの">先頭に加えたもの</a>　<a href="#末尾に加えたもの">末尾に加えたもの</a>　<a href="#挿入する">挿入する</a>　<a href="#埋める">埋める</a>　<a href="#よみがな">よみがな</a>　<a href="#ローマ字">ローマ字</a>　<a href="#配列化">配列化</a>　<a href="#辞書化">辞書化</a>　<a href="#テーブル化">テーブル化</a>　<a href="#始まる">始まる</a>　<a href="#終わる">終わる</a>　<a href="#含む">含む</a>　<a href="#囲む">囲む</a>　</div>
+		<div id="methods">
+			<h3>【自分】から【文字】を<a name="数える">数える</a>：整数</h3>
+			<p>文字列の中に指定した文字が何個含まれるかを表します</p>
+			<pre class="code">内容は、「にわにはにわにわとりがいる」
+（内容から「に」を数えたもの）を表示する</pre>
+			<h3>【自分】から<a name="スペースを消す">スペースを消す</a>：文字列</h3>
+			<p>文字列に含まれるスペースを消したものを返します</p>
+			<pre class="code">内容は、「　　　　　こんにちは　　　　」
+内容からスペースを消して、表示する</pre>
+			<h3>【自分】から<a name="左スペースを消す">左スペースを消す</a>：文字列</h3>
+			<p>文字列に含まれる左側のスペースを消したものを返します</p>
+			<pre class="code">内容は、「　　　　　こんにちは　　　　」
+内容から左スペースを消して、表示する</pre>
+			<h3>【自分】から<a name="右スペースを消す">右スペースを消す</a>：文字列</h3>
+			<p>文字列に含まれる右側のスペースを消したものを返します</p>
+			<pre class="code">内容は、「　　　　　こんにちは　　　　」
+内容から右スペースを消して、表示する</pre>
+			<h3>【文字数】文字、【自分】の<a name="先頭から消す">先頭から消す</a>：文字列</h3>
+			<p>先頭から指定した文字数だけ削除したものを返します</p>
+			<pre class="code">内容は、「東京都」
+内容の先頭から1文字消して表示する</pre>
+			<h3>【文字数】文字、【自分】の<a name="末尾から消す">末尾から消す</a>：文字列</h3>
+			<p>先頭または末尾から指定した文字数だけ削除したものを返します</p>
+			<pre class="code">内容は、「東京都」
+内容の末尾から1文字消して表示する</pre>
+			<h3>【自分】の【開始文字位置】文字目から【文字数】文字、消す：文字列</h3>
+			<p>先頭または末尾から指定した文字数だけ削除したものを返します</p>
+			<pre class="code">内容は、「東京都新宿区」
+内容の4文字目から3文字消して表示する</pre>
+			<h3>【自分】から【キーワード】を<a name="探す">探す</a>：整数</h3>
+			<p>文字列から指定したキーワード(文字列)を探します。<br>
+				指定したキーワードが見つからない場合は、0を返します。</p>
+			<pre class="code">内容は、「にほんごぷろぐらみんぐげんご ぷろでる」
+文字位置は、<strong>内容から「ん」を探したもの</strong>
+「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
+			<h3>【自分】の【開始文字位置】から【キーワード】を探す：整数</h3>
+			<p>文字列から指定したキーワード(文字列)を探します。<br>
+				指定したキーワードが見つからない場合は、0を返します。</p>
+			<pre class="code">内容は、「にほんごぷろぐらみんぐげんご ぷろでる」
+文字位置は、内容の5文字目から「ん」を探したもの
+「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
+			<h3>【自分】から【キーワード】を、<a name="前方向へ探す">前方向へ探す</a>：整数</h3>
+			<p>文字列から指定したキーワード(文字列)を後ろから前方向へ探します。<br>
+				指定したキーワードが見つからない場合は、0を返します。</p>
+			<pre class="code">内容は、「にほんごぷろぐらみんぐげんご ぷろでる」
+文字位置は、<strong>内容から「ん」を前方向へ探したもの</strong>
+「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
+			<h3>【自分】の【開始文字位置】文字目から【キーワード】を、<a name="前方向へ探す0">前方向へ探す</a>：整数</h3>
+			<p>文字列から指定したキーワード(文字列)を後ろから前方向へ探します。<br>
+				指定したキーワードが見つからない場合は、0を返します。</p>
+			<pre class="code">内容は、「にほんごぷろぐらみんぐげんご ぷろでる」
+文字位置は、<strong>内容の11文字目から「ん」を前方向へ探したもの</strong>
+「“ん”が[文字位置]文字目に見つかりました」を表示する</pre>
+			<h3>【自分】から【置換する文字】を【置換後の文字】へ、<a name="置換する">置換する</a>：文字列</h3>
+			文字列に含まれる特定の文字を指定した文字へ置き換えます。(廃止予定)
+			<pre class="code">内容は、「今日は、東京へ行きます」
+内容から「東京」を「大阪」へ置換して表示する</pre>
+			<h3>【自分】で【置換する文字】を【置換後の文字】へ、<a name="置換する">置換する</a>：文字列</h3>
+			文字列に含まれる特定の文字を指定した文字へ置き換えます。
+			<pre class="code">内容は、「今日は、東京へ行きます」
+内容で「東京」を「大阪」へ置換して表示する</pre>
+			<h3>【自分】の【文字位置】<a name="文字目">文字目</a>：文字列</h3>
+			<p>指定した文字数目の文字(1字)を表します</p>
+			<pre class="code">内容は、「こんにちは プロデル」
+内容の3文字目を表示する</pre>
+			<h3>【自分】の【文字位置】<a name="文字目以降">文字目以降</a>：文字列</h3>
+			<p>指定した文字数より後ろの内容を表します</p>
+			<pre class="code">内容は、「こんにちは プロデル」
+内容の3文字目以降を表示する</pre>
+			<h3>【自分】で【開始文字列】から【終了文字列】まで、<a name="抽出する">抽出する</a>：
+			文字列 </h3>
+            <p>内容に含まれる開始文字列から終了文字列までで囲われた部分をすべて抽出して取り出します。TTSneoの「取り出せ」関数に相当する手順です。</p>
+            <pre class="code">「&lt;html&gt;<br>&lt;body&gt;<br>&lt;p&gt;こんにちは&lt;/p&gt;&lt;p&gt;プロデル&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;」で「&lt;P&gt;」から「&lt;/P&gt;」まで抽出して報告する</pre>
+            <h3></h3>
+            <h3>【自分】の【開始文字位置】文字目から【取り出す文字数】文字、<a name="取り出す">取り出す</a>：
+				文字列	
+			</h3>
+			<p>指定した文字数文字を取り出します</p>
+			<pre class="code">内容は、「こんにちは プロデル」
+内容の7文字目から4文字取り出して表示する</pre>
+			<h3>【取り出す文字数】文字【自分】の<a name="先頭から取り出す">先頭から取り出す</a>：文字列</h3>
+			<p>指定した文字数文字を取り出します</p>
+			<pre class="code">内容は、「こんにちは プロデル」
+内容の先頭から5文字取り出して表示する</pre>
+			<h3>【取り出す文字数】文字【自分】の<a name="末尾から取り出す">末尾から取り出す</a>：文字列</h3>
+			<p>指定した文字数文字を取り出します</p>
+			<pre class="code">内容は、「こんにちは プロデル」
+内容の末尾から4文字取り出して表示する</pre>
+			<h3>【自分】の【開始文字位置】文字目から【取り替える文字数】文字【置換後文字】へ、<a name="取り替える">取り替える</a>：
+			文字列 </h3>
+          <p>指定した文字数文字を取り出します</p>
+            <pre class="code">「ABCDE」の2文字目から3文字「X」に取り替えて報告する</pre>
+            <h3></h3>
+            <h3>【自分】に【内容】を、<a name="加えたもの">加えたもの</a>：文字列</h3>
+			<p>末尾に内容を挿入したものを返します</p>
+			<pre class="code">内容は、「新幹線」
+内容へ先頭に「東海道」を加えて表示する</pre>
+			<h3>【自分】に【内容】を、<a name="先頭に加えたもの">先頭に加えたもの</a>：文字列</h3>
+			<p>先頭に内容を挿入したものを返します</p>
+			<pre class="code">内容は、「新幹線」
+内容へ先頭に「東海道」を加えて表示する</pre>
+			<h3>【自分】に【内容】を、<a name="末尾に加えたもの">末尾に加えたもの</a>：文字列</h3>
+			<p>末尾に指定した内容を挿入したものを返します</p>
+			<pre class="code">内容は、「神奈川県」
+（内容へ末尾に「川崎市」を加えたもの）を表示する</pre>
+			<h3>【自分】の【文字位置】文字目に【内容】を、<a name="挿入する">挿入する</a>：文字列</h3>
+			<p>指定した内容を指定した位置に挿入したものを返します</p>
+			<pre class="code">内容は、「新幹線」
+内容の1文字目へ「東海道」を挿入して表示する</pre>
+			<h3>【自分】を【値一覧】で<a name="埋める">埋める</a>：文字列</h3>
+			<p>文字列に書かれた書式に従って、値一覧にある値を埋めたものを返します</p>
+			<pre class="code">値一覧は、｛「こだま」,「ひかり」,「のぞみ」｝
+書式は、「{0}よりも、{1}よりも、{2}が速い」
+書式を値一覧で埋めて表示する</pre>
+			<h3>【自分】の<a name="よみがな">よみがな</a>：文字列の配列</h3>
+			<p>文字列のよみがなを、全角ひらがなで取得します。<br>
+				結果として、与えられた漢字の読みとして考えられる組み合わせを配列で表します。<br>
+				この機能は、Microsoft IMEがインストールされている必要があります。</p>
+			<pre class="code">「東京都」のよみがなを表示する</pre>
+			<h3>【自分】の<a name="ローマ字">ローマ字</a>：文字列</h3>
+			<p>文字列のよみがなをローマ字表記したものを返します。</p>
+			<pre class="code">「にほんご」のローマ字を表示する</pre>
+			<h3>【自分】を<a name="配列化">配列化</a>：<a href="../primitive/array.htm">配列</a></h3>
+			<p>内容から配列を生成します</p>
+			<pre class="code">データは、「{AAA,BBB,CCC}」を配列化
+データ（1）を表示する
+データ（2）を表示する
+データ（3）を表示する</pre>
+			<h3>【自分】を<a name="辞書化">辞書化</a>：<a href="dictionary.htm">辞書</a></h3>
+			<p>内容から辞書を生成します</p>
+			<pre class="code">新価格表は、「りんご=120円
+バナナ=80円
+ぶどう=300円」を辞書化したもの
+新価格表を表示する</pre>
+			<h3>【自分】を<a name="テーブル化">テーブル化</a>：<a href="../primitive/table.htm">表配列</a></h3>
+			<p>内容からテーブルを生成します</p>
+			<pre class="code">データは、「{{国語,算数,理科},{60,90,85}}」
+テーブルは、データをテーブル化したもの
+テーブル（2,2）を表示する
+テーブルをCSVへ変換して表示する</pre>
+			<h3>【自分】が【キーワード】で<a name="始まる">始まる</a>：<a href="boolean.htm">真偽値</a><a href="../primitive/table.htm"></a></h3>
+			<p>内容が指定した文字列で始まるかどうかを返します。</p>
+			<pre class="code">名前は、「BOB」<br>もし名前が「B」で始まるなら「OK」を報告する</pre>
+			<h3>【自分】が【キーワード】で<a name="終わる">終わる</a>：<a href="boolean.htm">真偽値</a><a href="../primitive/table.htm"></a></h3>
+			<p>内容が指定した文字列で終わるかどうかを返します。</p>
+			<pre class="code">名前は、「らいおん」<br>もし名前が「ん」で終わるなら「NG」を報告する<br>そうでなければ、「OK」を報告する</pre>
+			<h3>【自分】が【キーワード】を<a name="含む">含む</a>：<a href="boolean.htm">真偽値</a><a href="table.htm"></a></h3>
+			<p>内容が指定した文字列を含むかどうかを返します。</p>
+			<pre class="code">名前は、「山田花子」<br>もし名前が「落」を含まなければ「当選」を報告する</pre>
+			<h3>【自分】を【前】と【後】で<a name="囲む">囲む</a>：<a href="boolean.htm">真偽値</a></h3>
+			<p>内容を指定した前と後で結合した文字列を返します。</p>
+			<pre class="code">一覧は、{「A」,「B」,「C」}
+一覧すべてを「【」と「】」で囲んで報告する</pre>
+		</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th>設定項目</th>
+					<th>種類</th>
+					<th>　</th>
+					<th>説明</th>
+				</tr>
+				</thead>
+				<tr>
+					<th><a name="内容">内容</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>文字列の内容</td>
+				</tr>
+				<tr>
+					<th><a name="文字番号">文字番号</a></th>
+					<th><a href="number.htm">整数</a></th>
+					<th>□</th>
+					<td>1文字目のUnicode文字コードを表します
+						<pre class="code">「あ」の文字番号を表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="ひらがな">ひらがな</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれるカタカナをひらがなで表します
+						<pre class="code">「インターネット」のひらがなを表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="カタカナ">カタカナ</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれるひらがなをカタカナで表します
+						<pre class="code">「いんたーねっと」のカタカナを表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="半角">半角</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれる全角英数字・全角カタカナを半角で表します
+						<pre class="code">「パソコン」の半角を表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="全角">全角</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれる半角英数字・半角カタカナを全角で表します
+						<pre class="code">「SHIBUYA246」の全角を表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="文字数">文字数</a></th>
+					<th><a href="number.htm">整数</a></th>
+					<th>□</th>
+					<td>内容の文字数を表します
+						<pre class="code">「こんにちは」の文字数を表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="大文字">大文字</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれる英字を大文字に表します
+						<pre class="code">「good morning」の大文字を表示する</pre>
+					</td>
+				</tr>
+				<tr>
+					<th><a name="小文字">小文字</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>内容に含まれる英字を小文字で表します
+						<pre class="code">「GOOD MORNING」の小文字を表示する</pre>
+					</td>
+				</tr>
+			</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<p><a href="../lookup/string_lookup.htm">逆引き辞典「文字列を扱う」</a>をご覧下さい。</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

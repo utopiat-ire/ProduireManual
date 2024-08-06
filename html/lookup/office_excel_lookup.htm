@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Microsoft Excelを制御する - プロデル逆引き辞典</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Office,Excel"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->Microsoft Excelを制御する<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb" data-category="lookup">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm">逆引き辞典</a></li>
+	<li>Microsoft Excelを制御する
+    </li>
+</ul>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>Microsoft Excelを制御する</h1>
+		<p>このページでは、表計算ソフトMicrosoft Excelとプロデルを連係させる方法を紹介します。</p>
+		<p>Excelと連係することで、プロデルからシートのセルに数値を代入したり、シートの追加と移動、ブックの保存・印刷などの操作ができます。</p>
+		<p>この連係機能では、Excelとプロデルを組み合わせてデータを加工するための簡単な機能が用意されています。</p>
+		<h3>関連ページ</h3>
+		<ul>
+		  <li><a href="../office/excel.htm"> エクセル</a></li>
+			<li><a href="../office/workbook.htm"> ブック</a></li>
+			<li><a href="../office/worksheet.htm"> シート</a></li>
+			<li><a href="../office/cell.htm"> セル</a></li>
+		</ul>
+		<div id="samples">
+		<h3 id="lookup1">Excelを起動する</h3>
+		<p>プロデルからエクセルを起動して、空のシートを作成するには、次のように書きます。</p>
+		<pre class="code">エクセルを起動する
+エクセルへ新しいワークブックを作成する</pre>
+		<h4>すでにエクセルが起動している場合</h4>
+		<p>すでにファイルからエクセルを起動している場合は、次のように書きます。<br>
+			プロデルとExcelを接続して、プロデルから操作できるようにします。</p>
+		<pre class="code">エクセルをリンクする</pre>
+		<p>すでに開いているファイルに対して操作したいときなどは、こちらを利用してください。</p>
+		<p>※「Microsoft Excel」のショートカットから複数起動した場合、正しく動作しないことがあります</p>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>ブックとは</h4>
+				<p>Excelのファイルのことを表します。ブックには複数の表を入れておくことができます。</p>
+				<p>例　表計算.xls</p>
+				<h4>シートとは</h4>
+				<p>Excelのファイルに含まれる複数のシートのことを表します。シートは、画面の下のタブで切り替えることができ、自由に増やしたり消したりできます。</p>
+				<p>例　Sheet1, Sheet2</p>
+			</div>
+		</div>
+		<h3 id="lookup2">既存のxlsファイルを開く</h3>
+		<p>すでに存在するxls/xlsx/xlsmファイルを開くには、次のように書きます。</p>
+		<pre class="code">エクセルを起動する
+エクセルで「[プログラムのフォルダ]注文表.xlsx」を開いて操作ブックとする</pre>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　シートの内容をすべて出力する</h4>
+			</div>
+			<div class="panel-body">
+				<p>シートのセルの内容を取得するには、セルの「一覧」設定項目を使います。</p>
+				<p>また、シートの「使用範囲」で値が入力されているセルの範囲を取得できるので、これらを使ってセルのすべての値を取得できます。</p>
+				<pre class="code">エクセルを起動する
+エクセルで「[プログラムのフォルダ]注文表.xlsx」を開いて注文表ブックとする
+データは、注文表ブックの選択シートの使用範囲
+一覧は、データの一覧
+Rowを1から一覧の個数まで増やしながら繰り返す
+	行は、一覧(Row)
+	Colを1から行の個数まで増やしながら繰り返す
+		一覧(Row,Col)を報告する
+	繰り返し終わり
+繰り返し終わり</pre>
+			</div>
+		</div>
+		<h3 id="lookup3">セルに文字列を入力する</h3>
+		<p>指定したセルに文字や数字を入力する場合は、次のように書きます。<br>
+			この場合、A1のセルに「こんにちは」と入力します。</p>
+		<pre class="code">（エクセルの現在シート：セル（「A1」））の内容を「こんにちは」に変える</pre>
+		<h3>セルに計算式を設定する</h3>
+		<p>他のセルを参照する場合や、Excelの関数を指定する場合は、「計算式」設定項目を使います。</p>
+		<pre class="code">（エクセルの現在シート：セル（A1））の計算式を、「=sum(A1:A6)」に変える</pre>
+		<h3>セルの内容を取得する</h3>
+		<p>セルの内容を表示する場合は、次のように書きます。</p>
+		<pre class="code">「セルA3の内容は：　［（エクセルの選択シート：セル（「A3」））の内容］」を表示する</pre>
+		<p>セルA3の部分の内容を表します。</p>
+		<p>R1C1方で指定するときは、次のように書きます。</p>
+		<pre class="code">「セル(1,3)の内容は：　［（エクセルの選択シート：セル（{1,3}））の内容］」を表示する</pre>
+		<h3 id="lookup4">セルを選択する</h3>
+		<p>特定のセルを選択するには、「選択範囲」設定項目または「選択する」手順を使います。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　単一のセルを選択する</h4>
+			</div>
+			<div class="panel-body">
+				<p>セルA1を選択</p>
+				<pre class="code">エクセルの現在シート：セル（「A1」）を選択する</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　連続するセルを選択する</h4>
+			</div>
+			<div class="panel-body">
+				<p>セルA1からB5までを選択します。連続する複数のセルを指定するには、「:」を使います。</p>
+				<pre class="code">エクセルの現在シートの選択範囲を「A1:B5」に変える</pre>
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<h3 id="lookup5">見た目を変える</h3>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　セルの字体を変える</h4>
+			</div>
+			<div class="panel-body">
+				<p> <a href="../office/cell.htm">「セル」種類</a>で、セルのフォント名や字体を変えられます。</p>
+				<p>選択しているセルの書体を太字＋斜体に変えます。</p>
+				<pre class="code">選択<span class="pink">セル</span>は、エクセルの選択シート<span class="pink">の選択
+選択セル</span>の内容を「プロデル」に変える
+<span class="pink">選択セル</span>の太字を○に変える
+<span class="pink">選択セル</span>の斜体を○に変える</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　幅や高さを変える</h4>
+			</div>
+			<div class="panel-body">
+				<p>B4のセルの幅と高さを変えます</p>
+				<pre class="code">選択<span class="pink">セル</span>は、（エクセルの現在シート<span class="pink">：セル（「B2」）</span>）<span class="pink">
+</span>選択<span class="pink">セル</span>の幅を100に変える
+選択<span class="pink">セル</span>の高さを30に変える</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　色を変える</h4>
+			</div>
+			<div class="panel-body">
+				<p>文字色や背景色を変更できます。</p>
+				<pre class="code">選択<span class="pink">セル</span>は、エクセルの選択シート<span class="pink">の選択
+選択セル</span>の内容を「プロデル」に変える
+<span class="pink">選択セル</span>の背景を黄緑に変える
+<span class="pink">選択セル</span>の色を白に変える</pre>
+			</div>
+		</div>
+		<h3>セルのコピーと貼り付け</h3>
+		<p>セルを別の指定したセルへコピー、貼り付け、移動できます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　指定したセルをコピーします</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">（エクセルの現在シート：セル（「B2:F4」））をコピーする</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　コピーしたセルを貼り付けます</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">（エクセルの現在シート：セル（「B9」））を貼り付ける</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　プレビュー後に印刷します</h4>
+			</div>
+			<div class="panel-body">
+				<p>プレビューの表示と印刷は、次のように書きます。</p>
+				<pre class="code">エクセルのワークブックをプレビューする
+エクセルのワークブックを印刷する</pre>
+			</div>
+		</div>
+		<h3 id="lookup6">エクセルの保存と終了</h3>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　ブックを保存する</h4>
+			</div>
+			<div class="panel-body">
+				<p>作成したブックは、Excel形式で保存できます。</p>
+				<pre class="code"><span class="rem">ーー名前を付けて保存
+</span>エクセルの現在ブックを「名簿.xls」へ保存する</pre>
+				<pre class="code"><span class="rem">ーー上書き保存
+</span>エクセルの現在ブックを保存する</pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　ワークブックを閉じてエクセルを終了する</h4>
+			</div>
+			<div class="panel-body">
+				<p>編集中のワークブックを閉じたり、エクセルを終了したりするには、次のように書きます。</p>
+				<pre class="code">エクセルの現在ブックを閉じる
+エクセルを終了する</pre>
+			</div>
+		</div>
+		<p>　</p>
+		<h3 id="lookup7">シートへ自動入力する例</h3>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　シートへ自動入力する</h4>
+			</div>
+			<div class="panel-body">
+				<p>エクセルのシートに自動入力するプログラム例を紹介します。</p>
+				<p>くだもの屋さんの果物が、いくつ売れたかとその売り上げを計算したシートを作るとします。<br>
+					まず、エクセルで元となるシートを作ります。<br>
+					売り上げは、プロデルが自動的にしてくれるので、売り上げ個数のセルは空白にしておきます。<br>
+					売り上げ個数の合計を計算するセル(C10)の部分は、<br>
+					=sum(C4:C9)<br>
+					と入力して、Excel側で計算するようにしておきます。</p>
+				<p>次の例では、C4～C9のセルに、それぞれの商品の売り上げ個数が自動入力されます。<br>
+					その後、C10のセルにある売り上げ合計をプロデルに出力します。<br>
+					計算した今日の売り上げは、別シートとしてファイルに保存します。</p>
+				<p>売り上げに入力される数値は、「乱数」手順を使ってランダムに決めていますが、ウィンドウのテキストに入力した値などを使うこともできます。</p>
+				<pre class="code"><span class="rem">ーーCSVファイルや入力手順、テキスト部品などに書き換えすることもできます</span>
+りんごの数は、0から30までの乱数
+みかんの数は、0から20までの乱数
+すいかの数は、0から5までの乱数
+ぶどうの数は、0から20までの乱数
+なしの数は、0から20までの乱数
+ももの数は、0から10までの乱数
+
+<span class="rem">ーーエクセルの起動してファイルを開く</span>
+エクセルを起動する
+エクセルで「［プログラムのフォルダ］エクセル(実用例).xls」を開く
+
+<span class="rem">ーー内容の入力</span>
+シートは、エクセルの現在シート
+（シート：セル（「C4」））の内容をりんごの数に変える
+（シート：セル（「C5」））の内容をみかんの数に変える
+（シート：セル（「C6」））の内容をすいかの数に変える
+（シート：セル（「C7」））の内容をぶどうの数に変える
+（シート：セル（「C8」））の内容をなしの数に変える
+（シート：セル（「C9」））の内容をももの数に変える
+
+<span class="rem">ーー内容の表示</span>
+「今日の売り上げは：［（シート：セル（「E10」））の内容］円です」を表示する
+
+<span class="rem">ーーワークシートの保存</span>
+エクセルの現在ブックを「［プログラムのフォルダ］売上-［日付］.xls」に保存する
+<span class="rem">
+</span>エクセルを終了する</pre>
+			</div>
+		</div>
+		<h3 id="lookup8">マクロを実行する</h3>
+		<p>ワークシートに含まれるマクロを実行できます。<br>
+          ブックに含まれるマクロを実行するには、次のように書きます。マクロ.xlsmには、あらかじめモジュールにTestMacro1を定義してください。</p>
+        <pre class="code">エクセルを起動する
+エクセルで「マクロ.xlsm」を開く
+対象ブックは、エクセルの選択ブック
+
+<i>ーーマクロを実行させます</i>
+対象ブックにある「TestMacro1」をマクロ実行する
+<i></i>
+対象ブックを閉じる
+もしエクセルのワークブック一覧の個数が0なら、エクセルを終了する</pre>
+        <p>※マクロは、Excelの「ツール」－「マクロ」－「マクロ」または「Visual Basic Editor」で作成します。<br>
+		  詳しくは、Microsoft Excelのヘルプなどをご覧下さい。</p>
+		<h4>シートの関数を呼び出す</h4>
+		<p>各シートに定義した関数を呼び出す場合は、シート名を指定します。<br>
+			次の例では、Sheet1に定義した「Sub TestMacro()」を実行します。</p>
+		<pre class="code"><span class="rem">ーーSheet1のTestMacroを実行</span>
+エクセルにある「Sheet1.TestMacro」をマクロ実行する</pre>
+		<h4>引数を指定する場合</h4>
+		<p>引数を指定する関数の場合、「～で」に引数を配列形式で指定します。<br>
+			ただし、VBA関数の引数は、必ず文字列型(String)である必要があります。<br>
+			また、指定できる引数の数は、10個までです。</p>
+		<pre class="vb">&#39; VBAのコード
+Function TestMacro2(ByVal Value As String, ByVal Title As String) As String
+&nbsp;&nbsp;  MsgBox Value, Title
+&nbsp;&nbsp;  TestMacro2 = &quot;戻り値です&quot;
+End Sub</pre>
+		<pre class="code"><span class="rem">ーー引数のあるマクロ実行</span>
+エクセルにある「TestMacro2」を｛「こんにちは」，「メッセージ」｝でマクロ実行する
+ 	
+<span class="rem">ーー戻り値を得る場合</span>
+エクセルにある「TestMacro2」を｛「こんにちは」，「メッセージ」｝でマクロ実行して、表示する</pre>
+		<p>　</p>
+		<h2>ブックやシートに関する操作</h2>
+		<p>プロデル上からブックを増やしたり、シートを切り替えたりできます。</p>
+		<h3 id="lookup9">ブックやシートの切り替え</h3>
+		<p>ブックやシートを切り替えるには、次のように書きます。</p>
+		<pre class="code">エクセルのワークシートを「Sheet1」に変える</pre>
+		<pre class="code">エクセルのワークブックを「成績表.xls」に変える</pre>
+		<p>数値（左から１,２,…）で指定することもできます。</p>
+		<p>　</p>
+		<h3 id="lookup10">エクセルで開いているファイルの一覧を取得する</h3>
+		<pre class="code">エクセルのワークブック一覧を表示する</pre>
+		<h4>ブックに含まれているシートの一覧を取得する</h4>
+		<pre class="code">エクセルの選択ブックのワークシート一覧を表示する</pre>
+		<p>&nbsp;</p>
+		<h3 id="lookup11">シートの追加</h3>
+		<p>「新しいワークシートを作成」手順を使います。</p>
+		<pre class="code">エクセルに新しいワークシートを作成する</pre>
+		<h3 id="lookup12">シートの削除</h3>
+		<p>シートを削除するには、シートの「削除」手順を使います。</p>
+		<pre class="code">エクセルの選択シートを削除する</pre>
+		<h3 id="lookup15">シートのコピー</h3>
+		<p>シートの内容を複製するには、シートの「コピー」手順を使います。</p>
+		<pre class="code">エクセルの選択シートを「コピーシート」へコピーする</pre>
+		<h3 id="lookup13">シートの並び順の変更</h3>
+		<pre class="code"><span class="rem">ーー現在選択しているシートをSheet1の直前へ移動します
+</span>エクセルの選択シートの「Sheet1」へ移動する</pre>
+		<p>　</p>
+		<h3 id="lookup14">エクセル連係の拡張</h3>
+		<p>プロデルでサポートしているExcelの機能は、ほんの一部です。<br>
+			Excelには様々な機能が用意されており、それらの機能すべてを対応することはできません。</p>
+		<p>しかし、少しでもプロデル上で操作ができるように、VBAで利用できるプロパティの一部を、プロデル上で直接指定できます。</p>
+		<p>コレクションを含むオブジェクトの指定やメソッドには対応していませんが、値の設定や取得など、プロデルでサポートしていない最低限の情報を取得できます。</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">例文　ワードアートのテキストを設定、取得する</h4>
+			</div>
+			<div class="panel-body">
+				<pre class="code">エクセルをリンクする
+エクセルの図形の「ワードアート 1」の「TextEffect.text」を、時間に変える
+内容は、エクセルの図形の「ワードアート 1」の<span class="pink">「TextEffect.text」</span>
+内容を表示する</pre>
+			</div>
+		</div>
+		</div><!--/samples-->
+</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

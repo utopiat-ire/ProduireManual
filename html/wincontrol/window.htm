@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+    <title>ウィンドウ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ウィンドウ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+	<div id="reftitle" class="col-md-9">
+	  <ol class="breadcrumb" data-category="gui">
+	    <li><a href="../index.htm">プロデル</a></li>
+	    <li><a href="index.htm">GUI部品</a></li>
+	    <li class="active">ウィンドウ</li>
+      </ol>
+	  <h1>ウィンドウ</h1>
+    </div>
+	<div id="refsidebar" class="col-md-3 sidebar">
+		<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<h3>&nbsp;</h3>
+	</div>
+	<div class="col-sm-8">
+<h2>概要</h2>
+		<p>部品が配置されていないウィンドウを表します。<br>
+			ウィンドウの中には、部品を配置できます。<br>
+		用途に応じて、ウィンドウの種類を変えられます。</p>
+		<p><span class="label label-warning">生成可能</span></p>
+		<p align="center"><img src="../img/window.png"></p>
+		<h3>継承する種類</h3>
+		<p><a href="control.htm">ウィンドウ部品</a></p>
+		<h3>必要プラグイン</h3>
+		<p>ウィンドウ部品集(<a href="index.htm">Produire.WinControl.dll</a>)</p>
+		<h2>作成する方法</h2>
+		<pre class="format">【名前】というウィンドウを作る</pre>
+	<h2 id="手順">手順</h2>
+	<p><a href="control.htm#手順">コントロールの基本的な手順</a>のほか、次の手順が使用できます。</p>
+	<div id="methodlist"><a href="#使う">使う</a>　<a href="#作る">作る</a>　<a href="#隠す">隠す</a>　<a href="#消す">消す</a>　<a href="#表示する">表示する</a>　<a href="#クリアする">クリアする</a>　<a href="#再描画する">再描画する</a>　<a href="#閉じる">閉じる</a>　<a href="#最大化する">最大化する</a>　<a href="#最小化する">最小化する</a>　<a href="#標準化する">標準化する</a>　<a href="#元のサイズに戻す">元のサイズに戻す</a>　<a href="#印刷する">印刷する</a>　<a href="#移動する">移動する</a>　<a href="#点滅させる">点滅させる</a>　<a href="#確認して印刷する">確認して印刷する</a>　</div>
+	<div id="methods">
+		<h3>【名前】という【部品名】を<a name="使う">使う</a></h3>
+		<p>ウィンドウ上にオブジェクトを作成する準備をします</p>
+		<h3>【名前】という【部品名】を<a name="作る">作る</a></h3>
+		<p>ウィンドウ上にオブジェクトを作成します</p>
+		<h3>【自分】を<a name="隠す">隠す</a></h3>
+		<p>ウィンドウを非表示にします</p>
+		<h3>【名前】を<a name="消す">消す</a></h3>
+		<p>ウィンドウ上から指定した部品を消します</p>
+		<h3>【自分】を〈ダイアログで〉〈常に手前に〉<a name="表示する">表示する</a></h3>
+		<p>ウィンドウを画面に表示します</p>
+		<h3>【自分】を<a name="クリアする">クリアする</a></h3>
+		<p>ウィンドウに貼り付けた画像や部品をすべて削除します</p>
+		<h3>【自分】を<a name="再描画する">再描画する</a></h3>
+		<p>ウィンドウの絵を再表示します</p>
+		<h3>【自分】を<a name="閉じる">閉じる</a></h3>
+		<p>ウィンドウを閉じます</p>
+		<h3>【自分】を<a name="最大化する">最大化する</a></h3>
+		<p>ウィンドウを最大化します</p>
+		<h3>【自分】を<a name="最小化する">最小化する</a></h3>
+		<p>ウィンドウを最小化します</p>
+		<h3>【自分】を<a name="標準化する">標準化する</a><br>
+		【自分】を<a name="元のサイズに戻す">元のサイズに戻す</a></h3>
+		<p>ウィンドウを元のサイズに戻します</p>
+		<h3>【自分】を<a name="印刷する">印刷する</a></h3>
+		<p>テキストの内容をプリンタへ印刷します</p>
+		<h3>【自分】を<a name="移動する">移動する</a></h3>
+		<p>ウィンドウをドラッグできる状態にします</p>
+		<h3>【自分】を〈【点滅回数】回〉<a name="点滅させる">点滅させる</a></h3>
+		<p>ウィンドウが選択されるまでウィンドウを点滅させます。<br>
+		点滅回数を指定すると、その回数だけ点滅します。</p>
+		<h3>【自分】を<a name="確認して印刷する">確認して印刷する</a></h3>
+		<p>プリンタと印刷設定を確認して、テキストの内容をプリンタへ印刷します</p>
+	</div>
+	<h2 id="設定項目">設定項目</h2>
+	<p><a href="control.htm#設定項目">コントロールの基本的な設定項目</a>のほか、次の設定項目が使用できます。</p>
+	<div id="properties">
+		<table class="table table-bordered">
+			<thead><tr>
+				<th>設定項目</th>
+				<th>型</th>
+				<th>　</th>
+				<th>説明</th>
+			</tr></thead>
+			<tr>
+				<th><a name="アイコン">アイコン</a></th>
+				<th>アイコン</th>
+				<th>◎</th>
+				<td>ウィンドウのアイコン</td>
+			</tr>
+			<tr>
+				<th><a name="コンテキストメニュー">コンテキストメニュー</a></th>
+				<th>&nbsp;</th>
+				<th>◎</th>
+				<td>右クリックしたときに表示されるメニュー部品</td>
+			</tr>
+			<tr>
+				<th><a name="コントロールボックス">コントロールボックス</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>左上のアイコンを表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="タイトル">タイトル</a></th>
+				<th>文字列</th>
+				<th>◎</th>
+				<td>ウィンドウのタイトル</td>
+			</tr>
+			<tr>
+				<th><a name="タスクバー表示">タスクバー表示</a></th>
+				<th>真偽</th>
+				<th>◎</th>
+				<td>タスクバーに表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="マウスカーソル">マウスカーソル</a></th>
+				<th>カーソル</th>
+				<th>◎</th>
+				<td>マウスのカーソルの形</td>
+			</tr>
+			<tr>
+				<th><a name="決定ボタン">決定ボタン</a></th>
+				<th>ボタン</th>
+				<th>◎</th>
+				<td>エンターキーを押したときに、クリックしたことになるボタン部品</td>
+			</tr>
+			<tr>
+				<th>最小サイズ</th>
+				<th><a href="../primitive/size.htm">サイズ</a></th>
+				<th>◎</th>
+				<td>最大サイズ</td>
+			</tr>
+			<tr>
+				<th><a name="最小化ボタン">最小化ボタン</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>最小化ボタンを表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="最前面">最前面</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>常に手前に表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="最大化ボタン">最大化ボタン</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>最大化ボタンを表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="最大サイズ">最大サイズ</a></th>
+				<th><a href="../primitive/size.htm">サイズ</a></th>
+				<th>◎</th>
+				<td>最大サイズ</td>
+			</tr>
+			<tr>
+				<th><a name="取消ボタン">取消ボタン</a></th>
+				<th>ボタン</th>
+				<th>◎</th>
+				<td>Escボタンを押したときに、クリックしたことになるボタン部品</td>
+			</tr>
+			<tr>
+				<th><a name="種類">種類</a></th>
+				<th>列挙</th>
+				<th>◎</th>
+				<td>ウィンドウの形状<br>
+				標準・固定・ツール・固定ツール・ダイアログ・縁無し</td>
+			</tr>
+			<tr>
+				<th><a name="初期状態">初期位置</a></th>
+				<th>列挙</th>
+				<th>◎</th>
+				<td>ウィンドウを表示した際のウィンドウの位置<br>
+				手動・中央・自動</td>
+			</tr>
+			<tr>
+				<th><a name="実質大きさ">実質大きさ</a></th>
+				<th><a href="../primitive/size.htm">サイズ</a></th>
+				<th>◎</th>
+				<td>枠や余白を除いたウィンドウの大きさ</td>
+			</tr>
+			<tr>
+				<th><a name="透明度">透明度</a></th>
+				<th>整数</th>
+				<th>◎</th>
+				<td>ウィンドウの透明度</td>
+			</tr>
+			<tr>
+				<th><a name="背景画像">背景画像</a></th>
+				<th>画像</th>
+				<th>◎</th>
+				<td>背景に表示する画像</td>
+			</tr>
+			<tr>
+				<th><a name="背景色">背景色</a></th>
+				<th>色</th>
+				<th>◎</th>
+				<td>ウィンドウの背景色</td>
+			</tr>
+			<tr>
+				<th><a name="部品キーイベント">部品キーイベント</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>ウィンドウ上の部品上でキーが操作された場合、ウィンドウのキーイベント手順を実行するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="MDIコンテナ">MDIコンテナ</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>MDIの親ウィンドウにするかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="MDI親ウィンドウ">MDI親ウィンドウ</a></th>
+				<th>ウィンドウ</th>
+				<th>◎</th>
+				<td>このウィンドウを表示するMDIウィンドウ</td>
+			</tr>
+			<tr>
+				<th><a name="MDI子ウィンドウ一覧">MDI子ウィンドウ一覧</a></th>
+				<th>配列</th>
+				<th>□</th>
+				<td>MDIの親ウィンドウの場合、子ウィンドウの一覧を取得します</td>
+			</tr>
+			<tr>
+				<th><a name="MDI選択ウィンドウ">MDI選択ウィンドウ</a></th>
+				<th>ウィンドウ</th>
+				<th>□</th>
+				<td>MDIの親ウィンドウの場合、選択されている子ウィンドウを取得します</td>
+			</tr>
+			<tr>
+				<th><a name="MDI子ウィンドウ">MDI子ウィンドウ</a></th>
+				<th>真偽値</th>
+				<th>□</th>
+				<td>MDIの子ウィンドウであるかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="子部品一覧">子部品一覧</a></th>
+				<th>配列</th>
+				<th>□</th>
+				<td>ウィンドウの中にある部品の一覧</td>
+			</tr>
+			<tr>
+				<th><a name="待ち状態">待ち状態</a></th>
+				<th>真偽値</th>
+				<th>◎</th>
+				<td>待ち状態を表すカーソルを表示するかどうか</td>
+			</tr>
+			<tr>
+				<th><a name="画面状態">画面状態</a></th>
+				<th>列挙体</th>
+				<th>◎</th>
+				<td>ウィンドウの形状</td>
+			</tr>
+			<tr>
+			  <th><a name="設計スケール比率">設計スケール比率</a></th>
+			  <th>配列</th>
+			  <th>◎</th>
+			  <td>開発環境の画面サイズを表す縦横のDPI値。この値を基準に実行環境のDPIに合わせて値を計算します。</td>
+		  </tr>
+		</table>
+		<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+	</div>
+	<h2 id="イベント手順">イベント手順</h2>
+	<p><a href="control.htm#イベント手順">コントロールの基本的なイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+	<div id="events">
+		<table class="table table-bordered">
+			<thead>
+			<tr>
+				<th>イベント名</th>
+				<th>説明</th>
+				<th>情報</th>
+			</tr>
+			</thead>
+			<tr>
+				<th><a name="アクティブ">アクティブ</a></th>
+				<td>ウィンドウが選択された時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="ドラッグが通過">ドラッグが通過</a></th>
+				<td>ドラッグ中のマウスカーソルがウィンドウ内で移動した時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="大きさが変化した">大きさが変化した</a></th>
+				<td>ウィンドウの大きさが変化した時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="非アクティブ">非アクティブ</a></th>
+				<td>別のウィンドウが選択された時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="描画する">描画する</a></th>
+				<td>ウィンドウの内容を描画する時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="閉じた">閉じた</a></th>
+				<td>ウィンドウが閉じられた時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th>閉じる</th>
+				<td>ウィンドウを閉じるようとした時</td>
+				<td><a href="../events/cancel.htm">あり</a></td>
+			</tr>
+			<tr>
+				<th><a name="開いた">開いた</a></th>
+				<td>ウィンドウが読み込まれた時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="スクロールされた">スクロールされた</a></th>
+				<td>スクロールバーで縦横にスクロールされた時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="横スクロールされた">横スクロールされた</a></th>
+				<td>スクロールバーで横方向にスクロールされた時</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<th><a name="縦スクロールされた">縦スクロールされた</a></th>
+				<td>スクロールバーで縦方向にスクロールされた時</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<p>　</p>
+	<h2 id="サンプルコード">サンプルコード</h2>
+<div id="samples">
+<h3 id="sample1">ウィンドウを表示する</h3>
+	<p>ボタン1つのウィンドウを作ります。</p>
+<pre class="code">窓というウィンドウを作る
+窓へＯＫボタンというボタンを作る
+ 	その内容を「OK」に変える
+窓を表示する
+待機する</pre>
+</div><!--/samples-->
+	</div>
+</div>
+<p class="text-right"><!-- #BeginDate format:Ja2 -->2020年12月30日 <!-- #EndDate -->更新</p><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>

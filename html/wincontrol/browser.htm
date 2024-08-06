@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>ウェブブラウザ - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="部品,コントロール部品"><!-- InstanceEndEditable -->
+	<meta name="description" content="プロデルマニュアル2021">
+	<meta name="author" content="utopiat.net">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ウェブブラウザ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li><a href="../core/global.htm">広域種類</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画機能</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ操作</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク機能</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール機能</a></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作機能</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算機能</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成機能</a></li>
+							<li><a href="../tools/index.htm">Webアプリ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+
+<div class="row">
+  <div id="reftitle" class="col-md-9">
+  <ul class="breadcrumb" data-category="gui">
+    <li><a href="../index.htm">プロデル</a></li>
+    <li><a href="index.htm">GUI部品</a></li>
+    <li>ウェブブラウザ</li>
+  </ul>
+  <h1>ウェブブラウザ</h1>
+</div>
+<div id="refsidebar" class="col-md-3 sidebar">
+	<ul class="jumpnavi nav nav-pills"><li><a href="#">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
+	<h3>関連ページ</h3>
+    <ul>
+      <li><a href="browser_page.htm">ウェブブラウザページ</a></li>
+      <li><a href="browser_form.htm">ウェブブラウザフォーム</a></li>
+      <li><a href="browser_element.htm">ウェブブラウザ要素</a></li>
+    </ul>
+    <p>&nbsp;</p>
+</div>
+	<div class="col-sm-8">
+	  <h2>概要</h2>
+		<p>Internet Explorerと同機能のブラウザ機能を持つ部品です。</p>
+		<p>アドレスを指定することで、ウェブページを表示することが可能です。</p>
+		<p><a href="../usage.htm">
+			<span class="label label-warning">生成可能</span><span class="label label-success">ウィンドウ部品</span><span class="label label-danger">保護あり</span></a></p>
+		<h3>継承する種類</h3>
+		<p><a href="control.htm">ウィンドウ部品</a></p>
+		<h3>必要プラグイン</h3>
+		<p>ウィンドウ部品集(<a href="index.htm">Produire.WinControl.dll</a>)</p>
+<h2>作成する方法</h2>
+		<pre class="format">【名前】というウェブブラウザを作る</pre>
+		<p>　</p>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#ホームへ移動する">ホームへ移動する</a>　<a href="#検索ページへ移動する">検索ページへ移動する</a>　<a href="#印刷する">印刷する</a>　<a href="#キャプチャする">キャプチャする</a>　<a href="#更新する">更新する</a>　<a href="#中止する">中止する</a>　<a href="#戻す">戻す</a>　<a href="#印刷プレビューを表示する">印刷プレビューを表示する</a>　<a href="#ページ設定を表示する">ページ設定を表示する</a>　<a href="#ググる">ググる</a>　<a href="#ヤフーする">ヤフーする</a>　<a href="#Bingる">Bingる</a>　<a href="#実行する">実行する</a>　</div>
+		<div id="methods">
+			<h3>【自分】を【アドレス】へ<a name="移動する">移動する</a></h3>
+			<p>指定したページへ移動します。<br>
+				【アドレス】には、インターネットアドレスを指定します。</p>
+			<pre class="code">ブラウザを「https://www.yahoo.co.jp」へ移動させる</pre>
+			<h3>【自分】を<a name="ホームへ移動する">ホームへ移動する</a></h3>
+			<p>ホームページ(ブラウザで起動時に表示されるページ)へ移動します。</p>
+			<pre class="code">ブラウザをホームへ移動させる</pre>
+			<h3>【自分】を<a name="検索ページへ移動する">検索ページへ移動する</a></h3>
+			検索ページへ移動します。<pre class="code">ブラウザを検索ページへ移動させる</pre>
+			<h3>【自分】を<a name="印刷する">印刷する</a></h3>
+			<p>表示しているページを印刷します</p>
+			<pre class="code">ブラウザを印刷する</pre>
+			<h3>【自分】を<a name="キャプチャする">キャプチャする</a>：プロデル画像</h3>
+			<p>表示しているページをスクリーンショットを取得します</p>
+			<pre class="code">ブラウザをキャプチャして「[デスクトップ]screen.png」へ保存する</pre>
+			<h3>【自分】を<a name="更新する">更新する</a></h3>
+			<p>表示しているページを更新(再表示)します</p>
+			<pre class="code">ブラウザを更新する</pre>
+			<h3>【自分】を<a name="進む">進める</a></h3>
+			<p>次に表示したページへ進みます</p>
+			<pre class="code">ブラウザを進める</pre>
+			<h3>【自分】を<a name="中止する">中止する</a></h3>
+			<p>ページの読み込みを中止します</p>
+			<pre class="code">ブラウザを中止させる</pre>
+			<h3>【自分】を<a name="戻す">戻す</a></h3>
+			<p>前に表示したページへ戻ります</p>
+			<pre class="code">ブラウザを戻す</pre>
+			<h3>【自分】で<a name="印刷プレビューを表示する">印刷プレビューを表示する</a></h3>
+			<p>印刷プレビューを表示します。</p>
+			<pre class="code">ブラウザを印刷プレビューを表示する</pre>
+			<h3>【自分】で<a name="ページ設定を表示する">ページ設定を表示する</a></h3>
+			<p>印刷のページ設定を表示します。</p>
+			<pre class="code">ブラウザを印刷プレビューを表示する</pre>
+			<h3>【自分】で【検索キーワード】を<a name="ググる">ググる</a></h3>
+			<p>Google検索を行います。</p>
+			<pre class="code">ブラウザで「プロデル」をググる</pre>
+			<h3>【自分】で【検索キーワード】を<a name="ヤフーする">ヤフーする</a></h3>
+			<p>Yahoo! Japanで検索を行います。</p>
+			<pre class="code">ブラウザで「プロデル」をヤフーする</pre>
+			<h3>【自分】で【検索キーワード】を<a name="Bingる">Bingる</a></h3>
+			<p>Bing検索を行います。</p>
+			<pre class="code">ブラウザで「プロデル」をBingる</pre>
+			<h3>【自分】で【スクリプト名】を<a name="実行する">実行する</a>:値</h3>
+			<p>ページ中で指定したJavaScriptコードを実行します。</p>
+			<pre class="code">ブラウザで「$('#target').click();」を実行する</pre>
+			<h3>【自分】で【スクリプト名】を【引数】として実行する:値</h3>
+			<p>ページ中で指定したJavaScript関数を実行します。引数を指定すると、その引数が関数へ渡されます。</p>
+			<pre class="code">ブラウザで「eval」を{「$('#target').text('」&amp;データ&amp;「');」}として実行する</pre>
+			</div>
+		<h2 id="設定項目">設定項目</h2>
+		<p>部品の<a href="control.htm">基本的な設定項目</a>のほか、次の設定項目が使用できます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>設定項目</th>
+					<th>型</th>
+					<th>　</th>
+					<th>説明</th>
+					</tr></thead>
+				<tr>
+					<th><a name="アドレス">アドレス</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>インターネットアドレス</td>
+					</tr>
+				<tr>
+					<th><a name="オフライン">オフライン</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>ブラウザがオフライン状態かどうかを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="ショートカットキー">ショートカットキー</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>Internet Explorerが持つショートカットキーを有効にするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="ショートカットメニュー">ショートカットメニュー</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>右クリックでメニューを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="スクリプトエラー表示">スクリプトエラー表示</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>スクリプトエラーによるメッセージを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="スクロールバー">スクロールバー</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>スクロールバーを表示するかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="ソース">ソース</a></th>
+					<th>文字列</th>
+					<th>◎</th>
+					<td>現在表示しているページのHTMLソース</td>
+					</tr>
+				<tr>
+					<th><a name="タイトル">タイトル</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>現在表示しているページのタイトルを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="ドラッグドロップ">ドラッグドロップ</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>ドラッグ＆ドロップされたページに移動できるようにするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="バージョン">バージョン</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>ブラウザのバージョン<br>
+						</td>
+					</tr>
+				<tr>
+					<th><a name="ページ">ページ</a></th>
+					<th><a href="browser_page.htm">ページ</a></th>
+					<th>□</th>
+					<td>表示されているページの構造を取得します</td>
+					</tr>
+				<tr>
+					<th><a name="ページ移動">ページ移動</a></th>
+					<th>真偽値</th>
+					<th>◎</th>
+					<td>表示されたページから他のページへ移動できるようにするかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="作業中">作業中</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>現在処理を行っているかどうかを取得します </td>
+					</tr>
+				<tr>
+					<th><a name="種類">種類</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>現在表示しているページの種類を取得します</td>
+					</tr>
+				<tr>
+					<th><a name="状態">状態</a></th>
+					<th>&nbsp;</th>
+					<th>□</th>
+					<td>ブラウザの現在の状態を取得します。<br>
+						完了・操作可能・読み込み開始・読み込み中・未完</td>
+					</tr>
+				<tr>
+					<th><a name="状態表示">状態表示</a></th>
+					<th>文字列</th>
+					<th>○</th>
+					<td>ブラウザの状況メッセージを取得します</td>
+					</tr>
+				<tr>
+					<th><a name="進める">進める</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>次に表示したページがあるかどうか</td>
+					</tr>
+				<tr>
+					<th><a name="戻せる">戻せる</a></th>
+					<th>真偽値</th>
+					<th>□</th>
+					<td>前に表示したページがあるかどうか</td>
+					</tr>
+				</table>
+			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			</div>
+		<h2 id="イベント手順">イベント手順</h2>
+		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
+		<div id="events">
+			<table class="table table-bordered">
+				<thead><tr>
+					<th>イベント名</th>
+					<th>説明</th>
+					<th>情報</th>
+					</tr></thead>
+				<tr>
+					<th><a name="戻るボタンが変化した">戻るボタンが変化した</a></th>
+					<td>戻るボタンの状態が変化したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="進むボタンが変化した">進むボタンが変化した</a></th>
+					<td>進むボタンの状態が変化したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="ページが読み込まれた">ページが読み込まれた</a></th>
+					<td>ページの読み込みが完了したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="タイトルが変化した">タイトルが変化した</a></th>
+					<td>ページのタイトルが変化したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="暗号化レベルが変化した">暗号化レベルが変化した</a></th>
+					<td>暗号化レベルが変化したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="ダウンロードが開始された">ダウンロードが開始された</a></th>
+					<td>ページの読み込みが開始されたときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="表示が開始された">表示が開始された</a></th>
+					<td>ファイルのダウンロードが開始されたときに実行されます</td>
+					<td><a href="browser_event.htm#表示が開始された">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="表示が開始される">表示が開始される</a></th>
+					<td>ページの読み込みが開始される直後に実行されます</td>
+					<td><a href="browser_event.htm#表示が開始される">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="進行状況が変化した">進行状況が変化した</a></th>
+					<td>読み込み状況が変化したときに実行されます</td>
+					<td><a href="browser_event.htm#進行状況が変化した">あり</a></td>
+					</tr>
+				<tr>
+					<th><a name="状況内容が変化した">状況内容が変化した</a></th>
+					<td>状況表示が変化したときに実行されます</td>
+					<td>　</td>
+					</tr>
+				<tr>
+					<th><a name="別ウィンドウが表示される">別ウィンドウが表示される</a></th>
+					<td>新しいウィンドウが表示されるときに実行されます</td>
+					<td><a href="browser_event.htm#別ウィンドウが表示される">あり</a></td>
+					</tr>
+				</table>
+			</div>
+		<p>　</p>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<p>簡単なブラウザ画面を作ります。</p>
+<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめ手順
+		この内容を「ブラウザ部品のサンプル」に変える
+		このドラッグドロップを○に変える
+		この位置と大きさを｛15，15，300，300｝に変える
+		ウェブブラウザ1というウェブブラウザを作る
+			その位置と大きさを｛0，0，292，266｝に変える
+			そのドッキング方向を「全体」に変える
+		ウェブブラウザ1を「https://www.yahoo.co.jp/」へ移動する
+	終わり
+終わり</pre>
+		
+		<h2 id="howto">使い方</h2>
+		<div id="samples">
+		<h3 id="lookup1">ウェブブラウザを操作する</h3>
+        <p>ウェブブラウザの手順を実行すると、「更新」や「読み込みの中止」などの操作ができます。</p>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">例文　前のページへ戻す</h4>
+          </div>
+          <div class="panel-body">
+            <pre class="format"><span class="flag">《ウェブブラウザオブジェクト》</span>を戻す</pre>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">例文　次のページへ進める</h4>
+          </div>
+          <div class="panel-body">
+            <pre class="format"><span class="flag">《ウェブブラウザオブジェクト》</span>を進める</pre>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">例文　ブラウザのページ読み込みを中止する</h4>
+          </div>
+          <div class="panel-body">
+            <pre class="format"><span class="flag">《ウェブブラウザオブジェクト》</span>を中止する</pre>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">書式　ブラウザを再読込する</h4>
+          </div>
+          <div class="panel-body">
+            <pre class="format"><span class="flag">《ウェブブラウザオブジェクト》</span>を更新する</pre>
+          </div>
+        </div>
+        <p>　</p>
+        <h3 id="lookup2">表示されているアドレスを調べる</h3>
+        <p>表示されているページのタイトルやアドレスは、ウェブブラウザの設定項目から取得できます。</p>
+        <p>「アドレス」設定項目と「タイトル」設定項目で、現在表示しているページのアドレスとタイトルが取得できます。</p>
+        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のアドレス</pre>
+        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のタイトル</pre>
+        <p>　</p>
+        <h3 id="lookup3">状況を表示したい</h3>
+        <p>ページを読み込み中の時などのブラウザの情報を取得することもできます。</p>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">例文</h4>
+          </div>
+          <div class="panel-body">
+            <p>ウェブブラウザでは、次の例文に書いたようなイベント手順が実行されます。<br>
+              アドレスや状態などは、設定項目で調べることができます。<br>
+            </p>
+            <pre class="code">メインブラウザの状況内容が変化した時の手順
+	ステータスの状況テキストの内容を、中央パネルのメインブラウザの状態表示に変える
+終わり
+
+メインブラウザのタイトルが変化した時の手順
+	この内容を、「［中央パネルのメインブラウザのタイトル］ - ［プログラムのタイトル］」に変える
+終わり
+
+メインブラウザの表示が開始された時の手順
+	アドレス欄の内容を、情報の「アドレス」に変える
+終わり
+ 			
+メインブラウザの戻るボタンが変化した時の手順
+	戻るボタンの有効を、メインブラウザの戻せるに変える
+終わり
+ 			
+メインブラウザの進むボタンが変化した時の手順
+	進むボタンの有効を、メインブラウザの進めるに変える
+終わり
+ 			
+メインブラウザの進行状況が変化した時の手順
+	もし　情報の「取得済みバイト数」は、-1　でないなら
+ 		ステータスの進捗状況の最大値を情報の「総バイト数」に変える
+ 		ステータスの進捗状況の値を情報の「取得済みバイト数」に変える
+ 	もし終わり
+終わり</pre>
+          </div>
+        </div>
+        <h3 id="lookup4">表示されているページの内容を調べる</h3>
+        <p>表示されているページのHTMLソースと、文章だけの内容を取得できます。</p>
+        <p>この設定項目を利用することで表示されているページの情報を保存することもできます。</p>
+        <pre class="format"><span class="flag">《ウェブブラウザ名》</span>のソース</pre>
+		<pre class="format"><span class="flag">《ウェブブラウザ名》</span>の内容</pre>
+	</div><!--/samples-->
+    </div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2020年12月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<hr>
+		<footer>
+			<p class="text-muted text-right"><a href="https://rdr.utopiat.net/">プロデル</a> &copy; 2007-2021 utopiat.net.</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+</body>
+<!-- InstanceEnd --></html>
