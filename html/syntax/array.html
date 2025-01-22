@@ -11,7 +11,7 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><meta name="keywords" content="言語仕様,配列"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -88,26 +88,25 @@
         </ul>
     </div>
     <div id="refcontent" class="col-md-8 col-md-offset-1">
-<h1 id="array">配列の文法</h1>
-<ul>
-	<li><a href="../primitive/array.htm">「配列」種類</a></li>
-	<li><a href="../primitive/fixedarray.htm">「固定長配列」種類</a></li>
-	<li><a href="https://produ.irelang.jp/blog/2020/03/1762/">プロデルで始める日本語プログラミング言語入門(#5) 「配列」 – プロデルブログ</a></li>
-</ul>
-<hr>
-        <h3 id="array_assign">配列要素への代入</h3>
-<p>配列要素は、変数名に続けて要素番号(添字)を（　）で囲んで書きます。要素番号は、１から始まります。</p>
-<p>プロデルの配列は、特に宣言しない限り、可変長配列として扱われ、事前に配列の個数や型を宣言する必要はありません。</p>
-<p>添字に要素数よりも大きい値を指定して値を代入すると、その添字までの要素が自動的に確保されます。</p>
+        <h1>配列の文法</h1>
+        <ul>
+            <li><a href="../primitive/array.htm">「配列」種類</a></li>
+            <li><a href="../primitive/fixedarray.htm">「固定長配列」種類</a></li>
+            <li><a href="../primitive/multiarray.htm">「多次元配列」種類</a></li>
+            <li><a href="https://produ.irelang.jp/blog/2020/03/1762/">プロデルで始める日本語プログラミング言語入門(#5) 「配列」 – プロデルブログ</a></li>
+        </ul>
+        <hr>
+        <h3 id="array_assign">配列要素への代入と取得</h3>
+<p>配列要素は、変数名に続けて添字(要素番号)を( )で囲んで書きます。添字は、1から始まります。なお、このように配列の要素を読み書きする式を配列アクセス式と呼びます。</p>
 <div class="panel panel-default">
-	<div class="panel-heading">
+        <div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><span class="rem">ーー文字や数値を格納する</span>
-<strong>《変数名》</strong>（<strong>《番号》</strong>）は、<strong>《式》</strong></pre>
-		<pre class="format"><span class="rem">ーー値を取得する</span>
-<strong>《変数名》</strong>（<strong>《番号》</strong>）を表示する</pre>
+		<pre class="format"><span class="rem">//配列の指定した番号の要素に値を格納する</span>
+<strong>《変数名》</strong>（<strong>《添字》</strong>）は、<strong>《式》</strong></pre>
+		<pre class="format"><span class="rem">//配列の指定した番号の要素から値を取得する</span>
+<strong>《変数名》</strong>（<strong>《添字》</strong>）を表示する</pre>
 	</div>
 </div>
 <div class="panel panel-default">
@@ -115,20 +114,19 @@
 		<h4 class="panel-title">例文　配列の操作</h4>
 	</div>
 	<div class="panel-body">
-<p>「果物」配列の１番目から３番目までに文字を格納して、順に表示しています。</p>
+<p>次の例では「果物」配列の1番目から4番目までに文字列を格納して、順に表示します。</p>
 <pre class="code">果物（1）は「りんご」
 果物（2）は「バナナ」
 果物（3）は「ぶどう」
 果物（4）は「なし」
 
-果物（1）を表示する
-果物（2）を表示する
-果物（3）を表示する
-果物（4）を表示する</pre>
+木に1から4まで繰り返す
+　　果物（木）を表示する
+そして</pre>
 	</div>
 </div>
-<h3 id="array_const">一度に配列へ値を格納する (配列定数)</h3>
-<p>上記の例では、変数の１番目から３番目までに順番に文字を格納していますが｛　｝を使うことで、配列へ一度に値を格納できます。</p>
+<h3 id="array_const">配列要素を一括で格納する (配列定数)</h3>
+<p>{ }を使うことで配列へ一度に値を格納できます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
@@ -147,25 +145,53 @@
 果物(2)を表示する　　<span class="rem">ーー「バナナ」と表示されます</span></pre>
 	</div>
 </div>
-<h3 id="array_declear">明示的な配列の宣言</h3>
-<p><a href="exp_boldcircle.htm">変数宣言式</a>を使って明示的に変数を配列として宣言できます。</p>
+<h3 id="array_assign2">0を基にした配列要素アクセス</h3>
+<p>他の一般的なプログラミング言語に馴染みがある利用者の場合、0を基にした添字が便利なケースがあります。0から始まる添字で指定するには、変数名に続けて「#」を付けて添字を書きます。</p>
+<div class="panel panel-default">
+        <div class="panel-heading">
+                <h4 class="panel-title">書式</h4>
+        </div>
+        <div class="panel-body">
+                <pre class="format"><span class="rem">//0を基にした配列アクセス</span>
+<strong>《変数名》</strong>#<strong>《添字》</strong>は、<strong>《式》</strong><br><strong>《変数名》</strong>#<strong>《添字》</strong>を表示する</pre>
+<span class="rem"></span>        </div>
+</div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+                <h4 class="panel-title">例文　配列の操作</h4>
+        </div>
+        <div class="panel-body">
+                <p>次の例では「果物」配列の0番目から3番目までの内容を順に表示します。</p>
+                <pre class="code">果物は{「りんご」,「バナナ」,「ぶどう」,「なし」}
+
+木に0から3まで繰り返す
+　　「[木]:[果物#木]」を表示する
+そして</pre>
+        </div>
+</div>
+<h3 id="array_const2"></h3>
+<h3 id="array_declear">可変長配列</h3>
+<p>プロデルの配列は、明示的に宣言しないと可変長配列とみなされます。可変長配列では、あらかじめ配列の要素数やデータ型を宣言する必要はありません。</p>
+<p>また、未代入の変数に対して配列アクセス式で添字に整数を指定すると、可変長配列として値が格納されます。</p>
+<p>さらに、添字に要素数よりも大きい値を指定して値を代入すると、その添字までの要素が自動的に確保されます。</p>
+<h3>配列要素のデータ型の宣言</h3>
+<p><a href="exp_boldcircle.htm">変数宣言式</a>で変数の配列の要素のデータ型を明示的に宣言できます。要素のデータ型を指定した場合、その配列要素へ格納する時に、そのデータ型に値が変換されて格納されます。要素の値変換は、下記で説明する固定長配列と多次元配列でも同様です。値は<a href="convertables.htm">型変換のルール</a>に基づいて変換されます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format">【<strong>《変数名》</strong>：<strong>《型》</strong>の配列】</pre>
+		<pre class="format">【<strong>《変数名》</strong>：<strong>《データ型》</strong>の配列】</pre>
 	</div>
 </div>
 <h3 id="array_fixed">固定長配列</h3>
-<p>固定長配列は、要素数が予め定められた配列型です。</p>
-<p>変数宣言式を使って配列の型と要素数を宣言できます。</p>
+<p><a href="../primitive/fixedarray.htm">固定長配列</a>は、格納できる要素数が決まっている配列です。固定長配列では「作る」文を使って配列の要素数をあらかじめ指定して作ります。一度作られた配列の要素数は増減できません。</p>
 <div class="panel panel-default">
-	<div class="panel-heading">
+        <div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><strong>《型》</strong>の配列(<strong>《要素数》</strong>)を作る</pre>
+		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong>《データ型》</strong>の配列(<strong>《要素数》</strong>)を作る<br></pre>
 	</div>
 </div>
 <div class="panel panel-default">
@@ -173,25 +199,48 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-		<p>固定長配列の型の名前は「《型名》の配列」という形式で指定します。例えば整数型の固定長配列を作るには「整数の固定配列」と指定します。この名前で「作る」文を使ってインスタンスを作られます。「作る」文では、配列の要素数を( )で囲って指定しておきます。</p>
-		<pre class="code">【一覧】は、固定長配列(10)を作ったもの
+		<p>固定長配列は、作るときに型名の後に確保する配列の要素数を( )で囲って指定します。また要素のデータ型名は「《型名》の配列」という形式で指定できます。</p>
+		<p>例えば次のプログラムのように、整数型の要素数10個の固定長配列を作るには「作る」文を使って「整数の配列(10)」と指定します。</p>
+		<pre class="code">一覧という整数の配列(10)を作る
 数を1から10まで増やしながら繰り返す
     一覧(数)は、数*数
 そして
 一覧(5)を表示する</pre>
 	</div>
 </div>
+<h3 id="array_multi">多次元配列</h3>
+<p><a href="../primitive/multiarray.htm">多次元配列</a>は、格納できる要素数が次元ごとに決まっている多次元の配列です。多次元配列では「作る」文を使って配列の要素数を次元ごとにあらかじめ指定して作ります。一度作られた配列の要素数は増減できません。</p>
+<div class="panel panel-default">
+        <div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format"><strong></strong>配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<br><strong>《データ型》</strong>の配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<strong></strong><strong></strong></pre>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">例文</h4>
+	</div>
+	<div class="panel-body">
+		<p>多次元配列は、作るときに型名の後に確保する配列の要素数を( )で囲って指定します。要素数は次元ごとに「,」で区切って複数指定できます。またデータ型名は「《型名》の配列」という形式で指定します。</p>
+		<p>例えば次のプログラムのように、整数型の要素数が次元ごとに10個,10個,2個の多次元配列を作るには「作る」文を使って「整数の配列(10,10,2)」と指定します。</p>
+		<pre class="code">Mという整数の配列(10,10,2)を作る
+M(1,1,1)=10
+M(1,1,1)を表示する</pre>
+	</div>
+</div>
 <h3 id="subete_suffix">「すべて」後置子</h3>
 <p>詳しい説明は<a href="subete.htm">こちら</a></p>
 <p>&nbsp;</p>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月3日 <!-- #EndDate -->更新</div>
     </div>
 </div>
 <!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

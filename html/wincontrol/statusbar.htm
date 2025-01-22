@@ -12,7 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ステータスバー」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,GUI部品,コントロール部品">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ステータスバー」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -103,27 +104,33 @@
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
       <p>ウィンドウに下側に表示するバーです。<br>
-        現在の状況表示や、アイコンなどを表示できます。</p>
-      <div class="figure"><img src="img/statusber.png"></div>
+        現在の状況表示や、アイコンなどの部品を表示できます。</p>
+      <div class="figure"><img src="img/statusber.png" alt="ステータスバーのスクリーンショット"></div>
 	  <h2>作成する方法</h2>
 		<pre class="format">【名前】というステータスバーを作る</pre>
 		<h2 id="手順">手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#挟む">挟む</a>　<a href="#作る">作る</a>　<a href="#番目を消す">番目を消す</a>　<a href="#消す">消す</a>　</div>
+		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#作る">作る</a>　<a href="#作る">作る</a>　<a href="#加える">加える</a>　<a href="#番目を消す">番目を消す</a>　<a href="#消す">消す</a>　</div>
 		<div id="methods">
 			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
-			<p>ステータスバーからすべてのラベルを削除します</p>
+			<p>ステータスバーからすべての部品を削除します</p>
 			<h3>【自分】の【番号】番目へ〈【名前】という〉【内容】を〈【画像】で〉<a name="挟む">挟む</a></h3>
-			<p>ステータスバーへ部品を挿入します<br>
-				【名前】を省略すると、【内容】が名前になります。</p>
+			<p>ステータスバーの指定した番号の項目の前に部品を挿入します。</p>
+			<h3>【自分】の【番号】番目へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="挟む">挟む</a></h3>
+			<p>ステータスバーの指定した番号の項目の前に部品を挿入します。</p>
+			<h3>【自分】の【番号】番目へ【部品】を<a name="挟む">挟む</a></h3>
+			<p>ステータスバーへ部品を挿入します</p>
 			<h3>【自分】へ〈【名前】という〉【内容】を〈【画像】で〉<a name="作る">作る</a></h3>
-			<p>ステータスバーへラベルを追加します<br>
-				【名前】を省略すると、【内容】が名前になります。</p>
-			<h3>【自分】から、整数である【番号】<a name="番目を消す">番目を消す</a></h3>
+			<p>ステータスバーへラベルを追加します</p>
+			<h3>【自分】へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="作る">作る</a></h3>
+			<p>ステータスバーへツール部品を追加します</p>
+			<h3>【自分】へ〈【部品】を<a name="加える">加える</a></h3>
+			<p>ステータスバーへ部品を追加します</p>
+			<h3>【自分】から【番号:整数】<a name="番目を消す">番目を消す</a></h3>
 			<p>ステータスバーから指定した番号の項目を削除します</p>
-			<h3>【自分】から、ツール部品である【部品】を<a name="消す">消す</a></h3>
+			<h3>【自分】から【部品:ツール部品】を<a name="消す">消す</a></h3>
 			<p>ステータスバーから指定した部品を削除します</p>
-			<h3>【自分】から、文字列である【名前】を消す</h3>
+			<h3>【自分】から【名前:文字列】を消す</h3>
 			<p>ステータスバーから指定した名前の部品を削除します</p>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
@@ -177,8 +184,8 @@
 	ウィンドウを受け継ぐ
 
 	はじめの手順
-		この内容を「ステータスバーのサンプル」に変える
-		この実質大きさを{400,100}に変える
+		この内容は「ステータスバーのサンプル」
+		この実質大きさは{400,100}
 
 		バーというステータスバーを作る
 		バーに状況ラベルを作る
@@ -189,7 +196,7 @@
 		バーに区切り1という区切り線を作る
 
 		バーに状態バーとしてプログレスバーを作る
- 			その値を40に変える
+ 			その値は40
  			
 		バーに区切り2という区切り線を作る
 
@@ -204,11 +211,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -99,8 +99,8 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 		<h2 id="head">概要</h2>
-		<p>画面の四隅に配置する複数のボタンを集めた部品です。</p>
-		<p>なお、より多くの種類の部品を貼り付けられる<a href="toolbar.htm">ツールバー</a>が用意されています。</p>
+		<p>画面の上部など配置できる複数のボタンを集めた部品です。</p>
+		<p>シンプルツールバーは、Windowsの標準的な部品として用意されているツールバー部品です。なお、より多くの種類の部品を貼り付けられる高機能な<a href="toolbar.htm">ツールバー</a>も用意されています。</p>
 		<div class="figure"><img src="img/simpletoolbar.png" width="180" height="52" alt="ツールバーを貼り付けたウィンドウ"></div>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というシンプルツールバーを作る</pre>
@@ -132,52 +132,52 @@
                 <tbody>
 				<tr>
 					<th><a name="ボタンの大きさ">ボタンの大きさ</a></th>
-					<th>&nbsp;</th>
+					<th>サイズ</th>
 					<th>◎</th>
-					<td>「タブ幅」設定項目で指定した幅で文字を調整するかどうか</td>
+					<td>ツールバー内のボタンの大きさ</td>
 					</tr>
 				<tr>
 					<th><a name="区切り線">区切り線</a></th>
-					<th>&nbsp;</th>
+					<th>真偽値</th>
 					<th>◎</th>
-					<td>タブで調整する列幅をそれぞれ指定します</td>
+					<td>ツールバーの境界部分に区切り線を表示するかどうか</td>
 					</tr>
 				<tr>
 					<th><a name="ヒント表示">ヒント表示</a></th>
-					<th>&nbsp;</th>
+					<th>真偽値</th>
 					<th>◎</th>
-					<td>タブ文字を認識して位置を調整するかどうか</td>
+					<td>ボタンに説明文を表示するかどうか</td>
 					</tr>
 				<tr>
 					<th><a name="折り返し">折り返し</a></th>
-					<th>&nbsp;</th>
+					<th>真偽値</th>
 					<th>◎</th>
-					<td>一覧に表示されている項目</td>
+					<td>ボタンが1段に収まらない場合に複数段で表示するかどうか</td>
 					</tr>
 				<tr>
 					<th><a name="外観">外観</a></th>
-					<th>&nbsp;</th>
+					<th>列挙</th>
 					<th>◎</th>
-					<td>横スクロールバーを表示するかどうか<br>
+					<td>ツールバーのボタンの外観<br>
 						｛標準,フラット｝</td>
 					</tr>
 				<tr>
 					<th><a name="透明色">透明色</a></th>
-					<th>&nbsp;</th>
+					<th>色</th>
 					<th>◎</th>
-					<td>横にスクロールできる幅</td>
+					<td>ツールバーに画像を表示する際に透明色として扱う色</td>
 					</tr>
 				<tr>
 					<th><a name="個数">個数</a></th>
-					<th>&nbsp;</th>
+					<th>整数</th>
 					<th>□</th>
-					<td>一覧に表示されている項目の個数</td>
+					<td>項目の個数</td>
 					</tr>
 				<tr>
 					<th><a name="一覧">一覧</a></th>
-					<th>&nbsp;</th>
+					<th>文字列の配列</th>
 					<th>◎</th>
-					<td>項目の高さ</td>
+					<td>ツールバーにあるボタンの名称一覧</td>
                 </tr>
                 </tbody>
 				</table>
@@ -209,10 +209,10 @@
 				</table>
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
-<pre class="code">画像フォルダは「［プログラムのフォルダ］..\..\..\..\サンプル\image\」
-素材として「［画像フォルダ］new.bmp」を利用する
-素材として「［画像フォルダ］open.bmp」を利用する
-素材として「［画像フォルダ］save.bmp」を利用する
+		<p>3つのボタンが配置されたシンプルツールバーを表示します。</p>
+<pre class="code">素材として「..\images\new.bmp」を利用する
+素材として「..\images\open.bmp」を利用する
+素材として「..\images\save.bmp」を利用する
 メイン画面を表示する
 待機する
 
@@ -224,8 +224,9 @@
 		シンプルツールバー1というシンプルツールバーを作る
  			その透明色は「Magenta」
 		シンプルツールバー1に「新規」を（素材リストから「new.bmp」を画像として取得したもの）で加える
-		シンプルツールバー1に「開く」を（素材リストから「open.bmp」を画像として取得したもの）で追加する
-		シンプルツールバー1に「保存」を（素材リストから「save.bmp」を画像として取得したもの）で追加する
+			その説明は「新規」
+		シンプルツールバー1に「開く」を（素材リストから「open.bmp」を画像として取得したもの）で加える
+		シンプルツールバー1に「保存」を（素材リストから「save.bmp」を画像として取得したもの）で加える
 	終わり
  			
 	シンプルツールバー1のボタンがクリックされた時の手順
@@ -233,13 +234,13 @@
 		「［選択項目の内容］をクリックしました」を表示する
 	終わり
 終わり</pre>
-        <div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div>
+        <div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月3日 <!-- #EndDate -->更新</div>
 	</div>
 	</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

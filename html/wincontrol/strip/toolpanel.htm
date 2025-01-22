@@ -11,7 +11,9 @@
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ツールパネル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="keywords" content="種類">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ツールパネル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -127,43 +129,48 @@
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
     <h3 id="sample1">ツールパネルのサンプル</h3>
-    <pre class="code">窓というウィンドウを作る
-	その内容は「パネルの例」
-窓へ第１ボタンというオプションを作る
-	その位置は｛30,10｝
-	その内容は「第１パネルへ」
-	その見た目は、ボタン
-窓へ第２ボタンというオプションを作る
-	その位置は｛150,10｝
-	その内容は「第２パネルへ」
-窓へパネル１というパネルを作る
-パネル１の背景色は、黄色
-パネル１の位置は｛30,50｝
-窓へパネル２というパネルを作る
-パネル２の背景色は、緑色
-パネル２の位置は｛30,50｝
-窓を表示する
-第１ボタンを選択する
-
+    <pre class="code">メイン画面を表示する
 待機する
-
-第１ボタンが選択された時の手順
-	パネル１を表示する
-	パネル２を隠す
-終わり
-
-第２ボタンが選択された時の手順
-	パネル１を隠す
-	パネル２を表示する
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーー貼り付けた部品に対する操作をここに書きます
+	終わり
+	初期化する手順
+		ーー自動生成された手順です。ここに書き加えたプログラムは消える可能性があります
+		初期化開始する
+		この実質大きさは{428,394}
+		この内容は「メイン画面」
+		ツールパネル1というツールパネルを作る
+			その位置と大きさは{69,68,292,222}
+			その移動順は2
+			ステータスバー1というステータスバーをツールパネル1へ作る
+				その位置と大きさは{0,28,292,30}
+				状況ラベル部品1という状況ラベル部品をツールパネル1のステータスバー1へ作る
+					その内容は「状況ラベル部品1」
+					その表示は○
+					その大きさは{136,25}
+					その相対位置は「上+下」
+			ツールバー1というツールバーをツールパネル1へ作る
+				その位置と大きさは{3,0,112,28}
+				その移動順は1
+				ラベル部品1というラベル部品をツールパネル1のツールバー1へ作る
+					その内容は「ラベル部品1」
+					その表示は○
+					その大きさは{100,25}
+		初期化終了する
+		この設計スケール比率は{144,144}
+	終わり
 終わり</pre>
         </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

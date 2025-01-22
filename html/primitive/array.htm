@@ -12,7 +12,7 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">
+	<meta name="keywords" content="種類,基本型,データ型">
     <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
@@ -97,14 +97,15 @@
 		<p>配列定数式で配列を生成できます。</p>
 		<pre class="code">一覧は｛100,200,300｝
 一覧は｛「おはよう」,「こんにちは」,「こんばんわ」｝</pre>
-		<p>文字列から配列を生成するには、<a href="string.htm#配列化">「配列化」手順</a>を使います。</p>
+		<p>要素のデータ型を指定する場合には次のように型名を指定します。</p>
+        <pre class="format"><strong>《データ型》</strong>の配列を作る</pre>
+		<p>文字列から配列を生成するには<a href="string.htm#配列化">「配列化」手順</a>を使います。</p>
 		<h2 id="手順">手順</h2>
-		<p>次の手順が使用できます。</p>
+		<p>次の手順が使用できます。要素型は配列宣言の要素のデータ型を指します。</p>
 		<div id="methodlist"><a href="#交換する">交換する</a>　<a href="#探す">探す</a>　<a href="#大小区別しないで探す">大小区別しないで探す</a>　<a href="#完全一致で探す">完全一致で探す</a>　<a href="#取り出す">取り出す</a>　<a href="#大小区別しないで取り出す">大小区別しないで取り出す</a>　<a href="#完全一致で取り出す">完全一致で取り出す</a>　<a href="#消す">消す</a>　<a href="#繋げる">繋げる</a>　<a href="#最大値">最大値</a>　<a href="#最小値">最小値</a>　<a href="#合計">合計</a>　<a href="#平均">平均</a>　<a href="#偏差値">偏差値</a>　<a href="#加える">加える</a>　<a href="#追加する">追加する</a>　<a href="#一括追加する">一括追加する</a>　<a href="#挿入する">挿入する</a>　<a href="#並べ替える">並べ替える</a>　<a href="#重複を消す">重複を消す</a>　<a href="#切り出す">切り出す</a>　</div>
 		<div id="methods">
-			<h3>【自分】から【列番号】番目と【列番号】番目を<a name="交換する">交換する</a>：配列</h3>
-			<p>指定した列または行を並べ替えます。<br>
-			行の並べ替えは、配列が2次配列の場合のみ指定できます。</p>
+			<h3>【自分】から【番号A】番目と【番号B】番目を<a name="交換する">交換する</a>：配列</h3>
+			<p>指定した番号の要素の値を交換します。</p>
 			<pre class="code">一覧は｛「東京」,「名古屋」,「大阪」｝
 一覧を表示する
 
@@ -189,13 +190,13 @@
 			<h4 data-ref="偏差値">偏差値を求める</h4>
 <pre class="code">成績は{52,14,14,95,64,58}
 <b>成績の偏差値</b>を表示する</pre>
-			<h3>【自分】へ【内容：<a href="baseobject.htm">基本物</a>】を<a name="加える">加える</a></h3>
+			<h3>【自分】へ【内容：要素型】を<a name="加える">加える</a></h3>
 			<p>配列の最後へ指定した内容を加えます</p>
 			<pre class="code">一覧は｛「りんご」,「なし」,「ぶどう」｝
 <strong>一覧へ「みかん」を加える</strong>
 一覧を表示する
 <em>//{りんご,なし,ぶどう,みかん}</em></pre>
-			<h3>【自分】へ【内容：<a href="baseobject.htm">基本物</a>】を<a name="追加する">追加する</a></h3>
+			<h3>【自分】へ【内容：要素型】を<a name="追加する">追加する</a></h3>
 			<p>配列の最後へ指定した内容を加えます。(加える)と同じです。</p>
 			<pre class="code">一覧は｛「りんご」,「なし」,「ぶどう」｝
 <b>一覧へ「みかん」を追加する</b>
@@ -206,13 +207,13 @@
 			<pre class="code">一覧は｛「あ」,「い」,「う」｝
 <b>一覧に｛「え」,「お」｝を一括追加する</b>
 一覧を表示する</pre>
-			<h3>【自分】の【何】番目へ【内容：<a href="baseobject.htm">基本物</a>】を<a name="挿入する">挿入する</a></h3>
+			<h3>【自分】の【何】番目へ【内容：要素型】を<a name="挿入する">挿入する</a></h3>
 			<p>配列の指定した位置の前に内容を挿入します</p>
 			<pre class="code">一覧は｛「りんご」,「なし」,「ぶどう」｝
 <strong>一覧の2番目へ「オレンジ」を挿入する</strong>
 一覧を表示する
 <em>//{りんご,オレンジ,なし,ぶどう}</em></pre>
-			<h3>【配列】の【何】列目へ【内容：<a href="baseobject.htm">基本物</a>】を挿入する</h3>
+			<h3>【配列】の【何】列目へ【内容：要素型】を挿入する</h3>
 			<p>配列の指定した位置の前に内容を挿入します</p>
 			<pre class="code">一覧は{「ABC」,「EEE」,「DDD」,「CCC」}
 <strong>一覧の3番目へ「123」を挿入して</strong>、表示する</pre>
@@ -294,18 +295,18 @@
 				配列内の要素を比較するときに、2つの要素について大小比較を行いますが、そのときの判断式を匿名手順を使って行えます。</p>
 			<p>【方法】には、並べ替えを判断するための手順を指定します。</p>
 			<h4 data-rel="並べ替える">カスタムソートする</h4>
-			<pre class="code">一覧は{12,3,5,6}
+			<pre class="code">一覧は{6,12,3,5}
 一覧を『
 	それを{左,右}とみなす
 	左&gt;右なら
-		-1を返す。
+		-1を返す
 	他で左&lt;右なら
-		1を返す。
+		1を返す
 	そうでなければ
 		0を返す
 	そして
 』で並べ替える
-一覧を表示する</pre>
+一覧を表示する	//{12,6,5,3}</pre>
 			<h3>【自分】から<a name="重複を消す">重複を消す</a>：配列</h3>
 			<p>配列の要素から同じ値の要素を消します。</p>
 			<pre class="code">一覧={1,3,3,4,1,6,7,6,7,8}
@@ -318,9 +319,9 @@
 			<p class="usage"><a href="../usage.htm#手順">記号の意味</a></p>
 			</div>
 		<h2 id="設定項目">設定項目</h2>
-		<p>次の設定項目が使用できます。</p>
+		<p>次の設定項目が使用できます。要素型は配列宣言の要素のデータ型を指します。</p>
 		<div id="properties">
-			<table class="table table-bordered">
+		        <table class="table table-bordered">
 				<thead><tr>
 					<th>設定項目</th>
 					<th>型</th>
@@ -348,14 +349,14 @@
                 </tr>
 				<tr>
 					<th><a name="先頭">先頭</a></th>
-					<th><a href="baseobject.htm">基本物</a></th>
+					<th>要素型</th>
 					<th>□</th>
 					<td>配列の一番目の要素を表します。<br>
 						配列の要素数が0の時は、エラーとなります</td>
                 </tr>
 				<tr>
 					<th><a name="末尾">末尾</a></th>
-					<th><a href="baseobject.htm">基本物</a></th>
+					<th>要素型</th>
 					<th>□</th>
 					<td>配列の最後の要素を表します。<br>
 						配列の要素が0の時は、エラーとになります</td>
@@ -378,7 +379,7 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
+</div>
 
 		<h2 id="サンプルコード">サンプルコード</h2>
         <ul>
@@ -422,11 +423,11 @@
     
     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

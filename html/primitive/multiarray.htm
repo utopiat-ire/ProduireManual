@@ -5,14 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>多次元固定長配列 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<title>多次元配列 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「固定長配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,基本型,データ型,固定配列">
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「多次元配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 				</button>
 				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->多次元固定長配列<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->多次元配列<!-- InstanceEndEditable -->
 				</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
@@ -75,9 +76,9 @@
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
 	    <li><a href="index.htm">データ型</a></li>
-	    <li>多次元固定長配列</li>
+	    <li>多次元配列</li>
       </ul>
-	  <h1>多次元固定長配列</h1>
+	  <h1>多次元配列</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../usage.htm" class="label label-warning">型変換</a> <a href="../syntax/ordinal.htm" class="label label-default">序数詞設定</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
@@ -91,17 +92,19 @@
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
-		<p>多次元で構成された固定長の配列を表す種類です。多次元固定長配列では、2つ以上の添字を指定できます。要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
+		<p>多次元で構成された固定長の配列を表す種類です。多次元配列では、2つ以上の添字を指定できます。要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
 	<h2>生成する方法</h2>
-		<p>要素数をカンマ区切りで2つ以上指定した配列を作ることで生成できます。</p>
+		<p>要素数をカンマ区切りで2つ以上指定した配列を指定すると生成できます。</p>
+		<pre class="format">配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<br><strong>《データ型》</strong>の配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る</pre>
+		<p>&nbsp;</p>
 		<pre class="code">木=10
 林=10
 森=2
-整数の配列(木,林,森)を作ってMとする
+Mという整数の配列(木,林,森)を作る
 M(1,1,1)=10
 M(1,1,1)を表示する</pre>
 		<h2 id="手順">手順</h2>
-		<p>次の手順が使用できます。</p>
+		<p><a href="array.htm">継承される手順</a>と、次の手順が使用できます。</p>
 		<div id="methodlist"></div>
 		<div id="methods"> <br>
 
@@ -133,6 +136,18 @@ M(1,1,1)を表示する</pre>
 					<td>配列の要素数を表します</td>
 				</tr>
 				<tr>
+                    <th><a name="個数一覧">個数一覧</a></th>
+				        <th>整数の配列</th>
+				        <th>□</th>
+				        <td>この配列の次元ごとの個数を表します</td>
+				        </tr>
+				<tr>
+                    <th><a name="次元数">次元数</a></th>
+				        <th>整数</th>
+				        <th>□</th>
+				        <td>この配列の次元数を表します</td>
+				        </tr>
+				<tr>
 					<th><a name="クローン">クローン</a></th>
 					<th>配列</th>
 					<th>□</th>
@@ -162,11 +177,11 @@ M(1,1,1)を表示する</pre>
 		</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

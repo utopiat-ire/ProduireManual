@@ -79,16 +79,25 @@
 <p>プロデルの公式マニュアルへようこそ！<br>
   このマニュアルでは、プロデルの文法や利用できる機能について、サンプルコードと一緒にご説明します。プロデルやプログラミングが初めての方は、まずは<a href="https://produ.irelang.jp/blog/produirefirststep/">「プロデルで始める日本語プログラミング言語入門」</a>をご覧ください。</p>
 
-    <form action="https://produ.irelang.jp/docs/search/msearch.cgi" method="GET" accept-charset="utf-8" name="msearch" target="_top">
+    <form action="https://produ.irelang.jp/docs/index-search/" method="GET" accept-charset="utf-8" name="msearch" target="_top">
         <div class="input-group">
-            <input type="text" size="30" name="query" value="" class="form-control" placeholder="検索キーワード">
-            <input type="hidden" name="index" value="doc">
+            <input type="text" size="30" name="query" value="" class="form-control" placeholder="索引キーワード">
             <span class="input-group-btn">
-                <button type="submit" class="btn btn-primary">マニュアル検索</button>
+                <button type="submit" class="btn btn-primary">索引検索(テスト中)</button>
             </span>
         </div>
     </form>
-<p class="text-muted">現在、<a href="https://produ.irelang.jp/blog/2024/03/4385/">Google検索ではプロデルに関するページが検索結果に正常に表示されません</a>。<a href="https://duckduckgo.com/?t=h_&q=%E3%83%97%E3%83%AD%E3%83%87%E3%83%AB%E3%80%80%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97&ia=web">DuckDuckGoなどの他のサーチエンジンで検索</a>してください。</p>
+    <hr>
+    <form action="https://produ.irelang.jp/docs/search/msearch.cgi" method="GET" accept-charset="utf-8" name="msearch" target="_top">
+        <div class="input-group">
+            <input type="text" size="30" name="query" value="" class="form-control" placeholder="全文検索キーワード">
+            <input type="hidden" name="index" value="doc">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">全文検索</button>
+            </span>
+        </div>
+    </form>
+<p class="text-muted">Googleはプロデル関連ページの検索結果が極端に少なく、<a href="https://produ.irelang.jp/blog/2024/03/4385/">正常に表示されない現象</a>を確認しています。<a href="https://duckduckgo.com/?t=h_&q=%E3%83%97%E3%83%AD%E3%83%87%E3%83%AB%E3%80%80%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97&ia=web">DuckDuckGoやBingなどサーチエンジンで検索</a>してください。</p>
 	<div class="row">
 		<div class="col-md-4">
 			<h3>文法の説明</h3>
@@ -142,7 +151,7 @@
 				<ul>
 					<li><a href="primitive/array.htm">配列</a></li>
 					<li><a href="primitive/fixedarray.htm">固定長配列</a></li>
-					<li><a href="primitive/multiarray.htm">多次元固定長配列</a></li>
+					<li><a href="primitive/multiarray.htm">多次元配列</a></li>
 					<li><a href="primitive/baseobject.htm">基本物</a></li>
 					<li><a href="primitive/netobject.htm">ネット物</a></li>
 				</ul>
@@ -221,7 +230,7 @@
 				<li><a href="etc/mouse.htm">マウスカーソルの定数表</a></li>
 				<li><a href="etc/sendkeys.htm">「入力する」手順のキー表記の文法</a></li>
 				<li><a href="error/index.htm">エラーメッセージ一覧</a></li>
-				<li><a href="convertables.htm">型変換</a></li>
+				<li><a href="syntax/convertables.htm">型変換</a></li>
 				<li><a href="plugin.htm">プラグインについて</a></li>
 				<li><a href="howtodebug.htm">困ったときは</a></li>
 			</ul>
@@ -245,11 +254,11 @@
 		<img src="img/copy.png">
 		<a href="searchform.html">検索フォーム</a>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="js/jquery-1.12.4.min.js"></script>

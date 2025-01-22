@@ -12,7 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「固定長配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,基本型,データ型,固定配列">
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「固定長配列」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -94,18 +95,19 @@
 		<p>1番から順番に内容を持っている配列を表す種類です。固定長配列では、要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
 	<h2>生成する方法</h2>
 		<p>固定長配列を作ることで生成できます。この際に、配列の要素数を指定しておきます。</p>
-		<pre class="code">【一覧:固定長配列】は、固定長配列(10)を作ったもの
+		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong>《データ型》</strong>の配列(<strong>《要素数》</strong>)を作る<br>固定長配列(<strong>《要素数》</strong>)を作る	//従来の表記<br><strong>《データ型》</strong>の固定長配列(<strong>《要素数》</strong>)を作る//従来の表記</pre>
+		<p>&nbsp;</p>
+		<pre class="code">一覧として配列(10)を作る
 数を1から10まで増やしながら繰り返す	//11以上はエラーとなる
     一覧(数)は、数*数
 そして
 一覧(5)を表示する</pre>
 		<h2 id="手順">手順</h2>
-		<p>次の手順が使用できます。</p>
+		<p><a href="array.htm">継承される手順</a>と、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#交換する">交換する</a>　<a href="#探す">探す</a>　<a href="#大小区別しないで探す">大小区別しないで探す</a>　<a href="#完全一致で探す">完全一致で探す</a>　<a href="#取り出す">取り出す</a>　<a href="#大小区別しないで取り出す">大小区別しないで取り出す</a>　<a href="#完全一致で取り出す">完全一致で取り出す</a>　<a href="#繋げる">繋げる</a>　<a href="#最大値">最大値</a>　<a href="#最小値">最小値</a>　<a href="#合計">合計</a>　<a href="#平均">平均</a>　<a href="#偏差値">偏差値</a>　<a href="#並べ替える">並べ替える</a>　</div>
 		<div id="methods">
 			<h3>【自分】から【列番号】番目と【列番号】番目を<a name="交換する">交換する</a>：配列</h3>
-			<p>指定した列または行を並べ替えます。<br>
-			行の並べ替えは、配列が2次配列の場合のみ指定できます。</p>
+			<p>指定した番号の要素の値を交換します。</p>
 			<pre class="code">一覧は｛「東京」,「名古屋」,「大阪」｝
 一覧を表示する
 一覧から１番目と３番目を交換して、結果とする
@@ -221,13 +223,13 @@
 			<p>配列を指定した手順を使って、並べ替えます(カスタムソート)。<br>
 				配列内の要素を比較するときに、2つの要素について大小比較を行いますが、そのときの判断式を匿名手順を使って行えます。</p>
 			<p>【方法】には、並べ替えを判断するための手順を指定します。</p>
-			<pre class="code">一覧は{12,3,5,6}
+			<pre class="code">一覧は{5,12,3,6}
 一覧を『
 	それを{左,右}とみなす
 	左&gt;右なら
-		-1を返す。
+		-1を返す
 	他で左&lt;右なら
-		1を返す。
+		1を返す
 	そうでなければ
 		0を返す
 	そして
@@ -290,11 +292,11 @@
 		</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

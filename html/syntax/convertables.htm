@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>四角形を描く - プロデルマニュアル</title>
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>型変換できる種類 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-	<meta name="description" content="「四角形を描く」という動詞の手順の一覧です。">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -25,13 +26,13 @@
 				</button>
 				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->四角形を描く<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->型変換できる種類<!-- InstanceEndEditable -->
 				</a>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse"><msearch>
+			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
+					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
@@ -40,7 +41,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li id="cat_core"><a href="../core/index.htm">基本</a></li>
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
 							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
 							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
@@ -62,33 +63,65 @@
 						</ul>
 					</li>
 				</ul>
-			</msearch></div><!-- /.nav-collapse -->
+			</div><!-- /.nav-collapse -->
 		</div><!-- /.container -->
 	</nav><!-- /.navbar -->
 
-    <div id="main" class="container-fluid">
-<ul class="breadcrumb" data-category="verbs">
-  <li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.html">手順一覧</a></li>
-	<li>四角形を描く</li>
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<ul class="breadcrumb">
+	<li><a href="../index.htm">プロデル</a></li>
+	<li>型変換できる種類</li>
 </ul>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-<h1>四角形を描く</h1>
-<p>「四角形を描く」という動詞の手順の一覧です。</p>
-<ul><li><a href="..\pgraphics\graphics.htm#四角形を描く">図形描画:【対象】へ【始点】から【終点】まで四角形を描く</a></li><li><a href="..\pgraphics\canvas\canvas.htm#四角形を描く">キャンバスに四角形を描く：四角形図形</a></li><li><a href="..\pgraphics\canvas\subcanvas.htm#四角形を描く">子キャンバスに四角形を描く：四角形図形</a></li></ul>
-  </div>
+		<h1>型変換できる種類</h1>
+		<p>次のデータ型は、自動的な型変換に対応しています。</p>
+		<ul>
+			    <li><a href="../primitive/string.htm">文字列</a></li>
+                <li><a href="../primitive/boolean.htm">真偽値</a></li>
+                <li><a href="../primitive/number.htm">数値</a>
+                        <ul>
+                                <li><a href="../primitive/decimal.htm">固定小数</a></li>
+                                <li><a href="../primitive/long.htm">長整数</a></li>
+                                <li><a href="../primitive/int.htm">整数</a></li>
+                                <li><a href="../primitive/short.htm">短整数</a></li>
+                                <li><a href="../primitive/float.htm">浮動小数</a></li>
+                                <li><a href="../primitive/double.htm">倍浮動小数</a></li>
+                        </ul>
+                </li>
+                <li><a href="../primitive/datetime.htm">日時形式</a></li>
+                <li><a href="../primitive/timespan.htm">日時期間形式</a></li>
+                <li><a href="../primitive/color.htm">色情報</a></li>
+                </ul>
+		<p>&nbsp;</p>
+		<ul>
+		        <li><a href="../primitive/array.htm">配列</a></li>
+		        <li><a href="../primitive/fixedarray.htm">固定長配列</a></li>
+		        <li><a href="../primitive/multiarray.htm">多次元配列</a></li>
+		        <li><a href="../primitive/dictionary.htm">辞書</a></li>
+		        </ul>
+		<p></p>
+		<ul>
+		        <li><a href="../core/fileinfo.htm">ファイル情報</a></li>
+		        <li><a href="../core/folderinfo.htm">フォルダ情報</a></li>
+		        <li><a href="../core/reflection/typeinfo.htm">型情報</a></li>
+		        </ul>
+	</div>
 </div>
-<div class="footer text-right">2024年06月04日更新</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
-		<hr>
 		<footer>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<!-- InstanceEndEditable -->
 </body>
-</html>
+<!-- InstanceEnd --></html>
