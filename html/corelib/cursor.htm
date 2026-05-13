@@ -11,7 +11,9 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「マウスカーソル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="keywords" content="種類,RPA">
+    <meta name="description" content="日本語プログラミング言語プロデルで「基本機能」プラグインの「マウスカーソル」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -35,7 +37,7 @@
 					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
 					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
-					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
 					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
@@ -57,7 +59,7 @@
 							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
 							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
 							<li class="divider"></li>
-							<li><a href="index.htm">GUI部品</a></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
 							<li><a href="../verbs/index.html">手順一覧</a></li>
 							<li><a href="../devenv/index.html">開発環境</a></li>
 						</ul>
@@ -73,27 +75,40 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="../wincontrol/index.htm">GUI部品</a></li>
 	    <li>マウスカーソル</li>
       </ul>
 	  <h1>マウスカーソル</h1>
 		<p><a href="../static.htm" class="label label-info">静的種類</a></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 	</div>
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
       <p>マウスカーソルに対する操作や情報の取得を行います。</p>
-      <p>ウィンドウ内の各部品のマウスカーソルを変更するには<a href="control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
-		<h2 id="手順">手順</h2>
+      <p>ウィンドウ内の各部品のマウスカーソルを変更するには<a href="../wincontrol/control.htm#マウスカーソル">「マウスカーソル」設定項目</a>を使います。</p>
+      <p>なお、「ウィンドウ」種類では「マウスカーソル」設定項目と名前が同じため代わりに「マウスカーソル！	」と指定します。	</p>
+      <h2 id="手順">手順</h2>
 			<p>次の手順が使用できます。</p>
-			<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#クリックさせる">クリックさせる</a>　<a href="#ダブルクリックさせる">ダブルクリックさせる</a>　<a href="#右クリックさせる">右クリックさせる</a>　<a href="#押させる">押させる</a>　<a href="#離れさせる">離れさせる</a>　<a href="#ホイール回転させる">ホイール回転させる</a>　<a href="#チルトさせる">チルトさせる</a>　</div>
+			<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#移動する">移動する</a>　<a href="#移動する">移動する</a>　<a href="#クリックさせる">クリックさせる</a>　<a href="#ダブルクリックさせる">ダブルクリックさせる</a>　<a href="#右クリックさせる">右クリックさせる</a>　<a href="#押させる">押させる</a>　<a href="#離れさせる">離れさせる</a>　<a href="#ホイール回転させる">ホイール回転させる</a>　<a href="#チルトさせる">チルトさせる</a>　</div>
 			<div id="methods">
 				<h3>【自分】を【座標】へ<a name="移動する">移動する</a></h3>
 				<p>マウスカーソルを指定した座標へ移動させます。</p>
 				<h4 data-ref="移動する">擬似的にマウスカーソルを移動する</h4>
 				<pre class="code">マウスカーソルを{100,100}へ移動する</pre>
+				<h3>【自分】を【外部ウィンドウ】へ<a name="移動する">移動する</a></h3>
+				<p>マウスカーソルを指定した<a href="handledwindow.htm">外部ウィンドウ</a>の左上の座標へ移動させます。</p>
+				<h4 data-ref="移動する">擬似的にマウスカーソルを移動する</h4>
+				<pre class="code">画面から「メモ帳」というウィンドウを取得して、操作ウィンドウとする
+操作ウィンドウをアクティブ化する
+マウスカーソルを操作ウィンドウへ移動する</pre>
+				<h3>【自分】を【外部ウィンドウ】で【座標】へ<a name="移動する">移動する</a></h3>
+				<p>マウスカーソルを指定した<a href="handledwindow.htm">外部ウィンドウ</a>を基準にした座標へ移動させます。</p>
+				<h4 data-ref="移動する">擬似的にマウスカーソルを移動する</h4>
+				<pre class="code">画面から「メモ帳」というウィンドウを取得して、操作ウィンドウとする
+操作ウィンドウをアクティブ化する
+マウスカーソルを操作ウィンドウで{300,300}へ移動する</pre>
 				<h3>【自分】に〈【座標】を〉<a name="クリックさせる">クリックさせる</a></h3>
 				<p>指定した座標へ移動して、擬似的にクリック動作を行います。</p>
 				<h4 data-ref="クリックさせる">擬似的にクリックさせる</h4>
@@ -156,13 +171,53 @@
 				</table>
 				<p class="usage"><a href="../usage.htm">記号の意味</a></p>
 			</div>
+		<h2 id="サンプルコード">サンプルコード</h2>
+		<div id="samples">
+<h3 id="sample1">選択したウィンドウの中央にマウスカーソルを移動させる</h3>
+		<p>起動しているウィンドウの中から選択したウィンドウの中央にマウスカーソルを移動させます。</p>
+<pre class="code">メイン画面を表示する
+待機する
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーー貼り付けた部品に対する操作をここに書きます
+		画面からウィンドウを列挙する
+		リストボックス1にそれすべてのタイトルを一括追加する
+	終わり
+	初期化する手順
+		初期化開始する
+		この実質大きさは{428,394}
+		この内容は「ウィンドウの中央へジャンプ」
+		ボタン1というボタンを作る
+			その位置と大きさは{151,339,112,34}
+			その内容は「移動」
+			その移動順は1
+			その位置固定方向は「下」
+		リストボックス1というリストボックスを作る
+			その位置と大きさは{12,12,404,310}
+			その項目高さは18
+			その移動順は2
+			その位置固定方向は「上+下+左+右」
+		初期化終了する
+		この設計スケール比率は{144,144}
+	終わり
+	ボタン1がクリックされた時の手順
+		リストボックス1の内容が空なら返す
+		画面からリストボックス1の内容というウィンドウを取得して、操作ウィンドウとする
+		操作ウィンドウをアクティブ化する
+		対象サイズは、操作ウィンドウの大きさ
+		マウスカーソル！を操作ウィンドウで{対象サイズの幅/2,対象サイズの高さ/2}へ移動する
+	終わり
+終わり</pre>
+</div><!--/samples-->
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月30日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

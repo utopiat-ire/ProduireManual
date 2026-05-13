@@ -102,20 +102,8 @@
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というシンプルステータスバー項目を作る</pre>
 		<h2 id="手順">手順</h2>
-		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#削除する">削除する</a>　<a href="#挿入する">挿入する</a>　<a href="#探す">探す</a>　<a href="#追加する">追加する</a>　</div>
-		<div id="methods">
-			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
-			<p>リストからすべての項目を削除します</p>
-			<h3>【自分】から【内容/番号】を<a name="削除する">削除する</a></h3>
-			<p>リストから指定した内容を削除します</p>
-			<h3>【内容】を【番号】へ<a name="挿入する">挿入する</a></h3>
-			<p>内容を指定した位置へ挿入します</p>
-			<h3>【自分】から<a name="探す">探す</a></h3>
-			<p>指定した内容と一致する項目の番号を番号で表します</p>
-			<h3>【自分】へ【内容】を<a name="追加する">追加する</a></h3>
-			<p>内容を一番最後へ追加します</p>
-			</div>
+		<p>手順はありません。</p>
+		<div id="methods">		        </div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -127,47 +115,43 @@
 					<th>説明</th>
                 </tr></thead>
 				<tbody>
-                <tr>
-					<th><a name="一覧">一覧</a></th>
-					<th>&nbsp;</th><th>◎</th><td>一覧に表示されている項目</td>
-					</tr>
 				<tr>
-					<th><a name="内容">内容</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの内容</td>
-					</tr>
+				        <th><a name="内容">内容</a></th>
+				        <th>文字列</th><th>◎</th><td>バーの内容</td>
+				        </tr>
 				<tr>
 					<th><a name="文字配置">文字配置</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの文字寄せの方向<br>
+					<th>列挙値</th><th>◎</th><td>バーの文字寄せの方向<br>
 						｛左,中央,右｝</td>
 					</tr>
 				<tr>
 					<th><a name="説明">説明</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの説明</td>
+					<th>文字列</th><th>◎</th><td>バーの説明</td>
 					</tr>
 				<tr>
 					<th><a name="最小幅">最小幅</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの最小の幅</td>
+					<th>整数</th><th>◎</th><td>バーの最小の幅</td>
 					</tr>
 				<tr>
 					<th><a name="アイコン">アイコン</a></th>
-					<th>&nbsp;</th><th>◎</th><td>アイコン</td>
+					<th>アイコン</th><th>◎</th><td>アイコン</td>
 					</tr>
 				<tr>
 					<th><a name="幅">幅</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの幅</td>
+					<th>整数</th><th>◎</th><td>バーの幅</td>
 					</tr>
 				<tr>
 					<th><a name="境界線">境界線</a></th>
-					<th>&nbsp;</th><th>◎</th><td>バーの枠線の見た目<br>
+					<th>列挙値</th><th>◎</th><td>バーの枠線の見た目<br>
 						｛なし，浮き出し，くぼみ｝</td>
 					</tr>
 				<tr>
 					<th><a name="アイコン位置">アイコン位置</a></th>
-					<th>&nbsp;</th><th>◎</th><td>文字やアイコンの表示位置</td>
+					<th>列挙値</th><th>◎</th><td>文字やアイコンの表示位置</td>
 					</tr>
 				<tr>
 					<th><a name="サイズ調整">サイズ調整</a></th>
-					<th>&nbsp;</th><th>◎</th><td>｛文字サイズ，なし，最大｝</td>
+					<th>列挙値</th><th>◎</th><td>｛文字サイズ，なし，最大｝</td>
                 </tr>
                 </tbody>
 				</table>
@@ -189,11 +173,11 @@
 	終わり
 
 	初期化する手順
-		この実質大きさを｛292,266｝に変える
-		この内容を「シンプルステータスバー」に変える
+		この実質大きさは｛292,266｝
+		この内容は「シンプルステータスバー」
 		シンプルツールバー1というシンプルステータスバーを作る
- 			その位置と大きさを｛0,242,292,24｝に変える
- 			その内容を「準備完了」に変える
+ 			その位置と大きさは｛0,242,292,24｝
+ 			その内容は「準備完了」
 		この設計スケール比率は｛96,96｝
 	終わり
 終わり</pre>
@@ -217,21 +201,21 @@
 	終わり
 
 	初期化する手順
-		この実質大きさを｛292,266｝に変える
-		この内容を「シンプルステータスバー」に変える
+		この実質大きさは｛292,266｝
+		この内容は「シンプルステータスバー」
 		シンプルツールバー1というシンプルステータスバーを作る
- 			その位置と大きさを｛0,242,292,24｝に変える
- 			その内容を「準備完了」に変える
+ 			その位置と大きさは｛0,242,292,24｝
+ 			その内容は「準備完了」
 		この設計スケール比率は｛96,96｝
 	終わり
 終わり</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

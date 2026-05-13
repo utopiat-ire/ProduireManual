@@ -11,7 +11,9 @@
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「メニュー付きボタン部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="keywords" content="種類">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「メニュー付きボタン部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -80,13 +82,42 @@
 	  <h1>メニュー付きボタン部品</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>メニュー付きのボタンです。ボタンとメニューとが独立しています。</p>
-		<div class="figure"><img alt="" src="../img/stripbtnwithmenu.png" width="119" height="25"></div>
-		<div class="figure"><img alt="" src="../img/stripbtnwithmenu2.png" width="186" height="100"></div>
+		<div class="figure"><img alt="" src="../img/stripbtnwithmenu.png" width="141" height="118"></div>
+		<div class="figure"><img alt="" src="../img/stripbtnwithmenu2.png" width="217" height="144"></div>
+		<h2 id="手順">手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
+		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#作る">作る</a>　<a href="#作る">作る</a>　<a href="#加える">加える</a>　<a href="#番目を消す">番目を消す</a>　<a href="#消す">消す</a>　</div>
+		<div id="methods">
+			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
+			<p>メニューからすべての部品を削除します</p>
+			<h3>【自分】の【番号】番目へ〈【名前】という〉【内容】を〈【画像】で〉<a name="挟む">挟む</a></h3>
+			<p>メニューの指定した番号の項目の前に部品を挿入します。<br>
+			</p>
+			<h3>【自分】の【番号】番目へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="挟む">挟む</a></h3>
+			<p>メニューの指定した番号の項目の前に部品を挿入します。</p>
+			<h3>【自分】の【番号】番目へ【部品】を<a name="挟む">挟む</a></h3>
+			<p>メニューの指定した番号の項目の前に部品を挿入します。<br>
+			</p>
+			<h3>【自分】へ〈【名前】という〉【内容】を〈【画像】で〉<a name="作る">作る</a></h3>
+			<p>メニューの末尾に部品を追加します。<br>
+			</p>
+			<h3>【自分】へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="作る">作る</a></h3>
+			<p>メニューの末尾に部品を追加します。</p>
+			<h3>【自分】へ【内容】を<a name="加える">加える</a></h3>
+			<p>メニューの末尾に部品を追加します。<br>
+			</p>
+			<h3>【自分】の【番号】<a name="番目を消す">番目を消す</a></h3>
+			<p>メニューの指定した番号の部品を削除します</p>
+			<h3>【自分】から【名前:文字列】を<a name="消す">消す</a></h3>
+			<p>メニューから指定した名前の部品を削除します</p>
+			<h3>【自分】から【部品:ツール部品】を消す</h3>
+			<p>メニューから部品を削除します</p>
+        </div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>ツール部品から<a href="stripbase.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -149,45 +180,49 @@
 			</div>
 		<h2 id="サンプルコード">サンプルコード</h2>
 <div id="samples">
-<h3 id="sample1">ツールバーやステータスバーにメニュー付きボタンを貼る</h3>
-		<p>ステータスバーに倍率を指定するような部品を作ります。</p>
-		<pre class="code">メイン画面を表示する
+<h3 id="sample1">ツールバーにメニュー付きボタンを貼る</h3>
+		<p>ツールバーにボタンとメニューが一体となったボタンを貼り付けます。</p>
+		<pre class="code">ーーメニュー付きボタン
+拡大鏡アイコンは「shell32.dll」の209番目からアイコン画像を抽出する
+メイン画面を表示する
 待機する
 
 メイン画面とは
 	ウィンドウを受け継ぐ
 
 	はじめの手順
-		この内容は「ステータスバーのサンプル」
+		この内容は「メニュー付きボタンのサンプル」
 		この実質大きさは{400,100}
 
-		バーというステータスバーを作る
+		メインバーというツールバーを作る
 
-		バーに拡大ボタンとしてメニュー付きボタンを作る
-			その内容は「100%」
-		そのクリックされた時の手順は、拡大ボタンクリック
+		メインバーへ検索ボタンというメニュー付きボタンを作る
+			その大きさは｛32,32｝
+			その透明色は、紫
+			その内容は「検索」
+			その画像は、拡大鏡アイコン
+			検索ボタンに作る。その内容は「DuckDuckGo」。そのクリックされた時の手順は、リンクボタンクリック
+			検索ボタンに作る。その内容は「Yahoo!」。そのクリックされた時の手順は、リンクボタンクリック
+			検索ボタンに作る。その内容は「Bing」。そのクリックされた時の手順は、リンクボタンクリック
 		この設計スケール比率は｛96,96｝
-		拡大ボタンに作る。その内容は「200%」。そのクリックされた時の手順は、拡大ボタン選択
-		拡大ボタンに作る。その内容は「150%」。そのクリックされた時の手順は、拡大ボタン選択
-		拡大ボタンに作る。その内容は「100%」。そのクリックされた時の手順は、拡大ボタン選択
 	終わり
 
-	拡大ボタン選択の手順
-		拡大ボタンの内容は、発生元の内容
+	検索ボタンがクリックされた時の手順
+		「検索ボタンをクリックしました」を表示する
 	終わり
 
-	拡大ボタンクリックの手順
-		「[発生元の内容]を選択中」を表示する
+	リンクボタンクリックの手順
+		「[発生元の内容]を選択しました」を表示する
 	終わり
 終わり</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

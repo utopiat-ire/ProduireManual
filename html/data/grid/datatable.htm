@@ -12,7 +12,8 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="CSVファイル">	<meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「データ表」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,テーブル,CSVファイル">
+    <meta name="description" content="日本語プログラミング言語プロデルで「データ操作」プラグインの「データ表」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -110,15 +111,15 @@
 		<pre class="format">【名前】というデータ表を作る
 【名前】というデータ表(【テーブル名】)を作る</pre>
 		<h2 id="手順">手順</h2>
-		<div id="methodlist"><a href="#すべて消す">すべて消す</a>　<a href="#内容をすべて消す">内容をすべて消す</a>　<a href="#列を加える">列を加える</a>　<a href="#行を加える">行を加える</a>　<a href="#加える">加える</a>　<a href="#行目を消す">行目を消す</a>　<a href="#列目を取得する">列目を取得する</a>　<a href="#行目を取得する">行目を取得する</a>　<a href="#保存する">保存する</a>　<a href="#読み込む">読み込む</a>　<a href="#一覧で取得する">一覧で取得する</a>　<a href="#一覧で設定する">一覧で設定する</a>　<a href="#選択する">選択する</a>　<a href="#並べ替える">並べ替える</a>　<a href="#並べ替えたもの">並べ替えたもの</a>　<a href="#CSVへ変換する">CSVへ変換する</a>　<a href="#タブ区切りへ変換する">タブ区切りへ変換する</a>　</div>
+		<div id="methodlist"><a href="#すべて消す">すべて消す</a>　<a href="#内容をすべて消す">内容をすべて消す</a>　<a href="#列を加える">列を加える</a>　<a href="#行を加える">行を加える</a>　<a href="#加える">加える</a>　<a href="#行を挿入する">行を挿入する</a>　<a href="#挿入する">挿入する</a>　<a href="#行目を消す">行目を消す</a>　<a href="#列目を取得する">列目を取得する</a>　<a href="#行目を取得する">行目を取得する</a>　<a href="#保存する">保存する</a>　<a href="#読み込む">読み込む</a>　<a href="#一覧で取得する">一覧で取得する</a>　<a href="#一覧で設定する">一覧で設定する</a>　<a href="#選択する">選択する</a>　<a href="#並べ替える">並べ替える</a>　<a href="#並べ替えたもの">並べ替えたもの</a>　<a href="#CSVへ変換する">CSVへ変換する</a>　<a href="#タブ区切りへ変換する">タブ区切りへ変換する</a>　</div>
 		<div id="methods">
 			<h3>【自分】を<a name="すべて消す">すべて消す</a></h3>
 			<p>データ表にある列とデータをすべて消します</p>
 			<h3>【自分】から<a name="内容をすべて消す">内容をすべて消す</a></h3>
 			<p>データ表にあるすべての行を消します</p>
-			<h3>【自分】へ【列名】という<a name="列を加える">列を加える</a></h3>
+			<h3>【自分】へ【列名】という<a name="列を加える">列を加える</a>:データ列</h3>
 			<p>データ表に列を加えます</p>
-			<h3>【自分】へ<a name="行を加える">行を加える</a></h3>
+			<h3>【自分】へ<a name="行を加える">行を加える</a>:データ行</h3>
 			<p>データ表の末尾に空白の行を加えます</p>
 <h3>【自分】へ【データ：<a href="../../primitive/dictionary.htm">辞書</a>】を<a name="加える">加える</a></h3>
 			<p>データ表の末尾へ新しい行を作り、指定した辞書の見出しと対応してデータを設定します。</p>
@@ -130,12 +131,21 @@
 			<p>データ表の末尾へ新しい行を作り、指定した配列の順にデータを設定します。</p>
 			<h4 data-ref="加える">データ表に、辞書の内容を新しい行として追加する</h4>
 			<pre class="code">家計簿に｛「1月15日」,「食費」,「1500」｝を追加する</pre>
-			<h3>【自分】から【行番号】<a name="行目を消す">行目を消す</a></h3>
+			<h3>【自分】の【行番号】行目へ<a name="行を挿入する">行を挿入する</a>:データ行</h3>
+            <p>データ表の指定した行数へ新しい行を加えます。</p>
+            <h3>【自分】の【行番号】行目へ【データ：<a href="../../primitive/dictionary.htm">辞書</a>】を<a name="挿入する">挿入する</a></h3>
+            <p>データ表の指定した行数へ新しい行を作り、指定した辞書の見出しと対応してデータを設定します。</p>
+            <h4 data-ref="加える">データ表に、辞書の内容を新しい行として追加する</h4>
+            <pre class="code">家計簿の1行目に｛日付=今,内容=「食費」,値段=「1500」｝を追加する</pre>
+            <h3>【自分】の【行番号】行目へ【データ：<a href="../../primitive/array.htm">配列</a>】を挿入する</h3>
+            <p>データ表の指定した行数へ新しい行を作り、指定した配列の順にデータを設定します。</p>
+            <h4 data-ref="加える">データ表に、辞書の内容を新しい行として差し込む追加する</h4>
+            <pre class="code">家計簿の1行目に｛「1月15日」,「食費」,「1500」｝を挿入する</pre>
+<h3>【自分】から【行番号】<a name="行目を消す">行目を消す</a></h3>
 			<p>データ表の指定した行のデータを消します。</p>
 			<h4 data-ref="行目を消す">データ表から1行目を消す</h4>
             <pre class="code">家計簿から1行目を消す</pre>
-            <p>&nbsp;</p>
-			<h3>【自分】の【列番号】<a name="列目を取得する">列目を取得する</a></h3>
+            <h3>【自分】の【列番号】<a name="列目を取得する">列目を取得する</a></h3>
 			<p>データ表の指定した列のデータを取得します。</p>
 			<h3>【自分】の【行番号】<a name="行目を取得する">行目を取得する</a></h3>
 			<p>データ表の指定した行のデータを取得します。</p>
@@ -371,11 +381,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

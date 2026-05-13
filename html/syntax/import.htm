@@ -89,7 +89,7 @@
 	<h3><b>書式</b></h3>
 	<pre class="format"><strong>《プロデルプラグイン》</strong>を利用する</pre>
 	<p><b><span class="flag">《プロデルプラグイン》</span><br>
-	</b>プログラム内で利用するプロデルプラグインのファイル(DLLまたはEXE)を指定します。</p>
+	</b>プログラム内で利用するプロデルプラグインのファイル(DLLまたはEXE)を指定します。プロデルプラグインには、文字列定数のみを指定できます。</p>
 	<p>プロデルプラグイン以外のDLLファイルは、指定できません。プロデルプラグインについては「<a href="../plugin.htm">プラグインについて</a>」をご覧ください。</p>
 	<h4>例文</h4>
 	<p>プロデルプラグインを読み込み、利用できる状態にします。</p>
@@ -107,7 +107,7 @@
 	<p>プログラム中で使用する画像などの外部リソースを、素材リストに登録する際に「利用する」文で指定します。素材リストに登録すると、実行可能ファイルの作成時に、関連するリソースとして実行可能ファイルに同梱されます。</p>
 	<pre class="format"><strong>《ファイル名》</strong>を素材として利用する</pre>
 	<p><b><span class="flag">《ファイル名》</span><br>
-		</b>素材として利用するファイルを指定します。<br>
+		</b>素材として利用するファイルを指定します。ファイル名には、文字列定数のみを指定できます。<br>
 	ここで指定した素材は<a href="../core/resource.htm">「素材リスト」種類</a>で取得できます。</p>
 	<h4>例文</h4>
 	<pre class="code">「画像.png」を素材として利用する</pre>
@@ -115,16 +115,16 @@
 	<p>ドットネット型で参照するアセンブリを読み込みます。</p>
 	<pre class="format"><strong>《アセンブリ名》</strong>をネット型として利用する</pre>
 	<p><b><span class="flag">《アセンブリ名》</span><br>
-		</b>GACに登録されているアセンブリの名前もしくはアセンブリの完全名を指定します。</p>
+		</b>GACに登録されているアセンブリの名前もしくはアセンブリの完全名を指定します。アセンブリ名には、文字列定数のみを指定できます。</p>
 	<h4>例文　System.Drawingのアセンブリを参照します。</h4>
 	<pre class="code">「System.Drawing」をネット型として利用する</pre>
 	</div>
 		</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

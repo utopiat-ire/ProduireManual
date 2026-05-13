@@ -11,7 +11,9 @@
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" -->	<meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「アイコン画像」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+    <meta name="keywords" content="種類">
+    <meta name="description" content="日本語プログラミング言語プロデルで「画像描画」プラグインの「アイコン画像」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -119,10 +121,8 @@
 		初期化開始する
 		この実質大きさは｛428,394｝
 		この内容は「shell32.dllのアイコン」
-		この文字色は「標準の文字」
 		キャンバス1というキャンバスを作る
 			その位置と大きさは｛0,0,428,394｝
-			その文字色は「標準の文字」
 			そのドッキング方向は「全体」
 		初期化終了する
 		この設計スケール比率は｛144,144｝
@@ -131,13 +131,15 @@
 		たて=0
 		よこ=0
 		数を1から300まで増やしながら繰り返す
-			たてを60だけ増やす
-			たてが幅以上ならたて=0。よこを60だけ増やす
 			キャンバス1へ画像を描いて図形とする
 				その位置と大きさは｛よこ,たて,50,50｝
 				その自動調整は「比率維持」
 			「shell32.dll」の数番目からアイコン画像を抽出してアイコンとする
 			図形の画像は、アイコン
+			キャンバス1へ数という文字を描く
+				その位置は｛よこ,たて+50｝
+			たてを60だけ増やす
+			たてが幅以上ならたて=0。よこを60だけ増やす
 		そして
 		キャンバス1の内部大きさ={よこ,たて}
 	終わり
@@ -146,11 +148,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

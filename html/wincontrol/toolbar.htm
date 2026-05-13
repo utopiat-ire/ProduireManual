@@ -12,7 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="部品,コントロール部品">	<meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ツールバー」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,GUI部品,コントロール部品">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ツールバー」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -105,30 +106,42 @@
 	<div id="refcontent" class="col-md-8">
 		<h2 id="head">概要</h2>
 		<p>メニューの下に表示されるボタン型のアイコンを表示するためのバーです。<br>
-		ボタンの他にも、各種ツール部品を作られます。</p>
-		<div class="figure"> <img src="img/toolbar.png" width="201" height="29"></div>
-		<div class="figure"> <img src="img/toolbar2.png" width="385" height="39"></div>
+		ボタンの他にも、テキストや選択リストなどの各種ツール部品を表示できます。</p>
+		<div class="figure"> <img src="img/toolbar.png" width="201" height="29" alt="ツールバーの画像1"></div>
+		<div class="figure"> <img src="img/toolbar2.png" width="385" height="39" alt="ツールバーの画像2"></div>
 		<h2>作成する方法</h2>
 		<pre class="format">【名前】というツールバーを作る</pre>
 		<h2 id="手順">手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#挟む">挟む</a>　<a href="#作る">作る</a>　<a href="#番目を消す">番目を消す</a>　<a href="#消す">消す</a>　</div>
+		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#挟む">挟む</a>　<a href="#作る">作る</a>　<a href="#作る">作る</a>　<a href="#加える">加える</a>　<a href="#番目を消す">番目を消す</a>　<a href="#消す">消す</a>　</div>
 		<div id="methods">
 			<h3>【自分】を<a name="クリアする">クリアする</a></h3>
 			<p>ツールバーからすべての部品を削除します</p>
 			<h3>【自分】の【番号】番目へ〈【名前】という〉【内容】を〈【画像】で〉<a name="挟む">挟む</a></h3>
 			<p>ツールバーの指定した番号の項目の前に部品を挿入します。<br>
-				【名前】を省略すると、【内容】が名前になります。</p>
+			</p>
+			<h3>【自分】の【番号】番目へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="挟む">挟む</a></h3>
+			<p>ツールバーの指定した番号の項目の前に部品を挿入します。<br>
+			</p>
+			<h3>【自分】の【番号】番目へ【部品】を<a name="挟む">挟む</a></h3>
+			<p>ツールバーの指定した番号の項目の前に部品を挿入します。<br>
+			</p>
 			<h3>【自分】へ〈【名前】という〉【内容】を〈【画像】で〉<a name="作る">作る</a></h3>
 			<p>ツールバーの末尾に部品を追加します。<br>
-				【名前】を省略すると、【内容】が名前になります。</p>
+			</p>
+			<h3>【自分】へ〈【名前】という〉【<a href="strip/index.htm">部品名</a>】を〈【画像】で〉<a name="作る">作る</a></h3>
+			<p>ツールバーの末尾に部品を追加します。<br>
+			</p>
+			<h3>【自分】へ【内容】を<a name="加える">加える</a></h3>
+			<p>ツールバーの末尾に部品を追加します。<br>
+			</p>
 			<h3>【自分】の【番号】<a name="番目を消す">番目を消す</a></h3>
 			<p>ツールバーの指定した番号の部品を削除します</p>
-			<h3>【自分】から、文字列である【名前】を<a name="消す">消す</a></h3>
+			<h3>【自分】から【名前:文字列】を<a name="消す">消す</a></h3>
 			<p>ツールバーから指定した名前の部品を削除します</p>
-			<h3>【自分】から、ツール部品である【部品】を消す</h3>
+			<h3>【自分】から【部品:ツール部品】を消す</h3>
 			<p>ツールバーから部品を削除します</p>
-			</div>
+        </div>
 		<h2 id="設定項目">設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
@@ -147,47 +160,11 @@
 					<td>追加する画像の透明色</td>
 					</tr>
 				<tr>
-					<th><a name="ボタンの大きさ">ボタンの大きさ</a></th>
+					<th><a name="テーマ">テーマ</a></th>
 					<th>配列</th>
 					<th>◎</th>
-					<td>ボタンの大きさ</td>
+					<td>ツールバーに適用するテーマ</td>
 					</tr>
-				<tr>
-					<th><a name="区切り線">区切り線</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>ツールバーの下部に区切り線を表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="ヒント表示">ヒント表示</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>ボタンにヒントを表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="折り返し">折り返し</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>ボタンがツールバーに収まりきれなかったときに改行するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="外観">外観</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>外観</td>
-					</tr>
-				<tr>
-					<th><a name="個数">個数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>ボタンの個数</td>
-					</tr>
-				<tr>
-					<th><a name="一覧">一覧</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>ボタンの一覧</td>
-                </tr>
                 </tbody>
 				</table>
 			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
@@ -234,11 +211,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

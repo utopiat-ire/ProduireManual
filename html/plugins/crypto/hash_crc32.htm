@@ -12,7 +12,8 @@
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="ハッシュアルゴリズム">	<meta name="description" content="日本語プログラミング言語プロデルの「暗号化/ハッシュ計算」プラグインの「CRC32ハッシュ値」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+    <meta name="keywords" content="種類,ハッシュアルゴリズム">
+    <meta name="description" content="日本語プログラミング言語プロデルの「暗号化/ハッシュ計算」プラグインの「CRC32ハッシュ値」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -91,6 +92,7 @@
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>CRC32アルゴリズムを使って、ハッシュ値を求めるための種類です。</p>
+		<p>※1.9.1293/2.0.1292以降、RFC 1952(gzip), RFC 2083(PNG)などに準拠した一般的な計算方法に仕様変更しました</p>
 	<h2 id="手順">手順</h2>
 		<div id="methodlist"><a href="#計算する">計算する</a>　<a href="#ファイルから計算する">ファイルから計算する</a>　</div>
 		<div id="methods">
@@ -118,31 +120,31 @@
 		<h2 id="サンプルコード">サンプルコード</h2>
 		<p>様々な方法でCRC32ハッシュ値を計算します。</p>
 <div id="samples">
-<h3 id="sample1">Shift-JISでハッシュ値を計算する</h3>
+<h3 id="sample1">Shift-JISでCRC32ハッシュ値を計算する</h3>
 		<pre class="code"><i>//Shift-JISでハッシュ値を計算します
 </i>「プロデル」からCRC32ハッシュ値を計算して結果とする
 結果を報告する</pre>
-<h3 id="sample2">UTF-8でハッシュ値を計算する</h3>
+<h3 id="sample2">UTF-8でCRC32ハッシュ値を計算する</h3>
 <pre class="code"><i>//UTF-8でハッシュ値を計算します
 </i>「プロデル」から「UTF8」でCRC32ハッシュ値を計算して結果とする
 結果を報告する</pre>
-<h3 id="sample3">バイナリ配列からハッシュ値を計算する</h3>
+<h3 id="sample3">バイナリ配列からCRC32ハッシュ値を計算する</h3>
 <pre class="code"><i>//バイナリ配列からハッシュ値を計算します</i>
 バイト列は｛66,66,68｝
 バイト列からCRC32ハッシュ値を計算して結果とする
 結果を報告する</pre>
-<h3 id="sample4">ファイルのハッシュ値を計算する</h3>
+<h3 id="sample4">ファイルのCRC32ハッシュ値を計算する</h3>
 <pre class="code"><i>//ファイルのハッシュ値を計算します</i>
 「C:\Program Files\Produire\Designer.exe」というファイルからCRC32ハッシュ値を計算して結果とする
 結果を報告する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月16日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

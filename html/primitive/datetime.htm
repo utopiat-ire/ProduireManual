@@ -12,7 +12,8 @@
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<meta name="keywords" content="基本型">	<meta name="description" content="日本語プログラミング言語プロデルのデータ型である「日時形式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+	<meta name="keywords" content="種類,基本型,データ型">
+    <meta name="description" content="日本語プログラミング言語プロデルのデータ型である「日時形式」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -103,7 +104,7 @@
 		<p></p>
 		<h2 id="手順">手順</h2>
 		<p>次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#日付差">日付差</a>　<a href="#整える">整える</a>　</div>
+		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#日付差">日付差</a>　<a href="#月数差">月数差</a>　<a href="#整える">整える</a>　</div>
 		<div id="methods">
 			<h3>【自分】へ〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="足す">足す</a></h3>
 			<p>指定した値だけ経過した日時を設定します。自分の値が変わります。</p>
@@ -145,12 +146,20 @@
 			<h3>【自分】と【日付】の<a name="日付差">日付差</a>：<a href="timespan.htm">日時期間形式</a></h3>
 			<p>指定した日時形式との差を計算します。 <span class="label label-warning">名詞手順</span></p>
 			<h4 data-rel="日付差">2つの日時の差を計算する</h4>
-                <p>二つの日付の差を計算します。 この例の場合、15日の差があることを表しています。</p>
-				<pre class="code"><em>ーー１５を表示します</em>
+                <p>二つの日付の差を計算します。この例では、217日の差があることを表しています。</p>
+				<pre class="code"><em>ーー217を表示します</em>
 「2020/9/10」を日時形式化して、開始日とする
 「2021/4/15」を日時形式化して、終了日とする
-(開始日と終了日の日付差)を表示する</pre>
-
+(開始日と終了日の日付差の日数)を表示する</pre>
+            <h3>【自分】と【日付】の<a name="月数差">月数差</a>：整数</h3>
+            <p>指定した日時形式との月数の差を計算します。 <span class="label label-warning">名詞手順</span></p>
+            <h4 data-rel="日付差">2つの日時の月数を計算する</h4>
+            <p>二つの日付の月数差を計算します。この例では、7ヵ月の差があることを表しています。</p>
+            <pre class="code"><em>ーー7を表示します</em>
+「2020/9/10」を日時形式化して、開始日とする
+「2021/4/15」を日時形式化して、終了日とする
+(開始日と終了日の月数差)を表示する</pre>
+            <h3></h3>
             <h3>【自分】を【書式:文字列】に<a name="整える">整える</a></h3>
 			<p>日時を指定した書式にあせて表示します。</p>
 			<p>書式は、.NET Frameworkの日時書式で指定します。</p>
@@ -166,8 +175,8 @@
 対象日時を「HH.mm.ss」に整えて報告する
 対象日時を「R」に整えて報告する</pre>
 
-			<h4 data-ref="整える">日付を日本語で表示する</h4>
-            <p> <a href="../primitive/datetime.htm#整える">「整える」手順</a>を使うと、指定した日時を好きな形式で表せます。</p>
+			<h4 data-ref="整える">日付を特定の書式で表示する</h4>
+            <p> <a href="../primitive/datetime.htm#整える">「整える」手順</a>を使うと、日時を指定した形式で表せます。</p>
             <pre class="code">今日を「yyyy年M月d日(dddd)　h時m分s秒」に整えて、表示する</pre>
 
         </div>
@@ -348,14 +357,22 @@
 値に1日足す
 値の日付を表示する</pre>
 
+        <h3 id="sample3">歳を求める</h3>
+        <p>誕生日から歳を求めます。</p>
+<pre class="code">「1992/1/15」を日時形式化して、開始日とする
+終了日は、今日
+
+開始日の月が終了日の月より大きければ<br>	月数=(12-開始日の月+終了日の月)+(終了日の年-開始日の年-1)*12<br>でなければ<br>	月数=(終了日の月-開始日の月)+(終了日の年-開始日の年)*12<br>そして<br>開始日の日が終了日の日より大きければ<br>	月数を減らす<br>そして<br>「[(月数-(月数%12))/12]歳[月数%12]ヵ月」を表示する
+</pre>
+
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月2日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年10月19日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2024 utopiat.net.</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
