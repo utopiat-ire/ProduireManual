@@ -8,6 +8,7 @@
 	<title>※ (プリプロセッサ, アノテーション) - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -72,6 +73,7 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb" data-category="syntax">
 	<li><a href="../index.htm">プロデル</a></li>
+	<li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
 	<li><a href="../etc/index.htm">記号</a></li>
 	<li>※ (プリプロセッサ, アノテーション) </li>
 </ul>
@@ -97,8 +99,12 @@
 				<td>コンソールアプリケーションであることを宣言します。プロデルデザイナでは、コンソールアプリケーションとして実行されます。</td>
 			</tr>
 			<tr>
+				<th>※コンパイル</th>
+				<td>このプログラムをフルコンパイルしてから実行することを示します。</td>
+			</tr>
+			<tr>
 				<th>※別プロセス</th>
-				<td>プロデルデザイナとは異なるプロセスで実行します。別プロセスで実行する場合、停止行などの一部デバッグ機能が無効になります。</td>
+				<td>プロデルデザイナとは異なるプロセスで実行します。別プロセスで実行する場合、停止行などの一部デバッグ機能が無効になります。なお「※コンパイル」を指定した場合には常に別プロセスで実行されます。</td>
 			</tr>
 			<tr>
 				<th>※開始引数 [コマンドライン引数]</th>
@@ -129,17 +135,11 @@
 				<td>動詞の接頭子に「お」または「ご」を付加できるようにします。例「ご報告」「お表示する」</td>
 			</tr>
 			<tr>
-                <th>※製品名</th>
-                <td>実行可能ファイルの作成時に付加する製品名</td>
-            </tr>
-			<tr>
-                <th>※著作権</th>
-                <td>実行可能ファイルの作成時に付加する著作権</td>
-            </tr>
-			<tr>
-                <th>※バージョン</th>
-                <td>実行可能ファイルの作成時に付加するバージョン</td>
-            </tr>
+			        <th>※プロデル<br>
+			                ※スミレ</th>
+			        <td><p>プログラムを作成した時のプロデルのバージョン。指定したバージョンとの互換性を維持するために必要に応じて指定します。一部手順では、仕様変更前の挙動を最新バージョンで再現します。</p>
+			                <pre>※プロデル 1.9.1313</pre></td>
+			        </tr>
             </tbody>
 		</table>
 	</div>
@@ -150,27 +150,48 @@
 		<table class="table">
             <tbody>
 			<tr>
-				<th>※よみがな</th>
+				<th nowrap="nowrap">※よみがな</th>
 				<td>指定された種類または手順の読み仮名</td>
 			</tr>
 			<tr>
-				<th>※説明</th>
-				<td>メソッドや種類の説明を表します。プロデルデザイナのアドインツール「RdrDoc」で出力されるHTMLに表示されます。</td>
+				<th nowrap="nowrap">※説明</th>
+				<td><p>メソッドや種類の説明を表します。プロデルデザイナのアドインツール「RdrDoc」で出力されるHTMLに表示されます。</p>
+				        <pre>※説明 種類の説明です</pre>
+				</td>
+			</tr>
+			<tr>
+                <th nowrap="nowrap">※バージョン</th>
+                <td><p>実行可能ファイルの作成時に付加するバージョン<br>
+                        </p>
+                        <pre>※バージョン 1.0</pre></td>
+            </tr>
+			<tr>
+                <th nowrap="nowrap">※製品名</th>
+                <td>実行可能ファイルの作成時に付加する製品名</td>
+            </tr>
+			<tr>
+				<th nowrap="nowrap">※著作権</th>
+				<td>実行可能ファイルの作成時に付加する著作権</td>
+			</tr>
+			<tr>
+				<th nowrap="nowrap">※結果</th>
+				<td>実行した時の結果を表す出力内容</td>
 			</tr>
             </tbody>
 		</table>
 	</div>
 <dt>&nbsp;</dt></dl>
 <h2>例文</h2>
+<p>プログラムをコンソール(CLI)で実行します。</p>
 <pre class="code">※コンソール
 「こんにちは」をコンソールへ表示する</pre>
 	</div>
 		</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年5月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

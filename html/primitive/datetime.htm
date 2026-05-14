@@ -8,6 +8,7 @@
 	<title>日時形式 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li>日時形式</li>
       </ul>
 	  <h1>日時形式</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <a href="../sumire.htm" class="label label-info">スミレ</a> <a href="../syntax/expr.html" class="label label-info">加減算可</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="timespan.htm">「日時期間形式」種類</a></li>
@@ -94,7 +95,7 @@
 	  <h2 id="head">概要</h2>
 		<p>日付と時刻の情報を持つための種類です。<br>
 		        日時形式型では絶対的な日時から年月日および時分秒のそれぞれの値を取得できます。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<p>日時形式を表す手順を使うと、作成できます。</p>
 		<pre class="code">値は「2019/01/02 12:23:45」を日時形式化</pre>
 		<pre class="code">値という日時形式(「2019/01/15 12:23:45」)を作る</pre>
@@ -102,9 +103,9 @@
 		<p><a href="../core/global_datetime.htm">今</a>, <a href="../core/global_datetime.htm#今日">今日</a>, <a href="../core/global_datetime.htm#明日">明日</a>, <a href="../core/global_datetime.htm#明後日">明後日</a>, <a href="../core/global_datetime.htm#昨日">昨日</a><br>
 		        </p>
 		<p></p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#日付差">日付差</a>　<a href="#月数差">月数差</a>　<a href="#整える">整える</a>　</div>
+		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#日付差">日付差</a>　<a href="#月数差">月数差</a>　<a href="#整える">整える</a>　<a href="#比較する">比較する</a>　</div>
 		<div id="methods">
 			<h3>【自分】へ〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="足す">足す</a></h3>
 			<p>指定した値だけ経過した日時を設定します。自分の値が変わります。</p>
@@ -119,7 +120,8 @@
 作業日へ2日足して表示する
 作業日を表示する	//作業日は変わらない</pre>
             <h3>【自分】から〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="後">後</a>：日時形式</h3>
-			<p>指定した値だけ経過した日時を返します。 <span class="label label-warning">名詞手順</span></p>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した値だけ経過した日時を返します。 </p>
 			<h4 data-ref="後">2日後の日付を求める</h4>
 		  <pre class="code">(今日から2日後)を表示する</pre>
 			<h4 data-ref="後">１０ヶ月後の日付を求める</h4>
@@ -140,25 +142,28 @@
 作業日から2日引いて表示する
 作業日を表示する	//作業日は変わらない</pre>
           <h3>【自分】から〈【Y】年【W】週間【M】ヶ月【D】日【H】時間【N】分【S】秒【S】ミリ秒〉、<a name="前">前</a>：日時形式</h3>
-			<p>指定した値だけ戻した日時を返します。 <span class="label label-warning">名詞手順</span></p>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した値だけ戻した日時を返します。 </p>
 			<h4 data-rel="前">3日前の日付を求める</h4>
 			<pre class="code">(今日から3日前)を表示する</pre>
 			<h3>【自分】と【日付】の<a name="日付差">日付差</a>：<a href="timespan.htm">日時期間形式</a></h3>
-			<p>指定した日時形式との差を計算します。 <span class="label label-warning">名詞手順</span></p>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した日時形式との差を計算します。 </p>
 			<h4 data-rel="日付差">2つの日時の差を計算する</h4>
                 <p>二つの日付の差を計算します。この例では、217日の差があることを表しています。</p>
-				<pre class="code"><em>ーー217を表示します</em>
-「2020/9/10」を日時形式化して、開始日とする
+				<pre class="code"><em></em>「2020/9/10」を日時形式化して、開始日とする
 「2021/4/15」を日時形式化して、終了日とする
-(開始日と終了日の日付差の日数)を表示する</pre>
+(開始日と終了日の日付差の日数)を表示する
+<em>※結果　</em><em>217</em></pre>
             <h3>【自分】と【日付】の<a name="月数差">月数差</a>：整数</h3>
-            <p>指定した日時形式との月数の差を計算します。 <span class="label label-warning">名詞手順</span></p>
+            <p><span class="label label-warning">名詞手順</span></p>
+            <p>指定した日時形式との月数の差を計算します。 </p>
             <h4 data-rel="日付差">2つの日時の月数を計算する</h4>
             <p>二つの日付の月数差を計算します。この例では、7ヵ月の差があることを表しています。</p>
-            <pre class="code"><em>ーー7を表示します</em>
-「2020/9/10」を日時形式化して、開始日とする
+            <pre class="code"><em></em>「2020/9/10」を日時形式化して、開始日とする
 「2021/4/15」を日時形式化して、終了日とする
-(開始日と終了日の月数差)を表示する</pre>
+(開始日と終了日の月数差)を表示する
+<em>※結果　</em><em>7</em></pre>
             <h3></h3>
             <h3>【自分】を【書式:文字列】に<a name="整える">整える</a></h3>
 			<p>日時を指定した書式にあせて表示します。</p>
@@ -173,14 +178,26 @@
 対象日時を「yyyy/MM/dd HH:mm:ss」に整えて報告する
 対象日時を「yy-MM-dd」に整えて報告する
 対象日時を「HH.mm.ss」に整えて報告する
-対象日時を「R」に整えて報告する</pre>
+対象日時を「R」に整えて報告する
+<em>※結果　2019/01/02 12:23:45
+※結果　19-01-02
+※結果　12.23.45
+※結果　Wed, 02 Jan 2019 12:23:45 GMT</em></pre>
 
 			<h4 data-ref="整える">日付を特定の書式で表示する</h4>
             <p> <a href="../primitive/datetime.htm#整える">「整える」手順</a>を使うと、日時を指定した形式で表せます。</p>
             <pre class="code">今日を「yyyy年M月d日(dddd)　h時m分s秒」に整えて、表示する</pre>
+            <h3>【値:日時形式】と【自分】を<a name="比較する">比較する</a>：整数</h3>
+			<p>指定した値と自分の値を比較します。指定した値よりも小さい場合は-1、指定した値と等しい場合は0、指定した値よりも大きい場合は1を返します。</p>
+			<h4 data-rel="比較する">指定した値と比較する</h4>
+			<pre class="code">【値1:日時形式】は「2025/8/11」
+【値2:日時形式】は「2025/9/16」
+値1と値2を比較して報告する
+<em>※結果　1</em></pre>
+			<p>&nbsp;</p>
 
         </div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -197,67 +214,67 @@
     <th><a name="内容">内容</a></th>
     <th>文字列</th>
     <th>◎</th>
-    <td>内容を文字で表します</td>
+    <td>内容を示した文字列</td>
 </tr>
 <tr>
     <th><a name="日付">日付</a></th>
     <th>文字列</th>
     <th>□</th>
-    <td>日付の部分を文字列で表します</td>
+    <td>日付の部分を示す文字列</td>
 </tr>
 <tr>
     <th><a name="時刻">時刻</a></th>
     <th>文字列</th>
     <th>□</th>
-    <td>時刻の部分を文字列で表します</td>
+    <td>時刻の部分を示す文字列</td>
 </tr>
 <tr>
     <th><a name="年">年</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>年を数値で表します</td>
+    <td>年を表す整数</td>
 </tr>
 <tr>
     <th><a name="月">月</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>月を数値で表します</td>
+    <td>月を表す整数</td>
 </tr>
 <tr>
     <th><a name="日">日</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>日を数値で表します</td>
+    <td>日を表す整数</td>
 </tr>
 <tr>
     <th><a name="時">時</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>時を数値で表します</td>
+    <td>時を表す整数</td>
 </tr>
 <tr>
     <th><a name="分">分</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>分を数値で表します</td>
+    <td>分を表す整数</td>
 </tr>
 <tr>
     <th><a name="秒0">秒</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>秒を数値で表します</td>
+    <td>秒を表す整数</td>
 </tr>
 <tr>
     <th><a name="ミリ秒">ミリ秒</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>ミリ秒を数値で表します</td>
+    <td>ミリ秒を表す整数</td>
 </tr>
 <tr>
     <th><a name="整数値">整数値</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>日時時刻を整数値で表します<br>
+    <td>日時時刻を表す整数<br>
         この値は、1年1月1日0:0:00からの経過時間を<br>
         100ナノ秒単位で表したものです。 </td>
 </tr>
@@ -265,69 +282,69 @@
     <th><a name="曜日">曜日</a></th>
     <th>文字列</th>
     <th>□</th>
-    <td>曜日を文字列で表します</td>
+    <td>曜日を表す文字列</td>
 </tr>
 <tr>
   <th><a name="曜日番号">曜日番号</a></th>
   <th>整数</th>
   <th>&nbsp;</th>
-  <td>日曜を0とした曜日番号を返します</td>
+  <td>日曜を0とした曜日を表す整数</td>
 </tr>
 <tr>
   <th><a name="週番号">週番号</a></th>
   <th>整数</th>
   <th>&nbsp;</th>
-  <td>1/1を第一週とした時の週番号を返します</td>
+  <td>1/1を第1週とした数えた週番号</td>
 </tr>
 <tr>
   <th><a name="翌月">翌月</a></th>
   <th>日時形式</th>
   <th>&nbsp;</th>
-  <td>翌月の同じ日,同じ時刻を返します</td>
+  <td>翌月の同じ日,同じ時刻</td>
 </tr>
 <tr>
   <th><a name="前月">前月</a></th>
   <th>日時形式</th>
   <th>&nbsp;</th>
-  <td>前月の同じ日,同じ時刻を返します</td>
+  <td>前月の同じ日,同じ時刻</td>
 </tr>
 <tr>
   <th><a name="月初">月初</a></th>
   <th>日時形式</th>
   <th>&nbsp;</th>
-  <td>月の1日の同じ時刻を返します</td>
+  <td>月の1日の同じ時刻</td>
 </tr>
 <tr>
   <th><a name="月末">月末</a></th>
   <th>日時形式</th>
   <th>&nbsp;</th>
-  <td>月末の同じ時刻を返します</td>
+  <td>月末の同じ時刻</td>
 </tr>
 <tr>
   <th><a name="六曜">六曜</a></th>
   <th>文字列</th>
   <th>&nbsp;</th>
-  <td>六曜を返します</td>
+  <td>六曜</td>
 </tr>
 <tr>
   <th><a name="旧暦">旧暦</a></th>
   <th>日時形式</th>
   <th>&nbsp;</th>
-  <td>旧暦を返します</td>
+  <td>旧暦</td>
 </tr>
 <tr>
     <th><a name="UNIX時間">UNIX時間</a></th>
     <th>整数</th>
     <th>□</th>
-    <td>UNIX時間で表します<br>
+    <td>UNIX時間<br>
         <pre class="code">今のUNIX時間を表示する</pre>
     </td>
 </tr>
 </tbody>
 			</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="型変換">型変換</h2>
+		<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
 		<table class="table table-bordered">
 			<thead>
@@ -344,7 +361,7 @@
 				<td> 「内容」設定項目と同じ</td>
 			</tr></tbody>
 		</table>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample2">今日の日付と現在時刻を表します</h3>
 		<p>現時点での日付と時刻を表示するには、次のように書きます。</p>
@@ -362,17 +379,24 @@
 <pre class="code">「1992/1/15」を日時形式化して、開始日とする
 終了日は、今日
 
-開始日の月が終了日の月より大きければ<br>	月数=(12-開始日の月+終了日の月)+(終了日の年-開始日の年-1)*12<br>でなければ<br>	月数=(終了日の月-開始日の月)+(終了日の年-開始日の年)*12<br>そして<br>開始日の日が終了日の日より大きければ<br>	月数を減らす<br>そして<br>「[(月数-(月数%12))/12]歳[月数%12]ヵ月」を表示する
-</pre>
+開始日の月が終了日の月より大きければ
+	月数=(12-開始日の月+終了日の月)+(終了日の年-開始日の年-1)*12
+でなければ
+	月数=(終了日の月-開始日の月)+(終了日の年-開始日の年)*12
+そして
+開始日の日が終了日の日より大きければ
+	月数を減らす
+そして
+「[(月数-(月数%12))/12]歳[月数%12]ヵ月」を表示する</pre>
 
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年10月19日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2026年3月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

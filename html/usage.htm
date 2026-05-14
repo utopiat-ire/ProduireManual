@@ -8,6 +8,7 @@
 	<title>表記の意味 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="js/html5shiv-3.7.3.min.js"></script>
 	<script src="js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="verbs/index.html">手順一覧</a></li>
@@ -82,7 +83,8 @@
 		<pre class="code">例文のプログラム
  	
 <i>ーーこの部分は、プログラムの説明です。プログラムの動きには関係ありません。
-</i><b>説明の関係のあるプログラムはこのように強調されます</b></pre>
+//　と表記する場合もあります
+</i><br><em>※結果　実行時の出力結果を表します。※は特殊な処理や指定を示す記号です。</em></pre>
 		<h2>種類の説明にあるバッチの意味</h2>
 		<table class="table table-bordered">
 			<tr>
@@ -94,7 +96,7 @@
 				<td>ウィンドウ上に貼り付けられる部品を表す種類です。</td>
 				</tr>
 			<tr>
-				<td><a href="static.htm" class="label label-info">静的種類</a></td>
+				<td><a href="static.htm" class="label label-info">単一種類</a></td>
 				<td><a href="syntax/create.htm">「作る」文</a>で生成する必要なく、そのまま使える種類です。</td>
 				</tr>
 			<tr>
@@ -103,7 +105,7 @@
 				</tr>
 			<tr>
 				<td><a href="global.htm" class="label label-primary">広域種類</a></td>
-				<td>種類名を指定することなく利用できる静的種類です。</td>
+				<td>種類名を指定することなく利用できる単一種類です。</td>
 				</tr>
 			<tr>
 				<td><a href="syntax/ordinal.htm" class="label label-default">序数詞設定</a></td>
@@ -137,29 +139,29 @@
 		<h4>書式の意味</h4>
 		<table class="table table-bordered">
 			<tr>
-				<td>【　】</td>
+				<th>【　】</th>
 				<td>手順の実行に必要な情報(引数)を、書く箇所であることを表します。<br>
 					<br>
 					プログラムとして書く際には、この箇所を式(文字列や数値、変数など)に置き換えて書きます。ここでの記号“【”と“】”は書く必要がありません。</td>
 				</tr>
 			<tr>
-				<td>【　：　】</td>
+				<th>【　：　】</th>
 				<td>引数が特定の種類であることを表します。</td>
 				</tr>
 			<tr>
-			        <td>→【　】</td>
+			        <th>→【　】</th>
 			        <td>引数が参照渡しされることを表します。指定した変数は手順を呼び出すことで値が変わることがあります。</td>
 			        </tr>
 			<tr>
-				<td>【自分】</td>
+				<th>【自分】</th>
 				<td>手順を持つ種類（レシーバオブジェクト）を書く箇所であることを表します。プログラムとして書く際には、この箇所に変数名などを書きます。</td>
 				</tr>
 			<tr>
-				<td>〈　〉</td>
+				<th>〈　〉</th>
 				<td>省略可能である箇所を表します。この記号で囲まれた部分は、プログラムへ書かなくてもエラーとなりません。必要な場合にだけ書いてください。</td>
 				</tr>
 			<tr>
-				<td>｛A・B｝</td>
+				<th>｛A・B｝</th>
 				<td>A・Bのいずれかから選択して書く部分であることを表します。</td>
 				</tr>
 		</table>
@@ -167,25 +169,69 @@
 		<p>設定項目の一覧で使用する記号は、次のような意味を表します。</p>
 		<table class="table table-bordered">
 			<tr>
-				<td>◎</td>
-				<td>設定項目の値を取得したり設定したりできます。</td>
+				<th>◎</th>
+				<td>設定項目の値を取得と設定が可能。</td>
 				</tr>
 			<tr>
-				<td>○</td>
-				<td>設定項目へ値を設定することだけができます。</td>
+				<th>○</th>
+				<td>設定項目へ値を設定のみ可能。</td>
 				</tr>
 			<tr>
-				<td>□</td>
-				<td>設定項目の値を取得することだけができます。</td>
+				<th>□</th>
+				<td>設定項目の値を取得のみ可能。</td>
 				</tr>
 		</table>
+		<h2>説明でよく使う表現</h2>
+		<p>マニュアルの説明では、次のような表現を使います。その説明で特に明示していない限り、次のような意味を含みます。</p>
+        <table class="table table-bordered">
+                <tr>
+                        <th>番号</th>
+                        <td>1から数えた整数の値</td>
+                </tr>
+                <tr>
+                        <th>○番目</th>
+                        <td>最初の要素を1番目として数えた時の要素の位置を示す整数の値</td>
+                </tr>
+                <tr>
+                        <th>文字数</th>
+                        <td>最初の文字を1文字目として数えた時の文字の個数を示す整数の値</td>
+                </tr>
+                <tr>
+                        <th>○文字目</th>
+                        <td>最初の文字を1文字目として数えた時の文字の位置の整数の値</td>
+                </tr>
+                <tr>
+                        <th>連番</th>
+                        <td>0から数えた整数の値</td>
+                </tr>
+                <tr>
+                        <th>一覧</th>
+                        <td>複数の要素や項目を保持した配列</td>
+                </tr>
+                <tr>
+                        <th>内容</th>
+                        <td>要素や項目を表現する文字列</td>
+                </tr>
+                <tr>
+                        <th>対象</th>
+                        <td>操作する要素や項目を示すオブジェクト</td>
+                </tr>
+                <tr>
+                        <th>戻り値</th>
+                        <td>手順を実行した結果や、設定項目から取得した値(返り値とも)</td>
+                </tr>
+                <tr>
+                        <th>返す</th>
+                        <td>手順の実行した結果や、設定項目から取得した値を出すこと</td>
+                </tr>
+</table>
 	</div>
 </div>
 <p></p><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="js/jquery-1.12.4.min.js"></script>

@@ -8,6 +8,7 @@
 	<title>ウェブブラウザ - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,17 +76,17 @@
   <div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 		<li><a href="../index.htm">プロデル</a></li>
-		<li><a href="index.htm">GUI部品</a></li>
+		<li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 		<li>ウェブブラウザ</li>
 	  </ul>
 	  <h1>ウェブブラウザ</h1>
 	</div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a> <a href="../safelock.htm" class="label label-danger">保護あり</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
 		<h3>継承する種類</h3>
 		<p><a href="control.htm">ウィンドウ部品</a></p>
-		<h3>利用プラグイン</h3>
+		<h3>利用ライブラリ</h3>
 		<p><a href="index.htm">ウィンドウ部品集</a></p>
 		<h3>関連ページ</h3>
 		<ul>
@@ -97,11 +98,11 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>Internet Explorerと同機能のブラウザ機能を持つ部品です。</p>
-		<p>アドレスを指定することで、ウェブページを表示することが可能です。</p>
-		<h2>作成する方法</h2>
+		<p>アドレスを指定することで、ウェブページを表示できます。</p>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というウェブブラウザを作る</pre>
 		<p>　</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#移動する">移動する</a>　<a href="#ホームへ移動する">ホームへ移動する</a>　<a href="#検索ページへ移動する">検索ページへ移動する</a>　<a href="#印刷する">印刷する</a>　<a href="#キャプチャする">キャプチャする</a>　<a href="#更新する">更新する</a>　<a href="#中止する">中止する</a>　<a href="#戻す">戻す</a>　<a href="#印刷プレビューを表示する">印刷プレビューを表示する</a>　<a href="#ページ設定を表示する">ページ設定を表示する</a>　<a href="#ググる">ググる</a>　<a href="#ヤフーする">ヤフーする</a>　<a href="#Bingする">Bingする</a>　<a href="#実行する">実行する</a>　</div>
 		<div id="methods">
@@ -113,7 +114,8 @@
 			<p>ホームページ(ブラウザで起動時に表示されるページ)へ移動します。</p>
 			<pre class="code">メインブラウザをホームへ移動させる</pre>
 			<h3>【自分】を<a name="検索ページへ移動する">検索ページへ移動する</a></h3>
-			<p>検索ページへ移動します。</p><pre class="code">メインブラウザを検索ページへ移動させる</pre>
+			<p>検索ページへ移動します。</p>
+			<pre class="code">メインブラウザを検索ページへ移動させる</pre>
 			<h3>【自分】を<a name="印刷する">印刷する</a></h3>
 			<p>表示しているページを印刷します</p>
 			<pre class="code">メインブラウザを印刷する</pre>
@@ -159,200 +161,203 @@
 			<p>ページ中で指定したJavaScript関数を実行します。引数を指定すると、その引数が関数へ渡されます。</p>
 			<pre class="code">メインブラウザで「eval」を{「$('#target').text('」&amp;データ&amp;「');」}として実行する</pre>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品の<a href="control.htm">基本的な設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>型</th>
-					<th>　</th>
-					<th>説明</th>
-					</tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="アドレス">アドレス</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>インターネットアドレス</td>
-					</tr>
-				<tr>
-					<th><a name="オフライン">オフライン</a></th>
-					<th>真偽値</th>
-					<th>□</th>
-					<td>ブラウザがオフライン状態かどうかを取得します</td>
-					</tr>
-				<tr>
-					<th><a name="ショートカットキー">ショートカットキー</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>Internet Explorerが持つショートカットキーを有効にするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="ショートカットメニュー">ショートカットメニュー</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>右クリックでメニューを表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="スクリプトエラー表示">スクリプトエラー表示</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>スクリプトエラーによるメッセージを表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="スクロールバー">スクロールバー</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>スクロールバーを表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="ソース">ソース</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>現在表示しているページのHTMLソース</td>
-					</tr>
-				<tr>
-					<th><a name="タイトル">タイトル</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>現在表示しているページのタイトルを取得します</td>
-					</tr>
-				<tr>
-					<th><a name="ドラッグドロップ">ドラッグドロップ</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>ドラッグ＆ドロップされたページに移動できるようにするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="バージョン">バージョン</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>ブラウザのバージョン<br>
-						</td>
-					</tr>
-				<tr>
-					<th><a name="ページ">ページ</a></th>
-					<th><a href="browser_page.htm">ページ</a></th>
-					<th>□</th>
-					<td>表示されているページの構造を取得します</td>
-					</tr>
-				<tr>
-					<th><a name="ページ移動">ページ移動</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>表示されたページから他のページへ移動できるようにするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="作業中">作業中</a></th>
-					<th>真偽値</th>
-					<th>□</th>
-					<td>現在処理を行っているかどうかを取得します </td>
-					</tr>
-				<tr>
-					<th><a name="種類">種類</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>現在表示しているページの種類を取得します</td>
-					</tr>
-				<tr>
-					<th><a name="状態">状態</a></th>
-					<th>&nbsp;</th>
-					<th>□</th>
-					<td>ブラウザの現在の状態を取得します。<br>
-						完了・操作可能・読み込み開始・読み込み中・未完</td>
-					</tr>
-				<tr>
-					<th><a name="状態表示">状態表示</a></th>
-					<th>文字列</th>
-					<th>○</th>
-					<td>ブラウザの状況メッセージを取得します</td>
-					</tr>
-				<tr>
-					<th><a name="進める">進める</a></th>
-					<th>真偽値</th>
-					<th>□</th>
-					<td>次に表示したページがあるかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="戻せる">戻せる</a></th>
-					<th>真偽値</th>
-					<th>□</th>
-					<td>前に表示したページがあるかどうか</td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="アドレス">アドレス</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>インターネットアドレス</td>
+						</tr>
+						<tr>
+							<th><a name="オフライン">オフライン</a></th>
+							<th>真偽値</th>
+							<th>□</th>
+							<td>ブラウザがオフライン状態かどうかを取得します</td>
+						</tr>
+						<tr>
+							<th><a name="ショートカットキー">ショートカットキー</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>Internet Explorerが持つショートカットキーを有効にするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="ショートカットメニュー">ショートカットメニュー</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>右クリックでメニューを表示するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="スクリプトエラー表示">スクリプトエラー表示</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>スクリプトエラーによるメッセージを表示するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="スクロールバー">スクロールバー</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>スクロールバーを表示するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="ソース">ソース</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>現在表示しているページのHTMLソース</td>
+						</tr>
+						<tr>
+							<th><a name="タイトル">タイトル</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>現在表示しているページのタイトルを取得します</td>
+						</tr>
+						<tr>
+							<th><a name="ドラッグドロップ">ドラッグドロップ</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>ドラッグ＆ドロップされたページに移動できるようにするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="バージョン">バージョン</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>ブラウザのバージョン<br></td>
+						</tr>
+						<tr>
+							<th><a name="ページ">ページ</a></th>
+							<th><a href="browser_page.htm">ページ</a></th>
+							<th>□</th>
+							<td>表示されているページの構造を取得します</td>
+						</tr>
+						<tr>
+							<th><a name="ページ移動">ページ移動</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>表示されたページから他のページへ移動できるようにするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="作業中">作業中</a></th>
+							<th>真偽値</th>
+							<th>□</th>
+							<td>現在処理を行っているかどうかを取得します </td>
+						</tr>
+						<tr>
+							<th><a name="種類">種類</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>現在表示しているページの種類を取得します</td>
+						</tr>
+						<tr>
+							<th><a name="状態">状態</a></th>
+							<th>&nbsp;</th>
+							<th>□</th>
+							<td>ブラウザの現在の状態を取得します。<br>
+								完了・操作可能・読み込み開始・読み込み中・未完</td>
+						</tr>
+						<tr>
+							<th><a name="状態表示">状態表示</a></th>
+							<th>文字列</th>
+							<th>○</th>
+							<td>ブラウザの状況メッセージを取得します</td>
+						</tr>
+						<tr>
+							<th><a name="進める">進める</a></th>
+							<th>真偽値</th>
+							<th>□</th>
+							<td>次に表示したページがあるかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="戻せる">戻せる</a></th>
+							<th>真偽値</th>
+							<th>□</th>
+							<td>前に表示したページがあるかどうか</td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
 		<div id="events">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>イベント名</th>
-					<th>説明</th>
-					<th>情報</th>
-					</tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="戻るボタンが変化した">戻るボタンが変化した</a></th>
-					<td>戻るボタンの状態が変化したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="進むボタンが変化した">進むボタンが変化した</a></th>
-					<td>進むボタンの状態が変化したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="ページが読み込まれた">ページが読み込まれた</a></th>
-					<td>ページの読み込みが完了したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="タイトルが変化した">タイトルが変化した</a></th>
-					<td>ページのタイトルが変化したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="暗号化レベルが変化した">暗号化レベルが変化した</a></th>
-					<td>暗号化レベルが変化したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="ダウンロードが開始された">ダウンロードが開始された</a></th>
-					<td>ページの読み込みが開始されたときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="表示が開始された">表示が開始された</a></th>
-					<td>ファイルのダウンロードが開始されたときに実行されます</td>
-					<td><a href="browser_event.htm#表示が開始された">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="表示が開始される">表示が開始される</a></th>
-					<td>ページの読み込みが開始される直後に実行されます</td>
-					<td><a href="browser_event.htm#表示が開始される">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="進行状況が変化した">進行状況が変化した</a></th>
-					<td>読み込み状況が変化したときに実行されます</td>
-					<td><a href="browser_event.htm#進行状況が変化した">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="状況内容が変化した">状況内容が変化した</a></th>
-					<td>状況表示が変化したときに実行されます</td>
-					<td>　</td>
-					</tr>
-				<tr>
-					<th><a name="別ウィンドウが表示される">別ウィンドウが表示される</a></th>
-					<td>新しいウィンドウが表示されるときに実行されます</td>
-					<td><a href="browser_event.htm#別ウィンドウが表示される">あり</a></td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>イベント名</th>
+							<th>説明</th>
+							<th>情報</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="戻るボタンが変化した">戻るボタンが変化した</a></th>
+							<td>戻るボタンの状態が変化したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="進むボタンが変化した">進むボタンが変化した</a></th>
+							<td>進むボタンの状態が変化したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="ページが読み込まれた">ページが読み込まれた</a></th>
+							<td>ページの読み込みが完了したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="タイトルが変化した">タイトルが変化した</a></th>
+							<td>ページのタイトルが変化したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="暗号化レベルが変化した">暗号化レベルが変化した</a></th>
+							<td>暗号化レベルが変化したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="ダウンロードが開始された">ダウンロードが開始された</a></th>
+							<td>ページの読み込みが開始されたときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="表示が開始された">表示が開始された</a></th>
+							<td>ファイルのダウンロードが開始されたときに実行されます</td>
+							<td><a href="browser_event.htm#表示が開始された">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="表示が開始される">表示が開始される</a></th>
+							<td>ページの読み込みが開始される直後に実行されます</td>
+							<td><a href="browser_event.htm#表示が開始される">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="進行状況が変化した">進行状況が変化した</a></th>
+							<td>読み込み状況が変化したときに実行されます</td>
+							<td><a href="browser_event.htm#進行状況が変化した">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="状況内容が変化した">状況内容が変化した</a></th>
+							<td>状況表示が変化したときに実行されます</td>
+							<td>　</td>
+						</tr>
+						<tr>
+							<th><a name="別ウィンドウが表示される">別ウィンドウが表示される</a></th>
+							<td>新しいウィンドウが表示されるときに実行されます</td>
+							<td><a href="browser_event.htm#別ウィンドウが表示される">あり</a></td>
+						</tr>
+					</tbody>
 				</table>
 		</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>簡単なブラウザ画面を作ります。</p>
 <pre class="code">メイン画面を表示する
 待機する
@@ -430,11 +435,11 @@
 	</div><!--/samples-->
     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

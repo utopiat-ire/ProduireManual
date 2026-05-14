@@ -84,6 +84,9 @@ h2 {
 div#methods h4 {
 	text-decoration: underline;
 }
+div#refcontent h4 {
+	font-weight: bold;
+}
 
 /*Dw補正*/
 .breadcrumb > li {

@@ -8,6 +8,7 @@
 	<title>日付時刻関連操作 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -80,7 +81,7 @@
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../global.htm" class="label label-primary">広域種類</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li></ul>
 	  <h3>関連ページ</h3>
         <ul>
                 <li><a href="../primitive/datetime.htm">日時形式</a></li>
@@ -90,24 +91,31 @@
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>「日付時刻関連操作」種類は、日付時刻に関する手順と設定項目を集めた広域種類です。 </p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#時間形式">時間形式</a>　<a href="#日付形式">日付形式</a>　<a href="#日時形式化">日時形式化</a>　</div>
 		<div id="methods">
-			<h3>【文字】の<a name="時間形式">時間形式</a></h3>
-			<p>指定した文字を時間形式で表します <span class="label label-warning">名詞手順</span></p>
+			<h3>【内容】の<a name="時間形式">時間形式</a>:文字列</h3>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した内容から時間形式に整えた文字列を返します </p>
 			<h4 data-ref="時間形式">文字列を時間形式に変換する</h4>
-			<pre class="code">「10:23」の時間形式を表示する</pre>
-			<h3>【文字】の<a name="日付形式">日付形式</a></h3>
-			<p>指定した文字を日付形式で表します <span class="label label-warning">名詞手順</span></p>
-			<pre class="code">「09/01/02」の日付形式を表示する</pre>
-			<h3>【文字】の<a name="日時形式化">日時形式化</a>：<a href="../primitive/datetime.htm">日時形式</a></h3>
-			<p>指定した文字を日付形式で表します <span class="label label-warning">名詞手順</span></p>
+			<pre class="code">「10:23」の時間形式を表示する
+<em>※結果　10:23:00</em></pre>
+			<h3>【内容】の<a name="日付形式">日付形式</a>:文字列</h3>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した内容から日付形式に整えた文字列を返します </p>
+			<pre class="code">「29/01/02」の日付形式を表示する
+<em>※結果　2029年1月2日</em></pre>
+			<h3>【内容】の<a name="日時形式化">日時形式化</a>：<a href="../primitive/datetime.htm">日時形式</a></h3>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した内容を日付形式に変換して返します </p>
 			<h4 data-ref="日時形式化">文字列を日時形式型へ変換する</h4>
 			<pre class="code">日付は「09/01/02 12:23:45」を日時形式化
 日付の年を報告する
-日付の分を報告する</pre>
+日付の分を報告する
+<em>※結果　2009</em>
+<em>※結果　23</em></pre>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead><tr>
@@ -122,85 +130,85 @@
 					</a><a name="今日">今日</a><br></th>
 					<th>日時形式</th>
 					<th>□</th>
-					<td>今の日付と時刻を表します</td>
+					<td>今の日付と時刻</td>
 				</tr>
 				<tr>
 					<th><a name="昨日">昨日</a></th>
 					<th>日時形式</th>
 					<th>□</th>
-					<td>昨日の日付と時刻を表します</td>
+					<td>昨日の日付と時刻</td>
 				</tr>
 				<tr>
 					<th><a name="明日">明日</a></th>
 					<th>日時形式</th>
 					<th>□</th>
-					<td>明日の日付と時刻を表します</td>
+					<td>明日の日付と時刻</td>
             	</tr>
 				<tr>
 					<th><a name="明後日">明後日</a></th>
 					<th>日時形式</th>
 					<th>□</th>
-					<td>明後日の日付と時刻を表します</td>
+					<td>明後日の日付と時刻</td>
             	</tr>
 				<tr>
 					<th><a name="今月">今月</a></th>
 					<th>整数</th>
 					<th>□</th>
-					<td>今月を表します</td>
+					<td>今月</td>
             	</tr>
 				<tr>
 					<th><a name="来月">来月</a></th>
 					<th>整数</th>
 					<th>□</th>
-					<td>来月を表します</td>
+					<td>来月</td>
 				</tr>
 				<tr>
 					<th><a name="先月">先月</a></th>
 					<th>整数</th>
 					<th>□</th>
-					<td>先月を表します</td>
+					<td>先月</td>
 				</tr>
 				<tr>
                     <th><a name="去年">去年</a></th>
                     <th>整数</th>
                     <th>□</th>
-                    <td>去年の年数を表します</td>
+                    <td>去年の年数</td>
                 </tr>
 				<tr>
                     <th><a name="今年">今年</a></th>
                     <th>整数</th>
                     <th>□</th>
-                    <td>今年の年数を表します</td>
+                    <td>今年の年数</td>
                 </tr>
 				<tr>
 					<th><a name="来年">来年</a></th>
 					<th>整数</th>
 					<th>□</th>
-					<td>来年の年数を表します</td>
+					<td>来年の年数</td>
 				</tr>
 				<tr>
 					<th><a name="日付">日付</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>今日の日付を文字列で表します</td>
+					<td><p>今日の日付の文字列表現</p></td>
 				</tr>
 				<tr>
 					<th><a name="時刻">時刻</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>今日の時刻を文字列で表します</td>
+					<td>今日の時刻の文字列表現</td>
 				</tr>
                 </tbody>
             </table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
         </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -8,6 +8,7 @@
 	<title>数値 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li>数値</li>
       </ul>
 	  <h1>数値</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
         <p><a href="../syntax/construct.html#construct_abstract" class="label label-default">抽象種類</a> <a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../syntax/number.html">数値の式</a></li>
@@ -102,11 +103,11 @@
 			<li><a href="float.htm">浮動小数</a></li>
 		</ul>
 		<p>プロデルでは、型推論によって数値の定数に対して適切なデータ型が選択されます。変数の型を明示して宣言すると、そのデータ型で格納されます。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<p>数値定数を指定すると作成できます。</p>
 		<pre class="code">値は1128</pre>
 		<p>　</p>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -123,21 +124,21 @@
 					<th><a name="値">値</a></th>
 					<th>数値</th>
 					<th>◎</th>
-					<td>値を表します</td>
+					<td>値</td>
 				</tr>
 				<tr>
 					<th><a name="内容">内容</a></th>
 					<th><a href="string.htm">文字列</a></th>
 					<th>◎</th>
-					<td>値を文字として表します</td>
+					<td>値を表現した文字列</td>
 				</tr>
                 </tbody>
 			</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#整える">整える</a>　</div>
+		<div id="methodlist"><a href="#整える">整える</a>　<a href="#バイナリ化">バイナリ化</a>　<a href="#比較する">比較する</a>　</div>
 		<div id="methods">
 			<h3>【自分】を【書式:文字列】に、<a name="整える">整える</a>：文字列</h3>
 			<p>日時を指定した書式に合わせた文字列として返します。</p>
@@ -147,14 +148,31 @@
 			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/standard-numeric-format-strings">標準の数値書式指定文字列 - .NET | Microsoft Learn</a></li>
 			        <li><a href="https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/custom-numeric-format-strings">カスタム数値形式文字列 - .NET | Microsoft Learn</a></li>
 			        </ul>
+			<h4 data-rel="整える">数値を指定した書式の文字列に変換する</h4>
 			<pre class="code">1.235を「00.00」に整えて報告する
-0.123456を「#,0」に整えて報告する
-0.123456を「0.00%」に整えて報告する</pre>
+<em>※結果　01.24
+</em>0.123456を「#,0」に整えて報告する
+<em>※結果　0
+</em>0.123456を「0.00%」に整えて報告する
+<em>※結果　12.35%</em></pre>
 			<pre class="code">30を「000;[000];ゼロ」に整えて報告する
--30を「000;[000];ゼロ」に整えて報告する
-0を「000;[000];ゼロ」に整えて報告する</pre>
+<em>※結果　030
+</em>-30を「000;[000];ゼロ」に整えて報告する
+<em>※結果　30
+</em>0を「000;[000];ゼロ」に整えて報告する<em>
+※結果　ゼロ</em></pre>
+			<h3>【自分】を<a name="バイナリ化">バイナリ化</a>：バイナリデータ</h3>
+			<p>値をバイナリ表現として返します。</p>
+			<h4 data-rel="バイナリ化">数値を指定した書式の文字列に変換する</h4>
+			<pre class="code">2025をバイナリ化して報告する<em>
+※結果 233,7,0,0</em></pre>
+			<h3>【値:数値】と【自分】を<a name="比較する">比較する</a>：整数</h3>
+			<p>指定した値と自分の値を比較します。指定した値よりも小さい場合は-1、指定した値と等しい場合は0、指定した値よりも大きい場合は1を返します。</p>
+			<h4 data-rel="比較する">指定した値と比較する</h4>
+			<pre class="code">10と20を比較して報告する
+<em>※結果　1</em></pre>
 		</div>
-	  <h2 id="型変換">型変換</h2>
+	  <h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。変換規則は、実際の値型に依存します。</p>
 		<table class="table table-bordered">
 			<thead>
@@ -177,16 +195,16 @@
 			</tr>
             </tbody>
 		</table>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<pre class="code">値は1128
 値の内容を表示する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

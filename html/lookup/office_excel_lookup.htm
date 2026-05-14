@@ -8,6 +8,7 @@
 	<title>Microsoft Excelを制御する - プロデル逆引き辞典</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -70,15 +71,20 @@
 
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
-<ul class="breadcrumb" data-category="lookup">
-	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="../lookup/index.htm">逆引き辞典</a></li>
-	<li>Microsoft Excelを制御する
-    </li>
-</ul>
-
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
+    <div class="col-md-9">
+		<ul class="breadcrumb" data-category="lookup">
+			<li><a href="../index.htm">プロデル</a></li>
+			<li><a href="../lookup/index.htm">逆引き辞典</a></li>
+			<li>Microsoft Excelを制御する
+			</li>
+		</ul>
+	</div>
+    <div id="refsidebar" class="col-md-3 sidebar">
+        <h4>Microsoft Excelを制御する</h4>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#lookup1">Excelを起動する</a></li><li><a href="#lookup2">既存のxlsファイルを開く</a></li><li><a href="#lookup3">セルに文字列を入力する</a></li><li><a href="#lookup4">セルを選択する</a></li><li><a href="#lookup5">見た目を変える</a></li><li><a href="#lookup6">エクセルの保存と終了</a></li><li><a href="#lookup7">シートへ自動入力する例</a></li><li><a href="#lookup8">マクロを実行する</a></li><li><a href="#lookup9">ブックやシートの切り替え</a></li><li><a href="#lookup10">エクセルで開いているファイルの一覧を取得する</a></li><li><a href="#lookup11">シートの追加</a></li><li><a href="#lookup12">シートの削除</a></li><li><a href="#lookup15">シートのコピー</a></li><li><a href="#lookup13">シートの並び順の変更</a></li><li><a href="#lookup14">エクセル連係の拡張</a></li></ul>
+    </div>
+    <div id="refcontent" class="col-md-8 col-md-offset-1">
 		<h1>Microsoft Excelを制御する</h1>
 		<p>このページでは、表計算ソフトMicrosoft Excelとプロデルを連係させる方法を紹介します。Excelと連係することで、プロデルからシートのセルに数値を代入したり、シートの追加と移動、ブックの保存・印刷などを操作できます。</p>
 		<p>この連係機能では、Excelとプロデルを組み合わせてデータを加工するための簡単な機能が用意されています。</p>
@@ -143,7 +149,7 @@ Rowを1から一覧の個数まで増やしながら繰り返す
 		<h3>セルの内容を取得する</h3>
 		<p>セルの内容を表示する場合は、次のように書きます。</p>
 		<pre class="code">「セルA3の内容は：　［（エクセルの選択シート：セル（「A3」））の内容］」を表示する</pre>
-		<p>セルA3の部分の内容を表します。</p>
+		<p>セルA3の部分の内容を表示します。</p>
 		<p>R1C1方で指定するときは、次のように書きます。</p>
 		<pre class="code">「セル(1,3)の内容は：　［（エクセルの選択シート：セル（{1,3}））の内容］」を表示する</pre>
 		<h3 id="lookup4">セルを選択する</h3>
@@ -371,11 +377,11 @@ End Sub</pre>
 		</div><!--/samples-->
 </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
@@ -384,7 +390,11 @@ End Sub</pre>
 	<script src="../js/script.js"></script>
     <script src="../js/syntax-highlight.js"></script>
 <!-- InstanceBeginEditable name="Script" -->
-
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

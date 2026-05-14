@@ -8,6 +8,7 @@
 	<title>仮想機械メソッド - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -82,14 +83,14 @@
 	  <h1>仮想機械メソッド</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ</h3>
 		<p><a href="index.htm">MSIL生成機能</a></p>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 	  <p>仮想機械クラスに属するメソッドを表現します。</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#加算命令を書き込む">加算命令を書き込む</a>　<a href="#減算命令を書き込む">減算命令を書き込む</a>　<a href="#乗算命令を書き込む">乗算命令を書き込む</a>　<a href="#除算命令を書き込む">除算命令を書き込む</a>　<a href="#剰余算命令を書き込む">剰余算命令を書き込む</a>　<a href="#論理和演算命令を書き込む">論理和演算命令を書き込む</a>　<a href="#論理積演算命令を書き込む">論理積演算命令を書き込む</a>　<a href="#否定演算命令を書き込む">否定演算命令を書き込む</a>　<a href="#左シフト演算命令を書き込む">左シフト演算命令を書き込む</a>　<a href="#右シフト演算命令を書き込む">右シフト演算命令を書き込む</a>　<a href="#等価比較命令を書き込む">等価比較命令を書き込む</a>　<a href="#大なり比較命令を書き込む">大なり比較命令を書き込む</a>　<a href="#小なり比較命令を書き込む">小なり比較命令を書き込む</a>　<a href="#変数を作る">変数を作る</a>　<a href="#配列として作る">配列として作る</a>　<a href="#変数を配列として作る">変数を配列として作る</a>　<a href="#配列生成命令を書き込む">配列生成命令を書き込む</a>　<a href="#変数読み込み命令を書き込む">変数読み込み命令を書き込む</a>　<a href="#変数参照命令を書き込む">変数参照命令を書き込む</a>　<a href="#変数書き込み命令を書き込む">変数書き込み命令を書き込む</a>　<a href="#参照書き込み命令を書き込む">参照書き込み命令を書き込む</a>　<a href="#参照読み込み命令を書き込む">参照読み込み命令を書き込む</a>　<a href="#フィールド読み込み命令を書き込む">フィールド読み込み命令を書き込む</a>　<a href="#フィールド参照命令を書き込む">フィールド参照命令を書き込む</a>　<a href="#読み込む命令を静的フィールド値を書き込む">読み込む命令を静的フィールド値を書き込む</a>　<a href="#読み込む命令を静的フィールド参照を書き込む">読み込む命令を静的フィールド参照を書き込む</a>　<a href="#静的フィールド値を書き込む命令を書き込む">静的フィールド値を書き込む命令を書き込む</a>　<a href="#引数読み込み命令を書き込む">引数読み込み命令を書き込む</a>　<a href="#引数参照命令を書き込む">引数参照命令を書き込む</a>　<a href="#引数書き込み命令を書き込む">引数書き込み命令を書き込む</a>　<a href="#配列読み込み命令を書き込む">配列読み込み命令を書き込む</a>　<a href="#配列参照命令を書き込む">配列参照命令を書き込む</a>　<a href="#配列書き込み命令を書き込む">配列書き込み命令を書き込む</a>　<a href="#プロパティ取得メソッドを取得">プロパティ取得メソッドを取得</a>　<a href="#プロパティ設定メソッドを取得">プロパティ設定メソッドを取得</a>　<a href="#終了命令を書き込む">終了命令を書き込む</a>　<a href="#空参照を書き込む">空参照を書き込む</a>　<a href="#ポップ命令を書き込む">ポップ命令を書き込む</a>　<a href="#ボックス化命令を書き込む">ボックス化命令を書き込む</a>　<a href="#アンボックス化命令を書き込む">アンボックス化命令を書き込む</a>　<a href="#生成する命令を書き込む">生成する命令を書き込む</a>　<a href="#メッセージ表示を書き込む">メッセージ表示を書き込む</a>　<a href="#コンソール出力を書き込む">コンソール出力を書き込む</a>　<a href="#コンソール入力を書き込む">コンソール入力を書き込む</a>　<a href="#一字出力を書き込む">一字出力を書き込む</a>　<a href="#一字入力を書き込む">一字入力を書き込む</a>　<a href="#新しいラベルを宣言する">新しいラベルを宣言する</a>　<a href="#ラベルを書き込む">ラベルを書き込む</a>　<a href="#移動する命令を書き込む">移動する命令を書き込む</a>　<a href="#成立時移動する命令を書き込む">成立時移動する命令を書き込む</a>　<a href="#不成立移動する命令を時書き込む">不成立移動する命令を時書き込む</a>　<a href="#選択移動する命令を書き込む">選択移動する命令を書き込む</a>　<a href="#整数文字列化を書き込む">整数文字列化を書き込む</a>　<a href="#文字列整数化を書き込む">文字列整数化を書き込む</a>　<a href="#浮動小数文字列化を書き込む">浮動小数文字列化を書き込む</a>　<a href="#文字列整数配列化を書き込む">文字列整数配列化を書き込む</a>　<a href="#メソッド呼び出しを書き込む">メソッド呼び出しを書き込む</a>　<a href="#呼び出す命令を書き込む">呼び出す命令を書き込む</a>　<a href="#整数定数として書き込む">整数定数として書き込む</a>　<a href="#浮動小数定数として書き込む">浮動小数定数として書き込む</a>　<a href="#文字列定数として書き込む">文字列定数として書き込む</a>　<a href="#仮引数を設定する">仮引数を設定する</a>　<a href="#メソッド呼び出しを作る">メソッド呼び出しを作る</a>　</div>
 		<div id="methods">
 
@@ -320,7 +321,7 @@
 			<p>このメソッドを呼び出すためのメソッド呼び出しを作ります</p>
 
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
@@ -342,7 +343,7 @@
 			</table>
 		</div>
 
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>1+2を計算するアセンブリを生成します。</p>
 		<p>実行例は、<a href="vlabel.htm">仮想機械ラベル</a>、<a href="methodcalllib.html">定義済みメソッド呼び出し</a>にもあります。</p>
 <pre class="code">アセンブリ名は「計算テスト.exe」
@@ -378,7 +379,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

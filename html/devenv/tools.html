@@ -1,0 +1,260 @@
+﻿<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>プロデルデザイナのツール - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->プロデルデザイナ<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+	<div id="top" class="col-md-9">
+		<ul class="breadcrumb" data-category="devenv">
+			<li><a href="../index.htm">プロデル</a></li>
+			<li>開発環境</li>
+		</ul>
+	</div>
+	  <div id="refsidebar" class="col-md-3 sidebar">
+		  <ul class="nav nav-pills nav-stacked">
+			  <li><a href="index.html#top">プロデルデザイナ</a></li>
+			  <li><a href="index.html#mainwindow">画面の説明</a></li>
+			  <li><a href="index.html#code">プログラムの編集</a></li>
+			  <li><a href="index.html#formdesign">ウィンドウの設計</a></li>
+			  <li><a href="index.html#functab">機能タブ領域</a></li>
+			  <li><a href="index.html#debugger">調査タブ領域</a></li>
+			  <li><a href="index.html#project">プロジェクトモード</a></li>
+			  <li><a href="index.html#makeexe">実行可能ファイルを作成する</a></li>
+			  <li><a href="index.html#options">オプション画面</a></li>
+			  <li><a href="#RdrUnit">単体テストツール(RdrUnit)</a></li>
+			  <li><a href="#RdrDoc">ドキュメント生成ツール(RdrDoc)</a></li>
+		  </ul>
+	  </div>
+	  <div id="refcontent" class="col-md-8 col-md-offset-1">
+		  <h1>プロデルデザイナのツール</h1>
+<h2 id="RdrUnit">単体テストツール(RdrUnit)</h2>
+		  <p>プロデル テストツールとは、プロデルで作成したプログラムが正常に動作するかどうかを
+			チェックするための単体テスト支援ツールです。</p>
+		  <p>プロデルでプログラムを作成した上で、そのプログラムが正しく動作するかどうかを確認するテストケースを作成し、テストツールを使って、テストケースを自動的にチェックできます。</p>
+		  <p>プロデルデザイナには、単体テストツールとしてRdrUnitが用意されています。</p>
+		  <p>&nbsp;</p>
+		  <h3>テストケースの作成</h3>
+		  <p>テストツールを使ってプログラムをテストするために、テストケースを作成します。
+		  テストケースは、プロデルのプログラムで作成します。</p>
+		  <p>テストケースを作成するためには、プロデルプログラムに「テストケース」種類を継承した種類を用意します。
+		  「テストケース」種類は、サンプル→ソフト開発→テストツール→「プロデルテストユニット.rdr」を参照することで利用できます。</p>
+		  <p>テストケース種類を継承した種類に、テスト内容を書いた手順を書きます。
+		  手順をテストの対象とするには、手順名定義の直後に「※テスト」と書きます。</p>
+		  <pre class="code">「プロデルテストユニット.rdr」を参照する
+
+テストとは
+  テストケースを継承する
+
+  テストする手順
+    ※テスト
+    値は、10*10
+    値が100と等しいはず
+  終わり
+終わり</pre>
+		  <p>&nbsp;</p>
+		  <h3>テストツールの起動</h3>
+		  <p>プロデルデザイナから、テストツールを起動します。</p>
+		  <div class="figure">
+		  <img alt="RdrUnitの起動" src="rdrunit-icon.png" width="367" height="100"></div>
+		  <p>[テスト]ボタンをクリックすると、現在開いているプロデルプログラムから
+		  テストの対象となる手順を探して、テストを行います。</p>
+		  <p>テストが成功すると、次のような画面が表示されます。</p>
+		  <div class="figure">
+		  <img alt="テストが成功したとき" src="rdrunit-suc.png" width="922" height="401" class="img-responsive"></div>
+		  <p>テストが一つでも失敗すると、次のような画面が表示されます。</p>
+		  <div class="figure">
+		  <img alt="テストが失敗したとき" src="rdrunit-fail.png" width="922" height="401" class="img-responsive">
+		  </div>
+		  <p>&nbsp;</p>
+		  <h3>テストケースで使用できる手順</h3>
+		  <p>テストケースでチェックする項目の判定は、
+		  プロデルで書かれた「テストケース」種類の中にある手順を使います。</p>
+		  <p>「テストケース」種類には、次のような手順が用意されています。</p>
+		  <h4>〈[テスト内容]として〉【値：真偽値】が正しいはずかどうか</h4>
+		  <p>値が真（○）のとき、テストが成功したと判定されます。</p>
+		  <pre class="code">「成功するテスト」として○が正しいはず
+「失敗するテスト」として×が正しいはず</pre>
+		  <h4>〈[テスト内容]として〉【値1】が【値2】と等しいはずかどうか</h4>
+		  <p>値1が値2と等しいとき、テストが成功したと判定されます。</p>
+		  <pre class="code">「成功するテスト」として10*10が100と等しいはず
+「失敗するテスト」として10+10が100と等しいはず</pre>
+		  <h4>〈[テスト内容]として〉【値1】が【値2】と異なるはずかどうか</h4>
+		  <p>値1が値2と異なるとき、テストが成功したと判定されます。</p>
+		  <pre class="code">「成功するテスト」として10*10が20と異なるはず
+「失敗するテスト」として10+10が20と異なるはず</pre>
+		  <h4>〈[テスト内容]として〉【値】が無であるはずかどうか</h4>
+		  <p>値が無であるとき、テストが成功したと判定されます。</p>
+		  <pre class="code">「成功するテスト」として無が無であるはず
+「失敗するテスト」として（ウィンドウを作ったもの）が無であるはず</pre>
+		  <h4>〈[テスト内容]として〉【値】が無でないはずかどうか</h4>
+		  <p>値が無でないとき、テストが成功したと判定されます。</p>
+		  <pre class="code">「成功するテスト」として（ウィンドウを作ったもの）が無でないはず
+「失敗するテスト」として無が無でないはず</pre>
+		  <h4>〈[テスト内容]として〉失敗させる</h4>
+		  <p>無条件にテストが失敗したと判定されます。</p>
+		  <pre class="code">「失敗するテスト」として失敗させる</pre>
+		  <hr>
+		  <h2 id="RdrDoc">ドキュメント生成ツール(RdrDoc)</h2>
+		  <p>プロデル ドキュメント生成ツールとは、プロデルで作成したプログラムから種類や手順の使い方が書かれたHTML形式のドキュメントを生成するツールです。</p>
+		  <p> プロデルでプログラムを作成した上で、種類や手順に注釈（アノテーション）を加えることで、その注釈を使ってドキュメントを生成します。</p>
+		  <p>プロデルデザイナには、ドキュメント生成ツールとしてRdrDocが用意されています。</p>
+		  <div class="figure"> <img alt="テストが失敗したとき" src="rdrdoc.png" width="546" height="440" class="img-responsive"> </div>
+		  <p>&nbsp;</p>
+		  <h3>ドキュメント生成用の注釈の作成</h3>
+		  <p>ドキュメント生成ツールで出力する説明文は、プロデルプログラムに注釈として指定します。</p>
+		  <h4>注釈の例</h4>
+		  <pre class="code">航空便管理処理とは
+<em>※説明　航空便を管理するクラスです。
+※作成者　管理システム開発チーム
+※バージョン　1.1</em>
+
+  +【自分】へ、【航空便情報】で、航空便を、登録する手順
+<em>  ※説明　航空便を登録します。
+  ※引数　航空便情報　登録する航空便情報</em><span class="rem"></span>
+
+  終わり
+終わり</pre>
+		  <p>&nbsp;</p>
+		  <h3>ドキュメント生成に使用する注釈</h3>
+		  <p>ドキュメントに出力する説明には、次の注釈を使えます。</p>
+<table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>注釈</th>
+                        <th>意味</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+					  <td>※説明</td>
+					  <td>種類、手順および変数の説明</td>
+				  </tr>
+				  <tr>
+					  <td>※引数</td>
+					  <td>引数の説明</td>
+				  </tr>
+				  <tr>
+					  <td>※戻り値</td>
+					  <td>戻り値の説明</td>
+				  </tr>
+				  <tr>
+					  <td>※例文</td>
+					  <td>手順の使用例</td>
+				  </tr>
+				  <tr>
+					  <td>※例外</td>
+					  <td>手順で発生する例外</td>
+				  </tr>
+				  <tr>
+					  <td>※バージョン</td>
+					  <td>種類、手順および変数のバージョン</td>
+				  </tr>
+				  <tr>
+					  <td>※作成者</td>
+					  <td>種類、手順および変数の作成者</td>
+				  </tr>
+                </tbody>
+            </table>
+		  
+		  <h3>ドキュメント生成ツールの起動</h3>
+		  <div class="figure"> <img alt="テストが失敗したとき" src="rdrdoc_menu.png" width="305" height="293" class="img-responsive"></div>
+		  <p>&nbsp;</p>
+		  <ol>
+		  	<li>プロデルデザイナの「ツール」タブから、ドキュメント生成ツールを起動します。</li>
+		  	<li>ドキュメントを生成したいプロデルプログラムをドラッグ＆ドロップします。</li>
+		  	<li>プロデルプログラムがあるフォルダにHTMLファイルが生成されます。</li>
+	  	</ol>
+		  <div class="figure"> <img alt="テストが失敗したとき" src="rdrdoc_output.png" width="1294" height="741" class="img-responsive"> </div>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2026年1月5日 <!-- #EndDate -->更新</div> 
+	  </div>
+  </div>
+        <!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+<script>
+$(function () {
+    $('body').scrollspy({ target: '#refsidebar', offset:100 });
+});
+</script>
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

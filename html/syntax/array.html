@@ -8,6 +8,7 @@
 	<title>配列の文法 - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -73,7 +74,7 @@
     <div class="col-md-9">
         <ul class="breadcrumb" data-category="syntax">
             <li><a href="../index.htm">プロデル</a></li>
-            <li><a href="index.htm">言語仕様</a></li>
+            <li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
             <li>配列の文法</li>
         </ul>
     </div>
@@ -171,27 +172,29 @@
 </div>
 <h3 id="array_const2"></h3>
 <h3 id="array_declear">可変長配列</h3>
-<p>プロデルの配列は、明示的に宣言しないと可変長配列とみなされます。可変長配列では、あらかじめ配列の要素数やデータ型を宣言する必要はありません。</p>
+<p>プロデルの配列は、明示的に宣言しないと可変長配列とみなされます。可変長配列では、あらかじめ配列の要素数を指定する必要はありません。</p>
 <p>また、未代入の変数に対して配列アクセス式で添字に整数を指定すると、可変長配列として値が格納されます。</p>
 <p>さらに、添字に要素数よりも大きい値を指定して値を代入すると、その添字までの要素が自動的に確保されます。</p>
 <h3>配列要素のデータ型の宣言</h3>
-<p><a href="exp_boldcircle.htm">変数宣言式</a>で変数の配列の要素のデータ型を明示的に宣言できます。要素のデータ型を指定した場合、その配列要素へ格納する時に、そのデータ型に値が変換されて格納されます。要素の値変換は、下記で説明する固定長配列と多次元配列でも同様です。値は<a href="convertables.htm">型変換のルール</a>に基づいて変換されます。</p>
+<p><a href="exp_boldcircle.htm">変数宣言式</a>で変数の配列の要素のデータ型を明示的に宣言できます。要素のデータ型を指定した場合、その配列要素へ格納する時に、そのデータ型に値が変換されて格納されます。</p>
+<p>要素の値変換は、下記で説明する固定長配列と多次元配列でも同様です。値は<a href="convertables.htm">型変換のルール</a>に基づいて変換されます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format">【<strong>《変数名》</strong>：<strong>《データ型》</strong>の配列】</pre>
+		<pre class="format">【<strong>《変数名》</strong>：<strong>《要素》</strong>の配列】</pre>
 	</div>
 </div>
 <h3 id="array_fixed">固定長配列</h3>
 <p><a href="../primitive/fixedarray.htm">固定長配列</a>は、格納できる要素数が決まっている配列です。固定長配列では「作る」文を使って配列の要素数をあらかじめ指定して作ります。一度作られた配列の要素数は増減できません。</p>
+<p>固定長配列を作るときには、型名の後に確保する配列の要素数を( )で囲って指定します。また要素のデータ型(要素型)は「《要素型》の配列」という形式で指定できます。</p>
 <div class="panel panel-default">
         <div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong>《データ型》</strong>の配列(<strong>《要素数》</strong>)を作る<br></pre>
+		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong>《要素型》</strong>の配列(<strong>《要素数》</strong>)を作る<br></pre>
 	</div>
 </div>
 <div class="panel panel-default">
@@ -199,8 +202,7 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-		<p>固定長配列は、作るときに型名の後に確保する配列の要素数を( )で囲って指定します。また要素のデータ型名は「《型名》の配列」という形式で指定できます。</p>
-		<p>例えば次のプログラムのように、整数型の要素数10個の固定長配列を作るには「作る」文を使って「整数の配列(10)」と指定します。</p>
+		<p>次のプログラムのように、整数型の要素数10個の固定長配列を作るには「作る」文を使って「整数の配列(10)」と指定します。</p>
 		<pre class="code">一覧という整数の配列(10)を作る
 数を1から10まで増やしながら繰り返す
     一覧(数)は、数*数
@@ -210,12 +212,13 @@
 </div>
 <h3 id="array_multi">多次元配列</h3>
 <p><a href="../primitive/multiarray.htm">多次元配列</a>は、格納できる要素数が次元ごとに決まっている多次元の配列です。多次元配列では「作る」文を使って配列の要素数を次元ごとにあらかじめ指定して作ります。一度作られた配列の要素数は増減できません。</p>
+<p>多次元配列を作るときには、型名の後に確保する配列の要素数を( )で囲って指定します。要素数は次元ごとに「,」で区切って複数指定できます。またデータ型(要素型)は「《要素型》の配列」という形式で指定します。</p>
 <div class="panel panel-default">
         <div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
 	</div>
 	<div class="panel-body">
-		<pre class="format"><strong></strong>配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<br><strong>《データ型》</strong>の配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<strong></strong><strong></strong></pre>
+		<pre class="format"><strong></strong>配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<br><strong>《要素》</strong>の配列(<strong>《1次要素数》</strong>,<strong>《2次要素数》</strong>,...)を作る<strong></strong><strong></strong></pre>
 	</div>
 </div>
 <div class="panel panel-default">
@@ -223,8 +226,7 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-		<p>多次元配列は、作るときに型名の後に確保する配列の要素数を( )で囲って指定します。要素数は次元ごとに「,」で区切って複数指定できます。またデータ型名は「《型名》の配列」という形式で指定します。</p>
-		<p>例えば次のプログラムのように、整数型の要素数が次元ごとに10個,10個,2個の多次元配列を作るには「作る」文を使って「整数の配列(10,10,2)」と指定します。</p>
+		<p>次のプログラムのように、整数型の要素数が次元ごとに10個,10個,2個の多次元配列を作るには「作る」文を使って「整数の配列(10,10,2)」と指定します。</p>
 		<pre class="code">Mという整数の配列(10,10,2)を作る
 M(1,1,1)=10
 M(1,1,1)を表示する</pre>
@@ -233,14 +235,14 @@ M(1,1,1)を表示する</pre>
 <h3 id="subete_suffix">「すべて」後置子</h3>
 <p>詳しい説明は<a href="subete.htm">こちら</a></p>
 <p>&nbsp;</p>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月3日 <!-- #EndDate -->更新</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年2月14日 <!-- #EndDate -->更新</div>
     </div>
 </div>
 <!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

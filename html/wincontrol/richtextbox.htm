@@ -8,6 +8,7 @@
 	<title>書式付きテキスト - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,19 +76,19 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>書式付きテキスト</li>
       </ul>
 	  <h1>書式付きテキスト</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <p><a href="btextbox.htm">テキスト領域</a></p>
 		<h3>継承する種類</h3>
 		<p><a href="textbox.htm">テキスト</a></p>
-		<h3>利用プラグイン</h3>
+		<h3>利用ライブラリ</h3>
 		<p><a href="index.htm">ウィンドウ部品集</a></p>
 		<h3>関連語</h3>
         <p>リッチテキストボックス,拡張テキスト</p>
@@ -97,9 +98,9 @@
 	  <h2 id="head">概要</h2>
 		<p>字体や文字色などの書式が指定できる文章を入力できる部品です。</p>
 		<div class="figure"><img src="img/richtextbox.png" width="292" height="71" alt="書式付きテキストを貼り付けたウィンドウ"></div>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】という書式付きテキストを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>テキストから<a href="textbox.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#検索する">検索する</a>　<a href="#貼り付け可能">貼り付け可能</a>　<a href="#読み込む">読み込む</a>　<a href="#RTFとして読み込む">RTFとして読み込む</a>　<a href="#保存する">保存する</a>　<a href="#RTFとして保存する">RTFとして保存する</a>　</div>
 		<div id="methods">
@@ -107,6 +108,9 @@
 			<p>書式付きテキストの内容の中でテキストを検索します。</p>
 			<h3>【自分】へ【キーワード】を<a name="貼り付け可能">貼り付け可能</a></h3>
 			<p>クリップボードの情報を指定したデータ形式で貼り付けできるかどうかを確認します。</p>
+			<h3>【自分】を<a name="やり直す">やり直す</a></h3>
+			<p>テキストの内容を一つ後にやり直します</p>
+			<p>&nbsp;</p>
 			<h3>【自分】へ【ファイル名】から<a name="読み込む">読み込む</a></h3>
 			<p>ファイルの内容を書式付きテキストに読み込みます。ファイル名に拡張子に応じて読み込みます。</p>
 			<h3>【自分】へ【ファイル名】から<a name="RTFとして読み込む">RTFとして読み込む</a></h3>
@@ -209,7 +213,7 @@
 					<th><a name="行内容">行内容</a></th>
 					<th>文字列</th>
 					<th>◎</th>
-					<td>入力カーソルがある行の内容を表します</td>
+					<td>入力カーソルがある行の内容</td>
 					</tr>
 				<tr>
 					<th><a name="行数">行数</a></th>
@@ -375,12 +379,12 @@
                 </tr>
                 </tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="textbox.htm">継承されるイベント手順</a>が使用できます。</p>
 		<p>　</p>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">リッチテキストを編集できる部品を作る</h3>
 	<pre class="code">メイン画面を表示する
@@ -422,11 +426,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2026年4月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

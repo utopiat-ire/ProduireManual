@@ -8,6 +8,7 @@
 	<title>ウェブブラウザページ - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,7 +76,7 @@
   <div id="reftitle" class="col-md-12">
   <ul class="breadcrumb" data-category="gui">
     <li><a href="../index.htm">プロデル</a></li>
-    <li><a href="index.htm">GUI部品</a></li>
+    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
     <li>ウェブブラウザページ</li>
   </ul>
   <h1>ウェブブラウザページ</h1>
@@ -83,21 +84,21 @@
 	</a><a href="../safelock.htm" class="label label-danger">保護あり</a></p>
 </div>
 <div id="refsidebar" class="col-md-3">
-	<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 	<h3>関連ページ</h3>
     <ul>
       <li><a href="browser.htm">ウェブブラウザ</a></li>
       <li><a href="browser_element.htm">ウェブブラウザ要素</a></li>
     </ul>
-	<h3>利用プラグイン</h3>
+	<h3>利用ライブラリ</h3>
 	<p><a href="index.htm">ウィンドウ部品集</a></p>
-	<h2>作成する方法</h2>
+	<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 	<p>ウェブブラウザの「ページ」設定項目で取得できます。</p>
 </div>
 <div class="col-sm-8">
 	<h2 id="head">概要</h2>
 	<p>ウェブブラウザで表示しているページの文章構造(DOM)を表す種類です。</p>
-	<h2 id="手順">手順</h2>
+	<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 	<p>次の手順が使用できます。</p>
 	<div id="methodlist"><a href="#ID要素を取得する">ID要素を取得する</a>　<a href="#要素を取得する">要素を取得する</a>　<a href="#クラス要素を取得する">クラス要素を取得する</a>　</div>
 	<div id="methods">
@@ -108,13 +109,14 @@
 		<p>ドキュメント内すべての要素について、指定した要素(タグ)名と合致する要素すべてを取得します。</p>
 		<pre class="code">ブラウザから「a」という要素を取得してリンク要素一覧とする</pre>
 		<h3>【自分】の【座標】から要素を取得する：<a href="browser_element.htm">ウェブブラウザ要素</a></h3>
-		<p>指定した座標にある要素を取得します。</p><pre class="code">ブラウザの{130,130}から要素を取得して選択要素とする</pre>
+		<p>指定した座標にある要素を取得します。</p>
+		<pre class="code">ブラウザの{130,130}から要素を取得して選択要素とする</pre>
 		<h3>【自分】から【クラス名】という<a name="クラス要素を取得する">クラス要素を取得する</a>：<a href="browser_element.htm">ウェブブラウザ要素</a>の配列</h3>
 		<p>ドキュメント内すべての要素について、指定したクラス名が選択されている(class属性に指定されている)要素すべてを取得します。<br>
 		クラス名は、半角スペースで区切って複数指定できます。</p>
 		<pre class="code">ブラウザから「menu selected」をクラス要素を取得して選択メニュー要素とする</pre>
 	</div>
-	<h2 id="設定項目">設定項目</h2>
+	<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 	<p>次の設定項目が使用できます。</p>
 	<div id="properties">
 		<table class="table table-bordered">
@@ -137,9 +139,9 @@
 				<td>現在のページのクッキー</td>
 			</tr>
 			</table>
-		<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 	</div>
-	<h2 id="サンプルコード">サンプルコード</h2>
+	<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">Yahoo!の検索窓から検索する</h3>
 	<p>ブラウザのDOM構造を取得して、Yahoo!トップページの検索窓のリンクを選択して、キーワードを入力して、検索します。<br>
@@ -186,11 +188,11 @@
 </div><!--/samples-->
 </div>
 		</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

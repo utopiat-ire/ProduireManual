@@ -8,6 +8,7 @@
 	<title>日時期間形式 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li>日時期間形式</li>
       </ul>
 	  <h1>日時期間形式</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <span class="label label-warning">型変換</span> <a href="../sumire.htm" class="label label-info">スミレ</a> <a href="../syntax/expr.html" class="label label-info">加減算可</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="datetime.htm">「日時形式」種類</a></li>
@@ -95,54 +96,63 @@
 	  <h2 id="head">概要</h2>
 		<p>日数や時間などの期間を表す種類です。<br>
 			日時形式とは異なり、日数，時間，分，秒，ミリ秒など相対的な値を保持します。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="code">値という日時期間形式(「1.12:23:45」)を作る</pre>
 		<p>日時形式の値を引き算すると日時期間形式型の値が得られます。</p>
 		<pre class="code">経過期間は、今日-[「2019/04/01」を日時形式化したもの]</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#時間差">時間差</a>　<a href="#整える">整える</a>　</div>
+		<div id="methodlist"><a href="#足す">足す</a>　<a href="#足す">足す</a>　<a href="#後">後</a>　<a href="#引く">引く</a>　<a href="#引く">引く</a>　<a href="#前">前</a>　<a href="#時間差">時間差</a>　<a href="#整える">整える</a>　<a href="#比較する">比較する</a>　</div>
 		<div id="methods">
 			<h3>【自分】へ【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="足す">足す</a></h3>
 			<p>指定した値だけ経過した時間を設定します。自分の値が変わります。</p>
           <h4 data-ref="後">3時間後の経過時間を求める</h4>
             <pre class="code">経過時間という日時期間形式を作る
 経過時間へ3時間足す
-経過時間を表示する	//経過時間が変わる</pre>
+経過時間を表示する	<em>//経過時間が変わる</em>
+<em>※結果　03:00:00</em></pre>
 			<h3>【自分】へ【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="足す">足す</a>：日時期間形式</h3>
             <p>指定した値だけ経過した時間を返します。</p>
           <h4 data-ref="後">3時間後の経過時間を求める</h4>
             <pre class="code">経過時間という日時期間形式を作る
 経過時間へ3時間足して表示する
-経過時間を表示する	//経過時間が変わらない</pre>
+経過時間を表示する	//経過時間が変わらない
+<em>※結果　03:00:00<br>※結果　00:00:00</em></pre>
 <h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="後">後</a>：日時期間形式</h3>
 			<p>指定した値だけ経過した時間を返します。</p>
 			<h4 data-ref="後">3時間後の経過時間を求める</h4>
 			<pre class="code">値という日時期間形式(「1:30:20」)を作る
-値から3時間後を表示する</pre>
+値から3時間後を表示する
+<em>※結果　04:30:20</em></pre>
 			<h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="引く">引く</a></h3>
 			<p>指定した値だけ戻した時間を設定します。自分の値が変わります。</p>
             <h4 data-ref="前">15分前の経過時間を求める</h4>
             <pre class="code">経過時間という日時期間形式(「1:30:20」)を作る
 経過時間から15分引く
-経過時間を表示する	//経過時間が変わる</pre>
+経過時間を表示する	//経過時間が変わる
+<em>※結果　01:15:20</em></pre>
 			<h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="引く">引く</a></h3>
             <p>指定した値だけ戻した時間を返します。「前」名詞手順と同じです。</p>
             <h4 data-ref="前">15分前の経過時間を求める</h4>
           <pre class="code">経過時間という日時期間形式(「1:30:20」)を作る
 経過時間から15分引いて、表示する
-経過時間を表示する	//経過時間は変わらない</pre>
+経過時間を表示する	//経過時間は変わらない
+<em>※結果　01:15:20<br>※結果　01:30:20</em></pre>
             <h3>【自分】から【D】日【H】時間【N】分【S】秒〈【S】ミリ秒〉、<a name="前">前</a>：日時期間形式</h3>
-			<p>指定した値だけ戻した時間を返します。<span class="label label-warning">名詞手順</span></p>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した値だけ戻した時間を返します。</p>
 			<h4 data-ref="前">15分前の経過時間を求める</h4>
 			<pre class="code">値という日時期間形式(「1:30:20」)を作る
-値から15分前を表示する</pre>
+値から15分前を表示する
+<em>※結果　01:15:20</em></pre>
 			<h3>【自分】と【日付】の<a name="時間差">時間差</a>：日時期間形式</h3>
-			<p>指定した日時形式との差を計算します。<span class="label label-warning">名詞手順</span></p>
+			<p><span class="label label-warning">名詞手順</span></p>
+			<p>指定した日時形式との差を計算します。</p>
 			<h4 data-ref="時間差">2つの経過時間の差を求める</h4>
 			<pre class="code">値1という日時期間形式(「5:23:32」)を作る
 値2という日時期間形式(「4:52:02」)を作る
-値1と値2の時間差を表示する</pre>
+値1と値2の時間差を表示する
+<em>※結果　-00:31:30</em></pre>
 			<h3>【自分】を【書式:文字列】に、<a name="整える">整える</a>：文字列</h3>
 			<p>日時を指定した書式に合わせた文字列として返します。</p>
 			<p>書式は、.NET Frameworkの数値書式で指定します。</p>
@@ -152,9 +162,18 @@
             </ul>
 			<h4 data-ref="整える">経過時間を決まった書式に整える</h4>
 			<pre class="code">値という日時期間形式(「12:23:45」)を作る
-値を「hh時間mm分ss秒」に整えて、表示する</pre>
+値を「hh時間mm分ss秒」に整えて、表示する
+<em>※結果　12時間23分45秒</em>			</pre>
+			<h3>【値:日時期間形式】と【自分】を<a name="比較する">比較する</a>：整数</h3>
+			<p>指定した値と自分の値を比較します。指定した値よりも小さい場合は-1、指定した値と等しい場合は0、指定した値よりも大きい場合は1を返します。</p>
+			<h4 data-rel="比較する">指定した値と比較する</h4>
+			<pre class="code">【値1:日時期間形式】は「0:32:10」
+【値2:日時期間形式】は「0:41:40」
+値1と値2を比較して報告する
+<em>※結果　1</em></pre>
+			<p>&nbsp;</p>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -169,69 +188,68 @@
                 <tr>
 					<th><a name="内容">内容</a></th>
 					<th>◎</th>
-					<td>内容を文字で表します</td>
+					<td>期間を表現した文字列</td>
 				</tr>
 				<tr>
 					<th><a name="日数">日数</a></th>
 					<th>□</th>
-					<td>期間の日数部分を表します</td>
+					<td>期間の日数部分</td>
 				</tr>
 				<tr>
 					<th><a name="時間">時間</a></th>
 					<th>□</th>
-					<td>期間の時間部分を表します</td>
+					<td>期間の時間部分</td>
 				</tr>
 				<tr>
 					<th><a name="分数">分数</a></th>
 					<th>□</th>
-					<td>期間の分数部分を表します</td>
+					<td>期間の分数部分</td>
 				</tr>
 				<tr>
 					<th><a name="秒数">秒数</a></th>
 					<th>□</th>
-					<td>期間の秒数部分を表します</td>
+					<td>期間の秒数部分</td>
 				</tr>
 				<tr>
 					<th><a name="ミリ秒数">ミリ秒数</a></th>
 					<th>□</th>
-					<td>期間のミリ秒部分を表します</td>
+					<td>期間のミリ秒部分</td>
 				</tr>
 				<tr>
 					<th><a name="整数値">整数値</a></th>
 					<th>□</th>
-					<td>日時期間を整数値で表します<br>
-						期間を100ナノ秒単位で表したものです。 </td>
+					<td>100ナノ秒単位で表した期間値</td>
 				</tr>
 				<tr>
 					<th><a name="合計日数">合計日数</a></th>
 					<th>□</th>
-					<td>期間の日単位で表します</td>
+					<td>日数単位で表した期間値</td>
 				</tr>
 				<tr>
 					<th><a name="合計時間">合計時間</a></th>
 					<th>□</th>
-					<td>期間の時間単位で表します</td>
+					<td>時間単位で表した期間値</td>
 				</tr>
 				<tr>
 					<th><a name="合計分数">合計分数</a></th>
 					<th>□</th>
-					<td>期間の分単位で表します</td>
+					<td>分単位で表した期間値</td>
 				</tr>
 				<tr>
 					<th><a name="合計秒数">合計秒数</a></th>
 					<th>□</th>
-					<td>期間の秒単位で表します</td>
+					<td>秒単位で表した期間値</td>
 				</tr>
 				<tr>
 					<th><a name="合計ミリ秒数">合計ミリ秒数</a></th>
 					<th>□</th>
-					<td>期間をミリ秒単位で表します</td>
+					<td><p>ミリ秒単位で表した期間値</p></td>
 				</tr>
 			    </tbody>
             </table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="型変換">型変換</h2>
+		<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
 		<table class="table table-bordered">
 			<thead>
@@ -249,19 +267,19 @@
 			</tr>
 		    </tbody>
         </table>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <h3 id="sample1">今日から一日後の日付を求める</h3>
 		<p>今日から一日後の日付を表示します。</p>
 		<pre class="code">値は、今日
 値に1日足す
-値の日付を表示する</pre>
+値の日付を表示する<em></em></pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

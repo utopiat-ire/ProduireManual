@@ -8,6 +8,7 @@
 	<title>TCPIPクライアント - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,15 +76,15 @@
 	<div id="reftitle" class="col-md-12">
 		<ul class="breadcrumb" data-category="net">
 			<li><a href="../index.htm">プロデル</a></li>
-			<li><a href="index.htm">ネットワーク機能</a></li>
+			<li><a href="index.htm"><i class="fa fa-sitemap"></i> ネットワーク機能</a></li>
 			<li>TCPIPクライアント</li>
 		</ul>
 		<h1>TCPIPクライアント</h1>
 		<p><span class="label label-warning">生成可能</span> <a href="../safelock.htm" class="label label-danger">保護あり</a></p>
 	</div>
   <div id="refsidebar" class="col-md-3">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ</h3>
 		<p><a href="index.htm">ネットワーク機能集</a></p>
 		<h3>関連ページ</h3>
         <ul>
@@ -93,9 +94,9 @@
 	  <div id="refcontent" class="col-md-8">
 		<h2 id="head">概要</h2>
 		<p>TCPでデータを送受信するための種類です。TCPサーバへ接続するクライアント機能が用意されています。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というTCPIPクライアントを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#切断する">切断する</a>　<a href="#接続する">接続する</a>　<a href="#バイナリ形式で送受信する">バイナリ形式で送受信する</a>　<a href="#バイナリ形式で送信する">バイナリ形式で送信する</a>　<a href="#バイナリ形式で受信させる">バイナリ形式で受信させる</a>　<a href="#送受信する">送受信する</a>　<a href="#送信する">送信する</a>　<a href="#受信させる">受信させる</a>　<a href="#受信開始する">受信開始する</a>　</div>
 		<div id="methods">
 			<h3>【自分】を<a name="切断する">切断する</a></h3>
@@ -103,24 +104,28 @@
 			<h3>【自分】を【ホスト名】へ<a name="接続する">接続する</a></h3>
 			<p>指定したホスト名への接続を開始します</p>
 			<h3>【自分】から【バイトデータ】を、<a name="バイナリ形式で送受信する">バイナリ形式で送受信する</a>：<a href="../primitive/bytes.htm">バイナリデータ</a></h3>
-			<p>接続先へバイナリ形式でデータを送信して、その応答メッセージを受信します。<br>
-				結果としてデータを送信した直後に接続先から受け取ったメッセージを表します</p>
+			<p>接続先へバイナリ形式でデータを送信して、その応答メッセージを受信します。</p>
+			<ul>
+			        <li>戻り値は、データを送信した直後に接続先から受け取ったメッセージ</li>
+			        </ul>
 			<h3>【自分】から【バイトデータ】を、<a name="バイナリ形式で送信する">バイナリ形式で送信する</a></h3>
 			<p>接続先へバイナリ形式でデータを送信します</p>
 			<h3>【自分】に、<a name="バイナリ形式で受信させる">バイナリ形式で受信させる</a>：<a href="../primitive/string.htm">文字列</a></h3>
 			<p>接続先からバイナリ形式でデータを送信します</p>
 			<h3>【自分】から【送信内容：文字列】を<a name="送受信する">送受信する</a>：<a href="../primitive/string.htm">文字列</a></h3>
-			<p>接続先へテキスト形式でデータを送信して、その応答メッセージを受信します。<br>
-				結果としてデータを送信した直後に接続先から受け取ったメッセージを表します</p>
+			<p>接続先へテキスト形式でデータを送信して、その応答メッセージを受信します。</p>
+			<ul>
+			        <li>戻り値は、データを送信した直後に接続先から受け取ったメッセージ</li>
+			        </ul>
 			<h3>【自分】から【送信内容：文字列】を<a name="送信する">送信する</a></h3>
 			<p>接続先へテキスト形式でデータを送信します</p>
 			<h3>【自分】に<a name="受信させる">受信させる</a>：<a href="../primitive/string.htm">文字列</a></h3>
-			<p>接続先からデータを受信して、テキスト形式で表します。この手順は「受信した」時のイベント手順が処理されるまでにTCPIPクライアントが受信したデータを取得できます</p>
+			<p>接続先からデータを受信して、内容をテキスト形式で返します。この手順は「受信した」時のイベント手順が処理されるまでにTCPIPクライアントが受信したデータを取得できます</p>
 			<h3>【自分】に<a name="受信開始する">受信開始する</a></h3>
 			<p>接続先からデータの受信を開始します。この手順を実行すると「受信した」時のイベント手順が起きるようになります。</p>
 			<p>この手順は、<a href="tcpserver.htm">TCPIPサーバ</a>の「受信した」時の手順のイベント情報の「クライアント」で取得したTCPIPクライアントのみで有効で、通常は「接続する」手順が実行されると、すぐに受信が開始されます。</p>
         </div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead><tr>
@@ -172,25 +177,25 @@
 					<th><a name="相手先アドレス">相手先アドレス</a></th>
 					<th><a href="../primitive/string.htm">文字列</a></th>
 					<th>□</th>
-					<td>相手先のIPアドレスを表します</td>
+					<td>相手先のIPアドレス</td>
 					</tr>
 				<tr>
 					<th><a name="相手先ポート">相手先ポート</a></th>
 					<th><a href="../primitive/number.htm">整数</a></th>
 					<th>□</th>
-					<td>相手先のポート番号を表します</td>
+					<td>相手先のポート番号</td>
 					</tr>
 				<tr>
 					<th><a name="自己アドレス">自己アドレス</a></th>
 					<th><a href="../primitive/string.htm">文字列</a></th>
 					<th>□</th>
-					<td>自分のIPアドレスを表します</td>
+					<td>自分のIPアドレス</td>
 					</tr>
 				<tr>
 					<th><a name="自己ポート">自己ポート</a></th>
 					<th><a href="../primitive/number.htm">整数</a></th>
 					<th>□</th>
-					<td>自分のポート番号を表します</td>
+					<td>自分のポート番号</td>
 					</tr>
 				<tr>
 					<th><a name="接続中">接続中</a></th>
@@ -200,7 +205,7 @@
                 </tr>
                 </tbody>
             </table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
         </div>
 		<h2>実行される手順</h2>
 		<table class="table table-bordered">
@@ -218,7 +223,7 @@
             </tbody>
         </table>
 		<p>　</p>
-        <h2 id="サンプルコード">サンプルコード</h2>
+        <h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
         <div id="samples">
             <h3 id="sample1">特定のTCPポートにメッセージを送信する</h3>
             <p>ポート5000番で待機しているサーバへ接続して、メッセージを送ります。</p>
@@ -232,11 +237,11 @@
         </div><!--/samples-->
     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年2月13日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

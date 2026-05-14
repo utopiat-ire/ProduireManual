@@ -8,6 +8,7 @@
 	<title>選択リスト - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>選択リスト</li>
       </ul>
 	  <h1>選択リスト</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
       <p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
       <h3>継承する種類</h3>
       <p><a href="control.htm">ウィンドウ部品</a></p>
 	  <h3>関連ページ</h3>
@@ -96,10 +97,10 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
       <p>▼ボタンをクリックすることで表れる選択肢から一つを選ぶ部品です。</p>
-      <div class="figure"><img src="img/combobox.png" width="143" height="37"></div>
-		<h2>作成する方法</h2>
+      <div class="figure"><img src="img/combobox.png" width="143" height="37" alt="選択リスト"></div>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】という選択リストを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#加える">加える</a>　<a href="#挟む">挟む</a>　<a href="#一括追加する">一括追加する</a>　<a href="#消す">消す</a>　<a href="#番目を消す">番目を消す</a>　<a href="#選ぶ">選ぶ</a>　<a href="#選択する">選択する</a>　</div>
 		<div id="methods">
@@ -132,160 +133,162 @@
 			<h3>【自分】をすべて選択する</h3>
 			<p>テキストのすべての部分を選択状態にします。</p>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>設定項目</th>
-						<th>型</th>
-						<th>　</th>
-						<th>説明</th>
-					</tr>
-				</thead>
-                <tbody>
-				<tr>
-					<th><a name="一覧">一覧</a></th>
-					<th>配列</th>
-					<th>◎</th>
-					<td>選択肢として表示する項目の一覧</td>
-					</tr>
-				<tr>
-					<th><a name="個数">個数</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>選択肢の個数を取得します</td>
-					</tr>
-				<tr>
-					<th><a name="入力可能">入力可能</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>テキストボックスへ選択肢以外の文字を入力できるかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="背景色">背景色</a></th>
-					<th><a href="../primitive/color.htm">色</a></th>
-					<th>◎</th>
-					<td>選択リストの背景色</td>
-					</tr>
-				<tr>
-					<th><a name="選択番号">選択番号</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択している項目の番号</td>
-					</tr>
-				<tr>
-					<th><a name="文字色">文字色</a></th>
-					<th><a href="../primitive/color.htm">色</a></th>
-					<th>◎</th>
-					<td>選択リストの文字の色</td>
-					</tr>
-				<tr>
-					<th><a name="最大表示項目数">最大表示項目数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>ドロップダウン部分に一度に表示できる項目数</td>
-					</tr>
-				<tr>
-					<th><a name="最大文字数">最大文字数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>テキストに入力できる最大文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択項目">選択項目</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>選択リストで選択している項目を取得します</td>
-					</tr>
-				<tr>
-					<th><a name="選択開始位置">選択開始位置</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択範囲の開始文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択長さ">選択長さ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択範囲の文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択内容">選択内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>テキストの範囲選択した内容</td>
-					</tr>
-				<tr>
-					<th><a name="選択窓幅">選択窓幅</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>▼で現れる選択窓の幅</td>
-					</tr>
-				<tr>
-					<th><a name="選択窓高さ">選択窓高さ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>▼で現れる選択窓の高さ</td>
-					</tr>
-				<tr>
-					<th><a name="選択窓表示">選択窓表示</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>▼で現れる選択窓が表示しているか/するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="自動調整">自動調整</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>項目1つ分の大きさに合わせて、選択リストの大きさを自動的に調整するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="並べ替え">並べ替え</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>項目を名前順に並べ替えるかどうか</td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="一覧">一覧</a></th>
+							<th>配列</th>
+							<th>◎</th>
+							<td>選択肢として表示する項目の一覧</td>
+						</tr>
+						<tr>
+							<th><a name="個数">個数</a></th>
+							<th>整数</th>
+							<th>□</th>
+							<td>選択肢の個数を取得します</td>
+						</tr>
+						<tr>
+							<th><a name="入力可能">入力可能</a></th>
+							<th>真偽</th>
+							<th>◎</th>
+							<td>テキストボックスへ選択肢以外の文字を入力できるかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="背景色">背景色</a></th>
+							<th><a href="../primitive/color.htm">色</a></th>
+							<th>◎</th>
+							<td>選択リストの背景色</td>
+						</tr>
+						<tr>
+							<th><a name="選択番号">選択番号</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択している項目の番号</td>
+						</tr>
+						<tr>
+							<th><a name="文字色">文字色</a></th>
+							<th><a href="../primitive/color.htm">色</a></th>
+							<th>◎</th>
+							<td>選択リストの文字の色</td>
+						</tr>
+						<tr>
+							<th><a name="最大表示項目数">最大表示項目数</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>ドロップダウン部分に一度に表示できる項目数</td>
+						</tr>
+						<tr>
+							<th><a name="最大文字数">最大文字数</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>テキストに入力できる最大文字数</td>
+						</tr>
+						<tr>
+							<th><a name="選択項目">選択項目</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>選択リストで選択している項目を取得します</td>
+						</tr>
+						<tr>
+							<th><a name="選択開始位置">選択開始位置</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択範囲の開始文字数</td>
+						</tr>
+						<tr>
+							<th><a name="選択長さ">選択長さ</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択範囲の文字数</td>
+						</tr>
+						<tr>
+							<th><a name="選択内容">選択内容</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>テキストの範囲選択した内容</td>
+						</tr>
+						<tr>
+							<th><a name="選択窓幅">選択窓幅</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>▼で現れる選択窓の幅</td>
+						</tr>
+						<tr>
+							<th><a name="選択窓高さ">選択窓高さ</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>▼で現れる選択窓の高さ</td>
+						</tr>
+						<tr>
+							<th><a name="選択窓表示">選択窓表示</a></th>
+							<th>真偽</th>
+							<th>◎</th>
+							<td>▼で現れる選択窓が表示しているか/するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="自動調整">自動調整</a></th>
+							<th>真偽</th>
+							<th>◎</th>
+							<td>項目1つ分の大きさに合わせて、選択リストの大きさを自動的に調整するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="並べ替え">並べ替え</a></th>
+							<th>真偽</th>
+							<th>◎</th>
+							<td>項目を名前順に並べ替えるかどうか</td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
 		<div id="events">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>イベント名</th>
-					<th>説明</th>
-					<th>情報</th>
-					</tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="変更された">変更された</a></th>
-					<td>項目が変わった時<br>
-						(ユーザ操作や「選択番号」設定項目の値が変更された時)</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="選択された">選択された</a></th>
-					<td>項目がユーザによって選択された時</td>
-					<td>&nbsp;</td>
-					</tr>
-				<tr>
-					<th><a name="ドロップダウンが開かれた">ドロップダウンが開かれた</a></th>
-					<td>▼でドロップダウンを開いた時</td>
-					<td>&nbsp;</td>
-					</tr>
-				<tr>
-					<th><a name="ドロップダウンが閉じられた">ドロップダウンが閉じられた</a></th>
-					<td>ドロップダウンが閉じられた時</td>
-					<td>&nbsp;</td>
-                </tr>
-                </tbody>
-            </table>
+					<thead>
+						<tr>
+							<th>イベント名</th>
+							<th>説明</th>
+							<th>情報</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="変更された">変更された</a></th>
+							<td>項目が変わった時<br>
+								(ユーザ操作や「選択番号」設定項目の値が変更された時)</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="選択された">選択された</a></th>
+							<td>項目がユーザによって選択された時</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<th><a name="ドロップダウンが開かれた">ドロップダウンが開かれた</a></th>
+							<td>▼でドロップダウンを開いた時</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<th><a name="ドロップダウンが閉じられた">ドロップダウンが閉じられた</a></th>
+							<td>ドロップダウンが閉じられた時</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
 		</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<div id="samples">
 			<h3 id="sample1">プルダウンリストから選択するには</h3>
 			<p>選択リストを作ります。</p>
@@ -306,11 +309,11 @@
 			</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月25日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

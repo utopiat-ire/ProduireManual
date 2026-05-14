@@ -8,6 +8,7 @@
 	<title>ワード - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -80,11 +81,11 @@
 	    <li>ワード</li>
       </ul>
 	  <h1>ワード</h1>
-		<p><a href="../static.htm" class="label label-info">静的種類</a></p>
+		<p><a href="../static.htm" class="label label-info">単一種類</a></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン・ソフトウェア</h3>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ・ソフトウェア</h3>
 		<ul>
 		  <li><a href="index.htm">Microsoft Office操作機能</a></li>
 			<li>Microsoft Word (デスクトップ版のみ)</li>
@@ -109,10 +110,7 @@
 		<p>「ワード」種類は、Microsoft Wordと連携してアプリケーション本体を操作したり、ワード文章を管理したりするオブジェクトです。</p>
 		<p>Word連携機能の使い方については、<a href="../lookup/office_word_lookup.htm">Microsoft Wordを制御する</a>やサンプルプログラム(Office連係→ワード)をご参照ください。<br>
 		</p>
-		<h2>作成する方法</h2>
-		<p>この種類は、静的種類のため作成する必要はありません。</p>
-		<p>　</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#マクロ実行する">マクロ実行する</a>　<a href="#リンクする">リンクする</a>　<a href="#開く">開く</a>　<a href="#開く">開く</a>　<a href="#起動する">起動する</a>　<a href="#起動中かどうか">起動中かどうか</a>　<a href="#強制終了する">強制終了する</a>　<a href="#終了する">終了する</a>　<a href="#新規文書を作成する">新規文書を作成する</a>　<a href="#文章を追加する">文章を追加する</a>　<a href="#保存する">保存する</a>　<a href="#PDFで保存する">PDFで保存する</a>　<a href="#XPSで保存する">XPSで保存する</a>　</div>
 		<div id="methods">
 			<h3>ワードにある【関数名】を〈【引数】で〉<a name="マクロ実行する">マクロ実行する</a></h3>
@@ -150,12 +148,11 @@
 			<h4 data-ref="PDFで保存する">ワード文書をPDF形式で保存する</h4>
 			<pre class="code">ワードを「計画書.pdf」へPDFで保存する</pre>
 			<h3>ワードを【ファイル名】へ<a name="XPSで保存する">XPSで保存する</a></h3>
-			<p>操作している文章をXPS形式で保存します。<br>
-				この手順は、Office 2007以降で利用できます。</p>
+			<p>操作している文章をXPS形式で保存します。</p>
 			<h4 data-ref="XPSで保存する">ワード文書をXPS形式で保存する</h4>
 			<pre class="code">ワードを「計画書.xps」にXPSで保存する</pre>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
@@ -193,19 +190,19 @@
 				</tr>
 				<tr>
 					<th><a name="現在文章">現在文章</a></th>
-					<th>&nbsp;</th>
+					<th>ワード文章</th>
 					<th>◎</th>
 					<td>現在選択している文章</td>
 				</tr>
 				<tr>
 					<th><a name="選択">選択</a></th>
-					<th>&nbsp;</th>
+					<th><a href="wordselection.htm">ワード選択範囲</a></th>
 					<th>◎</th>
-					<td>現在選択している範囲を表す<a href="wordselection.htm">ワード選択範囲</a>を表します。</td>
+					<td>現在選択している範囲</td>
 				</tr>
 				<tr>
 					<th><a name="文章一覧">文章一覧</a></th>
-					<th>&nbsp;</th>
+					<th>配列</th>
 					<th>□</th>
 					<td>現在開いている文章の一覧</td>
 				</tr>
@@ -219,21 +216,21 @@
 				  <th><a name="元実体">元実体</a></th>
 				  <th><a href="../primitive/netobject.htm">ネット物</a></th>
 				  <th>□</th>
-				  <td>管理型のオブジェクトを返します。VBAと同様のメソッド・プロパティにアクセスできます。</td>
+				  <td>管理型のオブジェクト。VBAと同様のメソッド・プロパティにアクセスできます。</td>
 			  </tr>
                 </tbody>
 				</table>
 			</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>Microsoft Wordとの連携機能のサンプルは、<a href="../lookup/office_word_lookup.htm">Microsoft Wordを制御する</a>をご覧下さい。</p>
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

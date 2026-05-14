@@ -8,6 +8,7 @@
 	<title>XML文章 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -73,7 +74,7 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb" data-category="data">
 	<li><a href="../../index.htm">プロデル</a></li>
-	<li><a href="../index.htm">データ操作</a></li>
+	 <li><a href="../index.htm"><i class="fa fa-database"></i> データ操作</a></li>
 	<li><a href="xml.htm">XML</a></li>
 	<li>XML文章</li>
 </ul>
@@ -82,8 +83,8 @@
 
 <div class="row">
 	<div id="refsidebar" class="col-md-3">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ</h3>
 		<p><a href="../index.htm">データ基本機能</a></p>
 		<h3>関連ページ</h3>
 		<ul>
@@ -105,10 +106,10 @@
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>「XML文章」は、XMLの要素を操作するための部品です。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">XML文章を作る</pre>
 		<p>　</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#更新する">更新する</a>　<a href="#要素を作る">要素を作る</a>　<a href="#プロセッサ処理を作る">プロセッサ処理を作る</a>　<a href="#コメントを作る">コメントを作る</a>　<a href="#データセクションを作る">データセクションを作る</a>　<a href="#空白を作る">空白を作る</a>　<a href="#テキストを作る">テキストを作る</a>　<a href="#プロセッサ処理を加える">プロセッサ処理を加える</a>　<a href="#コメントを加える">コメントを加える</a>　<a href="#データセクションを加える">データセクションを加える</a>　<a href="#空白を加える">空白を加える</a>　<a href="#テキストを加える">テキストを加える</a>　<a href="#クリアする">クリアする</a>　<a href="#消す">消す</a>　<a href="#削除する">削除する</a>　<a href="#取得する">取得する</a>　<a href="#内容だけ取得">内容だけ取得</a>　<a href="#内容更新">内容更新</a>　<a href="#保存する">保存する</a>　<a href="#名前空間へ追加する">名前空間へ追加する</a>　</div>
 		<div id="methods">
 			<h3>【XMLパス】を【内容】へ<a name="更新する">更新する</a></h3>
@@ -167,7 +168,7 @@
 Atomリンク要素へ「type」という属性を作って【種類属性】とする
 種類属性の内容は「application/rss+xml」</pre>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
@@ -189,62 +190,62 @@ Atomリンク要素へ「type」という属性を作って【種類属性】と
 					<th><a name="ソース">ソース</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>XMLを取得します</td>
+					<td>XMLで表した文字列</td>
 				</tr>
 				<tr>
 					<th><a name="ファイル名">ファイル名</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>XMLファイル名を表します</td>
+					<td><p>XMLファイルがある場所を示すパス</p></td>
 				</tr>
 				<tr>
 					<th><a name="ルート要素">ルート要素</a></th>
 					<th><a href="xmlelement.htm">XML要素</a></th>
 					<th>□</th>
-					<td>XML文章の直下に含まれるすべてXMLノードを配列で表します</td>
+					<td>XML文章の直下に含まれるすべてXMLノードの配列</td>
 				</tr>
 				<tr>
 					<th><a name="ルート要素名">ルート要素名</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>XMLの根にある要素の名前を表します</td>
+					<td>XMLの根にある要素の名前</td>
 				</tr>
 				<tr>
 					<th><a name="一覧">一覧</a></th>
 					<th>配列</th>
 					<th>□</th>
-					<td>XML文章の直下に含まれるすべてXMLノードを配列で表します</td>
+					<td>XML文章の直下に含まれるすべてXMLノードの配列</td>
 				</tr>
 				<tr>
 					<th><a name="要素一覧">要素一覧</a></th>
 					<th>配列</th>
 					<th>□</th>
-					<td>XML文章の直下に含まれるXML要素のみを配列で表します</td>
+					<td>XML文章の直下に含まれるXML要素のみの配列</td>
 				</tr>
 				<tr>
 					<th><a name="名前空間">名前空間</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>XML文章の名前空間を表します</td>
+					<td>XML文章の名前空間</td>
 				</tr>
 				<tr>
 					<th><a name="接頭辞">接頭辞</a></th>
 					<th>文字列</th>
 					<th>□</th>
-					<td>XML文章の接頭辞(プリフィックス)を表します</td>
+					<td>XML文章の接頭辞(プリフィックス)</td>
 				</tr>
 				<tr>
 				  <th><a name="元実体">元実体</a></th>
 				  <th>ネット物</th>
 				  <th>□</th>
-				  <td>ドットネット型のオブジェクトを返します。<br>
+				  <td>ドットネット型のオブジェクト<br>
 				    <small>クラスインスタンス</small></td>
 			  </tr>
                 </tbody>
 			</table>
-			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>XML文章を作って、結果.XMLへ出力します。</p>
 		<pre class="code">XML文章を作って、【RSS文章】とする
 
@@ -255,11 +256,11 @@ RSS要素へ「version」という属性を作って【バージョン属性】�
 「結果.xml」にRSS文章を保存する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年2月13日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

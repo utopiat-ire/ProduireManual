@@ -8,6 +8,7 @@
 	<title>カスタムウィンドウ部品 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 		<ul class="breadcrumb" data-category="gui">
 			<li><a href="../index.htm">プロデル</a></li>
-			<li><a href="index.htm">GUI部品</a></li>
+			<li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 			<li>カスタムウィンドウ部品</li>
 		</ul>
 		<h1>カスタムウィンドウ部品</h1>
 	</div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>継承する種類</h3>
 		<p><a href="control.htm">ウィンドウ部品</a></p>
 	  <h3>関連ページ</h3>
@@ -94,9 +95,9 @@
 		<h2 id="head">概要</h2>
 		<p>複数の部品をまとめられる部品です。<br>
 		  カスタムウィンドウ部品の上にさらに部品を作成することができ、カスタムウィンドウ部品単位で移動や調整ができます。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というカスタムウィンドウ部品を作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#作る">作る</a>　<a href="#消す">消す</a>　</div>
 		<div id="methods">
@@ -106,7 +107,7 @@
 			<p>部品を作成して、カスタムウィンドウ部品上に表示します</p><h3>【自分】から【名前】を<a name="消す">消す</a></h3>
 			<p>カスタムウィンドウ部品上から指定した部品を消します</p>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -151,9 +152,9 @@
                 </tr>
                 </tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品の<a href="control.htm#イベント手順">基本的なイベント手順</a>が使用できます。</p>
 		<table class="table table-bordered">
 			<thead>
@@ -182,7 +183,7 @@
             </tbody>
 			</table>
 		<p>　</p>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>ファイル選択のための部品を作ります。カスタムウィンドウ部品にボタンとテキストを貼り付けられた部品を「マイ部品」として定義して、メイン画面に貼り付けます。</p>
 		<pre class="code">メイン画面を表示する
 待機する
@@ -229,11 +230,11 @@
 終わり</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月1日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

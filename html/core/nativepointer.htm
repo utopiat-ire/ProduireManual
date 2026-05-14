@@ -8,6 +8,7 @@
 	<title>ネイティブ参照 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -82,7 +83,7 @@
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="nativefunc.htm">ネイティブ関数</a></li>
@@ -94,14 +95,14 @@
 		<p>ネイティブ関数を呼び出すときのポインタを表す種類です。</p>
 		<p>ネイティブ参照を作成すると、ポインタを格納するメモリ領域が確保されます。<br>
 			また、ポインタが示す先のデータ型に応じて、文字列またはバイナリ配列の領域を確保して、設定したり取得したりできます。</p>
-		<p><span class="warning">注意！</span>　この機能を利用するには、C/C++言語など他のプログラミング言語の知識が必要になります。この機能を利用した外部DLLの呼び出し方法については、利用するライブラリの情報をご参照ください。</p>
-<h2 id="手順">手順</h2>
+		<p><span class="warning">注意</span>　この機能を利用してDLLの外部関数を呼び出す方法は、C/C++言語など他のプログラミング言語やWin32APIに関するドキュメントをご参照ください。</p>
+<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#バイナリとして取得する">バイナリとして取得する</a>　</div>
 		<div id="methods">
 			<h3>【自分】を【バイト数】だけ<a name="バイナリとして取得する">バイナリとして取得する</a></h3>
 			<p>ポインタが示す先のバイナリ配列の領域の内容を1番目から指定したバイト数だけ取得します。</p>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead><tr>
@@ -149,12 +150,12 @@
 					<th>整数</th>
 					<th>□</th>
 					<td>
-						ポインタそのものの値を表します</td>
+						ポインタそのものの整数値</td>
                 </tr>
                 </tbody>
             </table>
         </div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">GetUserName関数を呼び出す</h3>
 		<p>Win32APIのGetUserName関数を呼び出します。<br>
@@ -173,11 +174,11 @@ Sizeの値を報告する</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

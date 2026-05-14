@@ -5,9 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>式の優先度 - プロデル言語仕様</title><!-- InstanceEndEditable -->
+	<title>プロデルの演算子 - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -26,14 +27,14 @@
 				</button>
 				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->式の優先度<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->演算子<!-- InstanceEndEditable -->
 				</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -71,81 +72,295 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb" data-category="syntax">
 	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">言語仕様</a></li>
-	<li>式の優先度</li>
+	<li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
+	<li>演算子</li>
 </ul>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-	  	<h1>式の優先度</h1>
-	  	<p>演算式の優先度は、次の表の通りです。</p>
-	  	<p>条件式の優先度は、<a href="if.html">条件判断文</a>で説明しています。</p>
+	  	<h1>プロデルの演算子</h1>
+	  	<p>プロデルの演算子は、次の表の通りです。</p>
+	  	<p>条件式については、<a href="if.html">条件判断文</a>で説明しています。</p>
 	  	<div class="panel panel-default">
-	  	  <div class="panel-heading">
-	  	    <h4 class="panel-title">演算式</h4>
-  	      </div>
-	  	  <table class="table table-striped">
-              <thead>
-	  	    <tr>
-	  	      <th align="middle" class="items">優先度</th>
-	  	      <th align="middle" class="items">演算式の表記</th>
-	  	      <th align="middle" class="items">意味</th>
-  	        </tr>
-                  </thead>
-              <tbody>
-	  	    <tr>
-	  	      <th rowspan="2"><p align="center">1</p></th>
-	  	      <td>□^◇</td>
-	  	      <td>べき乗</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>□%◇</td>
-	  	      <td>余り</td>
-  	        </tr>
-	  	    <tr>
-	  	      <th rowspan="5"><p align="center">2</p></th>
-	  	      <td>□*◇</td>
-	  	      <td rowspan="2">掛け算</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>□×◇</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>□/◇</td>
-	  	      <td rowspan="2">割り算</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>□÷◇</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>□\◇</td>
-	  	      <td>割り算あまりなし</td>
-  	        </tr>
-	  	    <tr>
-	  	      <th rowspan="2"> <p align="center">3</p></th>
-	  	      <td rowspan="2">□+◇<br>
-	  	        □-◇</td>
-	  	      <td>足し算</td>
-  	        </tr>
-	  	    <tr>
-	  	      <td>引き算</td>
-  	        </tr>
-	  	    <tr>
-	  	      <th><p align="center">4</p></th>
-	  	      <td>□～◇</td>
-	  	      <td>範囲</td>
-  	        </tr>
-              </tbody>
-  	      </table>
-  	  </div>
-	  	<p>※演算子は全角も半角と同等に扱われます</p>
+	  		<table class="table table-striped">
+				<thead>
+					<tr>
+						<th align="middle">優先度</th>
+						<th align="middle">記号</th>
+						<th align="middle">意味</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<th>定数, 変数</th>
+						<td><a href="number.html">数値</a>や<a href="expr.html">変数などの名前</a></td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>( )</th>
+						<td>式を囲む括弧</td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>「」</th>
+						<td><a href="string.html">文字列定数</a></td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>{ }</th>
+						<td><a href="array.html">配列式</a></td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>[ ]</th>
+						<td><a href="exp_square.htm">式を囲む括弧</a></td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>【 】</th>
+						<td><a href="exp_boldcircle.htm">変数宣言</a></td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<th>すべて</th>
+						<td><a href="subete.htm">反復句</a><br>
+							(右辺なし)</td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>の</th>
+						<td><a href="construct.html#objectaccess">オブジェクトアクセス式</a></td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>○の○○目</th>
+						<td><a href="ordinal.htm">序数詞設定</a></td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>#</th>
+						<td><a href="array.html">配列要素アクセス(0開始)</a></td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>○(○,○)</th>
+						<td><a href="array.html">配列要素アクセス(1開始)</a><br>
+							名詞型手順呼び出し</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<th>!</th>
+						<td><a href="exclamated.htm">グローバル変数を表す記号</a><br>
+							(右辺なし)</td>
+					</tr>
+					<tr>
+						<th></th>
+						<th>←</th>
+						<td>左辺の値を右辺の型に<a href="cast.htm">変換(キャスト)</a></td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<th>+,&nbsp;-</th>
+						<td>符号(右辺に付く符号)<br>
+							(左辺なし) <br>
+							<span class="label label-default">Ver.2.0.1335以降</span></td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>￢, ～, ~</th>
+						<td>真偽値では 右辺の値を反転する<br>
+							整数,長整数では 右辺の値の補数<br>
+							(左辺なし)</td>
+					</tr>
+					<tr>
+						<th align="middle">5</th>
+						<th align="middle">＾</th>
+						<td>累乗(べき乗)(pow)</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle"><span style="color:gray;">％</span></th>
+						<td><span style="color:gray;">整数の割り算の余り(剰余)<br>
+							※Ver.2.0.1332以前</span></td>
+					</tr>
+					<tr>
+						<th align="middle">6</th>
+						<th align="middle">＊,×</th>
+						<td>かけ算(左辺と右辺を掛ける)</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">／,÷</th>
+						<td>割り算(左辺を右辺で割る)</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">￥</th>
+						<td>整数の割り算の商<br>
+							<b>例</b>　１０￥３　→　３</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">％</th>
+						<td>整数の割り算の余り(剰余)<br>
+							<b>例</b>　１０％９　→　1<br>
+							<span class="label label-default">Ver.2.0.1333以降</span></td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<th><span style="color:gray;">+, -</span></th>
+						<td><span style="color:gray;">符号(右辺に付く符号)<br>
+							※Ver.2.0.1335以前</span></td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">＋</th>
+						<td>足し算(左辺と右辺を足す)</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">－</th>
+						<td>引き算(左辺から右辺を引く)</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th><span style="color:gray;">&amp;</span></th>
+						<td><span style="color:gray;">文字列連結(左辺と右辺を繋げる)<br>
+							※Ver.2.0.1336以前</span></td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<th>≪, &lt;&lt;</th>
+						<td>左辺を右辺だけ <a href="https://produ.irelang.jp/docs/core/math.htm#左シフト">左シフト</a></td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>≫, &gt;&gt;</th>
+						<td>左辺を右辺だけ <a href="https://produ.irelang.jp/docs/core/math.htm#右シフト">右シフト</a></td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<th>～</th>
+						<td>左辺から右辺までの<a href="../primitive/range.htm">範囲</a></td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<th>&amp;</th>
+						<td><a href="ope_ampersand.htm">文字列連結</a>(左辺と右辺を繋げる)<br>
+							<span class="label label-default">Ver.2.0.1337以降</span></td>
+					</tr>
+					<tr>
+						<th align="middle">11</th>
+						<th align="middle">&lt;</th>
+						<td>左辺が右辺より小さい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">≦, &lt;=</th>
+						<td>左辺が右辺より小さいか等しい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">&gt;</th>
+						<td>左辺が右辺より大きい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">≧, &gt;=</th>
+						<td>左辺が右辺より大きいか等しい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">≠, &lt;&gt;</th>
+						<td>左辺と右辺が異なる</td>
+					</tr>
+					<tr>
+						<th align="middle">12</th>
+						<th align="middle">＝</th>
+						<td>左辺と右辺が等しい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">が</th>
+						<td>左辺と右辺が等しい</td>
+					</tr>
+					<tr>
+						<th align="middle">&nbsp;</th>
+						<th align="middle">でない</th>
+						<td>左辺と逆 (左辺なし)</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□である</th>
+						<td>左辺の種類が右辺の種類名であるかどうか</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□以上</th>
+						<td>左辺が右辺より大きいか等しい</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□以下</th>
+						<td>左辺が右辺より小さいか等しい</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□より上</th>
+						<td>左辺が右辺より大きい</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□より下,<br>
+							○が□未満</th>
+						<td>左辺が右辺より小さい</td>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>○が□以外</th>
+						<td>左辺が右辺と異なる</td>
+					</tr>
+					<tr>
+						<th>13</th>
+						<th>∧</th>
+						<td>真偽値では 「かつ」と同じ<br>
+							整数,長整数では ビット演算の<a href="https://produ.irelang.jp/docs/core/math.htm#論理積">論理積(AND)</a></td>
+					</tr>
+					<tr>
+						<th>14</th>
+						<th>⊕, ⊻</th>
+						<td><a href="https://produ.irelang.jp/docs/core/math.htm#排他的論理和">排他的論理和(XOR)</a></td>
+					</tr>
+					<tr>
+						<th>15</th>
+						<th>∨</th>
+						<td>真偽値では 「または」と同じ<br>
+							整数,長整数では ビット演算の<a href="https://produ.irelang.jp/docs/core/math.htm#論理和">論理和(OR)</a></td>
+					</tr>
+					<tr>
+						<th align="middle">16</th>
+						<th align="middle">かつ</th>
+						<td>左辺が真でかつ右辺が真の時に真。それ以外は偽</td>
+					</tr>
+					<tr>
+						<th align="middle">17</th>
+						<th align="middle">または, あるいは</th>
+						<td>左辺が真または右辺が真の時に真。それ以外は偽</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+		<p></p>
+		<p>※演算子は全角も半角と同等に扱われます<br>
+			○:左辺、□:右辺</p>
 
     </div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

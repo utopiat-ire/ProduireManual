@@ -8,6 +8,7 @@
 	<title>図形描画 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,15 +76,15 @@
 	<div id="reftitle" class="col-md-12">
 		<ul class="breadcrumb" data-category="graphics">
 			<li><a href="../index.htm">プロデル</a></li>
-			<li><a href="index.htm">画像描画機能</a></li>
+			<li><a href="index.htm"><i class="fa fa-picture-o"></i> 画像描画機能</a></li>
 			<li>図形描画</li>
 		</ul>
 		<h1>図形描画</h1>
-		<p><a href="../static.htm" class="label label-info">静的種類</a></p>
+		<p><a href="../static.htm" class="label label-info">単一種類</a></p>
 	</div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ</h3>
 		<p><a href="index.htm">画像描画機能</a></p>
 	</div>
 	<div id="refcontent" class="col-md-8">
@@ -91,7 +92,7 @@
 		<p>「図形描画」種類は、座標を指定して、四角形や線、円を描くための種類です。</p>
 		<p>図形描画は、<a href="../wincontrol/window.htm">ウィンドウ</a>,<a href="../wincontrol/picturebox.htm">ピクチャー</a>,<a href="canvas/canvas.htm">キャンバス</a>,<a href="canvas/subcanvas.htm">子キャンバス</a>を対象にして描画できます。</p>
 		<p>　</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#書く">書く</a>　<a href="#線を描く">線を描く</a>　<a href="#点を描く">点を描く</a>　<a href="#円を描く">円を描く</a>　<a href="#四角形を描く">四角形を描く</a>　<a href="#円弧を描く">円弧を描く</a>　<a href="#扇を描く">扇を描く</a>　<a href="#塗りつぶす">塗りつぶす</a>　</div>
 		<div id="methods">
 			<h3>【対象】を<a name="クリアする">クリアする</a></h3>
@@ -100,16 +101,16 @@
 			<h3>【対象】へ【文字】を【フォント】で【位置】から<a name="書く">書く</a></h3>
 			<p>対象に指定した文字を書きます。</p>
 			<pre class="code">図形描画によって、窓に「こんにちは」を「ＭＳ Ｐ明朝,15」で{30,30}から書く</pre>
-			<h3>【対象】へ【始点】から【終点】まで<a name="線を描く">線を描く</a></h3>
+			<h3>【対象】へ【始点】から【終点】まで〈【色】色で〉<a name="線を描く">線を描く</a></h3>
 			<p>始点から終点までの線を描きます。</p>
 			<pre class="code">図形描画によって、窓に{30,30}から{130,130}まで線を描く</pre>
 			<h3>【対象】の【点】へ<a name="点を描く">点を描く</a></h3>
 			<p>指定した点に点を描きます。</p>
 			<pre class="code">図形描画によって、窓の{30,30}へ点を描く</pre>
-			<h3>【対象】へ【始点】から【終点】まで<a name="円を描く">円を描く</a></h3>
+			<h3>【対象】へ【始点】から【終点】まで〈【色】で〉<a name="円を描く">円を描く</a></h3>
 			<p>始点から終点で作られる四角形に収まる円を描きます。</p>
 			<pre class="code">図形描画によって、窓に{30,30}から{130,130}まで円を描く</pre>
-			<h3>【対象】へ【始点】から【終点】まで<a name="四角形を描く">四角形を描く</a></h3>
+			<h3>【対象】へ【始点】から【終点】まで〈【色】で〉<a name="四角形を描く">四角形を描く</a></h3>
 			<p>始点から終点で作られる四角形を描きます。</p>
 			<pre class="code">図形描画によって、窓に{30,30}から{130,130}まで四角形を描く</pre>
 			<h3>【対象】へ【始点】から【終点】まで<a name="円弧を描く">円弧を描く</a></h3>
@@ -122,7 +123,7 @@
 			<p>対象の指定した位置から、境界までを指定した色で塗りつぶします。</p>
 			<pre class="code">図形描画によって、窓を{30,30}へ緑色で塗りつぶす</pre>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
@@ -147,10 +148,30 @@
 					<th>◎</th>
 					<td>「描く」手順で描く図形の線の太さ</td>
                 </tr>
+				<tr>
+					<th><a name="線色">線色</a></th>
+					<th>色</th>
+					<th>◎</th>
+					<td>線の色</td>
+				</tr>
+				<tr>
+					<th><a name="始点形状">始点形状</a></th>
+					<th>列挙体</th>
+					<th>◎</th>
+					<td>始点の形状<br>
+						{矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
+				</tr>
+				<tr>
+					<th><a name="終点形状">終点形状</a></th>
+					<th>列挙体</th>
+					<th>◎</th>
+					<td>終点の形状<br>
+						{矢印,菱形,標準,丸い,丸形,四角い,四角形,三角形}</td>
+				</tr>
 				</tbody>
 				</table>
 			</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>ウィンドウに様々な図形を描かせます。</p>
 <pre class="code">窓というウィンドウを作る
 	その内容は「図形描画のテスト」
@@ -178,11 +199,11 @@
 		<p>　</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2026年4月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -5,13 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>ユーザ手順定義 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<title>ツール部品の列挙値 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
-<!-- InstanceBeginEditable name="head" --><meta name="keywords" content="種類,コードモデル,リフレクション"><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="列挙値"><!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -26,22 +28,22 @@
 				</button>
 				<a href="../../index.htm"><img src="../../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
 				<a class="navbar-brand" href="#">
-					<!-- InstanceBeginEditable name="HeaderTitle" -->ユーザ手順定義<!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ツリーのイベント情報<!-- InstanceEndEditable -->
 				</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
-					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="../index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
 					<li id="cat_devenv" class="hidden-sm"><a href="../../devenv/index.html">開発環境</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li id="cat_core"><a href="../index.htm">基本機能</a></li>
+							<li id="cat_core"><a href="../../core/index.htm">基本機能</a></li>
 							<li id="cat_file"><a href="../../file/index.htm">ファイル操作</a></li>
 							<li id="cat_graphics"><a href="../../pgraphics/index.htm">画像描画</a></li>
 							<li id="cat_office"><a href="../../office/index.htm">Microsoft Office操作</a></li>
@@ -53,11 +55,11 @@
 							<li id="cat_media"><a href="../../plugins/multimedia/index.htm">メディア再生制御</a></li>
 							<li id="cat_crypto"><a href="../../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
 							<li id="cat_speech"><a href="../../plugins/speech/index.htm">音声処理</a></li>
-							<li id="cat_reflection"><a href="index.htm">リフレクション</a></li>
+							<li id="cat_reflection"><a href="../../core/reflection/index.htm">リフレクション</a></li>
 							<li id="cat_msil"><a href="../../plugins/msil/index.htm">MSIL生成</a></li>
 							<li><a href="../../tools/web/index.htm">Webアプリ</a></li>
 							<li class="divider"></li>
-							<li><a href="../../wincontrol/index.htm">GUI部品</a></li>
+							<li><a href="../index.htm">GUI部品</a></li>
 							<li><a href="../../verbs/index.html">手順一覧</a></li>
 							<li><a href="../../devenv/index.html">開発環境</a></li>
 						</ul>
@@ -70,114 +72,101 @@
 	<div id="main" class="container-fluid">
 <!-- InstanceBeginEditable name="Content" -->
 <div class="row">
-	<div id="reftitle" class="col-md-12">
-	  <ul class="breadcrumb" data-category="reflection">
-	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">コードモデル</a></li>
-	    <li>ユーザ手順定義</li>
-      </ul>
-	  <h1>ユーザ手順定義</h1>
-    </div>
+  <div id="reftitle" class="col-md-12">
+    <ul class="breadcrumb" data-category="gui">
+      <li><a href="../../index.htm">プロデル</a></li>
+      <li><a href="../index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
+      <li><a href="stripbase.htm">ツール部品</a></li>
+      <li>列挙値</li>
+    </ul>
+  <h1>ツール部品の列挙値</h1>
+  </div>
+
 	<div id="refsidebar" class="col-md-3">
-	<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li></ul>
 		</div>
-	<div class="col-sm-8">
-	  <h2 id="head">概要</h2>
-		<p>ユーザ手順定義の定義を表す種類です。</p>
-		<h2><a name="手順">手順</a></h2>
-		<div id="methodlist"><a href="#仮引数を加える">仮引数を加える</a>　</div>
-		<div id="methods">
-			
-			<h3>【助詞:文字列】で【名前:文字列】という【自分】へ<a name="仮引数を加える">仮引数を加える</a>：ユーザ実補語定義</h3>
-			<p></p>
-			
-			</div>
-		<h2><a name="設定項目">設定項目</a></h2>
-		<div id="properties">
-			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>型</th>
-					<th>　</th>
-					<th>説明</th>
+		<div class="col-sm-8">
+			<div id="properties">
+				<p>&nbsp;</p>
+				<h2>ツール部品配置</h2>
+				<table class="table table-bordered">
+					<thead><tr>
+							<th>列挙値</th>
+							<th>説明</th>
+					</tr></thead>
+					<tr>
+						<th>左</th>
+						<td>&nbsp;</td>
 					</tr>
-				</thead>
-                <tbody>
-				<tr>
-					<th><a name="名前">名前</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td></td>
-                </tr>
-				<tr>
-					<th><a name="動詞">動詞</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="固有名">固有名</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="助詞一覧">助詞一覧</a></th>
-					<th>配列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="注釈一覧">注釈一覧</a></th>
-					<th>配列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="ソース">ソース</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="変数一覧">変数一覧</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="仮引数一覧">仮引数一覧</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="文一覧">文一覧</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th><a name="戻り値型">戻り値型</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td></td>
-				</tr>
-				</tbody>
-            </table>
-        </div>
-		
-		<h2><a name="プログラム例">プログラム例</a></h2>
-		<p></p>
-<pre class="code"></pre>
-		<p>　</p>
+					<tr>
+						<th>右</th>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+				<p class="usage">&nbsp;</p>
+				<h2>統合方法</h2>
+				<table class="table table-bordered">
+					<thead><tr>
+							<th>列挙値</th>
+							<th>説明</th>
+					</tr></thead>
+					<tr>
+						<th>追加</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>挿入</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>統合</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>削除</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>置換</th>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+				<p class="usage">&nbsp;</p>
+				<h2>画像配置</h2>
+				<table class="table table-bordered">
+					<thead><tr>
+							<th>列挙値</th>
+							<th>説明</th>
+					</tr></thead>
+					<tr>
+						<th>なし</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>タイル</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>中央</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>伸縮</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>拡大</th>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+				<p class="usage"><!--/samples-->			</p>
+			</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2026年4月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

@@ -8,6 +8,7 @@
 	<title>式 - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -73,13 +74,13 @@
     <div class="col-md-9">
         <ul class="breadcrumb" data-category="syntax">
             <li><a href="../index.htm">プロデル</a></li>
-            <li><a href="index.htm">言語仕様</a></li>
+            <li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
             <li>式</li>
         </ul>
     </div>
     <div id="refsidebar" class="col-md-3 sidebar">
         <h4>式</h4>
-        <ul class="topics nav nav-pills nav-stacked"><li><a href="#const">定数</a></li><li><a href="#calc">算術式</a></li><li><a href="#round">値変換の誤差</a></li></ul>
+        <ul class="topics nav nav-pills nav-stacked"><li><a href="#const">定数</a></li><li><a href="#calc">算術式</a></li><li><a href="#round">関数式</a></li></ul>
     </div>
     <div id="refcontent" class="col-md-8 col-md-offset-1">
 <h1>式</h1>
@@ -115,7 +116,7 @@
 <h3 id="calc">算術式</h3>
 <p>式には、値を取得できる手順や計算式があります。これらは［　］や（　）で囲むことで、明示的に式であることを表せます。</p>
 <h3>算術演算子</h3>
-<p>プロデルでは、四則演算など次の演算ができます。演算式の優先度は、<a href="priority.html">式の優先度</a>に記載しています。</p>
+<p>プロデルでは、四則演算など次の演算ができます。演算式の優先度は、<a href="priority.html">演算子</a>に記載しています。</p>
 <div class="panel panel-default">
     <table class="table table-striped">
         <thead>
@@ -169,7 +170,9 @@
 	</div>
 </div>
 
-<h3 id="round">値変換の誤差</h3>
+<h3 id="round">関数式</h3>
+<p>数学の関数に似た表記です。名詞手順名と引数を指定して手順を呼び出します。</p>
+<h3>値変換の誤差</h3>
 <p>コンピュータの性質上、計算する際にわずかな計算誤差が生まれることがあります。</p>
 <p>例えば、次のようなプログラムを実行すると、本来は0.1と表示されるべきところが0.1000061と誤った結果になります。</p>
 <pre class="code">295.5-295.4を表示する</pre>
@@ -177,7 +180,7 @@
 <pre class="code">【値1:固定小数】は295.5
 【値2:固定小数】は295.4
 値1-値2を表示する</pre>
-<p>なお、整数型ではこのような誤差は発生しないため、10倍した値を整数型として格納しておき、必要に応じて1/10にすると言った工夫も考えられます。</p>
+<p>なお、整数型ではこのような誤差は発生しないため、10倍した値を整数型として格納しておき、必要に応じて1/10にするなどして工夫できます。</p>
 <div class="panel-heading">
         <h3 class="panel-title">論理演算式 </h3>
 </div>
@@ -205,11 +208,11 @@
 		</div>
 
         </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月24日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

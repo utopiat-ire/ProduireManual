@@ -8,6 +8,7 @@
 	<title>エラー情報 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -80,14 +81,14 @@
     </div>
 	<div id="refsidebar" class="col-md-3">
         <p><a href="../syntax/create.htm" class="label label-warning">生成可能</a><a href="../sumire.htm" class="label label-info">スミレ</a></p>
-        <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+        <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>発生したエラー(例外)に関する情報を格納します。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<p>作成する方法はありません。&nbsp;</p>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -100,18 +101,37 @@
                 <tbody>
 				<tr>
 					<th><a name="メッセージ">メッセージ</a></th>
-					<th>文字列</th><th>□</th><td>
-						エラーメッセージ</td>
+					<th>文字列</th><th>□</th>
+					<td>
+						エラーの理由を表すメッセージ</td>
 					</tr>
 				<tr>
 					<th><a name="番号">番号</a></th>
 					<th>整数</th><th>□</th><td>
 						エラー番号。エラー番号は、<a href="../error/index.htm">エラーメッセージ一覧</a>に記載された番号に対応しています。</td>
                 </tr>
+				<tr>
+					<th><a name="コード">コード</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>エラーの発生箇所を特定するための文字列。フィードバックの調査に使用します。なおエラーコードは予告なく変更したり廃止したりする場合があります。</td>
+				</tr>
+				<tr>
+					<th><a name="ファイル">ファイル</a></th>
+					<th>文字列</th>
+					<th>□</th>
+					<td>エラーが発生した場所を示すプログラムファイル名。ランタイム環境のみ取得できます。</td>
+				</tr>
+				<tr>
+					<th><a name="行番号">行番号</a></th>
+					<th>整数</th>
+					<th>□</th>
+					<td>エラーが発生した場所を示すプログラムの1から数えた行番号。ランタイム環境のみ取得できます。</td>
+				</tr>
                 </tbody>
             </table>
         </div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">エラーが発生した時に理由を取得する</h3>
 <p>予期しないエラーが発生した時には、<a href="../syntax/trycatch.html">例外監視文</a>でその場合の対処ができます。次のプログラムでは、ファイルを読み込む際に、エラーが発生した場合、それに対応する独自のエラーメッセージを表示します。</p>
@@ -123,11 +143,11 @@
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年5月15日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月14日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

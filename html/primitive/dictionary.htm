@@ -8,6 +8,7 @@
 	<title>辞書 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li>辞書</li>
       </ul>
 	  <h1>辞書</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<p><span class="label label-warning">生成可能</span> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<p><span class="label label-warning">生成可能</span> <a href="../syntax/foreach.htm" class="label label-success">反復型</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../syntax/dictionary.html">辞書の文法</a></li>
@@ -95,8 +96,12 @@
 	<h2>生成する方法</h2>
 		<p>辞書定数式を指定すると、生成できます。</p>
 		<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝</pre>
-		<p>文字列から辞書を生成するには<a href="string.htm#辞書化">「辞書化」手順</a>を使います。　</p>
-		<h2 id="手順">手順</h2>
+		<p>文字列から辞書を生成するには<a href="string.htm#辞書化する">「辞書化する」手順</a>を使います。</p>
+		<p>要素のデータ型(要素型)を指定する場合には次のように種類名を指定します。</p>
+        <pre class="format"><strong>《要素型》</strong>の辞書を作る</pre>
+        <p>要素型を指定しない場合、<a href="../primitive/baseobject.htm">基本物</a>とみなされます。</p>
+        <p></p>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#削除する">削除する</a>　<a href="#設定する">設定する</a>　<a href="#一括設定する">一括設定する</a>　<a href="#存在する">存在する</a>　<a href="#得る">得る</a>　</div>
 		<div id="methods">
@@ -106,7 +111,7 @@
 値段表を表示する
 値段表から「バナナ」を消す
 値段表を表示する</pre>
-			<h3>【キー】へ【内容：<a href="baseobject.htm">基本物</a>】を<a name="設定する">設定する</a></h3>
+			<h3>【キー】へ【内容：要素型】を<a name="設定する">設定する</a></h3>
 			<p>要素を指定したキーで格納します</p>
 			<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
 値段表へ「ぶどう」として「230円」を設定する
@@ -125,12 +130,12 @@
 そうでなければ
 	「ありません」を表示する
 そして</pre>
-			<h3>【自分】から【キー】を<a name="得る">得る</a>：<a href="baseobject.htm">基本物</a></h3>
+			<h3>【自分】から【キー】を<a name="得る">得る</a>：要素型</h3>
 			<p>キーと同じ要素を取得します</p>
 			<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
 値段表から「バナナ」を得て表示する</pre>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -147,7 +152,7 @@
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
 					<th>◎</th>
-					<td>辞書に格納された見出しと内容をすべて文字列として表します</td>
+					<td>辞書に格納された見出しと内容をすべて示した文字列</td>
 				</tr>
 				<tr>
 					<th><a name="見出し">見出し</a></th>
@@ -168,9 +173,9 @@
 					</td>
 				</tr></tbody>
 			</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="型変換">型変換</h2>
+		<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
 		<table class="table table-bordered">
 			<thead>
@@ -187,7 +192,7 @@
 				<td> 「内容」設定項目と同じ</td>
 			</tr></tbody>
 		</table>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
     <h3 id="sample1">辞書に値を設定し取り出す</h3>
     <p>果物の価格表を作成して、バナナの値段を取得します。</p>
@@ -201,14 +206,23 @@
 
 食べ物の「ごはん」を表示する
 食べ物を表示する</pre>
+    <h3 id="sample2">辞書の要素をそれぞれ繰り返す</h3>
+    <p>辞書の要素をキーと内容の組でそれぞれ繰り返します。</p>
+<pre class="code">値段表は｛りんご＝「120円」,バナナ＝「80円」,ぶどう＝「130円」｝
+値段表を組にそれぞれ繰り返す
+	「[組のキー]-&gt;[組の内容]」を報告する
+そして
+</pre>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
         </div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月20日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

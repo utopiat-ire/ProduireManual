@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja"><!-- InstanceBegin template="/Templates/reference2020.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+	<title>ActiveX部品 - プロデルマニュアル</title><!-- InstanceEndEditable -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<script src="../js/html5shiv-3.7.3.min.js"></script>
+	<script src="../js/respond-1.4.2.min.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="種類,GUI部品,コントロール部品">
+    <meta name="description" content="日本語プログラミング言語プロデルで「GUI部品」プラグインの「ActiveX部品」種類に含まれる手順や設定項目を使う方法"><!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">メニュー開閉</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index.htm"><img src="../img/rdr2018-32.png" class="rdricon" alt="プロデル"></a>
+				<a class="navbar-brand" href="#">
+					<!-- InstanceBeginEditable name="HeaderTitle" -->ActiveX部品<!-- InstanceEndEditable -->
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="cat_top"><a href="../index.htm">目次</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
+					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
+					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
+					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
+					<li id="cat_devenv" class="hidden-sm"><a href="../devenv/index.html">開発環境</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">機能別 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li id="cat_core"><a href="../core/index.htm">基本機能</a></li>
+							<li id="cat_file"><a href="../file/index.htm">ファイル操作</a></li>
+							<li id="cat_graphics"><a href="../pgraphics/index.htm">画像描画</a></li>
+							<li id="cat_office"><a href="../office/index.htm">Microsoft Office操作</a></li>
+							<li id="cat_data"><a href="../data/index.htm">データ形式/データベース</a></li>
+							<li id="cat_net"><a href="../network/index.htm">ネットワーク</a></li>
+							<li id="cat_mail"><a href="../network/mail/index.htm">メール</a></li>
+							<li class="divider"></li>
+							<li id="cat_system"><a href="../plugins/systeminfo/index.htm">システム情報取得</a></li>
+							<li id="cat_media"><a href="../plugins/multimedia/index.htm">メディア再生制御</a></li>
+							<li id="cat_crypto"><a href="../plugins/crypto/index.htm">暗号化/ハッシュ計算</a></li>
+							<li id="cat_speech"><a href="../plugins/speech/index.htm">音声処理</a></li>
+							<li id="cat_reflection"><a href="../core/reflection/index.htm">リフレクション</a></li>
+							<li id="cat_msil"><a href="../plugins/msil/index.htm">MSIL生成</a></li>
+							<li><a href="../tools/web/index.htm">Webアプリ</a></li>
+							<li class="divider"></li>
+							<li><a href="index.htm">GUI部品</a></li>
+							<li><a href="../verbs/index.html">手順一覧</a></li>
+							<li><a href="../devenv/index.html">開発環境</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<div id="main" class="container-fluid">
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row">
+  <div id="reftitle" class="col-md-12">
+  <ul class="breadcrumb" data-category="gui">
+    <li><a href="../index.htm">プロデル</a></li>
+    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
+    <li>ActiveX部品</li>
+  </ul>
+  <h1>ActiveX部品</h1>
+</div>
+<div id="refsidebar" class="col-md-3">
+  <p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
+	<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+	  <h3>継承する種類</h3>
+	  <p><a href="control.htm">ウィンドウ部品</a></p>
+	  <h3>利用ライブラリ</h3>
+	  <p><a href="index.htm">ウィンドウ部品集</a>	</p>
+</div>
+	<div class="col-sm-8">
+	  <h2 id="head">概要</h2>
+	  <p>「ActiveX部品」種類は、ActiveXコントロールを受け持つプロデルのラッパー種類です。</p>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
+		<pre class="format">【名前】というActiveX部品(【clsid】)を作る</pre>
+		<p>【clsid】には、ActiveXコントロール(COM)のCLSIDキーを指定します。</p>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
+		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。「本体」設定項目からActiveXコントロールのメソッドを直接呼び出せます。</p>
+		<div id="methodlist"><a href="#年間予定をクリアする">年間予定をクリアする</a>　<a href="#予定をクリアする">予定をクリアする</a>　<a href="#月間予定をクリアする">月間予定をクリアする</a>　<a href="#更新する">更新する</a>　<a href="#年間予定から削除する">年間予定から削除する</a>　<a href="#予定から削除する">予定から削除する</a>　<a href="#月間予定から削除する">月間予定から削除する</a>　<a href="#選択する">選択する</a>　<a href="#年間予定として追加する">年間予定として追加する</a>　<a href="#予定として追加する">予定として追加する</a>　<a href="#月間予定として追加">月間予定として追加</a>　</div>
+		<div id="methods"></div>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
+		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。「本体」設定項目からActiveXコントロールのプロパティに直接アクセスできます。</p>
+		<div id="properties">
+			<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="タイトル背景色">本体</a></th>
+							<th>管理型</th>
+							<th>□</th>
+							<td>ActiveXコントロールを合わす実体のオブジェクト</td>
+						</tr>
+					</tbody>
+				</table>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
+			</div>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
+		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>が使用できます。「本体」設定項目からActiveXコントロールのイベントハンドラを直接設定できます。 </p>
+		<p>　</p>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
+		<div id="samples">
+			<h3 id="sample1">ActiveXコントロールを貼り付ける</h3>
+		<p>Microsoft Accessに含まれているMicrosoft Barcode Controlをバーコード部品という名前で継承して部品をウィンドウに貼り付けます。</p>
+		<p><a href="https://produ.irelang.jp/blog/2018/12/717/">Microsoft Barcode Controlを使ってプロデルでQRコードやバーコードを表示する - プロデルブログ</a> </p>
+		<pre class="code">メイン画面を表示する
+待機する
+
+メイン画面とは
+	ウィンドウを継承する
+	はじめの手順
+		初期化する
+		ーー貼り付けた部品に対する操作をここに書きます
+		バーコードというバーコード部品を作る
+			その大きさを{100,100}に変える
+	終わり
+	初期化する手順
+		ーー自動生成された手順です。ここにプログラムを書き加えても消える場合があります
+		この設計スケール比率を｛144,144｝に変える
+		この内容を「メイン画面」に変える
+		初期化開始する
+		初期化終了する
+	終わり
+
+開いた時の手順
+	バーコードのスタイルは、2
+	バーコードの内容は、4902777232577
+終わり
+終わり
+
+バーコード部品とは
+	ActiveX部品を継承する
+	はじめ()の手順=(「BARCODE.BarCodeCtrl.1」)
+	終わり
+
+スタイルという属性
+	取得する手順
+		本体のStyleを返す
+	終わり
+	設定する手順
+		本体のStyleは、設定値
+	終わり
+終わり
+
+内容という属性
+	取得する手順
+		本体のValueを返す
+	終わり
+	設定する手順
+		本体のValueは、設定値
+	終わり
+終わり
+
+終わり</pre>
+			</div><!--/samples-->
+		<p>　</p>
+	</div>
+</div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月26日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+		<p id="page-top"><a href="#">ページ先頭へ</a></p>
+		<footer>
+    		<hr>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
+		</footer>
+	</div><!--/.container-->
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/script.js"></script>
+    <script src="../js/syntax-highlight.js"></script>
+<!-- InstanceBeginEditable name="Script" -->
+
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

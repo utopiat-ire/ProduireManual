@@ -8,6 +8,7 @@
 <title>基本フォルダ - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -80,15 +81,15 @@
 	  <h1>基本フォルダ</h1>
   </div>
 	<div id="refsidebar" class="col-md-3">
-		<p><a href="../static.htm" class="label label-info">静的種類</a> <a href="../global.htm" class="label label-primary">広域種類</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#設定項目">設定項目</a></li></ul>
+		<p><a href="../static.htm" class="label label-info">単一種類</a> <a href="../global.htm" class="label label-primary">広域種類</a></p>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li></ul>
 	</div>
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>フォルダの位置などを取得する設定項目の一覧です。</p>
 		<p>利用する際に、このオブジェクトを作る必要はありません。</p>
 		<p>基本フォルダの各フォルダは「<a href="folderinfo.htm">フォルダ情報</a>」種類の値が返されます。「フォルダ情報」種類は、文字列に自動的に変換されます。</p>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead>
@@ -104,115 +105,115 @@
 					<th><a name="ウィンドウズフォルダ">ウィンドウズフォルダ</a></th>
 					<th><a href="folderinfo.htm">フォルダ情報</a></th>
 					<th>□</th>
-					<td>ウィンドウズのフォルダを表します<br>
+					<td>ウィンドウズのフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="お気に入り">お気に入り</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>お気に入りフォルダがあるフォルダを表します</td>
+					<td>お気に入りフォルダがあるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="システムフォルダ">システムフォルダ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>システムフォルダを表します<br>
+					<td>システムフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="スタートアップ">スタートアップ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>スタートアップフォルダを表します<br>
+					<td>スタートアップフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="スタートメニュー">スタートメニュー</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>スタートメニューフォルダを表します<br>
+					<td>スタートメニューフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="デスクトップ">デスクトップ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>デスクトップの内容が含まれるフォルダを表します</td>
+					<td>デスクトップの内容が含まれるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="テンポラリフォルダ">テンポラリフォルダ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>一時保存用フォルダを表します</td>
+					<td>一時保存用フォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="プログラムファイル">プログラムファイル</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>プログラムファイルがあるフォルダを表します<br>
+					<td>プログラムファイルがあるフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="プログラムフォルダ">プログラムフォルダ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>プログラムのショートカットが含まれるフォルダを表します<br>
+					<td>プログラムのショートカットが含まれるフォルダ<br>
 						<a href="../safelock.htm" class="label label-danger">保護あり</a>保護機能の有効時は、取得できません。</td>
 				</tr>
 				<tr>
 					<th><a name="プロファイルフォルダ">プロファイルフォルダ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>ログインしているユーザの情報が保存されているフォルダを表します</td>
+					<td>ログインしているユーザの情報が保存されているフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="マイドキュメント">マイドキュメント</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>マイドキュメントの内容が含まれるフォルダを表します</td>
+					<td>マイドキュメントの内容が含まれるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="マイピクチャー">マイピクチャー</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>マイピクチャーの内容が含まれるフォルダを表します</td>
+					<td>マイピクチャーの内容が含まれるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="マイミュージック">マイミュージック</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>マイミュージックの内容が含まれるフォルダを表します</td>
+					<td>マイミュージックの内容が含まれるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="マイビデオ">マイビデオ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>マイビデオの内容が含まれるフォルダを表します</td>
+					<td>マイビデオの内容が含まれるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="今の位置">今の位置</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>プログラムがあるフォルダを表します</td>
+					<td>プログラムがあるフォルダ</td>
 				</tr>
 				<tr>
 					<th><a name="送るフォルダ">送るフォルダ</a></th>
 					<th>フォルダ情報</th>
 					<th>□</th>
-					<td>送るフォルダがあるフォルダを表します</td>
+					<td>送るフォルダがあるフォルダ</td>
 				</tr>
                 </tbody>
 			</table>
 		</div>
-		<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+		<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年4月18日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年2月13日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

@@ -8,6 +8,7 @@
 	<title>プロデル言語仕様 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -73,11 +74,11 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb" data-category="syntax">
 	<li><a href="../index.htm">プロデル</a></li>
-	<li>言語仕様</li>
+	<li><i class="fa fa-pencil-square-o"></i> 言語仕様</li>
 </ul>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-<h1>プロデル言語仕様</h1>
+<h1><i class="fa fa-pencil-square-o"></i> プロデル言語仕様</h1>
 <p>このページには、プロデルの文や式、制御構文などの文法やデータ型などの言語仕様についての説明をまとめています。</p>
 <p>プロデルやプログラミングが初めての方は、まずは<a href="https://produ.irelang.jp/blog/produirefirststep/">「プロデルで始める日本語プログラミング言語入門」</a>をお読みください。</p>
 	<div class="row">
@@ -97,9 +98,9 @@
 		<div class="col-md-4">
 			<h2>制御構文</h2>
 			<ul>
+				<li><a href="if.html">条件判断文(もし文)</a></li>
 				<li><a href="forloop.html">繰り返し文</a></li>
 				<li><a href="foreach.htm">それぞれ繰り返す文</a></li>
-				<li><a href="if.html">条件判断文(もし文)</a></li>
 				<li><a href="switch.html">分岐文</a></li>
 				<li><a href="trycatch.html">例外監視文</a></li>
 				<li><a href="about.html">対象限定文(について)</a></li>
@@ -110,6 +111,7 @@
 			<h2>定数と式</h2>
 			<ul>
 				<li><a href="datatype.html">値型と参照型</a></li>
+				<li><a href="priority.html">演算子</a></li>
 				<li><a href="number.html">数値の式</a></li>
 				<li><a href="string.html">文字列の文法</a></li>
 				<li><a href="array.html">配列の文法</a></li>
@@ -162,18 +164,19 @@
 				<li><a href="exp_boldcircle.htm">【　】(変数定義)</a></li>
 				<li><a href="ope_ampersand.htm">＆　(文字列結合演算子)</a></li>
 				<li><a href="period.htm">。　(文の区切り)</a></li>
-				<li><a href="cast.htm">矢印“←” (強制型変換)</a></li>
+				<li><a href="cast.htm">←矢印 (強制型変換)</a></li>
+				<li><a href="byrefout.htm">←,→ (参照渡し)</a></li>
 				<li><a href="exclamated.htm">感嘆符“！”（静的アクセス句）</a></li>
 				<li><a href="annotations.htm">※　(プリプロセッサ, アノテーション)</a></li>
 				<li><a href="remark.htm">ーー, ’, //, /*～*/　(コメント,注釈)</a></li></ul></div>
 			</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年6月28日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

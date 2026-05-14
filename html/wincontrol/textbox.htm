@@ -8,6 +8,7 @@
 	<title>テキスト - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>テキスト</li>
       </ul>
 	  <h1>テキスト</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="btextbox.htm">テキスト領域</a></li>
@@ -95,9 +96,9 @@
 	  <h2 id="head">概要</h2>
 		<p>一行の文字を入力できる部品です。</p>
 		<div class="figure"><img src="img/textbox.png" width="246" height="27" alt="テキスト部品を貼り付けたウィンドウ"></div>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というテキストを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#コピーする">コピーする</a>　<a href="#すべて選択する">すべて選択する</a>　<a href="#検索する">検索する</a>　<a href="#切り取る">切り取る</a>　<a href="#選択する">選択する</a>　<a href="#入力する">入力する</a>　<a href="#加える">加える</a>　<a href="#挿入する">挿入する</a>　<a href="#先頭へ挿入する">先頭へ挿入する</a>　<a href="#改行して挿入">改行して挿入</a>　<a href="#先頭へ改行して挿入する">先頭へ改行して挿入する</a>　<a href="#貼り付ける">貼り付ける</a>　<a href="#保存する">保存する</a>　<a href="#元に戻す">元に戻す</a>　<a href="#移動する">移動する</a>　<a href="#印刷する">印刷する</a>　<a href="#確認して印刷する">確認して印刷する</a>　</div>
 		<div id="methods">
@@ -113,10 +114,16 @@
 			<p>選択している文字列を切り取り、クリップボードへ移します</p>
 			<h3>【自分】で【開始文字位置】から【文字数】文字、<a name="選択する">選択する</a></h3>
 			<p>テキストの指定した部分を選択します</p>
+			<ul>
+			        <li>開始文字位置は、先頭を0として数えた整数</li>
+			        </ul>
 			<h4 data-ref="選択する">テキストボックスで範囲選択する</h4>
 			<pre class="code">テキスト1で2から2文字選択する</pre>
 			<h3>【自分】の【開始文字位置】文字目から【文字数】文字、選択する</h3>
 			<p>テキストの指定した部分を選択します</p>
+			<ul>
+			        <li>開始文字位置は、先頭を1文字目として数えた整数 <span class="label label-default">Ver.2.0.1314以降</span></li>
+			</ul>
 			<h4 data-ref="選択する">テキストボックスで範囲選択する</h4>
 			<pre class="code">テキスト1の2文字目から2文字選択する</pre>
 			<h3>【自分】へ【内容】を<a name="入力する">入力する</a></h3>
@@ -125,10 +132,16 @@
 			<p>テキストの末尾へ【内容】を加えます</p>
 			<h3>【自分】の【文字位置】文字目へ【内容】を<a name="挿入する">挿入する</a></h3>
 			<p>テキストの【文字位置】へ【内容】を挿入します</p>
+			<ul>
+			        <li>文字位置は、先頭を1文字目として数えた整数</li>
+			        </ul>
 			<h4 data-ref="挿入する">テキストボックスへ文字を入力する</h4>
 			<pre class="code">キーワード欄の13文字目へ「★」を挿入する</pre>
 			<h3>【自分】：【文字位置】へ【内容】を挿入する</h3>
 			<p>テキストの【文字位置】へ【内容】を挿入します</p>
+			<ul>
+			        <li>文字位置は、先頭を1として数えた整数</li>
+			        </ul>
 			<h3>【自分】へ【内容】を、<a name="先頭へ挿入する">先頭へ挿入する</a></h3>
 			<p>テキストの先頭へ【内容】を挿入します</p>
 			<h3>【自分】へ【内容】を、<a name="改行して挿入">改行して挿入</a>する</h3>
@@ -147,124 +160,129 @@
 			<p>カーソルがある位置へスクロールして、画面上に見える状態にします</p>
 			<h3>【自分】を【文字位置】へ移動する</h3>
 			<p>カーソルを【文字位置】へ移動します</p>
+			<ul>
+			        <li>文字位置は、先頭を0文字目として数えた整数</li>
+			        </ul>
 			<h3>【自分】を〈【<a href="../core/printer.htm">プリンタ</a>】へ〉<a name="印刷する">印刷する</a></h3>
 			<p>テキストの内容を既定のプリンタで印刷します</p>
 			<h3>【自分】を〈【<a href="../core/printer.htm">プリンタ</a>】へ〉<a name="確認して印刷する">確認して印刷する</a></h3>
 			<p>印刷設定を確認するダイアログを表示してから、テキストの内容を印刷します。</p>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>型</th>
-					<th>　</th>
-					<th>説明</th>
-                </tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="パスワード文字">パスワード文字</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>パスワード入力欄として利用する場合に利用する伏せ字</td>
-					</tr>
-				<tr>
-				  <th><a name="パスワード表示">パスワード表示</a></th>
-				  <th>文字列</th>
-				  <th>◎</th>
-				  <td>パスワード入力欄として利用する場合に利用するかどうか</td>
-			  </tr>
-				<tr>
-					<th><a name="最大文字数">最大文字数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>テキストに入力できる最大文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択開始位置">選択開始位置</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択範囲の開始文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択長さ">選択長さ</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択範囲の文字数</td>
-					</tr>
-				<tr>
-					<th><a name="選択内容">選択内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>テキストの範囲選択した内容</td>
-					</tr>
-				<tr>
-					<th><a name="読み取り専用">読み取り専用</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>テキストを読み取り専用にするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="内容">内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>テキストの内容</td>
-					</tr>
-				<tr>
-					<th><a name="背景色">背景色</a></th>
-					<th>色情報</th>
-					<th>◎</th>
-					<td>テキストの背景色</td>
-					</tr>
-				<tr>
-					<th><a name="文字高さ">文字高さ</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>テキストボックスの推奨される高さを表します</td>
-					</tr>
-				<tr>
-					<th><a name="文字色">文字色</a></th>
-					<th>色情報</th>
-					<th>◎</th>
-					<td>テキストの文字の色</td>
-					</tr>
-				<tr>
-					<th><a name="文字数">文字数</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>テキストの内容の文字数を表します</td>
-					</tr>
-				<tr>
-					<th><a name="文字配置">文字配置</a></th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>テキストの表示位置<br>
-						｛左・中央・右｝</td>
-					</tr>
-				<tr>
-					<th><a name="変更済み">変更済み</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>テキストを変更したかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="戻せる">戻せる</a></th>
-					<th>真偽値</th>
-					<th>□</th>
-					<td>入力した内容を元に戻せるかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="改行優先">改行優先</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>Enterキーを押したときにウィンドウの決定ボタンよりも改行文字を優先します</td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="パスワード文字">パスワード文字</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>パスワード入力欄として利用する場合に利用する伏せ字</td>
+						</tr>
+						<tr>
+							<th><a name="パスワード表示">パスワード表示</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>パスワード入力欄として利用する場合に利用するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="最大文字数">最大文字数</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>テキストに入力できる最大文字数</td>
+						</tr>
+						<tr>
+							<th><a name="選択開始位置">選択開始位置</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択範囲の開始点。開始点は、先頭を0として数えた整数 </td>
+						</tr>
+						<tr>
+							<th><a name="選択長さ">選択長さ</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択範囲の文字数</td>
+						</tr>
+						<tr>
+							<th><a name="選択内容">選択内容</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>テキストの範囲選択した内容</td>
+						</tr>
+						<tr>
+							<th><a name="読み取り専用">読み取り専用</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>テキストを読み取り専用にするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="内容">内容</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>テキストの内容</td>
+						</tr>
+						<tr>
+							<th><a name="背景色">背景色</a></th>
+							<th>色情報</th>
+							<th>◎</th>
+							<td>テキストの背景色</td>
+						</tr>
+						<tr>
+							<th><a name="文字高さ">文字高さ</a></th>
+							<th>整数</th>
+							<th>□</th>
+							<td>テキストボックスの推奨される高さ</td>
+						</tr>
+						<tr>
+							<th><a name="文字色">文字色</a></th>
+							<th>色情報</th>
+							<th>◎</th>
+							<td>テキストの文字の色</td>
+						</tr>
+						<tr>
+							<th><a name="文字数">文字数</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>テキストの内容の文字数</td>
+						</tr>
+						<tr>
+							<th><a name="文字配置">文字配置</a></th>
+							<th>列挙体</th>
+							<th>◎</th>
+							<td>テキストの表示位置<br>
+								｛左・中央・右｝</td>
+						</tr>
+						<tr>
+							<th><a name="変更済み">変更済み</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>テキストを変更したかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="戻せる">戻せる</a></th>
+							<th>真偽値</th>
+							<th>□</th>
+							<td>入力した内容を元に戻せるかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="改行優先">改行優先</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>Enterキーを押したときにウィンドウの決定ボタンよりも改行文字を優先します</td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
 		<table class="table table-bordered">
 			<thead><tr>
@@ -281,7 +299,7 @@
             </tbody>
 			</table>
 		<p>　</p>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">テキストボックスを作る</h3>
 	<p>キーワードを入力するためのテキストボックスを作成します。<br>
@@ -302,11 +320,11 @@ OKボタンがクリックされた時の手順
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月11日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

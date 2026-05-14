@@ -8,6 +8,7 @@
 	<title>ツリー項目 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,13 +76,13 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>ツリー項目</li>
       </ul>
 	  <h1>ツリー項目</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="treeview.htm">ツリー</a>
@@ -92,15 +93,15 @@
       </ul>
       <h3>継承する種類</h3>
       <p><a href="control.htm">ウィンドウ部品</a></p>
-      <h3>利用プラグイン</h3>
+      <h3>利用ライブラリ</h3>
       <p><a href="index.htm">ウィンドウ部品集</a></p>
 	</div>
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
       <p>エクスプローラのフォルダ一覧のような木構造の一覧表のうちでそれぞれの枝と葉を表すノードを表現する部品です。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というツリー項目を作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>次の手順が利用できます。</p>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#すべて消す">すべて消す</a>　<a href="#すべて展開する">すべて展開する</a>　<a href="#消す">消す</a>　<a href="#切り替える">切り替える</a>　<a href="#加える">加える</a>　<a href="#挟む">挟む</a>　<a href="#番目へ挟む">番目へ挟む</a>　<a href="#展開する">展開する</a>　<a href="#編集開始する">編集開始する</a>　<a href="#編集終了する">編集終了する</a>　<a href="#編集中止する">編集中止する</a>　</div>
 		<div id="methods">
@@ -129,94 +130,96 @@
 			<h3>【自分】を<a name="編集中止する">編集中止する</a></h3>
 			<p>項目の見出しの編集を中止して、編集前の見出しへ戻します</p>
 	  </div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>型</th>
-					<th>　</th>
-					<th>説明</th>
-                </tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="チェック">チェック</a></th>
-					<th>真偽</th>
-					<th>◎</th>
-					<td>ツリー項目のチェック状態</td>
-					</tr>
-				<tr>
-					<th><a name="フォント">フォント</a></th>
-					<th>フォント</th>
-					<th>◎</th>
-					<td>ツリー項目のフォント</td>
-					</tr>
-				<tr>
-					<th><a name="フルパス">フルパス</a></th>
-					<th>文字列</th>
-					<th>□</th>
-					<td>このツリー項目を表す場所を表します</td>
-					</tr>
-				<tr>
-					<th><a name="個数">個数</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>ツリーに含まれる子の要素の数を取得します</td>
-					</tr>
-				<tr>
-					<th><a name="選択中">選択中</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>このツリー項目が選択されているか表します</td>
-					</tr>
-				<tr>
-					<th><a name="展開中">展開中</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>ツリーの中が展開されているかどうかを表します</td>
-					</tr>
-				<tr>
-					<th><a name="内容">内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>このツリー項目の見出し</td>
-					</tr>
-				<tr>
-					<th><a name="背景色">背景色</a></th>
-					<th><a href="../primitive/color.htm">色</a></th>
-					<th>◎</th>
-					<td>ツリー項目の背景色</td>
-					</tr>
-				<tr>
-					<th><a name="表示中">表示中</a></th>
-					<th>真偽</th>
-					<th>□</th>
-					<td>このツリー項目の一部または全体が表示されているかどうか表します</td>
-					</tr>
-				<tr>
-					<th><a name="文字色">文字色</a></th>
-					<th>色</th>
-					<th>◎</th>
-					<td>ツリー項目の文字の色</td>
-					</tr>
-				<tr>
-				  <th><a name="画像">画像</a></th>
-				  <th><a href="../primitive/image.htm">画像</a></th>
-				  <th>◎</th>
-				  <td>ツリー項目の画像</td>
-			  </tr>
-				<tr>
-				  <th><a name="アイコン">アイコン</a></th>
-				  <th><a href="../primitive/icon.htm">アイコン</a></th>
-				  <th>◎</th>
-				  <td>ツリー項目のアイコン</td>
-			  </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="チェック">チェック</a></th>
+							<th>真偽</th>
+							<th>◎</th>
+							<td>ツリー項目のチェック状態</td>
+						</tr>
+						<tr>
+							<th><a name="フォント">フォント</a></th>
+							<th>フォント</th>
+							<th>◎</th>
+							<td>ツリー項目のフォント</td>
+						</tr>
+						<tr>
+							<th><a name="フルパス">フルパス</a></th>
+							<th>文字列</th>
+							<th>□</th>
+							<td>このツリー項目を表す場所</td>
+						</tr>
+						<tr>
+							<th><a name="個数">個数</a></th>
+							<th>整数</th>
+							<th>□</th>
+							<td>ツリーに含まれる子の要素の数</td>
+						</tr>
+						<tr>
+							<th><a name="選択中">選択中</a></th>
+							<th>真偽</th>
+							<th>□</th>
+							<td>このツリー項目が選択されているか</td>
+						</tr>
+						<tr>
+							<th><a name="展開中">展開中</a></th>
+							<th>真偽</th>
+							<th>□</th>
+							<td>ツリーの中が展開されているかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="内容">内容</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>このツリー項目の見出し</td>
+						</tr>
+						<tr>
+							<th><a name="背景色">背景色</a></th>
+							<th><a href="../primitive/color.htm">色</a></th>
+							<th>◎</th>
+							<td>ツリー項目の背景色</td>
+						</tr>
+						<tr>
+							<th><a name="表示中">表示中</a></th>
+							<th>真偽</th>
+							<th>□</th>
+							<td>このツリー項目の一部または全体が表示されているかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="文字色">文字色</a></th>
+							<th>色</th>
+							<th>◎</th>
+							<td>ツリー項目の文字の色</td>
+						</tr>
+						<tr>
+							<th><a name="画像">画像</a></th>
+							<th><a href="../primitive/image.htm">画像</a></th>
+							<th>◎</th>
+							<td>ツリー項目の画像</td>
+						</tr>
+						<tr>
+							<th><a name="アイコン">アイコン</a></th>
+							<th><a href="../primitive/icon.htm">アイコン</a></th>
+							<th>◎</th>
+							<td>ツリー項目のアイコン</td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 	  </div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>次のイベント手順が使用できます。</p>
 		<div id="events">
 			<table class="table table-bordered">
@@ -264,7 +267,7 @@
                 </tbody>
 				</table>
 		</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <pre class="code">メイン画面を表示する
 待機する
 
@@ -287,11 +290,11 @@
 終わり</pre>
 	</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月1日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

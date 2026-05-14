@@ -8,6 +8,7 @@
 	<title>数値 - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -73,7 +74,7 @@
     <div class="col-md-9">
         <ul class="breadcrumb" data-category="syntax">
             <li><a href="../index.htm">プロデル</a></li>
-            <li><a href="index.htm">言語仕様</a></li>
+            <li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
             <li>数値の式</li>
         </ul>
     </div>
@@ -112,27 +113,27 @@
 	<tr>
 		<td>整数</td>
 		<td>-2,147,483,648～2,147,483,647</td>
-		<td>32</td>
+		<td style="text-align: right">32</td>
 	</tr>
 	<tr>
 		<td>長整数</td>
 		<td>-9,223,372,036,854,775,808～9,223,372,036,854,775,807</td>
-		<td>64</td>
+		<td style="text-align: right">64</td>
 	</tr>
 	<tr>
 		<td>浮動小数</td>
 		<td>約7桁</td>
-		<td>32</td>
+		<td style="text-align: right">32</td>
 	</tr>
 	<tr>
 		<td>倍浮動小数</td>
 		<td>約15～16桁</td>
-		<td>64</td>
+		<td style="text-align: right">64</td>
 	</tr>
 	<tr>
 		<td>固定小数</td>
 		<td>約28～29桁</td>
-		<td>128</td>
+		<td style="text-align: right">128</td>
 	</tr>
     </tbody>
 </table>
@@ -183,42 +184,42 @@
 	<tr>
 		<th>整数から</th>
 		<td>-</td>
-		<td>○</td>
-		<td>○</td>
-		<td>○</td>
-		<td>○</td>
+		<td style="text-align: center">○</td>
+		<td style="text-align: center">○</td>
+		<td style="text-align: center">○</td>
+		<td style="text-align: center">○</td>
 	</tr>
 	<tr>
 		<th>長整数から</th>
-		<td>△</td>
-		<td>-</td>
-		<td>△</td>
-		<td>○</td>
-		<td>○</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">-</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">○</td>
+		<td style="text-align: center">○</td>
 	</tr>
 	<tr>
 		<th>浮動小数から</th>
 		<td>切り捨て</td>
 		<td>切り捨て</td>
-		<td>-</td>
-		<td>△</td>
-		<td>○</td>
+		<td style="text-align: center">-</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">○</td>
 	</tr>
 	<tr>
 		<th>倍浮動小数から</th>
 		<td>切り捨て</td>
 		<td>切り捨て</td>
-		<td>△</td>
-		<td>-</td>
-		<td>○</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">-</td>
+		<td style="text-align: center">○</td>
 	</tr>
 	<tr>
 		<th>固定小数から</th>
 		<td>切り捨て</td>
 		<td>切り捨て</td>
-		<td>△</td>
-		<td>△</td>
-		<td>-</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">△</td>
+		<td style="text-align: center">-</td>
 	</tr>
     </tbody>
 </table>
@@ -232,11 +233,11 @@
 
 		</div>
 	</div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年7月23日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月5日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

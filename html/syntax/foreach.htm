@@ -8,6 +8,7 @@
 	<title>それぞれ繰り返す - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -72,34 +73,66 @@
 <!-- InstanceBeginEditable name="Content" -->
 <ul class="breadcrumb">
 	<li><a href="../index.htm">プロデル</a></li>
-	<li><a href="index.htm">言語仕様</a></li>
+	<li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
 	<li>それぞれ繰り返す</li>
 </ul>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 <h1>「それぞれ繰り返す」文</h1>
-<p>「それぞれ繰り返し」文は、配列の内容に対して、繰り返して処理する時に使います。</p>
-	<h3>サンプルコード</h3>
-	<p>配列の内容を順番に表示します。</p>
+<p>「それぞれ繰り返し」文は、反復可能なデータ型に対してその要素の数だけ繰り返して処理する時に使います。</p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">書式</h4>
+	</div>
+	<div class="panel-body">
+		<pre class="format"><strong>《反復型》</strong>を<strong>《要素変数》</strong>へそれぞれ繰り返す
+　　<span class="rem">/* 繰り返すプログラム */
+</span>そして</pre>
+		<p>《反復型》<br>
+反復して繰り返す要素が含まれる種類を指定します。反復型には、<a href="../primitive/array.htm">配列</a>, <a href="../primitive/dictionary.htm">辞書</a>などがあります。</p>
+		<p>《要素変数》<br>
+			反復型に格納された要素を代入するための変数を指定します。</p>
+		<p>※「そして」は、旧文法の「繰り返し終わり」,「繰り返し終」とも書けます</p>
+	</div>
+</div>
+<h3>反復型</h3>
+<p>それぞれ繰り返す文で反復型として指定できるデータ型は次の通りです。</p>
+<ul>
+	<li><a href="../primitive/array.htm">可変長配列</a></li>
+	<li><a href="../primitive/fixedarray.htm">固定長配列</a></li>
+	<li><a href="../primitive/multiarray.htm">多次元配列</a></li>
+	<li><a href="../primitive/dictionary.htm">辞書</a></li>
+	</ul>
+<p>ネット型のうち、コレクション(IEnumerableインスタンスを実装したオブジェクト)についても反復型として指定できます。</p>
+<h3>それぞれ繰り返す文のサンプルコード</h3>
+	<p>配列の要素を順番に表示します。</p>
 	<pre class="code">名前一覧は｛「裕太」,「健司」,「智美」,「直子」｝
 
 名前一覧<strong>のすべての</strong>名前<strong>についてそれぞれ繰り返す</strong>
 	名前を表示する
 <strong>そして</strong></pre>
-	<h3>例文 - 簡易表記</h3>
-	<p>配列の内容を順番に表示します。</p>
+	<h3>簡略表記によるサンプルコード</h3>
+	<p>配列の要素を順番に表示します。</p>
 <pre class="code">一覧は｛「N-03B」,「F-04B」,「P-09A」,「SH-08B」｝
 
 一覧<strong>を</strong>要素<span class="syntax">へそれぞれ繰り返す</span>
 	要素を表示する
 <span class="syntax">そして</span></pre>
+<h3> ブロック式を使ったサンプルコード</h3>
+<p>それぞれ繰り返し文は、<a href="block.html">ブロック式</a>を使って次のように書けます。</p>
+<pre class="code">名前一覧は｛「裕太」,「健司」,「智美」,「直子」｝
+
+名前一覧<span class="syntax">のすべての</span>名前<span class="syntax">について『</span>
+　　名前を表示する
+<span class="syntax">』ことをそれぞれ繰り返す</span></pre>
+<p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月17日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

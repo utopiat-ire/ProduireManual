@@ -8,6 +8,7 @@
 	<title>種類 - プロデル言語仕様</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -73,7 +74,7 @@
     <div class="col-md-9">
         <ul class="breadcrumb" data-category="syntax">
             <li><a href="../index.htm">プロデル</a></li>
-            <li><a href="index.htm">言語仕様</a></li>
+            <li><a href="index.htm"><i class="fa fa-pencil-square-o"></i> 文法</a></li>
             <li>種類</li>
         </ul>
     </div>
@@ -168,8 +169,8 @@
 		<h4 class="panel-title">例文</h4>
 	</div>
 	<div class="panel-body">
-<pre class="code">メッセージは「こんにちは」<b>
-メッセージのカタカナ</b>を表示する</pre>
+<pre class="code">メッセージは「こんにちは」
+<b>メッセージのカタカナ</b>を表示する</pre>
 	</div>
 </div>
 
@@ -268,13 +269,11 @@ OKボタンがクリックされた時の手順
                 <h4 class="panel-title">例文</h4>
         </div>
         <div class="panel-body">
-                <pre class="code">Aというテストを作る
-Aの値は10
-Bというテストを作る
-Bの値を報告する
+                <pre class="code">テストの値は10
+テストの値を報告する
 
 テストとは
-	+値!
+	+値！
 終わり</pre>
         </div>
 </div>
@@ -445,17 +444,22 @@ Bの値を報告する
 			<tr>
 				<th>-</th>
 				<th>非公開</th>
-				<td>同じ種類にある手順からのみ利用することが可能です。(Private)</td>
+				<td>同じ種類にある手順からのみ利用できます。(Private)</td>
 			</tr>
 			<tr>
 				<th><strong>#</strong></th>
 				<th><strong>限定</strong></th>
-				<td>同じ種類にある手順や継承された種類にある手順からのみ利用することが可能です。(Protected)</td>
+				<td>同じ種類にある手順や継承された種類にある手順からのみ利用できます。(Protected)</td>
 			</tr>
 			<tr>
 				<th>~</th>
 				<th>内部限定</th>
-				<td>（現在は無効）同一プログラム内から利用することが可能です。(Internal)</td>
+				<td>（現在は無効）同一プログラム内から利用できます。(Internal)</td>
+			</tr>
+			<tr>
+				<th>%</th>
+				<th>&nbsp;</th>
+				<td>種類を継承している場合、同じ特徴(シグネチャ)を持つ手順を上書き(オーバーライド)していることを示す記号です。</td>
 			</tr>
 			<tr>
 				<th>(なし)</th>
@@ -510,7 +514,7 @@ Bの値を報告する
         <hr>
 <h2 id="construct_inherit">種類の継承</h2>
 <p>種類は、他の種類から継承できます。「継承」とは、すでに定義された種類の機能(手順や変数など)を引き継いで新しい種類を定義することです。</p>
-<p>継承を使うことで例えば、すでにある種類をそのままにした上で違う所だけ新しい種類に定義することや、定義する変数や手順が共通する部分だけをまず1つの種類にまとめて、その種類を継承して異なる部分を定義することができます。</p>
+<p>継承を使うことで例えば、すでにある種類をそのままにした上で違う所だけ新しい種類に定義することや、定義する変数や手順が共通する部分だけをまず1つの種類にまとめて、その種類を継承して異なる部分を定義できます。</p>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">書式</h4>
@@ -735,14 +739,14 @@ Bの値を報告する
     <pre class="code">さかな<strong>が</strong>生物<strong>である</strong>なら「さかなは生物です」を表示する</pre>
 
         
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新        </div>
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月22日 <!-- #EndDate -->更新        </div>
     </div>
 </div>
 <!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

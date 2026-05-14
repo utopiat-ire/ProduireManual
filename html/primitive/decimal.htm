@@ -8,6 +8,7 @@
 	<title>固定小数 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,7 +76,7 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li><a href="number.htm">数値</a></li>
 	    <li>固定小数</li>
       </ul>
@@ -83,7 +84,7 @@
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/datatype.html" class="label label-success valuetype">値型</a> <a href="../sumire.htm" class="label label-info">スミレ</a> <a href="../syntax/expr.html" class="label label-info">四則演算可</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../syntax/number.html">数値の式</a></li>
@@ -93,12 +94,12 @@
 	<div id="refcontent" class="col-md-8">
 	  <h2 id="head">概要</h2>
 		<p>固定小数は、有効桁数が約28～29桁の小数点値を表現できる128ビット長のデータ型です。</p>
-		<p>.NET Framework型のSystem.Decimalに相当します。</p>
-		<h2>作成する方法</h2>
+		<p>.NET Framework(FCL)のSystem.Decimalに相当します。</p>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<p>数値定数を指定すると作成できます。</p>
 		<pre class="code">【値：固定小数】は、14.28571428571428571428571429</pre>
 		<p><a href="long.htm">長整数</a>または<a href="double.htm">倍浮動小数</a>に収まらない範囲の数字を指定すると、構文解析で自動的に固定小数として扱われます。</p>
-		<h2 id="型変換">型変換</h2>
+		<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
         <p>この種類は、次のデータ型へ自動的に変換できます。</p>
         <table class="table table-bordered">
           <thead>
@@ -125,7 +126,7 @@
     <td>同じ数値へ変換。格納できる数値の範囲を超える場合はエラー</td>
 </tr></tbody>
           </table>
-        <h2 id="サンプルコード">サンプルコード</h2>
+        <h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>固定小数の四則演算の例です。</p>
 		<pre class="code">A=14.28571428571428571428571429
 (A+100)を報告する
@@ -135,11 +136,11 @@
 (A%5)を報告する</pre>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年2月14日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

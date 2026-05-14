@@ -8,6 +8,7 @@
 	<title>COM型 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -81,7 +82,7 @@
 		<p><span class="label label-warning">生成可能</span></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="typeinfo.htm">型情報</a>
@@ -98,21 +99,21 @@
 		<p>COM(Component Object Model)/ActiveXのクラス型を表す種類です。<br>
 			ActiveXとして開発されたコンポーネントをプロデル上で扱うための情報を格納しています。</p>
 		<p>
-			<span class="warning">注意！</span>　この機能を利用するためには、C++,VBA,Visual Basic 6.0言語などの他のプログラミング言語に加えてCOM/ActiveXの知識が必要になります。この機能を利用したCOMクラスの利用方法については、利用するライブラリの説明をご参照ください。<br></p>
-		<h2>作成する方法</h2>
+			<span class="warning">注意</span>　この機能を利用したCOMクラスの利用方法は、C++,VBA,Visual Basic 6.0言語などの他のプログラミング言語とCOM/ActiveXの資料をご参照ください。<br></p>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】とCOM型（【型名】）を作る</pre>
 		<p>【型名】には、COMクラスのProgIDまたはクラスID({ }で囲まれたGUID形式)を指定します。</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p><a href="dotnettype.htm#手順">継承された手順</a>の他、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#インスタンスを作る">インスタンスを作る</a>　</div>
 		<div id="methods">
 			<h3>〈【引数一覧】で〉<a name="インスタンスを作る">インスタンスを作る</a>：<a href="../../primitive/netobject.htm">ネット物</a></h3>
 			<p>COM型が持つ型情報からインスタンスを生成します。</p>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p><a href="dotnettype.htm#設定項目">継承された設定項目</a>が使用できます。</p>
 		<div id="properties"></div>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 <h3 id="sample1">COMインタフェースでPDFファイルを開く</h3>
 	<p>Adobe Readerで提供されているCOMインタフェースを利用して、COM型のインスタンスを生成し、Adobe 
@@ -129,11 +130,11 @@ acroApp:Exit()</pre>
 </div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

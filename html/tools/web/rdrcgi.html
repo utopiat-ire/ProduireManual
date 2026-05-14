@@ -8,6 +8,7 @@
 	<title>プロデルCGI - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -32,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -84,19 +85,16 @@
     <div id="refcontent" class="col-md-8 col-md-offset-1">
         <h2 id="webserver">プロデルCGIの概要</h2>
         <p>プロデルCGIは、プロデルで書かれたWebアプリケーションをCGI (Common Gateway Interface)を使って動作させるランタイムエンジンです。</p>
-        <p>ApacheなどのWebサーバを組み合わせて、プロデルプログラムをCGIとして実行できます。</p>
-        <p>CGI動作には、プロデルの知識に加えて、Apacheなどのサーバの知識が必要です。　</p>
+        <p>ApacheやnginxなどのWebサーバと組み合わせて、プロデルプログラムをCGIとして実行できます。        </p>
         <h3>動作環境</h3>
         <p>プロデルCGIは、次のいずれかの動作環境が必要です。</p>
         <ul>
-            <li>Windows×Apache×.NET Framework2.0以上</li>
-            <li>Linux×Apache×mono 1.9以上</li>
+            <li>Windowsの場合、Apache, .NET Framework</li>
+            <li>Linuxの場合、Apache, mono  6.12.0</li>
         </ul>
-        <p>CGIが利用できるWebサーバに加えて、プロデルを動作させる環境が、別途必要です。</p>
-        <p>なお、標準的な共有サーバでCGIに対応していた場合でも<br>
-        monoが導入されていないサーバでは、動作しません。</p>
-        <p>プロデルは、Windows環境上で動作することを想定して設計されています。<br>
-        Linux上では、一部のプログラムが動作しない場合がありますので、ご了承ください。　</p>
+        <p>導入にはVPSやクラウドサービスなどのroot権限が得られるサービスを利用する必要があります。標準的な共有サーバでは、CGIに対応している場合でもmonoが導入されていないケースがほとんどのため、導入できません。</p>
+        <p>プロデルは、Windows環境上で動作することを想定して設計されています。
+        	Linux上では、OSやライブラリの都合上、一部のプログラムが動作しない場合があります。</p>
         <hr>
         <h2 id="windowscgi">Apacheでプロデルを動かす</h2>
         <p>プロデルCGIを使うことで、Apache上でプロデルのプログラムを動かせます。</p>
@@ -105,7 +103,7 @@
         <p>Apacheでプロデルを動かすには、次の環境が必要です。</p>
         <ul>
             <li>Apache HTTP Server</li>
-            <li>.NET Framework 2.0以降</li>
+            <li>mono(xps)もしくは.NET Framework</li>
             <li>プロデルCGI</li>
         </ul>
         <p>このページでは、XAMPPに含まれるApache HTTP Serverを使って、プロデルCGIの動作環境を構築する方法を、紹介します。</p>
@@ -163,7 +161,7 @@ AddHandler cgi-script .cgi .pl .asp .rdr</pre>
         <br>
         <hr>
         <h2 id="linuxcgi">Linux環境のApacheでプロデルを動かす</h2>
-        <p>.NET Frameworkのオープン実装であるMonoを使うことで、Linux環境でも、Apacheを使ってプロデルのプログラムを動かせます。Mono1.9以降がインストールできる環境であれば、Linux環境でもプロデルを動かせます。</p>
+        <p>.NET Frameworkのオープン実装であるMonoを使うことで、Linux環境でも、Apacheを使ってプロデルのプログラムを動かせます。Mono 6.12.0がインストールできる環境であれば、Linux環境でもプロデルを動かせます。</p>
         <p>なお、共有サーバなど、インストールできるソフトウェアに制限がある環境では、LinuxであってもプロデルCGIを利用できません。</p>
         <p>また、プロデルはWindowsでの動作を前提としているため、一部の種類や手順が正常に動作しない場合があります。</p>
         <h2>動作環境</h2>
@@ -173,28 +171,29 @@ AddHandler cgi-script .cgi .pl .asp .rdr</pre>
             <li>Mono</li>
             <li>プロデルCGI</li>
         </ul>
-        <p>このマニュアルでは、CentOS 5.5とMono 1.9を使って、プロデルCGIを動作させる環境の構築方法を説明します。</p>
-        <p>なお、CentOS以外の環境では、Monoの導入方法が異なります。使用しているLinux環境にあわせた方法で、Monoを導入してください。</p>
-        <p>Mono1.9で、プロデルの基本的な機能は、動作しますが、不具合により十分に機能が動作しない場合があります。<br>
-        可能であれば、最新版を導入することをおすすめします。</p>
+        <p>このページでは、RHEL系のLinux(CentOS 7.9)とMono 6.12.0を使って、プロデルCGIを動作させる環境の構築方法を説明します。</p>
+        <p>なお、RHEL系(AlmaLinux,Rocky Linux,CentOS)以外のLinux環境では、Monoの導入方法が異なります。使用しているLinux環境にあわせた方法で、Monoを導入してください。</p>
+        <p>Mono環境下では、プロデルの基本的な機能が動作しますが、OSやLinux環境で対応していない機能などがあります。</p>
         <p>&nbsp;</p>
         <h2>環境の構築</h2>
-        <h3>CentOS環境の準備</h3>
-        <p>Apacheがインストールされていない場合は、Apacheをインストールして、CGIが動作するように設定を変更します。</p>
+        <h3>Linux(RHEL系のCentOS)環境での準備</h3>
+        <p>Apacheがインストールされていない場合は、ApacheをインストールしてCGIが動作するように設定を変更します。</p>
         <h4>参考</h4>
         <p><a href="http://centossrv.com/apache.shtml">Webサーバー構築(Apache) - CentOSで自宅サーバー構築</a></p>
         <p>&nbsp;</p>
         <h3>Monoのインストール</h3>
-        <p>CentOS 5.5では、yumを使ってMono 1.9をインストールできます。</p>
+        <p>RHEL系Linuxでは、Mono Projectで提供されているrepoを用いて、yum(dnf)でMono 6.12.0をインストールできます。</p>
         <p>Monoをインストールするには、ターミナルで次のコマンドを実行します。</p>
-        <pre>yum -y install mono-complete</pre>
-        <p>※CentOS以外の環境では、yumが使用できない場合があります</p>
+        <code>yum -y install mono-complete xsp</code>
+        <p>※Webサーバを利用する場合、xspのパッケージのインストールも必要です。必ずMono Project公式のrepoからインストールしてください。</p>
         <p>&nbsp;</p>
         <h3>プロデルCGIと関連するファイルのコピー</h3>
-        <p>１．「/usr/local」ディレクトリに「rdr」フォルダを作成します。</p>
-        <pre>cd /usr/local
-mkdir rdr</pre>
-        <p>２．プロデル簡易Webサーバを解凍したフォルダまたは、プロデル本体から<br>
+        <p>1.「/usr/local」ディレクトリに「rdr」フォルダを作成します。</p>
+        <p><code>cd /usr/local
+</code></p>
+        <p><code> mkdir rdr</code>
+        	</p>
+        <p>2.プロデル簡易Webサーバを解凍したフォルダまたは、プロデル本体から<br>
         次のファイルとフォルダを「rdr」フォルダにコピーします。</p>
         <ul>
             <li>rdrcgi.exe</li>
@@ -233,8 +232,8 @@ mkdir rdr</pre>
         <p>CGIとして実行するには、プロデルプログラムの拡張子を.cgiとする必要がありますが、Apacheの設定を変更することで、.rdrでも動作させられます。</p>
         <p>Apacheの設定を変更するには、設定ファイル(httpd.conf)を変更します。</p>
         <h4>httpd.confの変更</h4>
-        <p>１．「/etc/httpd/conf/」にある「httpd.conf」をviなどのテキストエディタで開きます。</p>
-        <p>２．httpd.confの中から、次の部分を、変更後の内容に変更します。</p>
+        <p>1.「/etc/httpd/conf/」にある「httpd.conf」をviなどのテキストエディタで開きます。</p>
+        <p>2.httpd.confの中から、次の部分を、変更後の内容に変更します。</p>
         <pre>(変更前)
 AddHandler cgi-script .cgi .pl</pre>
 			<pre>(変更後)
@@ -242,13 +241,18 @@ AddHandler cgi-script .cgi .pl .rdr</pre>
 			<h4>Apacheの再起動</h4>
 			<p>Apacheがすでに起動している場合は、設定を反映させるために、Apacheを再起動します。</p>
 			<pre>service httpd restart</pre>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2023年4月3日 <!-- #EndDate -->更新</div>  </div>
+			<h2>関連ページ</h2>
+			<ul>
+				<li><a href="https://produ.irelang.jp/blog/2019/06/1019/">CentOS/Apache環境下でプロデルWebサーバを公開する</a></li>
+				<li><a href="https://produ.irelang.jp/blog/2019/06/1020/">CGIで動くプロデルWebアプリを公開する</a></li>
+			</ul>
+		<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月4日 <!-- #EndDate -->更新</div>  </div>
 	</div>
 <!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

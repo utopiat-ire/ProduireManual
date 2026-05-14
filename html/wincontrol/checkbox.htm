@@ -8,6 +8,7 @@
 	<title>チェックボックス - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,69 +76,71 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>チェックボックス</li>
       </ul>
 	  <h1>チェックボックス</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
 		<p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
 		<h3>継承する種類</h3>
 		<p><a href="control.htm">ウィンドウ部品</a></p>
-      <h3>利用プラグイン</h3>
+      <h3>利用ライブラリ</h3>
       <p><a href="index.htm">ウィンドウ部品集</a></p>
 	</div>
 	<div class="col-sm-8">
 	  <h2 id="head">概要</h2>
 		<p>項目に対してチェック印を付けられる部品です。</p>
-		<div class="figure"><img src="img/checkbox.png" width="168" height="30"></div>
-		<h2>作成する方法</h2>
+		<div class="figure"><img src="img/checkbox.png" width="168" height="30" alt="チェックボックス"></div>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というチェックボックスを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>が使用できます。</p>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead><tr>
-					<th>設定項目</th>
-					<th>型</th>
-					<th>　</th>
-					<th>説明</th>
-					</tr></thead>
-                <tbody>
-				<tr>
-					<th><a name="チェックボックス位置">チェックボックス位置</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>チェックボックスの配置</td>
-					</tr>
-				<tr>
-					<th><a name="チェック">チェック</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>チェックされているかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="状態">状態</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>チェックボックスの状態<br>
-						チェック・なし・不確定</td>
-					</tr>
-				<tr>
-					<th><a name="文字配置">文字配置</a></th>
-					<th>&nbsp;</th>
-					<th>◎</th>
-					<td>文字の表示位置<br>
-						下中央・左下・右下・中央・中段左・中段右・上中央・左上・右上</td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="チェックボックス位置">チェックボックス位置</a></th>
+							<th>&nbsp;</th>
+							<th>◎</th>
+							<td>チェックボックスの配置</td>
+						</tr>
+						<tr>
+							<th><a name="チェック">チェック</a></th>
+							<th>&nbsp;</th>
+							<th>◎</th>
+							<td>チェックされているかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="状態">状態</a></th>
+							<th>&nbsp;</th>
+							<th>◎</th>
+							<td>チェックボックスの状態<br>
+								チェック・なし・不確定</td>
+						</tr>
+						<tr>
+							<th><a name="文字配置">文字配置</a></th>
+							<th>&nbsp;</th>
+							<th>◎</th>
+							<td>文字の表示位置<br>
+								下中央・左下・右下・中央・中段左・中段右・上中央・左上・右上</td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
 		<div id="events">
 			<table class="table table-bordered">
@@ -157,7 +160,7 @@
                 </tbody>
 				</table>
 			</div>
-<h2 id="サンプルコード">サンプルコード</h2>
+<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<div id="samples">
 		<h3 id="sample1">チェックボックスを作る</h3>
 		<pre class="code">窓というウィンドウを作る
@@ -178,11 +181,11 @@
 			</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年12月25日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

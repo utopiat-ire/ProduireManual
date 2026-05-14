@@ -8,6 +8,7 @@
 	<title>ODBCデータベース - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -75,15 +76,15 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="data">
 	    <li><a href="../../index.htm">プロデル</a></li>
-	    <li><a href="../index.htm">データ操作</a></li>
+	     <li><a href="../index.htm"><i class="fa fa-database"></i> データ操作</a></li>
 	    <li>ODBCデータベース</li>
       </ul>
 	  <h1>ODBCデータベース</h1>
 		<p><span class="label label-warning">生成可能</span></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li></ul>
-		<h3>利用プラグイン</h3>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li></ul>
+		<h3>利用ライブラリ</h3>
 		<p><a href="../index.htm">データ機能</a></p>
 	  <h3>関連ページ</h3>
       <ul>
@@ -98,9 +99,9 @@
 	<div id="refcontent" class="col-md-9">
 	  <h2 id="head">概要</h2>
 		<p>「ODBCデータベース」は、ODBCを利用してデータベースへ接続する種類です。</p>
-		<h2>作成する方法</h2>
+		<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<p>この種類は、作成する必要はありません。</p>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p><a href="dbdatabase.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#接続する">接続する</a>　<a href="#切断する">切断する</a>　</div>
 		<div id="methods">
@@ -110,7 +111,7 @@
 			<h3>【自分】から<a name="切断する">切断する</a></h3>
 			<p>データベースを閉じます</p>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p><a href="dbdatabase.htm#設定項目">継承された設定項目</a>の他に次の設定項目があります。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -181,61 +182,72 @@
 				</tr>
                 </tbody>
 			</table>
-			<p class="usage"><a href="../../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="サンプルコード">サンプルコード</h2>
-		<p>ODBCを用いて、MySQLデータベースへの接続例<br>
-			このサンプルを実行するには、MySQLとMySQL ODBC Connectionが必要です</p>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
+		<h3 id="sample1">ODBCデータソースへ接続する</h3>
+		<p>ODBCを用いて、設定済みのDSNやODBCのデータソースにアクセスします。このサンプルでは、MySQL ODBC Connectionを使ってMySQLデータベースへ接続します。</p>
 		
 		
-		<pre class="code">MySQLというODBCデータベースを作る
+		<pre class="code">データソースというODBCデータベースを作る
 
-<i>//MySQLのデータソースファイルは「[プログラムの位置]mysql.dsn」
-</i>MySQLのドライバは「{MySQL ODBC 5.1 Driver}」
-MySQLのユーザ名は「root」
-MySQLのパスワードは「」
-MySQLのデータベースは「test」
-MySQLへ接続する
+//データソースのデータソースファイルは「[プログラムの位置]データソース.dsn」
+データソースのドライバは「{データソース ODBC 5.1 Driver}」
+データソースのユーザ名は「root」
+データソースのパスワードは「」
+データソースのデータベースは「test」
+データソースへ接続する
 
-<i>ーーテーブルの作成</i>
-MySQLで「CREATE TABLE 楽曲 (曲名 VARCHAR(30),アーティスト VARCHAR(30), アルバムID INTEGER);」を実行する
-
-<i>ーーデータの取得</i>
-MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
-結果の内容を情報アイコンで表示する
-
-<i>ーーデータの追加</i>
-「INSERT INTO 楽曲 (曲名,アーティスト) VALUES (&#39;I AM YOUR SINGER&#39;,&#39;サザンオールスターズ&#39;)」をMySQLで実行して、結果とする
+データソースから切断する</pre>
+		<hr>
+		<h3 id="sample2">テーブルを作成する</h3>
+		<p>ODBCデータソースへテーブルを作成します。</p>
+		<pre class="code" id="prg7">データソースで「CREATE TABLE 楽曲 (曲名 VARCHAR(30),アーティスト VARCHAR(30), アルバムID INTEGER);」を実行する</pre>
+		<hr>
+		<h3 id="sample3">レコードを取得する</h3>
+		<p>ODBCデータソースのテーブルからレコードを取得します。</p>
+		<pre class="code">データソースから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
+結果の内容を情報アイコンで表示する</pre>
+		<hr>
+		<h3 id="sample4">レコードを挿入する</h3>
+		<p>ODBCデータソースのテーブルへレコードを挿入します。</p>
+		<pre class="code">
+「INSERT INTO 楽曲 (曲名,アーティスト) VALUES ('I AM YOUR SINGER','サザンオールスターズ')」をデータソースで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-MySQLから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得して、結果とする
-「追加後」として結果の内容を情報アイコンで表示する
-
-<i>ーーデータの更新</i>
-「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行して、結果とする
+<i>//レコードが挿入されたことを確認します
+</i>データソースから「SELECT 曲名 FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」を取得して、結果とする
+「追加後」として結果の内容を情報アイコンで表示する</pre>
+		<hr>
+		<h3 id="sample5">レコードを更新する</h3>
+		<p>ODBCデータソースのテーブルのレコードを更新します。</p>
+		<pre class="code">「UPDATE 楽曲 SET 曲名=&#39;I am your singer&#39; WHERE 曲名=&#39;I AM YOUR SINGER&#39;」データソースで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
-「更新後」として結果の内容を情報アイコンで表示する
-
-<i>ーーデータの削除</i>
-「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」をMySQLで実行して、結果とする
+<i>//レコードが更新されたことを確認します</i>
+データソースから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
+「更新後」として結果の内容を情報アイコンで表示する</pre>
+		<hr>
+		<h3 id="sample6">レコードを削除する</h3>
+		<p>ODBCデータソースのテーブルのレコードを削除します。</p>
+		<pre class="code">「DELETE FROM 楽曲 WHERE 曲名=&#39;I AM YOUR SINGER&#39;」データソースで実行して、結果とする
 「［結果］件、処理しました」を情報アイコンで表示する
 
-MySQLから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
-「削除後」として結果の内容を情報アイコンで表示する
-
-<i>ーーテーブルの削除</i>
-MySQLで「DROP TABLE 楽曲」を実行する
-
-MySQLから切断する</pre>
+<i>//レコードが削除されたことを確認します</i>
+データソースから「SELECT 曲名 FROM 楽曲」を取得して、結果とする
+「削除後」として結果の内容を情報アイコンで表示する</pre>
+		<hr>
+		<h3 id="sample7">テーブルを削除する</h3>
+		<p>ODBCデータソースからテーブルを削除します。</p>
+		<pre class="code">データソースで「DROP TABLE 楽曲」を実行する</pre>
+		<p>&nbsp;</p>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年8月29日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年3月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

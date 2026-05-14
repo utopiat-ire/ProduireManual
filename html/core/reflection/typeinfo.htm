@@ -8,6 +8,7 @@
 	<title>型情報 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../css/style.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../../js/respond-1.4.2.min.js"></script>
@@ -33,8 +34,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../../verbs/index.html">手順一覧</a></li>
@@ -81,7 +82,7 @@
 		<p><a href="../../syntax/convertables.htm" class="label label-warning convertable">変換</a></p>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li>型情報
@@ -99,7 +100,7 @@
 	  <h2 id="head">概要</h2>
 		<p>
 			プロデルの種類の定義が格納された種類です。「型情報」種類を使って、特定の種類で定義された手順、変数、設定項目などの詳細を取得したり、オブジェクトを生成したりできます。</p>
-		<h2 id="型変換">型変換</h2>
+		<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 		<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
 		<table class="table table-bordered">
 			<thead><tr>
@@ -112,7 +113,7 @@
 					「名前」設定項目と同じ文字列</td>
 				</tr>
 			</table>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<div id="methodlist"><a href="#インスタンスを作る">インスタンスを作る</a>　<a href="#配列を作る">配列を作る</a>　<a href="#手順一覧を取得する">手順一覧を取得する</a>　<a href="#設定項目一覧を取得する">設定項目一覧を取得する</a>　<a href="#設定項目情報を取得する">設定項目情報を取得する</a>　<a href="#変数一覧を取得する">変数一覧を取得する</a>　</div>
 		<div id="methods">
 			
@@ -134,7 +135,7 @@
 			<h3>【自分】から<a name="変数一覧を取得する">変数一覧を取得する</a></h3>
 			<p>この種類で定義されているフィールド変数の一覧を取得します。</p>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<div id="properties">
 			<table class="table table-bordered">
 				<thead><tr>
@@ -155,7 +156,7 @@
             </table>
         </div>
 		
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 <div id="samples">
 		<h3 id="sample1">変数の取得と設定</h3>
 		<p>「型情報を取得する」手順を使って、インスタンスから型情報を取得できます。このプログラムでは「車」種類のインスタンスで「名前」変数へ「くるま」と代入して、その後、内容を取得します。</p>
@@ -201,7 +202,7 @@
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../../js/jquery-1.12.4.min.js"></script>

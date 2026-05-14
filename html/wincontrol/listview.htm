@@ -8,6 +8,7 @@
 	<title>リストビュー - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="../primitive/index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="gui">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">GUI部品</a></li>
+	    <li><a href="index.htm"><i class="fa fa-window-maximize"></i> GUI部品</a></li>
 	    <li>リストビュー</li>
       </ul>
 	  <h1>リストビュー</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
       <p><a href="../syntax/create.htm" class="label label-warning">生成可能</a> <a href="control.htm" class="label label-success">ウィンドウ部品</a> <a href="../syntax/ordinal.htm" class="label label-default">序数詞設定</a></p>
-	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#イベント手順">イベント手順</a></li><li><a href="#サンプルコード">サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
+	  <ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#イベント手順"><i class="fa fa-bolt"></i> イベント手順</a></li><li><a href="#サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</a></li><li><a href="#howto">使い方</a></li></ul>
 	  <h3>関連ページ</h3>
       <ul>
         <li><b><a href="listview.htm">リストビュー</a></b>
@@ -93,7 +94,7 @@
       </ul>
       <h3>継承する種類</h3>
       <p><a href="control.htm">ウィンドウ部品</a></p>
-      <h3>利用プラグイン</h3>
+      <h3>利用ライブラリ</h3>
       <p><a href="index.htm">ウィンドウ部品集</a></p>
 	</div>
 	<div class="col-sm-8">
@@ -103,9 +104,9 @@
       <p>リストビューの項目(アイテム)は、<a href="listviewitem.htm">リストビュー項目</a>で表現します。</p>
       <div class="figure" alt="リストビュー(アイコン表示)"><img src="img/listview1.png"></div>
       <div class="figure" alt="リストビュー(詳細表示)"><img src="img/listview2.png"></div>
-	<h2>作成する方法</h2>
+	<h2><i class="fa fa-plus-square-o"></i> 作成する方法</h2>
 		<pre class="format">【名前】というリストビューを作る</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p>部品から<a href="control.htm#手順">継承される手順</a>のほか、次の手順が使用できます。</p>
 		<div id="methodlist"><a href="#クリアする">クリアする</a>　<a href="#すべて消す">すべて消す</a>　<a href="#加える">加える</a>　<a href="#一括追加する">一括追加する</a>　<a href="#挟む">挟む</a>　<a href="#消す">消す</a>　<a href="#番目を消す">番目を消す</a>　<a href="#探す">探す</a>　<a href="#編集する">編集する</a>　<a href="#更新開始する">更新開始する</a>　<a href="#更新終了する">更新終了する</a>　<a href="#昇順に並べ替える">昇順に並べ替える</a>　<a href="#降順に並べ替える">降順に並べ替える</a>　</div>
 		<div id="methods">
@@ -120,299 +121,329 @@
 			<h3>【自分】へ【項目一覧:配列】を〈【アイコン/画像】で〉<a name="一括追加する">一括追加する</a></h3>
 			<p>リストビューへ項目を一括で追加します</p>
 			<h3>【自分】の【挿入位置】へ〈【名前】という〉〈【内容】を〉〈【アイコン/画像】で〉<a name="挟む">挟む</a>：<a href="listviewitem.htm">リストビュー項目</a></h3>
-			<p>指定した位置やリストビューの項目を挿入します</p>
+			<p>指定した位置へリストビューの項目を挿入します</p>
+			<ul>
+			        <li>挿入位置は、先頭の項目を1として数えた整数 </li>
+			        </ul>
+			<p>&nbsp;</p>
 			<h3>【自分】の【挿入位置】へ【項目：リストビュー項目】を挟む</h3>
-			<p>指定した位置やリストビューの項目を挿入します</p>
-			<h3>【自分】から【名前】を<a name="消す">消す</a></h3>
+			<p>指定した位置へリストビューの項目を挿入します</p>
+			<ul>
+			        <li>挿入位置は、先頭の項目を1として数えた整数 </li>
+			        </ul>
+			<p>&nbsp;</p>
+			<h3>【自分】から【名前:文字列】を<a name="消す">消す</a></h3>
 			<p>指定した名前を持つ項目を消します</p>
 			<h3>【自分】の【番号】<a name="番目を消す">番目を消す</a></h3>
 			<p>指定した番号の項目を消します</p>
+			<ul>
+			        <li>番号は、先頭を1番目として数えた整数</li>
+			</ul>
 			<h3>【項目：<a href="listviewitem.htm">リストビュー項目</a>】を消す</h3>
 			<p>指定した項目を消します</p>
-			<h3>【自分】から【内容】を<a name="探す">探す</a></h3>
-			<p>項目から指定した見出しを探します</p>
+			<h3>【自分】から【内容】を<a name="探す">探す</a>:整数</h3>
+			<p>指定した見出しの項目を探して、番号で返します。</p>
+			<ul>
+			        <li>戻り値は、先頭を1として数えた整数</li>
+			        </ul>
 			<h3>【自分】を<a name="編集する">編集する</a></h3>
 			<p>項目の見出しを編集します</p>
 			<h3>【自分】を<a name="更新開始する">更新開始する</a></h3>
 			<p>項目を操作するために一時的に描画を抑制します</p>
 			<h3>【自分】を<a name="更新終了する">更新終了する</a></h3>
 			<p>「変更開始」手順で一時的に停止した描画の抑制を解除します</p>
-			<h3>【自分】の【番号】番目を、<a name="昇順に並べ替える">昇順に並べ替える</a></h3>
-			<p>項目を昇順に並べ替えます</p>
-			<h3>【自分】の【番号】番目を、<a name="降順に並べ替える">降順に並べ替える</a></h3>
-			<p>項目を降順に並べ替えます</p>
+			<h3>【自分】の【列番号】番目を、<a name="昇順に並べ替える">昇順に並べ替える</a></h3>
+			<p>指定した列番号の列にある項目で昇順に並べ替えます</p>
+			<ul>
+			        
+			        <li>列番号は、先頭を1番目として数えた整数</li>
+			        </ul>
+			<h3>【自分】の【列番号】番目を、<a name="降順に並べ替える">降順に並べ替える</a></h3>
+			<p>指定した列番号の列にある項目で降順に並べ替えます</p>
+			<ul>
+			        <li>列番号は、先頭を1番目として数えた整数</li>
+			        </ul>
 			</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>部品から<a href="control.htm#設定項目">継承される設定項目</a>のほか、次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>設定項目</th>
-						<th>型</th>
-						<th>　</th>
-						<th>説明</th>
-					</tr>
-				</thead>
-                <tbody>
-				<tr>
-					<th><a name="表示方法">表示方法</a></th>
-					<th>列挙体</th>
-					<th>◎</th>
-					<td>リストビューの表示方法<br>
-						小さいアイコン・大きいアイコン・一覧・詳細・縮小版(WindowsXPのみ)</td>
-					</tr>
-				<tr>
-					<th><a name="チェックボックス">チェックボックス</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>チェックボックスを表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="チェック項目一覧">チェック項目一覧</a></th>
-					<th>リストビュー項目の配列</th>
-					<th>◎</th>
-					<td>チェックボックスが表示されている場合、チェックしている項目の一覧(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="チェック番号一覧">チェック番号一覧</a></th>
-					<th>整数の配列</th>
-					<th>◎</th>
-					<td>チェックボックスが表示されている場合、チェックしている項目の番号一覧(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="個数">個数</a></th>
-					<th>整数</th>
-					<th>□</th>
-					<td>項目の個数を表します</td>
-					</tr>
-				<tr>
-					<th><a name="選択項目">選択項目</a></th>
-					<th>リストビュー項目</th>
-					<th>◎</th>
-					<td>選択している項目</td>
-					</tr>
-				<tr>
-					<th><a name="選択内容">選択内容</a></th>
-					<th>文字列</th>
-					<th>◎</th>
-					<td>選択している項目の内容</td>
-					</tr>
-				<tr>
-					<th><a name="選択番号">選択番号</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>選択している項目の整理番号</td>
-					</tr>
-				<tr>
-					<th><a name="選択項目一覧">選択項目一覧</a></th>
-					<th>リストビュー項目の配列</th>
-					<th>◎</th>
-					<td>複数選択している場合、選択している項目の一覧(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="選択番号一覧">選択番号一覧</a></th>
-					<th>整数の配列</th>
-					<th>◎</th>
-					<td>複数選択している場合、選択している項目の番号一覧(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="選択数">選択数</a></th>
-					<th>整数</th>
-					<th>◎</th>
-					<td>複数選択している場合、選択している項目の個数</td>
-					</tr>
-				<tr>
-					<th><a name="文字色">文字色</a></th>
-					<th>色情報</th>
-					<th>◎</th>
-					<td>文字の色</td>
-					</tr>
-				<tr>
-					<th><a name="背景色">背景色</a></th>
-					<th>色情報</th>
-					<th>◎</th>
-					<td>背景の色</td>
-					</tr>
-				<tr>
-					<th><a name="全列選択">全列選択</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>詳細表示の場合に、項目を選択した際にすべての列を選択状態にするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="罫線">罫線</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>仕切り線を表示するかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="選択表示">選択表示</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>別のオブジェクトにカーソルが移動した際にも選択状態を表示しつづけるかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="自動選択">自動選択</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>マウスカーソルを置くだけで、自動的に項目が選択できるようにするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="ラベル編集">ラベル編集</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>項目の名称を編集できるようにするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="ラベル折り返し">ラベル折り返し</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>アイコン表示の場合、項目名が収まりきらない場合に折り返すかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="複数選択">複数選択</a></th>
-					<th>真偽値</th>
-					<th>◎</th>
-					<td>項目を複数選択できるようにするかどうか</td>
-					</tr>
-				<tr>
-					<th><a name="項目一覧">項目一覧</a></th>
-					<th>リストビュー項目の配列</th>
-					<th>◎</th>
-					<td>表示する項目(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="一覧">一覧</a></th>
-					<th>文字列の配列</th>
-					<th>◎</th>
-					<td>表示する項目(配列形式)</td>
-					</tr>
-				<tr>
-					<th><a name="見出し一覧">見出し一覧</a></th>
-					<th>文字列の配列</th>
-					<th>◎</th>
-					<td>詳細表示の場合に、上部に表示する見出し（カラム）の一覧（配列形式）</td>
-					</tr>
-				<tr>
-					<th><a name="詳細一覧">詳細一覧</a></th>
-					<th>文字列の配列の配列</th>
-					<th>◎</th>
-					<td>詳細表示の場合に、表示される詳細情報を含む、項目のすべての内容（２次配列）</td>
-					</tr>
-				<tr>
-					<th><a name="透明色">透明色</a></th>
-					<th>色情報</th>
-					<th>◎</th>
-					<td>アイコンを指定した際に、透明扱いとする色</td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>設定項目</th>
+							<th>型</th>
+							<th>　</th>
+							<th>説明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="表示方法">表示方法</a></th>
+							<th>列挙体</th>
+							<th>◎</th>
+							<td>リストビューの表示方法<br>
+								小さいアイコン・大きいアイコン・一覧・詳細・縮小版(WindowsXPのみ)</td>
+						</tr>
+						<tr>
+							<th><a name="チェックボックス">チェックボックス</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>チェックボックスを表示するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="チェック項目一覧">チェック項目一覧</a></th>
+							<th>リストビュー項目の配列</th>
+							<th>◎</th>
+							<td>チェックボックスが表示されている場合、チェックしている項目の一覧</td>
+						</tr>
+						<tr>
+							<th><a name="チェック番号一覧">チェック番号一覧</a></th>
+							<th>整数の配列</th>
+							<th>◎</th>
+							<td>チェックボックスが表示されている場合、チェックしている項目の番号一覧</td>
+						</tr>
+						<tr>
+							<th><a name="個数">個数</a></th>
+							<th>整数</th>
+							<th>□</th>
+							<td>項目の個数</td>
+						</tr>
+						<tr>
+							<th><a name="選択項目">選択項目</a></th>
+							<th>リストビュー項目</th>
+							<th>◎</th>
+							<td>選択している項目</td>
+						</tr>
+						<tr>
+							<th><a name="選択内容">選択内容</a></th>
+							<th>文字列</th>
+							<th>◎</th>
+							<td>選択している項目の内容</td>
+						</tr>
+						<tr>
+							<th><a name="選択番号">選択番号</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>選択している項目の整理番号</td>
+						</tr>
+						<tr>
+							<th><a name="選択項目一覧">選択項目一覧</a></th>
+							<th>リストビュー項目の配列</th>
+							<th>◎</th>
+							<td>複数選択している場合、選択している項目の一覧</td>
+						</tr>
+						<tr>
+							<th><a name="選択番号一覧">選択番号一覧</a></th>
+							<th>整数の配列</th>
+							<th>◎</th>
+							<td>複数選択している場合、選択している項目の番号一覧</td>
+						</tr>
+						<tr>
+							<th><a name="選択数">選択数</a></th>
+							<th>整数</th>
+							<th>◎</th>
+							<td>複数選択している場合、選択している項目の個数</td>
+						</tr>
+						<tr>
+							<th><a name="文字色">文字色</a></th>
+							<th>色情報</th>
+							<th>◎</th>
+							<td>文字の色</td>
+						</tr>
+						<tr>
+							<th><a name="背景色">背景色</a></th>
+							<th>色情報</th>
+							<th>◎</th>
+							<td>背景の色</td>
+						</tr>
+						<tr>
+							<th><a name="全列選択">全列選択</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>詳細表示の場合に、項目を選択した際にすべての列を選択状態にするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="罫線">罫線</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>仕切り線を表示するかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="選択表示">選択表示</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>別のオブジェクトにカーソルが移動した際にも選択状態を表示しつづけるかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="自動選択">自動選択</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>マウスカーソルを置くだけで、自動的に項目が選択できるようにするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="ラベル編集">ラベル編集</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>項目の名称を編集できるようにするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="ラベル折り返し">ラベル折り返し</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>アイコン表示の場合、項目名が収まりきらない場合に折り返すかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="複数選択">複数選択</a></th>
+							<th>真偽値</th>
+							<th>◎</th>
+							<td>項目を複数選択できるようにするかどうか</td>
+						</tr>
+						<tr>
+							<th><a name="項目一覧">項目一覧</a></th>
+							<th>リストビュー項目の配列</th>
+							<th>◎</th>
+							<td>表示する項目</td>
+						</tr>
+						<tr>
+							<th><a name="一覧">一覧</a></th>
+							<th>文字列の配列</th>
+							<th>◎</th>
+							<td>表示する項目</td>
+						</tr>
+						<tr>
+							<th><a name="見出し一覧">見出し一覧</a></th>
+							<th>文字列の配列</th>
+							<th>◎</th>
+							<td>詳細表示の場合に、上部に表示する見出し（カラム）の一覧</td>
+						</tr>
+						<tr>
+							<th><a name="詳細一覧">詳細一覧</a></th>
+							<th>文字列の配列の配列</th>
+							<th>◎</th>
+							<td>詳細表示の場合に、表示される詳細情報を含む、項目のすべての内容</td>
+						</tr>
+						<tr>
+							<th><a name="透明色">透明色</a></th>
+							<th>色情報</th>
+							<th>◎</th>
+							<td>アイコンを指定した際に、透明扱いとする色</td>
+						</tr>
+						<tr>
+							<th><a name="番目">番目</a></th>
+							<th><a href="listviewitem.htm">リストビュー項目</a><a href="tabpage.htm"></a></th>
+							<th>□</th>
+							<td><span class="label label-default">序数詞</span>先頭から数えて指定した位置にある要素を表します。
+								<ul>
+									<li>要素位置は、先頭を1要素目として数えた整数</li>
+								</ul></td>
+						</tr>
+					</tbody>
 				</table>
-			<p class="usage"><a href="../usage.htm">記号の意味</a></p>
+			<p class="usage"><a href="../usage.htm">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 			</div>
-		<h2 id="イベント手順">イベント手順</h2>
+		<h2 id="イベント手順"><i class="fa fa-bolt"></i> イベント手順</h2>
 		<p>部品から<a href="control.htm#イベント手順">継承されるイベント手順</a>のほか、次のイベント手順が使用できます。</p>
 		<div id="events">
 			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>イベント名</th>
-						<th>説明</th>
-						<th>イベント情報</th>
-					</tr>
-				</thead>
-                <tbody>
-				<tr>
-					<th><a name="ドラッグされた">ドラッグされた</a></th>
-					<td>項目をドラッグされた時</td>
-					<td><a href="../events/itemdrag.htm">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="仮想検索が開始された">仮想検索が開始された</a></th>
-					<td>仮想検索が開始された時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="仮想項目が必要になった">仮想項目が必要になった</a></th>
-					<td>仮想項目が必要になった時</td>
-					<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="仮想項目の状態が変化した">仮想項目の状態が変化した</a></th>
-					<td>仮想項目の状態が変化した時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="仮想表示領域が変化した">仮想表示領域が変化した</a></th>
-					<td>仮想表示領域が変化した時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="見出しがクリックされた">見出しがクリックされた</a></th>
-					<td>見出しがクリックされた時</td>
-					<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="見出しの順序が変更された">見出しの順序が変更された</a></th>
-					<td>見出しの順序が変更された時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="見出しの幅が変更された">見出しの幅が変更された</a></th>
-					<td>見出しの幅が変更された時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="見出しの幅が変更される">見出しの幅が変更される</a></th>
-					<td>見出しの幅が変更される直前</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="項目をチェックする">項目をチェックする</a></th>
-					<td>項目のチェック状態が変化する直前。クリック操作および設定項目の設定によって発生します。</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="項目がチェックされた">項目がチェックされた</a></th>
-					<td>項目のチェック状態が変化された直後。クリック操作および設定項目の設定によって発生します。</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="項目がポイントされた">項目がポイントされた</a></th>
-					<td>項目にマウスカーソルがポイントされた</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="項目が選択された">項目が選択された</a></th>
-					<td>項目が選択された時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="選択された">選択された</a></th>
-					<td>選択された時<br>
-						(選択時と選択解除時それぞれで実行されます)</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="選択項目が変更された">選択項目が変更された</a></th>
-					<td>項目が選択された時</td>
-					<td></td>
-					</tr>
-				<tr>
-					<th><a name="ラベルが変更された">ラベルが変更された</a></th>
-					<td>項目の見出しを編集された直後</td>
-					<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
-					</tr>
-				<tr>
-					<th><a name="ラベルが変更される">ラベルが変更される</a></th>
-					<td>項目の見出しを編集する直前</td>
-					<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
-                </tr>
-                </tbody>
+					<thead>
+						<tr>
+							<th>イベント名</th>
+							<th>説明</th>
+							<th>イベント情報</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a name="ドラッグされた">ドラッグされた</a></th>
+							<td>項目をドラッグされた時</td>
+							<td><a href="../events/itemdrag.htm">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="仮想検索が開始された">仮想検索が開始された</a></th>
+							<td>仮想検索が開始された時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="仮想項目が必要になった">仮想項目が必要になった</a></th>
+							<td>仮想項目が必要になった時</td>
+							<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="仮想項目の状態が変化した">仮想項目の状態が変化した</a></th>
+							<td>仮想項目の状態が変化した時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="仮想表示領域が変化した">仮想表示領域が変化した</a></th>
+							<td>仮想表示領域が変化した時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="見出しがクリックされた">見出しがクリックされた</a></th>
+							<td>見出しがクリックされた時</td>
+							<td><a href="listview_event.htm#見出しがクリックされたイベント情報">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="見出しの順序が変更された">見出しの順序が変更された</a></th>
+							<td>見出しの順序が変更された時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="見出しの幅が変更された">見出しの幅が変更された</a></th>
+							<td>見出しの幅が変更された時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="見出しの幅が変更される">見出しの幅が変更される</a></th>
+							<td>見出しの幅が変更される直前</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="項目をチェックする">項目をチェックする</a></th>
+							<td>項目のチェック状態が変化する直前。クリック操作および設定項目の設定によって発生します。</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="項目がチェックされた">項目がチェックされた</a></th>
+							<td>項目のチェック状態が変化された直後。クリック操作および設定項目の設定によって発生します。</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="項目がポイントされた">項目がポイントされた</a></th>
+							<td>項目にマウスカーソルがポイントされた</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="項目が選択された">項目が選択された</a></th>
+							<td>項目が選択された時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="選択された">選択された</a></th>
+							<td>選択された時<br>
+								(選択時と選択解除時それぞれで実行されます)</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="選択項目が変更された">選択項目が変更された</a></th>
+							<td>項目が選択された時</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a name="ラベルが変更された">ラベルが変更された</a></th>
+							<td>項目の見出しを編集された直後</td>
+							<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
+						</tr>
+						<tr>
+							<th><a name="ラベルが変更される">ラベルが変更される</a></th>
+							<td>項目の見出しを編集する直前</td>
+							<td><a href="listview_event.htm#ラベル編集イベント情報">あり</a></td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		<p>　</p>
-		<h2 id="サンプルコード">サンプルコード</h2>
+		<h2 id="サンプルコード"><i class="fa fa-play-circle-o"></i> サンプルコード</h2>
 		<p>リストビューに項目を追加する例です。</p>
 		<pre class="code">「shell32.dll」の1番目からアイコン画像を抽出して、ファイルアイコンとする
 メイン画面を表示する
@@ -756,11 +787,11 @@
 		</div><!--/samples-->
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2024年11月3日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年6月22日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>

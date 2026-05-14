@@ -8,6 +8,7 @@
 	<title>固定長配列 - プロデルマニュアル</title><!-- InstanceEndEditable -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<script src="../js/html5shiv-3.7.3.min.js"></script>
 	<script src="../js/respond-1.4.2.min.js"></script>
@@ -34,8 +35,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li id="cat_top"><a href="../index.htm">目次</a></li>
-					<li id="cat_syntax"><a href="../syntax/index.htm">言語仕様</a></li>
-					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き辞典</a></li>
+					<li id="cat_syntax"><a href="../syntax/index.htm">文法</a></li>
+					<li id="cat_lookup"><a href="../lookup/index.htm">逆引き</a></li>
 					<li id="cat_datatype"><a href="index.htm">データ型</a></li>
 					<li id="cat_gui" class="hidden-sm"><a href="../wincontrol/index.htm">GUI部品</a></li>
 					<li id="cat_verbs" class="hidden-sm"><a href="../verbs/index.html">手順一覧</a></li>
@@ -75,14 +76,14 @@
 	<div id="reftitle" class="col-md-12">
 	  <ul class="breadcrumb" data-category="datatype">
 	    <li><a href="../index.htm">プロデル</a></li>
-	    <li><a href="index.htm">データ型</a></li>
+	    <li><a href="index.htm"><i class="fa fa-cube"></i> データ型</a></li>
 	    <li>固定長配列</li>
       </ul>
 	  <h1>固定長配列</h1>
     </div>
 	<div id="refsidebar" class="col-md-3">
-		<p><a href="../usage.htm" class="label label-warning">型変換</a> <a href="../syntax/ordinal.htm" class="label label-default">序数詞設定</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
-		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順">手順</a></li><li><a href="#設定項目">設定項目</a></li><li><a href="#型変換">型変換</a></li></ul>
+		<p><a href="../usage.htm" class="label label-warning">型変換</a> <a href="../syntax/ordinal.htm" class="label label-default">序数詞設定</a> <a href="../syntax/foreach.htm" class="label label-success">反復型</a> <a href="../sumire.htm" class="label label-info">スミレ</a></p>
+		<ul class="jumpnavi nav nav-pills"><li><a href="#head">概要</a></li><li><a href="#手順"><i class="fa fa-hand-paper-o"></i> 手順</a></li><li><a href="#設定項目"><i class="fa fa-check-square-o"></i> 設定項目</a></li><li><a href="#型変換">型変換</a></li></ul>
 		<h3>関連ページ</h3>
         <ul>
           <li><a href="../syntax/array.html">配列の文法</a></li>
@@ -94,53 +95,72 @@
 	  <h2 id="head">概要</h2>
 		<p>1番から順番に内容を持っている配列を表す種類です。固定長配列では、要素数があらかじめ定められており、生成した後で要素数を増減させることはできません。</p>
 	<h2>生成する方法</h2>
-		<p>固定長配列を作ることで生成できます。この際に、配列の要素数を指定しておきます。</p>
-		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong>《データ型》</strong>の配列(<strong>《要素数》</strong>)を作る<br>固定長配列(<strong>《要素数》</strong>)を作る	//従来の表記<br><strong>《データ型》</strong>の固定長配列(<strong>《要素数》</strong>)を作る//従来の表記</pre>
-		<p>&nbsp;</p>
+		<p>次のように種類名を指定して生成できます。種類名には、配列の要素数を指定します。</p>
+		<pre class="format">配列(<strong>《要素数》</strong>)を作る<br><strong></strong>固定長配列(<strong>《要素数》</strong>)を作る	//従来の表記(上記と同じ意味)<br><strong></strong></pre>
+		<p>要素のデータ型(要素型)を指定する場合には次のように種類名を指定します。</p>
+		<pre class="format"><strong>《要素型》</strong>の配列(<strong>《要素数》</strong>)を作る<br><strong>《要素型》</strong>の固定長配列(<strong>《要素数》</strong>)を作る//従来の表記(上記と同じ意味)</pre>
+		<p>要素型を指定しない場合、<a href="../primitive/baseobject.htm">基本物</a>とみなされます。</p>
+		<h4>固定長配列を作り要素に値を代入するプログラム例</h4>
 		<pre class="code">一覧として配列(10)を作る
 数を1から10まで増やしながら繰り返す	//11以上はエラーとなる
     一覧(数)は、数*数
 そして
 一覧(5)を表示する</pre>
-		<h2 id="手順">手順</h2>
+		<h2 id="手順"><i class="fa fa-hand-paper-o"></i> 手順</h2>
 		<p><a href="array.htm">継承される手順</a>と、次の手順が使用できます。</p>
-		<div id="methodlist"><a href="#交換する">交換する</a>　<a href="#探す">探す</a>　<a href="#大小区別しないで探す">大小区別しないで探す</a>　<a href="#完全一致で探す">完全一致で探す</a>　<a href="#取り出す">取り出す</a>　<a href="#大小区別しないで取り出す">大小区別しないで取り出す</a>　<a href="#完全一致で取り出す">完全一致で取り出す</a>　<a href="#繋げる">繋げる</a>　<a href="#最大値">最大値</a>　<a href="#最小値">最小値</a>　<a href="#合計">合計</a>　<a href="#平均">平均</a>　<a href="#偏差値">偏差値</a>　<a href="#並べ替える">並べ替える</a>　</div>
+		<div id="methodlist"><a href="#交換する">交換する</a>　<a href="#探す">探す</a>　<a href="#大小区別しないで探す">大小区別しないで探す</a>　<a href="#完全一致で探す">完全一致で探す</a>　<a href="#取り出す">取り出す</a>　<a href="#大小区別しないで取り出す">大小区別しないで取り出す</a>　<a href="#完全一致で取り出す">完全一致で取り出す</a>　<a href="#繋げる">繋げる</a>　<a href="#最大値">最大値</a>　<a href="#最小値">最小値</a>　<a href="#合計">合計</a>　<a href="#平均">平均</a>　<a href="#偏差値">偏差値</a>　<a href="#並べ替える">並べ替える</a>　<a href="#埋める">埋める</a>　</div>
 		<div id="methods">
-			<h3>【自分】から【列番号】番目と【列番号】番目を<a name="交換する">交換する</a>：配列</h3>
+			<h3>【自分】から【番号A】番目と【番号B】番目を<a name="交換する">交換する</a>：配列</h3>
 			<p>指定した番号の要素の値を交換します。</p>
+            <ul>
+                    <li>番号Aと番号Bは、入れ替える対象の要素番号。要素番号は、先頭を1番目として数えた整数</li>
+            </ul>
 			<pre class="code">一覧は｛「東京」,「名古屋」,「大阪」｝
 一覧を表示する
 一覧から１番目と３番目を交換して、結果とする
 結果を表示する</pre>
-			<h3>【自分】から【キーワード】を<a name="探す">探す</a>：数値</h3>
-			<p>配列からキーワードが含まれる要素を探して、その番号を配列で表します</p>
+			<h3>【自分】から【キーワード:文字列】を<a name="探す">探す</a>：整数の配列</h3>
+			<p>配列からキーワードが含まれる要素を探して、見つかった要素番号を配列で返します。</p>
+            <ul>
+                    <li>戻り値の要素番号は、先頭の要素を1として数えた整数</li>
+            </ul>
 			<pre class="code">一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
 結果は、<b>一覧から「カゲ」を探す</b>
 結果を表示する</pre>
-			<h3>【自分】から【キーワード】を<a name="大小区別しないで探す">大小区別しないで探す</a>：数値</h3>
-			<p>配列からキーワードが含まれる要素を探して、その番号を配列で表します。<br>
-				探す際に大文字と小文字は区別されません。</p>
+			<h3>【自分】から【キーワード:文字列】を<a name="大小区別しないで探す">大小区別しないで探す</a>：整数の配列</h3>
+			<p>配列からキーワードが含まれる要素を探して、見つかった要素番号を配列で返します。<br>
+            </p>
+            <ul>
+                    <li>キーワードは、探す対象の文字列。要素から探す時に、大文字と小文字は区別されません。</li>
+                    <li>戻り値の要素番号は、先頭の要素を1として数えた整数</li>
+            </ul>
 			<pre class="code">一覧は｛「Hello」,「Open」,「Load」｝
 結果は、<b>一覧から「O」を大小区別しないで探す</b>
 結果を表示する</pre>
-			<h3>【自分】から【キーワード】を<a name="完全一致で探す">完全一致で探す</a>：数値</h3>
-			<p>配列からキーワードと完全に一致する要素を探して、その番号を配列で表します。</p>
+			<h3>【自分】から【キーワード:文字列】を<a name="完全一致で探す">完全一致で探す</a>：整数の配列</h3>
+			<p>配列からキーワードと完全に一致する要素を探して、見つかった要素番号を配列で返します</p>
+            <ul>
+                    <li>戻り値の要素番号は、先頭の要素を1として数えた整数</li>
+            </ul>
 			<pre class="code">一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
 結果は、<b>一覧から「トカゲ」を完全一致で探す</b>
 結果を表示する</pre>
-			<h3>【自分】から【キーワード】を<a name="取り出す">取り出す</a>：数値</h3>
-			<p>配列からキーワードが含まれる要素を探して、その内容を配列で表します</p>
+			<h3>【自分】から【キーワード:文字列】を<a name="取り出す">取り出す</a>：文字列の配列</h3>
+			<p>配列からキーワードが含まれる要素を探して、見つかった要素を配列で返します</p>
 			<pre class="code">一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
 結果は、<b>一覧から「カゲ」を取り出す</b>
 結果を表示する</pre>
-			<h3>【自分】から【キーワード】を<a name="大小区別しないで取り出す">大小区別しないで取り出す</a>：数値</h3>
-			<p>配列からキーワードが含まれる要素を探して、その内容を配列で表します。<br>
-				探す際に大文字と小文字は区別されません。</p>
+			<h3>【自分】から【キーワード:文字列】を<a name="大小区別しないで取り出す">大小区別しないで取り出す</a>：数値</h3>
+			<p>配列からキーワードが含まれる要素を探して、見つかった要素を配列で返します。<br>
+            </p>
+            <ul>
+                    <li>キーワードは、探す対象の文字列。要素から探す時に、大文字と小文字は区別されません。</li>
+            </ul>
 			<pre class="code">一覧は｛「Hello」,「Open」,「Load」｝
 結果は、<b>一覧から「O」を大小区別しないで取り出す</b>
 結果を表示する</pre>
 			<h3>【自分】から【キーワード】を<a name="完全一致で取り出す">完全一致で取り出す</a>：数値</h3>
-			<p>配列からキーワードと完全に一致する要素を探して、その内容を配列で表します。</p>
+			<p>配列からキーワードと完全に一致する要素を探して、見つかった要素を配列で返します。</p>
 			<pre class="code">一覧は｛「トカゲ」,「エリマキトカゲ」,「エリ」｝
 結果は、<b>一覧から「トカゲ」を完全一致で取り出す</b>
 結果を表示する</pre>
@@ -151,23 +171,23 @@
 一覧を「＆」で繋げて、結果とする
 結果を表示する</pre>
 			<h3>【自分】の<a name="最大値">最大値</a>：数値</h3>
-			<p>配列の数値でもっとも大きい値を求めます</p>
+			<p>配列の要素から最も大きい値を返します</p>
 			<pre class="code">一覧は｛132，473，735，532｝
 <b>一覧の最大値</b>を表示する</pre>
 			<h3>【自分】の<a name="最小値">最小値</a>：数値</h3>
-			<p>配列の数値でもっとも小さい値を求めます</p>
+			<p>配列の要素から最も小さい値を返します</p>
 			<pre class="code">一覧は｛132，473，735，532｝
 <b>一覧の最小値</b>を表示する</pre>
 			<h3>【自分】の<a name="合計">合計</a>：数値</h3>
-			<p>配列の数値を足して合計を求めます</p>
+			<p>配列の要素を数値として足して合計を求めます</p>
 			<pre class="code">一覧は｛132，473，735，532｝
 <b>一覧の合計</b>を表示する</pre>
 			<h3>【自分】の<a name="平均">平均</a>：数値</h3>
-			<p>配列の数値から平均値を求めます</p>
+			<p>配列の要素から平均値を求めます</p>
 			<pre class="code">一覧は｛132，473，735，532｝
 <b>一覧の平均</b>を表示する</pre>
 			<h3>【自分】の<a name="偏差値">偏差値</a>：配列</h3>
-			<p>配列の数値の偏差値をそれぞれ求めます</p>
+			<p>配列の要素の偏差値をそれぞれ求めます</p>
 			<pre class="code">成績は｛52, 14, 95, 64, 58｝
 <b>成績の偏差値</b>を表示する</pre>
 			<h3>【自分】を【方法】に<a name="並べ替える">並べ替える</a></h3>
@@ -235,9 +255,15 @@
 	そして
 』で並べ替える
 一覧を表示する</pre>
-			<p class="usage"><a href="../usage.htm#手順">記号の意味</a></p>
+			<h3>【自分】を【値】で<a name="埋める">埋める</a></h3>
+			<p>配列の要素にすべて同じ値を代入します。</p>
+			<pre class="code">一覧として整数の配列(10)を作る
+一覧を1で埋める<br>一覧を表示する
+<em>※結果　{0,0,0,0}</em></pre>
+			<p>&nbsp;</p>
+			<p class="usage"><a href="../usage.htm#手順">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
 		</div>
-		<h2 id="設定項目">設定項目</h2>
+		<h2 id="設定項目"><i class="fa fa-check-square-o"></i> 設定項目</h2>
 		<p>次の設定項目が使用できます。</p>
 		<div id="properties">
 			<table class="table table-bordered">
@@ -254,24 +280,36 @@
 					<th><a name="内容">内容</a></th>
 					<th>文字列</th>
 					<th>◎</th>
-					<td>内容を文字で表します</td>
+					<td>内容を文字</td>
 				</tr>
 				<tr>
 					<th><a name="個数">個数</a></th>
 					<th>整数</th>
 					<th>□</th>
-					<td>配列の要素数を表します</td>
+					<td>配列の要素数</td>
 				</tr>
 				<tr>
 					<th><a name="クローン">クローン</a></th>
 					<th>配列</th>
 					<th>□</th>
-					<td>要素の内容が同じ、別の配列を表します</td>
+					<td>要素の内容を複製した同じ内容の別の配列</td>
+				</tr>
+				<tr>
+					<th><a name="番目">番目</a></th>
+					<th>(要素型)</th>
+					<th>□</th>
+					<td><span class="label label-default">序数詞</span>先頭から数えて指定した位置にある要素を表します。
+						<ul>
+							<li>要素位置は、先頭を1要素目として数えた整数</li>
+						</ul>
+						<pre class="code">一覧は{123,456,789}
+一覧の2番目は987<br>一覧の2番目を表示する
+<em>※結果　987</em></pre></td>
 				</tr>
                 </tbody>
 			</table>
-			<p class="usage"><a href="../usage.htm#設定項目">記号の意味</a></p>
-			<h2 id="型変換">型変換</h2>
+			<p class="usage"><a href="../usage.htm#設定項目">マニュアル中の表現や記号の意味はこちらをご覧ください</a></p>
+			<h2 id="型変換"><i class="fa fa-exchange"></i> 型変換</h2>
 			<p>この種類は、次の別のデータ型へ自動的に変換できます。</p>
 			<table class="table table-bordered">
 				<thead>
@@ -292,11 +330,11 @@
 		</div>
 	</div>
 </div>
-<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年1月4日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
+<div class="footer text-right"><!-- #BeginDate format:Ja2 -->2025年8月15日 <!-- #EndDate -->更新</div><!-- InstanceEndEditable -->
 		<p id="page-top"><a href="#">ページ先頭へ</a></p>
 		<footer>
     		<hr>
-			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2025 irelang.jp</p>
+			<p class="text-muted text-right"><a href="https://produ.irelang.jp/">日本語プログラミング言語 プロデル</a> Ver.2.0 &copy; 2007-2026 irelang.jp</p>
 		</footer>
 	</div><!--/.container-->
 	<script src="../js/jquery-1.12.4.min.js"></script>
